@@ -1,0 +1,8 @@
+[info]
+name = export
+version = 1.0
+longname = Graph Export Package for Cacti
+author = The Cacti Group
+email = 
+homepage = http://www.cacti.net
+compat = 1.0.0
