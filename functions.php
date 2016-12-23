@@ -22,6 +22,11 @@
  +-------------------------------------------------------------------------+
 */
 
+/* graph_export - a function that determines, for each export definition
+   if it's time to run or not.  this function is currently single threaded
+   and some thought should be given to making multi-threaded.
+   @arg $id    - the id of the export to check, '0' for all export definitions.
+   @arg $force - force the export to run no regardless of it's timing settings. */
 function graph_export($id = 0, $force = false) {
 	global $debug, $start;
 
@@ -108,17 +113,11 @@ function graph_export($id = 0, $force = false) {
 	}
 }
 
-function exporter(&$export, $export_path) {
-	$exported = export_graphs($export, $export_path);
-	if ($export['export_presentation'] == 'tree') {
-		tree_export($export, $export_path);
-	}else{
-		site_export($export, $export_path);
-	}
-
-	return $exported;
-}
-
+/* run_export - a function the pre-processes the export structure and 
+   then executes the required functions to export graphs, html and
+   config, to sanitize directories, and transfer data to the remote
+   host(s).
+   @arg $export   - the export item structure. */
 function run_export(&$export) {
 	global $export_path;
 
@@ -211,6 +210,28 @@ function run_export(&$export) {
 	config_export_stats($export, $exported);
 }
 
+/* exporter - a wrapper function that reduces clutter in the run_export
+   function.
+   @arg $export      - the export item structure.
+   @arg $export_path - the location to storage export output. */
+function exporter(&$export, $export_path) {
+	$exported = 0;
+
+	//$exported = export_graphs($export, $export_path);
+	if ($export['export_presentation'] == 'tree') {
+		tree_export($export, $export_path);
+	}else{
+		site_export($export, $export_path);
+	}
+
+	return $exported;
+}
+
+/* config_export_stats - a function to export stats to the Cacti system for information
+   and possible graphing. It uses a global variable to get the start time of the 
+   export process.
+   @arg $export   - the export item structure 
+   @arg $exported - the number of graphs exported. */
 function config_export_stats(&$export, $exported) {
 	global $start;
 	/* take time to log performance data */
@@ -231,6 +252,10 @@ function config_export_stats(&$export, $exported) {
 	db_execute_prepared(sprintf("REPLACE INTO settings (name,value) values ('stats_export_%s', ?)", $export['id']), array($export_stats));
 }
 
+/* export_fatal - a simple export logging function that indicates a 
+   fatal condition for developers and users.
+   @arg $export    - the export item structure 
+   @arg $stMessage - the debug message. */
 function export_fatal(&$export, $stMessage) {
 	cacti_log('FATAL ERROR: ' . $stMessage, true, 'EXPORT');
  
@@ -245,12 +270,17 @@ function export_fatal(&$export, $stMessage) {
 	exit;
 }
 
+/* export_log - a simple export logging function that also logs to stdout
+   for developers.
+   @arg $message - the debug message. */
 function export_log($stMessage) {
 	cacti_log($stMessage, true, 'EXPORT', POLLER_VERBOSITY_HIGH);
 
 	export_debug($stMessage);
 }
 
+/* export_debug - a common cli debug level output for developers.
+   @arg $message - the debug message. */
 function export_debug($message) {
 	global $debug;
 
@@ -259,6 +289,10 @@ function export_debug($message) {
 	}
 }
 
+/* export_pre_ftp_upload - this function creates a global variable
+   of your pre-checked ftp credentials and settings that will be used
+   for the actual ftp transfer.
+   @arg $export       - the export item structure */
 function export_pre_ftp_upload(&$export) {
 	global $config, $aFtpExport;
 
@@ -293,6 +327,11 @@ function export_pre_ftp_upload(&$export) {
 	}
 }
 
+/* check_cacti_paths - this function is looking for bad export paths that 
+   can potentially get the user in trouble.  We avoid paths that can 
+   get erased by accident.
+   @arg $export       - the export item structure
+   @arg $export_path  - the directory holding the export contents. */
 function check_cacti_paths(&$export, $export_path) {
 	global $config;
 
@@ -361,6 +400,11 @@ function check_system_paths(&$export, $export_path) {
 	}
 }
 
+/* export_graphs - this function exports all the graphs and some html for
+   mgtg view data.  these are all the graphs that are in scope for the export
+   be it a tree export, or a site export.
+   @arg $export       - the export item structure
+   @arg $export_path  - the directory holding the export contents. */
 function export_graphs(&$export, $export_path) {
 	global $config;
 
@@ -553,7 +597,13 @@ function export_graphs(&$export, $export_path) {
 	return $exported;
 }
 
-function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp_php') {
+/* export_ftp_php_execute - this function creates the ftp connection object,
+   optionally sanitizes the destination and then calls the function to copy
+   data to the remote host.   
+   @arg $export       - the export item structure
+   @arg $stExportDir  - the temporary data holding the staged export contents.
+   @arg $stFtpType    - the type of ftp transfer, secure or unsecure. */
+function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	global $aFtpExport;
 
 	/* connect to foreign system */
@@ -654,7 +704,11 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp_php') 
 	ftp_close($oFtpConnection);
 }
 
-function export_ftp_php_uploaddir($dir,$oFtpConnection) {
+/* export_ftp_php_uploaddir - this function performs the transfer of the exported
+   data to the remote host.
+   @arg $dir - the directory to transfer to the remote host. 
+   @arge $oFtpConnection - the ftp connection object created previously. */
+function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 	global $aFtpExport;
 
 	export_log("Uploading directory: '$dir' to remote location.");
@@ -687,6 +741,9 @@ function export_ftp_php_uploaddir($dir,$oFtpConnection) {
 	}
 }
 
+/* export_ftp_ncftpput_execute - this function performs the transfer of the exported
+   data to the remote host.
+   @arg $stExportDir - the directory to transfer to the remote host. */
 function export_ftp_ncftpput_execute($stExportDir) {
 	global $aFtpExport;
 
@@ -724,6 +781,10 @@ function export_ftp_ncftpput_execute($stExportDir) {
 	export_log('Ncftpput returned: ' . $aNcftpputStatusCodes[$iExecuteReturns]);
 }
 
+/* export_post_ftp_upload - this function clean's up the local temporary 
+   directory after the data transfer has completed.
+   @arg $export - the export structure
+   @arg $stExportDir  - the temporary directory where files were staged. */
 function export_post_ftp_upload(&$export, $stExportDir) {
 	/* clean-up after ftp-put */
 	if ($dh = opendir($stExportDir)) {
@@ -749,15 +810,25 @@ function export_post_ftp_upload(&$export, $stExportDir) {
 	}
 }
 
+/* write_branch_conf - this function writes a json array of all graphs
+   that lie on a branch within a tree.
+   @arg $tree_id     - the tree id of the branch
+   @arg $branch_id   - the branch id of the branch
+   @arg $type        - the type of conf file including tree, branch, host, host_gt, host_dq, and host_dqi
+   @arg $host_id     - the host id of any host level tree objects
+   @arg $sub_id      - the sub id of the object passed.  This is either a numeric data point, or a hybrid
+                       the case of the host_dqi object.
+   @arg $user        - the effective user to use for export, -1 indicates no permission check
+   @arg $export_path - the location to store the json array configuration file */
 function write_branch_conf($tree_id, $branch_id, $type, $host_id, $sub_id, $user, $export_path) {
-	static $conf_files = array();
+	static $json_files = array();
 	$total_rows  = 0;
-	$graph_count = 0;
+	$graph_array = array();
 
 	if ($type == 'branch') {
-		$conf_file = $export_path . '/tree_' . $tree_id . '_branch_' . $branch_id . '.conf';
+		$json_file = $export_path . '/tree_' . $tree_id . '_branch_' . $branch_id . '.json';
 
-		if (isset($conf_files[$conf_file])) return;
+		if (isset($json_files[$json_file])) return;
 
 		$graphs = db_fetch_assoc_prepared('SELECT DISTINCT local_graph_id 
 			FROM graph_tree_items 
@@ -766,57 +837,67 @@ function write_branch_conf($tree_id, $branch_id, $type, $host_id, $sub_id, $user
 			AND local_graph_id > 0
 			ORDER BY position', array($tree_id, $branch_id));
 	}elseif ($type == 'host') {
-		$conf_file = $export_path . '/host_' . $host_id . '.conf';
+		$json_file = $export_path . '/host_' . $host_id . '.json';
 
-		if (isset($conf_files[$conf_file])) return;
+		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id, 'gtg.title_cache', '', $total_rows, $user);
 	}elseif ($type == 'host_gt') {
-		$conf_file = $export_path . '/host_' . $host_id . '_gt_' . $sub_id . '.conf';
+		$json_file = $export_path . '/host_' . $host_id . '_gt_' . $sub_id . '.json';
 
-		if (isset($conf_files[$conf_file])) return;
+		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.graph_template_id=' . $sub_id, 'gtg.title_cache', '', $total_rows, $user);
 	}elseif ($type == 'host_dq') {
-		$conf_file = $export_path . '/host_' . $host_id . '_dq_' . $sub_id . '.conf';
+		$json_file = $export_path . '/host_' . $host_id . '_dq_' . $sub_id . '.json';
 
-		if (isset($conf_files[$conf_file])) return;
+		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.snmp_query_id=' . $sub_id, 'gtg.title_cache', '', $total_rows, $user);
 	}elseif ($type == 'host_dqi') {
 		$parts = explode(':', $sub_id);
 		$dq    = $parts[0];
 		$index = clean_up_name($parts[1]);
-		$conf_file = $export_path . '/host_' . $host_id . '_dq_' . $dq . '_dqi_' . $index . '.conf';
+		$json_file = $export_path . '/host_' . $host_id . '_dq_' . $dq . '_dqi_' . $index . '.json';
 
-		if (isset($conf_files[$conf_file])) return;
+		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.snmp_query_id=' . $dq . ' AND gl.snmp_index=' . db_qstr($parts[1]), 'gtg.title_cache', '', $total_rows, $user);
 	}
 
 	if (sizeof($graphs)) {
-		$fp        = fopen($conf_file, 'w');
-		$graph_str = '';
+		$fp = fopen($json_file, 'w');
+		$graph_array = array();
 
 		foreach($graphs as $graph) {
 			if ($host_id == 0) {
 				if (is_graph_allowed($graph['local_graph_id'], $user)) {
-					$graph_str .= ($graph_count > 0 ? ',':'') . $graph['local_graph_id'];
-					$graph_count++;
+					$graph_array[] = $graph['local_graph_id'];
 				}
 			}else{
-				$graph_str .= ($graph_count > 0 ? ',':'') . $graph['local_graph_id'];
-				$graph_count++;
+				$graph_array[] = $graph['local_graph_id'];
 			}
 		}
 
-		fwrite($fp, $graph_str . "\n");
+		fwrite($fp, json_encode($graph_array) . "\n");
 		fclose($fp);
 	}
 
-	return $graph_count;
+	$json_files[$json_file] = true;
+
+	return sizeof($graph_array);;
 }
 
+/* export_generate_tree_html - create jstree compatible static tree html.  This is a
+   set of unsorted lists that jstree can properly parse into a tree object. Note that
+   this is a reentrant/recursive function that will call iteself.
+   @arg $export_path  - the location to write the resulting index.html file
+   @arg $tree         - the tree array including information about the tree
+   @arg $parent       - the parent of any branch to be searched
+   @arg $expand_hosts - the setting of expand hosts for the export
+   @arg $user         - the effective user to use for permission checks.  -1 indicated
+                        no permission check.
+   @arg $jstree       - the html of the jstree compatible unsorted list */
 function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, $user, $jstree) {
 	static $depth = 2;
 
@@ -918,7 +999,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 
 							foreach($data_queries as $query) {
 								$total_rows = write_branch_conf($tree['id'], $parent, 'host_dq', $host['host_id'], $query['id'], $user, $export_path);
-								if ($total_rows) {
+								if ($total_rows && $query['id'] > 0) {
 									if ($count == 0) {
 										$jstree .= '<ul>';
 									}
@@ -976,6 +1057,11 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 	return $jstree;
 }
 
+/* tree_export - the first of a series of functions that are designed to
+   create the tree in html, and present the graphs within the tree into
+   static configuration files that will hold the graphs to be rendered.
+   @arg $export       - the export item data structure
+   @arg $export_path  - the location to write the resulting index.html file */
 function tree_export(&$export, $export_path) {
 	global $config;
 
@@ -1101,16 +1187,21 @@ function create_export_directory_structure($cacti_root_path, $dir) {
 	copy("$cacti_root_path/include/themes/modern/jquery-ui.css", "$dir/js/jquery-ui.css");
 }
 
+/* get_host_description - a simple function to return the host description of a host.
+   @arg $host_id - the id of the host in question */
 function get_host_description($host_id) {
 	return db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', array($host_id));
 }
 
+/* get_tree_name - a simple function to return the tree name of a tree.
+   @arg $tree_id - the id of the tree in question */
 function get_tree_name($tree_id) {
 	return db_fetch_cell_prepared('SELECT name FROM graph_tree WHERE id = ?', array($tree_id));
 }
 
-/* $path to the directory to delete or clean */
-/* $deldir (optionnal parameter, true as default) delete the diretory (true) or just clean it (false) */
+/* del_directory - delete the directory pointed to by the $path variable.
+   @arg $path   - the directory to delete or clean 
+   @arg $deldir - (optionnal parameter, true as default) delete the diretory (true) or just clean it (false) */
 function del_directory($path, $deldir = true) {
 	/* check if the directory name have a '/' at the end, add if not */
 	if ($path[strlen($path)-1] != '/') {
@@ -1141,6 +1232,8 @@ function del_directory($path, $deldir = true) {
 	}
 }
 
+/* check_remove - simple function to check for the existance of a file and remove it.
+   @arg $filename - the file to remove. */
 function check_remove($filename) {
 	if (file_exists($filename) && is_writable($filename)) {
 		unlink($filename);

@@ -204,6 +204,7 @@ function gexport_config_arrays() {
 				'local' => __('Local'),
 				'ftp' => __('FTP'),
 				'sftp' => __('SFTP'),
+				'ftp_nc' => __('FTP NC'),
 				'scp' => __('SCP'),
 				'rsync' => __('RSYNC')
 			)
@@ -230,8 +231,8 @@ function gexport_config_arrays() {
 			'value' => '|arg1:export_presentation|',
 			'default' => 'disabled',
 			'array' => array(
-				'preview' => __('Preview Presentation'),
-				'tree' => __('Tree Presentation'),
+				'preview' => __('Site'),
+				'tree' => __('Tree'),
 			)
 		),
 		'export_hdr_timing' => array(
@@ -313,8 +314,8 @@ function gexport_config_arrays() {
 			'default' => '0'
 		),
 		'export_expand_hosts' => array(
-			'friendly_name' => __('Expand Tree Devices'),
-			'description' => __('This settings determines if the tree hosts will be expanded or not.  If set to expanded, each host will have a sub-folder containing either data templates or data query items.'),
+			'friendly_name' => __('Expand Devices/Sites'),
+			'description' => __('This settings determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items.'),
 			'method' => 'drop_array',
 			'value' => '|arg1:export_expand_hosts|',
 			'default' => 'off',
