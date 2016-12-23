@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta content='width=720, initial-scale=0.8, maximum-scale=2.0, minimum-scale=0.5' name='viewport'>
+	<title>Cacti Graph Export</title>
+	<meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+	<link href='css/main.css' type='text/css' rel='stylesheet'>
+	<link href='css/jquery-ui.css' type='text/css' rel='stylesheet'>
+	<link href='css/default/style.css' type='text/css' rel='stylesheet'>
+	<link href='css/pace.css' type='text/css' rel='stylesheet'>
+	<link href='css/font-awesome.css' type='text/css' rel='stylesheet'>
+	<link href='images/favicon.ico' rel='shortcut icon'>
+	<link rel='icon' type='image/gif' href='images/cacti_logo.gif' sizes='96x96'>
+	<script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/jquery-migrate.js'></script>
+	<script type='text/javascript' src='js/jquery-ui.js'></script>
+	<script type='text/javascript' src='js/jquery.ui.touch.punch.js'></script>
+	<script type='text/javascript' src='js/jquery.tablesorter.js'></script>
+	<script type='text/javascript' src='js/jstree.js'></script>
+	<script type='text/javascript' src='js/jquery.cookie.js'></script>
+	<script type='text/javascript' src='js/pace.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
+	<script type='text/javascript' src='js/layout.js'></script>
+	<script type='text/javascript' src='js/csrf-magic.js'></script>
+	<script type='text/javascript'>$(function() { $('.cactiTreeNavigationArea').show() });</script>
+</head>
+<body>
+	<div id='cactiPageHead' class='cactiPageHead' role='banner'>
+		<div id='tabs'>
+			<div class='maintabs'>
+				<nav>
+					<ul role='tablist'>
+						<li role='tab'><a id='maintab-anchor-graphs' class='lefttab selected' href='#' tabindex='-1'>Graphs</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class='cactiGraphPageHeadBackdrop'></div>
+	</div>
+	<div id='breadCrumbBar' class='breadCrumbBar'>
+		<div id='navBar' class='navBar'>
+			<ul id='breadcrumbs'>
+				<li>
+					<a id='nav_1' href='#'>Graph Export Mode</a>
+				</li>
+			</ul>
+		</div>
+		<div class='scrollBar'></div>
+	</div>
+	<div id='cactiContent' class='cactiContent'>
+		<div id='navigation' class='cactiTreeNavigationArea'>
+			TREEDATA
+			<script type='text/javascript'>
+				var search_to = false;
+
+				function resizeGraphContent() {
+					if ('dark' != 'classic') {
+						$('.cactiGraphContentArea').css('margin-left', parseInt($('#navigation').width()+10)+'px');
+					}else{
+						width = $(document).width() - $('.cactiTreeNavigationArea').width() - 22;
+						$('.cactiGraphContentArea').css('width', width).css('float', 'right');
+					}
+				}
+
+				function getMRTG(id) {
+					$.get(id+'.html', function(data) {
+						$('#main').html(data);
+						applySkin();
+					});
+				}
+
+				$(function () {
+					resizeGraphContent();
+
+					$('#jstree').each(function(data) {
+						$(this)
+						.on('init.jstree', function(e, data) { })
+						.on('ready.jstree', function(e, data) {	})
+						.on('changed.jstree', function(e, data) {
+							resizeGraphContent();
+						})
+						.on('open_node.jstree', function(e, data) {
+							resizeGraphContent();
+						})
+						.on('close_node.jstree', function(e, data) {
+							resizeGraphContent();
+						})
+						.on('select_node.jstree', function(e, data) {
+							if (data.node.id) {
+								$.getJSON(data.node.id+'.json', function(data) {
+									$('#main').empty();
+									var graphs = data.length;
+									for (var i = 0; i < graphs; i++) {
+										$('#main').append('<img id="graph_'+data[i]+'" onClick="getMRTG(\'graph_'+data[i]+'\')" padding="3px" src="graphs/graph_'+data[i]+'.png">');
+									}
+									applySkin();
+							        window.scrollTo(0, 0);
+									resizeGraphContent();
+								});
+							}
+							resizeGraphContent();
+						})
+						.jstree({
+							'types' : {
+								'tree' : {
+									icon : 'images/tree.png',
+									max_children : 0
+								},
+								'device' : {
+									icon : 'images/server.png',
+									max_children : 0
+								},
+								'graph' : {
+									icon : 'images/server_chart_curve.png',
+									max_children : 0
+								},
+								'graph_template' : {
+									icon : 'images/server_chart.png',
+									max_children : 0
+								},
+								'data_query' : {
+									icon : 'images/server_dataquery.png',
+									max_children : 0
+								}
+							},
+							'themes' : {
+								'name' : 'default',
+								'responsive' : true,
+								'url' : true,
+								'dots' : false
+							},
+							'state' : { 'key' : 'graph_tree_history' },
+							'plugins' : [ 'types', 'state', 'wholerow', 'search' ]
+						});
+					});
+
+					$(window).resize(function() {
+						treeHeight = parseInt($(window).height()-$('.jstree').offset().top-10);
+						windHeight = parseInt($('.cactiContent').height());
+						docHeight  = parseInt($('body').height());
+
+						if (treeHeight > windHeight) {
+							$('#navigation').height(treeHeight+'px');
+						}else if (docHeight < windHeight) {
+							$('#navigation').height(docHeight+'px');
+						}else {
+							$('#navigation').height(windHeight+'px');
+						}
+					});
+				});
+			</script>
+		</div>
+		<div id='navigation_right' class='cactiGraphContentArea'>
+			<div id='message_container'></div>
+				<div class='center' style='position:static;' id='main' role='main'></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
