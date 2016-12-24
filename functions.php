@@ -223,7 +223,7 @@ function exporter(&$export, $export_path) {
 
 	create_export_directory_structure(&$export, $root_path, $export_path);
 
-	$exported = export_graphs($export, $export_path);
+	//$exported = export_graphs($export, $export_path);
 	if ($export['export_presentation'] == 'tree') {
 		tree_export($export, $export_path);
 	}else{
@@ -588,7 +588,7 @@ function export_graphs(&$export, $export_path) {
 					$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
 					$graph_data_array['export']          = true;
 					$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
-					$graph_data_array['graph_start']     = time() - ($rra['step'] * $rra['rows'] * $rra['rrd_step']);
+					$graph_data_array['graph_start']     = time() - ($rra['rows'] * $rra['step'] * $rra['steps']);
 
 					check_remove($graph_data_array['export_filename']);
 
@@ -1042,10 +1042,18 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 										$dqi[$graph['snmp_index']] = $graph['snmp_index'];
 									}
 
+									/* fetch a list of field names that are sorted by the preferred sort field */
+									$sort_field_data = get_formatted_data_query_indexes($host['host_id'], $query['id']);
+
 									foreach($dqi as $i) {
 										$total_rows = write_branch_conf($tree['id'], $parent, 'host_dqi', $host['host_id'], $query['id'] . ':' . $i, $user, $export_path);
 										if ($total_rows) {
-											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $query['name'] . "</li>\n";
+											if (isset($sort_field_data[$i])) {
+												$title = $sort_field_data[$i];
+											}else{
+												$title = $i;
+											}
+											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
 										}
 									}
 

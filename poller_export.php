@@ -41,6 +41,7 @@ if (substr_count(strtolower($dir), 'gexport')) {
 
 include('./include/global.php');
 include_once($config['base_path'] . '/lib/poller.php');
+include_once($config['base_path'] . '/lib/data_query.php');
 include_once($config['base_path'] . '/plugins/gexport/functions.php');
 include_once($config['base_path'] . '/lib/rrd.php');
 
