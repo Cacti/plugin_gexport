@@ -223,7 +223,7 @@ function exporter(&$export, $export_path) {
 
 	create_export_directory_structure(&$export, $root_path, $export_path);
 
-	//$exported = export_graphs($export, $export_path);
+	$exported = export_graphs($export, $export_path);
 	if ($export['export_presentation'] == 'tree') {
 		tree_export($export, $export_path);
 	}else{
