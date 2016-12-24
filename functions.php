@@ -587,8 +587,8 @@ function export_graphs(&$export, $export_path) {
 				foreach ($rras as $rra) {
 					$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
 					$graph_data_array['export']          = true;
-					$graph_data_array['end_time']        = -300;
-					$graph_data_array['start_time']      = $rra['step'] * $rra['rows'] * -1;
+					$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
+					$graph_data_array['graph_start']     = time() - ($rra['step'] * $rra['rows'] * $rra['rrd_step']);
 
 					check_remove($graph_data_array['export_filename']);
 
@@ -1084,7 +1084,15 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 function tree_export(&$export, $export_path) {
 	global $config;
 
-	$jstree     = "<div id='jstree'><ul>\n";;
+	// Define javascript global variables for form elements
+	$jstree     = "<script type='text/javascript'>\n";
+	$jstree    .= str_repeat("\t", 5) . "var columnsPerRow=" . $export['graph_columns'] . ";\n";
+	$jstree    .= str_repeat("\t", 5) . "var graphsPerPage=" . $export['graph_perpage'] . ";\n";
+	$jstree    .= str_repeat("\t", 5) . "var thumbnails=" . ($export['graph_thumbnails'] == 'on' ? 'true':'false') . ";\n";
+	$jstree    .= str_repeat("\t", 5) . "var curPage=1;\n";
+	$jstree    .= str_repeat("\t", 4) . "</script>\n";
+
+	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";;
 	$user       = $export['export_effective_user'];
 	$trees      = $export['graph_tree'];
 	$ntree      = array();
@@ -1151,6 +1159,13 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	}
 
 	/* create the images sub-directory */
+	if (!is_dir("$export_path/fonts")) {
+		if (!mkdir("$export_path/fonts", 0755, true)) {
+			export_fatal($export, "Create directory '" . $export_path . "/fonts' failed.  Can not continue");
+		}
+	}
+
+	/* create the images sub-directory */
 	if (!is_dir("$export_path/css")) {
 		if (!mkdir("$export_path/css", 0755, true)) {
 			export_fatal($export, "Create directory '" . $export_path . "/css' failed.  Can not continue");
@@ -1177,6 +1192,7 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/include/js/jquery.tablesorter.js", "$export_path/js/jquery.tablesorter.js");
 	copy("$root_path/include/js/jstree.js", "$export_path/js/jstree.js");
 	copy("$root_path/include/js/jquery.cookie.js", "$export_path/js/jquery.cookie.js");
+	copy("$root_path/include/js/jquery.storageapi.js", "$export_path/js/jquery.storageapi.js");
 	copy("$root_path/include/js/jquery.ui.touch.punch.js", "$export_path/js/jquery.ui.touch.punch.js");
 	copy("$root_path/include/js/pace.js", "$export_path/js/pace.js");
 	copy("$root_path/include/layout.js", "$export_path/js/layout.js");
@@ -1210,6 +1226,12 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	foreach(glob($directory) as $file) {
 		$file = basename($file);
 		copy("$root_path/include/themes/$theme/images/$file", "$export_path/css/images/$file");
+	}
+
+	$directory = "$root_path/include/fa/fonts/*.*";
+	foreach(glob($directory) as $file) {
+		$file = basename($file);
+		copy("$root_path/include/fa/fonts/$file", "$export_path/fonts/$file");
 	}
 }
 

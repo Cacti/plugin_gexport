@@ -19,6 +19,7 @@
 	<script type='text/javascript' src='js/jquery.tablesorter.js'></script>
 	<script type='text/javascript' src='js/jstree.js'></script>
 	<script type='text/javascript' src='js/jquery.cookie.js'></script>
+	<script type='text/javascript' src='js/jquery.storageapi.js'></script>
 	<script type='text/javascript' src='js/pace.js'></script>
 	<script type='text/javascript' src='js/main.js'></script>
 	<script type='text/javascript' src='js/layout.js'></script>
@@ -52,103 +53,325 @@
 		<div id='navigation' class='cactiTreeNavigationArea'>
 			TREEDATA
 			<script type='text/javascript'>
-				var search_to = false;
+			var myGraphs    = [];
+			var totalGraphs = 0;
+			var first       = true;
+			var graphWidth  = 0;
 
-				function resizeGraphContent() {
-					if ('dark' != 'classic') {
-						$('.cactiGraphContentArea').css('margin-left', parseInt($('#navigation').width()+10)+'px');
+			function resizeGraphContent() {
+				if ('dark' != 'classic') {
+					$('.cactiGraphContentArea').css('margin-left', parseInt($('#navigation').width()+10)+'px');
+				}else{
+					width = $(document).width() - $('.cactiTreeNavigationArea').width() - 22;
+					$('.cactiGraphContentArea').css('width', width).css('float', 'right');
+				}
+			}
+
+			function getMRTG(id) {
+				$.get(id+'.html', function(data) {
+					first = true;
+					$('#main').html(data);
+					applySkin();
+				});
+			}
+
+			function gotoPage(pageNo) {
+				curPage = pageNo;
+				renderGraphs();
+			}
+
+			function createFilter() {
+				template  = "<div id='graph_view_tree_content1' class='cactiTable' style='width:100%;text-align:center;'><div><div class='cactiTableTitle'><span>Graph Filters</span></div><div class='cactiTableButton'><span></span></div></div>";
+				template += "<table class='filterTable'><tr>";
+
+				// Graphs per page first
+				template += "<td>Graphs</td><td><select id='graphs' onChange='renderGraphs()'>"
+				var pages = [4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 24, 25, 27, 28, 30, 32, 35, 40, 50, 100 ];
+				for (i = 0; i < pages.length; i++) {
+					template += "<option value='" + pages[i] + "'" + (pages[i] == graphsPerPage ? " selected>":">") + pages[i] + "</option>";
+				}
+				template += "</select></td>";
+
+				// Columns per page row
+				template += "<td>Columns</td><td><select id='columns' onChange='renderGraphs()'>"
+				var columns = [1, 2, 3, 4, 5, 6];
+				for (i = 0; i < columns.length; i++) {
+					template += "<option value='" + columns[i] + "'" + (columns[i] == columnsPerRow ? " selected>":">") + columns[i] + "</option>";
+				}
+				template += "</select></td>";
+
+				// Checkbox now
+				template += "<td><label for='thumbnails'>Thumbnails</label></td><td><input id='thumbnails' type='checkbox' onClick='renderGraphs()'"+(thumbnails ? " checked>":">")+"</td>";
+
+				template += "</tr></table></div>";
+
+				return template;
+			}
+
+			function createPagination() {
+				var startGraph   = (curPage-1) * graphsPerPage + 1;
+				var totalPages   = Math.ceil(totalGraphs / graphsPerPage);
+				var firstPage    = 0;
+
+				if (startGraph + graphsPerPage >= totalGraphs) {
+					var endGraph = totalGraphs;
+				}else{
+					var endGraph = startGraph + graphsPerPage - 1;
+				}
+
+				var displayPages = 7;
+
+				if (curPage + ((displayPages - 1) / 2) > totalPages) {
+					firstPage = totalPages - displayPages;
+					if (firstPage < 1) {
+						firstPage = 1;
+					}
+				}else if (curPage >= (displayPages - 1) / 2) {
+					firstPage = curPage - ((displayPages - 1) / 2);
+					if (firstPage < 1) {
+						firstPage = 1;
+					}
+				}else if (totalPages > displayPages) {
+					firstPage = 1;
+				}else{
+					firstPage = 1;
+				}
+
+				// Start pagination
+				var template = "<div class='break'></div><div class='navBarNavigation'>";
+
+				// Start previous link
+				if (curPage > 1) {
+					template += "<div class='navBarNavigationPrevious'><a href='#' onClick='gotoPage(" + (curPage-1) + ");return false;'><i class='fa fa-angle-double-left previous'></i>Previous</a></div>";
+				}else{
+					template += "<div class='navBarNavigationPrevious'></div>";
+				}
+
+				// Start pager
+				template += "<div class='navBarNavigationCenter'>Showing Graphs " + startGraph + " to " + endGraph + " of " + totalGraphs + " [ <ul class='pagination'>";
+				
+				// Always show page 1
+				if (curPage == 1) {
+					template += "<li><a href='#' class='active' onClick='gotoPage(1);return false'>1</a></li>";
+				}else{
+					template += "<li><a href='#' onClick='gotoPage(1);return false'>1</a></li>";
+				}
+
+				for (i = firstPage; i < firstPage+displayPages; i++) {
+					if (i == firstPage && i > 1) {
+						if (curPage + 1 > ((displayPages - 1) / 2)) {
+							if (totalPages > displayPages) {
+								template += "<li><span>...</span></li>";
+							}
+						}
+					}
+
+					if (i == 1) {
+						// do nothing it's the first page
+					}else if (i >= totalPages) {
+						// break from the loop, we are done
+						break;
+					}else if (i == curPage) {
+						template += "<li><a href='#' class='active' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
 					}else{
-						width = $(document).width() - $('.cactiTreeNavigationArea').width() - 22;
-						$('.cactiGraphContentArea').css('width', width).css('float', 'right');
+						template += "<li><a href='#' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
 					}
 				}
 
-				function getMRTG(id) {
-					$.get(id+'.html', function(data) {
-						$('#main').html(data);
-						applySkin();
+				if (curPage < totalPages - ((displayPages - 1) / 2)) {
+					template += "<li><span>...</span></li>";
+				}
+
+				// Always show the last page
+				if (curPage == totalPages && curPage > 1) {
+					template += "<li><a href='#' class='active' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
+				}else if (curPage > 1){
+					template += "<li><a href='#' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
+				}
+
+				template += "</ul> ]</div>";
+
+				// Start next link
+				if (curPage != totalPages) {
+					template += "<div class='navBarNavigationNext'><a href='#' onClick='gotoPage(" + (curPage+1) + ");return false;'>Next<i class='fa fa-angle-double-right next'></i></a></div>";
+				}else{
+					template += "<div class='navBarNavigationNext'></div>";
+				}
+
+				template += "</div>";
+
+				return template;
+			}
+
+			function getOriginalWidth(id) {
+				var t = new Image();
+				t.src = (id.getAttribute ? id.getAttribute("src") : false) || id.src;
+				return t.width;
+			}
+
+			function renderGraphs() {
+				var myFactor = 0;
+				if (!first) {
+					graphsPerPage = parseInt($('#graphs').val());
+					columnsPerRow = parseInt($('#columns').val());
+					thumbnails    = $('#thumbnails').is(':checked');
+				}
+				first = false;
+
+				var width = $('#main').innerWidth() - 35;
+				graphWidth = width / columnsPerRow;
+
+				$('#main').empty();
+				$('#main').append(createFilter());
+				$('#main').append(createPagination());
+
+				// Calculate the number of graphs to render
+				if (curPage == 1) {
+					graphStart = 0;
+				}else{
+					graphStart = (curPage-1) * graphsPerPage;
+				}
+
+				if ((curPage + 1) * graphsPerPage > totalGraphs) {
+					graphEnd = totalGraphs;
+				}else{
+					graphEnd = curPage * graphsPerPage;
+				}
+
+				if (thumbnails) {
+					type = "thumb_";
+				}else{
+					type = "graph_";
+				}
+
+				$('#main').append('<div id="mygraphs" class="center">');
+
+				j = 0;
+				maxHeight = 0;
+				for (var i = graphStart; i < graphEnd; i++) {
+					html = "<div class='cgraph_wrapper' style='float:left;padding:2px;'><img style='display:none;' class='cgraphs' id='graph_" + myGraphs[i] + "' onClick='getMRTG(\"graph_" + myGraphs[i] + "\")' padding='3px'></div>";
+
+					$('#mygraphs').append(html);
+
+					$('#graph_'+myGraphs[i]).attr('src', 'graphs/' + type + myGraphs[i] + '.png').load(function() {
+						var myWidth  = $(this).prop('naturalWidth');
+						var myHeight = $(this).prop('naturalHeight');
+
+						if (myFactor == 0) {
+							myFactor = graphWidth / myWidth;
+						}
+						//console.log('Window: '+width+', GraphWidth: '+graphWidth+', Width: '+myWidth+', Height: '+myHeight+', Factor: '+myFactor);
+
+						$(this).css({ width:myFactor * myWidth, height:myFactor * myHeight}).show();
+
+						if (myHeight * myFactor > maxHeight) {
+							maxHeight = myHeight * myFactor;
+						}
+
+						//console.log(maxHeight);
+						$('.cgraph_wrapper').css('height', maxHeight);
 					});
 				}
 
-				$(function () {
-					resizeGraphContent();
+				applySkin();
+		        window.scrollTo(0, 0);
+				resizeGraphContent();
+			}
 
-					$('#jstree').each(function(data) {
-						$(this)
-						.on('init.jstree', function(e, data) { })
-						.on('ready.jstree', function(e, data) {	})
-						.on('changed.jstree', function(e, data) {
-							resizeGraphContent();
-						})
-						.on('open_node.jstree', function(e, data) {
-							resizeGraphContent();
-						})
-						.on('close_node.jstree', function(e, data) {
-							resizeGraphContent();
-						})
-						.on('select_node.jstree', function(e, data) {
-							if (data.node.id) {
-								$.getJSON(data.node.id+'.json', function(data) {
-									$('#main').empty();
-									var graphs = data.length;
-									for (var i = 0; i < graphs; i++) {
-										$('#main').append('<img id="graph_'+data[i]+'" onClick="getMRTG(\'graph_'+data[i]+'\')" padding="3px" src="graphs/graph_'+data[i]+'.png">');
-									}
-									applySkin();
-							        window.scrollTo(0, 0);
-									resizeGraphContent();
-								});
-							}
-							resizeGraphContent();
-						})
-						.jstree({
-							'types' : {
-								'tree' : {
-									icon : 'images/tree.png',
-									max_children : 0
-								},
-								'device' : {
-									icon : 'images/server.png',
-									max_children : 0
-								},
-								'graph' : {
-									icon : 'images/server_chart_curve.png',
-									max_children : 0
-								},
-								'graph_template' : {
-									icon : 'images/server_chart.png',
-									max_children : 0
-								},
-								'data_query' : {
-									icon : 'images/server_dataquery.png',
-									max_children : 0
+			$(function () {
+				resizeGraphContent();
+
+				$('#jstree').each(function(data) {
+					$(this)
+					.on('init.jstree', function(e, data) { })
+					.on('ready.jstree', function(e, data) {	})
+					.on('changed.jstree', function(e, data) {
+						resizeGraphContent();
+					})
+					.on('open_node.jstree', function(e, data) {
+						resizeGraphContent();
+					})
+					.on('close_node.jstree', function(e, data) {
+						resizeGraphContent();
+					})
+					.on('select_node.jstree', function(e, data) {
+						if (data.node.id) {
+							$.getJSON(data.node.id+'.json', function(data) {
+								if (!first) {
+									curPage     = 1;
+									columnsPerPage = parseInt($('#columns').val());
+									graphsPerPage  = parseInt($('#graphs').val());
+									thumbnails     = $('#thumbnails').is(':checked');
 								}
-							},
-							'themes' : {
-								'name' : 'default',
-								'responsive' : true,
-								'url' : true,
-								'dots' : false
-							},
-							'state' : { 'key' : 'graph_tree_history' },
-							'plugins' : [ 'types', 'state', 'wholerow', 'search' ]
-						});
-					});
 
-					$(window).resize(function() {
-						treeHeight = parseInt($(window).height()-$('.jstree').offset().top-10);
-						windHeight = parseInt($('.cactiContent').height());
-						docHeight  = parseInt($('body').height());
+								totalGraphs    = data.length;
+								myGraphs       = data;
 
-						if (treeHeight > windHeight) {
-							$('#navigation').height(treeHeight+'px');
-						}else if (docHeight < windHeight) {
-							$('#navigation').height(docHeight+'px');
-						}else {
-							$('#navigation').height(windHeight+'px');
+								renderGraphs();
+							});
 						}
+
+						resizeGraphContent();
+					})
+					.jstree({
+						'types' : {
+							'tree' : {
+								icon : 'images/tree.png',
+								max_children : 0
+							},
+							'device' : {
+								icon : 'images/server.png',
+								max_children : 0
+							},
+							'graph' : {
+								icon : 'images/server_chart_curve.png',
+								max_children : 0
+							},
+							'graph_template' : {
+								icon : 'images/server_chart.png',
+								max_children : 0
+							},
+							'data_query' : {
+								icon : 'images/server_dataquery.png',
+								max_children : 0
+							}
+						},
+						'themes' : {
+							'name' : 'default',
+							'responsive' : true,
+							'url' : true,
+							'dots' : false
+						},
+						'state' : { 'key' : 'graph_tree_history' },
+						'plugins' : [ 'types', 'state', 'wholerow', 'search' ]
 					});
 				});
+
+				$(window).resize(function() {
+					treeHeight = parseInt($(window).height()-$('.jstree').offset().top-10);
+					windHeight = parseInt($('.cactiContent').height());
+					docHeight  = parseInt($('body').height());
+
+					// adjust graph size
+					width      = $('#main').width() - 35;
+					graphWidth = width / columnsPerRow;
+					myWidth    = $('.cgraphs').first().prop('naturalWidth');
+					myHeight   = $('.cgraphs').first().prop('naturalHeight');
+					myFactor   = graphWidth / myWidth;
+
+					//console.log('Window: '+width+', GraphWidth: '+graphWidth+', Width: '+myWidth+', Height: '+myHeight+', Factor: '+myFactor);
+
+					$('.cgraphs').css({ width:myFactor * myWidth, height:myFactor * myHeight});
+
+					if (treeHeight > windHeight) {
+						$('#navigation').height(treeHeight+'px');
+					}else if (docHeight < windHeight) {
+						$('#navigation').height(docHeight+'px');
+					}else {
+						$('#navigation').height(windHeight+'px');
+					}
+				});
+			});
 			</script>
 		</div>
 		<div id='navigation_right' class='cactiGraphContentArea'>
