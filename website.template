@@ -140,61 +140,67 @@
 				// Start pagination
 				var template = "<div class='break'></div><div class='navBarNavigation'>";
 
-				// Start previous link
-				if (curPage > 1) {
-					template += "<div class='navBarNavigationPrevious'><a href='#' onClick='gotoPage(" + (curPage-1) + ");return false;'><i class='fa fa-angle-double-left previous'></i>Previous</a></div>";
-				}else{
-					template += "<div class='navBarNavigationPrevious'></div>";
-				}
+				if (totalGraphs > 0) {
+					// Start previous link
+					if (curPage > 1) {
+						template += "<div class='navBarNavigationPrevious'><a href='#' onClick='gotoPage(" + (curPage-1) + ");return false;'><i class='fa fa-angle-double-left previous'></i>Previous</a></div>";
+					}else{
+						template += "<div class='navBarNavigationPrevious'></div>";
+					}
 
-				// Start pager
-				template += "<div class='navBarNavigationCenter'>Showing Graphs " + startGraph + " to " + endGraph + " of " + totalGraphs + " [ <ul class='pagination'>";
+					// Start pager
+					template += "<div class='navBarNavigationCenter'>Showing Graphs " + startGraph + " to " + endGraph + " of " + totalGraphs + " [ <ul class='pagination'>";
 				
-				// Always show page 1
-				if (curPage == 1) {
-					template += "<li><a href='#' class='active' onClick='gotoPage(1);return false'>1</a></li>";
-				}else{
-					template += "<li><a href='#' onClick='gotoPage(1);return false'>1</a></li>";
-				}
+					// Always show page 1
+					if (curPage == 1) {
+						template += "<li><a href='#' class='active' onClick='gotoPage(1);return false'>1</a></li>";
+					}else{
+						template += "<li><a href='#' onClick='gotoPage(1);return false'>1</a></li>";
+					}
 
-				for (i = firstPage; i < firstPage+displayPages; i++) {
-					if (i == firstPage && i > 1) {
-						if (curPage + 1 > ((displayPages - 1) / 2)) {
-							if (totalPages > displayPages) {
-								template += "<li><span>...</span></li>";
+					for (i = firstPage; i < firstPage+displayPages; i++) {
+						if (i == firstPage && i > 1) {
+							if (curPage + 1 > ((displayPages - 1) / 2)) {
+								if (totalPages > displayPages) {
+									template += "<li><span>...</span></li>";
+								}
 							}
+						}
+
+						if (i == 1) {
+							// do nothing it's the first page
+						}else if (i >= totalPages) {
+							// break from the loop, we are done
+							break;
+						}else if (i == curPage) {
+							template += "<li><a href='#' class='active' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
+						}else{
+							template += "<li><a href='#' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
 						}
 					}
 
-					if (i == 1) {
-						// do nothing it's the first page
-					}else if (i >= totalPages) {
-						// break from the loop, we are done
-						break;
-					}else if (i == curPage) {
-						template += "<li><a href='#' class='active' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
-					}else{
-						template += "<li><a href='#' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
+					if (curPage < totalPages - ((displayPages - 1) / 2)) {
+						template += "<li><span>...</span></li>";
 					}
-				}
 
-				if (curPage < totalPages - ((displayPages - 1) / 2)) {
-					template += "<li><span>...</span></li>";
-				}
+					// Always show the last page
+					if (curPage == totalPages && curPage > 1) {
+						template += "<li><a href='#' class='active' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
+					}else if (totalPages > 1){
+						template += "<li><a href='#' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
+					}
 
-				// Always show the last page
-				if (curPage == totalPages && curPage > 1) {
-					template += "<li><a href='#' class='active' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
-				}else if (curPage > 1){
-					template += "<li><a href='#' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
-				}
+					template += "</ul> ]</div>";
 
-				template += "</ul> ]</div>";
-
-				// Start next link
-				if (curPage != totalPages) {
-					template += "<div class='navBarNavigationNext'><a href='#' onClick='gotoPage(" + (curPage+1) + ");return false;'>Next<i class='fa fa-angle-double-right next'></i></a></div>";
+					// Start next link
+					if (curPage != totalPages) {
+						template += "<div class='navBarNavigationNext'><a href='#' onClick='gotoPage(" + (curPage+1) + ");return false;'>Next<i class='fa fa-angle-double-right next'></i></a></div>";
+					}else{
+						template += "<div class='navBarNavigationNext'></div>";
+					}
 				}else{
+					template += "<div class='navBarNavigationPrevious'></div>";
+					template += "<div class='navBarNavigationCenter'>No Graphs Found";
 					template += "<div class='navBarNavigationNext'></div>";
 				}
 
@@ -315,12 +321,20 @@
 					})
 					.jstree({
 						'types' : {
+							'site' : {
+								icon : 'images/site.png',
+								max_children : 0
+							},
 							'tree' : {
 								icon : 'images/tree.png',
 								max_children : 0
 							},
 							'device' : {
 								icon : 'images/server.png',
+								max_children : 0
+							},
+							'device_template' : {
+								icon : 'images/device_template.png',
 								max_children : 0
 							},
 							'graph' : {
@@ -331,8 +345,16 @@
 								icon : 'images/server_chart.png',
 								max_children : 0
 							},
+							'graph_template_anchor' : {
+								icon : 'images/server_graph_template.png',
+								max_children : 0
+							},
 							'data_query' : {
 								icon : 'images/server_dataquery.png',
+								max_children : 0
+							},
+							'data_query_anchor' : {
+								icon : 'images/server_table.png',
 								max_children : 0
 							}
 						},

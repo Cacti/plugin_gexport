@@ -221,14 +221,10 @@ function exporter(&$export, $export_path) {
 
 	$exported = 0;
 
-	create_export_directory_structure(&$export, $root_path, $export_path);
+	create_export_directory_structure($export, $root_path, $export_path);
 
-	$exported = export_graphs($export, $export_path);
-	if ($export['export_presentation'] == 'tree') {
-		tree_export($export, $export_path);
-	}else{
-		site_export($export, $export_path);
-	}
+	//$exported = export_graphs($export, $export_path);
+	tree_site_export($export, $export_path);
 
 	return $exported;
 }
@@ -830,21 +826,21 @@ function export_post_ftp_upload(&$export, $stExportDir) {
 
 /* write_branch_conf - this function writes a json array of all graphs
    that lie on a branch within a tree.
-   @arg $tree_id     - the tree id of the branch
-   @arg $branch_id   - the branch id of the branch
-   @arg $type        - the type of conf file including tree, branch, host, host_gt, host_dq, and host_dqi
-   @arg $host_id     - the host id of any host level tree objects
-   @arg $sub_id      - the sub id of the object passed.  This is either a numeric data point, or a hybrid
-                       the case of the host_dqi object.
-   @arg $user        - the effective user to use for export, -1 indicates no permission check
-   @arg $export_path - the location to store the json array configuration file */
-function write_branch_conf($tree_id, $branch_id, $type, $host_id, $sub_id, $user, $export_path) {
+   @arg $tree_site_id - the tree or site id of the branch
+   @arg $branch_id    - the branch id of the branch
+   @arg $type         - the type of conf file including tree, branch, host, host_gt, host_dq, and host_dqi
+   @arg $host_id      - the host id of any host level tree objects
+   @arg $sub_id       - the sub id of the object passed.  This is either a numeric data point, or a hybrid
+                        the case of the host_dqi object.
+   @arg $user         - the effective user to use for export, -1 indicates no permission check
+   @arg $export_path  - the location to store the json array configuration file */
+function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, $user, $export_path) {
 	static $json_files = array();
 	$total_rows  = 0;
 	$graph_array = array();
 
 	if ($type == 'branch') {
-		$json_file = $export_path . '/tree_' . $tree_id . '_branch_' . $branch_id . '.json';
+		$json_file = $export_path . '/tree_' . $tree_site_id . '_branch_' . $branch_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
 
@@ -853,7 +849,70 @@ function write_branch_conf($tree_id, $branch_id, $type, $host_id, $sub_id, $user
 			WHERE graph_tree_id = ? 
 			AND parent = ? 
 			AND local_graph_id > 0
-			ORDER BY position', array($tree_id, $branch_id));
+			ORDER BY position', array($tree_site_id, $branch_id));
+	}elseif ($type == 'gtbranch') {
+		$json_file = $export_path . '/site_' . $tree_site_id . '_gtbranch_0.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$graphs = array();
+	}elseif ($type == 'dqbranch') {
+		$json_file = $export_path . '/site_' . $tree_site_id . '_gtbranch_0.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$graphs = array();
+	}elseif ($type == 'site') {
+		$json_file = $export_path . '/site_' . $tree_site_id . '.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$graphs = array();
+	}elseif ($type == 'site_dt') {
+		$json_file = $export_path . '/site_' . $tree_site_id . '_dt_' . $sub_id . '.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$graphs = array();
+	}elseif ($type == 'site_gt') {
+		$json_file = $export_path . '/site_' . $tree_site_id . '_gt_' . $sub_id . '.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
+
+		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gt.id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
+	}elseif ($type == 'site_dq') {
+		$json_file = $export_path . '/site_' . $tree_site_id . '_dq_' . $sub_id . '.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
+
+		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
+	}elseif ($type == 'site_dqi') {
+		$parts   = explode(':', $sub_id);
+		$dq      = $parts[0];
+		$index   = $parts[1];
+		$values  = json_decode($parts[2]);
+		$nindex  = clean_up_name($parts[1]);
+		$json_file = $export_path . '/site_' . $tree_site_id . '_dq_' . $dq . '_dqi_' . $nindex . '.json';
+
+		if (isset($json_files[$json_file])) return;
+
+		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
+
+		$sql_where = '';
+		if (sizeof($values)) {
+			foreach($values as $value) {
+				// host_id | snmp_index
+				$parts = explode('|', $value);
+				$sql_where .= ($sql_where != '' ? ' OR ':' AND (') . '(host_id = ' . $parts[0] . ' AND snmp_index = ' . db_qstr($parts[1]) . ')';
+			}
+			$sql_where .= ')';
+		}
+
+		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id=' . $dq . $sql_where . ')', 'gtg.title_cache', '', $total_rows, $user);
 	}elseif ($type == 'host') {
 		$json_file = $export_path . '/host_' . $host_id . '.json';
 
@@ -883,23 +942,21 @@ function write_branch_conf($tree_id, $branch_id, $type, $host_id, $sub_id, $user
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.snmp_query_id=' . $dq . ' AND gl.snmp_index=' . db_qstr($parts[1]), 'gtg.title_cache', '', $total_rows, $user);
 	}
 
+	$fp = fopen($json_file, 'w');
 	if (sizeof($graphs)) {
-		$fp = fopen($json_file, 'w');
-		$graph_array = array();
-
-		foreach($graphs as $graph) {
-			if ($host_id == 0) {
-				if (is_graph_allowed($graph['local_graph_id'], $user)) {
-					$graph_array[] = $graph['local_graph_id'];
-				}
-			}else{
+	foreach($graphs as $graph) {
+		if ($host_id == 0) {
+			if (is_graph_allowed($graph['local_graph_id'], $user)) {
 				$graph_array[] = $graph['local_graph_id'];
 			}
+		}else{
+			$graph_array[] = $graph['local_graph_id'];
 		}
-
-		fwrite($fp, json_encode($graph_array) . "\n");
-		fclose($fp);
 	}
+	}
+
+	fwrite($fp, json_encode($graph_array) . "\n");
+	fclose($fp);
 
 	$json_files[$json_file] = true;
 
@@ -1084,12 +1141,280 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 	return $jstree;
 }
 
-/* tree_export - the first of a series of functions that are designed to
-   create the tree in html, and present the graphs within the tree into
+/* export_generate_site_html - create jstree compatible static site html.  This is a
+   set of unsorted lists that jstree can properly parse into a tree object. Note that
+   this is a reentrant/recursive function that will call iteself.
+   @arg $export_path  - the location to write the resulting index.html file
+   @arg $site         - the site array including information about the site
+   @arg $parent       - the parent of any branch to be searched
+   @arg $expand_hosts - the setting of expand hosts for the export
+   @arg $user         - the effective user to use for permission checks.  -1 indicated
+                        no permission check.
+   @arg $jstree       - the html of the jstree compatible unsorted list */
+function export_generate_site_html($export_path, $site, $parent, $expand_hosts, $user, $jstree) {
+	static $depth = 5;
+
+	$total_rows = 0;
+	$jstree    .= str_repeat("\t", $depth) . "<ul>\n";
+
+	$depth++;
+
+	write_branch_conf($site['id'], $parent, 'site', 0, 0, $user, $export_path);
+
+	$gtcount = 0;
+	$dqcount = 0;
+	$ingt    = false;
+	$indq    = false;
+
+	$device_templates = db_fetch_assoc_prepared('SELECT DISTINCT "site_dt" AS type, dt.id, dt.name
+		FROM host_template AS dt
+		INNER JOIN host AS h
+		ON h.host_template_id=dt.id
+		WHERE h.site_id = ?', array($site['id']));
+
+	if (sizeof($device_templates)) {
+		foreach($device_templates as $branch) {
+			write_branch_conf($site['id'], 0, $branch['type'], 0, $branch['id'], $user, $export_path);
+
+			$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dt_" . $branch['id'] . "' data-jstree='{ \"type\" : \"device_template\" }'>" . $branch['name'] . "\n";
+			$depth++;
+
+			$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+			$depth++;
+
+			$hosts = db_fetch_assoc_prepared('SELECT DISTINCT id AS host_id, "1" AS host_grouping_type
+				FROM host 
+				WHERE site_id = ?
+				ORDER BY description', 
+				array($site['id']));
+
+			if (sizeof($hosts)) {
+				foreach($hosts as $host) {
+					if (is_device_allowed($host['host_id'], $user)) {
+						write_branch_conf($site['id'], $parent, 'host', $host['host_id'], 0, $user, $export_path);
+
+						$host_description = get_host_description($host['host_id']);
+
+						$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "' data-jstree='{ \"type\" : \"device\" }'>" . $host_description . "\n";
+
+						$depth++;
+
+						if ($expand_hosts == 'on') {
+							$templates = get_allowed_graph_templates('gl.host_id =' . $host['host_id'], 'name', '', $total_rows, $user);
+							$count = 0;
+							if (sizeof($templates)) {
+								if ($host['host_grouping_type'] == 1) {
+									foreach($templates as $template) {
+										$total_rows = write_branch_conf($site['id'], $parent, 'host_gt', $host['host_id'], $template['id'], $user, $export_path);
+										if ($total_rows) {
+											if ($count == 0) {
+												$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+	
+												$depth++;
+											}
+											$count++;
+
+											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_gt_" . $template['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $template['name'] . "</li>\n";
+										}
+									}
+
+									if ($count) {
+										$depth--;
+										$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+										$depth--;
+										$jstree .= str_repeat("\t", $depth) . "</li>\n";
+									}
+								}else{
+									$data_queries = db_fetch_assoc_prepared('SELECT sq.id, sq.name 
+										FROM snmp_query AS sq
+										INNER JOIN host_snmp_query AS hsq
+										ON sq.id=hsq.snmp_query_id
+										WHERE hsq.host_id = ?',
+										array($host['host_id']));
+
+									$data_queries[] = array('id' => '0', 'name' => __('Non Query Based'));
+
+									foreach($data_queries as $query) {
+										$total_rows = write_branch_conf($site['id'], $parent, 'host_dq', $host['host_id'], $query['id'], $user, $export_path);
+										if ($total_rows && $query['id'] > 0) {
+											if ($count == 0) {
+												$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+												$depth++;
+											}
+											$count++;
+
+											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $query['name'] . "\n";
+
+											$depth++;
+											$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+
+											$depth++;
+
+											$graphs = db_fetch_assoc_prepared('SELECT gl.* 
+												FROM graph_local AS gl 
+												WHERE host_id = ? 
+												AND snmp_query_id = ?', 
+												array($host['host_id'], $query['id']));
+
+											$dqi = array();
+											foreach($graphs as $graph) {
+												$dqi[$graph['snmp_index']] = $graph['snmp_index'];
+											}
+
+											/* fetch a list of field names that are sorted by the preferred sort field */
+											$sort_field_data = get_formatted_data_query_indexes($host['host_id'], $query['id']);
+
+											foreach($dqi as $i) {
+												$total_rows = write_branch_conf($site['id'], $parent, 'host_dqi', $host['host_id'], $query['id'] . ':' . $i, $user, $export_path);
+												if ($total_rows) {
+													if (isset($sort_field_data[$i])) {
+														$title = $sort_field_data[$i];
+													}else{
+														$title = $i;
+													}
+													$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
+												}
+											}
+
+											$depth--;
+											$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+											$depth--;
+											$jstree .= str_repeat("\t", $depth) . "</li>\n";
+										}
+									}
+
+									if ($count) {
+										$depth--;
+										$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+										$depth--;
+										$jstree .= str_repeat("\t", $depth) . "</li>\n";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$depth--;
+			$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+			$depth--;
+			$jstree .= str_repeat("\t", $depth) . "</li>\n";
+		}
+	}
+
+	$graph_templates = db_fetch_assoc_prepared('SELECT DISTINCT "site_gt" AS type, gt.id, gt.name
+		FROM graph_templates AS gt
+		INNER JOIN graph_local AS gl
+		ON gl.graph_template_id = gt.id
+		INNER JOIN host AS h
+		ON h.id = gl.host_id
+		WHERE h.site_id = ?
+		ORDER BY gt.name', array($site['id']));
+
+	if (sizeof($graph_templates)) {
+		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_gtbranch_0' data-jstree='{ \"type\" : \"graph_template_anchor\" }'>" . __("Graph Templates") . "\n";
+		$depth++;
+		$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+		$depth++;
+
+		write_branch_conf($site['id'], 0, 'gtbranch', 0, 0, $user, $export_path);
+
+		foreach($graph_templates as $branch) {
+			if (is_graph_template_allowed($branch['id'], $user)) {
+				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_gt_" . $branch['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $branch['name'] . "</li>\n";
+				write_branch_conf($site['id'], 0, $branch['type'], 0, $branch['id'], $user, $export_path);
+			}
+		}
+
+		$depth--;
+		$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+		$depth--;
+		$jstree .= str_repeat("\t", $depth) . "</li>\n";
+	}
+
+	$data_queries = db_fetch_assoc_prepared('SELECT DISTINCT "site_dq" AS type, dq.id, dq.name
+		FROM snmp_query AS dq
+		INNER JOIN graph_local AS gl
+		ON dq.id=gl.snmp_query_id
+		INNER JOIN host AS h
+		ON h.id = gl.host_id
+		WHERE h.site_id = ?', array($site['id']));
+
+	if (sizeof($data_queries)) {
+		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dqbranch_0' data-jstree='{ \"type\" : \"data_query_anchor\" }'>" . __("Data Queries") . "\n";
+		$depth++;
+		$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+		$depth++;
+
+		write_branch_conf($site['id'], 0, 'dqbranch', 0, 0, $user, $export_path);
+
+		foreach($data_queries as $branch) {
+			$total_rows = write_branch_conf($site['id'], '0', 'site_dq', 0, $branch['id'], $user, $export_path);
+
+			if ($total_rows) {
+				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dq_" . $branch['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $branch['name'];
+				$depth++;
+
+				$jstree .= str_repeat("\t", $depth) . "<ul>\n";
+				$depth++;
+
+				$graphs = db_fetch_assoc_prepared('SELECT gl.* 
+					FROM graph_local AS gl 
+					INNER JOIN host AS h
+					ON gl.host_id=h.id
+					WHERE h.site_id = ? 
+					AND snmp_query_id = ?', 
+					array($site['id'], $branch['id']));
+
+				$sort_field_data = array();
+
+				$dqi = array();
+				foreach($graphs as $graph) {
+					if (!isset($sort_field_data[$graph['host_id']])) {
+						$sort_field_data[$graph['host_id']] = get_formatted_data_query_indexes($graph['host_id'], $branch['id']);
+					}
+
+					$index = $sort_field_data[$graph['host_id']][$graph['snmp_index']];
+					$value = $graph['host_id'] . '|' . $graph['snmp_index'];
+
+					$dqi[$index][] = $value;
+				}
+
+				foreach($dqi as $index => $values) {
+					$values = json_encode($values);
+					$total_rows = write_branch_conf($site['id'], 0, 'site_dqi', 0, $branch['id'] . ':' . $index . ':' . $values, $user, $export_path);
+					if ($total_rows) {
+						$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dq_" . $branch['id'] . "_dqi_" . clean_up_name($index) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $index . "</li>\n";
+					}
+				}
+
+				$depth--;
+				$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+				$depth--;
+				$jstree .= str_repeat("\t", $depth) . "</li>\n";
+			}
+		}
+
+		$depth--;
+		$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+		$depth--;
+		$jstree .= str_repeat("\t", $depth) . "</li>\n";
+	}
+
+	$depth--;
+
+	$jstree .= str_repeat("\t", $depth) . "</ul>\n";
+
+	return $jstree;
+}
+
+/* tree_site_export - the first of a series of functions that are designed to
+   create the jstree in html, and present the graphs within the tree into
    static configuration files that will hold the graphs to be rendered.
    @arg $export       - the export item data structure
    @arg $export_path  - the location to write the resulting index.html file */
-function tree_export(&$export, $export_path) {
+function tree_site_export(&$export, $export_path) {
 	global $config;
 
 	// Define javascript global variables for form elements
@@ -1102,7 +1427,6 @@ function tree_export(&$export, $export_path) {
 
 	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";;
 	$user       = $export['export_effective_user'];
-	$trees      = $export['graph_tree'];
 	$ntree      = array();
 	$sql_where  = '';
 	$total_rows = 0;
@@ -1112,17 +1436,34 @@ function tree_export(&$export, $export_path) {
 		$user = -1;
 	}
 
-	if ($trees != '') {
-		$sql_where = 'gt.id IN(' . $trees . ')';
-	}
+	if ($export['export_presentation'] == 'tree') {
+		$trees = $export['graph_tree'];
 
-	$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
+		if ($trees != '') {
+			$sql_where = 'gt.id IN(' . $trees . ')';
+		}
 
-	if (sizeof($trees)) {
-		foreach($trees as $tree) {
-			$jstree .= str_repeat("\t", 4) . "<li id='tree_" . $tree['id'] . "' data-jstree='{ \"type\" : \"tree\" }'>" . get_tree_name($tree['id']) . "\n";;
-			$jstree = export_generate_tree_html($export_path, $tree, $parent, $export['export_expand_hosts'], $user, $jstree);
-			$jstree .= str_repeat("\t", 4) . "</li>\n";
+		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
+
+		if (sizeof($trees)) {
+			foreach($trees as $tree) {
+				$jstree .= str_repeat("\t", 4) . "<li id='tree_" . $tree['id'] . "' data-jstree='{ \"type\" : \"tree\" }'>" . get_tree_name($tree['id']) . "\n";;
+				$jstree = export_generate_tree_html($export_path, $tree, $parent, $export['export_expand_hosts'], $user, $jstree);
+				$jstree .= str_repeat("\t", 4) . "</li>\n";
+			}
+		}
+	}else{
+		$sites = $export['graph_site'];
+		$sites = explode(',', $sites);
+
+		if (sizeof($sites)) {
+			foreach($sites as $site_id) {
+				$site_data = db_fetch_row_prepared('SELECT * FROM sites WHERE id = ?', array($site_id));
+
+				$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";;
+				$jstree = export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
+				$jstree .= str_repeat("\t", 4) . "</li>\n";
+			}
 		}
 	}
 
@@ -1222,6 +1563,10 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/images/server_chart_curve.png", "$export_path/images/server_chart_curve.png");
 	copy("$root_path/images/server_chart.png", "$export_path/images/server_chart.png");
 	copy("$root_path/images/server_dataquery.png", "$export_path/images/server_dataquery.png");
+	copy("$root_path/images/site.png", "$export_path/images/site.png");
+	copy("$root_path/images/device_template.png", "$export_path/images/device_template.png");
+	copy("$root_path/images/server_table.png", "$export_path/images/server_table.png");
+	copy("$root_path/images/server_graph_template.png", "$export_path/images/server_graph_template.png");
 	copy("$root_path/include/themes/$theme/images/cacti_logo.svg", "$export_path/images/cacti_logo.svg");
 
 	/* jstree theme files */
