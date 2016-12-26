@@ -201,6 +201,14 @@ function export_form_actions() {
 
 					export_disable($selected_items[$i]);
 				}
+			}elseif (get_nfilter_request_var('drp_action') === '4') { /* run now */
+				for ($i=0;($i<count($selected_items));$i++) {
+					/* ================= input validation ================= */
+					input_validate_input_number($selected_items[$i]);
+					/* ==================================================== */
+
+					export_runnow($selected_items[$i]);
+				}
 			}
 		}
 
@@ -258,6 +266,15 @@ function export_form_actions() {
 				</tr>\n";
 
 			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Enable Graph Export Definition(s)'>";
+		}elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
+			print "	<tr>
+					<td class='topBoxAlt'>
+						<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
+						<div class='itemlist'><ul>$export_list</ul></div>
+					</td>
+				</tr>\n";
+
+			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Run Graph Export Definition(s) Now'>";
 		}
 	}else{
 		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.') . "</span></td></tr>\n";
@@ -283,6 +300,18 @@ function export_form_actions() {
 /* ---------------------
     Graph Export Functions
    --------------------- */
+
+function export_runnow($export_id) {
+	include_once('./lib/poller.php');
+
+	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', array($export_id));
+
+	if (($status['status'] == 0 || $status['status'] == 2) && $status['enabled'] == 'on') {
+		$command_string = read_config_option('path_php_binary');
+		$extra_args = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php" --id=' . $export_id . ' --force';
+		exec_background($command_string, $extra_args);
+	}
+}
 
 function export_edit() {
 	global $fields_export_edit;
