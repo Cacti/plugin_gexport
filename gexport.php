@@ -302,6 +302,8 @@ function export_form_actions() {
    --------------------- */
 
 function export_runnow($export_id) {
+	global $config;
+
 	include_once('./lib/poller.php');
 
 	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', array($export_id));
@@ -310,6 +312,8 @@ function export_runnow($export_id) {
 		$command_string = read_config_option('path_php_binary');
 		$extra_args = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php" --id=' . $export_id . ' --force';
 		exec_background($command_string, $extra_args);
+
+		sleep(2);
 	}
 }
 
@@ -692,7 +696,8 @@ function gexport($refresh = true) {
 		'export_effective_user' => array('display' => __('Effective User'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The user that this export will impersonate.')),
 		'last_runtime' => array('display' => __('Last Runtime'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last runtime for the Graph Export.')),
 		'total_graphs' => array('display' => __('Graphs'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The number of Graphs Exported on the last run.')),
-		'last_started' => array('display' => __('Last Started'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export was started.'))
+		'last_started' => array('display' => __('Last Started'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export was started.')),
+		'last_errored' => array('display' => __('Last Errored'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export experienced an error.'))
 	);
 
 	html_header_sort_checkbox($display_text, get_request_var('sort_column'), get_request_var('sort_direction'), false);
@@ -760,9 +765,16 @@ function gexport($refresh = true) {
 				form_selectable_cell(round($export['last_runtime'],2) . ' ' . __('Sec'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(number_format_i18n($export['total_graphs']), $export['id'], '', 'text-align:right');
 				form_selectable_cell($export['last_started'], $export['id'], '', 'text-align:right');
+
+				if ($export['last_errored'] != '0000-00-00 00:00:00') {
+					form_selectable_cell($export['last_errored'], $export['id'], '', 'text-align:right', $export['last_error']);
+				}else{
+					form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
+				}
 			}else{
 				form_selectable_cell(__('N/A'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(__('N/A'), $export['id'], '', 'text-align:right');
+				form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
 			}
 

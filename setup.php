@@ -140,6 +140,7 @@ function gexport_setup_table() {
 		`last_checked` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
 		`last_started` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
 		`last_ended` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+		`last_errored` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
 		`last_runtime` double NOT NULL DEFAULT '0',
 		`last_error` varchar(255) DEFAULT NULL,
 		`total_graphs` double DEFAULT '0',
@@ -468,12 +469,22 @@ function gexport_config_arrays() {
 
 function gexport_draw_navigation_text($nav) {
 	$nav['gexport.php:'] = array(
-		'title'   => __('Exported Cacti Graph Pages'), 
-		'mapping' => '', 
-		'url'     => 'gexport.php', 
-		'level'   => '0'
-	);
+		'title' => __('Exported Cacti Graph Pages'), 
+		'mapping' => 'index.php:', 
+		'url' => 'gexport.php', 
+		'level' => '1');
+
+	$nav['gexport.php:edit'] = array(
+		'title' => __('(Edit)'), 
+		'mapping' => 'index.php:,gexport.php:', 
+		'url' => '', 
+		'level' => '2');
+
+	$nav['gexport.php:actions'] = array(
+		'title' => __('Actions'), 
+		'mapping' => 'index.php:,gexport.php:', 
+		'url' => '', 
+		'level' => '2');
 
 	return $nav;
 }
-

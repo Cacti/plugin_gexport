@@ -189,6 +189,8 @@ function run_export(&$export) {
 
 		$exported = exporter($export, $stExportDir);
 
+		export_rsync_execute($export, $stExportDir);
+
 		break;
 	case 'scp':
 		export_debug("Export Type is 'scp'");
@@ -202,12 +204,95 @@ function run_export(&$export) {
 
 		$exported = exporter($export, $stExportDir);
 
+		export_scp_execute($export, $stExportDir);
+
 		break;
 	default:
 		export_fatal($export, 'Export method not specified. Exporting can not continue.  Please set method properly in Cacti configuration.');
 	}
 
 	config_export_stats($export, $exported);
+}
+
+function export_rsync_execute(&$export, $stExportDir) {
+	$keyopt = '';
+	$user   = $export['export_user'];
+	$port   = $export['export_port'];
+	$host   = $export['export_host'];
+	$output = '';
+	$prune  = '';
+	$retvar = 0;
+
+	if ($export['export_private_key_path'] != '') {
+		if (file_exists($export['export_private_key_path'])) {
+			if (is_readable($export['export_private_key_path'])) {
+				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"';
+			}else{
+				export_fatal($export, 'ssh Private Key file is not readable.');
+			}
+		}else{
+			export_fatal($export, 'ssh Private Key file does not exist.');
+		}
+	}
+
+	if (gethostbyname($host) == $host) {
+		export_fatal($export, "Hostname '" . $host . "' can not be resolved to an IP Address.");
+	}
+
+	if ($port != '') {
+		if (!is_numeric($port)) {
+			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
+		}else{
+			$keyopt .= " -p" . $port . "'";
+		}
+	}elseif ($keyopt != '') {
+		$keyopt .= "'";
+	}
+
+	if ($export['export_sanitize_remote'] == 'on') {
+		$prune = '--delete-delay --prune-tempty-dirs';
+	}
+
+	exec('rsync -zav ' . $prune . $keyopt . ' ' . $scExportDir . '/ ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+
+	if ($retvar != 0) {
+		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim($output) . "'");
+	}
+}
+
+function export_scp_execute(&$export, $stExportDir) {
+	$keyopt = '';
+	$user   = $export['export_user'];
+	$port   = $export['export_port'];
+	$host   = $export['export_host'];
+	$output = '';
+	$retvar = 0;
+
+	if ($export['export_private_key_path'] != '') {
+		if (file_exists($export['export_private_key_path'])) {
+			if (is_readable($export['export_private_key_path'])) {
+				$keyopt = ' -i "' . $export['export_private_key_path'] . '"';
+			}else{
+				export_fatal($export, 'ssh Private Key file is not readable.');
+			}
+		}else{
+			export_fatal($export, 'ssh Private Key file does not exist.');
+		}
+	}
+
+	if (gethostbyname($host) == $host) {
+		export_fatal($export, "Hostname '" . $host . "' can not be resolved to an IP Address.");
+	}
+
+	if ($port != '' && !is_numeric($port)) {
+		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
+	}
+
+	exec('scp -rp ' . $keyopt . ($port != '' ? ' -P ' . $port:'') . $scExportDir . '/ ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+
+	if ($retvar != 0) {
+		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . trim($output) . "'");
+	}
 }
 
 /* exporter - a wrapper function that reduces clutter in the run_export
@@ -263,7 +348,7 @@ function export_fatal(&$export, $stMessage) {
  
 	/* insert poller stats into the settings table */
 	db_execute_prepared('UPDATE graph_exports 
-		SET last_error = ?, last_ended=NOW(), status=2
+		SET last_error = ?, last_ended=NOW(), last_errored=NOW(), status=2
 		WHERE id = ?', 
 		array($stMessage, $export['id']));
 
@@ -601,9 +686,10 @@ function export_graphs(&$export, $export_path) {
 				fclose($fp_graph_index);
   			}
 
-			if ($exported > $export['graph_max']) {
+			if ($exported >= $export['graph_max']) {
 				db_execute_prepared('UPDATE graph_exports 
-					SET last_error="WARNING: Max number of Graphs ' . $export['graph_max'] . ' reached" 
+					SET last_error="WARNING: Max number of Graphs ' . $export['graph_max'] . ' reached",
+					last_errored=NOW()
 					WHERE id = ?',
 					array($export['id']));
 
