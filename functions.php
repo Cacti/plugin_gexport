@@ -223,7 +223,7 @@ function exporter(&$export, $export_path) {
 
 	create_export_directory_structure($export, $root_path, $export_path);
 
-	//$exported = export_graphs($export, $export_path);
+	$exported = export_graphs($export, $export_path);
 	tree_site_export($export, $export_path);
 
 	return $exported;
@@ -468,7 +468,7 @@ function export_graphs(&$export, $export_path) {
 	}
 
 	if ($export['export_presentation'] == 'tree') {
-		if ($trees != '') {
+		if ($trees != '0') {
 			$sql_where = 'gt.id IN(' . $trees . ')';
 		}
 
@@ -516,7 +516,7 @@ function export_graphs(&$export, $export_path) {
 			}
 		}
 	}else{
-		if ($sites != '') {
+		if ($sites != '0') {
 			$hosts = db_fetch_cell('SELECT GROUP_CONCAT(id) FROM host WHERE site_id IN(' . $sites . ')');
 		}
 
@@ -593,8 +593,6 @@ function export_graphs(&$export, $export_path) {
 					rrdtool_function_graph($local_graph_id, $rra['id'], $graph_data_array, $rrdtool_pipe, $metadata, $user);
 					unset($graph_data_array);
 
-					$exported++;
-
 					fwrite($fp_graph_index, "<tr><td class='center'><div><img src='graphs/graph_" . $local_graph_id . '_' . $rra['id'] . ".png'></div></td></tr>\n");
 					fwrite($fp_graph_index, "<tr><td class='center'><div><strong>" . $rra['name'] . '</strong></div></td></tr>');
 				}
@@ -602,6 +600,15 @@ function export_graphs(&$export, $export_path) {
 				fwrite($fp_graph_index, '</table>');
 				fclose($fp_graph_index);
   			}
+
+			if ($exported > $export['graph_max']) {
+				db_execute_prepared('UPDATE graph_exports 
+					SET last_error="WARNING: Max number of Graphs ' . $export['graph_max'] . ' reached" 
+					WHERE id = ?',
+					array($export['id']));
+
+				break;
+			}
 		}
 
 		/* close the rrdtool pipe */
@@ -1454,7 +1461,12 @@ function tree_site_export(&$export, $export_path) {
 		}
 	}else{
 		$sites = $export['graph_site'];
-		$sites = explode(',', $sites);
+
+		if ($sites != '0') {
+			$sites = explode(',', $sites);
+		}else{
+			$sites = array_rekey(db_fetch_assoc('SELECT id FROM sites ORDER BY name'), 'id', 'id');
+		}
 
 		if (sizeof($sites)) {
 			foreach($sites as $site_id) {
