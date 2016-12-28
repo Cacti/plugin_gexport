@@ -54,11 +54,10 @@ function plugin_gexport_version() {
 }
 
 function gexport_poller_bottom() {
-	global $poller_id;
-	return false;
+	global $config;
 
 	/* graph export */
-	if ($poller_id == 0) {
+	if ($config['poller_id'] == 1) {
 		$command_string = read_config_option('path_php_binary');
 		$extra_args = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php"';
 		exec_background($command_string, $extra_args);
@@ -67,6 +66,7 @@ function gexport_poller_bottom() {
 
 function gexport_check_upgrade() {
 	global $config, $database_default;
+
 	include_once($config['library_path'] . '/database.php');
 	include_once($config['library_path'] . '/functions.php');
 
