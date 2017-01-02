@@ -36,8 +36,9 @@ function graph_export($id = 0, $force = false) {
 	$poller_interval = read_config_option('poller_interval');
 	$runnow          = false;
 	$sql_where       = '';
+	$started_exports = 0;
 
-	if ($debug) {
+	if ($force) {
 		export_debug('This is a forced run');
 	}
 
@@ -50,6 +51,8 @@ function graph_export($id = 0, $force = false) {
 
 	if (sizeof($exports)) {
 		foreach($exports as $export) {
+			export_debug("Checking export '" . $export['name'] . "' to determine if it's time to run.");
+
 			/* insert poller stats into the settings table */
 			db_execute_prepared('UPDATE graph_exports 
 				SET last_checked = NOW()
@@ -60,41 +63,56 @@ function graph_export($id = 0, $force = false) {
 
 			if (!$force) {
 				if ($export['export_timing'] == 'periodic') {
+					export_debug("Export '" . $export['name'] . "' is periodic.");
 					if ($export['last_checked'] == '0000-00-00 00:00:00') {
+						export_debug('First run for periodic on ' . $export['name']);
 						$runnow = true;
 					}else{
-						$last_checked = strtotime($export['export_timing']);
+						$last_checked = strtotime($export['last_checked']);
 						if ($last_checked + $export['export_skip'] * $poller_interval < $start_time) {
+							export_debug('Time to run for periodic on ' . $export['name']);
 							$runnow = true;
+						}else{
+							export_debug('Not Time to run for periodic on ' . $export['name']);
 						}
 					}
 				}else{
 					switch($export['export_timing']) {
 					case 'hourly':
+						export_debug("Export '" . $export['name'] . "' is hourly.");
+
 						$current = date('H:i:s', $start_time);
 						$seconds = date('s',     $start_time);
 						$hours   = date('H',     $start_time);
 						$today   = date('Y-m-d', $start_time);
 						$nextst  = $export['export_hourly'];
 	
-						$stn = strtotime($today . ' ' . $hours . ':' . $nextst . ':' . $seconds);
-						$stp = $start_time - $poller_interval;
+						$start_next = strtotime($today . ' ' . $hours . ':' . $nextst . ':00');
+
+						export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
+
+						$start_prior_window = $start_time - $poller_interval;
 	
-						if ($stn < $stp && $stn < $start_time) {
+						if ($start_next < $start_prior_window && $start_next < $start_time) {
 							$runnow = true;
 						}
 	
 						break;
 					case 'daily':
+						export_debug("Export '" . $export['name'] . "' is daily.");
+
 						$current = date('H:i:s', $start_time);
 						$seconds = date('s',     $start_time);
 						$today   = date('Y-m-d', $start_time);
 						$nextst  = $export['export_daily'];
 	
-						$stn = strtotime($today . ' ' . $nextst . ':' . $seconds);
-						$stp = $start_time - $poller_interval;
+						$start_next = strtotime($today . ' ' . $nextst . ':00');
+
+						export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
+
+						$start_prior_window = $start_time - $poller_interval;
 	
-						if ($stn < $stp && $stn < $start_time) {
+						if ($start_next < $start_prior_window && $start_next < $start_time) {
 							$runnow = true;
 						}
 	
@@ -106,11 +124,18 @@ function graph_export($id = 0, $force = false) {
 			}
 	
 			if ($runnow) {
+				$started_exports++;
 				export_debug('Running Export for id ' . $export['id']);
 				run_export($export);
 			}
 		}
 	}
+
+	$end = microtime(true);
+
+	$export_stats = sprintf('Time:%01.2f Exports:%s Exported:%s', $end - $start, sizeof($exports), $started_exports);
+
+	cacti_log('MASTER STATS: ' . $export_stats, true, 'EXPORT');
 }
 
 /* run_export - a function the pre-processes the export structure and 
