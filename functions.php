@@ -1,7 +1,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2016 The Cacti Group                                 |
+ | Copyright (C) 2004-2017 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -1591,44 +1591,53 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	/* create the treeview sub-directory */
 	if (!is_dir("$export_path/js")) {
 		if (!mkdir("$export_path/js", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/js' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/js failed.  Can not continue");
 		}
+	}
+
+	if (!is_dir("$export_path/js/images")) {
 		if (!mkdir("$export_path/js/images", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/js/images' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/js/images failed.  Can not continue");
 		}
 	}
 
 	/* create the images sub-directory */
 	if (!is_dir("$export_path/images")) {
 		if (!mkdir("$export_path/images", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/images' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/images failed.  Can not continue");
 		}
 	}
 
 	/* create the images sub-directory */
 	if (!is_dir("$export_path/fonts")) {
 		if (!mkdir("$export_path/fonts", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/fonts' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/fonts failed.  Can not continue");
 		}
 	}
 
 	/* create the images sub-directory */
 	if (!is_dir("$export_path/css")) {
 		if (!mkdir("$export_path/css", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/css' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/css failed.  Can not continue");
 		}
+	}
+
+	if (!is_dir("$export_path/css/default")) {
 		if (!mkdir("$export_path/css/default", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/css/default' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/css/default failed.  Can not continue");
 		}
+	}
+
+	if (!is_dir("$export_path/images")) {
 		if (!mkdir("$export_path/css/images", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/css/images' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/css/images failed.  Can not continue");
 		}
 	}
 
 	/* create the graphs sub-directory */
 	if (!is_dir("$export_path/graphs")) {
 		if (!mkdir("$export_path/graphs", 0755, true)) {
-			export_fatal($export, "Create directory '" . $export_path . "/graphs' failed.  Can not continue");
+			export_fatal($export, "Create directory " . $export_path . "/graphs failed.  Can not continue");
 		}
 	}
 
