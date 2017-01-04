@@ -190,9 +190,9 @@ function run_export(&$export) {
 
 		/* set the temp directory */
 		if (strlen($export['export_temp_directory']) == 0) {
-			$stExportDir = $_ENV['TMP'] . '/cacti-ftp-temp';
+			$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-';
 		}else{
-			$stExportDir = $export['export_temp_directory'] . '/cacti-ftp-temp';
+			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-';
 		}
 
 		$exported = exporter($export, $stExportDir);
@@ -209,10 +209,14 @@ function run_export(&$export) {
 		if (strstr(PHP_OS, 'WIN')) export_fatal($export, 'ncftpput only available in unix environment!  Export can not continue.');
 
 		/* set the temp directory */
-		if (strlen($export['export_temp_directory']) == 0) {
-			$stExportDir = $_ENV['TMP'] . '/cacti-ftp-temp';
+		if (trim($export['export_temp_directory']) == '') {
+			if ($config['cacti_server_os'] == 'win32') {
+				$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
+			}else{
+				$stExportDir = '/tmp/cacti-ftp-temp-' . $export['id'];
+			}
 		}else{
-			$stExportDir = $export['export_temporary_directory'] . '/cacti-ftp-temp';
+			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
 		}
 
 		$exported = exporter($export, $stExportDir);
@@ -228,10 +232,14 @@ function run_export(&$export) {
 		export_debug("Export Type is 'rsync'");
 
 		/* set the temp directory */
-		if (strlen($export['export_temp_directory']) == 0) {
-			$stExportDir = $_ENV['TMP'] . '/cacti-rsync-temp';
+		if (trim($export['export_temp_directory']) == '') {
+			if ($config['cacti_server_os'] == 'win32') {
+				$stExportDir = getenv('TEMP') . '/cacti-rsync-temp-' . $export['id'];
+			}else{
+				$stExportDir = '/tmp/cacti-rsync-temp-' . $export['id'];
+			}
 		}else{
-			$stExportDir = $export['export_temporary_directory'] . '/cacti-rsync-temp';
+			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\t") . '/cacti-rsync-temp-' . $export['id'];
 		}
 
 		$exported = exporter($export, $stExportDir);
@@ -243,10 +251,14 @@ function run_export(&$export) {
 		export_debug("Export Type is 'scp'");
 
 		/* set the temp directory */
-		if (strlen($export['export_temp_directory']) == 0) {
-			$stExportDir = $_ENV['TMP'] . '/cacti-scp-temp';
+		if (trim($export['export_temp_directory']) == '') {
+			if ($config['cacti_server_os'] == 'win32') {
+				$stExportDir = getenv('TEMP') . '/cacti-scp-temp-' . $export['id'];
+			}else{
+				$stExportDir = '/tmp/cacti-scp-temp-' . $export['id'];
+			}
 		}else{
-			$stExportDir = $export['export_temporary_directory'] . '/cacti-scp-temp';
+			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-scp-temp-' . $export['id'];
 		}
 
 		$exported = exporter($export, $stExportDir);
@@ -302,7 +314,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 		$prune = '--delete-delay --prune-tempty-dirs';
 	}
 
-	exec('rsync -zav ' . $prune . $keyopt . ' ' . $scExportDir . '/ ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+	exec('rsync -zav ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
 		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim($output) . "'");
@@ -337,10 +349,10 @@ function export_scp_execute(&$export, $stExportDir) {
 		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
 	}
 
-	exec('scp -rp ' . $keyopt . ($port != '' ? ' -P ' . $port:'') . $scExportDir . '/ ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+	exec('scp -rp ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
-		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . trim($output) . "'");
+		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . trim(implode(',', $output)) . "'");
 	}
 }
 
