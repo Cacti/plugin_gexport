@@ -89,12 +89,14 @@ function graph_export($id = 0, $force = false) {
 	
 						$start_next = strtotime($today . ' ' . $hours . ':' . $nextst . ':00');
 
-						export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
+						if ($start_next > time() - 200) {
+							export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
 
-						$start_prior_window = $start_time - $poller_interval;
+							$start_prior_window = $start_time - $poller_interval;
 	
-						if ($start_next < $start_prior_window && $start_next < $start_time) {
-							$runnow = true;
+							if ($start_next < $start_prior_window && $start_next < $start_time) {
+								$runnow = true;
+							}
 						}
 	
 						break;
@@ -108,12 +110,14 @@ function graph_export($id = 0, $force = false) {
 	
 						$start_next = strtotime($today . ' ' . $nextst . ':00');
 
-						export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
+						if ($start_next > time() - 200) {
+							export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
 
-						$start_prior_window = $start_time - $poller_interval;
+							$start_prior_window = $start_time - $poller_interval;
 	
-						if ($start_next < $start_prior_window && $start_next < $start_time) {
-							$runnow = true;
+							if ($start_next < $start_prior_window && $start_next < $start_time) {
+								$runnow = true;
+							}
 						}
 	
 						break;
@@ -1061,20 +1065,25 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	}
 
 	$fp = fopen($json_file, 'w');
-	if (sizeof($graphs)) {
-	foreach($graphs as $graph) {
-		if ($host_id == 0) {
-			if (is_graph_allowed($graph['local_graph_id'], $user)) {
+
+	if (is_resource($fp)) {
+		if (sizeof($graphs)) {
+		foreach($graphs as $graph) {
+			if ($host_id == 0) {
+				if (is_graph_allowed($graph['local_graph_id'], $user)) {
+					$graph_array[] = $graph['local_graph_id'];
+				}
+			}else{
 				$graph_array[] = $graph['local_graph_id'];
 			}
-		}else{
-			$graph_array[] = $graph['local_graph_id'];
 		}
-	}
-	}
+		}
 
-	fwrite($fp, json_encode($graph_array) . "\n");
-	fclose($fp);
+		fwrite($fp, json_encode($graph_array) . "\n");
+		fclose($fp);
+	}else{
+			cacti_log('Unable to open ' . $json_file);
+	}
 
 	$json_files[$json_file] = true;
 
@@ -1653,7 +1662,7 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 		}
 	}
 
-	if (!is_dir("$export_path/images")) {
+	if (!is_dir("$export_path/css/images")) {
 		if (!mkdir("$export_path/css/images", 0755, true)) {
 			export_fatal($export, "Create directory " . $export_path . "/css/images failed.  Can not continue");
 		}
