@@ -47,7 +47,9 @@ function graph_export($id = 0, $force = false) {
 		$sql_where = ' AND id=' . $id;
 	}
 
-	$exports = db_fetch_assoc('SELECT * FROM graph_exports WHERE enabled="on"' . $sql_where);
+	$exports = db_fetch_assoc('SELECT * 
+		FROM graph_exports 
+		WHERE enabled="on"' . $sql_where);
 
 	if (sizeof($exports)) {
 		foreach($exports as $export) {
@@ -89,13 +91,15 @@ function graph_export($id = 0, $force = false) {
 	
 						$start_next = strtotime($today . ' ' . $hours . ':' . $nextst . ':00');
 
-						if ($start_next > time() - 200) {
-							export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
+						if ($start_next < time()) {
+							if (time() - strtotime($export['last_started']) > 600) {
+								export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
 
-							$start_prior_window = $start_time - $poller_interval;
-	
-							if ($start_next < $start_prior_window && $start_next < $start_time) {
+								$start_prior_window = $start_time - $poller_interval;
+
 								$runnow = true;
+							}else{
+								cacti_log('Export:' . $export['name'] . ' not running now due to security buffer');
 							}
 						}
 	
@@ -110,13 +114,13 @@ function graph_export($id = 0, $force = false) {
 	
 						$start_next = strtotime($today . ' ' . $nextst . ':00');
 
-						if ($start_next > time() - 200) {
-							export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
+						if ($start_next < time()) {
+							if (time() - strtotime($export['last_started']) > 3600) {
+								export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
 
-							$start_prior_window = $start_time - $poller_interval;
-	
-							if ($start_next < $start_prior_window && $start_next < $start_time) {
 								$runnow = true;
+							}else{
+								cacti_log('Export:' . $export['name'] . ' not running now due to security buffer');
 							}
 						}
 	
@@ -151,6 +155,20 @@ function run_export(&$export) {
 	global $config, $export_path;
 
 	$exported = 0;
+
+	if (!empty($export['export_pid'])) {
+		if (posix_kill($export['export_pid'], 0) !== false) {
+			cacti_log('WARNING: Can not start the following Graph Export:' . $export['name'] . ' is still running');
+			return;
+		}
+	}else{
+		cacti_log('WARNING: Previous run of the following Graph Export ended in an unclean state Export:' . $export['name']);
+	}
+
+	db_execute_prepared('UPDATE graph_exports 
+		SET export_pid = ?, status = 1, last_started=NOW() 
+		WHERE id = ?', 
+		array(getmypid(), $export['id']));
 
 	switch ($export['export_type']) {
 	case 'local':
@@ -239,6 +257,8 @@ function run_export(&$export) {
 	default:
 		export_fatal($export, 'Export method not specified. Exporting can not continue.  Please set method properly in Cacti configuration.');
 	}
+
+	db_execute_prepared('UPDATE graph_exports SET export_pid = 0 WHERE id = ?', array($export['id']));
 
 	config_export_stats($export, $exported);
 }
@@ -524,12 +544,6 @@ function check_system_paths(&$export, $export_path) {
 function export_graphs(&$export, $export_path) {
 	global $config;
 
-	/* insert started time into database */
-	db_execute_prepared('UPDATE graph_exports 
-		SET last_started = NOW(), status=1
-		WHERE id = ?',
-		array($export['id']));
-
 	/* check for bad directories */
 	check_cacti_paths($export, $export_path);
 	check_system_paths($export, $export_path);
@@ -688,32 +702,36 @@ function export_graphs(&$export, $export_path) {
 
 			$fp_graph_index = fopen($export_path . '/graph_' . $local_graph_id . '.html', 'w');
 
-			fwrite($fp_graph_index, '<table class="center"><tr><td class="center"><strong>Graph - ' . get_graph_title($local_graph_id) . '</strong></td></tr>');
+			if (is_resource($fp_graph_index)) {
+				fwrite($fp_graph_index, '<table class="center"><tr><td class="center"><strong>Graph - ' . get_graph_title($local_graph_id) . '</strong></td></tr>');
 
-			$rras = get_associated_rras($local_graph_id, ' AND dspr.id IS NOT NULL');
+				$rras = get_associated_rras($local_graph_id, ' AND dspr.id IS NOT NULL');
 
-			/* generate graphs for each rra */
-			if (sizeof($rras)) {
-				foreach ($rras as $rra) {
-					$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
-					$graph_data_array['export']          = true;
-					$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
-					$graph_data_array['graph_start']     = time() - ($rra['rows'] * $rra['step'] * $rra['steps']);
+				/* generate graphs for each rra */
+				if (sizeof($rras)) {
+					foreach ($rras as $rra) {
+						$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
+						$graph_data_array['export']          = true;
+						$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
+						$graph_data_array['graph_start']     = time() - ($rra['rows'] * $rra['step'] * $rra['steps']);
 
-					check_remove($graph_data_array['export_filename']);
+						check_remove($graph_data_array['export_filename']);
 
-					export_log("Creating Graph '" . $graph_data_array['export_filename'] . "'");
+						export_log("Creating Graph '" . $graph_data_array['export_filename'] . "'");
 
-					rrdtool_function_graph($local_graph_id, $rra['id'], $graph_data_array, $rrdtool_pipe, $metadata, $user);
-					unset($graph_data_array);
+						rrdtool_function_graph($local_graph_id, $rra['id'], $graph_data_array, $rrdtool_pipe, $metadata, $user);
+						unset($graph_data_array);
 
-					fwrite($fp_graph_index, "<tr><td class='center'><div><img src='graphs/graph_" . $local_graph_id . '_' . $rra['id'] . ".png'></div></td></tr>\n");
-					fwrite($fp_graph_index, "<tr><td class='center'><div><strong>" . $rra['name'] . '</strong></div></td></tr>');
-				}
+						fwrite($fp_graph_index, "<tr><td class='center'><div><img src='graphs/graph_" . $local_graph_id . '_' . $rra['id'] . ".png'></div></td></tr>\n");
+						fwrite($fp_graph_index, "<tr><td class='center'><div><strong>" . $rra['name'] . '</strong></div></td></tr>');
+					}
 
-				fwrite($fp_graph_index, '</table>');
-				fclose($fp_graph_index);
-  			}
+					fwrite($fp_graph_index, '</table>');
+					fclose($fp_graph_index);
+  				}
+			}else{
+				cacti_log('WARNING: Unable to write to file ' . $export_path . '/graph_' . $local_graph_id . '.html');
+			}
 
 			if ($exported >= $export['graph_max']) {
 				db_execute_prepared('UPDATE graph_exports 
