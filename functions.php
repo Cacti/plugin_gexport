@@ -91,7 +91,7 @@ function graph_export($id = 0, $force = false) {
 	
 						$start_next = strtotime($today . ' ' . $hours . ':' . $nextst . ':00');
 
-						if ($start_next < time()) {
+						if (strtotime($export['last_started']) < $start_next) {
 							if (time() - strtotime($export['last_started']) > 600) {
 								export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
 
@@ -114,7 +114,7 @@ function graph_export($id = 0, $force = false) {
 	
 						$start_next = strtotime($today . ' ' . $nextst . ':00');
 
-						if ($start_next < time()) {
+						if (strtotime($export['last_started']) < $start_next) {
 							if (time() - strtotime($export['last_started']) > 3600) {
 								export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
 
