@@ -304,10 +304,10 @@ function export_rsync_execute(&$export, $stExportDir) {
 		if (!is_numeric($port)) {
 			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
 		}else{
-			$keyopt .= " -p" . $port . "'";
+			$keyopt .= "-e 'ssh -p " . $port  . "'";
 		}
 	}elseif ($keyopt != '') {
-		$keyopt .= "'";
+		$keyopt .= " ";
 	}
 
 	if ($export['export_sanitize_remote'] == 'on') {
