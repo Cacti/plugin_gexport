@@ -304,7 +304,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 		if (!is_numeric($port)) {
 			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
 		}else{
-			$keyopt .= "-e 'ssh -p " . $port  . "'";
+			$keyopt .= " -e 'ssh -p " . $port  . "'";
 		}
 	}elseif ($keyopt != '') {
 		$keyopt .= " ";
