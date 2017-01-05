@@ -287,7 +287,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 	if ($export['export_private_key_path'] != '') {
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
-				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"';
+				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"\'';
 			}else{
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
@@ -311,7 +311,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 	}
 
 	if ($export['export_sanitize_remote'] == 'on') {
-		$prune = '--delete-delay --prune-tempty-dirs';
+		$prune = '--delete-delay --prune-empty-dirs';
 	}
 
 	exec('rsync -zav ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
