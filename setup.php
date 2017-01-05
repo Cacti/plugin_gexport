@@ -131,7 +131,7 @@ function gexport_setup_table() {
 		`export_daily` varchar(20) DEFAULT '',
 		`export_sanitize_remote` char(3) DEFAULT '',
 		`export_host` varchar(64) DEFAULT '',
-		`export_port` int(10) unsigned DEFAULT '0',
+		`export_port` varchar(5) DEFAULT '',
 		`export_passive` char(3) DEFAULT '',
 		`export_user` varchar(20) DEFAULT '',
 		`export_password` varchar(64) DEFAULT '',
