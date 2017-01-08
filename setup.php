@@ -138,6 +138,7 @@ function gexport_setup_table() {
 		`export_private_key_path` varchar(255) DEFAULT '',
 		`status` int(10) unsigned DEFAULT '0',
 		`export_pid` int(10) unsigned DEFAULT NULL,
+		`next_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
 		`last_checked` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
 		`last_started` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
 		`last_ended` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',

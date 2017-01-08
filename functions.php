@@ -22,6 +22,45 @@
  +-------------------------------------------------------------------------+
 */
 
+function gexport_calc_next_start($export, $start_time = 0) {
+	if ($start_time == 0) $start_time = time();
+
+	$poller_interval = read_config_option('poller_interval');
+
+	if ($export['export_timing'] == 'periodic') {
+		$now        = date("Y-m-d H:i:00", time());
+		$next_run   = strtotime($now) + $export['export_skip'] * $poller_interval;
+		$next_start = date('Y-m-d H:i:s', $next_run);
+	}else{
+		switch($export['export_timing']) {
+		case 'hourly':
+			$next_start = date('Y-m-d H:' . $export['export_hourly'] . ':00', $start_time);
+			$now_time   = strtotime(date('Y-m-d H:i:00', $start_time));
+			$next_run   = strtotime($next_start);
+			if ($next_run <= $now_time) {
+				$next_run += 3600;
+			}
+
+			$next_start = date('Y-m-d H:i:00', $next_run);
+	
+			break;
+		case 'daily':
+			$next_start = date('Y-m-d ' . $export['export_daily'] . ':00', $start_time);
+			$now_time   = strtotime(date('Y-m-d H:i:00', $start_time));
+			$next_run   = strtotime($next_start);
+			if ($next_run <= $now_time) {
+				$next_run += 86400;
+			}
+
+			$next_start = date('Y-m-d H:i:00', $next_run);
+	
+			break;
+		}
+	}
+
+	return $next_start;
+}
+
 /* graph_export - a function that determines, for each export definition
    if it's time to run or not.  this function is currently single threaded
    and some thought should be given to making multi-threaded.
@@ -62,70 +101,12 @@ function graph_export($id = 0, $force = false) {
 				array($export['id']));
 
 			$runnow = false;
-
 			if (!$force) {
-				if ($export['export_timing'] == 'periodic') {
-					export_debug("Export '" . $export['name'] . "' is periodic.");
-					if ($export['last_checked'] == '0000-00-00 00:00:00') {
-						export_debug('First run for periodic on ' . $export['name']);
-						$runnow = true;
-					}else{
-						$last_checked = strtotime($export['last_checked']);
-						if ($last_checked + $export['export_skip'] * $poller_interval < $start_time) {
-							export_debug('Time to run for periodic on ' . $export['name']);
-							$runnow = true;
-						}else{
-							export_debug('Not Time to run for periodic on ' . $export['name']);
-						}
-					}
-				}else{
-					switch($export['export_timing']) {
-					case 'hourly':
-						export_debug("Export '" . $export['name'] . "' is hourly.");
+				if (strtotime($export['next_start']) < $start_time) {
+					$runnow = true;
+					$next_start = gexport_calc_next_start($export);
 
-						$current = date('H:i:s', $start_time);
-						$seconds = date('s',     $start_time);
-						$hours   = date('H',     $start_time);
-						$today   = date('Y-m-d', $start_time);
-						$nextst  = $export['export_hourly'];
-	
-						$start_next = strtotime($today . ' ' . $hours . ':' . $nextst . ':00');
-
-						if (strtotime($export['last_started']) < $start_next) {
-							if (time() - strtotime($export['last_started']) > 600) {
-								export_debug('Hourly schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
-
-								$start_prior_window = $start_time - $poller_interval;
-
-								$runnow = true;
-							}else{
-								cacti_log('Export:' . $export['name'] . ' not running now due to security buffer');
-							}
-						}
-	
-						break;
-					case 'daily':
-						export_debug("Export '" . $export['name'] . "' is daily.");
-
-						$current = date('H:i:s', $start_time);
-						$seconds = date('s',     $start_time);
-						$today   = date('Y-m-d', $start_time);
-						$nextst  = $export['export_daily'];
-	
-						$start_next = strtotime($today . ' ' . $nextst . ':00');
-
-						if (strtotime($export['last_started']) < $start_next) {
-							if (time() - strtotime($export['last_started']) > 3600) {
-								export_debug('Daily schedule for ' . $export['name'] . ', Next start is \'' . date('Y-m-d H:i:s', $start_next) . '\'');
-
-								$runnow = true;
-							}else{
-								cacti_log('Export:' . $export['name'] . ' not running now due to security buffer');
-							}
-						}
-	
-						break;
-					}
+					db_execute_prepared('UPDATE graph_exports SET next_start = ? WHERE id = ?', array($next_start, $export['id']));
 				}
 			}else{
 				$runnow = true;

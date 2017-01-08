@@ -123,6 +123,10 @@ function export_form_save() {
 		$save['export_password']         = form_input_validate(get_nfilter_request_var('export_password'), 'export_password', '', true, 3);
 		$save['export_private_key_path'] = form_input_validate(get_nfilter_request_var('export_private_key_path'), 'export_private_key_path', '', true, 3);
 
+		/* determine the start time */
+		$next_start = gexport_calc_next_start($save);
+		$save['next_start']              = $next_start;
+
 		if (!is_error_message()) {
 			$export_id = sql_save($save, 'graph_exports');
 
@@ -688,7 +692,7 @@ function gexport($refresh = true) {
 		'name' => array('display' => __('Export Name'), 'align' => 'left', 'sort' => 'ASC', 'tip' => __('The name of this Graph Export Definition.')),
 		'id' => array('display' => __('ID'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The internal ID of the Graph Export Definition.')),
 		'export_timing' => array('display' => __('Schedule'), 'align' => 'right', 'sort' => 'DESC', 'tip' => __('The frequency that Graphs will be exported.')),
-		'nosort2' => array('display' => __('Export Time'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The either the time between exports, or the export time.')),
+		'next_start' => array('display' => __('Next Start'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The next time the Graph Export should run.')),
 		'nosort' => array('display' => __('Enabled'), 'align' => 'right', 'tip' => __('If enabled, this Graph Export definition will run as required.')),
 		'status' => array('display' => __('Status'), 'align' => 'right', 'tip' => __('The current Graph Export Status.')),
 
@@ -716,18 +720,7 @@ function gexport($refresh = true) {
 
 			form_selectable_cell(__(ucfirst($export['export_timing'])), $export['id'], '', 'text-align:right');
 
-			// ToDo: Export Timing
-			switch($export['export_timing']) {
-			case 'periodic':
-				form_selectable_cell($export['export_skip'] . ' Intervals', $export['id'], '', 'text-align:right');
-				break;
-			case 'hourly':
-				form_selectable_cell($export['export_hourly'] . ' ' . __('MM'), $export['id'], '', 'text-align:right');
-				break;
-			case 'daily':
-				form_selectable_cell($export['export_daily'] . ' ' . __('HH:MM'), $export['id'], '', 'text-align:right');
-				break;
-			}
+			form_selectable_cell($export['enabled'] == '' ? __('N/A'):substr($export['next_start'], 5, 11), $export['id'], '', 'text-align:right');
 
 			form_selectable_cell($export['enabled'] == '' ? __('No'):__('Yes'), $export['id'], '', 'text-align:right');
 
@@ -764,10 +757,10 @@ function gexport($refresh = true) {
 			if ($export['last_started'] != '0000-00-00 00:00:00') {
 				form_selectable_cell(round($export['last_runtime'],2) . ' ' . __('Sec'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(number_format_i18n($export['total_graphs']), $export['id'], '', 'text-align:right');
-				form_selectable_cell($export['last_started'], $export['id'], '', 'text-align:right');
+				form_selectable_cell(substr($export['last_started'], 5, 11), $export['id'], '', 'text-align:right');
 
 				if ($export['last_errored'] != '0000-00-00 00:00:00') {
-					form_selectable_cell($export['last_errored'], $export['id'], '', 'text-align:right', $export['last_error']);
+					form_selectable_cell(substr($export['last_errored'], 5, 11), $export['id'], '', 'text-align:right', $export['last_error']);
 				}else{
 					form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
 				}
