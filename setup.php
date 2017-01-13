@@ -58,9 +58,12 @@ function gexport_poller_bottom() {
 
 	/* graph export */
 	if ($config['poller_id'] == 1) {
-		$command_string = read_config_option('path_php_binary');
-		$extra_args = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php"';
-		exec_background($command_string, $extra_args);
+		$exports = db_fetch_assoc('SELECT * FROM graph_exports WHERE enabled="on"');
+		if (sizeof($exports)) {
+			$command_string = read_config_option('path_php_binary');
+			$extra_args = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php"';
+			exec_background($command_string, $extra_args);
+		}
 	}
 }
 
