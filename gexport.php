@@ -740,14 +740,22 @@ function gexport($refresh = true) {
 				if ($export['graph_site'] == '0') {
 					form_selectable_cell(__('All Sites'), $export['id'], '', 'text-align:right');
 				}else{
-					$sites = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $export['graph_site'] . ')');
+					if ($export['graph_site'] != '') {
+						$sites = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $export['graph_site'] . ')');
+					} else {
+						$sites = '';
+					}
 					form_selectable_cell($sites, $export['id'], '', 'text-align:right');
 				}
 			}else{
 				if ($export['graph_tree'] == '0') {
 					form_selectable_cell(__('All Trees'), $export['id'], '', 'text-align:right');
 				}else{
-					$trees = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $export['graph_tree'] . ')');
+					if ($export['graph_tree'] != '') {
+						$trees = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $export['graph_tree'] . ')');
+					} else {
+						$trees = '';
+					}
 					form_selectable_cell($trees, $export['id'], '', 'text-align:right');
 				}
 			}
