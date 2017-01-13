@@ -92,7 +92,7 @@ function export_form_save() {
 			$save['graph_tree'] = '';
 		}
 
-		if (isset_request_var('graph_tree')) {
+		if (isset_request_var('graph_site')) {
 			$save['graph_site'] = form_input_validate(implode(',', get_nfilter_request_var('graph_site')), 'graph_site', '', true, 3);
 		}else{
 			$save['graph_site'] = '';
