@@ -229,7 +229,7 @@ function gexport_config_arrays() {
 			),
 		'export_presentation' => array(
 			'friendly_name' => __('Presentation Method'),
-			'description' => __('Choose which presentation would you want for the html generated pages. If you choose classical presentation, the Graphs will be in a only-one-html page. If you choose tree presentation, the graph tree architecture will be kept in the static html pages'),
+			'description' => __('Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages'),
 			'method' => 'drop_array',
 			'value' => '|arg1:export_presentation|',
 			'default' => 'disabled',
@@ -318,7 +318,7 @@ function gexport_config_arrays() {
 		),
 		'export_expand_hosts' => array(
 			'friendly_name' => __('Expand Devices/Sites'),
-			'description' => __('This settings determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items.'),
+			'description' => __('This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items.'),
 			'method' => 'drop_array',
 			'value' => '|arg1:export_expand_hosts|',
 			'default' => 'off',
@@ -329,7 +329,7 @@ function gexport_config_arrays() {
 		),
 		'graph_site' => array(
 			'friendly_name' => __('Site'),
-			'description' => __('The the Site for Cacti Graphs to be Exported from.'),
+			'description' => __('The Site for Cacti Graphs to be Exported from.'),
 			'method' => 'drop_multi',
 			'value' => '|arg1:graph_site|',
 			'array' => $sites,
@@ -400,7 +400,7 @@ function gexport_config_arrays() {
 		),
 		'export_temp_directory' => array(
 			'friendly_name' => __('Local Scratch Directory'),
-			'description' => __('This is the a directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred.'),
+			'description' => __('This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred.'),
 			'method' => 'dirpath',
 			'value' => '|arg1:export_temp_directory|',
 			'default' => $tmp,
@@ -460,7 +460,7 @@ function gexport_config_arrays() {
 		),
 		'export_private_key_path' => array(
 			'friendly_name' => __('Private Key Path'),
-			'description' => __('For SCP and RSYNC,	enter the Private Key path if required.'),
+			'description' => __('For SCP and RSYNC, enter the Private Key path if required.'),
 			'method' => 'filepath',
 			'value' => '|arg1:export_private_key_path|',
 			'max_length' => '255',
