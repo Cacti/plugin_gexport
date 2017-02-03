@@ -305,6 +305,14 @@ function export_form_actions() {
     Graph Export Functions
    --------------------- */
 
+function export_enable($export_id) {
+	db_execute_prepared('UPDATE graph_exports SET enabled="on" WHERE id = ?', array($export_id));
+}
+
+function export_disable($export_id) {
+	db_execute_prepared('UPDATE graph_exports SET enabled="" WHERE id = ?', array($export_id));
+}
+
 function export_runnow($export_id) {
 	global $config;
 
