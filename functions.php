@@ -414,7 +414,7 @@ function export_debug($message) {
 	global $debug;
 
 	if ($debug) {
-		print rtrim($message) . "\n";
+		print 'MEMUSE: ' . number_format_i18n(memory_get_usage()) . ', MESSAGE: ' . rtrim($message) . "\n";
 	}
 }
 
@@ -595,6 +595,8 @@ function export_graphs(&$export, $export_path) {
 
 		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
 
+		export_debug('There are ' . sizeof($trees) . ' to export');
+
 		if (sizeof($trees)) {
 			foreach($trees as $tree) {
 				$ntree[] = $tree['id'];
@@ -609,6 +611,8 @@ function export_graphs(&$export, $export_path) {
 					AND graph_tree_id IN(' . implode(', ', $ntree) . ')'), 
 				'local_graph_id', 'local_graph_id'
 			);
+
+			export_debug('There are ' . sizeof($graphs) . ' to export for all trees.');
 
 			if (sizeof($graphs)) {
 				foreach($graphs as $local_graph_id) {
@@ -661,6 +665,8 @@ function export_graphs(&$export, $export_path) {
 		$rrdtool_pipe = rrd_init();
 
 		foreach($ngraph as $local_graph_id) {
+			export_debug('Exporting Graph ID: ' . $local_graph_id);
+
 			/* settings for preview graphs */
 			$graph_data_array['export_filename'] = $export_path . '/graphs/thumb_' . $local_graph_id . '.png';
 
