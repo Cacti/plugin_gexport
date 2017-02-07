@@ -1042,7 +1042,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
 
 		$sql_where = '';
-		if (sizeof($values)) {
+		if (is_array($values) && sizeof($values)) {
 			foreach($values as $value) {
 				// host_id | snmp_index
 				$parts = explode('|', $value);
@@ -1519,10 +1519,12 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 						$sort_field_data[$graph['host_id']] = get_formatted_data_query_indexes($graph['host_id'], $branch['id']);
 					}
 
-					$index = $sort_field_data[$graph['host_id']][$graph['snmp_index']];
-					$value = $graph['host_id'] . '|' . $graph['snmp_index'];
+					if (isset($sort_field_data[$graph['host_id']][$graph['snmp_index']])) {
+						$index = $sort_field_data[$graph['host_id']][$graph['snmp_index']];
+						$value = $graph['host_id'] . '|' . $graph['snmp_index'];
 
-					$dqi[$index][] = $value;
+						$dqi[$index][] = $value;
+					}
 				}
 
 				foreach($dqi as $index => $values) {
