@@ -102,8 +102,14 @@ graph_export($id, $force);
 
 /*  display_version - displays version information */
 function display_version() {
-    $version = db_fetch_cell('SELECT cacti FROM version');
-	echo "Cacti Graph Export Poller, Version $version, " . COPYRIGHT_YEARS . "\n";
+	global $config;
+
+	if (!function_exists('plugin_gexport_version')) {
+		include_once($config['base_path'] . '/plugins/gexport/setup.php');
+	}
+
+    $info = plugin_gexport_version();
+	echo "Cacti Graph Export Poller, Version " . $info['version'] . ", " . COPYRIGHT_YEARS . "\n";
 }
 
 /*	display_help - displays the usage of the function */
