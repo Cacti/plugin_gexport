@@ -180,7 +180,7 @@ function gexport_config_arrays() {
 		$messages['gexport_message'] = array('message' => $_SESSION['gexport_message'], 'type' => 'info');
 	}
 
-	$menu[__('Configuration')]['plugins/gexport/gexport.php'] = __('Graph Exports');
+	$menu[__('Utilities')]['plugins/gexport/gexport.php'] = __('Graph Exports');
 
 	$sites = array_rekey(db_fetch_assoc('SELECT "0" AS id, "All Sites" AS name UNION SELECT id, name FROM sites ORDER BY name'), 'id', 'name');
 	$trees = array_rekey(db_fetch_assoc('SELECT "0" AS id, "All Trees" AS name UNION SELECT id, name FROM graph_tree ORDER BY name'), 'id', 'name');
