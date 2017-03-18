@@ -625,7 +625,7 @@ function export_filter() {
 	html_end_box();
 }
 
-function get_export_records(&$total_rows, &$rowspp) {
+function get_export_records(&$total_rows, &$rows) {
 	/* form the 'where' clause for our main sql query */
 	if (get_request_var('filter') != '') {
 		$sql_where = "WHERE (name LIKE '%" . get_request_var('filter') . "%')";
@@ -635,9 +635,14 @@ function get_export_records(&$total_rows, &$rowspp) {
 
 	$total_rows = db_fetch_cell("SELECT COUNT(*) FROM graph_exports $sql_where");
 
-	return db_fetch_assoc("SELECT * FROM graph_exports $sql_where 
-		ORDER BY " . get_request_var('sort_column') . ' ' . get_request_var('sort_direction') .
-		' LIMIT ' . ($rowspp*(get_request_var('page')-1)) . ',' . $rowspp);
+	$sql_order = get_order_string();
+	$sql_limit = ' LIMIT ' . ($rows*(get_request_var('page')-1)) . ',' . $rows;
+
+	return db_fetch_assoc("SELECT * 
+		FROM graph_exports 
+		$sql_where 
+		$sql_order
+		$sql_limit");
 }
 
 function gexport($refresh = true) {
