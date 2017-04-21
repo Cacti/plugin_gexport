@@ -116,7 +116,7 @@ function display_version() {
 function display_help () {
 	display_version();
 
-	echo "\nusage: poller_export.php [-f|--force] [-d|--debug]\n\n";
+	echo "\nusage: poller_export.php [--id=N] [--force] [--debug]\n\n";
 	echo "Cacti's Graph Export poller.  This poller will export parts of the Cacti\n";
 	echo "website into a static representation.\n\n";
 	echo "Optional:\n";
