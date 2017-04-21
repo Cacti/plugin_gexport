@@ -1,29 +1,43 @@
-# gexport
+# plugin_gexport
 
-The Cacti gexport plugin replaces Cacti's built-in Graph Export functionality with a plugin.  For the Cacti 1.0 release, the Cacti Developers decided to make Cacti's legacy Graph Export into a plugin as this functionality is not used by all Cacti users.  Therefore, the main Cacti package no longer includes Graph Export functionality.
+Author ......... The Cacti Group
 
-However, this new version of Graph Export in Cacti adds several new features, and will be enhanced over time to add more planned functionality.
+Contact ........ http://forums.cacti.net
 
-The new features include:
+Home Site ...... http://www.cacti.net
 
-* Use of Cacti's new Tree structure, 
-* Support for multiple graph exports with different effective users and timing,
-* Redesigned graph file creation algorithm to optimize the creation of graphs, 
-* A new 'Site' export option that allows the export of Sites in a Tree fashion allowing the exporter to simply publish sites instead of having to create Cacti Tree's to represent Tree content,
-* Support of ajax page rendering including features such as pagination, thumbnail view, and columns per row
-* RSYNC and SCP remote site export opions including support for custom private keys for user impersonation.
+Program ........ Cacti Graph Export Plugin
 
-All these features make the gexport plugin an essential add-on for Cacti.
+Version ........ 1.0
 
+Purpose ........ Allows Graph Trees to be Exported
+
+## Purpose
+
+This plugin allows Cacti Graphs to be Exported
+
+## Features
+
+Allows you to Export Cacti Graphs.  It replaces the legacy Cacti Export functionality.
+	
 ## Installation
 
-The gexport plugin installs just like any other Cacti plugin.  Simply download this package, untar it to Cacti's plugins directory, and rename the direcotry to simply 'gexport'.  Once this is done, you finish the install from Cacti's Plugin Management interface.  You may be required to add your users or groups to the Graph Export realm in Cacti before creating your first export.
-  
-## Bugs or Feature Requests
+Install just like any other plugin, just throw it in the plugin directory, and Install and Enabled from the Plugin Management Interface.
+
+Once this is done, you can configure what graph trees to be exported and using which user.
+    
+## Possible Bugs?
    
-If you figure out this problem with gexport, or would like new features, open an issue in GitHub, but remember, search the Cacti forums before opening a defect.  You solution may simply be a usage tip.
+If you figure out this problem, see the Cacti forums!
+
+## Future Changes
+    
+Got any ideas or complaints, please use Mantis!
 
 ## Changelog
 
+--- 1.1 ---
+* resolving issue#4 - undefined index in site export
+
 --- 1.0 ---
-* Initial Release
+Initial Release

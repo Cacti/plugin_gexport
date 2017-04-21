@@ -1611,9 +1611,11 @@ function tree_site_export(&$export, $export_path) {
 			foreach($sites as $site_id) {
 				$site_data = db_fetch_row_prepared('SELECT * FROM sites WHERE id = ?', array($site_id));
 
-				$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";;
-				$jstree = export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
-				$jstree .= str_repeat("\t", 4) . "</li>\n";
+				if (sizeof($site_data)) {
+					$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";;
+					$jstree .= export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
+					$jstree .= str_repeat("\t", 4) . "</li>\n";
+				}
 			}
 		}
 	}
