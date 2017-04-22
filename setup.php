@@ -43,10 +43,6 @@ function plugin_gexport_check_config() {
 	return true;
 }
 
-function plugin_gexport_upgrade() {
-	return true;
-}
-
 function plugin_gexport_version() {
 	global $config;
 	$info = parse_ini_file($config['base_path'] . '/plugins/gexport/INFO', true);
@@ -98,6 +94,8 @@ function gexport_check_upgrade() {
 			author='"  . $version['author']   . "', 
 			webpage='" . $version['url']      . "' 
 			WHERE directory='" . $version['name'] . "' ");
+
+		db_execute("ALTER TABLE graph_exports MODIFY column export_user VARCHAR(40) DEFAULT ''");
 	}
 }
 
@@ -136,7 +134,7 @@ function gexport_setup_table() {
 		`export_host` varchar(64) DEFAULT '',
 		`export_port` varchar(5) DEFAULT '',
 		`export_passive` char(3) DEFAULT '',
-		`export_user` varchar(20) DEFAULT '',
+		`export_user` varchar(40) DEFAULT '',
 		`export_password` varchar(64) DEFAULT '',
 		`export_private_key_path` varchar(255) DEFAULT '',
 		`status` int(10) unsigned DEFAULT '0',
@@ -158,6 +156,9 @@ function gexport_setup_table() {
 
 function gexport_config_arrays() {
 	global $menu, $fields_export_edit, $messages, $config, $graphs_per_page;
+
+	/* perform database upgrade, if required */
+	gexport_check_upgrade();
 
 	$dir = dir($config['base_path'] . '/include/themes/');
 	while (false !== ($entry = $dir->read())) {
@@ -450,15 +451,15 @@ function gexport_config_arrays() {
 			'description' => __('Account to logon on the remote server (leave empty for defaults).'),
 			'method' => 'textbox',
 			'value' => '|arg1:export_user|',
-			'max_length' => '20',
-			'size' => 10
+			'max_length' => '40',
+			'size' => 30
 		),
 		'export_password' => array(
 			'friendly_name' => __('Password'),
 			'description' => __('Password for the remote ftp account (leave empty for blank).'),
 			'method' => 'textbox_password',
 			'value' => '|arg1:export_password|',
-			'max_length' => '255',
+			'max_length' => '64',
 			'size' => 30
 		),
 		'export_private_key_path' => array(

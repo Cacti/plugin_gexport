@@ -38,6 +38,7 @@ Got any ideas or complaints, please use Mantis!
 
 --- 1.1 ---
 * resolving issue#4 - undefined index in site export
+* resolving issue#5 - export user too narrow
 
 --- 1.0 ---
 Initial Release
