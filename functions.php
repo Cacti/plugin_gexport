@@ -438,8 +438,8 @@ function export_pre_ftp_upload(&$export) {
 	$aFtpExport['port'] = $export['export_port'];
 	$aFtpExport['port'] = empty($aFtpExport['port']) ? '21' : $aFtpExport['port'];
 
-	$aFtpExport['username'] = $export['export_ftp_user'];
-	$aFtpExport['password'] = $export['export_ftp_password'];
+	$aFtpExport['username'] = $export['export_user'];
+	$aFtpExport['password'] = $export['export_password'];
 
 	if (empty($aFtpExport['username'])) {
 		$aFtpExport['username'] = 'Anonymous';

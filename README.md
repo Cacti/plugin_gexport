@@ -39,6 +39,7 @@ Got any ideas or complaints, please use Mantis!
 --- 1.1 ---
 * resolving issue#4 - undefined index in site export
 * resolving issue#5 - export user too narrow
+* resolving issue#6 - export ftp does not function
 
 --- 1.0 ---
 Initial Release
