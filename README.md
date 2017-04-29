@@ -1,12 +1,12 @@
 # gexport
 
-The gexport plugin replaces the Graph Export in legacy Cacti.  This plugin was removed from the core of Cacti in that several users did not utilize this functionality.  However, this new version not only export the Graph and Tree's, it allows dynamic resizing of graphs to fix your display, and allows users to switch dynamically between full view and preview modes.
+The gexport plugin replaces the Graph Export in legacy Cacti.  This plugin was removed from the core of Cacti in that several users did not utilize this functionality.  However, this new version not only exports the Graph and Tree's, it allows dynamic resizing of graphs to fit your display, and allows users to switch dynamically between full view and preview modes.
 
-Due to it's new design, it is also much faster and more reliable than previous design.  You can still have the Graph Exports content impersonate any login user.  In addition to the Traditional Tree View export, there is now a Site View export mode that exports all devices inside of a site that the impersonated user has access to.  This makes setting up Graph Exports more convenient.
+Due to it's new design, it is also much faster and more reliable than previous versions.  You can still have the Graph Exports content impersonate any login user, but you can now define as many exports as you wish, each with their own export schedule and destination.  In addition to the Traditional Tree View export, there is now a Site View export mode that exports all devices inside of a site that the impersonated user has access to.  This makes setting up Graph Exports more convenient.
 
 ## Purpose
 
-This plugin allows Cacti Graphs to be Exported and replaces the Graph Export functionality that was removed from the Core of Cacti
+This plugin allows Cacti Graphs to be Exported and replaces the Graph Export functionality that was removed from the Core of Cacti.
 
 ## Features
 
