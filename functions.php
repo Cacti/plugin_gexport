@@ -951,7 +951,7 @@ function export_post_ftp_upload(&$export, $stExportDir) {
 			/* if the directory turns out to be a sub-directory, delete it too */
 			if ($file != '.' && $file != '..' && is_dir($filePath)) {
 				export_log("Removing Local Directory '" . $filePath . "'");
-				export_post_ftp_upload($filePath);
+				export_post_ftp_upload($export, $filePath);
 			}
 		}
 		closedir($dh);
