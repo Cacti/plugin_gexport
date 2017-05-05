@@ -138,12 +138,12 @@ function run_export(&$export) {
 	$exported = 0;
 
 	if (!empty($export['export_pid'])) {
+		cacti_log('WARNING: Previous run of the following Graph Export ended in an unclean state Export:' . $export['name']);
+
 		if (posix_kill($export['export_pid'], 0) !== false) {
 			cacti_log('WARNING: Can not start the following Graph Export:' . $export['name'] . ' is still running');
 			return;
 		}
-	}else{
-		cacti_log('WARNING: Previous run of the following Graph Export ended in an unclean state Export:' . $export['name']);
 	}
 
 	db_execute_prepared('UPDATE graph_exports 
