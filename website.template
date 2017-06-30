@@ -19,7 +19,7 @@
 	<script type='text/javascript' src='js/jquery.tablesorter.js'></script>
 	<script type='text/javascript' src='js/jstree.js'></script>
 	<script type='text/javascript' src='js/jquery.cookie.js'></script>
-	<script type='text/javascript' src='js/jquery.storageapi.js'></script>
+	<script type='text/javascript' src='js/js.storage.js'></script>
 	<script type='text/javascript' src='js/pace.js'></script>
 	<script type='text/javascript' src='js/main.js'></script>
 	<script type='text/javascript' src='js/layout.js'></script>

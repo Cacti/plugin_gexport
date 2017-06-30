@@ -28,11 +28,14 @@ Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
 
+--- 1.2 ---
+* issue#12 - jquery.storageapi.js not found
+
 --- 1.1 ---
-* resolving issue#4 - undefined index in site export
-* resolving issue#5 - export user too narrow
-* resolving issue#6 - export ftp does not function
-* resolving issue#7 - rmdir warnings when performing cleanup
+* issue#4 - undefined index in site export
+* issue#5 - export user too narrow
+* issue#6 - export ftp does not function
+* issue#7 - rmdir warnings when performing cleanup
 
 --- 1.0 ---
 Initial Release

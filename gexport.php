@@ -34,8 +34,8 @@ $export_actions = array(
 );
 
 $export_timing = array(
-	__('Periodic'), 
-	__('Daily'), 
+	__('Periodic'),
+	__('Daily'),
 	__('Hourly')
 );
 
@@ -88,13 +88,13 @@ function export_form_save() {
 
 		if (isset_request_var('graph_tree')) {
 			$save['graph_tree'] = form_input_validate(implode(',', get_nfilter_request_var('graph_tree')), 'graph_tree', '', true, 3);
-		}else{
+		} else {
 			$save['graph_tree'] = '';
 		}
 
 		if (isset_request_var('graph_site')) {
 			$save['graph_site'] = form_input_validate(implode(',', get_nfilter_request_var('graph_site')), 'graph_site', '', true, 3);
-		}else{
+		} else {
 			$save['graph_site'] = '';
 		}
 
@@ -125,14 +125,14 @@ function export_form_save() {
 
 		/* determine the start time */
 		$next_start = gexport_calc_next_start($save);
-		$save['next_start']              = $next_start;
+		$save['next_start'] = $next_start;
 
 		if (!is_error_message()) {
 			$export_id = sql_save($save, 'graph_exports');
 
 			if ($export_id) {
 				raise_message(1);
-			}else{
+			} else {
 				raise_message(2);
 			}
 		}
@@ -189,7 +189,7 @@ function export_form_actions() {
 				if (isset($export_ids)) {
 					db_execute('DELETE FROM graph_exports WHERE ' . array_to_sql_or($export_ids, 'id'));
 				}
-			}elseif (get_nfilter_request_var('drp_action') === '2') { /* enable */
+			} elseif (get_nfilter_request_var('drp_action') === '2') { /* enable */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -197,7 +197,7 @@ function export_form_actions() {
 
 					export_enable($selected_items[$i]);
 				}
-			}elseif (get_nfilter_request_var('drp_action') === '3') { /* disable */
+			} elseif (get_nfilter_request_var('drp_action') === '3') { /* disable */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -205,7 +205,7 @@ function export_form_actions() {
 
 					export_disable($selected_items[$i]);
 				}
-			}elseif (get_nfilter_request_var('drp_action') === '4') { /* run now */
+			} elseif (get_nfilter_request_var('drp_action') === '4') { /* run now */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -252,7 +252,7 @@ function export_form_actions() {
 				</tr>\n";
 
 			$save_html = "<input type='button' value='Cancel' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='Continue' title='Delete Graph Export Definition(s)'>";
-		}elseif (get_nfilter_request_var('drp_action') === '2') { /* disable */
+		} elseif (get_nfilter_request_var('drp_action') === '2') { /* disable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to disable the following Graph Export Definition.', 'Click \'Continue\' to disable following Graph Export Definitions.', sizeof($export_array)) . "</p>
@@ -261,7 +261,7 @@ function export_form_actions() {
 				</tr>\n";
 
 			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Disable Graph Export Definition(s)'>";
-		}elseif (get_nfilter_request_var('drp_action') === '3') { /* enable */
+		} elseif (get_nfilter_request_var('drp_action') === '3') { /* enable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to enable the following Graph Export Definition.', 'Click \'Continue\' to enable following Graph Export Definitions.', sizeof($export_array)) . "</p>
@@ -270,7 +270,7 @@ function export_form_actions() {
 				</tr>\n";
 
 			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Enable Graph Export Definition(s)'>";
-		}elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
+		} elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
@@ -280,7 +280,7 @@ function export_form_actions() {
 
 			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Run Graph Export Definition(s) Now'>";
 		}
-	}else{
+	} else {
 		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.') . "</span></td></tr>\n";
 		$save_html = "<input type='button' value='" . __('Return') . "' onClick='cactiReturnTo()'>";
 	}
@@ -339,7 +339,7 @@ function export_edit() {
 	if (!isempty_request_var('id')) {
 		$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', array(get_request_var('id')));
 		$header_label = __('Graph Export Definition [edit: %s]', $export['name']);
-	}else{
+	} else {
 		$header_label = __('Graph Export Definition [new]');
 	}
 
@@ -366,7 +366,7 @@ function export_edit() {
 
 	$(function() {
 		$('#graph_tree').multiselect({
-			noneSelectedText: '<?php print __('Select Tree(s)');?>', 
+			noneSelectedText: '<?php print __('Select Tree(s)');?>',
 			selectedText: function(numChecked, numTotal, checkedItems) {
 				myReturn = numChecked + ' <?php print __('Trees Selected');?>';
 				$.each(checkedItems, function(index, value) {
@@ -377,7 +377,7 @@ function export_edit() {
 				});
 				return myReturn;
 			},
-			checkAllText: '<?php print __('All');?>', 
+			checkAllText: '<?php print __('All');?>',
 			uncheckAllText: '<?php print __('None');?>',
 			uncheckall: function() {
 				$(this).multiselect('widget').find(':checkbox:first').each(function() {
@@ -412,7 +412,7 @@ function export_edit() {
 		});
 
 		$('#graph_site').multiselect({
-			noneSelectedText: '<?php print __('Select Site(s)');?>', 
+			noneSelectedText: '<?php print __('Select Site(s)');?>',
 			selectedText: function(numChecked, numTotal, checkedItems) {
 				myReturn = numChecked + ' <?php print __('Sites Selected');?>';
 				$.each(checkedItems, function(index, value) {
@@ -423,7 +423,7 @@ function export_edit() {
 				});
 				return myReturn;
 			},
-			checkAllText: '<?php print __('All');?>', 
+			checkAllText: '<?php print __('All');?>',
 			uncheckAllText: '<?php print __('None');?>',
 			uncheckall: function() {
 				$(this).multiselect('widget').find(':checkbox:first').each(function() {
@@ -487,7 +487,7 @@ function export_edit() {
 			$('#row_export_skip').hide();
 			$('#row_export_hourly').hide();
 			$('#row_export_daily').show();
-		}else{
+		} else {
 			$('#row_export_skip').hide();
 			$('#row_export_hourly').hide();
 			$('#row_export_daily').hide();
@@ -506,17 +506,17 @@ function export_edit() {
 			if ($('#export_type').val() == 'sftp' || $('#export_type').val() == 'ftp') {
 				$('#row_export_password').show();
 				$('#row_export_passive').show();
-			}else{
+			} else {
 				$('#row_export_password').hide();
 				$('#row_export_passive').hide();
 			}
 
 			if ($('#export_type').val() == 'rsync' || $('#export_type').val() == 'scp') {
 				$('#row_export_private_key_path').show();
-			}else{
+			} else {
 				$('#row_export_private_key_path').hide();
 			}
-		}else{
+		} else {
 			$('#row_export_temp_directory').hide();
 			$('#row_export_hdr_remote').hide();
 			$('#row_export_sanitize_remote').hide();
@@ -534,7 +534,7 @@ function export_edit() {
 			$('#row_graph_tree').show();
 			$('#row_export_expand_hosts').show();
 			$('#row_graph_site').hide();
-		}else{
+		} else {
 			$('#row_graph_tree').hide();
 			$('#row_export_expand_hosts').hide();
 			$('#row_graph_site').show();
@@ -629,7 +629,7 @@ function get_export_records(&$total_rows, &$rows) {
 	/* form the 'where' clause for our main sql query */
 	if (get_request_var('filter') != '') {
 		$sql_where = "WHERE (name LIKE '%" . get_request_var('filter') . "%')";
-	}else{
+	} else {
 		$sql_where = '';
 	}
 
@@ -638,9 +638,9 @@ function get_export_records(&$total_rows, &$rows) {
 	$sql_order = get_order_string();
 	$sql_limit = ' LIMIT ' . ($rows*(get_request_var('page')-1)) . ',' . $rows;
 
-	return db_fetch_assoc("SELECT * 
-		FROM graph_exports 
-		$sql_where 
+	return db_fetch_assoc("SELECT *
+		FROM graph_exports
+		$sql_where
 		$sql_order
 		$sql_limit");
 }
@@ -687,7 +687,7 @@ function gexport($refresh = true) {
 
 	if (get_request_var('rows') == '-1') {
 		$rows = read_config_option('num_rows_table');
-	}else{
+	} else {
 		$rows = get_request_var('rows');
 	}
 
@@ -722,9 +722,9 @@ function gexport($refresh = true) {
 	$i = 0;
 	if (sizeof($exports)) {
 		foreach ($exports as $export) {
-			$user = db_fetch_cell_prepared('SELECT username 
-				FROM user_auth 
-				WHERE id = ?', 
+			$user = db_fetch_cell_prepared('SELECT username
+				FROM user_auth
+				WHERE id = ?',
 				array($export['export_effective_user']));
 
 			form_alternate_row('line' . $export['id'], true);
@@ -752,7 +752,7 @@ function gexport($refresh = true) {
 			if ($export['export_presentation'] == 'preview') {
 				if ($export['graph_site'] == '0') {
 					form_selectable_cell(__('All Sites'), $export['id'], '', 'text-align:right');
-				}else{
+				} else {
 					if ($export['graph_site'] != '') {
 						$sites = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $export['graph_site'] . ')');
 					} else {
@@ -760,10 +760,10 @@ function gexport($refresh = true) {
 					}
 					form_selectable_cell($sites, $export['id'], '', 'text-align:right');
 				}
-			}else{
+			} else {
 				if ($export['graph_tree'] == '0') {
 					form_selectable_cell(__('All Trees'), $export['id'], '', 'text-align:right');
-				}else{
+				} else {
 					if ($export['graph_tree'] != '') {
 						$trees = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $export['graph_tree'] . ')');
 					} else {
@@ -782,10 +782,10 @@ function gexport($refresh = true) {
 
 				if ($export['last_errored'] != '0000-00-00 00:00:00') {
 					form_selectable_cell(substr($export['last_errored'], 5, 11), $export['id'], '', 'text-align:right', $export['last_error']);
-				}else{
+				} else {
 					form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
 				}
-			}else{
+			} else {
 				form_selectable_cell(__('N/A'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(__('N/A'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
@@ -795,7 +795,7 @@ function gexport($refresh = true) {
 			form_checkbox_cell($export['name'], $export['id']);
 			form_end_row();
 		}
-	}else{
+	} else {
 		print "<tr class='tableRow'><td colspan='4'><em>" . __('No Graph Export Definitions') . "</em></td></tr>\n";
 	}
 
