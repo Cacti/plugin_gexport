@@ -92,7 +92,7 @@ function gexport_check_upgrade() {
 			version='" . $version['version']  . "', 
 			name='"    . $version['longname'] . "', 
 			author='"  . $version['author']   . "', 
-			webpage='" . $version['url']      . "' 
+			webpage='" . $version['homepage'] . "' 
 			WHERE directory='" . $version['name'] . "' ");
 
 		db_execute("ALTER TABLE graph_exports MODIFY column export_user VARCHAR(40) DEFAULT ''");
