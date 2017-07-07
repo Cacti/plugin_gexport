@@ -171,9 +171,9 @@ function run_export(&$export) {
 
 		/* set the temp directory */
 		if (strlen($export['export_temp_directory']) == 0) {
-			$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-';
+			$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
 		}else{
-			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-';
+			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
 		}
 
 		$exported = exporter($export, $stExportDir);
