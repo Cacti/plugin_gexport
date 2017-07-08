@@ -27,16 +27,16 @@ include('./include/auth.php');
 include_once('./plugins/gexport/functions.php');
 
 $export_actions = array(
-	'1' => __('Delete'),
-	'2' => __('Enable'),
-	'3' => __('Disable'),
-	'4' => __('Export Now')
+	'1' => __('Delete', 'gexport'),
+	'2' => __('Enable', 'gexport'),
+	'3' => __('Disable', 'gexport'),
+	'4' => __('Export Now', 'gexport')
 );
 
 $export_timing = array(
-	__('Periodic'),
-	__('Daily'),
-	__('Hourly')
+	__('Periodic', 'gexport'),
+	__('Daily', 'gexport'),
+	__('Hourly', 'gexport')
 );
 
 set_default_action();
@@ -246,30 +246,30 @@ function export_form_actions() {
 		if (get_nfilter_request_var('drp_action') === '1') { /* delete */
 			print "	<tr>
 					<td class='topBoxAlt'>
-						<p>" . __n('Click \'Continue\' to delete the following Graph Export Definition.', 'Click \'Continue\' to delete following Graph Export Definitions.', sizeof($export_array)) . "</p>
+						<p>" . __n('Click \'Continue\' to delete the following Graph Export Definition.', 'Click \'Continue\' to delete following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
 						<div class='itemlist'><ul>$export_list</ul></div>
 					</td>
 				</tr>\n";
 
-			$save_html = "<input type='button' value='Cancel' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='Continue' title='Delete Graph Export Definition(s)'>";
+			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='Continue' title='Delete Graph Export Definition(s)'>";
 		} elseif (get_nfilter_request_var('drp_action') === '2') { /* disable */
 			print "	<tr>
 					<td class='topBoxAlt'>
-						<p>" . __n('Click \'Continue\' to disable the following Graph Export Definition.', 'Click \'Continue\' to disable following Graph Export Definitions.', sizeof($export_array)) . "</p>
+						<p>" . __n('Click \'Continue\' to disable the following Graph Export Definition.', 'Click \'Continue\' to disable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
 						<div class='itemlist'><ul>$export_list</ul></div>
 					</td>
 				</tr>\n";
 
-			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Disable Graph Export Definition(s)'>";
+			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue', 'gexport') . "' title='" . __esc('Disable Graph Export Definition(s)', 'gexport') . "'>";
 		} elseif (get_nfilter_request_var('drp_action') === '3') { /* enable */
 			print "	<tr>
 					<td class='topBoxAlt'>
-						<p>" . __n('Click \'Continue\' to enable the following Graph Export Definition.', 'Click \'Continue\' to enable following Graph Export Definitions.', sizeof($export_array)) . "</p>
+						<p>" . __n('Click \'Continue\' to enable the following Graph Export Definition.', 'Click \'Continue\' to enable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
 						<div class='itemlist'><ul>$export_list</ul></div>
 					</td>
 				</tr>\n";
 
-			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Enable Graph Export Definition(s)'>";
+			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue', 'gexport') . "' title='" . __esc('Enable Graph Export Definition(s)', 'gexport') . "'>";
 		} elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
 			print "	<tr>
 					<td class='topBoxAlt'>
@@ -278,11 +278,11 @@ function export_form_actions() {
 					</td>
 				</tr>\n";
 
-			$save_html = "<input type='button' value='" . __('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __('Continue') . "' title='Run Graph Export Definition(s) Now'>";
+			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue', 'gexport') . "' title='" . __esc('Run Graph Export Definition(s) Now', 'gexport') . "'>";
 		}
 	} else {
-		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.') . "</span></td></tr>\n";
-		$save_html = "<input type='button' value='" . __('Return') . "' onClick='cactiReturnTo()'>";
+		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.', 'gexport') . "</span></td></tr>\n";
+		$save_html = "<input type='button' value='" . __esc('Return', 'gexport') . "' onClick='cactiReturnTo()'>";
 	}
 
 	print "<tr>
@@ -338,9 +338,9 @@ function export_edit() {
 
 	if (!isempty_request_var('id')) {
 		$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', array(get_request_var('id')));
-		$header_label = __('Graph Export Definition [edit: %s]', $export['name']);
+		$header_label = __('Graph Export Definition [edit: %s]', $export['name'], 'gexport');
 	} else {
-		$header_label = __('Graph Export Definition [new]');
+		$header_label = __('Graph Export Definition [new]', 'gexport');
 	}
 
 	form_start('gexport.php', 'export_edit');
@@ -366,19 +366,19 @@ function export_edit() {
 
 	$(function() {
 		$('#graph_tree').multiselect({
-			noneSelectedText: '<?php print __('Select Tree(s)');?>',
+			noneSelectedText: '<?php print __('Select Tree(s)', 'gexport');?>',
 			selectedText: function(numChecked, numTotal, checkedItems) {
-				myReturn = numChecked + ' <?php print __('Trees Selected');?>';
+				myReturn = numChecked + ' <?php print __('Trees Selected', 'gexport');?>';
 				$.each(checkedItems, function(index, value) {
 					if (value.value == '0') {
-						myReturn='<?php print __('All Trees Selected');?>';
+						myReturn='<?php print __('All Trees Selected', 'gexport');?>';
 						return false;
 					}
 				});
 				return myReturn;
 			},
-			checkAllText: '<?php print __('All');?>',
-			uncheckAllText: '<?php print __('None');?>',
+			checkAllText: '<?php print __('All', 'gexport');?>',
+			uncheckAllText: '<?php print __('None', 'gexport');?>',
 			uncheckall: function() {
 				$(this).multiselect('widget').find(':checkbox:first').each(function() {
 					$(this).prop('checked', true);
@@ -408,23 +408,23 @@ function export_edit() {
 				}
 			}
 		}).multiselectfilter( {
-			label: '<?php print __('Search');?>', width: '150'
+			label: '<?php print __('Search', 'gexport');?>', width: '150'
 		});
 
 		$('#graph_site').multiselect({
-			noneSelectedText: '<?php print __('Select Site(s)');?>',
+			noneSelectedText: '<?php print __('Select Site(s)', 'gexport');?>',
 			selectedText: function(numChecked, numTotal, checkedItems) {
-				myReturn = numChecked + ' <?php print __('Sites Selected');?>';
+				myReturn = numChecked + ' <?php print __('Sites Selected', 'gexport');?>';
 				$.each(checkedItems, function(index, value) {
 					if (value.value == '0') {
-						myReturn='<?php print __('All Sites Selected');?>';
+						myReturn='<?php print __('All Sites Selected', 'gexport');?>';
 						return false;
 					}
 				});
 				return myReturn;
 			},
-			checkAllText: '<?php print __('All');?>',
-			uncheckAllText: '<?php print __('None');?>',
+			checkAllText: '<?php print __('All', 'gexport');?>',
+			uncheckAllText: '<?php print __('None', 'gexport');?>',
 			uncheckall: function() {
 				$(this).multiselect('widget').find(':checkbox:first').each(function() {
 					$(this).prop('checked', true);
@@ -454,7 +454,7 @@ function export_edit() {
 				}
 			}
 		}).multiselectfilter( {
-			label: '<?php print __('Search');?>', width: '150'
+			label: '<?php print __('Search', 'gexport');?>', width: '150'
 		});
 
 		setRemoteVisibility();
@@ -548,7 +548,7 @@ function export_edit() {
 function export_filter() {
 	global $item_rows;
 
-	html_start_box( __('Graph Export Definitions'), '100%', '', '3', 'center', 'gexport.php?action=edit');
+	html_start_box(__('Graph Export Definitions', 'gexport'), '100%', '', '3', 'center', 'gexport.php?action=edit');
 	?>
 	<tr class='even'>
 		<td>
@@ -556,40 +556,41 @@ function export_filter() {
 			<table class='filterTable'>
 				<tr>
 					<td>
-						<?php print __('Search');?>
+						<?php print __('Search', 'gexport');?>
 					</td>
 					<td>
 						<input type='text' id='filter' size='25' value='<?php print get_request_var('filter');?>'>
 					</td>
 					<td>
-						<?php print __('Exports');?>
+						<?php print __('Exports', 'gexport');?>
 					</td>
 					<td>
 						<select id='rows' onChange='applyFilter()'>
-							<option value='-1'<?php print (get_request_var('rows') == '-1' ? ' selected>':'>') . __('Default');?></option>
+							<option value='-1'<?php print (get_request_var('rows') == '-1' ? ' selected>':'>') . __('Default', 'gexport');?></option>
 							<?php
 							if (sizeof($item_rows)) {
-							foreach ($item_rows as $key => $value) {
-								print "<option value='" . $key . "'"; if (get_request_var('rows') == $key) { print ' selected'; } print '>' . $value . "</option>\n";
-							}
+								foreach ($item_rows as $key => $value) {
+									print "<option value='" . $key . "'"; if (get_request_var('rows') == $key) { print ' selected'; } print '>' . $value . "</option>\n";
+								}
 							}
 							?>
 						</select>
 					</td>
 					<td>
-						<input type='button' Value='<?php print __x('filter: use', 'Go');?>' id='refresh'>
-					</td>
-					<td>
-						<input type='button' Value='<?php print __x('filter: reset', 'Clear');?>' id='clear'>
+						<span>
+							<input type='button' Value='<?php print __x('filter: use', 'Go', 'gexport');?>' id='refresh'>
+							<input type='button' Value='<?php print __x('filter: reset', 'Clear', 'gexport');?>' id='clear'>
+						</span>
 					</td>
 				</tr>
 			</table>
-			<input type='hidden' id='page' value='<?php print get_filter_request_var('page');?>'>
 			</form>
 			<script type='text/javascript'>
 
 			function applyFilter() {
-				strURL = 'gexport.php?filter='+$('#filter').val()+'&rows='+$('#rows').val()+'&page='+$('#page').val()+'&header=false';
+				strURL  = 'gexport.php?header=false';
+				strURL += '&filter='+$('#filter').val();
+				strURL += '&rows='+$('#rows').val();
 				loadPageNoHeader(strURL);
 			}
 
@@ -693,7 +694,7 @@ function gexport($refresh = true) {
 
 	$exports = get_export_records($total_rows, $rows);
 
-	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, 5, __('Export Definitions'), 'page', 'main');
+	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, 5, __('Export Definitions', 'gexport'), 'page', 'main');
 
 	form_start('gexport.php', 'chk');
 
@@ -702,19 +703,19 @@ function gexport($refresh = true) {
 	html_start_box('', '100%', '', '3', 'center', '');
 
 	$display_text = array(
-		'name' => array('display' => __('Export Name'), 'align' => 'left', 'sort' => 'ASC', 'tip' => __('The name of this Graph Export Definition.')),
-		'id' => array('display' => __('ID'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The internal ID of the Graph Export Definition.')),
-		'export_timing' => array('display' => __('Schedule'), 'align' => 'right', 'sort' => 'DESC', 'tip' => __('The frequency that Graphs will be exported.')),
-		'next_start' => array('display' => __('Next Start'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The next time the Graph Export should run.')),
-		'nosort' => array('display' => __('Enabled'), 'align' => 'right', 'tip' => __('If enabled, this Graph Export definition will run as required.')),
-		'status' => array('display' => __('Status'), 'align' => 'right', 'tip' => __('The current Graph Export Status.')),
+		'name' => array('display' => __('Export Name', 'gexport'), 'align' => 'left', 'sort' => 'ASC', 'tip' => __('The name of this Graph Export Definition.', 'gexport')),
+		'id' => array('display' => __('ID', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The internal ID of the Graph Export Definition.', 'gexport')),
+		'export_timing' => array('display' => __('Schedule', 'gexport'), 'align' => 'right', 'sort' => 'DESC', 'tip' => __('The frequency that Graphs will be exported.', 'gexport')),
+		'next_start' => array('display' => __('Next Start', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The next time the Graph Export should run.', 'gexport')),
+		'nosort' => array('display' => __('Enabled', 'gexport'), 'align' => 'right', 'tip' => __('If enabled, this Graph Export definition will run as required.', 'gexport')),
+		'status' => array('display' => __('Status', 'gexport'), 'align' => 'right', 'tip' => __('The current Graph Export Status.', 'gexport')),
 
-		'nosort1' => array('display' => __('Exporting (Sites/Trees)'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('What is being Exported.')),
-		'export_effective_user' => array('display' => __('Effective User'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The user that this export will impersonate.')),
-		'last_runtime' => array('display' => __('Last Runtime'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last runtime for the Graph Export.')),
-		'total_graphs' => array('display' => __('Graphs'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The number of Graphs Exported on the last run.')),
-		'last_started' => array('display' => __('Last Started'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export was started.')),
-		'last_errored' => array('display' => __('Last Errored'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export experienced an error.'))
+		'nosort1' => array('display' => __('Exporting (Sites/Trees)', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('What is being Exported.', 'gexport')),
+		'export_effective_user' => array('display' => __('Effective User', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The user that this export will impersonate.', 'gexport')),
+		'last_runtime' => array('display' => __('Last Runtime', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last runtime for the Graph Export.', 'gexport')),
+		'total_graphs' => array('display' => __('Graphs', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The number of Graphs Exported on the last run.', 'gexport')),
+		'last_started' => array('display' => __('Last Started', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export was started.', 'gexport')),
+		'last_errored' => array('display' => __('Last Errored', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export experienced an error.', 'gexport'))
 	);
 
 	html_header_sort_checkbox($display_text, get_request_var('sort_column'), get_request_var('sort_direction'), false);
@@ -731,27 +732,27 @@ function gexport($refresh = true) {
 			form_selectable_cell(filter_value($export['name'], get_request_var('filter'), 'gexport.php?action=edit&id=' . $export['id']), $export['id']);
 			form_selectable_cell($export['id'], $export['id'], '', 'text-align:right');
 
-			form_selectable_cell(__(ucfirst($export['export_timing'])), $export['id'], '', 'text-align:right');
+			form_selectable_cell(__(ucfirst($export['export_timing']), 'gexport'), $export['id'], '', 'text-align:right');
 
-			form_selectable_cell($export['enabled'] == '' ? __('N/A'):substr($export['next_start'], 5, 11), $export['id'], '', 'text-align:right');
+			form_selectable_cell($export['enabled'] == '' ? __('N/A', 'gexport'):substr($export['next_start'], 5, 11), $export['id'], '', 'text-align:right');
 
-			form_selectable_cell($export['enabled'] == '' ? __('No'):__('Yes'), $export['id'], '', 'text-align:right');
+			form_selectable_cell($export['enabled'] == '' ? __('No', 'gexport'):__('Yes', 'gexport'), $export['id'], '', 'text-align:right');
 
 			switch($export['status']) {
 			case '0':
-				form_selectable_cell("<span class='idle'>" .  __('Idle') . "</span>", $export['id'], '', 'text-align:right');
+				form_selectable_cell("<span class='idle'>" .  __('Idle', 'gexport') . "</span>", $export['id'], '', 'text-align:right');
 				break;
 			case '1':
-				form_selectable_cell("<span class='running'>" .  __('Running') . "</span>", $export['id'], '', 'text-align:right');
+				form_selectable_cell("<span class='running'>" .  __('Running', 'gexport') . "</span>", $export['id'], '', 'text-align:right');
 				break;
 			case '2':
-				form_selectable_cell("<span class='errored'>" .  __('Error') . "</span>", $export['id'], '', 'text-align:right');
+				form_selectable_cell("<span class='errored'>" .  __('Error', 'gexport') . "</span>", $export['id'], '', 'text-align:right');
 				break;
 			}
 
 			if ($export['export_presentation'] == 'preview') {
 				if ($export['graph_site'] == '0') {
-					form_selectable_cell(__('All Sites'), $export['id'], '', 'text-align:right');
+					form_selectable_cell(__('All Sites', 'gexport'), $export['id'], '', 'text-align:right');
 				} else {
 					if ($export['graph_site'] != '') {
 						$sites = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $export['graph_site'] . ')');
@@ -762,7 +763,7 @@ function gexport($refresh = true) {
 				}
 			} else {
 				if ($export['graph_tree'] == '0') {
-					form_selectable_cell(__('All Trees'), $export['id'], '', 'text-align:right');
+					form_selectable_cell(__('All Trees', 'gexport'), $export['id'], '', 'text-align:right');
 				} else {
 					if ($export['graph_tree'] != '') {
 						$trees = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $export['graph_tree'] . ')');
@@ -773,30 +774,30 @@ function gexport($refresh = true) {
 				}
 			}
 
-			form_selectable_cell($export['export_effective_user'] == 0 ? __('N/A'):$user, $export['id'], '', 'text-align:right');
+			form_selectable_cell($export['export_effective_user'] == 0 ? __('N/A', 'gexport'):$user, $export['id'], '', 'text-align:right');
 
 			if ($export['last_started'] != '0000-00-00 00:00:00') {
-				form_selectable_cell(round($export['last_runtime'],2) . ' ' . __('Sec'), $export['id'], '', 'text-align:right');
+				form_selectable_cell(round($export['last_runtime'],2) . ' ' . __('Sec', 'gexport'), $export['id'], '', 'text-align:right');
 				form_selectable_cell(number_format_i18n($export['total_graphs']), $export['id'], '', 'text-align:right');
 				form_selectable_cell(substr($export['last_started'], 5, 11), $export['id'], '', 'text-align:right');
 
 				if ($export['last_errored'] != '0000-00-00 00:00:00') {
 					form_selectable_cell(substr($export['last_errored'], 5, 11), $export['id'], '', 'text-align:right', $export['last_error']);
 				} else {
-					form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
+					form_selectable_cell(__('Never', 'gexport'), $export['id'], '', 'text-align:right');
 				}
 			} else {
-				form_selectable_cell(__('N/A'), $export['id'], '', 'text-align:right');
-				form_selectable_cell(__('N/A'), $export['id'], '', 'text-align:right');
-				form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
-				form_selectable_cell(__('Never'), $export['id'], '', 'text-align:right');
+				form_selectable_cell(__('N/A', 'gexport'), $export['id'], '', 'text-align:right');
+				form_selectable_cell(__('N/A', 'gexport'), $export['id'], '', 'text-align:right');
+				form_selectable_cell(__('Never', 'gexport'), $export['id'], '', 'text-align:right');
+				form_selectable_cell(__('Never', 'gexport'), $export['id'], '', 'text-align:right');
 			}
 
 			form_checkbox_cell($export['name'], $export['id']);
 			form_end_row();
 		}
 	} else {
-		print "<tr class='tableRow'><td colspan='4'><em>" . __('No Graph Export Definitions') . "</em></td></tr>\n";
+		print "<tr class='tableRow'><td colspan='4'><em>" . __('No Graph Export Definitions', 'gexport') . "</em></td></tr>\n";
 	}
 
 	html_end_box(false);
@@ -810,3 +811,4 @@ function gexport($refresh = true) {
 
 	form_end();
 }
+

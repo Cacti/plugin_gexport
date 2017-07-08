@@ -28,7 +28,7 @@ function gexport_calc_next_start($export, $start_time = 0) {
 	$poller_interval = read_config_option('poller_interval');
 
 	if ($export['export_timing'] == 'periodic') {
-		$now        = date("Y-m-d H:i:00", time());
+		$now        = date('Y-m-d H:i:00', time());
 		$next_run   = strtotime($now) + $export['export_skip'] * $poller_interval;
 		$next_start = date('Y-m-d H:i:s', $next_run);
 	}else{
@@ -1214,7 +1214,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 								WHERE hsq.host_id = ?',
 								array($host['host_id']));
 
-							$data_queries[] = array('id' => '0', 'name' => __('Non Query Based'));
+							$data_queries[] = array('id' => '0', 'name' => __('Non Query Based', 'gexport'));
 
 							foreach($data_queries as $query) {
 								$total_rows = write_branch_conf($tree['id'], $parent, 'host_dq', $host['host_id'], $query['id'], $user, $export_path);
@@ -1376,7 +1376,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 										WHERE hsq.host_id = ?',
 										array($host['host_id']));
 
-									$data_queries[] = array('id' => '0', 'name' => __('Non Query Based'));
+									$data_queries[] = array('id' => '0', 'name' => __('Non Query Based', 'gexport'));
 
 									foreach($data_queries as $query) {
 										$total_rows = write_branch_conf($site['id'], $parent, 'host_dq', $host['host_id'], $query['id'], $user, $export_path);
@@ -1457,7 +1457,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 		ORDER BY gt.name', array($site['id']));
 
 	if (sizeof($graph_templates)) {
-		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_gtbranch_0' data-jstree='{ \"type\" : \"graph_template_anchor\" }'>" . __("Graph Templates") . "\n";
+		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_gtbranch_0' data-jstree='{ \"type\" : \"graph_template_anchor\" }'>" . __('Graph Templates', 'gexport') . "\n";
 		$depth++;
 		$jstree .= str_repeat("\t", $depth) . "<ul>\n";
 		$depth++;
@@ -1486,7 +1486,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 		WHERE h.site_id = ?', array($site['id']));
 
 	if (sizeof($data_queries)) {
-		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dqbranch_0' data-jstree='{ \"type\" : \"data_query_anchor\" }'>" . __("Data Queries") . "\n";
+		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dqbranch_0' data-jstree='{ \"type\" : \"data_query_anchor\" }'>" . __('Data Queries', 'gexport') . "\n";
 		$depth++;
 		$jstree .= str_repeat("\t", $depth) . "<ul>\n";
 		$depth++;

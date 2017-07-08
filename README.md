@@ -32,10 +32,11 @@ Got any ideas or complaints, please create an issue in GitHub.
 * issue#12 - jquery.storageapi.js not found
 
 --- 1.1 ---
-* issue#4 - undefined index in site export
-* issue#5 - export user too narrow
-* issue#6 - export ftp does not function
-* issue#7 - rmdir warnings when performing cleanup
+* issue#4: undefined index in site export
+* issue#5: export user too narrow
+* issue#6: export ftp does not function
+* issue#7: rmdir warnings when performing cleanup
+* issue: update text domains for i18n
 
 --- 1.0 ---
 Initial Release
