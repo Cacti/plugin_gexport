@@ -728,6 +728,21 @@ function gexport($refresh = true) {
 				WHERE id = ?',
 				array($export['export_effective_user']));
 
+			if ($export['export_pid'] > 0 && $export['status'] > 0) {
+				if (function_exists('posix_getpgid')) {
+					$running = posix_getpgid($export['export_pid']);
+				} elseif (function_exists('posix_kill')) {
+					$running = posix_kill($export['export_pid'], 0);
+				}
+
+				if (!$running) {
+					db_execute_prepared('UPDATE graph_exports 
+						SET status=0, export_pid=0, last_error="Killed Outside Cacti", last_errored=NOW() 
+						WHERE id = ?', 
+						array($export['id']));
+				}
+			}
+
 			form_alternate_row('line' . $export['id'], true);
 			form_selectable_cell(filter_value($export['name'], get_request_var('filter'), 'gexport.php?action=edit&id=' . $export['id']), $export['id']);
 			form_selectable_cell($export['id'], $export['id'], '', 'text-align:right');

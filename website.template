@@ -21,10 +21,13 @@
 	<script type='text/javascript' src='js/jquery.cookie.js'></script>
 	<script type='text/javascript' src='js/js.storage.js'></script>
 	<script type='text/javascript' src='js/pace.js'></script>
-	<script type='text/javascript' src='js/main.js'></script>
 	<script type='text/javascript' src='js/layout.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
 	<script type='text/javascript' src='js/csrf-magic.js'></script>
 	<script type='text/javascript'>$(function() { $('.cactiTreeNavigationArea').show() });</script>
+	<script type='text/javascript'>
+	var noFileSelected='No file selected';
+	</script>
 </head>
 <body>
 	<div id='cactiPageHead' class='cactiPageHead' role='banner'>
@@ -262,6 +265,10 @@
 					$('#graph_'+myGraphs[i]).attr('src', 'graphs/' + type + myGraphs[i] + '.png').load(function() {
 						var myWidth  = $(this).prop('naturalWidth');
 						var myHeight = $(this).prop('naturalHeight');
+
+						if (myWidth > graphWidth) {
+							myFactor = graphWidth / myWidth;
+						}
 
 						if (myFactor == 0) {
 							myFactor = graphWidth / myWidth;

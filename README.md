@@ -28,8 +28,11 @@ Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
 
+--- 1.3 ---
+* issue: resolving issues with site export
+
 --- 1.2 ---
-* issue#12 - jquery.storageapi.js not found
+* issue#12: jquery.storageapi.js not found
 
 --- 1.1 ---
 * issue#4: undefined index in site export

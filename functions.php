@@ -106,7 +106,9 @@ function graph_export($id = 0, $force = false) {
 					$runnow = true;
 					$next_start = gexport_calc_next_start($export);
 
-					db_execute_prepared('UPDATE graph_exports SET next_start = ? WHERE id = ?', array($next_start, $export['id']));
+					db_execute_prepared('UPDATE graph_exports
+						SET next_start = ? WHERE id = ?',
+						array($next_start, $export['id']));
 				}
 			}else{
 				$runnow = true;
@@ -1329,8 +1331,9 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 			$hosts = db_fetch_assoc_prepared('SELECT DISTINCT id AS host_id, "1" AS host_grouping_type
 				FROM host
 				WHERE site_id = ?
+				AND host_template_id = ?
 				ORDER BY description',
-				array($site['id']));
+				array($site['id'], $branch['id']));
 
 			if (sizeof($hosts)) {
 				foreach($hosts as $host) {
@@ -1435,6 +1438,9 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 									}
 								}
 							}
+						} else {
+							$depth--;
+							$jstree .= str_repeat("\t", $depth) . "</li>\n";
 						}
 					}
 				}
@@ -1497,7 +1503,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 			$total_rows = write_branch_conf($site['id'], '0', 'site_dq', 0, $branch['id'], $user, $export_path);
 
 			if ($total_rows) {
-				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dq_" . $branch['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $branch['name'];
+				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dq_" . $branch['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $branch['name'] . "\n";
 				$depth++;
 
 				$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -1613,7 +1619,7 @@ function tree_site_export(&$export, $export_path) {
 
 				if (sizeof($site_data)) {
 					$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";;
-					$jstree .= export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
+					$jstree  = export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
 					$jstree .= str_repeat("\t", 4) . "</li>\n";
 				}
 			}
