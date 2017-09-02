@@ -266,25 +266,18 @@
 						var myWidth  = $(this).prop('naturalWidth');
 						var myHeight = $(this).prop('naturalHeight');
 
-						if (myWidth > graphWidth) {
-							myFactor = graphWidth / myWidth;
-						}
+						myFactor = graphWidth / myWidth;
 
-						if (myFactor == 0) {
-							myFactor = graphWidth / myWidth;
-						}
-						//console.log('Window: '+width+', GraphWidth: '+graphWidth+', Width: '+myWidth+', Height: '+myHeight+', Factor: '+myFactor);
-
-						$(this).css({ width:myFactor * myWidth, height:myFactor * myHeight}).show();
+						$(this).css({ 'width' : (myFactor * myWidth), 'height' : (myFactor * myHeight) }).show();
 
 						if (myHeight * myFactor > maxHeight) {
 							maxHeight = myHeight * myFactor;
 						}
 
-						//console.log(maxHeight);
-						$('.cgraph_wrapper').css('height', maxHeight);
 					});
 				}
+
+				$('.cgraph_wrapper').css('height', maxHeight);
 
 				applySkin();
 		        window.scrollTo(0, 0);
@@ -388,9 +381,7 @@
 					myHeight   = $('.cgraphs').first().prop('naturalHeight');
 					myFactor   = graphWidth / myWidth;
 
-					//console.log('Window: '+width+', GraphWidth: '+graphWidth+', Width: '+myWidth+', Height: '+myHeight+', Factor: '+myFactor);
-
-					$('.cgraphs').css({ width:myFactor * myWidth, height:myFactor * myHeight});
+					$('.cgraphs').css({ 'width' : (myFactor * myWidth), 'height' : (myFactor * myHeight) });
 
 					if (treeHeight > windHeight) {
 						$('#navigation').height(treeHeight+'px');
