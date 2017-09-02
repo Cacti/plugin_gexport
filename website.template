@@ -60,6 +60,7 @@
 			var totalGraphs = 0;
 			var first       = true;
 			var graphWidth  = 0;
+			var maxHeight   = 0;
 
 			function resizeGraphContent() {
 				if ('dark' != 'classic') {
@@ -266,18 +267,19 @@
 						var myWidth  = $(this).prop('naturalWidth');
 						var myHeight = $(this).prop('naturalHeight');
 
-						myFactor = graphWidth / myWidth;
+						myFactor  = graphWidth / myWidth;
+						myWidth  *= myFactor;
+						myHeight *= myFactor;
 
-						$(this).css({ 'width' : (myFactor * myWidth), 'height' : (myFactor * myHeight) }).show();
+						$(this).css({ width : myWidth, height : myHeight }).show();
 
-						if (myHeight * myFactor > maxHeight) {
-							maxHeight = myHeight * myFactor;
+						if (myHeight > maxHeight) {
+							maxHeight = myHeight;
 						}
 
+						$(this).closest('.cgraph_wrapper').css('height', maxHeight);
 					});
 				}
-
-				$('.cgraph_wrapper').css('height', maxHeight);
 
 				applySkin();
 		        window.scrollTo(0, 0);
@@ -390,6 +392,8 @@
 					}else {
 						$('#navigation').height(windHeight+'px');
 					}
+
+					$('.cgraph_wrapper').css('height', maxHeight * myFactor);
 				});
 			});
 			</script>
