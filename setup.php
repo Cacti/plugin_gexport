@@ -172,12 +172,10 @@ function gexport_config_arrays() {
 	asort($themes);
 	$dir->close();
 
-	if ($config['cacti_server_os'] == 'unix') {
-		$tmp = '/tmp/';
-	}else{
-		$tmp = getenv('TEMP');
-	}
-
+	
+	// Replace OS check and fixed temp dir with sys_get_temp_dir()
+	$tmp = sys_get_temp_dir() . DIRECTORY_SEPARATOR;
+	
 	if (isset($_SESSION['gexport_message']) && $_SESSION['gexport_message'] != '') {
 		$messages['gexport_message'] = array('message' => $_SESSION['gexport_message'], 'type' => 'info');
 	}
