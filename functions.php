@@ -1713,7 +1713,12 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/include/js/jquery.ui.touch.punch.js", "$export_path/js/jquery.ui.touch.punch.js");
 	copy("$root_path/include/js/pace.js", "$export_path/js/pace.js");
 	copy("$root_path/include/layout.js", "$export_path/js/layout.js");
-	copy("$root_path/include/csrf/csrf-magic.js", "$export_path/js/csrf-magic.js");
+
+	if (file_exists("$root_path/include/vendor/csrf/csrf-magic.js")) {
+		copy("$root_path/include/vendor/csrf/csrf-magic.js", "$export_path/js/csrf-magic.js");
+	} else {
+		copy("$root_path/include/csrf/csrf-magic.js", "$export_path/js/csrf-magic.js");
+	}
 	copy("$root_path/include/themes/$theme/main.js", "$export_path/js/main.js");
 
 	/* css */
