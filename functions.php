@@ -813,32 +813,8 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 
 		if (is_array($aFtpRemoteFiles)) {
 			foreach ($aFtpRemoteFiles as $stFile) {
-				export_log("Deleting remote file '" . $stFile . "'");
-				@ftp_delete($oFtpConnection, $stFile);
-			}
-		}
-
-		/* if the presentation is tree, you will have some directories too */
-		if ($export['export_presentation'] == 'tree') {
-			$aFtpRemoteDirs = ftp_nlist($oFtpConnection, $aFtpExport['remotedir']);
-
-			foreach ($aFtpRemoteDirs as $remote_dir) {
-				if (ftp_chdir($oFtpConnection, addslashes($remote_dir))) {
-					$aFtpRemoteFiles = ftp_nlist($oFtpConnection, '.');
-					if (is_array($aFtpRemoteFiles)) {
-						foreach ($aFtpRemoteFiles as $stFile) {
-							export_log("Deleting Remote File '" . $stFile . "'");
-							ftp_delete($oFtpConnection, $stFile);
-						}
-					}
-					ftp_chdir($oFtpConnection, '..');
-
-					export_log("Removing Remote Directory '" . $remote_dir . "'");
-					ftp_rmdir($oFtpConnection, $remote_dir);
-				}else{
-					ftp_close($oFtpConnection);
-					export_fatal($export, 'Unable to cd on remote system');
-				}
+				export_log("Removing recursively remote file/directory '" . $stFile . "'");
+				export_ftp_rmdirr($oFtpConnection, $stFile);
 			}
 		}
 
@@ -857,6 +833,30 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	/* end connection */
 	export_log('Closing ftp connection.');
 	ftp_close($oFtpConnection);
+}
+
+function export_ftp_rmdirr($handle, $path) {
+	// Remove the cacti error handler
+	restore_error_handler();
+
+	if (!@ftp_delete($handle, $path)) {
+		$list = @ftp_nlist($handle, $path);
+
+		if (sizeof($list)) {
+			foreach($list as $value) {
+				ftp_rmdirr($handle, $value);
+			}
+		}
+	}
+
+    if (@ftp_rmdir($handle, $path)) {
+		return true;
+	} else {
+		return false;
+	}
+
+	// Restore the cacti error handler
+	set_error_handler('CactiErrorHandler');
 }
 
 /* export_ftp_php_uploaddir - this function performs the transfer of the exported

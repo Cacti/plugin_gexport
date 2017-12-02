@@ -29,6 +29,7 @@ Got any ideas or complaints, please create an issue in GitHub.
 ## Changelog
 
 --- 1.3 ---
+* issue#21: Remove ftp_delete warning
 * issue: resolving issues with site export
 
 --- 1.2 ---
