@@ -108,6 +108,7 @@ function export_form_save() {
 		$save['export_directory']        = form_input_validate(get_nfilter_request_var('export_directory'), 'export_directory', '', false, 3);
 		$save['export_temp_directory']   = form_input_validate(get_nfilter_request_var('export_temp_directory'), 'export_temp_directory', '', false, 3);
 		$save['export_timing']           = form_input_validate(get_nfilter_request_var('export_timing'), 'export_timing', '^periodic|hourly|daily$', false, 3);
+		$save['export_threads']          = form_input_validate(get_nfilter_request_var('export_threads'), 'export_threads', '^[0-9]+$', false, 3);
 		$save['export_skip']             = form_input_validate(get_nfilter_request_var('export_skip'), 'export_skip', '^[0-9]+$', false, 3);
 		$save['export_hourly']           = form_input_validate(get_nfilter_request_var('export_hourly'), 'export_hourly', '^[0-9]+$', false, 3);
 		$save['export_daily']            = form_input_validate(get_nfilter_request_var('export_daily'), 'export_daily', '^[0-9]+:[0-9]+$', false, 3);

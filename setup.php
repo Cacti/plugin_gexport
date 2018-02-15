@@ -35,6 +35,7 @@ function plugin_gexport_install() {
 
 function plugin_gexport_uninstall() {
 	db_execute('DROP TABLE graph_exports');
+	db_execute('DROP TABLE graph_exports_tasks');
 
 	return true;
 }
@@ -96,7 +97,18 @@ function gexport_check_upgrade() {
 			webpage='" . $info['homepage'] . "'
 			WHERE directory='" . $info['name'] . "' ");
 
-		db_execute("ALTER TABLE graph_exports MODIFY column export_user VARCHAR(40) DEFAULT ''");
+		if (cacti_version_compare($old,'1.4','<')) {
+			if (!db_column_exists('graph_exports','export_threads')) {
+				db_execute('ALTER TABLE graph_exports
+				ADD COLUMN `export_threads` int(10) DEFAULT \'0\'');
+			}
+			gexport_create_table_tasks();
+		}
+
+		if (cacti_version_compare($old,'1.3','<')) {
+			db_execute('ALTER TABLE graph_exports
+				MODIFY column export_user VARCHAR(40) DEFAULT \'\'');
+		}
 	}
 }
 
@@ -108,50 +120,76 @@ function gexport_setup_table() {
 	global $config, $database_default;
 	include_once($config['library_path'] . '/database.php');
 
-	db_execute("CREATE TABLE `graph_exports` (
-		`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-		`name` varchar(64) DEFAULT '',
-		`export_type` varchar(12) DEFAULT '',
-		`enabled` char(3) DEFAULT 'on',
-		`export_presentation` varchar(20) DEFAULT '',
-		`export_effective_user` int(10) unsigned DEFAULT '0',
-		`export_expand_hosts` char(3) DEFAULT '',
-		`export_theme` varchar(20) DEFAULT 'modern',
-		`graph_tree` varchar(255) DEFAULT '',
-		`graph_site` varchar(255) DEFAULT '',
-		`graph_height` int(10) unsigned DEFAULT '100',
-		`graph_width` int(10) unsigned DEFAULT '300',
-		`graph_thumbnails` char(3) DEFAULT '',
-		`graph_columns` int(10) unsigned DEFAULT '2',
-		`graph_perpage` int(10) unsigned DEFAULT '50',
-		`graph_max` int(10) unsigned DEFAULT '2000',
-		`export_directory` varchar(255) DEFAULT '',
-		`export_temp_directory` varchar(255) DEFAULT '',
-		`export_timing` varchar(20) DEFAULT 'disabled',
-		`export_skip` int(10) unsigned DEFAULT '0',
-		`export_hourly` varchar(20) DEFAULT '',
-		`export_daily` varchar(20) DEFAULT '',
-		`export_sanitize_remote` char(3) DEFAULT '',
-		`export_host` varchar(64) DEFAULT '',
-		`export_port` varchar(5) DEFAULT '',
-		`export_passive` char(3) DEFAULT '',
-		`export_user` varchar(40) DEFAULT '',
-		`export_password` varchar(64) DEFAULT '',
-		`export_private_key_path` varchar(255) DEFAULT '',
-		`status` int(10) unsigned DEFAULT '0',
-		`export_pid` int(10) unsigned DEFAULT NULL,
-		`next_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-		`last_checked` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-		`last_started` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-		`last_ended` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-		`last_errored` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-		`last_runtime` double NOT NULL DEFAULT '0',
-		`last_error` varchar(255) DEFAULT NULL,
-		`total_graphs` double DEFAULT '0',
-		PRIMARY KEY (`id`))
-		ENGINE=InnoDB
-		COMMENT='Stores Graph Export Settings for Cacti'");
+	gexport_create_table();
+	gexport_create_table_tasks();
 
+	return true;
+}
+
+function gexport_create_table() {
+	if (!db_table_exists('graph_exports')) {
+		db_execute("CREATE TABLE `graph_exports` (
+			`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+			`name` varchar(64) DEFAULT '',
+			`export_type` varchar(12) DEFAULT '',
+			`enabled` char(3) DEFAULT 'on',
+			`export_presentation` varchar(20) DEFAULT '',
+			`export_effective_user` int(10) unsigned DEFAULT '0',
+			`export_expand_hosts` char(3) DEFAULT '',
+			`export_theme` varchar(20) DEFAULT 'modern',
+			`graph_tree` varchar(255) DEFAULT '',
+			`graph_site` varchar(255) DEFAULT '',
+			`graph_height` int(10) unsigned DEFAULT '100',
+			`graph_width` int(10) unsigned DEFAULT '300',
+			`graph_thumbnails` char(3) DEFAULT '',
+			`graph_columns` int(10) unsigned DEFAULT '2',
+			`graph_perpage` int(10) unsigned DEFAULT '50',
+			`graph_max` int(10) unsigned DEFAULT '2000',
+			`export_directory` varchar(255) DEFAULT '',
+			`export_temp_directory` varchar(255) DEFAULT '',
+			`export_timing` varchar(20) DEFAULT 'disabled',
+			`export_skip` int(10) unsigned DEFAULT '0',
+			`export_hourly` varchar(20) DEFAULT '',
+			`export_daily` varchar(20) DEFAULT '',
+			`export_threads` int(10) DEFAULT '0',
+			`export_sanitize_remote` char(3) DEFAULT '',
+			`export_host` varchar(64) DEFAULT '',
+			`export_port` varchar(5) DEFAULT '',
+			`export_passive` char(3) DEFAULT '',
+			`export_user` varchar(40) DEFAULT '',
+			`export_password` varchar(64) DEFAULT '',
+			`export_private_key_path` varchar(255) DEFAULT '',
+			`status` int(10) unsigned DEFAULT '0',
+			`export_pid` int(10) unsigned DEFAULT NULL,
+			`next_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+			`last_checked` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+			`last_started` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+			`last_ended` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+			`last_errored` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+			`last_runtime` double NOT NULL DEFAULT '0',
+			`last_error` varchar(255) DEFAULT NULL,
+			`total_graphs` double DEFAULT '0',
+			PRIMARY KEY (`id`))
+			ENGINE=InnoDB
+			COMMENT='Stores Graph Export Settings for Cacti'");
+	}
+	return true;
+}
+
+function gexport_create_table_tasks() {
+	if (!db_table_exists('graph_exports_tasks')) {
+		db_execute("CREATE TABLE `graph_exports_tasks` (
+			`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+			`local_graph_id` int(10) unsigned NOT NULL DEFAULT '0',
+			`export_id` int(10) unsigned NOT NULL DEFAULT '0',
+			`pid` int(10) unsigned NOT NULL DEFAULT '0',
+			`user` int(10) unsigned NOT NULL DEFAULT '0',
+			`folder` varchar(255) DEFAULT '',
+			`status` int(1) unsigned NOT NULL DEFAULT '0',
+			PRIMARY KEY (`id`))
+			ENGINE=InnoDB
+			COMMENT='Stores Graph Export Tasks for Cacti'");
+	}
 	return true;
 }
 
@@ -172,10 +210,9 @@ function gexport_config_arrays() {
 	asort($themes);
 	$dir->close();
 
-	
 	// Replace OS check and fixed temp dir with sys_get_temp_dir()
 	$tmp = sys_get_temp_dir() . DIRECTORY_SEPARATOR;
-	
+
 	if (isset($_SESSION['gexport_message']) && $_SESSION['gexport_message'] != '') {
 		$messages['gexport_message'] = array('message' => $_SESSION['gexport_message'], 'type' => 'info');
 	}
@@ -294,6 +331,15 @@ function gexport_config_arrays() {
 			'placeholder' => 'HH:MM',
 			'value' => '|arg1:export_daily|',
 			'default' => '00:00',
+			'max_length' => '10',
+			'size' => '5'
+		),
+		'export_threads' => array(
+			'friendly_name' => __('Use x Threads', 'gexport'),
+			'description' => __('How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads','gexport'),
+			'method' => 'textbox',
+			'value' => '|arg1:export_threads|',
+			'default' => '0',
 			'max_length' => '10',
 			'size' => '5'
 		),

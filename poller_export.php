@@ -71,6 +71,9 @@ if (sizeof($parms)) {
 		case '--id':
 			$id = $value;
 			break;
+		case '--thread':
+			$thread = $value;
+			break;
 		case '-d':
 		case '--debug':
 			$debug = TRUE;
@@ -98,7 +101,11 @@ if (sizeof($parms)) {
 }
 
 /* graph export */
-graph_export($id, $force);
+if (isset($thread)) {
+	export_graph_start_task($thread);
+} else {
+	graph_export($id, $force);
+}
 
 /*  display_version - displays version information */
 function display_version() {
