@@ -186,6 +186,7 @@ function gexport_create_table_tasks() {
 			`user` int(10) unsigned NOT NULL DEFAULT '0',
 			`folder` varchar(255) DEFAULT '',
 			`status` int(1) unsigned NOT NULL DEFAULT '0',
+			`start_time` int(1) unsigned NOT NULL DEFAULT '0',
 			PRIMARY KEY (`id`))
 			ENGINE=InnoDB
 			COMMENT='Stores Graph Export Tasks for Cacti'");
