@@ -106,6 +106,7 @@ function export_form_save() {
 		$save['graph_max']               = form_input_validate(get_nfilter_request_var('graph_max'), 'graph_max', '^[0-9]+$', false, 3);
 
 		$save['export_clear']            = isset_request_var('export_clear') ? 'on':'';
+		$save['export_thumbs']           = isset_request_var('export_thumbs') ? 'on':'';
 		$save['export_directory']        = form_input_validate(get_nfilter_request_var('export_directory'), 'export_directory', '', false, 3);
 		$save['export_temp_directory']   = form_input_validate(get_nfilter_request_var('export_temp_directory'), 'export_temp_directory', '', false, 3);
 		$save['export_timing']           = form_input_validate(get_nfilter_request_var('export_timing'), 'export_timing', '^periodic|hourly|daily$', false, 3);

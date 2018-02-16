@@ -860,7 +860,7 @@ function export_graph_start_task($task_id) {
 
 	$export_stats = sprintf('Time:%01.2f Exports:%s', $end - $start, $exports);
 
-	export_note('THREAD STATS: ' . $export_stats);
+	export_debug('THREAD STATS: ' . $export_stats);
 }
 
 /* export_graph_files - this function exports the actual files for a given graph
@@ -879,7 +879,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 
 	check_remove($export_path . '/graph_' . $local_graph_id . '.html');
 
-	if ($export['graph_thumbnails'] == 'on') {
+	if ($export['export_thumbs'] == 'on') {
 		/* settings for preview graphs */
 		$graph_data_array['export_filename'] = $export_path . '/graphs/thumb_' . $local_graph_id . '.png';
 

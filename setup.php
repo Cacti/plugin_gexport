@@ -106,6 +106,10 @@ function gexport_check_upgrade() {
 				db_execute('ALTER TABLE graph_exports
 					ADD COLUMN `export_clear` char(3) DEFAULT \'\'');
 			}
+			if (!db_column_exists('graph_exports','export_thumbs')) {
+				db_execute('ALTER TABLE graph_exports
+					ADD COLUMN `export_thumbs` char(3) DEFAULT \'on\'');
+			}
 			gexport_create_table_tasks();
 		}
 
@@ -150,6 +154,7 @@ function gexport_create_table() {
 			`graph_perpage` int(10) unsigned DEFAULT '50',
 			`graph_max` int(10) unsigned DEFAULT '2000',
 			`export_clear` char(3) DEFAULT '',
+			`export_thumbs` char(3) DEFAULT 'on',
 			`export_directory` varchar(255) DEFAULT '',
 			`export_temp_directory` varchar(255) DEFAULT '',
 			`export_timing` varchar(20) DEFAULT 'disabled',
@@ -192,7 +197,9 @@ function gexport_create_table_tasks() {
 			`folder` varchar(255) DEFAULT '',
 			`status` int(1) unsigned NOT NULL DEFAULT '0',
 			`start_time` int(1) unsigned NOT NULL DEFAULT '0',
-			PRIMARY KEY (`id`))
+			PRIMARY KEY (`id`),
+			KEY `status` (`status`),
+			KEY `pid` (`pid`))
 			ENGINE=InnoDB
 			COMMENT='Stores Graph Export Tasks for Cacti'");
 	}
@@ -412,8 +419,7 @@ function gexport_config_arrays() {
 			'friendly_name' => __('Default View Thumbnails', 'gexport'),
 			'description' => __('Check this if you want the default Graph View to be in Thumbnail mode.', 'gexport'),
 			'method' => 'checkbox',
-			'value' => '|arg1:export_sanitize_remote|',
-			'max_length' => '255'
+			'value' => '|arg1:graph_thumbnails|',
 		),
 		'graph_columns' => array(
 			'friendly_name' => __('Default Graph Columns', 'gexport'),
@@ -446,11 +452,16 @@ function gexport_config_arrays() {
 			'collapsible' => 'true',
 			'method' => 'spacer',
 		),
+		'export_thumbs' => array(
+			'friendly_name' => __('Export Thumbnails', 'gexport'),
+			'description' => __('Check this if you want the export thumbnails mode.', 'gexport'),
+			'method' => 'checkbox',
+			'value' => '|arg1:export_thumbs|',
+		),
 		'export_clear' => array(
 			'friendly_name' => __('Clear Directory', 'gexport'),
 			'description' => __('Check this Checkbox if you wish this Graph Export to clear the final directory before populating.', 'gexport'),
 			'value' => '|arg1:export_clear|',
-			'default' => '',
 			'method' => 'checkbox',
 		),
 		'export_directory' => array(
@@ -478,7 +489,6 @@ function gexport_config_arrays() {
 			'description' => __('Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions.', 'gexport'),
 			'method' => 'checkbox',
 			'value' => '|arg1:export_sanitize_remote|',
-			'max_length' => '255'
 		),
 		'export_host' => array(
 			'friendly_name' => __('Remote Host', 'gexport'),
@@ -502,7 +512,6 @@ function gexport_config_arrays() {
 			'description' => __('Check this if you want to connect in passive mode to the FTP server.', 'gexport'),
 			'method' => 'checkbox',
 			'value' => '|arg1:export_passive|',
-			'max_length' => '255'
 		),
 		'export_user' => array(
 			'friendly_name' => __('User', 'gexport'),
