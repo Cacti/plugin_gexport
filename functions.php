@@ -263,7 +263,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 	$user   = $export['export_user'];
 	$port   = $export['export_port'];
 	$host   = $export['export_host'];
-	$output = '';
+	$output = array();
 	$prune  = '';
 	$retvar = 0;
 
@@ -300,7 +300,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 	exec('rsync -zav ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
-		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim($output) . "'");
+		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim(import(',',$output)) . "'");
 	}
 }
 
@@ -309,7 +309,7 @@ function export_scp_execute(&$export, $stExportDir) {
 	$user   = $export['export_user'];
 	$port   = $export['export_port'];
 	$host   = $export['export_host'];
-	$output = '';
+	$output = array();
 	$retvar = 0;
 
 	if ($export['export_private_key_path'] != '') {
