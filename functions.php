@@ -569,6 +569,7 @@ function export_graphs(&$export, $export_path) {
 		export_fatal($export, "Export path is not long enough ! Export can not continue. ");
 	}
 	/* if the path is not a directory, don't continue */
+	clearstatcache();
 	if (!is_dir($export_path)) {
 		if (!mkdir($export_path)) {
 			export_fatal($export, "Unable to create path '" . $export_path . "'!  Export can not continue.");
@@ -579,17 +580,19 @@ function export_graphs(&$export, $export_path) {
 		}
 	}
 
+	clearstatcache();
 	if (!is_dir($export_path . '/graphs')) {
 		if (!mkdir($export_path . '/graphs')) {
 			export_fatal($export, "Unable to create path '" . $export_path . "/graphs'!  Export can not continue.");
 		}
 	}
 
-
+	clearstatcache();
 	if (!is_writable($export_path)) {
 		export_fatal($export, "Unable to write to path '" . $export_path . "'!  Export can not continue.");
 	}
 
+	clearstatcache();
 	if (!is_writable($export_path . '/graphs')) {
 		export_fatal($export, "Unable to write to path '" . $export_path . "/graphs'!  Export can not continue.");
 	}
@@ -816,7 +819,7 @@ function export_graph_clear_tasks() {
 }
 
 function export_graph_prepare_task($export_id, $user, $folder, $local_graph_id) {
-	export_note('TASKS Preparing task for Export[' . $export_id . '], Graph[' . $local_graph_id .']');
+	export_debug('TASKS Preparing task for Export[' . $export_id . '], Graph[' . $local_graph_id .']');
 
 	// MJV: Do something here
 	db_execute_prepared('INSERT INTO graph_exports_tasks (export_id, local_graph_id, user, folder)
@@ -833,14 +836,14 @@ function export_graph_start_task($task_id) {
 		array($task_id));
 
 	if (!sizeof($task)) {
-		export_note('TASKS Launched ' . $task_id . ' - Invalid ID, Aborting');
+		export_warn('TASKS Launched ' . $task_id . ' - Invalid ID, Aborting');
 	} else {
 		db_execute_prepared('UPDATE graph_exports_tasks
 			SET pid = ?
 			WHERE id = ?',
 			array(getmypid(), $task['id']));
 
-		export_note('TASKS Launched ' . $task['id'] . ', exporting graph ' . $task['local_graph_id'] . ' as user \'' . $task['user'] . '\'');
+		export_debug('TASKS Launched ' . $task['id'] . ', exporting graph ' . $task['local_graph_id'] . ' as user \'' . $task['user'] . '\'');
 
 		$export = db_fetch_row_prepared('SELECT * FROM graph_exports
 			WHERE id = ?',
