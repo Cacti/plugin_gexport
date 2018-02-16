@@ -300,7 +300,38 @@ function export_rsync_execute(&$export, $stExportDir) {
 	exec('rsync -zav ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
-		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim(implode(',',$output)) . "'");
+		$retvar_message = export_rsync_get_message($retvar);
+		export_debug('RSYNC OUTPUT: \'' . trim(implode(',',$output)) . '\'');
+		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . $retvar_message . "'");
+	}
+}
+
+function export_rsync_get_message($error_code) {
+
+	switch ($erorr_code) {
+		case 0: return __('Success','gexport');
+		case 1: return __('Syntax or usage error','gexport');
+		case 2: return __('Protocol incompatibility','gexport');
+		case 3: return __('Errors selecting input/output files, dirs','gexport');
+		case 4: return __('Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server.','gexport');
+		case 5: return __('Error starting client-server protocol','gexport');
+		case 6: return __('Daemon unable to append to log-file','gexport');
+		case 10: return __('Error in socket I/O','gexport');
+		case 11: return __('Error in file I/O','gexport');
+		case 12: return __('Error in rsync protocol data stream','gexport');
+		case 13: return __('Errors with program diagnostics','gexport');
+		case 14: return __('Error in IPC code','gexport');
+		case 20: return __('Received SIGUSR1 or SIGINT','gexport');
+		case 21: return __('Some error returned by waitpid()','gexport');
+		case 22: return __('Error allocating core memory buffers','gexport');
+		case 23: return __('Partial transfer due to error','gexport');
+		case 24: return __('Partial transfer due to vanished source files','gexport');
+		case 25: return __('The --max-delete limit stopped deletions','gexport');
+		case 30: return __('Timeout in data send/receive','gexport');
+		case 35: return __('Timeout waiting for daemon connection','gexport');
+
+		default:
+			return __('Unknown error ','gexport') . $error_code;
 	}
 }
 
@@ -335,10 +366,45 @@ function export_scp_execute(&$export, $stExportDir) {
 	exec('scp -rp ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
-		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . trim(implode(',', $output)) . "'");
+		$retvar_message = export_rsync_get_message($retvar);
+		export_debug('SCP OUTPUT: \'' . trim(implode(',',$output)) . '\'');
+		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . $retvar_message . "'");
 	}
 }
 
+function export_scp_get_message($error_code) {
+	switch ($error_code) {
+		case 0: return __("Operation was successful");
+		case 1: return __("General error in file copy");
+		case 2: return __("Destination is not directory, but it should be");
+		case 3: return __("Maximum symlink level exceeded");
+		case 4: return __("Connecting to host failed.");
+		case 5: return __("Connection broken");
+		case 6: return __("File does not exist");
+		case 7: return __("No permission to access file.");
+		case 8: return __("General error in sftp protocol");
+		case 9: return __("File transfer protocol mismatch");
+		case 10: return __("No file matches a given criteria");
+		case 65: return __("Host not allowed to connect");
+		case 66: return __("General error in ssh protocol");
+		case 67: return __("Key exchange failed");
+		case 68: return __("Reserved");
+		case 69: return __("MAC error");
+		case 70: return __("Compression error");
+		case 71: return __("Service not available");
+		case 72: return __("Protocol version not supported");
+		case 73: return __("Host key not verifiable");
+		case 74: return __("Connection failed");
+		case 75: return __("Disconnected by application");
+		case 76: return __("Too many connections");
+		case 77: return __("Authentication cancelled by user");
+		case 78: return __("No more authentication methods available");
+		case 79: return __("Invalid user name");
+
+		default:
+			return __('Unknown error ','gexport') . $error_code;
+	}
+}
 /* exporter - a wrapper function that reduces clutter in the run_export
    function.
    @arg $export      - the export item structure.
