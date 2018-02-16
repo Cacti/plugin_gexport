@@ -300,7 +300,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 	exec('rsync -zav ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
-		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim(import(',',$output)) . "'");
+		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . trim(implode(',',$output)) . "'");
 	}
 }
 
