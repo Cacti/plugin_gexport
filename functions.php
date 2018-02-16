@@ -279,7 +279,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 		}
 	}
 
-	if (gethostbyname($host) == $host) {
+	if (preg_match('~^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$~', $host) != 1 && gethostbyname($host) == $host) {
 		export_fatal($export, "Hostname '" . $host . "' can not be resolved to an IP Address.");
 	}
 
@@ -324,7 +324,7 @@ function export_scp_execute(&$export, $stExportDir) {
 		}
 	}
 
-	if (gethostbyname($host) == $host) {
+	if (preg_match('~^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$~', $host) != 1 && gethostbyname($host) == $host) {
 		export_fatal($export, "Hostname '" . $host . "' can not be resolved to an IP Address.");
 	}
 
@@ -830,7 +830,7 @@ function export_graph_monitor_tasks($export) {
 			}
 		}
 
-		sleep(1);
+		sleep(2);
 	}
 }
 
