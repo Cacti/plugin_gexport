@@ -810,7 +810,7 @@ function export_graph_monitor_tasks($export) {
 			}
 		}
 
-		usleep(500000);
+		sleep(1);
 	}
 }
 
