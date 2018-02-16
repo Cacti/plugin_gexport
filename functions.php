@@ -565,10 +565,17 @@ function export_graphs(&$export, $export_path) {
 	check_cacti_paths($export, $export_path);
 	check_system_paths($export, $export_path);
 
+	if (strlen($export_path) < 3) {
+		export_fatal($export, "Export path is not long enough ! Export can not continue. ");
+	}
 	/* if the path is not a directory, don't continue */
 	if (!is_dir($export_path)) {
 		if (!mkdir($export_path)) {
 			export_fatal($export, "Unable to create path '" . $export_path . "'!  Export can not continue.");
+		}
+	} else {
+		if ($export['export_clear'] == 'on') {
+			delTree($export_path, true);
 		}
 	}
 
@@ -577,6 +584,7 @@ function export_graphs(&$export, $export_path) {
 			export_fatal($export, "Unable to create path '" . $export_path . "/graphs'!  Export can not continue.");
 		}
 	}
+
 
 	if (!is_writable($export_path)) {
 		export_fatal($export, "Unable to write to path '" . $export_path . "'!  Export can not continue.");
@@ -718,6 +726,14 @@ function export_graphs(&$export, $export_path) {
 	return $exported;
 }
 
+function delTree($dir, $skip = false) {
+	$files = array_diff(scandir($dir), array('.','..'));
+	foreach ($files as $file) {
+		(is_dir("$dir/$file") && !is_link($dir)) ? delTree("$dir/$file") : unlink("$dir/$file"); 
+	}
+	return ($skip ? 0 : rmdir($dir));
+}
+
 function export_is_task_running($pid) {
     return posix_kill($pid, 0);
 }
@@ -752,9 +768,9 @@ function export_graph_monitor_tasks($export) {
 			'id', 'pid'
 		);
 
-		$thread_count = sizeof($pids_running);
-		export_debug('TASKS Running (Database): ' . $thread_count);
-		if ($thread_count > 0) {
+		$thread_run = sizeof($pids_running);
+		$thread_adj = $thread_run;
+		if ($thread_adj > 0) {
 			foreach ($pids_running as $id => $pid) {
 				if ($pid != 0 && !export_is_task_running($pid)) {
 					export_debug('TASKS Pid ' . $pid .' is not running, adjusting');
@@ -763,14 +779,14 @@ function export_graph_monitor_tasks($export) {
 						WHERE status = 1
 						AND pid = ?',
 						array($pid));
-					$thread_count--;
+					$thread_adj--;
 				}
 			}
 		}
-		export_debug('TASKS Running (Adjusted): ' . $thread_count);
+		export_debug('TASKS ' . $thread_run . ' Database, ' . $thread_adj . ' Active');
 
-		if ($thread_count < $max_threads) {
-			$wanted_count = $max_threads - $thread_count;
+		if ($thread_adj < $max_threads) {
+			$wanted_count = $max_threads - $thread_adj;
 
 			$tasks = db_fetch_assoc('SELECT DISTINCT *
 				FROM graph_exports_tasks
@@ -785,7 +801,7 @@ function export_graph_monitor_tasks($export) {
 						WHERE id = ?',
 						array(time(), $task['id']));
 
-					export_note('TASKS Spawning task ' . $task['id'] . ' for Export[' . $task['export_id'] . '], Graph[' . $task['local_graph_id'] .']');
+					export_debug('TASKS Spawning task ' . $task['id'] . ' for Export[' . $task['export_id'] . '], Graph[' . $task['local_graph_id'] .']');
 					exec_background($script_php, '-q ' . $script_file . ' --thread=' . $task['id']);
 				}
 			}

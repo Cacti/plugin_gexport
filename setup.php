@@ -100,7 +100,11 @@ function gexport_check_upgrade() {
 		if (cacti_version_compare($old,'1.4','<')) {
 			if (!db_column_exists('graph_exports','export_threads')) {
 				db_execute('ALTER TABLE graph_exports
-				ADD COLUMN `export_threads` int(10) DEFAULT \'0\'');
+					ADD COLUMN `export_threads` int(10) DEFAULT \'0\'');
+			}
+			if (!db_column_exists('graph_exports','export_clear')) {
+				db_execute('ALTER TABLE graph_exports
+					ADD COLUMN `export_clear` char(3) DEFAULT \'\'');
 			}
 			gexport_create_table_tasks();
 		}
@@ -145,6 +149,7 @@ function gexport_create_table() {
 			`graph_columns` int(10) unsigned DEFAULT '2',
 			`graph_perpage` int(10) unsigned DEFAULT '50',
 			`graph_max` int(10) unsigned DEFAULT '2000',
+			`export_clear` char(3) DEFAULT '',
 			`export_directory` varchar(255) DEFAULT '',
 			`export_temp_directory` varchar(255) DEFAULT '',
 			`export_timing` varchar(20) DEFAULT 'disabled',
@@ -440,6 +445,13 @@ function gexport_config_arrays() {
 			'friendly_name' => __('Export Location Information', 'gexport'),
 			'collapsible' => 'true',
 			'method' => 'spacer',
+		),
+		'export_clear' => array(
+			'friendly_name' => __('Clear Directory', 'gexport'),
+			'description' => __('Check this Checkbox if you wish this Graph Export to clear the final directory before populating.', 'gexport'),
+			'value' => '|arg1:export_clear|',
+			'default' => '',
+			'method' => 'checkbox',
 		),
 		'export_directory' => array(
 			'friendly_name' => __('Export Directory', 'gexport'),
