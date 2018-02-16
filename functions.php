@@ -748,21 +748,36 @@ function export_graph_monitor_tasks($export) {
 	$script_file = dirname(__FILE__) .'/poller_export.php';
 	$script_php = read_config_option('path_php_binary');
 
+	$spawn_time = new DateTime();
 	while (true) {
 		$expire_time = new DateTime();
-		$expire_time->modify('-1 minute')->modify('-10 seconds');
+		$expire_time->modify('-30 seconds');
 
-		$pids_left = db_fetch_cell('SELECT COUNT(*) FROM graph_exports_tasks WHERE status < 2');
-		db_execute_prepared('UPDATE graph_exports_tasks
-			SET status = 3
-			WHERE start_time != 0
-			AND start_time < ?',
-			array($expire_time->getTimestamp()));
+		$pids_left = db_fetch_cell('SELECT COUNT(*)
+			FROM graph_exports_tasks
+			WHERE status IN (0,1)');
 
-		$pids_fail = db_fetch_cell('SELECT COUNT(*) FROM graph_exports_tasks WHERE status < 2');
-		export_debug('TASKS ' . $pids_left . ' running, ' . ($pids_left - $pids_fail) . ' aborted');
-
+		//printf("%s: Found %s pids, spawn %s, expire %s\n", (new DateTime())->format('H:i:s'), $pids_left, $spawn_time->format('H:i:s'), $expire_time->format('H:i:s'));
 		if ($pids_left == 0) break;
+	
+		if ($spawn_time < $expire_time) {
+			//printf("%s: Running failure checks\n", (new DateTime())->format('H:i:s'));
+			$pids_fail = db_fetch_cell_prepared('SELECT COUNT(*)
+				FROM graph_exports_tasks
+				WHERE status < 2
+				AND start_time != 0
+				AND start_time < ?',
+				array($expire_time->getTimestamp()));
+
+			if ($pids_fail > 0) {
+				db_execute_prepared('UPDATE graph_exports_tasks
+					SET status = 3
+					WHERE status = 1
+					AND start_time != 0
+					AND start_time < ?',
+					array($expire_time->getTimestamp()));
+			}		
+		}
 
 		$pids_running = array_rekey(
 			db_fetch_assoc('SELECT DISTINCT id, pid
@@ -773,15 +788,17 @@ function export_graph_monitor_tasks($export) {
 
 		$thread_run = sizeof($pids_running);
 		$thread_adj = $thread_run;
-		if ($thread_adj > 0) {
+		if ($thread_adj > 0 && $spawn_time < $expire_time) {
+			//printf("%s: Running adjustments checks\n", (new DateTime())->format('H:i:s'));
 			foreach ($pids_running as $id => $pid) {
 				if ($pid != 0 && !export_is_task_running($pid)) {
 					export_debug('TASKS Pid ' . $pid .' is not running, adjusting');
 					db_execute_prepared('UPDATE graph_exports_tasks
 						SET status = 4
 						WHERE status = 1
+						AND id = ?
 						AND pid = ?',
-						array($pid));
+						array($id, $pid));
 					$thread_adj--;
 				}
 			}
@@ -790,6 +807,7 @@ function export_graph_monitor_tasks($export) {
 
 		if ($thread_adj < $max_threads) {
 			$wanted_count = $max_threads - $thread_adj;
+			//printf("%s: Spawning threads %s of %s\n", (new DateTime())->format('H:i:s'), $wanted_count, $max_threads);
 
 			$tasks = db_fetch_assoc('SELECT DISTINCT *
 				FROM graph_exports_tasks
@@ -798,6 +816,8 @@ function export_graph_monitor_tasks($export) {
 
 			export_debug('TASKS ' . $wanted_count . ' available, ' . sizeof($tasks) . ' found');
 			if (sizeof($tasks) > 0) {
+				$spawn_time = new DateTime();
+
 				foreach ($tasks as $task) {
 					db_execute_prepared('UPDATE graph_exports_tasks
 						SET status = 1, start_time = ?
@@ -815,7 +835,7 @@ function export_graph_monitor_tasks($export) {
 }
 
 function export_graph_clear_tasks() {
-	db_execute('DELETE FROM graph_exports_tasks');
+	db_execute('TRUNCATE TABLE graph_exports_tasks');
 }
 
 function export_graph_prepare_task($export_id, $user, $folder, $local_graph_id) {

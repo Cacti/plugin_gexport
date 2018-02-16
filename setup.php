@@ -98,19 +98,40 @@ function gexport_check_upgrade() {
 			WHERE directory='" . $info['name'] . "' ");
 
 		if (cacti_version_compare($old,'1.4','<')) {
+			gexport_create_table_tasks();
+
 			if (!db_column_exists('graph_exports','export_threads')) {
 				db_execute('ALTER TABLE graph_exports
 					ADD COLUMN `export_threads` int(10) DEFAULT \'0\'');
 			}
+
 			if (!db_column_exists('graph_exports','export_clear')) {
 				db_execute('ALTER TABLE graph_exports
 					ADD COLUMN `export_clear` char(3) DEFAULT \'\'');
 			}
+
 			if (!db_column_exists('graph_exports','export_thumbs')) {
 				db_execute('ALTER TABLE graph_exports
 					ADD COLUMN `export_thumbs` char(3) DEFAULT \'on\'');
 			}
-			gexport_create_table_tasks();
+
+			cacti_log('export_status: '.db_index_exists('graph_exports_tasks','status'));
+			if (!db_index_exists('graph_exports_tasks','status')) {
+				db_execute('ALTER TABLE graph_exports_tasks
+					ADD KEY `status` (`status`)');
+			}
+
+			cacti_log('exports_pid: '.db_index_exists('graph_exports_tasks','pid'));
+			if (!db_index_exists('graph_exports_tasks','pid')) {
+				db_execute('ALTER TABLE graph_exports_tasks
+					ADD KEY `pid` (`pid`)');
+			}
+
+			cacti_log('exports_start_time: '.db_index_exists('graph_exports_tasks','start_time'));
+			if (!db_index_exists('graph_exports_tasks','start_time')) {
+				db_execute('ALTER TABLE graph_exports_tasks
+					ADD KEY `start_time` (`start_time`)');
+			}
 		}
 
 		if (cacti_version_compare($old,'1.3','<')) {
@@ -168,7 +189,7 @@ function gexport_create_table() {
 			`export_passive` char(3) DEFAULT '',
 			`export_user` varchar(40) DEFAULT '',
 			`export_password` varchar(64) DEFAULT '',
-			`export_private_key_path` varchar(255) DEFAULT '',
+			`export_private_index_path` varchar(255) DEFAULT '',
 			`status` int(10) unsigned DEFAULT '0',
 			`export_pid` int(10) unsigned DEFAULT NULL,
 			`next_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -199,7 +220,8 @@ function gexport_create_table_tasks() {
 			`start_time` int(1) unsigned NOT NULL DEFAULT '0',
 			PRIMARY KEY (`id`),
 			KEY `status` (`status`),
-			KEY `pid` (`pid`))
+			KEY `pid` (`pid`),
+			KEY `start_time` (`start_time`))
 			ENGINE=InnoDB
 			COMMENT='Stores Graph Export Tasks for Cacti'");
 	}
@@ -529,11 +551,11 @@ function gexport_config_arrays() {
 			'max_length' => '64',
 			'size' => 30
 		),
-		'export_private_key_path' => array(
+		'export_private_index_path' => array(
 			'friendly_name' => __('Private Key Path', 'gexport'),
 			'description' => __('For SCP and RSYNC, enter the Private Key path if required.', 'gexport'),
 			'method' => 'filepath',
-			'value' => '|arg1:export_private_key_path|',
+			'value' => '|arg1:export_private_index_path|',
 			'max_length' => '255',
 			'size' => 50
 		)
