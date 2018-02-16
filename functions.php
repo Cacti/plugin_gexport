@@ -848,7 +848,7 @@ function export_graph_start_task($task_id) {
 		$export = db_fetch_row_prepared('SELECT * FROM graph_exports
 			WHERE id = ?',
 			array($task['export_id']));
-	
+
 		$exports = export_graph_files($export, $task['user'], $task['folder'], $task['local_graph_id']);
 
 		db_execute_prepared('UPDATE graph_exports_tasks
@@ -862,6 +862,7 @@ function export_graph_start_task($task_id) {
 
 	export_note('THREAD STATS: ' . $export_stats);
 }
+
 /* export_graph_files - this function exports the actual files for a given graph
    @arg $export       - the export item structure
    @arg $export_path  - the directory holding the export contents. */
@@ -876,29 +877,30 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 
 	export_debug('Exporting Graph ID: ' . $local_graph_id);
 
-	/* settings for preview graphs */
-	$graph_data_array['export_filename'] = $export_path . '/graphs/thumb_' . $local_graph_id . '.png';
-
-	$graph_data_array['graph_height']    = $export['graph_height'];
-	$graph_data_array['graph_width']     = $export['graph_width'];
-	$graph_data_array['graph_nolegend']  = true;
-	$graph_data_array['export']          = true;
-
-	check_remove($graph_data_array['export_filename']);
 	check_remove($export_path . '/graph_' . $local_graph_id . '.html');
 
-	export_log("Creating Graph '" . $graph_data_array['export_filename'] . "'");
+	if ($export['graph_thumbnails'] == 'on') {
+		/* settings for preview graphs */
+		$graph_data_array['export_filename'] = $export_path . '/graphs/thumb_' . $local_graph_id . '.png';
 
-	rrdtool_function_graph($local_graph_id, 0, $graph_data_array, $rrdtool_pipe, $metadata, $user);
-	unset($graph_data_array);
+		$graph_data_array['graph_height']    = $export['graph_height'];
+		$graph_data_array['graph_width']     = $export['graph_width'];
+		$graph_data_array['graph_nolegend']  = true;
+		$graph_data_array['export']          = true;
+
+		export_log("Creating Graph Thumbnail '" . $graph_data_array['export_filename'] . "'");
+		check_remove($graph_data_array['export_filename']);
+
+		rrdtool_function_graph($local_graph_id, 0, $graph_data_array, $rrdtool_pipe, $metadata, $user);
+		unset($graph_data_array);
+	}
 
 	/* settings for preview graphs */
 	$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '.png';
 	$graph_data_array['export']          = true;
 
-	check_remove($graph_data_array['export_filename']);
-
 	export_log("Creating Graph '" . $graph_data_array['export_filename'] . "'");
+	check_remove($graph_data_array['export_filename']);
 
 	rrdtool_function_graph($local_graph_id, 0, $graph_data_array, $rrdtool_pipe, $metadata, $user);
 	unset($graph_data_array);
