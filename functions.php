@@ -301,7 +301,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
-		export_debug('RSYNC OUTPUT: \'' . trim(implode(',',$output)) . '\'');
+		export_note('RSYNC OUTPUT: \'' . trim(implode(',',$output)) . '\'');
 		export_fatal($export, "RSYNC FAILED! Return Code was '$retvar' with message '" . $retvar_message . "'");
 	}
 }
@@ -367,7 +367,7 @@ function export_scp_execute(&$export, $stExportDir) {
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
-		export_debug('SCP OUTPUT: \'' . trim(implode(',',$output)) . '\'');
+		export_note('SCP OUTPUT: \'' . trim(implode(',',$output)) . '\'');
 		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . $retvar_message . "'");
 	}
 }
