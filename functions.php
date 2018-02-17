@@ -297,7 +297,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 		$prune = '--delete-delay --prune-empty-dirs';
 	}
 
-	exec('rsync -zav ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+	exec('rsync ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
@@ -363,7 +363,7 @@ function export_scp_execute(&$export, $stExportDir) {
 		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
 	}
 
-	exec('scp -rp ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+	exec('scp ' . $export['export_args] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);

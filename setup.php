@@ -105,6 +105,11 @@ function gexport_check_upgrade() {
 					ADD COLUMN `export_threads` int(10) DEFAULT \'0\'');
 			}
 
+			if (!db_column_exists('graph_exports','export_args')) {
+				db_execute('ALTER TABLE graph_exports
+					ADD COLUMN `export_args` char(25) DEFAULT \'-zav\'');
+			}
+
 			if (!db_column_exists('graph_exports','export_clear')) {
 				db_execute('ALTER TABLE graph_exports
 					ADD COLUMN `export_clear` char(3) DEFAULT \'\'');
@@ -176,6 +181,7 @@ function gexport_create_table() {
 			`graph_max` int(10) unsigned DEFAULT '2000',
 			`export_clear` char(3) DEFAULT '',
 			`export_thumbs` char(3) DEFAULT 'on',
+			`export_args` char(25) DEFAULT '-zav',
 			`export_directory` varchar(255) DEFAULT '',
 			`export_temp_directory` varchar(255) DEFAULT '',
 			`export_timing` varchar(20) DEFAULT 'disabled',
@@ -272,6 +278,13 @@ function gexport_config_arrays() {
 			'max_length' => '64',
 			'size' => '40'
 		),
+		'enabled' => array(
+			'friendly_name' => __('Enabled', 'gexport'),
+			'description' => __('Check this Checkbox if you wish this Graph Export Definition to be enabled.', 'gexport'),
+			'value' => '|arg1:enabled|',
+			'default' => 'on',
+			'method' => 'checkbox',
+		),
 		'export_type' => array(
 			'friendly_name' => __('Export Method', 'gexport'),
 			'description' => __('Choose which export method to use.', 'gexport'),
@@ -287,12 +300,18 @@ function gexport_config_arrays() {
 				'rsync' => __('RSYNC', 'gexport')
 			)
 		),
-		'enabled' => array(
-			'friendly_name' => __('Enabled', 'gexport'),
-			'description' => __('Check this Checkbox if you wish this Graph Export Definition to be enabled.', 'gexport'),
-			'value' => '|arg1:enabled|',
-			'default' => 'on',
-			'method' => 'checkbox',
+		'export_args' => array(
+			'friendly_name' => __('Export Command Arguments','gexport'),
+			'description' => __('Arguments to use with non-local export methods. rsync should use ', 'gexport'),
+			'method' => 'drop_array',
+			'default' => '-zav',
+			'value' => '|arg1:export_args|',
+			'array' => array(
+				'-zav' => ('rsync -zav'),
+				'-avpro' => ('rsync -avpro'),
+				'-avpro --delete-excluded' => ('rsync -avpro --delete-excluded'),
+				'-rp' => ('scp -rp')
+			)
 		),
 		'export_theme' => array(
 			'friendly_name' => __('Theme', 'gexport'),
@@ -301,7 +320,7 @@ function gexport_config_arrays() {
 			'value' => '|arg1:export_theme|',
 			'default' => 'modern',
 			'array' => $themes
-			),
+		),
 		'export_presentation' => array(
 			'friendly_name' => __('Presentation Method', 'gexport'),
 			'description' => __('Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages', 'gexport'),
