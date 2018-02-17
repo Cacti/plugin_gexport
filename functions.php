@@ -435,8 +435,8 @@ function config_export_stats(&$export, $exported) {
 	$end = microtime(true);
 
 	$export_stats = sprintf(
-		'ExportID:%s ExportDate:%s ExportDuration:%01.2f TotalGraphsExported:%s',
-		$export['id'], date('Y-m-d_G:i:s'), $end - $start, $exported);
+		'ExportID:%s (%s) ExportDate:%s ExportDuration:%01.2f TotalGraphsExported:%s MaximumThreads: %s',
+		$export['id'], $export['name'], date('Y-m-d_G:i:s'), $end - $start, $exported, $export['export_threads']);
 
 	cacti_log('STATS: ' . $export_stats, true, 'EXPORT');
 
