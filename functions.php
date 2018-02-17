@@ -363,7 +363,7 @@ function export_scp_execute(&$export, $stExportDir) {
 		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
 	}
 
-	exec('scp ' . $export['export_args] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
+	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'], $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
