@@ -297,7 +297,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 		$prune = '--delete-delay --prune-empty-dirs';
 	}
 
-	exec('rsync ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
