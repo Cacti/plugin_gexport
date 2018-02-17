@@ -120,19 +120,16 @@ function gexport_check_upgrade() {
 					ADD COLUMN `export_thumbs` char(3) DEFAULT \'on\'');
 			}
 
-			cacti_log('export_status: '.db_index_exists('graph_exports_tasks','status'));
 			if (!db_index_exists('graph_exports_tasks','status')) {
 				db_execute('ALTER TABLE graph_exports_tasks
 					ADD KEY `status` (`status`)');
 			}
 
-			cacti_log('exports_pid: '.db_index_exists('graph_exports_tasks','pid'));
 			if (!db_index_exists('graph_exports_tasks','pid')) {
 				db_execute('ALTER TABLE graph_exports_tasks
 					ADD KEY `pid` (`pid`)');
 			}
 
-			cacti_log('exports_start_time: '.db_index_exists('graph_exports_tasks','start_time'));
 			if (!db_index_exists('graph_exports_tasks','start_time')) {
 				db_execute('ALTER TABLE graph_exports_tasks
 					ADD KEY `start_time` (`start_time`)');
