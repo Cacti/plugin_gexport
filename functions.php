@@ -308,7 +308,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 
 function export_rsync_get_message($error_code) {
 
-	switch ($erorr_code) {
+	switch ($error_code) {
 		case 0: return __('Success','gexport');
 		case 1: return __('Syntax or usage error','gexport');
 		case 2: return __('Protocol incompatibility','gexport');
