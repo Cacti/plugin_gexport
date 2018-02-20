@@ -27,6 +27,16 @@ If you figure out this problem, see the Cacti forums!
 Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
+--- 1.4 ---
+* feature: Added option to clear final directory
+* feature: Added option to disable thumbnail creation
+* feature: Added standard error messages for RSYNC and SCP calls
+* feature: Added command arguments as drop done selection for RSYNC and SCP
+* feature: Now multi-threaded (when threads > 0)
+* issue: output from exec calls not handled properly
+* issue: Fix up db checks to correctly identify upgrades required
+* issue: Clear system cache before file checks
+* issue: Too many logs, alter logging level for some messages
 
 --- 1.3 ---
 * issue#21: Remove ftp_delete warning
