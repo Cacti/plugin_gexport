@@ -192,7 +192,7 @@ function gexport_create_table() {
 			`export_passive` char(3) DEFAULT '',
 			`export_user` varchar(40) DEFAULT '',
 			`export_password` varchar(64) DEFAULT '',
-			`export_private_index_path` varchar(255) DEFAULT '',
+			`export_private_key_path` varchar(255) DEFAULT '',
 			`status` int(10) unsigned DEFAULT '0',
 			`export_pid` int(10) unsigned DEFAULT NULL,
 			`next_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
