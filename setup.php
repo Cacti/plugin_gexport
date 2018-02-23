@@ -80,22 +80,18 @@ function gexport_check_upgrade() {
 	$current = $info['version'];
 	$old     = db_fetch_cell("SELECT version FROM plugin_config WHERE directory='gexport'");
 
-	if ($current != $old) {
+	if (cacti_version_compare($old,$current,'<')) {
 		if (api_plugin_is_enabled('gexport')) {
 			# may sound ridiculous, but enables new hooks
 			api_plugin_enable_hooks('gexport');
 		}
 
-		db_execute("UPDATE plugin_config
-			SET version='$current'
-			WHERE directory='gexport'");
-
-		db_execute("UPDATE plugin_config SET
-			version='" . $info['version']  . "',
-			name='"    . $info['longname'] . "',
-			author='"  . $info['author']   . "',
-			webpage='" . $info['homepage'] . "'
-			WHERE directory='" . $info['name'] . "' ");
+		if (cacti_version_compare($old,'1.4.1', '<')) {
+			if (db_column_exists('graph_exports','export_index_key_path')) {
+				db_execute('ALTER TABLE graph_exports
+					CHANGE COLUMN `export_index_key_path` `export_private_key_path` varchar(255)');
+			}
+		}
 
 		if (cacti_version_compare($old,'1.4','<')) {
 			gexport_create_table_tasks();
@@ -140,6 +136,17 @@ function gexport_check_upgrade() {
 			db_execute('ALTER TABLE graph_exports
 				MODIFY column export_user VARCHAR(40) DEFAULT \'\'');
 		}
+
+		db_execute("UPDATE plugin_config
+			SET version='$current'
+			WHERE directory='gexport'");
+
+		db_execute("UPDATE plugin_config SET
+			version='" . $info['version']  . "',
+			name='"    . $info['longname'] . "',
+			author='"  . $info['author']   . "',
+			webpage='" . $info['homepage'] . "'
+			WHERE directory='" . $info['name'] . "' ");
 	}
 }
 

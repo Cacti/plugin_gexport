@@ -27,6 +27,10 @@ If you figure out this problem, see the Cacti forums!
 Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
+
+--- 1.4.1 --
+* issue: Corrects column naming issue introduced in 1.4
+
 --- 1.4 ---
 * feature: Added option to clear final directory
 * feature: Added option to disable thumbnail creation

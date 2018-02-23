@@ -1,6 +1,6 @@
 [info]
 name = export
-version = 1.4
+version = 1.4.1
 longname = Graph Export Package for Cacti
 author = The Cacti Group
 email = 
