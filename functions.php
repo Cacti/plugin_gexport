@@ -1007,7 +1007,11 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 				$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
 				$graph_data_array['export']          = true;
 				$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
-				$graph_data_array['graph_start']     = time() - ($rra['rows'] * $rra['step'] * $rra['steps']);
+				if (!empty($rra['timespan'])) {
+					$graph_data_array['graph_start']  = $graph_data_array['graph_end'] - $rra['timespan'];
+				} else {				
+					$graph_data_array['graph_start']     = $graph_data_array['graph_end'] - ($rra['rows'] * $rra['step'] * $rra['steps']);
+				}
 
 				check_remove($graph_data_array['export_filename']);
 
