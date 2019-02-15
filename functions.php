@@ -1989,7 +1989,9 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 
 	/* java scripts for the tree */
 	copy("$root_path/include/js/jquery.js", "$export_path/js/jquery.js");
-	copy("$root_path/include/js/jquery-migrate.js", "$export_path/js/jquery-migrate.js");
+	if (cacti_version_compare('1.2',CACTI_VERSION,'<')) {
+		copy("$root_path/include/js/jquery-migrate.js", "$export_path/js/jquery-migrate.js");
+	}
 	copy("$root_path/include/js/jquery-ui.js", "$export_path/js/jquery-ui.js");
 	copy("$root_path/include/js/jquery.tablesorter.js", "$export_path/js/jquery.tablesorter.js");
 	copy("$root_path/include/js/jstree.js", "$export_path/js/jstree.js");
@@ -2011,7 +2013,12 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/include/themes/$theme/jquery-ui.css", "$export_path/css/jquery-ui.css");
 	copy("$root_path/include/themes/$theme/default/style.css", "$export_path/css/default/style.css");
 	copy("$root_path/include/themes/$theme/pace.css", "$export_path/css/pace.css");
-	copy("$root_path/include/fa/css/font-awesome.css", "$export_path/css/font-awesome.css");
+
+	if (cacti_version_compare('1.2',CACTI_VERSION,'<')) {
+		copy("$root_path/include/fa/css/font-awesome.css", "$export_path/css/font-awesome.css");
+	} else {
+		copy("$root_path/include/fa/css/fontawesome.css", "$export_path/css/font-awesome.css");
+	}
 
 	/* images for html */
 	copy("$root_path/images/favicon.ico", "$export_path/images/favicon.ico");
