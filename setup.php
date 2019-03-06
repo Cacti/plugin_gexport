@@ -412,7 +412,7 @@ function gexport_config_arrays() {
 			'method' => 'drop_sql',
 			'value' => '|arg1:export_effective_user|',
 			'sql' => 'SELECT id, username AS name FROM user_auth ORDER BY name',
-			'none_value' => 'N/A',
+			'none_value' => __('N/A', 'gexport'),
 			'default' => '0'
 		),
 		'graph_tree' => array(
