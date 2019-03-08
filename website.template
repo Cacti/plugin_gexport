@@ -9,11 +9,10 @@
 	<link href='css/jquery-ui.css' type='text/css' rel='stylesheet'>
 	<link href='css/default/style.css' type='text/css' rel='stylesheet'>
 	<link href='css/pace.css' type='text/css' rel='stylesheet'>
-	<link href='css/font-awesome.css' type='text/css' rel='stylesheet'>
+	<link href='css/fontawesome.css' type='text/css' rel='stylesheet'>
 	<link href='images/favicon.ico' rel='shortcut icon'>
 	<link rel='icon' type='image/gif' href='images/cacti_logo.gif' sizes='96x96'>
 	<script type='text/javascript' src='js/jquery.js'></script>
-	<script type='text/javascript' src='js/jquery-migrate.js'></script>
 	<script type='text/javascript' src='js/jquery-ui.js'></script>
 	<script type='text/javascript' src='js/jquery.ui.touch.punch.js'></script>
 	<script type='text/javascript' src='js/jquery.tablesorter.js'></script>

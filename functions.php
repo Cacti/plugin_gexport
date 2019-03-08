@@ -798,7 +798,7 @@ function export_graphs(&$export, $export_path) {
 function delTree($dir, $skip = false) {
 	$files = array_diff(scandir($dir), array('.','..'));
 	foreach ($files as $file) {
-		(is_dir("$dir/$file") && !is_link($dir)) ? delTree("$dir/$file") : unlink("$dir/$file"); 
+		(is_dir("$dir/$file") && !is_link($dir)) ? delTree("$dir/$file") : unlink("$dir/$file");
 	}
 	return ($skip ? 0 : rmdir($dir));
 }
@@ -825,7 +825,7 @@ function export_graph_monitor_tasks($export) {
 
 		//printf("%s: Found %s pids, spawn %s, expire %s\n", (new DateTime())->format('H:i:s'), $pids_left, $spawn_time->format('H:i:s'), $expire_time->format('H:i:s'));
 		if ($pids_left == 0) break;
-	
+
 		if ($spawn_time < $expire_time) {
 			//printf("%s: Running failure checks\n", (new DateTime())->format('H:i:s'));
 			$pids_fail = db_fetch_cell_prepared('SELECT COUNT(*)
@@ -842,7 +842,7 @@ function export_graph_monitor_tasks($export) {
 					AND start_time != 0
 					AND start_time < ?',
 					array($expire_time->getTimestamp()));
-			}		
+			}
 		}
 
 		$pids_running = array_rekey(
@@ -1009,7 +1009,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 				$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
 				if (!empty($rra['timespan'])) {
 					$graph_data_array['graph_start']  = $graph_data_array['graph_end'] - $rra['timespan'];
-				} else {				
+				} else {
 					$graph_data_array['graph_start']     = $graph_data_array['graph_end'] - ($rra['rows'] * $rra['step'] * $rra['steps']);
 				}
 
@@ -1989,9 +1989,6 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 
 	/* java scripts for the tree */
 	copy("$root_path/include/js/jquery.js", "$export_path/js/jquery.js");
-	if (cacti_version_compare('1.2',CACTI_VERSION,'<')) {
-		copy("$root_path/include/js/jquery-migrate.js", "$export_path/js/jquery-migrate.js");
-	}
 	copy("$root_path/include/js/jquery-ui.js", "$export_path/js/jquery-ui.js");
 	copy("$root_path/include/js/jquery.tablesorter.js", "$export_path/js/jquery.tablesorter.js");
 	copy("$root_path/include/js/jstree.js", "$export_path/js/jstree.js");
@@ -2015,9 +2012,9 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/include/themes/$theme/pace.css", "$export_path/css/pace.css");
 
 	if (cacti_version_compare('1.2',CACTI_VERSION,'<')) {
-		copy("$root_path/include/fa/css/font-awesome.css", "$export_path/css/font-awesome.css");
+		copy("$root_path/include/fa/css/fontawesome.css", "$export_path/css/fontawesome.css");
 	} else {
-		copy("$root_path/include/fa/css/fontawesome.css", "$export_path/css/font-awesome.css");
+		copy("$root_path/include/fa/css/fontawesome.css", "$export_path/css/fontawesome.css");
 	}
 
 	/* images for html */
