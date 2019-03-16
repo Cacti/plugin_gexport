@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gexport on cacti 1.1.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-22 05:34+0800\n"
+"POT-Creation-Date: 2017-07-08 15:17-0400\n"
 "PO-Revision-Date: 2018-02-22 13:59+0800\n"
 "Last-Translator: \n"
 "Language-Team: sfqas <sfqas@163.com>\n"
@@ -18,8 +18,7 @@ msgstr ""
 "X-Poedit-Language: Chinese\n"
 "X-Poedit-Country: CHINA\n"
 
-#: ../functions.php:1217
-#: ../functions.php:1379
+#: ../functions.php:1217 ../functions.php:1379
 msgid "Non Query Based"
 msgstr "不基于查询"
 
@@ -47,36 +46,45 @@ msgstr "禁用"
 msgid "Export Now"
 msgstr "立即导出"
 
-#: ../gexport.php:37
-#: ../setup.php:256
+#: ../gexport.php:37 ../setup.php:256
 msgid "Periodic"
 msgstr "定期"
 
-#: ../gexport.php:38
-#: ../setup.php:258
+#: ../gexport.php:38 ../setup.php:258
 msgid "Daily"
 msgstr "每日"
 
-#: ../gexport.php:39
-#: ../setup.php:257
+#: ../gexport.php:39 ../setup.php:257
 msgid "Hourly"
 msgstr "每小时"
 
 #: ../gexport.php:249
+#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
-msgstr "点击“继续”删除以下图形导出定义。"
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "点击“继续”删除以下图形导出定义。"
+msgstr[1] "点击“继续”删除以下图形导出定义。"
 
 #: ../gexport.php:258
+#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
-msgstr "点击“继续”以停用以下图形导出定义。"
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "点击“继续”以停用以下图形导出定义。"
+msgstr[1] "点击“继续”以停用以下图形导出定义。"
 
 #: ../gexport.php:267
+#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
-msgstr "点击“继续”以启用以下图形导出定义。"
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "点击“继续”以启用以下图形导出定义。"
+msgstr[1] "点击“继续”以启用以下图形导出定义。"
 
 #: ../gexport.php:276
+#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
-msgstr "点击“继续”立即运行以下图形导出定义。"
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "点击“继续”立即运行以下图形导出定义。"
+msgstr[1] "点击“继续”立即运行以下图形导出定义。"
 
 #: ../gexport.php:284
 msgid "You must select at least one Graph Export Definition."
@@ -103,19 +111,15 @@ msgstr "树被选择"
 msgid "All Trees Selected"
 msgstr "选择所有树"
 
-#: ../gexport.php:380
-#: ../gexport.php:426
+#: ../gexport.php:380 ../gexport.php:426
 msgid "All"
 msgstr "所有"
 
-#: ../gexport.php:381
-#: ../gexport.php:427
+#: ../gexport.php:381 ../gexport.php:427
 msgid "None"
 msgstr "没有"
 
-#: ../gexport.php:411
-#: ../gexport.php:457
-#: ../gexport.php:559
+#: ../gexport.php:411 ../gexport.php:457 ../gexport.php:559
 msgid "Search"
 msgstr "搜索"
 
@@ -157,13 +161,11 @@ msgstr "清除"
 msgid "Export Definitions"
 msgstr "导出定义"
 
-#: ../gexport.php:706
-#: ../setup.php:196
+#: ../gexport.php:706 ../setup.php:196
 msgid "Export Name"
 msgstr "导出名称"
 
-#: ../gexport.php:706
-#: ../setup.php:197
+#: ../gexport.php:706 ../setup.php:197
 msgid "The name of this Graph Export Definition."
 msgstr "此图形导出定义的名称。"
 
@@ -191,8 +193,7 @@ msgstr "下一步开始"
 msgid "The next time the Graph Export should run."
 msgstr "下一次图导出应该运行。"
 
-#: ../gexport.php:710
-#: ../setup.php:220
+#: ../gexport.php:710 ../setup.php:220
 msgid "Enabled"
 msgstr "启用"
 
@@ -216,8 +217,7 @@ msgstr "导出（网站/树）"
 msgid "What is being Exported."
 msgstr "什么将被导出。"
 
-#: ../gexport.php:714
-#: ../setup.php:307
+#: ../gexport.php:714 ../setup.php:307
 msgid "Effective User"
 msgstr "有效的用户"
 
@@ -257,10 +257,7 @@ msgstr "最后的错误"
 msgid "The last time that this Graph Export experienced an error."
 msgstr "上次图表导出出现错误。"
 
-#: ../gexport.php:737
-#: ../gexport.php:777
-#: ../gexport.php:790
-#: ../gexport.php:791
+#: ../gexport.php:737 ../gexport.php:777 ../gexport.php:790 ../gexport.php:791
 msgid "N/A"
 msgstr "N/A"
 
@@ -296,9 +293,7 @@ msgstr "所有树"
 msgid "Sec"
 msgstr "秒"
 
-#: ../gexport.php:787
-#: ../gexport.php:792
-#: ../gexport.php:793
+#: ../gexport.php:787 ../gexport.php:792 ../gexport.php:793
 msgid "Never"
 msgstr "从不"
 
@@ -355,7 +350,8 @@ msgid "RSYNC"
 msgstr "SCP"
 
 #: ../setup.php:221
-msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgid ""
+"Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "如果希望启用此图形导出定义，请选中此复选框。"
 
 #: ../setup.php:227
@@ -363,7 +359,9 @@ msgid "Theme"
 msgstr "主题"
 
 #: ../setup.php:228
-msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgid ""
+"Please select one of the available Themes to skin your Cacti Graph Exports "
+"with."
 msgstr "请选择其中一个可用的主题以使用Cacti 图形导出。"
 
 #: ../setup.php:235
@@ -371,16 +369,20 @@ msgid "Presentation Method"
 msgstr "演示方法"
 
 #: ../setup.php:236
-msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
-msgstr "为html生成的页面选择你想要的演示文稿。 如果您选择经典演示文稿; 图表将只在一个html页面中。 如果您选择树演示文稿，图表树架构将保留在静态html页面中"
+msgid ""
+"Choose which presentation would you want for the html generated pages. If "
+"you choose classical presentation; the Graphs will be in a only-one-html "
+"page. If you choose tree presentation, the Graph Tree architecture will be "
+"kept in the static html pages"
+msgstr ""
+"为html生成的页面选择你想要的演示文稿。 如果您选择经典演示文稿; 图表将只在一个"
+"html页面中。 如果您选择树演示文稿，图表树架构将保留在静态html页面中"
 
-#: ../setup.php:241
-#: ../setup.php:335
+#: ../setup.php:241 ../setup.php:335
 msgid "Site"
 msgstr "网站"
 
-#: ../setup.php:242
-#: ../setup.php:316
+#: ../setup.php:242 ../setup.php:316
 msgid "Tree"
 msgstr "树"
 
@@ -401,24 +403,18 @@ msgid "Periodic Export Cycle"
 msgstr "周期性的导出周期"
 
 #: ../setup.php:263
-msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgid ""
+"How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
+"Cycles you wish to export Graphs."
 msgstr "您希望Cacti导出图表的频率如何？ 这是您希望导出图表的轮询周期的单位。"
 
 #: ../setup.php:267
 msgid "Every Polling Cycle"
 msgstr "每个轮询周期"
 
-#: ../setup.php:268
-#: ../setup.php:269
-#: ../setup.php:270
-#: ../setup.php:271
-#: ../setup.php:272
-#: ../setup.php:273
-#: ../setup.php:274
-#: ../setup.php:275
-#: ../setup.php:276
-#: ../setup.php:277
-#: ../setup.php:278
+#: ../setup.php:268 ../setup.php:269 ../setup.php:270 ../setup.php:271
+#: ../setup.php:272 ../setup.php:273 ../setup.php:274 ../setup.php:275
+#: ../setup.php:276 ../setup.php:277 ../setup.php:278
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "每 %d 轮询周期"
@@ -428,24 +424,44 @@ msgid "Hourly at specified minutes"
 msgstr "每小时在指定的分钟"
 
 #: ../setup.php:283
-msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
-msgstr "如果您希望Cacti每小时输出一次静态图像，请将时间分钟放在这样做。 Cacti假设您每5分钟运行一次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个值。 例如，43将等于过去一小时40分钟。"
+msgid ""
+"If you want Cacti to export static images on an hourly basis, put the "
+"minutes of the hour when to do that. Cacti assumes that you run the data "
+"gathering script every 5 minutes, so it will round your value to the one "
+"closest to its runtime. For instance, 43 would equal 40 minutes past the "
+"hour."
+msgstr ""
+"如果您希望Cacti每小时输出一次静态图像，请将时间分钟放在这样做。 Cacti假设您每"
+"5分钟运行一次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个"
+"值。 例如，43将等于过去一小时40分钟。"
 
 #: ../setup.php:292
 msgid "Daily at specified time"
 msgstr "每天在指定的时间"
 
 #: ../setup.php:293
-msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr "如果您希望Cacti 每天输出静态图像，请在此处填写时间。 Cacti假设您每5分钟运行一次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个值。 例如，21点23分将等于晚上9点20分钟后。"
+msgid ""
+"If you want Cacti to export static images on an daily basis, put here the "
+"time when to do that. Cacti assumes that you run the data gathering script "
+"every 5 minutes, so it will round your value to the one closest to its "
+"runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr ""
+"如果您希望Cacti 每天输出静态图像，请在此处填写时间。 Cacti假设您每5分钟运行一"
+"次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个值。 例如，"
+"21点23分将等于晚上9点20分钟后。"
 
 #: ../setup.php:302
 msgid "Graph Selection & Settings"
 msgstr "图表选择和设置"
 
 #: ../setup.php:308
-msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
-msgstr "用于为Cacti图形建立权限的用户名。 此用户名将用于确定可以导出哪些图形/树。 不适用意味着不承担任何安全措施。"
+msgid ""
+"The user name to utilize for establishing permissions to Cacti Graphs.  This "
+"user name will be used to determine which Graphs/Trees can be exported.  N/A "
+"means don't assume any security is in place."
+msgstr ""
+"用于为Cacti图形建立权限的用户名。 此用户名将用于确定可以导出哪些图形/树。 不"
+"适用意味着不承担任何安全措施。"
 
 #: ../setup.php:317
 msgid "The Tree(s) to export."
@@ -456,8 +472,13 @@ msgid "Expand Devices/Sites"
 msgstr "展开设备/站点"
 
 #: ../setup.php:325
-msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
-msgstr "此设置确定树设备和站点模板和设备是否将被展开。 如果设置为展开，则每个主机都将有一个包含图形模板或数据查询项目的子文件夹。"
+msgid ""
+"This setting determines if Tree Devices and Site Templates and Devices will "
+"be expanded or not.  If set to expanded, each host will have a sub-folder "
+"containing either Graph Templates or Data Query items."
+msgstr ""
+"此设置确定树设备和站点模板和设备是否将被展开。 如果设置为展开，则每个主机都将"
+"有一个包含图形模板或数据查询项目的子文件夹。"
 
 #: ../setup.php:330
 msgid "Off"
@@ -516,7 +537,9 @@ msgid "Maximum Graphs to Export"
 msgstr "导出最大图表数"
 
 #: ../setup.php:386
-msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgid ""
+"After this number is reached, an error will be generated, but exporting will "
+"continue.  Set to 0 for no limit."
 msgstr "达到此数字后，将会生成错误，但导出将继续。 无限制设置为0。"
 
 #: ../setup.php:394
@@ -528,7 +551,9 @@ msgid "Export Directory"
 msgstr "导出目录"
 
 #: ../setup.php:400
-msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgid ""
+"This is the directory, either on the local system or on the remote system, "
+"that will contain the exported data."
 msgstr "这是包含导出数据的本地系统或远程系统上的目录。"
 
 #: ../setup.php:406
@@ -536,8 +561,13 @@ msgid "Local Scratch Directory"
 msgstr "本地临时目录"
 
 #: ../setup.php:407
-msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
-msgstr "这是Cacti在通过传输方法发送到远程站点之前临时存储输出的目录。 数据传输后，该目录的内容将被删除。"
+msgid ""
+"This is the directory that Cacti will temporarily store output prior to "
+"sending to the remote site via the transfer method.  The contents of this "
+"directory will be deleted after the data is transferred."
+msgstr ""
+"这是Cacti在通过传输方法发送到远程站点之前临时存储输出的目录。 数据传输后，该"
+"目录的内容将被删除。"
 
 #: ../setup.php:414
 msgid "Remote Options"
@@ -548,8 +578,13 @@ msgid "Sanitize remote directory"
 msgstr "清理远程目录"
 
 #: ../setup.php:420
-msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
-msgstr "如果要删除FTP远程目录中的任何现有文件，请选中此项。 该选项仅在使用PHP内置的ftp功能时才能使用。"
+msgid ""
+"Check this if you want to delete any existing files in the FTP remote "
+"directory. This option is in use only when using the PHP built-in ftp "
+"functions."
+msgstr ""
+"如果要删除FTP远程目录中的任何现有文件，请选中此项。 该选项仅在使用PHP内置的"
+"ftp功能时才能使用。"
 
 #: ../setup.php:426
 msgid "Remote Host"
@@ -564,7 +599,9 @@ msgid "Remote Port"
 msgstr "远程端口"
 
 #: ../setup.php:435
-msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgid ""
+"Communication port to use for the export method if non-standard (leave empty "
+"for defaults)."
 msgstr "非标准时用于导出方法的通信端口（默认为空）。"
 
 #: ../setup.php:443
@@ -610,4 +647,3 @@ msgstr "（编辑）"
 #: ../setup.php:490
 msgid "Actions"
 msgstr "操作"
-
