@@ -1,0 +1,632 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-08 15:17-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru-RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../functions.php:1217 ../functions.php:1379
+msgid "Non Query Based"
+msgstr ""
+
+#: ../functions.php:1460
+msgid "Graph Templates"
+msgstr ""
+
+#: ../functions.php:1489
+msgid "Data Queries"
+msgstr ""
+
+#: ../gexport.php:30
+msgid "Delete"
+msgstr ""
+
+#: ../gexport.php:31
+msgid "Enable"
+msgstr ""
+
+#: ../gexport.php:32
+msgid "Disable"
+msgstr ""
+
+#: ../gexport.php:33
+msgid "Export Now"
+msgstr ""
+
+#: ../gexport.php:37 ../setup.php:256
+msgid "Periodic"
+msgstr ""
+
+#: ../gexport.php:38 ../setup.php:258
+msgid "Daily"
+msgstr ""
+
+#: ../gexport.php:39 ../setup.php:257
+msgid "Hourly"
+msgstr ""
+
+#: ../gexport.php:249
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../gexport.php:258
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../gexport.php:267
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../gexport.php:276
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../gexport.php:284
+msgid "You must select at least one Graph Export Definition."
+msgstr ""
+
+#: ../gexport.php:341
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr ""
+
+#: ../gexport.php:343
+msgid "Graph Export Definition [new]"
+msgstr ""
+
+#: ../gexport.php:369
+msgid "Select Tree(s)"
+msgstr ""
+
+#: ../gexport.php:371
+msgid "Trees Selected"
+msgstr ""
+
+#: ../gexport.php:374
+msgid "All Trees Selected"
+msgstr ""
+
+#: ../gexport.php:380 ../gexport.php:426
+msgid "All"
+msgstr ""
+
+#: ../gexport.php:381 ../gexport.php:427
+msgid "None"
+msgstr ""
+
+#: ../gexport.php:411 ../gexport.php:457 ../gexport.php:559
+msgid "Search"
+msgstr ""
+
+#: ../gexport.php:415
+msgid "Select Site(s)"
+msgstr ""
+
+#: ../gexport.php:417
+msgid "Sites Selected"
+msgstr ""
+
+#: ../gexport.php:420
+msgid "All Sites Selected"
+msgstr ""
+
+#: ../gexport.php:551
+msgid "Graph Export Definitions"
+msgstr ""
+
+#: ../gexport.php:565
+msgid "Exports"
+msgstr ""
+
+#: ../gexport.php:569
+msgid "Default"
+msgstr ""
+
+#: ../gexport.php:581
+msgctxt "filter: use"
+msgid "Go"
+msgstr ""
+
+#: ../gexport.php:582
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr ""
+
+#: ../gexport.php:697
+msgid "Export Definitions"
+msgstr ""
+
+#: ../gexport.php:706 ../setup.php:196
+msgid "Export Name"
+msgstr ""
+
+#: ../gexport.php:706 ../setup.php:197
+msgid "The name of this Graph Export Definition."
+msgstr ""
+
+#: ../gexport.php:707
+msgid "ID"
+msgstr ""
+
+#: ../gexport.php:707
+msgid "The internal ID of the Graph Export Definition."
+msgstr ""
+
+#: ../gexport.php:708
+msgid "Schedule"
+msgstr ""
+
+#: ../gexport.php:708
+msgid "The frequency that Graphs will be exported."
+msgstr ""
+
+#: ../gexport.php:709
+msgid "Next Start"
+msgstr ""
+
+#: ../gexport.php:709
+msgid "The next time the Graph Export should run."
+msgstr ""
+
+#: ../gexport.php:710 ../setup.php:220
+msgid "Enabled"
+msgstr ""
+
+#: ../gexport.php:710
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr ""
+
+#: ../gexport.php:711
+msgid "Status"
+msgstr ""
+
+#: ../gexport.php:711
+msgid "The current Graph Export Status."
+msgstr ""
+
+#: ../gexport.php:713
+msgid "Exporting (Sites/Trees)"
+msgstr ""
+
+#: ../gexport.php:713
+msgid "What is being Exported."
+msgstr ""
+
+#: ../gexport.php:714 ../setup.php:307
+msgid "Effective User"
+msgstr ""
+
+#: ../gexport.php:714
+msgid "The user that this export will impersonate."
+msgstr ""
+
+#: ../gexport.php:715
+msgid "Last Runtime"
+msgstr ""
+
+#: ../gexport.php:715
+msgid "The last runtime for the Graph Export."
+msgstr ""
+
+#: ../gexport.php:716
+msgid "Graphs"
+msgstr ""
+
+#: ../gexport.php:716
+msgid "The number of Graphs Exported on the last run."
+msgstr ""
+
+#: ../gexport.php:717
+msgid "Last Started"
+msgstr ""
+
+#: ../gexport.php:717
+msgid "The last time that this Graph Export was started."
+msgstr ""
+
+#: ../gexport.php:718
+msgid "Last Errored"
+msgstr ""
+
+#: ../gexport.php:718
+msgid "The last time that this Graph Export experienced an error."
+msgstr ""
+
+#: ../gexport.php:737 ../gexport.php:777 ../gexport.php:790 ../gexport.php:791
+msgid "N/A"
+msgstr ""
+
+#: ../gexport.php:739
+msgid "No"
+msgstr ""
+
+#: ../gexport.php:739
+msgid "Yes"
+msgstr ""
+
+#: ../gexport.php:743
+msgid "Idle"
+msgstr ""
+
+#: ../gexport.php:746
+msgid "Running"
+msgstr ""
+
+#: ../gexport.php:749
+msgid "Error"
+msgstr ""
+
+#: ../gexport.php:755
+msgid "All Sites"
+msgstr ""
+
+#: ../gexport.php:766
+msgid "All Trees"
+msgstr ""
+
+#: ../gexport.php:780
+msgid "Sec"
+msgstr ""
+
+#: ../gexport.php:787 ../gexport.php:792 ../gexport.php:793
+msgid "Never"
+msgstr ""
+
+#: ../gexport.php:800
+msgid "No Graph Export Definitions"
+msgstr ""
+
+#: ../setup.php:31
+msgid "Export Cacti Graphs Settings"
+msgstr ""
+
+#: ../setup.php:184
+msgid "Utilities"
+msgstr ""
+
+#: ../setup.php:184
+msgid "Graph Exports"
+msgstr ""
+
+#: ../setup.php:191
+msgid "General"
+msgstr ""
+
+#: ../setup.php:205
+msgid "Export Method"
+msgstr ""
+
+#: ../setup.php:206
+msgid "Choose which export method to use."
+msgstr ""
+
+#: ../setup.php:211
+msgid "Local"
+msgstr ""
+
+#: ../setup.php:212
+msgid "FTP"
+msgstr ""
+
+#: ../setup.php:213
+msgid "SFTP"
+msgstr ""
+
+#: ../setup.php:214
+msgid "FTP NC"
+msgstr ""
+
+#: ../setup.php:215
+msgid "SCP"
+msgstr ""
+
+#: ../setup.php:216
+msgid "RSYNC"
+msgstr ""
+
+#: ../setup.php:221
+msgid ""
+"Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr ""
+
+#: ../setup.php:227
+msgid "Theme"
+msgstr ""
+
+#: ../setup.php:228
+msgid ""
+"Please select one of the available Themes to skin your Cacti Graph Exports "
+"with."
+msgstr ""
+
+#: ../setup.php:235
+msgid "Presentation Method"
+msgstr ""
+
+#: ../setup.php:236
+msgid ""
+"Choose which presentation would you want for the html generated pages. If "
+"you choose classical presentation; the Graphs will be in a only-one-html "
+"page. If you choose tree presentation, the Graph Tree architecture will be "
+"kept in the static html pages"
+msgstr ""
+
+#: ../setup.php:241 ../setup.php:335
+msgid "Site"
+msgstr ""
+
+#: ../setup.php:242 ../setup.php:316
+msgid "Tree"
+msgstr ""
+
+#: ../setup.php:246
+msgid "Export Timing"
+msgstr ""
+
+#: ../setup.php:250
+msgid "Timing Method"
+msgstr ""
+
+#: ../setup.php:251
+msgid "Choose when to Export Graphs."
+msgstr ""
+
+#: ../setup.php:262
+msgid "Periodic Export Cycle"
+msgstr ""
+
+#: ../setup.php:263
+msgid ""
+"How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
+"Cycles you wish to export Graphs."
+msgstr ""
+
+#: ../setup.php:267
+msgid "Every Polling Cycle"
+msgstr ""
+
+#: ../setup.php:268 ../setup.php:269 ../setup.php:270 ../setup.php:271
+#: ../setup.php:272 ../setup.php:273 ../setup.php:274 ../setup.php:275
+#: ../setup.php:276 ../setup.php:277 ../setup.php:278
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr ""
+
+#: ../setup.php:282
+msgid "Hourly at specified minutes"
+msgstr ""
+
+#: ../setup.php:283
+msgid ""
+"If you want Cacti to export static images on an hourly basis, put the "
+"minutes of the hour when to do that. Cacti assumes that you run the data "
+"gathering script every 5 minutes, so it will round your value to the one "
+"closest to its runtime. For instance, 43 would equal 40 minutes past the "
+"hour."
+msgstr ""
+
+#: ../setup.php:292
+msgid "Daily at specified time"
+msgstr ""
+
+#: ../setup.php:293
+msgid ""
+"If you want Cacti to export static images on an daily basis, put here the "
+"time when to do that. Cacti assumes that you run the data gathering script "
+"every 5 minutes, so it will round your value to the one closest to its "
+"runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr ""
+
+#: ../setup.php:302
+msgid "Graph Selection & Settings"
+msgstr ""
+
+#: ../setup.php:308
+msgid ""
+"The user name to utilize for establishing permissions to Cacti Graphs.  This "
+"user name will be used to determine which Graphs/Trees can be exported.  N/A "
+"means don't assume any security is in place."
+msgstr ""
+
+#: ../setup.php:317
+msgid "The Tree(s) to export."
+msgstr ""
+
+#: ../setup.php:324
+msgid "Expand Devices/Sites"
+msgstr ""
+
+#: ../setup.php:325
+msgid ""
+"This setting determines if Tree Devices and Site Templates and Devices will "
+"be expanded or not.  If set to expanded, each host will have a sub-folder "
+"containing either Graph Templates or Data Query items."
+msgstr ""
+
+#: ../setup.php:330
+msgid "Off"
+msgstr ""
+
+#: ../setup.php:331
+msgid "On"
+msgstr ""
+
+#: ../setup.php:336
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr ""
+
+#: ../setup.php:343
+msgid "Graph Thumbnail Width"
+msgstr ""
+
+#: ../setup.php:344
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr ""
+
+#: ../setup.php:352
+msgid "Graph Thumbnail Height"
+msgstr ""
+
+#: ../setup.php:353
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr ""
+
+#: ../setup.php:361
+msgid "Default View Thumbnails"
+msgstr ""
+
+#: ../setup.php:362
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr ""
+
+#: ../setup.php:368
+msgid "Default Graph Columns"
+msgstr ""
+
+#: ../setup.php:369
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr ""
+
+#: ../setup.php:377
+msgid "Graphs Per Page"
+msgstr ""
+
+#: ../setup.php:378
+msgid "Choose the number of Graphs Per Page to display."
+msgstr ""
+
+#: ../setup.php:385
+msgid "Maximum Graphs to Export"
+msgstr ""
+
+#: ../setup.php:386
+msgid ""
+"After this number is reached, an error will be generated, but exporting will "
+"continue.  Set to 0 for no limit."
+msgstr ""
+
+#: ../setup.php:394
+msgid "Export Location Information"
+msgstr ""
+
+#: ../setup.php:399
+msgid "Export Directory"
+msgstr ""
+
+#: ../setup.php:400
+msgid ""
+"This is the directory, either on the local system or on the remote system, "
+"that will contain the exported data."
+msgstr ""
+
+#: ../setup.php:406
+msgid "Local Scratch Directory"
+msgstr ""
+
+#: ../setup.php:407
+msgid ""
+"This is the directory that Cacti will temporarily store output prior to "
+"sending to the remote site via the transfer method.  The contents of this "
+"directory will be deleted after the data is transferred."
+msgstr ""
+
+#: ../setup.php:414
+msgid "Remote Options"
+msgstr ""
+
+#: ../setup.php:419
+msgid "Sanitize remote directory"
+msgstr ""
+
+#: ../setup.php:420
+msgid ""
+"Check this if you want to delete any existing files in the FTP remote "
+"directory. This option is in use only when using the PHP built-in ftp "
+"functions."
+msgstr ""
+
+#: ../setup.php:426
+msgid "Remote Host"
+msgstr ""
+
+#: ../setup.php:427
+msgid "Denotes the host to send Exported Graphs to."
+msgstr ""
+
+#: ../setup.php:434
+msgid "Remote Port"
+msgstr ""
+
+#: ../setup.php:435
+msgid ""
+"Communication port to use for the export method if non-standard (leave empty "
+"for defaults)."
+msgstr ""
+
+#: ../setup.php:443
+msgid "Use passive mode"
+msgstr ""
+
+#: ../setup.php:444
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr ""
+
+#: ../setup.php:450
+msgid "User"
+msgstr ""
+
+#: ../setup.php:451
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr ""
+
+#: ../setup.php:458
+msgid "Password"
+msgstr ""
+
+#: ../setup.php:459
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr ""
+
+#: ../setup.php:466
+msgid "Private Key Path"
+msgstr ""
+
+#: ../setup.php:467
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr ""
+
+#: ../setup.php:478
+msgid "Exported Cacti Graph Pages"
+msgstr ""
+
+#: ../setup.php:484
+msgid "(Edit)"
+msgstr ""
+
+#: ../setup.php:490
+msgid "Actions"
+msgstr ""
