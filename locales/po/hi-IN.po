@@ -5,418 +5,521 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-08 15:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: hi-IN\n"
+"PO-Revision-Date: 2019-03-16 21:37-0400\n"
+"Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../functions.php:1217 ../functions.php:1379
+#, fuzzy
 msgid "Non Query Based"
-msgstr ""
+msgstr "गैर क्वेरी आधारित"
 
 #: ../functions.php:1460
+#, fuzzy
 msgid "Graph Templates"
-msgstr ""
+msgstr "ग्राफ टेम्पलेट"
 
 #: ../functions.php:1489
+#, fuzzy
 msgid "Data Queries"
-msgstr ""
+msgstr "डेटा क्वेरी"
 
 #: ../gexport.php:30
+#, fuzzy
 msgid "Delete"
-msgstr ""
+msgstr "हटाना"
 
 #: ../gexport.php:31
+#, fuzzy
 msgid "Enable"
-msgstr ""
+msgstr "सक्षम करें"
 
 #: ../gexport.php:32
+#, fuzzy
 msgid "Disable"
-msgstr ""
+msgstr "अक्षम"
 
 #: ../gexport.php:33
+#, fuzzy
 msgid "Export Now"
-msgstr ""
+msgstr "अभी निर्यात करें"
 
 #: ../gexport.php:37 ../setup.php:256
+#, fuzzy
 msgid "Periodic"
-msgstr ""
+msgstr "सामयिक"
 
 #: ../gexport.php:38 ../setup.php:258
+#, fuzzy
 msgid "Daily"
-msgstr ""
+msgstr "प्रतिदिन"
 
 #: ../gexport.php:39 ../setup.php:257
+#, fuzzy
 msgid "Hourly"
-msgstr ""
+msgstr "प्रति घंटा"
 
 #: ../gexport.php:249
+#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "निम्न ग्राफ़ निर्यात परिभाषा को हटाने के लिए 'जारी रखें' पर क्लिक करें।"
+msgstr[1] "ग्राफ़ निर्यात परिभाषाओं को हटाने के लिए 'जारी रखें' पर क्लिक करें।"
 
 #: ../gexport.php:258
+#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "निम्न ग्राफ़ निर्यात परिभाषा को निष्क्रिय करने के लिए 'जारी रखें' पर क्लिक करें।"
+msgstr[1] "ग्राफ़ निर्यात परिभाषाओं को अक्षम करने के लिए 'जारी रखें' पर क्लिक करें।"
 
 #: ../gexport.php:267
+#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] ""
-msgstr[1] ""
+"निम्नलिखित ग्राफ़ निर्यात परिभाषा को सक्षम करने के लिए 'जारी रखें' पर क्लिक करें।"
+msgstr[1] "ग्राफ़ निर्यात परिभाषाओं को सक्षम करने के लिए 'जारी रखें' पर क्लिक करें।"
 
 #: ../gexport.php:276
+#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "निम्न ग्राफ़ निर्यात परिभाषा को चलाने के लिए 'जारी रखें' पर क्लिक करें।"
+msgstr[1] "ग्राफ़ निर्यात परिभाषाओं का पालन करने के लिए 'जारी रखें' पर क्लिक करें"
 
 #: ../gexport.php:284
+#, fuzzy
 msgid "You must select at least one Graph Export Definition."
-msgstr ""
+msgstr "आपको कम से कम एक ग्राफ़ निर्यात परिभाषा का चयन करना चाहिए।"
 
 #: ../gexport.php:341
-#, php-format
+#, fuzzy, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr ""
+msgstr "ग्राफ़ निर्यात परिभाषा [संपादित करें: %s]"
 
 #: ../gexport.php:343
+#, fuzzy
 msgid "Graph Export Definition [new]"
-msgstr ""
+msgstr "ग्राफ निर्यात परिभाषा [नया]"
 
 #: ../gexport.php:369
+#, fuzzy
 msgid "Select Tree(s)"
-msgstr ""
+msgstr "ट्री चुनें"
 
 #: ../gexport.php:371
+#, fuzzy
 msgid "Trees Selected"
-msgstr ""
+msgstr "पेड़ चुने गए"
 
 #: ../gexport.php:374
+#, fuzzy
 msgid "All Trees Selected"
-msgstr ""
+msgstr "सभी पेड़ चुने गए"
 
 #: ../gexport.php:380 ../gexport.php:426
+#, fuzzy
 msgid "All"
-msgstr ""
+msgstr "所有"
 
 #: ../gexport.php:381 ../gexport.php:427
+#, fuzzy
 msgid "None"
-msgstr ""
+msgstr "कोई नहीं"
 
 #: ../gexport.php:411 ../gexport.php:457 ../gexport.php:559
+#, fuzzy
 msgid "Search"
-msgstr ""
+msgstr "खोज"
 
 #: ../gexport.php:415
+#, fuzzy
 msgid "Select Site(s)"
-msgstr ""
+msgstr "साइट का चयन करें"
 
 #: ../gexport.php:417
+#, fuzzy
 msgid "Sites Selected"
-msgstr ""
+msgstr "साइटें चुनी गईं"
 
 #: ../gexport.php:420
+#, fuzzy
 msgid "All Sites Selected"
-msgstr ""
+msgstr "सभी साइटें चुनी गईं"
 
 #: ../gexport.php:551
+#, fuzzy
 msgid "Graph Export Definitions"
-msgstr ""
+msgstr "ग्राफ़ निर्यात परिभाषाएँ"
 
 #: ../gexport.php:565
+#, fuzzy
 msgid "Exports"
-msgstr ""
+msgstr "निर्यात"
 
 #: ../gexport.php:569
+#, fuzzy
 msgid "Default"
-msgstr ""
+msgstr "चूक"
 
 #: ../gexport.php:581
+#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
-msgstr ""
+msgstr "चले जाओ"
 
 #: ../gexport.php:582
+#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr ""
+msgstr "明确"
 
 #: ../gexport.php:697
+#, fuzzy
 msgid "Export Definitions"
-msgstr ""
+msgstr "निर्यात परिभाषाएँ"
 
 #: ../gexport.php:706 ../setup.php:196
+#, fuzzy
 msgid "Export Name"
-msgstr ""
+msgstr "निर्यात नाम"
 
 #: ../gexport.php:706 ../setup.php:197
+#, fuzzy
 msgid "The name of this Graph Export Definition."
-msgstr ""
+msgstr "इस ग्राफ निर्यात परिभाषा का नाम।"
 
 #: ../gexport.php:707
+#, fuzzy
 msgid "ID"
-msgstr ""
+msgstr "आईडी"
 
 #: ../gexport.php:707
+#, fuzzy
 msgid "The internal ID of the Graph Export Definition."
-msgstr ""
+msgstr "ग्राफ निर्यात परिभाषा की आंतरिक आईडी।"
 
 #: ../gexport.php:708
+#, fuzzy
 msgid "Schedule"
-msgstr ""
+msgstr "अनुसूची"
 
 #: ../gexport.php:708
+#, fuzzy
 msgid "The frequency that Graphs will be exported."
-msgstr ""
+msgstr "वह आवृत्ति जो ग्राफ़ निर्यात की जाएगी।"
 
 #: ../gexport.php:709
+#, fuzzy
 msgid "Next Start"
-msgstr ""
+msgstr "अगली शुरुआत"
 
 #: ../gexport.php:709
+#, fuzzy
 msgid "The next time the Graph Export should run."
-msgstr ""
+msgstr "अगली बार ग्राफ एक्सपोर्ट चलना चाहिए।"
 
 #: ../gexport.php:710 ../setup.php:220
+#, fuzzy
 msgid "Enabled"
-msgstr ""
+msgstr "सक्षम"
 
 #: ../gexport.php:710
+#, fuzzy
 msgid "If enabled, this Graph Export definition will run as required."
-msgstr ""
+msgstr "यदि सक्षम है, तो यह ग्राफ़ निर्यात परिभाषा आवश्यकतानुसार चलेगी।"
 
 #: ../gexport.php:711
+#, fuzzy
 msgid "Status"
-msgstr ""
+msgstr "ऑर्डर स्थिति"
 
 #: ../gexport.php:711
+#, fuzzy
 msgid "The current Graph Export Status."
-msgstr ""
+msgstr "वर्तमान ग्राफ़ निर्यात स्थिति।"
 
 #: ../gexport.php:713
+#, fuzzy
 msgid "Exporting (Sites/Trees)"
-msgstr ""
+msgstr "निर्यात (साइट / पेड़)"
 
 #: ../gexport.php:713
+#, fuzzy
 msgid "What is being Exported."
-msgstr ""
+msgstr "क्या निर्यात किया जा रहा है।"
 
 #: ../gexport.php:714 ../setup.php:307
+#, fuzzy
 msgid "Effective User"
-msgstr ""
+msgstr "प्रभावी उपयोगकर्ता"
 
 #: ../gexport.php:714
+#, fuzzy
 msgid "The user that this export will impersonate."
-msgstr ""
+msgstr "उपयोगकर्ता जो इस निर्यात को प्रतिरूपित करेगा।"
 
 #: ../gexport.php:715
+#, fuzzy
 msgid "Last Runtime"
-msgstr ""
+msgstr "अंतिम रनटाइम"
 
 #: ../gexport.php:715
+#, fuzzy
 msgid "The last runtime for the Graph Export."
-msgstr ""
+msgstr "ग्राफ निर्यात के लिए अंतिम रनटाइम।"
 
 #: ../gexport.php:716
+#, fuzzy
 msgid "Graphs"
-msgstr ""
+msgstr "रेखांकन"
 
 #: ../gexport.php:716
+#, fuzzy
 msgid "The number of Graphs Exported on the last run."
-msgstr ""
+msgstr "अंतिम रन पर निर्यात किए गए ग्राफ़ की संख्या।"
 
 #: ../gexport.php:717
+#, fuzzy
 msgid "Last Started"
-msgstr ""
+msgstr "अंतिम शुरुआत"
 
 #: ../gexport.php:717
+#, fuzzy
 msgid "The last time that this Graph Export was started."
-msgstr ""
+msgstr "पिछली बार जब यह ग्राफ़ निर्यात शुरू किया गया था।"
 
 #: ../gexport.php:718
+#, fuzzy
 msgid "Last Errored"
-msgstr ""
+msgstr "अंतिम त्रुटिपूर्ण"
 
 #: ../gexport.php:718
+#, fuzzy
 msgid "The last time that this Graph Export experienced an error."
-msgstr ""
+msgstr "पिछली बार जब इस ग्राफ़ एक्सपोर्ट में कोई त्रुटि आई थी।"
 
 #: ../gexport.php:737 ../gexport.php:777 ../gexport.php:790 ../gexport.php:791
+#, fuzzy
 msgid "N/A"
-msgstr ""
+msgstr "एन / ए"
 
 #: ../gexport.php:739
+#, fuzzy
 msgid "No"
-msgstr ""
+msgstr "नहीं"
 
 #: ../gexport.php:739
+#, fuzzy
 msgid "Yes"
-msgstr ""
+msgstr "हाँ"
 
 #: ../gexport.php:743
+#, fuzzy
 msgid "Idle"
-msgstr ""
+msgstr "बेकार"
 
 #: ../gexport.php:746
+#, fuzzy
 msgid "Running"
-msgstr ""
+msgstr "चल रहा है"
 
 #: ../gexport.php:749
+#, fuzzy
 msgid "Error"
-msgstr ""
+msgstr "त्रुटि"
 
 #: ../gexport.php:755
+#, fuzzy
 msgid "All Sites"
-msgstr ""
+msgstr "सभी साइटें"
 
 #: ../gexport.php:766
+#, fuzzy
 msgid "All Trees"
-msgstr ""
+msgstr "सभी पेड़"
 
 #: ../gexport.php:780
+#, fuzzy
 msgid "Sec"
-msgstr ""
+msgstr "सेकंड"
 
 #: ../gexport.php:787 ../gexport.php:792 ../gexport.php:793
+#, fuzzy
 msgid "Never"
-msgstr ""
+msgstr "कभी नहीँ"
 
 #: ../gexport.php:800
+#, fuzzy
 msgid "No Graph Export Definitions"
-msgstr ""
+msgstr "कोई ग्राफ़ निर्यात परिभाषाएँ नहीं"
 
 #: ../setup.php:31
+#, fuzzy
 msgid "Export Cacti Graphs Settings"
-msgstr ""
+msgstr "निर्यात कैक्टि रेखांकन सेटिंग्स"
 
 #: ../setup.php:184
+#, fuzzy
 msgid "Utilities"
-msgstr ""
+msgstr "उपयोगिताएँ"
 
 #: ../setup.php:184
+#, fuzzy
 msgid "Graph Exports"
-msgstr ""
+msgstr "ग्राफ एक्सपोर्ट्स"
 
 #: ../setup.php:191
+#, fuzzy
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: ../setup.php:205
+#, fuzzy
 msgid "Export Method"
-msgstr ""
+msgstr "निर्यात विधि"
 
 #: ../setup.php:206
+#, fuzzy
 msgid "Choose which export method to use."
-msgstr ""
+msgstr "उपयोग करने के लिए कौन सी निर्यात विधि चुनें।"
 
 #: ../setup.php:211
+#, fuzzy
 msgid "Local"
-msgstr ""
+msgstr "स्थानीय"
 
 #: ../setup.php:212
+#, fuzzy
 msgid "FTP"
-msgstr ""
+msgstr "एफ़टीपी"
 
 #: ../setup.php:213
+#, fuzzy
 msgid "SFTP"
-msgstr ""
+msgstr "SFTP"
 
 #: ../setup.php:214
+#, fuzzy
 msgid "FTP NC"
-msgstr ""
+msgstr "एफ़टीपी नेकां"
 
 #: ../setup.php:215
+#, fuzzy
 msgid "SCP"
-msgstr ""
+msgstr "SCP"
 
 #: ../setup.php:216
+#, fuzzy
 msgid "RSYNC"
-msgstr ""
+msgstr "rsync"
 
 #: ../setup.php:221
+#, fuzzy
 msgid ""
 "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr ""
+"यदि आप इस ग्राफ़ निर्यात परिभाषा को सक्षम करना चाहते हैं तो इस चेकबॉक्स की जाँच करें।"
 
 #: ../setup.php:227
+#, fuzzy
 msgid "Theme"
-msgstr ""
+msgstr "विषय"
 
 #: ../setup.php:228
+#, fuzzy
 msgid ""
 "Please select one of the available Themes to skin your Cacti Graph Exports "
 "with."
 msgstr ""
+"कृपया अपने उपलब्ध कैक्टि ग्राफ़ एक्सपोर्ट्स को स्किन करने के लिए उपलब्ध थीम में से एक का चयन "
+"करें।"
 
 #: ../setup.php:235
+#, fuzzy
 msgid "Presentation Method"
-msgstr ""
+msgstr "प्रस्तुति विधि"
 
 #: ../setup.php:236
+#, fuzzy
 msgid ""
 "Choose which presentation would you want for the html generated pages. If "
 "you choose classical presentation; the Graphs will be in a only-one-html "
 "page. If you choose tree presentation, the Graph Tree architecture will be "
 "kept in the static html pages"
 msgstr ""
+"एचटीएमएल जेनरेट किए गए पेजों के लिए आप कौन सी प्रेजेंटेशन चाहेंगे। यदि आप शास्त्रीय प्रस्तुति "
+"चुनते हैं; रेखांकन केवल-एक-html पृष्ठ में होगा। यदि आप ट्री प्रेजेंटेशन चुनते हैं, तो ग्राफ ट्री "
+"आर्किटेक्चर को स्थिर HTML पृष्ठों में रखा जाएगा"
 
 #: ../setup.php:241 ../setup.php:335
+#, fuzzy
 msgid "Site"
-msgstr ""
+msgstr "साइट"
 
 #: ../setup.php:242 ../setup.php:316
+#, fuzzy
 msgid "Tree"
-msgstr ""
+msgstr "पेड़"
 
 #: ../setup.php:246
+#, fuzzy
 msgid "Export Timing"
-msgstr ""
+msgstr "निर्यात समय"
 
 #: ../setup.php:250
+#, fuzzy
 msgid "Timing Method"
-msgstr ""
+msgstr "समय की विधि"
 
 #: ../setup.php:251
+#, fuzzy
 msgid "Choose when to Export Graphs."
-msgstr ""
+msgstr "कब निर्यात करें चुनें।"
 
 #: ../setup.php:262
+#, fuzzy
 msgid "Periodic Export Cycle"
-msgstr ""
+msgstr "आवधिक निर्यात चक्र"
 
 #: ../setup.php:263
+#, fuzzy
 msgid ""
 "How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
 "Cycles you wish to export Graphs."
 msgstr ""
+"आप कितनी बार Cacti को रेखांकन निर्यात करना चाहते हैं। यह मतदान चक्रों की इकाई है जिसे "
+"आप ग्राफ़ निर्यात करना चाहते हैं।"
 
 #: ../setup.php:267
+#, fuzzy
 msgid "Every Polling Cycle"
-msgstr ""
+msgstr "हर मतदान चक्र"
 
 #: ../setup.php:268 ../setup.php:269 ../setup.php:270 ../setup.php:271
 #: ../setup.php:272 ../setup.php:273 ../setup.php:274 ../setup.php:275
 #: ../setup.php:276 ../setup.php:277 ../setup.php:278
-#, php-format
+#, fuzzy, php-format
 msgid "Every %d Polling Cycles"
-msgstr ""
+msgstr "हर% d पोलिंग साइकिल"
 
 #: ../setup.php:282
+#, fuzzy
 msgid "Hourly at specified minutes"
-msgstr ""
+msgstr "प्रति मिनट निर्दिष्ट मिनट पर"
 
 #: ../setup.php:283
+#, fuzzy
 msgid ""
 "If you want Cacti to export static images on an hourly basis, put the "
 "minutes of the hour when to do that. Cacti assumes that you run the data "
@@ -424,205 +527,274 @@ msgid ""
 "closest to its runtime. For instance, 43 would equal 40 minutes past the "
 "hour."
 msgstr ""
+"यदि आप चाहते हैं कि कैक्टि एक घंटे के आधार पर स्थिर छवियों को निर्यात करे, तो ऐसा करने के "
+"लिए घंटे के मिनट लगाएं। कैक्टि मानती है कि आप हर 5 मिनट में डेटा इकट्ठा करने की स्क्रिप्ट "
+"चलाते हैं, इसलिए यह आपके मूल्य को उसके रनटाइम के सबसे करीब ले जाएगा। उदाहरण के लिए, 43 "
+"घंटे के 40 मिनट के बराबर होगा।"
 
 #: ../setup.php:292
+#, fuzzy
 msgid "Daily at specified time"
-msgstr ""
+msgstr "निर्दिष्ट समय पर दैनिक"
 
 #: ../setup.php:293
+#, fuzzy
 msgid ""
 "If you want Cacti to export static images on an daily basis, put here the "
 "time when to do that. Cacti assumes that you run the data gathering script "
 "every 5 minutes, so it will round your value to the one closest to its "
 "runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr ""
+"यदि आप चाहते हैं कि कैक्टि एक दैनिक आधार पर स्थिर छवियों का निर्यात करे, तो उस समय को "
+"यहां रखें जब ऐसा करना हो। कैक्टि मानती है कि आप हर 5 मिनट में डेटा इकट्ठा करने की "
+"स्क्रिप्ट चलाते हैं, इसलिए यह आपके मूल्य को उसके रनटाइम के सबसे करीब ले जाएगा। उदाहरण के "
+"लिए, 21:23 9 मिनट के बाद 20 मिनट के बराबर होगा।"
 
 #: ../setup.php:302
+#, fuzzy
 msgid "Graph Selection & Settings"
-msgstr ""
+msgstr "ग्राफ चयन और सेटिंग्स"
 
 #: ../setup.php:308
+#, fuzzy
 msgid ""
 "The user name to utilize for establishing permissions to Cacti Graphs.  This "
 "user name will be used to determine which Graphs/Trees can be exported.  N/A "
 "means don't assume any security is in place."
 msgstr ""
+"Cacti रेखांकन के लिए अनुमतियाँ स्थापित करने के लिए उपयोग करने के लिए उपयोगकर्ता नाम। इस "
+"उपयोगकर्ता नाम का उपयोग यह निर्धारित करने के लिए किया जाएगा कि कौन से ग्राफ़ / पेड़ "
+"निर्यात किए जा सकते हैं। N / A का अर्थ है कि कोई सुरक्षा नहीं है।"
 
 #: ../setup.php:317
+#, fuzzy
 msgid "The Tree(s) to export."
-msgstr ""
+msgstr "निर्यात करने के लिए ट्री (एस)।"
 
 #: ../setup.php:324
+#, fuzzy
 msgid "Expand Devices/Sites"
-msgstr ""
+msgstr "डिवाइस / साइटें विस्तृत करें"
 
 #: ../setup.php:325
+#, fuzzy
 msgid ""
 "This setting determines if Tree Devices and Site Templates and Devices will "
 "be expanded or not.  If set to expanded, each host will have a sub-folder "
 "containing either Graph Templates or Data Query items."
 msgstr ""
+"यह सेटिंग निर्धारित करती है कि ट्री डिवाइसेस और साइट टेम्प्लेट्स और डिवाइसेस का विस्तार "
+"किया जाएगा या नहीं। यदि विस्तारित करने के लिए सेट किया गया है, तो प्रत्येक होस्ट में एक "
+"उप-फ़ोल्डर होगा जिसमें ग्राफ़ टेम्पलेट या डेटा क्वेरी आइटम होंगे।"
 
 #: ../setup.php:330
+#, fuzzy
 msgid "Off"
-msgstr ""
+msgstr "बंद करना"
 
 #: ../setup.php:331
+#, fuzzy
 msgid "On"
-msgstr ""
+msgstr "चालू करना"
 
 #: ../setup.php:336
+#, fuzzy
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr ""
+msgstr "Cacti रेखांकन के लिए साइट से निर्यात किया जाएगा।"
 
 #: ../setup.php:343
+#, fuzzy
 msgid "Graph Thumbnail Width"
-msgstr ""
+msgstr "ग्राफ थंबनेल चौड़ाई"
 
 #: ../setup.php:344
+#, fuzzy
 msgid "The default width of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "पिक्सेल में थंबनेल ग्राफ़ की डिफ़ॉल्ट चौड़ाई।"
 
 #: ../setup.php:352
+#, fuzzy
 msgid "Graph Thumbnail Height"
-msgstr ""
+msgstr "ग्राफ थंबनेल ऊंचाई"
 
 #: ../setup.php:353
+#, fuzzy
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "पिक्सेल में थंबनेल ग्राफ़ की ऊंचाई।"
 
 #: ../setup.php:361
+#, fuzzy
 msgid "Default View Thumbnails"
-msgstr ""
+msgstr "डिफ़ॉल्ट दृश्य थंबनेल"
 
 #: ../setup.php:362
+#, fuzzy
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
-msgstr ""
+msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें"
 
 #: ../setup.php:368
+#, fuzzy
 msgid "Default Graph Columns"
-msgstr ""
+msgstr "डिफ़ॉल्ट ग्राफ़ कॉलम"
 
 #: ../setup.php:369
+#, fuzzy
 msgid "The number of columns to use by default when displaying Graphs."
-msgstr ""
+msgstr "रेखांकन प्रदर्शित करते समय डिफ़ॉल्ट रूप से उपयोग करने के लिए स्तंभों की संख्या।"
 
 #: ../setup.php:377
+#, fuzzy
 msgid "Graphs Per Page"
-msgstr ""
+msgstr "प्रति पेज रेखांकन"
 
 #: ../setup.php:378
+#, fuzzy
 msgid "Choose the number of Graphs Per Page to display."
-msgstr ""
+msgstr "प्रदर्शित करने के लिए प्रति पृष्ठ ग्राफ़ की संख्या चुनें।"
 
 #: ../setup.php:385
+#, fuzzy
 msgid "Maximum Graphs to Export"
-msgstr ""
+msgstr "निर्यात करने के लिए अधिकतम रेखांकन"
 
 #: ../setup.php:386
+#, fuzzy
 msgid ""
 "After this number is reached, an error will be generated, but exporting will "
 "continue.  Set to 0 for no limit."
 msgstr ""
+"इस नंबर तक पहुंचने के बाद, एक त्रुटि उत्पन्न होगी, लेकिन निर्यात जारी रहेगा। बिना किसी "
+"सीमा के 0 पर सेट करें।"
 
 #: ../setup.php:394
+#, fuzzy
 msgid "Export Location Information"
-msgstr ""
+msgstr "स्थान जानकारी निर्यात करें"
 
 #: ../setup.php:399
+#, fuzzy
 msgid "Export Directory"
-msgstr ""
+msgstr "निर्यात निर्देशिका"
 
 #: ../setup.php:400
+#, fuzzy
 msgid ""
 "This is the directory, either on the local system or on the remote system, "
 "that will contain the exported data."
 msgstr ""
+"यह निर्देशिका है, या तो स्थानीय प्रणाली पर या दूरस्थ प्रणाली पर, जिसमें निर्यात किया "
+"गया डेटा होगा।"
 
 #: ../setup.php:406
+#, fuzzy
 msgid "Local Scratch Directory"
-msgstr ""
+msgstr "स्थानीय स्क्रैच निर्देशिका"
 
 #: ../setup.php:407
+#, fuzzy
 msgid ""
 "This is the directory that Cacti will temporarily store output prior to "
 "sending to the remote site via the transfer method.  The contents of this "
 "directory will be deleted after the data is transferred."
 msgstr ""
+"यह वह निर्देशिका है जो Cacti अस्थायी रूप से स्थानांतरण साइट के माध्यम से दूरस्थ साइट पर "
+"भेजने से पहले आउटपुट को संग्रहीत करेगी। डेटा ट्रांसफर होने के बाद इस निर्देशिका की सामग्री "
+"हटा दी जाएगी।"
 
 #: ../setup.php:414
+#, fuzzy
 msgid "Remote Options"
-msgstr ""
+msgstr "रिमोट विकल्प"
 
 #: ../setup.php:419
+#, fuzzy
 msgid "Sanitize remote directory"
-msgstr ""
+msgstr "रिमोट डायरेक्टरी को सैनिटाइज करें"
 
 #: ../setup.php:420
+#, fuzzy
 msgid ""
 "Check this if you want to delete any existing files in the FTP remote "
 "directory. This option is in use only when using the PHP built-in ftp "
 "functions."
 msgstr ""
+"यदि आप एफ़टीपी दूरस्थ निर्देशिका में किसी भी मौजूदा फ़ाइलों को हटाना चाहते हैं तो इसे जांचें। "
+"यह विकल्प केवल तभी उपयोग किया जाता है जब PHP बिल्ट-इन ftp फ़ंक्शन का उपयोग करता है।"
 
 #: ../setup.php:426
+#, fuzzy
 msgid "Remote Host"
-msgstr ""
+msgstr "रिमोट होस्ट"
 
 #: ../setup.php:427
+#, fuzzy
 msgid "Denotes the host to send Exported Graphs to."
-msgstr ""
+msgstr "निर्यात किए गए रेखांकन भेजने के लिए होस्ट को अस्वीकार करता है।"
 
 #: ../setup.php:434
+#, fuzzy
 msgid "Remote Port"
-msgstr ""
+msgstr "रिमोट पोर्ट"
 
 #: ../setup.php:435
+#, fuzzy
 msgid ""
 "Communication port to use for the export method if non-standard (leave empty "
 "for defaults)."
 msgstr ""
+"यदि गैर-मानक (चूक के लिए खाली छोड़ दें) निर्यात विधि के लिए उपयोग करने के लिए संचार पोर्ट"
 
 #: ../setup.php:443
+#, fuzzy
 msgid "Use passive mode"
-msgstr ""
+msgstr "निष्क्रिय मोड का उपयोग करें"
 
 #: ../setup.php:444
+#, fuzzy
 msgid "Check this if you want to connect in passive mode to the FTP server."
-msgstr ""
+msgstr "यदि आप एफ़टीपी सर्वर को निष्क्रिय मोड में कनेक्ट करना चाहते हैं तो यह जांचें।"
 
 #: ../setup.php:450
+#, fuzzy
 msgid "User"
-msgstr ""
+msgstr "उपयोगकर्ता "
 
 #: ../setup.php:451
+#, fuzzy
 msgid "Account to logon on the remote server (leave empty for defaults)."
-msgstr ""
+msgstr "रिमोट सर्वर पर लॉगऑन करने के लिए खाता (चूक के लिए खाली छोड़ दें)।"
 
 #: ../setup.php:458
+#, fuzzy
 msgid "Password"
-msgstr ""
+msgstr "पासवर्ड"
 
 #: ../setup.php:459
+#, fuzzy
 msgid "Password for the remote ftp account (leave empty for blank)."
-msgstr ""
+msgstr "दूरस्थ ftp खाते के लिए पासवर्ड (खाली के लिए खाली छोड़ें)।"
 
 #: ../setup.php:466
+#, fuzzy
 msgid "Private Key Path"
-msgstr ""
+msgstr "निजी कुंजी पथ"
 
 #: ../setup.php:467
+#, fuzzy
 msgid "For SCP and RSYNC, enter the Private Key path if required."
-msgstr ""
+msgstr "SCP और RSYNC के लिए, यदि आवश्यक हो तो निजी कुंजी पथ दर्ज करें।"
 
 #: ../setup.php:478
+#, fuzzy
 msgid "Exported Cacti Graph Pages"
-msgstr ""
+msgstr "निर्यात किए गए कैक्टि ग्राफ़ पेज"
 
 #: ../setup.php:484
+#, fuzzy
 msgid "(Edit)"
-msgstr ""
+msgstr "संपादित करें"
 
 #: ../setup.php:490
+#, fuzzy
 msgid "Actions"
-msgstr ""
+msgstr "कार्रवाइयाँ"

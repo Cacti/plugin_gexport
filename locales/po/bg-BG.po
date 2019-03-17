@@ -5,418 +5,540 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-08 15:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: bg-BG\n"
+"PO-Revision-Date: 2019-03-16 21:32-0400\n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../functions.php:1217 ../functions.php:1379
+#, fuzzy
 msgid "Non Query Based"
-msgstr ""
+msgstr "Въз основа на заявките"
 
 #: ../functions.php:1460
+#, fuzzy
 msgid "Graph Templates"
-msgstr ""
+msgstr "Шаблони за графики"
 
 #: ../functions.php:1489
+#, fuzzy
 msgid "Data Queries"
-msgstr ""
+msgstr "Автоматизирани данни"
 
 #: ../gexport.php:30
+#, fuzzy
 msgid "Delete"
-msgstr ""
+msgstr "Изтрий"
 
 #: ../gexport.php:31
+#, fuzzy
 msgid "Enable"
-msgstr ""
+msgstr "Включи"
 
 #: ../gexport.php:32
+#, fuzzy
 msgid "Disable"
-msgstr ""
+msgstr "Изключи"
 
 #: ../gexport.php:33
+#, fuzzy
 msgid "Export Now"
-msgstr ""
+msgstr "Експортиране сега"
 
 #: ../gexport.php:37 ../setup.php:256
+#, fuzzy
 msgid "Periodic"
-msgstr ""
+msgstr "периодичен"
 
 #: ../gexport.php:38 ../setup.php:258
+#, fuzzy
 msgid "Daily"
-msgstr ""
+msgstr "Ежедневно"
 
 #: ../gexport.php:39 ../setup.php:257
+#, fuzzy
 msgid "Hourly"
-msgstr ""
+msgstr "всеки час"
 
 #: ../gexport.php:249
+#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] ""
+"Кликнете върху „Напред“, за да изтриете следното определение за експортиране "
+"на графика."
 msgstr[1] ""
+"Кликнете върху „Напред“, за да изтриете следващите дефиниции за експортиране "
+"на графика."
 
 #: ../gexport.php:258
+#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] ""
+"Кликнете върху „Напред“, за да деактивирате следната дефиниция за "
+"експортиране на графика."
 msgstr[1] ""
+"Кликнете върху „Напред“, за да деактивирате следващите дефиниции за "
+"експортиране на графика."
 
 #: ../gexport.php:267
+#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] ""
+"Кликнете върху „Напред“, за да активирате следната дефиниция за експортиране "
+"на графика."
 msgstr[1] ""
+"Кликнете върху „Напред“, за да активирате следващите определения за "
+"експортиране на графика."
 
 #: ../gexport.php:276
+#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] ""
+"Кликнете върху „Напред“, за да изпълните следната дефиниция за експортиране "
+"на графика."
 msgstr[1] ""
+"Кликнете върху „Напред“, за да изпълните следващите дефиниции за "
+"експортиране на графика."
 
 #: ../gexport.php:284
+#, fuzzy
 msgid "You must select at least one Graph Export Definition."
-msgstr ""
+msgstr "Трябва да изберете поне една дефиниция за експортиране на графика."
 
 #: ../gexport.php:341
-#, php-format
+#, fuzzy, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr ""
+msgstr "Определяне на експорта на графиката [редактиране: %s]"
 
 #: ../gexport.php:343
+#, fuzzy
 msgid "Graph Export Definition [new]"
-msgstr ""
+msgstr "Определяне на експорта на графиката [нов]"
 
 #: ../gexport.php:369
+#, fuzzy
 msgid "Select Tree(s)"
-msgstr ""
+msgstr "Изберете дървета"
 
 #: ../gexport.php:371
+#, fuzzy
 msgid "Trees Selected"
-msgstr ""
+msgstr "Избрани дървета"
 
 #: ../gexport.php:374
+#, fuzzy
 msgid "All Trees Selected"
-msgstr ""
+msgstr "Всички избрани дървета"
 
 #: ../gexport.php:380 ../gexport.php:426
+#, fuzzy
 msgid "All"
-msgstr ""
+msgstr "Всички"
 
 #: ../gexport.php:381 ../gexport.php:427
+#, fuzzy
 msgid "None"
-msgstr ""
+msgstr "Няма"
 
 #: ../gexport.php:411 ../gexport.php:457 ../gexport.php:559
+#, fuzzy
 msgid "Search"
-msgstr ""
+msgstr "Търсене"
 
 #: ../gexport.php:415
+#, fuzzy
 msgid "Select Site(s)"
-msgstr ""
+msgstr "Избор на сайтове"
 
 #: ../gexport.php:417
+#, fuzzy
 msgid "Sites Selected"
-msgstr ""
+msgstr "Избрани сайтове"
 
 #: ../gexport.php:420
+#, fuzzy
 msgid "All Sites Selected"
-msgstr ""
+msgstr "Всички избрани сайтове"
 
 #: ../gexport.php:551
+#, fuzzy
 msgid "Graph Export Definitions"
-msgstr ""
+msgstr "Определения за експортиране на графика"
 
 #: ../gexport.php:565
+#, fuzzy
 msgid "Exports"
-msgstr ""
+msgstr "Износът"
 
 #: ../gexport.php:569
+#, fuzzy
 msgid "Default"
-msgstr ""
+msgstr "По подразбиране"
 
 #: ../gexport.php:581
+#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
-msgstr ""
+msgstr "Търси"
 
 #: ../gexport.php:582
+#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr ""
+msgstr "Изчисти"
 
 #: ../gexport.php:697
+#, fuzzy
 msgid "Export Definitions"
-msgstr ""
+msgstr "Дефиниции за експортиране"
 
 #: ../gexport.php:706 ../setup.php:196
+#, fuzzy
 msgid "Export Name"
-msgstr ""
+msgstr "Експортиране на име"
 
 #: ../gexport.php:706 ../setup.php:197
+#, fuzzy
 msgid "The name of this Graph Export Definition."
-msgstr ""
+msgstr "Името на това определение за експортиране на графика."
 
 #: ../gexport.php:707
+#, fuzzy
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../gexport.php:707
+#, fuzzy
 msgid "The internal ID of the Graph Export Definition."
-msgstr ""
+msgstr "Вътрешният идентификатор на дефиницията за експортиране на графика."
 
 #: ../gexport.php:708
+#, fuzzy
 msgid "Schedule"
-msgstr ""
+msgstr "Планиране"
 
 #: ../gexport.php:708
+#, fuzzy
 msgid "The frequency that Graphs will be exported."
-msgstr ""
+msgstr "Честотата, която графиките ще се експортират."
 
 #: ../gexport.php:709
+#, fuzzy
 msgid "Next Start"
-msgstr ""
+msgstr "Следващ старт"
 
 #: ../gexport.php:709
+#, fuzzy
 msgid "The next time the Graph Export should run."
-msgstr ""
+msgstr "Следващия път Експортирането на графиката трябва да се изпълни."
 
 #: ../gexport.php:710 ../setup.php:220
+#, fuzzy
 msgid "Enabled"
-msgstr ""
+msgstr "Разрешен"
 
 #: ../gexport.php:710
+#, fuzzy
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr ""
+"Ако е активирана, тази дефиниция за експортиране на графики ще се изпълни "
+"според изискванията."
 
 #: ../gexport.php:711
+#, fuzzy
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #: ../gexport.php:711
+#, fuzzy
 msgid "The current Graph Export Status."
-msgstr ""
+msgstr "Текущият статус на експортиране на графиката."
 
 #: ../gexport.php:713
+#, fuzzy
 msgid "Exporting (Sites/Trees)"
-msgstr ""
+msgstr "Експортиране (сайтове / дървета)"
 
 #: ../gexport.php:713
+#, fuzzy
 msgid "What is being Exported."
-msgstr ""
+msgstr "Какво се изнася."
 
 #: ../gexport.php:714 ../setup.php:307
+#, fuzzy
 msgid "Effective User"
-msgstr ""
+msgstr "Ефективен потребител"
 
 #: ../gexport.php:714
+#, fuzzy
 msgid "The user that this export will impersonate."
-msgstr ""
+msgstr "Потребителят, който този експорт ще олицетворява."
 
 #: ../gexport.php:715
+#, fuzzy
 msgid "Last Runtime"
-msgstr ""
+msgstr "Последно време"
 
 #: ../gexport.php:715
+#, fuzzy
 msgid "The last runtime for the Graph Export."
-msgstr ""
+msgstr "Последното време за изпълнение на експорта на графика."
 
 #: ../gexport.php:716
+#, fuzzy
 msgid "Graphs"
-msgstr ""
+msgstr "Графики"
 
 #: ../gexport.php:716
+#, fuzzy
 msgid "The number of Graphs Exported on the last run."
-msgstr ""
+msgstr "Броят графики, експортирани при последното изпълнение."
 
 #: ../gexport.php:717
+#, fuzzy
 msgid "Last Started"
-msgstr ""
+msgstr "Последното стартиране"
 
 #: ../gexport.php:717
+#, fuzzy
 msgid "The last time that this Graph Export was started."
-msgstr ""
+msgstr "Последният път, когато този експорт на графики беше стартиран."
 
 #: ../gexport.php:718
+#, fuzzy
 msgid "Last Errored"
-msgstr ""
+msgstr "Последна грешка"
 
 #: ../gexport.php:718
+#, fuzzy
 msgid "The last time that this Graph Export experienced an error."
-msgstr ""
+msgstr "Последният път, когато в този график за експортиране възникна грешка."
 
 #: ../gexport.php:737 ../gexport.php:777 ../gexport.php:790 ../gexport.php:791
+#, fuzzy
 msgid "N/A"
-msgstr ""
+msgstr "Няма"
 
 #: ../gexport.php:739
+#, fuzzy
 msgid "No"
-msgstr ""
+msgstr "Не"
 
 #: ../gexport.php:739
+#, fuzzy
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: ../gexport.php:743
+#, fuzzy
 msgid "Idle"
-msgstr ""
+msgstr "Празен"
 
 #: ../gexport.php:746
+#, fuzzy
 msgid "Running"
-msgstr ""
+msgstr "실행 중"
 
 #: ../gexport.php:749
+#, fuzzy
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: ../gexport.php:755
+#, fuzzy
 msgid "All Sites"
-msgstr ""
+msgstr "Всички сайтове"
 
 #: ../gexport.php:766
+#, fuzzy
 msgid "All Trees"
-msgstr ""
+msgstr "Всички дървета"
 
 #: ../gexport.php:780
+#, fuzzy
 msgid "Sec"
-msgstr ""
+msgstr "Detik"
 
 #: ../gexport.php:787 ../gexport.php:792 ../gexport.php:793
+#, fuzzy
 msgid "Never"
-msgstr ""
+msgstr "Никога"
 
 #: ../gexport.php:800
+#, fuzzy
 msgid "No Graph Export Definitions"
-msgstr ""
+msgstr "Няма определения за експортиране на графика"
 
 #: ../setup.php:31
+#, fuzzy
 msgid "Export Cacti Graphs Settings"
-msgstr ""
+msgstr "Експортиране на настройки за графики на кактуси"
 
 #: ../setup.php:184
+#, fuzzy
 msgid "Utilities"
-msgstr ""
+msgstr "Приложения"
 
 #: ../setup.php:184
+#, fuzzy
 msgid "Graph Exports"
-msgstr ""
+msgstr "Експорт на графиката"
 
 #: ../setup.php:191
+#, fuzzy
 msgid "General"
-msgstr ""
+msgstr "Основни"
 
 #: ../setup.php:205
+#, fuzzy
 msgid "Export Method"
-msgstr ""
+msgstr "Метод за износ"
 
 #: ../setup.php:206
+#, fuzzy
 msgid "Choose which export method to use."
-msgstr ""
+msgstr "Изберете кой метод за износ да използвате."
 
 #: ../setup.php:211
+#, fuzzy
 msgid "Local"
-msgstr ""
+msgstr "Местен"
 
 #: ../setup.php:212
+#, fuzzy
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: ../setup.php:213
+#, fuzzy
 msgid "SFTP"
-msgstr ""
+msgstr "SFTP"
 
 #: ../setup.php:214
+#, fuzzy
 msgid "FTP NC"
-msgstr ""
+msgstr "FTP NC"
 
 #: ../setup.php:215
+#, fuzzy
 msgid "SCP"
-msgstr ""
+msgstr "SCP"
 
 #: ../setup.php:216
+#, fuzzy
 msgid "RSYNC"
-msgstr ""
+msgstr "RSYNC"
 
 #: ../setup.php:221
+#, fuzzy
 msgid ""
 "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr ""
+"Поставете отметка в това квадратче за отметка, ако искате тази дефиниция за "
+"експортиране на графика да бъде активирана."
 
 #: ../setup.php:227
+#, fuzzy
 msgid "Theme"
-msgstr ""
+msgstr "Теми:"
 
 #: ../setup.php:228
+#, fuzzy
 msgid ""
 "Please select one of the available Themes to skin your Cacti Graph Exports "
 "with."
 msgstr ""
+"Моля, изберете една от наличните палитри, с които да изтриете Cacti Graph "
+"Exports с."
 
 #: ../setup.php:235
+#, fuzzy
 msgid "Presentation Method"
-msgstr ""
+msgstr "Метод за представяне"
 
 #: ../setup.php:236
+#, fuzzy
 msgid ""
 "Choose which presentation would you want for the html generated pages. If "
 "you choose classical presentation; the Graphs will be in a only-one-html "
 "page. If you choose tree presentation, the Graph Tree architecture will be "
 "kept in the static html pages"
 msgstr ""
+"Изберете коя презентация искате за HTML генерираните страници. Ако изберете "
+"класическа презентация; графиките ще бъдат в само една-html страница. Ако "
+"изберете дървовидна презентация, архитектурата Tree Tree ще се съхранява в "
+"статичните html страници"
 
 #: ../setup.php:241 ../setup.php:335
+#, fuzzy
 msgid "Site"
-msgstr ""
+msgstr "Tочка на продажба"
 
 #: ../setup.php:242 ../setup.php:316
+#, fuzzy
 msgid "Tree"
-msgstr ""
+msgstr "‎درخت"
 
 #: ../setup.php:246
+#, fuzzy
 msgid "Export Timing"
-msgstr ""
+msgstr "Време за експортиране"
 
 #: ../setup.php:250
+#, fuzzy
 msgid "Timing Method"
-msgstr ""
+msgstr "Метод за синхронизиране"
 
 #: ../setup.php:251
+#, fuzzy
 msgid "Choose when to Export Graphs."
-msgstr ""
+msgstr "Изберете кога да експортирате графики."
 
 #: ../setup.php:262
+#, fuzzy
 msgid "Periodic Export Cycle"
-msgstr ""
+msgstr "Периодичен износен цикъл"
 
 #: ../setup.php:263
+#, fuzzy
 msgid ""
 "How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
 "Cycles you wish to export Graphs."
 msgstr ""
+"Колко често желаете Cacti да експортира графики. Това е единицата за цикли "
+"на гласуване, която искате да експортирате графики."
 
 #: ../setup.php:267
+#, fuzzy
 msgid "Every Polling Cycle"
-msgstr ""
+msgstr "Всеки избирателен цикъл"
 
 #: ../setup.php:268 ../setup.php:269 ../setup.php:270 ../setup.php:271
 #: ../setup.php:272 ../setup.php:273 ../setup.php:274 ../setup.php:275
 #: ../setup.php:276 ../setup.php:277 ../setup.php:278
-#, php-format
+#, fuzzy, php-format
 msgid "Every %d Polling Cycles"
-msgstr ""
+msgstr "Всеки% d цикъла на гласуване"
 
 #: ../setup.php:282
+#, fuzzy
 msgid "Hourly at specified minutes"
-msgstr ""
+msgstr "По часове на определени минути"
 
 #: ../setup.php:283
+#, fuzzy
 msgid ""
 "If you want Cacti to export static images on an hourly basis, put the "
 "minutes of the hour when to do that. Cacti assumes that you run the data "
@@ -424,205 +546,285 @@ msgid ""
 "closest to its runtime. For instance, 43 would equal 40 minutes past the "
 "hour."
 msgstr ""
+"Ако искате Cacti да експортира статични изображения на почасова база, "
+"поставете минутите от часа, когато трябва да направите това. Cacti приема, "
+"че вие стартирате скрипта за събиране на данни на всеки 5 минути, така че "
+"той ще закръгли стойността ви до тази, която е най-близо до времето на "
+"изпълнение. Например 43 биха били равни на 40 минути след часа."
 
 #: ../setup.php:292
+#, fuzzy
 msgid "Daily at specified time"
-msgstr ""
+msgstr "Ежедневно в определено време"
 
 #: ../setup.php:293
+#, fuzzy
 msgid ""
 "If you want Cacti to export static images on an daily basis, put here the "
 "time when to do that. Cacti assumes that you run the data gathering script "
 "every 5 minutes, so it will round your value to the one closest to its "
 "runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr ""
+"Ако искате Cacti да експортира статични изображения на дневна база, "
+"поставете тук кога да направите това. Cacti приема, че вие стартирате "
+"скрипта за събиране на данни на всеки 5 минути, така че той ще закръгли "
+"стойността ви до тази, която е най-близо до времето на изпълнение. Например, "
+"21:23 ще бъде равно на 20 минути след 21 часа."
 
 #: ../setup.php:302
+#, fuzzy
 msgid "Graph Selection & Settings"
-msgstr ""
+msgstr "Избор на графика и настройки"
 
 #: ../setup.php:308
+#, fuzzy
 msgid ""
 "The user name to utilize for establishing permissions to Cacti Graphs.  This "
 "user name will be used to determine which Graphs/Trees can be exported.  N/A "
 "means don't assume any security is in place."
 msgstr ""
+"Потребителското име за използване за създаване на разрешения за Cacti "
+"Graphs. Това потребителско име ще се използва, за да се определи кои "
+"графики / дървета могат да бъдат експортирани. N / A означава, че не "
+"приемате никаква сигурност."
 
 #: ../setup.php:317
+#, fuzzy
 msgid "The Tree(s) to export."
-msgstr ""
+msgstr "Дървото (ите) за експортиране."
 
 #: ../setup.php:324
+#, fuzzy
 msgid "Expand Devices/Sites"
-msgstr ""
+msgstr "Разгънете Устройства / Сайтове"
 
 #: ../setup.php:325
+#, fuzzy
 msgid ""
 "This setting determines if Tree Devices and Site Templates and Devices will "
 "be expanded or not.  If set to expanded, each host will have a sub-folder "
 "containing either Graph Templates or Data Query items."
 msgstr ""
+"Тази настройка определя дали Tree Devices и Site Templates и Devices ще "
+"бъдат разширени или не. Ако е настроено на разширено, всеки хост ще има "
+"подпапка, съдържаща или шаблони за графики, или елементи на заявка за данни."
 
 #: ../setup.php:330
+#, fuzzy
 msgid "Off"
-msgstr ""
+msgstr "Изключено"
 
 #: ../setup.php:331
+#, fuzzy
 msgid "On"
-msgstr ""
+msgstr "Включено"
 
 #: ../setup.php:336
+#, fuzzy
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr ""
+msgstr "Сайтът за Cacti графики, които трябва да бъдат експортирани от."
 
 #: ../setup.php:343
+#, fuzzy
 msgid "Graph Thumbnail Width"
-msgstr ""
+msgstr "Ширина на иконата на графиката"
 
 #: ../setup.php:344
+#, fuzzy
 msgid "The default width of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "Ширината по подразбиране на графиките с миниатюри в пиксели."
 
 #: ../setup.php:352
+#, fuzzy
 msgid "Graph Thumbnail Height"
-msgstr ""
+msgstr "Височина на иконата на графиката"
 
 #: ../setup.php:353
+#, fuzzy
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "Височината на графиките с миниатюри в пиксели."
 
 #: ../setup.php:361
+#, fuzzy
 msgid "Default View Thumbnails"
-msgstr ""
+msgstr "Стандартни миниатюри за преглед"
 
 #: ../setup.php:362
+#, fuzzy
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr ""
+"Поставете отметка, ако искате графичният изглед по подразбиране да е в режим "
+"на миниатюри."
 
 #: ../setup.php:368
+#, fuzzy
 msgid "Default Graph Columns"
-msgstr ""
+msgstr "По подразбиране графични колони"
 
 #: ../setup.php:369
+#, fuzzy
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr ""
+"Броят колони, които да се използват по подразбиране при показване на графики."
 
 #: ../setup.php:377
+#, fuzzy
 msgid "Graphs Per Page"
-msgstr ""
+msgstr "Графики на страница"
 
 #: ../setup.php:378
+#, fuzzy
 msgid "Choose the number of Graphs Per Page to display."
-msgstr ""
+msgstr "Изберете броя графики за страница, които да се показват."
 
 #: ../setup.php:385
+#, fuzzy
 msgid "Maximum Graphs to Export"
-msgstr ""
+msgstr "Максимален брой графики за експортиране"
 
 #: ../setup.php:386
+#, fuzzy
 msgid ""
 "After this number is reached, an error will be generated, but exporting will "
 "continue.  Set to 0 for no limit."
 msgstr ""
+"След достигане на този номер ще се генерира грешка, но експортирането ще "
+"продължи. Задайте 0 без ограничение."
 
 #: ../setup.php:394
+#, fuzzy
 msgid "Export Location Information"
-msgstr ""
+msgstr "Експортиране на информация за местоположението"
 
 #: ../setup.php:399
+#, fuzzy
 msgid "Export Directory"
-msgstr ""
+msgstr "Експортиране на директория"
 
 #: ../setup.php:400
+#, fuzzy
 msgid ""
 "This is the directory, either on the local system or on the remote system, "
 "that will contain the exported data."
 msgstr ""
+"Това е директорията на локалната система или на отдалечената система, която "
+"ще съдържа експортираните данни."
 
 #: ../setup.php:406
+#, fuzzy
 msgid "Local Scratch Directory"
-msgstr ""
+msgstr "Локален справочник"
 
 #: ../setup.php:407
+#, fuzzy
 msgid ""
 "This is the directory that Cacti will temporarily store output prior to "
 "sending to the remote site via the transfer method.  The contents of this "
 "directory will be deleted after the data is transferred."
 msgstr ""
+"Това е директорията, в която Cacti ще съхранява временно продукцията преди "
+"изпращане на отдалечения сайт чрез метода на прехвърляне. Съдържанието на "
+"тази директория ще бъде изтрито след прехвърляне на данните."
 
 #: ../setup.php:414
+#, fuzzy
 msgid "Remote Options"
-msgstr ""
+msgstr "Отдалечени опции"
 
 #: ../setup.php:419
+#, fuzzy
 msgid "Sanitize remote directory"
-msgstr ""
+msgstr "Дезинфекцирайте отдалечената директория"
 
 #: ../setup.php:420
+#, fuzzy
 msgid ""
 "Check this if you want to delete any existing files in the FTP remote "
 "directory. This option is in use only when using the PHP built-in ftp "
 "functions."
 msgstr ""
+"Маркирайте това, ако искате да изтриете всички съществуващи файлове в "
+"отдалечената директория на FTP. Тази опция се използва само при използване "
+"на PHP вградените ftp функции."
 
 #: ../setup.php:426
+#, fuzzy
 msgid "Remote Host"
-msgstr ""
+msgstr "Отдалечен хост"
 
 #: ../setup.php:427
+#, fuzzy
 msgid "Denotes the host to send Exported Graphs to."
-msgstr ""
+msgstr "Означава, че хостът изпраща изнесени графики към."
 
 #: ../setup.php:434
+#, fuzzy
 msgid "Remote Port"
-msgstr ""
+msgstr "Отдалечен порт"
 
 #: ../setup.php:435
+#, fuzzy
 msgid ""
 "Communication port to use for the export method if non-standard (leave empty "
 "for defaults)."
 msgstr ""
+"Комуникационен порт, който да се използва за метода за експортиране, ако е "
+"нестандартно (оставете празно за настройките по подразбиране)."
 
 #: ../setup.php:443
+#, fuzzy
 msgid "Use passive mode"
-msgstr ""
+msgstr "Използвайте пасивен режим"
 
 #: ../setup.php:444
+#, fuzzy
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr ""
+"Маркирайте това, ако искате да се свържете в пасивен режим към FTP сървъра."
 
 #: ../setup.php:450
+#, fuzzy
 msgid "User"
-msgstr ""
+msgstr "Потребител"
 
 #: ../setup.php:451
+#, fuzzy
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr ""
+"Акаунт за влизане на отдалечения сървър (оставете празно за настройките по "
+"подразбиране)."
 
 #: ../setup.php:458
+#, fuzzy
 msgid "Password"
-msgstr ""
+msgstr "Парола"
 
 #: ../setup.php:459
+#, fuzzy
 msgid "Password for the remote ftp account (leave empty for blank)."
-msgstr ""
+msgstr "Парола за отдалечения ftp акаунт (оставете празно за празно)."
 
 #: ../setup.php:466
+#, fuzzy
 msgid "Private Key Path"
-msgstr ""
+msgstr "Път на частния ключ"
 
 #: ../setup.php:467
+#, fuzzy
 msgid "For SCP and RSYNC, enter the Private Key path if required."
-msgstr ""
+msgstr "За SCP и RSYNC въведете пътя на частния ключ, ако е необходимо."
 
 #: ../setup.php:478
+#, fuzzy
 msgid "Exported Cacti Graph Pages"
-msgstr ""
+msgstr "Експортирани страници с графики за кактуси"
 
 #: ../setup.php:484
+#, fuzzy
 msgid "(Edit)"
-msgstr ""
+msgstr "(Редактирай)"
 
 #: ../setup.php:490
+#, fuzzy
 msgid "Actions"
-msgstr ""
+msgstr "Действия"

@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gexport on cacti 1.1.34\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-08 15:17-0400\n"
-"PO-Revision-Date: 2018-02-22 13:59+0800\n"
+"PO-Revision-Date: 2019-03-16 21:58-0400\n"
 "Last-Translator: \n"
 "Language-Team: sfqas <sfqas@163.com>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Chinese\n"
-"X-Poedit-Country: CHINA\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../functions.php:1217 ../functions.php:1379
 msgid "Non Query Based"
@@ -63,28 +63,24 @@ msgstr "每小时"
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "点击“继续”删除以下图形导出定义。"
-msgstr[1] "点击“继续”删除以下图形导出定义。"
 
 #: ../gexport.php:258
 #, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "点击“继续”以停用以下图形导出定义。"
-msgstr[1] "点击“继续”以停用以下图形导出定义。"
 
 #: ../gexport.php:267
 #, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "点击“继续”以启用以下图形导出定义。"
-msgstr[1] "点击“继续”以启用以下图形导出定义。"
 
 #: ../gexport.php:276
 #, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "点击“继续”立即运行以下图形导出定义。"
-msgstr[1] "点击“继续”立即运行以下图形导出定义。"
 
 #: ../gexport.php:284
 msgid "You must select at least one Graph Export Definition."
