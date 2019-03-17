@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2017-07-08 15:17-0400\n"
-"PO-Revision-Date: 2019-03-16 19:50+0000\n"
-"Last-Translator: Mark Brugnoli-Vinten <netniv@cacti.net>\n"
+"PO-Revision-Date: 2019-03-17 00:53+0000\n"
+"Last-Translator: Larry Adams <thewitness@cacti.net>\n"
 "Language-Team: Spanish <http://translate.cacti.net/projects/cacti/gexport/"
 "es-ES/>\n"
 "Language: es-ES\n"
@@ -33,15 +33,15 @@ msgstr ""
 
 #: ../gexport.php:30
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: ../gexport.php:31
 msgid "Enable"
-msgstr ""
+msgstr "Habilitar"
 
 #: ../gexport.php:32
 msgid "Disable"
-msgstr ""
+msgstr "Deshabilitar"
 
 #: ../gexport.php:33
 msgid "Export Now"
@@ -114,11 +114,11 @@ msgstr "Todos"
 
 #: ../gexport.php:381 ../gexport.php:427
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: ../gexport.php:411 ../gexport.php:457 ../gexport.php:559
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: ../gexport.php:415
 msgid "Select Site(s)"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: ../gexport.php:710 ../setup.php:220
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 #: ../gexport.php:710
 msgid "If enabled, this Graph Export definition will run as required."
@@ -200,7 +200,7 @@ msgstr ""
 
 #: ../gexport.php:711
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: ../gexport.php:711
 msgid "The current Graph Export Status."
@@ -256,15 +256,15 @@ msgstr ""
 
 #: ../gexport.php:737 ../gexport.php:777 ../gexport.php:790 ../gexport.php:791
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: ../gexport.php:739
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ../gexport.php:739
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ../gexport.php:743
 msgid "Idle"
@@ -276,7 +276,7 @@ msgstr ""
 
 #: ../gexport.php:749
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: ../gexport.php:755
 msgid "All Sites"
@@ -627,4 +627,4 @@ msgstr ""
 
 #: ../setup.php:490
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
