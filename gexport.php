@@ -157,7 +157,7 @@ function duplicate_export($_export_id, $export_title) {
 	$save['id']   = 0;
 
 	reset($fields_export_edit);
-	while (list($field, $array) = each($fields_export_edit)) {
+	foreach($fields_export_edit as $field => $array) {
 		if (!preg_match('/^hidden/', $array['method'])) {
 			$save[$field] = $export[$field];
 		}
@@ -229,7 +229,7 @@ function export_form_actions() {
 	$export_list = '';
 
 	/* loop through each of the graphs selected on the previous page and get more info about them */
-	while (list($var,$val) = each($_POST)) {
+	foreach ($_POST as $var => $val) {
 		if (preg_match('/^chk_([0-9]+)$/', $var, $matches)) {
 			/* ================= input validation ================= */
 			input_validate_input_number($matches[1]);
