@@ -6,17 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:35-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fr_FR\n"
+"PO-Revision-Date: 2019-05-29 15:13+0000\n"
+"Last-Translator: Olivier VOGEL <olivier.vogel@st.com>\n"
+"Language-Team: French <http://translate.cacti.net/projects/cacti/gexport/"
+"fr-FR/>\n"
+"Language: fr-FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: functions.php:312
 msgid "Success"
@@ -225,7 +226,6 @@ msgid "Data Queries"
 msgstr "Interrogations avancées"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -272,7 +272,7 @@ msgstr[1] ""
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "Abandonner"
 
 #: gexport.php:262
 #, fuzzy
@@ -287,7 +287,7 @@ msgstr[1] ""
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 #: gexport.php:267
 #, fuzzy
@@ -334,7 +334,7 @@ msgstr ""
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "Retour"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -372,7 +372,6 @@ msgid "None"
 msgstr "Aucun"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "Rechercher"
 
@@ -402,7 +401,6 @@ msgid "Exports"
 msgstr "Exportations"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "Défaut"
 
@@ -516,7 +514,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "La dernière durée d'exécution pour l'exportation graphique."
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "Graphiques"
 
