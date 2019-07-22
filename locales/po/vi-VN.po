@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:58-0400\n"
+"PO-Revision-Date: 2019-07-21 21:18-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: vi_VN\n"
@@ -16,198 +16,245 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "Thành công"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "Cú pháp hoặc lỗi sử dụng"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "Giao thức không tương thích"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "Lỗi chọn tập tin đầu vào / đầu ra, thư mục"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"Hành động được yêu cầu không được hỗ trợ: một nỗ lực đã được thực hiện để "
+"thao tác các tệp 64 bit trên nền tảng không thể hỗ trợ chúng; hoặc một tùy "
+"chọn đã được chỉ định được hỗ trợ bởi máy khách chứ không phải bởi máy chủ."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "Lỗi khi bắt đầu giao thức máy khách-máy chủ"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "Daemon không thể nối vào tệp nhật ký"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "Lỗi trong I / O ổ cắm"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "Lỗi trong tệp I / O"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "Lỗi trong luồng dữ liệu giao thức rsync"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "Lỗi với chẩn đoán chương trình"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "Lỗi mã IPC"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "Đã nhận SIGUSR1 hoặc SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "Một số lỗi được trả về bởi Waitpid ()"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "Lỗi phân bổ bộ nhớ lõi"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "Chuyển một phần do lỗi"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "Chuyển một phần do tập tin nguồn biến mất"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "Giới hạn --max-xóa đã dừng xóa"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "Hết thời gian gửi / nhận dữ liệu"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "Hết thời gian chờ kết nối daemon"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "Lỗi không rõ"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "Hoạt động đã thành công"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "Lỗi chung trong sao chép tập tin"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "Đích đến không phải là thư mục, nhưng nó phải là"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "Vượt quá mức symlink tối đa"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "Kết nối với máy chủ không thành công."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "Kết nối bị hỏng"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "Tập tin không tồn tại"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "Không được phép truy cập tập tin."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "Lỗi chung trong giao thức sftp"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "Giao thức truyền tệp không khớp"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "Không có tệp nào khớp với một tiêu chí nhất định"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "Máy chủ không được phép kết nối"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "Lỗi chung trong giao thức ssh"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "Trao đổi khóa không thành công"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "Đã đặt"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "Lỗi MAC"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "Lỗi nén"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "Dịch vụ không có sẵn"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "Phiên bản giao thức không được hỗ trợ"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "Khóa máy chủ không thể kiểm chứng"
 
 #: functions.php:397
+#, fuzzy
 msgid "Connection failed"
-msgstr ""
+msgstr "Kết nối thất bại"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "Ngắt kết nối bởi ứng dụng"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "Quá nhiều kết nối"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "Xác thực bị hủy bởi người dùng"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "Không có thêm phương thức xác thực có sẵn"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "Tên sử dụng không hợp lệ"
 
 #: functions.php:1504 functions.php:1667
 #, fuzzy
@@ -225,17 +272,14 @@ msgid "Data Queries"
 msgstr "Truy vấn dữ liệu"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "Xóa"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "Bật"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "Vô hiệu hóa"
 
@@ -250,12 +294,10 @@ msgid "Periodic"
 msgstr "Định kỳ"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "Hàng ngày"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "Hàng Giờ"
 
@@ -267,7 +309,7 @@ msgstr[0] "Nhấp vào 'Tiếp tục' để xóa Định nghĩa Xuất đồ th�
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "Hủy"
 
 #: gexport.php:262
 #, fuzzy
@@ -277,7 +319,7 @@ msgstr[0] "Nhấp vào 'Tiếp tục' để tắt Định nghĩa xuất đồ th
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "Tiếp tục"
 
 #: gexport.php:267
 #, fuzzy
@@ -314,7 +356,7 @@ msgstr "Bạn phải chọn ít nhất một Định nghĩa Xuất đồ thị."
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "Trở về trang cài đặt bắt buộc Plugins"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -342,17 +384,14 @@ msgid "All Trees Selected"
 msgstr "Tất cả các cây được chọn"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "Tất cả"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "Không"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "Tìm kiếm"
 
@@ -377,23 +416,19 @@ msgid "Graph Export Definitions"
 msgstr "Định nghĩa xuất đồ thị"
 
 #: gexport.php:569
-#, fuzzy
 msgid "Exports"
 msgstr "Xuất"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "Mặc định"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Đi"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Xóa"
@@ -414,7 +449,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "Tên của định nghĩa xuất khẩu đồ thị này."
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -424,7 +458,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "ID nội bộ của Định nghĩa xuất đồ thị."
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "Lịch trình"
 
@@ -444,7 +477,6 @@ msgid "The next time the Graph Export should run."
 msgstr "Lần sau, Xuất đồ thị sẽ chạy."
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "Bật"
 
@@ -454,7 +486,6 @@ msgid "If enabled, this Graph Export definition will run as required."
 msgstr "Nếu được bật, định nghĩa Xuất biểu đồ này sẽ chạy theo yêu cầu."
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "Trạng thái"
 
@@ -494,7 +525,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "Thời gian chạy cuối cùng cho Xuất đồ thị."
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "Đồ thị"
 
@@ -525,32 +555,26 @@ msgstr "Lần cuối cùng mà Xuất đồ thị này gặp lỗi."
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "N/A"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "Không"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "Có"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "Rảnh rỗi"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "Đang chạy"
 
 #: gexport.php:768
-#, fuzzy
 msgid "Error"
 msgstr "Lỗi"
 
@@ -570,7 +594,6 @@ msgid "Sec"
 msgstr "Giây"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "Không bao giờ"
 
@@ -590,12 +613,10 @@ msgid "Graph Exports"
 msgstr "Xuất khẩu đồ thị"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "Tiện Ích"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "Chung"
 
@@ -617,7 +638,6 @@ msgid "Choose which export method to use."
 msgstr "Chọn phương thức xuất khẩu để sử dụng."
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "Địa phương"
 
@@ -647,15 +667,18 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "Xuất khẩu lệnh đối số"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr ""
+"Đối số để sử dụng với các phương thức xuất khẩu không cục bộ. rsync nên sử "
+"dụng"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "Chủ đề"
 
@@ -687,7 +710,6 @@ msgstr ""
 "html tĩnh"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "Trang"
 
@@ -775,15 +797,20 @@ msgstr ""
 "gian chạy của nó. Chẳng hạn, 21h23 sẽ bằng 20 phút sau 9 giờ tối."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "Sử dụng x Chủ đề"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"Có bao nhiêu chủ đề nền mà bạn muốn Cacti sử dụng khi xuất đồ thị. Mặc định "
+"là 0 để chạy tất cả xuất trong luồng pug, 1 hoặc nhiều hơn để sinh ra các "
+"luồng nền riêng biệt"
 
 #: setup.php:405
 #, fuzzy
@@ -823,12 +850,10 @@ msgstr ""
 "con chứa các mục Biểu đồ dữ liệu hoặc Truy vấn dữ liệu."
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "Tắt"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "Bật"
 
@@ -1020,7 +1045,6 @@ msgstr ""
 "Kiểm tra điều này nếu bạn muốn kết nối ở chế độ thụ động với máy chủ FTP."
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "Người dùng"
 
@@ -1030,7 +1054,6 @@ msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "Tài khoản để đăng nhập trên máy chủ từ xa (để trống cho mặc định)."
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "Mật khẩu"
 
@@ -1055,11 +1078,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "Trang đồ thị Cacti đã xuất"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(Sửa)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "Hành động"

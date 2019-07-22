@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:44-0400\n"
+"PO-Revision-Date: 2019-07-21 21:12-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -16,226 +16,273 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "Gelukt"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "Syntaxis of gebruiksfout"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "Protocol onverenigbaarheid"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "Fouten bij het selecteren van invoer-/uitvoerbestanden, dirs"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"Gevraagde actie niet ondersteund: er is een poging gedaan om 64-bit "
+"bestanden te manipuleren op een platform dat deze niet kan ondersteunen; of "
+"er is een optie gespecificeerd die wordt ondersteund door de client en niet "
+"door de server."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "Fout bij het starten van het client-server protocol"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "Daemon niet in staat om aan het logboekbestand toe te voegen"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "Fout in contactdoos-I/O"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "Fout in bestand I/O"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "Fout in de gegevensstroom van het rsync-protocol"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "Fouten bij de programma-diagnose"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "Fout in de IPC-code"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "Ontvangen SIGUSR1 of SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "Enige fout geretourneerd door waitpid()"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "Fout bij het toewijzen van kerngeheugenbuffers"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "Gedeeltelijke overdracht door een fout"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "Gedeeltelijke overdracht als gevolg van verdwenen bronbestanden"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
 msgstr ""
+"De --max-verwijderingslimiet is gestopt met het verwijderen van "
+"verwijderingen"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "Time-out in het verzenden/ontvangen van gegevens"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "Time-out bij het wachten op een daemon-verbinding"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "Onbekende fout"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "Operatie was succesvol"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "Algemene fout in de bestandskopie"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "Bestemming is geen directory, maar het zou wel moeten zijn"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "Maximaal symlink niveau overschreden"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "Verbinding maken met de gastheer is mislukt."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "Verbinding verbroken"
 
 #: functions.php:383
+#, fuzzy
 msgid "File does not exist"
-msgstr ""
+msgstr "Bestand bestaat niet"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "Geen toestemming om toegang te krijgen tot het bestand."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "Algemene fout in het sftp-protocol"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
 msgstr ""
+"Mismatch tussen het protocol voor bestandsoverdracht en het protocol voor "
+"bestandsoverdracht"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "Geen enkel bestand voldoet aan een bepaald criterium"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "Host niet toegestaan om verbinding te maken"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "Algemene fout in het ssh-protocol"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "Sleuteloverdracht mislukt"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "Gereserveerd"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MAC-fout"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "Compressiefout"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "Service niet beschikbaar"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "De versie van het protocol wordt niet ondersteund"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "Gastheersleutel niet controleerbaar"
 
 #: functions.php:397
+#, fuzzy
 msgid "Connection failed"
-msgstr ""
+msgstr "Verbinding mislukt"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "Ontkoppeld per toepassing"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "Te veel aansluitingen"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "Authenticatie geannuleerd door gebruiker"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "Geen authenticatiemethoden meer beschikbaar"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "Ongeldige gebruikersnaam"
 
 #: functions.php:1504 functions.php:1667
-#, fuzzy
 msgid "Non Query Based"
 msgstr "Niet query gebaseerd"
 
 #: functions.php:1751
-#, fuzzy
 msgid "Graph Templates"
 msgstr "Grafiektemplates"
 
 #: functions.php:1780
-#, fuzzy
 msgid "Data Queries"
 msgstr "Data queries"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "Verwijder"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "Inschakelen"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "Uitschakelen"
 
@@ -250,12 +297,10 @@ msgid "Periodic"
 msgstr "Periodiek"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "Dagelijks"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "Per uur"
 
@@ -271,7 +316,7 @@ msgstr[1] ""
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleer"
 
 #: gexport.php:262
 #, fuzzy
@@ -285,7 +330,7 @@ msgstr[1] ""
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "Volgende"
 
 #: gexport.php:267
 #, fuzzy
@@ -328,7 +373,7 @@ msgstr "U moet ten minste één definitie van grafiekuitvoer selecteren."
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "Terug"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -356,17 +401,14 @@ msgid "All Trees Selected"
 msgstr "Alle geselecteerde bomen"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "Alle"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "Geen"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "Zoeken"
 
@@ -396,18 +438,15 @@ msgid "Exports"
 msgstr "Uitvoer"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "Standaard"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Ga"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Herstel"
@@ -428,7 +467,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "De naam van deze Graph Export Definitie."
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -438,7 +476,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "De interne ID van de Graph Export Definition."
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "Schema"
 
@@ -448,7 +485,6 @@ msgid "The frequency that Graphs will be exported."
 msgstr "De frequentie waarmee grafieken worden geëxporteerd."
 
 #: gexport.php:713
-#, fuzzy
 msgid "Next Start"
 msgstr "Volgende start"
 
@@ -458,7 +494,6 @@ msgid "The next time the Graph Export should run."
 msgstr "De volgende keer dat de Graph Export moet worden uitgevoerd."
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
@@ -470,7 +505,6 @@ msgstr ""
 "vereist."
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "Status"
 
@@ -500,7 +534,6 @@ msgid "The user that this export will impersonate."
 msgstr "De gebruiker die deze export zal imiteren."
 
 #: gexport.php:719
-#, fuzzy
 msgid "Last Runtime"
 msgstr "Laatste keer actief"
 
@@ -510,7 +543,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "De laatste runtime voor de Graph Export."
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "Grafieken"
 
@@ -520,7 +552,6 @@ msgid "The number of Graphs Exported on the last run."
 msgstr "Het aantal grafieken dat tijdens de laatste run werd geëxporteerd."
 
 #: gexport.php:721
-#, fuzzy
 msgid "Last Started"
 msgstr "Laatst gestart"
 
@@ -541,37 +572,30 @@ msgstr "De laatste keer dat deze Graph Export een fout heeft meegemaakt."
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "N/B"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "Nee"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "Ja"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "Inactief"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "Actief"
 
 #: gexport.php:768
-#, fuzzy
 msgid "Error"
 msgstr "Fout"
 
 #: gexport.php:774
-#, fuzzy
 msgid "All Sites"
 msgstr "Alle sites"
 
@@ -581,12 +605,10 @@ msgid "All Trees"
 msgstr "Alle bomen"
 
 #: gexport.php:799
-#, fuzzy
 msgid "Sec"
 msgstr "Seconden"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "Nooit"
 
@@ -606,12 +628,10 @@ msgid "Graph Exports"
 msgstr "Grafiek exporteren"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "Gereedschappen"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "Generiek"
 
@@ -634,12 +654,10 @@ msgid "Choose which export method to use."
 msgstr "Kies welke exportmethode u wilt gebruiken."
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "Lokaal"
 
 #: setup.php:300
-#, fuzzy
 msgid "FTP"
 msgstr "FTP"
 
@@ -664,15 +682,18 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "Argumenten voor exportcommando's"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr ""
+"Argumenten om te gebruiken met niet-lokale exportmethoden. rsync dient "
+"gebruik te maken van"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "Thema"
 
@@ -704,12 +725,10 @@ msgstr ""
 "Tree architectuur worden bewaard in de statische html pagina's"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "Website"
 
 #: setup.php:336 setup.php:419
-#, fuzzy
 msgid "Tree"
 msgstr "Menu"
 
@@ -794,15 +813,20 @@ msgstr ""
 "zou 21:23 gelijk zijn aan 20 minuten na 21.00 uur."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "Gebruik x Draden x Draden"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"Hoeveel achtergronddraden wilt u dat Cactussen gebruiken bij het exporteren "
+"van grafieken.  De standaardinstelling is 0 om alle export in pollerdraad "
+"uit te voeren, 1 of meer om afzonderlijke achtergronddraden te maken"
 
 #: setup.php:405
 #, fuzzy
@@ -848,7 +872,6 @@ msgid "Off"
 msgstr "Data bron debug modus uitschakelen."
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "Aan"
 
@@ -902,7 +925,6 @@ msgstr ""
 "grafieken."
 
 #: setup.php:479
-#, fuzzy
 msgid "Graphs Per Page"
 msgstr "Grafieken per pagina"
 
@@ -1046,7 +1068,6 @@ msgstr ""
 "server."
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "Gebruiker"
 
@@ -1058,7 +1079,6 @@ msgstr ""
 "standaardinstellingen)."
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "Wachtwoord"
 
@@ -1085,11 +1105,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "Uitgevoerde cactusgrafiekpagina's"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(Wijzig)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "Acties"

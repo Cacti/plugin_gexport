@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:55-0400\n"
+"PO-Revision-Date: 2019-07-21 21:17-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -16,198 +16,246 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "Lyckades"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "Syntax eller användningsfel"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "Protokoll oförenlighet"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "Fel som väljer inmatnings- / utdatafiler, dirs"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"Den begärda åtgärden stöds inte. Ett försök gjordes för att manipulera 64-"
+"bitars filer på en plattform som inte kan stödja dem. eller ett alternativ "
+"anges som stöds av klienten och inte av servern."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "Fel kunde starta klient-server protokoll"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "Daemon kan inte lägga till loggfilen"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "Fel i uttaget I / O"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "Fel i fil I / O"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "Fel i rsync-protokolldataströmmen"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "Fel med programdiagnostik"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "Fel i IPC-kod"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "Mottagde SIGUSR1 eller SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "Något fel returnerat av waitpid ()"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "Fel vid tilldelning av kärnminnebuffertar"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "Delvis överföring på grund av fel"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "Delvis överföring på grund av försvunna källfiler"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "Gränsen --max-delete raderade borttagningar"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "Timeout i data som skickas / mottas"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "Timeout väntar på daemon-anslutning"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "Okänt fel"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "Operation var framgångsrik"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "Allmänt fel i filkopia"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "Destination är inte katalog, men det borde vara"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "Maximal symlinknivå överskridits"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "Anslutning till värd misslyckades."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "Anslutning bruten"
 
 #: functions.php:383
+#, fuzzy
 msgid "File does not exist"
-msgstr ""
+msgstr "Fil existerar inte"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "Ingen behörighet att komma åt filen."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "Allmänt fel i sftp protokoll"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "Överföringsprotokollmatchning"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "Ingen fil matchar ett givet kriterier"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "Värd får inte ansluta"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "Allmänt fel i ssh protokoll"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "Viktigt utbyte misslyckades"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "Reserverad"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MAC fel"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "Komprimeringsfel"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "Tjänsten är inte tillgänglig"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "Protokollversionen stöds inte"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "Värdnyckel ej verifierbar"
 
 #: functions.php:397
+#, fuzzy
 msgid "Connection failed"
-msgstr ""
+msgstr "Anslutningen misslyckades"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "Avkopplad genom ansökan"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "För många anslutningar"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "Autentisering avbruten av användaren"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "Inga fler autentiseringsmetoder tillgängliga"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "Ogiltigt användarnamn"
 
 #: functions.php:1504 functions.php:1667
 #, fuzzy
@@ -215,27 +263,22 @@ msgid "Non Query Based"
 msgstr "Icke-frågan baserad"
 
 #: functions.php:1751
-#, fuzzy
 msgid "Graph Templates"
 msgstr "Grafmallar"
 
 #: functions.php:1780
-#, fuzzy
 msgid "Data Queries"
 msgstr "Dataförfrågningar"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "Ta bort"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "Aktivera"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "Inaktivera"
 
@@ -250,12 +293,10 @@ msgid "Periodic"
 msgstr "Periodisk"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "Dagligen"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "Varje timme"
 
@@ -270,7 +311,7 @@ msgstr[1] ""
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: gexport.php:262
 #, fuzzy
@@ -283,7 +324,7 @@ msgstr[1] ""
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "Fortsätt"
 
 #: gexport.php:267
 #, fuzzy
@@ -325,7 +366,7 @@ msgstr "Du måste välja minst en grafexportdefinition."
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "Tillbaka"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -353,17 +394,14 @@ msgid "All Trees Selected"
 msgstr "Alla träd väljs"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "Alla"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "Ingen"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "Sök"
 
@@ -393,18 +431,15 @@ msgid "Exports"
 msgstr "Export"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "Standard"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Utför"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Rensa"
@@ -425,7 +460,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "Namnet på den här grafexportdefinitionen."
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -435,7 +469,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "Det interna ID-kortet för grafexportdefinitionen."
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "Schema"
 
@@ -455,7 +488,6 @@ msgid "The next time the Graph Export should run."
 msgstr "Nästa gång grafexporten ska köras."
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "Aktiverad"
 
@@ -467,7 +499,6 @@ msgstr ""
 "behov."
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "Status"
 
@@ -507,7 +538,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "Den sista körtiden för Graph Export."
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "Grafer"
 
@@ -538,32 +568,26 @@ msgstr "Den sista gången att denna Graph Export upplevde ett fel."
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "N/A"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "Nej"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "Ja"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "Sysslolös"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "Kör"
 
 #: gexport.php:768
-#, fuzzy
 msgid "Error"
 msgstr "Fel"
 
@@ -578,12 +602,10 @@ msgid "All Trees"
 msgstr "Alla träd"
 
 #: gexport.php:799
-#, fuzzy
 msgid "Sec"
-msgstr "Sekunder"
+msgstr "Sek"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "Aldrig"
 
@@ -603,12 +625,10 @@ msgid "Graph Exports"
 msgstr "Graf Export"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "Tillbehör"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "Allmän"
 
@@ -631,7 +651,6 @@ msgid "Choose which export method to use."
 msgstr "Välj vilken exportmetod som ska användas."
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "Lokal"
 
@@ -661,15 +680,16 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "Export Command Arguments"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "Argument att använda med icke-lokala exportmetoder. rsync ska använda"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "Tema"
 
@@ -701,12 +721,10 @@ msgstr ""
 "statiska HTML-sidorna"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "Webbplats"
 
 #: setup.php:336 setup.php:419
-#, fuzzy
 msgid "Tree"
 msgstr "Träd"
 
@@ -790,15 +808,20 @@ msgstr ""
 "Till exempel skulle 21:23 vara lika med 20 minuter efter 21:00."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "Använd x Trådar"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"Hur många bakgrundstrådar önskar du att kaktus ska användas när du "
+"exporterar grafer. Standard är 0 för att köra all export i pollergänga, 1 "
+"eller mer för att kasta separata bakgrundstrådar"
 
 #: setup.php:405
 #, fuzzy
@@ -838,12 +861,10 @@ msgstr ""
 "ha en undermapp som innehåller antingen grafmallar eller dataquery-objekt."
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "Av"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "På"
 
@@ -1000,7 +1021,6 @@ msgstr ""
 "funktionerna."
 
 #: setup.php:539
-#, fuzzy
 msgid "Remote Host"
 msgstr "Fjärrvärddatorns namn"
 
@@ -1034,7 +1054,6 @@ msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "Markera det här om du vill ansluta i passivt läge till FTP-servern."
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "Användare"
 
@@ -1045,7 +1064,6 @@ msgstr ""
 "Konto till inloggning på fjärrservern (lämna tomt för standardinställningar)."
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "Lösenord"
 
@@ -1070,11 +1088,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "Exporterade kaktiska diagramsidor"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(Redigera)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "Åtgärder"

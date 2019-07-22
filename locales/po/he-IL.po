@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:36-0400\n"
+"PO-Revision-Date: 2019-07-21 21:09-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -17,198 +17,243 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
 "2 : 3);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "הצלחה"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "שגיאת תחביר או שימוש"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "פרוטוקול אי תאימות"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "שגיאות בחירת קלט / פלט קבצים, dirs"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"הפעולה המבוקשת אינה נתמכת: נעשה ניסיון לתפעל קבצים של 64 סיביות על פלטפורמה "
+"שאינה תומכת בהם; או שצוין אופציה הנתמכת על-ידי הלקוח ולא על-ידי השרת."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "שגיאה בהפעלת פרוטוקול שרת לקוח"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "Daemon לא יכול לצרף קובץ יומן"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "שגיאה בשקע I / O"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "שגיאה בקובץ I / O"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "שגיאה בזרם הנתונים של פרוטוקול rsync"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "טעויות עם אבחון התוכנית"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "שגיאה בקוד IPC"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "קיבל SIGUSR1 או SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "שגיאה שהוחזרה על ידי waitpid ()"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "שגיאה בהקצאת מאגרי זיכרון מרכזיים"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "העברה חלקית עקב שגיאה"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "העברה חלקית עקב קבצי המקור שנעלמו"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "המגבלה --max-delete עצרה את המחיקות"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "פסק זמן בשליחה / קבלה של נתונים"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "זמן קצוב מחכה לחיבור הדמון"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "שגיאה לא ידועה"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "המבצע היה מוצלח"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "שגיאה כללית בהעתקת הקובץ"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "היעד אינו ספריה, אבל זה צריך להיות"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "חריגה מרמת הסימניות המקסימלית"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "החיבור למארח נכשל."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "החיבורים שבורים"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "לא קיים."
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "אין הרשאה לגשת לקובץ."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "שגיאה כללית בפרוטוקול sftp"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "פרוטוקול העברת הקבצים אינו תואם"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "אין קובץ שמתאים לקריטריונים מסוימים"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "מארח אינו מורשה להתחבר"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "שגיאה כללית בפרוטוקול SSH"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "החלפת המקשים נכשלה"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "שמורות"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "שגיאת MAC"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "שגיאת דחיסה"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "השירות אינו זמין"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "גרסת הפרוטוקול אינה נתמכת"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "מפתח מארח לא ניתן לאמת"
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr ""
+msgstr "החיבור נכשל"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "מנותק על ידי היישום"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "חיבורים רבים מדי"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "האימות בוטל על ידי המשתמש"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "אין עוד שיטות אימות זמינות"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "שם משתמש לא חוקי"
 
 #: functions.php:1504 functions.php:1667
 #, fuzzy
@@ -226,17 +271,14 @@ msgid "Data Queries"
 msgstr "שאילתות נתונים"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "מחק"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "אפשר"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "כיבוי"
 
@@ -251,12 +293,10 @@ msgid "Periodic"
 msgstr "תקופתיים"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "יומי"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "שעתי"
 
@@ -271,7 +311,7 @@ msgstr[3] ""
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: gexport.php:262
 #, fuzzy
@@ -284,7 +324,7 @@ msgstr[3] ""
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "המשך"
 
 #: gexport.php:267
 #, fuzzy
@@ -326,7 +366,7 @@ msgstr "עליך לבחור בהגדרת ייצוא גרף אחת לפחות."
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "חזרה אל עריכת פוסט"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -354,17 +394,14 @@ msgid "All Trees Selected"
 msgstr "כל העצים נבחרו"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "הכל"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "ללא"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "חיפוש"
 
@@ -389,23 +426,19 @@ msgid "Graph Export Definitions"
 msgstr "הגדרות ייצוא גרף"
 
 #: gexport.php:569
-#, fuzzy
 msgid "Exports"
 msgstr "ייצואים"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "ברירת מחדל"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "עבור"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "נקה"
@@ -436,7 +469,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "מזהה פנימי של הגדרת ייצוא גרף."
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "תאריך משלוח"
 
@@ -456,7 +488,6 @@ msgid "The next time the Graph Export should run."
 msgstr "בפעם הבאה שהיצוא גרף צריך לפעול."
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "מאופשר"
 
@@ -466,7 +497,6 @@ msgid "If enabled, this Graph Export definition will run as required."
 msgstr "אם אפשרות זו מופעלת, הגדרת ייצוא גרף זו תפעל כנדרש."
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "סטטוס"
 
@@ -506,7 +536,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "זמן הריצה האחרון עבור ייצוא גרף."
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "גרפים"
 
@@ -537,27 +566,22 @@ msgstr "הפעם האחרונה שבה ייצוא גרף זה חווה שגיא�
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "לא זמין"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "לא"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "כן"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "ממתין"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "פועל"
 
@@ -567,22 +591,18 @@ msgid "Error"
 msgstr "שגיאה"
 
 #: gexport.php:774
-#, fuzzy
 msgid "All Sites"
 msgstr "כל האתרים"
 
 #: gexport.php:785
-#, fuzzy
 msgid "All Trees"
 msgstr "כל העצים"
 
 #: gexport.php:799
-#, fuzzy
 msgid "Sec"
 msgstr "שניות"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "לעולם לא"
 
@@ -607,7 +627,6 @@ msgid "Utilities"
 msgstr "כלי עזר"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "כללי"
 
@@ -628,17 +647,14 @@ msgid "Choose which export method to use."
 msgstr "בחר באיזו שיטת ייצוא להשתמש."
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "מקומי"
 
 #: setup.php:300
-#, fuzzy
 msgid "FTP"
 msgstr "FTP"
 
 #: setup.php:301
-#, fuzzy
 msgid "SFTP"
 msgstr "SFTP"
 
@@ -658,15 +674,16 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "ארגומנטים"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "ארגומנטים לשימוש בשיטות ייצוא לא מקומיות. rsync צריך להשתמש"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "תבנית"
 
@@ -694,12 +711,10 @@ msgstr ""
 "בעמוד אחד בלבד-HTML. אם תבחר מצגת עץ, הארכיטקטורה עץ גרף יישמר דפי HTML סטטי"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "אתר"
 
 #: setup.php:336 setup.php:419
-#, fuzzy
 msgid "Tree"
 msgstr "עץ"
 
@@ -782,15 +797,19 @@ msgstr ""
 "19:00."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "השתמש x Threads"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"כמה שרשורי רקע אתה רוצה Cacti להשתמש בעת ייצוא גרפים. ברירת המחדל היא 0 כדי "
+"להפעיל את כל הייצוא ב פתיל פתיל, 1 או יותר שרצים נפרדים הרקע נושאים"
 
 #: setup.php:405
 #, fuzzy
@@ -829,12 +848,10 @@ msgstr ""
 "נתונים."
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "כבוי"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "ב"
 
@@ -986,9 +1003,8 @@ msgstr ""
 "בשימוש רק בעת שימוש בפונקציות PHP המובנות ב- PHP."
 
 #: setup.php:539
-#, fuzzy
 msgid "Remote Host"
-msgstr "מרחוק מארח"
+msgstr "‫Remote Host"
 
 #: setup.php:540
 #, fuzzy
@@ -1019,7 +1035,6 @@ msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "בדוק אם ברצונך להתחבר במצב פסיבי לשרת ה- FTP."
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "משתמש"
 
@@ -1029,7 +1044,6 @@ msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "חשבון להתחברות לשרת המרוחק (השאר ריק לברירות מחדל)."
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "סיסמה"
 
@@ -1054,11 +1068,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "ייצוא קקטוסים גרף דפים"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(עריכה)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "פעולות"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:43-0400\n"
+"PO-Revision-Date: 2019-07-21 21:11-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ko_KR\n"
@@ -16,198 +16,244 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "성공"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "구문 또는 사용 오류"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "프로토콜 비 호환성"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "입 / 출력 파일, 디렉토리 선택 오류"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"요청 된 동작이 지원되지 않음 : 64 비트 파일을 지원할 수없는 플랫폼에서 64 비"
+"트 파일을 조작하려는 시도가있었습니다. 또는 서버가 아닌 클라이언트가 지원하"
+"는 옵션이 지정되었습니다."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "클라이언트 - 서버 프로토콜 시작 오류"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "데몬이 로그 파일에 추가 할 수 없음"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "소켓 I / O 오류"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "파일 I / O 오류"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "rsync 프로토콜 데이터 스트림의 오류"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "프로그램 진단을 통한 오류"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "IPC 코드 오류"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "받은 SIGUSR1 또는 SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "waitpid ()에 의해 반환 된 일부 오류"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "코어 메모리 버퍼 할당 오류"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "오류로 인해 부분 전송"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "사라진 소스 파일로 인한 부분 전송"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "--max-delete 제한으로 삭제가 중지되었습니다."
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "데이터 송수신시 제한 시간"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "데몬 연결을 기다리는 시간 초과"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "알수없는 오류"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "작업이 성공적으로 완료되었습니다."
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "파일 사본의 일반 오류"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "대상은 디렉토리가 아니지만 있어야합니다."
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "최대 심볼릭 링크 레벨 초과"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "호스트에 연결하지 못했습니다."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "연결이 끊어짐"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "파일이 없습니다"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "파일에 액세스 할 수있는 권한이 없습니다."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "SFTP 프로토콜의 일반 오류"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "파일 전송 프로토콜 불일치"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "지정된 기준과 일치하는 파일이 없습니다."
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "호스트 연결이 허용되지 않음"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "ssh 프로토콜의 일반 오류"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "키 교환 실패"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "예약됨"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MAC 오류"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "압축 오류"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "서비스를 사용할 수 없음"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "지원되지 않는 프로토콜 버전"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "호스트 키를 확인할 수 없음"
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr ""
+msgstr "연결에 실패"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "애플리케이션에 의해 연결 해제 됨"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "너무 많은 연결"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "사용자가 인증을 취소했습니다."
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "더 이상 사용할 수있는 인증 방법이 없습니다."
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "잘못된 사용자 이름"
 
 #: functions.php:1504 functions.php:1667
 #, fuzzy
@@ -225,17 +271,14 @@ msgid "Data Queries"
 msgstr "데이터 쿼리"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "삭제"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "활성화"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "비활성화"
 
@@ -250,12 +293,10 @@ msgid "Periodic"
 msgstr "주기율표"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "매일"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "매시간 마다"
 
@@ -267,7 +308,7 @@ msgstr[0] "다음 그래프 내보내기 정의를 삭제하려면 '계속'을 �
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: gexport.php:262
 #, fuzzy
@@ -277,7 +318,7 @@ msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 비�
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "계속"
 
 #: gexport.php:267
 #, fuzzy
@@ -313,7 +354,7 @@ msgstr "그래프 내보내기 정의를 하나 이상 선택해야합니다."
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "반환"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -341,17 +382,14 @@ msgid "All Trees Selected"
 msgstr "선택한 모든 나무"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "모두"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "없음"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "검색"
 
@@ -376,23 +414,19 @@ msgid "Graph Export Definitions"
 msgstr "그래프 내보내기 정의"
 
 #: gexport.php:569
-#, fuzzy
 msgid "Exports"
 msgstr "내보내기"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "기본값"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "가기"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "지우기"
@@ -413,7 +447,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "이 그래프 내보내기 정의의 이름입니다."
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -423,7 +456,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "그래프 내보내기 정의의 내부 ID입니다."
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "일정"
 
@@ -443,7 +475,6 @@ msgid "The next time the Graph Export should run."
 msgstr "다음에 그래프 내보내기를 실행해야합니다."
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "활성화"
 
@@ -453,7 +484,6 @@ msgid "If enabled, this Graph Export definition will run as required."
 msgstr "활성화 된 경우이 그래프 내보내기 정의가 필요에 따라 실행됩니다."
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "상태"
 
@@ -493,7 +523,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "그래프 내보내기의 마지막 런타임입니다."
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "그래프 "
 
@@ -524,27 +553,22 @@ msgstr "이 그래프 내보내기에 마지막으로 오류가 발생했습니�
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "N/A"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "아니오"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "예"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "게으른"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "실행 중"
 
@@ -554,7 +578,6 @@ msgid "Error"
 msgstr "오류"
 
 #: gexport.php:774
-#, fuzzy
 msgid "All Sites"
 msgstr "모든 사이트"
 
@@ -564,12 +587,10 @@ msgid "All Trees"
 msgstr "모든 나무"
 
 #: gexport.php:799
-#, fuzzy
 msgid "Sec"
 msgstr "초"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "안함"
 
@@ -589,12 +610,10 @@ msgid "Graph Exports"
 msgstr "그래프 내보내기"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "도구 "
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "일반"
 
@@ -615,7 +634,6 @@ msgid "Choose which export method to use."
 msgstr "사용할 내보낼 방법을 선택하십시오."
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "로컬"
 
@@ -645,15 +663,16 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "내보내기 명령 인수"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "비 로컬 내보내기 메소드에서 사용할 인수. rsync에서 사용해야합니다."
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "테마"
 
@@ -683,7 +702,6 @@ msgstr ""
 "테이션을 선택하면 그래프 트리 아키텍처가 고정 html 페이지에 보관됩니다"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "사이트"
 
@@ -769,15 +787,20 @@ msgstr ""
 "값을 반올림합니다. 예를 들어 21:23은 오후 9시 20 분에 해당합니다."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "x 스레드 사용"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"선인장이 그래프를 내보낼 때 얼마나 많은 백그라운드 스레드를 사용하길 원하십니"
+"까? 폴러 스레드에서 모든 내보내기를 실행하려면 0, 별도의 백그라운드 스레드를 "
+"생성하려면 1 이상"
 
 #: setup.php:405
 #, fuzzy
@@ -817,12 +840,10 @@ msgstr ""
 "함 된 하위 폴더가 있습니다."
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "끄기"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "켜기"
 
@@ -923,7 +944,6 @@ msgid ""
 msgstr "이 그래프 내보내기 정의를 활성화하려면이 확인란을 선택하십시오."
 
 #: setup.php:513
-#, fuzzy
 msgid "Export Directory"
 msgstr "내보내기 디렉토리"
 
@@ -1006,7 +1026,6 @@ msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "수동 모드에서 FTP 서버에 연결하려면이 옵션을 선택하십시오."
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "사용자"
 
@@ -1016,7 +1035,6 @@ msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "원격 서버에 로그온 할 계정 (기본값의 경우 비워 두십시오)."
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "비밀번호"
 
@@ -1041,11 +1059,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "수출 Cacti 그래프 페이지"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(편집)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "작업"

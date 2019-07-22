@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:59-0400\n"
+"PO-Revision-Date: 2019-07-21 21:19-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -16,198 +16,244 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "語法或用法錯誤"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "協議不兼容"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "選擇輸入/輸出文件，dirs的錯誤"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"不支持請求的操作：嘗試在不支持它們的平台上操作64位文件;或者指定了客戶端而不是"
+"服務器支持的選項。"
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "啟動客戶端 - 服務器協議時出錯"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "守護程序無法附加到日誌文件"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "套接字I / O出錯"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "文件I / O出錯"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "rsync協議數據流出錯"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "程序診斷錯誤"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "IPC代碼出錯"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "收到SIGUSR1或SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "waitpid（）返回的一些錯誤"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "分配核心內存緩衝區時出錯"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "由於錯誤導致的部分轉移"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "由於源文件消失導致部分傳輸"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "--max-delete限制停止刪除"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "數據發送/接收超時"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "超時等待守護程序連接"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "未知錯誤"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "操作成功"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "文件複製中的常規錯誤"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "目標不是目錄，但它應該是"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "超出最大符號鏈接級別"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "連接到主機失敗。"
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "連接壞了"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "檔案不存在"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "無權訪問文件。"
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "sftp協議中的一般錯誤"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "文件傳輸協議不匹配"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "沒有文件符合給定條件"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "主機不允許連接"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "ssh協議中的一般錯誤"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "密鑰交換失敗"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "預訂"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MAC錯誤"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "壓縮錯誤"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "服務不可用"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "協議版本不受支持"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "主機密鑰不可驗證"
 
 #: functions.php:397
+#, fuzzy
 msgid "Connection failed"
-msgstr ""
+msgstr "連接失敗"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "應用程序斷開連接"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "太多聯繫"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "用戶取消身份驗證"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "沒有更多的身份驗證方法"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "無效的用戶名"
 
 #: functions.php:1504 functions.php:1667
 #, fuzzy
@@ -225,37 +271,30 @@ msgid "Data Queries"
 msgstr "數據查詢"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "刪除"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "啟用"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "停用"
 
 #: gexport.php:33
-#, fuzzy
 msgid "Export Now"
 msgstr "匯出"
 
 #: gexport.php:37 setup.php:350
-#, fuzzy
 msgid "Periodic"
 msgstr "週期"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "每日"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "每小時"
 
@@ -267,7 +306,7 @@ msgstr[0] "單擊“繼續”以刪除以下圖形導出定義。"
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: gexport.php:262
 #, fuzzy
@@ -277,7 +316,7 @@ msgstr[0] "單擊“繼續”以禁用以下圖形導出定義。"
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "繼續"
 
 #: gexport.php:267
 #, fuzzy
@@ -313,7 +352,7 @@ msgstr "您必須至少選擇一個圖形導出定義。"
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "返回"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -341,17 +380,14 @@ msgid "All Trees Selected"
 msgstr "選擇所有樹木"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "全部"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "無"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "搜尋"
 
@@ -376,23 +412,19 @@ msgid "Graph Export Definitions"
 msgstr "圖形導出定義"
 
 #: gexport.php:569
-#, fuzzy
 msgid "Exports"
 msgstr "輸出"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "預設"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "送出"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "清除"
@@ -403,7 +435,6 @@ msgid "Export Definitions"
 msgstr "出口定義"
 
 #: gexport.php:710 setup.php:277
-#, fuzzy
 msgid "Export Name"
 msgstr "導出名稱"
 
@@ -413,7 +444,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "此圖形導出定義的名稱。"
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -423,7 +453,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "圖形導出定義的內部ID。"
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "排程"
 
@@ -443,7 +472,6 @@ msgid "The next time the Graph Export should run."
 msgstr "下次運行Graph Export時。"
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "啟用"
 
@@ -453,7 +481,6 @@ msgid "If enabled, this Graph Export definition will run as required."
 msgstr "如果啟用，則此圖形導出定義將根據需要運行。"
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "狀態"
 
@@ -493,7 +520,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "圖形導出的最後一個運行時。"
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "圖表"
 
@@ -524,27 +550,22 @@ msgstr "此圖表導出最後一次出現錯誤。"
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "不适用"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "否"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "是"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "閒置"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "運行"
 
@@ -554,7 +575,6 @@ msgid "Error"
 msgstr "錯誤"
 
 #: gexport.php:774
-#, fuzzy
 msgid "All Sites"
 msgstr "所有網站"
 
@@ -564,12 +584,10 @@ msgid "All Trees"
 msgstr "所有樹木"
 
 #: gexport.php:799
-#, fuzzy
 msgid "Sec"
 msgstr "秒"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "從不"
 
@@ -589,12 +607,10 @@ msgid "Graph Exports"
 msgstr "圖表導出"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "公用程式"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "一般"
 
@@ -615,7 +631,6 @@ msgid "Choose which export method to use."
 msgstr "選擇要使用的導出方法。"
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "本地"
 
@@ -625,7 +640,6 @@ msgid "FTP"
 msgstr "FTP"
 
 #: setup.php:301
-#, fuzzy
 msgid "SFTP"
 msgstr "SFTP"
 
@@ -645,15 +659,16 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "導出命令參數"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "與非本地導出方法一起使用的參數。 rsync應該使用"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "佈景主題"
 
@@ -681,12 +696,10 @@ msgstr ""
 "html頁面中。如果選擇樹表示，則圖樹結構將保留在靜態html頁面中"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "網站"
 
 #: setup.php:336 setup.php:419
-#, fuzzy
 msgid "Tree"
 msgstr "樹"
 
@@ -765,15 +778,19 @@ msgstr ""
 "將在晚上9點後等於20分鐘。"
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "使用x線程"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"您希望Cacti在導出圖形時使用多少個後台線程。默認值為0以在輪詢器線程中運行所有"
+"導出，1或更多以生成單獨的後台線程"
 
 #: setup.php:405
 #, fuzzy
@@ -811,12 +828,10 @@ msgstr ""
 "有包含圖表模板或數據查詢項的子文件夾。"
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "關"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "開"
 
@@ -994,7 +1009,6 @@ msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "如果要以被動模式連接到FTP服務器，請選中此項。"
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "使用者"
 
@@ -1004,7 +1018,6 @@ msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "帳戶登錄遠程服務器（默認為空）。"
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "密碼"
 
@@ -1029,11 +1042,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "導出的仙人掌圖頁"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(編輯)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "動作"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 21:41-0400\n"
+"PO-Revision-Date: 2019-07-21 21:11-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -16,198 +16,243 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "構文エラーまたは使用方法エラー"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "プロトコルの非互換性"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "入出力ファイルの選択エラー、ディレクトリ"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"要求されたアクションはサポートされていません：サポートできないプラットフォー"
+"ムで64ビットファイルを操作しようとしました。または、サーバーではなくクライア"
+"ントによってサポートされているオプションが指定されました。"
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "クライアント/サーバープロトコルの起動エラー"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "デーモンはログファイルに追加できません"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "ソケット入出力エラー"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "ファイル入出力エラー"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "rsyncプロトコルデータストリームのエラー"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "プログラム診断のエラー"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "IPCコードのエラー"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "SIGUSR1またはSIGINTを受け取りました"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "waitpid（）から返されるエラー"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "コアメモリバッファの割り当てエラー"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "エラーによる部分転送"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "ソースファイルの消失による部分転送"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "--max-delete制限により削除が停止されました"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "データ送受信のタイムアウト"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "デーモン接続待ちタイムアウト"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "未知のエラー"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "操作は成功しました"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "ファイルコピー中の一般エラー"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "目的地はディレクトリではありませんが、それはあるべきです"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "最大シンボリックリンクレベルを超えました"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "ホストへの接続に失敗しました。"
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "接続が切れました"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "ファイルが存在しません"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "ファイルにアクセスする権限がありません。"
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "sftpプロトコルの一般エラー"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "ファイル転送プロトコルの不一致"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "指定された条件に一致するファイルがありません"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "ホストは接続を許可されていません"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "SSHプロトコルの一般エラー"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "鍵交換に失敗しました"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "予約済み"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MACエラー"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "圧縮エラー"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "サービスは利用できません"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "プロトコルバージョンはサポートされていません"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "ホスト鍵を検証できません"
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr ""
+msgstr "接続に失敗しました"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "アプリケーションによって切断されました"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "あまりにも多くの接続"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "ユーザーによって認証がキャンセルされました"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "これ以上利用できる認証方法はありません"
 
 #: functions.php:402
 msgid "Invalid user name"
-msgstr ""
+msgstr "無効なユーザー名"
 
 #: functions.php:1504 functions.php:1667
 #, fuzzy
@@ -215,32 +260,26 @@ msgid "Non Query Based"
 msgstr "非クエリベース"
 
 #: functions.php:1751
-#, fuzzy
 msgid "Graph Templates"
 msgstr "グラフテンプレート"
 
 #: functions.php:1780
-#, fuzzy
 msgid "Data Queries"
 msgstr "データ問合せ"
 
 #: gexport.php:30
-#, fuzzy
 msgid "Delete"
 msgstr "削除"
 
 #: gexport.php:31
-#, fuzzy
 msgid "Enable"
 msgstr "有効"
 
 #: gexport.php:32
-#, fuzzy
 msgid "Disable"
 msgstr "無効"
 
 #: gexport.php:33
-#, fuzzy
 msgid "Export Now"
 msgstr "エクスポート"
 
@@ -250,12 +289,10 @@ msgid "Periodic"
 msgstr "定期的"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "毎日"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "一時間ごと"
 
@@ -267,7 +304,7 @@ msgstr[0] "[続行]をクリックして、次のグラフエクスポート定�
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "取り消し"
 
 #: gexport.php:262
 #, fuzzy
@@ -278,7 +315,7 @@ msgstr[0] ""
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "続ける"
 
 #: gexport.php:267
 #, fuzzy
@@ -316,7 +353,7 @@ msgstr "少なくとも1つのグラフエクスポート定義を選択する�
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "帰還"
 
 #: gexport.php:345
 #, fuzzy, php-format
@@ -344,17 +381,14 @@ msgid "All Trees Selected"
 msgstr "選択したすべての木"
 
 #: gexport.php:384 gexport.php:430
-#, fuzzy
 msgid "All"
 msgstr "すべて"
 
 #: gexport.php:385 gexport.php:431
-#, fuzzy
 msgid "None"
 msgstr "なし"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
-#, fuzzy
 msgid "Search"
 msgstr "検索"
 
@@ -379,23 +413,19 @@ msgid "Graph Export Definitions"
 msgstr "グラフエクスポート定義"
 
 #: gexport.php:569
-#, fuzzy
 msgid "Exports"
 msgstr "エクスポート"
 
 #: gexport.php:573
-#, fuzzy
 msgid "Default"
 msgstr "デフォルト"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Go"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "クリア"
@@ -406,7 +436,6 @@ msgid "Export Definitions"
 msgstr "エクスポート定義"
 
 #: gexport.php:710 setup.php:277
-#, fuzzy
 msgid "Export Name"
 msgstr "出力名"
 
@@ -416,7 +445,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "このグラフエクスポート定義の名前。"
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -426,7 +454,6 @@ msgid "The internal ID of the Graph Export Definition."
 msgstr "グラフエクスポート定義の内部ID。"
 
 #: gexport.php:712
-#, fuzzy
 msgid "Schedule"
 msgstr "スケジュール"
 
@@ -446,7 +473,6 @@ msgid "The next time the Graph Export should run."
 msgstr "次回グラフエクスポートを実行する必要があります。"
 
 #: gexport.php:714 setup.php:286
-#, fuzzy
 msgid "Enabled"
 msgstr "有効"
 
@@ -456,7 +482,6 @@ msgid "If enabled, this Graph Export definition will run as required."
 msgstr "有効にすると、このグラフエクスポート定義は必要に応じて実行されます。"
 
 #: gexport.php:715
-#, fuzzy
 msgid "Status"
 msgstr "状態"
 
@@ -496,7 +521,6 @@ msgid "The last runtime for the Graph Export."
 msgstr "グラフエクスポートの最後のランタイム。"
 
 #: gexport.php:720
-#, fuzzy
 msgid "Graphs"
 msgstr "グラフ"
 
@@ -527,37 +551,30 @@ msgstr "このグラフエクスポートで最後にエラーが発生した時
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
-#, fuzzy
 msgid "N/A"
 msgstr "該当なし"
 
 #: gexport.php:758
-#, fuzzy
 msgid "No"
 msgstr "いいえ"
 
 #: gexport.php:758
-#, fuzzy
 msgid "Yes"
 msgstr "はい"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "待機"
 
 #: gexport.php:765
-#, fuzzy
 msgid "Running"
 msgstr "実行中"
 
 #: gexport.php:768
-#, fuzzy
 msgid "Error"
 msgstr "エラー"
 
 #: gexport.php:774
-#, fuzzy
 msgid "All Sites"
 msgstr "すべてのサイト"
 
@@ -572,7 +589,6 @@ msgid "Sec"
 msgstr "秒"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "決して"
 
@@ -592,12 +608,10 @@ msgid "Graph Exports"
 msgstr "グラフのエクスポート"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "ユーティリティ"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "一般"
 
@@ -620,17 +634,14 @@ msgid "Choose which export method to use."
 msgstr "使用するエクスポート方法を選択してください。"
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "ローカル"
 
 #: setup.php:300
-#, fuzzy
 msgid "FTP"
 msgstr "FTP"
 
 #: setup.php:301
-#, fuzzy
 msgid "SFTP"
 msgstr "SFTP"
 
@@ -640,7 +651,6 @@ msgid "FTP NC"
 msgstr "FTP NC"
 
 #: setup.php:303
-#, fuzzy
 msgid "SCP"
 msgstr "SCP"
 
@@ -650,15 +660,16 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "エクスポートコマンド引数"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "非ローカルのエクスポート方法で使用する引数。 rsyncは使うべきです"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "テーマ"
 
@@ -690,7 +701,6 @@ msgstr ""
 "れます。"
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "サイト"
 
@@ -778,15 +788,20 @@ msgstr ""
 "20分です。"
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "x個のスレッドを使用"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"グラフをエクスポートするときにCactiにバックグラウンドスレッドをいくつ使用させ"
+"たいですか。デフォルトは、すべてのエクスポートをポーラースレッドで実行する場"
+"合は1、別のバックグラウンドスレッドを生成する場合は1以上です。"
 
 #: setup.php:405
 #, fuzzy
@@ -826,12 +841,10 @@ msgstr ""
 "Query項目を含むサブフォルダを持ちます。"
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "オフ"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "オン"
 
@@ -987,7 +1000,6 @@ msgstr ""
 "のみ使用されます。"
 
 #: setup.php:539
-#, fuzzy
 msgid "Remote Host"
 msgstr "リモートホスト"
 
@@ -1022,7 +1034,6 @@ msgstr ""
 "FTPサーバーにパッシブモードで接続したい場合はこれをチェックしてください。"
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "ユーザー"
 
@@ -1032,7 +1043,6 @@ msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "リモートサーバーにログオンするためのアカウント（デフォルトは空欄）"
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "パスワード"
 
@@ -1057,11 +1067,9 @@ msgid "Exported Cacti Graph Pages"
 msgstr "エクスポートされたサボテングラフページ"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(編集)"
 
 #: setup.php:602
-#, fuzzy
 msgid "Actions"
 msgstr "操作"

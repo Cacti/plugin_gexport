@@ -8,207 +8,253 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-04-01 21:12+0000\n"
+"PO-Revision-Date: 2019-07-21 21:07-0400\n"
 "Last-Translator: Javier Pobeda <javier.pobeda@pm.me>\n"
 "Language-Team: Spanish <http://translate.cacti.net/projects/cacti/gexport/es-"
 "ES/>\n"
-"Language: es-ES\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4-dev\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "Exitoso"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "Sintaxis o error de uso"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "Incompatibilidad de protocolos"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "Errores al seleccionar archivos de entrada/salida, dirs"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"Acción solicitada no soportada: se ha intentado manipular archivos de 64 "
+"bits en una plataforma que no los soporta; o se ha especificado una opción "
+"soportada por el cliente y no por el servidor."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "Error al iniciar el protocolo cliente-servidor"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "El demonio no puede añadir al archivo de registro"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "Error en el zócalo I/O"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "Error en el archivo I/O"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "Error en el flujo de datos del protocolo rsync"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "Errores en el diagnóstico del programa"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "Error en el código de la CIP"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "SIGUSR1 o SIGINT recibido"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "Algún error devuelto por waitpid()"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "Error en la asignación de búferes de memoria central"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "Transferencia parcial por error"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "Transferencia parcial debido a la desaparición de los archivos fuente"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "El límite --max-delete limit detuvo las eliminaciones"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "Timeout en el envío y recepción de datos"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "Tiempo de espera para la conexión con el demonio"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "Error desconocido"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "La operación fue un éxito"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "Error general en la copia del archivo"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "El destino no es el directorio, pero debería ser"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "Se ha superado el nivel máximo del enlace simbólico"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "Fallo en la conexión al host."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "Conexión rota"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "El archivo no existe"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "No hay permiso para acceder al archivo."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "Error general en el protocolo sftp"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "Desadaptación del protocolo de transferencia de archivos"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "Ningún archivo coincide con un criterio dado"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "El host no puede conectarse"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "Error general en el protocolo ssh"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "Fallo en el intercambio de claves"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "Reservado"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "Error MAC"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "Error de compresión"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "Servicio no disponible"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "Versión de protocolo no soportada"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "La clave del host no es verificable"
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr ""
+msgstr "La conexión falló"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "Desconectado por aplicación"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "Demasiadas conexiones"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "Autenticación cancelada por el usuario"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "No hay más métodos de autenticación disponibles"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "Nombre de usuario no válido"
 
 #: functions.php:1504 functions.php:1667
 msgid "Non Query Based"
@@ -219,7 +265,6 @@ msgid "Graph Templates"
 msgstr "Plantilla de gráficos"
 
 #: functions.php:1780
-#, fuzzy
 msgid "Data Queries"
 msgstr "Consultas de datos"
 
@@ -246,12 +291,10 @@ msgid "Periodic"
 msgstr "Periódico"
 
 #: gexport.php:38 setup.php:352
-#, fuzzy
 msgid "Daily"
 msgstr "Diario"
 
 #: gexport.php:39 setup.php:351
-#, fuzzy
 msgid "Hourly"
 msgstr "Cada hora"
 
@@ -283,7 +326,7 @@ msgstr[1] ""
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: gexport.php:267
 #, fuzzy
@@ -390,7 +433,6 @@ msgid "Graph Export Definitions"
 msgstr "Definiciones de exportación de gráficos"
 
 #: gexport.php:569
-#, fuzzy
 msgid "Exports"
 msgstr "Exportar"
 
@@ -399,13 +441,11 @@ msgid "Default"
 msgstr "Por defecto"
 
 #: gexport.php:585
-#, fuzzy
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Ir"
 
 #: gexport.php:586
-#, fuzzy
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Restablecer"
@@ -426,7 +466,6 @@ msgid "The name of this Graph Export Definition."
 msgstr "El nombre de esta definición de exportación de gráficos."
 
 #: gexport.php:711
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -445,7 +484,6 @@ msgid "The frequency that Graphs will be exported."
 msgstr "La frecuencia con la que se exportarán los gráficos."
 
 #: gexport.php:713
-#, fuzzy
 msgid "Next Start"
 msgstr "Próximo inicio"
 
@@ -485,7 +523,6 @@ msgid "What is being Exported."
 msgstr "Qué se está exportando."
 
 #: gexport.php:718 setup.php:410
-#, fuzzy
 msgid "Effective User"
 msgstr "Usuario en uso"
 
@@ -495,7 +532,6 @@ msgid "The user that this export will impersonate."
 msgstr "El usuario al que se suplantará esta exportación."
 
 #: gexport.php:719
-#, fuzzy
 msgid "Last Runtime"
 msgstr "Ultima ejecución"
 
@@ -514,7 +550,6 @@ msgid "The number of Graphs Exported on the last run."
 msgstr "El número de gráficos exportados en la última ejecución."
 
 #: gexport.php:721
-#, fuzzy
 msgid "Last Started"
 msgstr "Ultima vez iniciado"
 
@@ -547,7 +582,6 @@ msgid "Yes"
 msgstr "Sí"
 
 #: gexport.php:762
-#, fuzzy
 msgid "Idle"
 msgstr "Ocioso"
 
@@ -565,17 +599,14 @@ msgid "All Sites"
 msgstr "Todos los sitios"
 
 #: gexport.php:785
-#, fuzzy
 msgid "All Trees"
-msgstr "Todos los árboles"
+msgstr "Todos los Arboles"
 
 #: gexport.php:799
-#, fuzzy
 msgid "Sec"
 msgstr "Seg"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
-#, fuzzy
 msgid "Never"
 msgstr "Nunca"
 
@@ -595,12 +626,10 @@ msgid "Graph Exports"
 msgstr "Exportación de Gráficos"
 
 #: setup.php:265
-#, fuzzy
 msgid "Utilities"
 msgstr "Utilidades"
 
 #: setup.php:272
-#, fuzzy
 msgid "General"
 msgstr "General"
 
@@ -623,17 +652,14 @@ msgid "Choose which export method to use."
 msgstr "Seleccione el método de exportación que desea utilizar."
 
 #: setup.php:299
-#, fuzzy
 msgid "Local"
 msgstr "Local"
 
 #: setup.php:300
-#, fuzzy
 msgid "FTP"
 msgstr "FTP"
 
 #: setup.php:301
-#, fuzzy
 msgid "SFTP"
 msgstr "SFTP"
 
@@ -653,15 +679,18 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "Argumentos del comando Exportar"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr ""
+"Argumentos a utilizar con métodos de exportación no locales. rsync debería "
+"utilizar"
 
 #: setup.php:321
-#, fuzzy
 msgid "Theme"
 msgstr "Tema"
 
@@ -693,12 +722,10 @@ msgstr ""
 "mantendrá en las páginas html estáticas."
 
 #: setup.php:335 setup.php:438
-#, fuzzy
 msgid "Site"
 msgstr "Sitio"
 
 #: setup.php:336 setup.php:419
-#, fuzzy
 msgid "Tree"
 msgstr "Arbol"
 
@@ -783,15 +810,20 @@ msgstr ""
 "minutos después de las 9 PM."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "Usar x Hilos"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"¿Cuántos hilos de fondo desea que Cacti utilice al exportar gráficos?  Por "
+"defecto es 0 para ejecutar toda la exportación en la rosca del encuestador, "
+"1 o más para generar roscas de fondo separadas"
 
 #: setup.php:405
 #, fuzzy
@@ -833,12 +865,10 @@ msgstr ""
 "de consulta de datos."
 
 #: setup.php:433
-#, fuzzy
 msgid "Off"
 msgstr "Apagado"
 
 #: setup.php:434
-#, fuzzy
 msgid "On"
 msgstr "Encendido"
 
@@ -892,7 +922,6 @@ msgstr ""
 "gráficos."
 
 #: setup.php:479
-#, fuzzy
 msgid "Graphs Per Page"
 msgstr "Gráficos por página"
 
@@ -998,7 +1027,6 @@ msgstr ""
 "funciones ftp incorporadas de PHP."
 
 #: setup.php:539
-#, fuzzy
 msgid "Remote Host"
 msgstr "Nombre del servidor remoto:"
 
@@ -1008,7 +1036,6 @@ msgid "Denotes the host to send Exported Graphs to."
 msgstr "Indica el host al que se enviarán los gráficos exportados."
 
 #: setup.php:547
-#, fuzzy
 msgid "Remote Port"
 msgstr "Puerto Remoto"
 
@@ -1032,7 +1059,6 @@ msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "Compruebe esto si desea conectarse en modo pasivo al servidor FTP."
 
 #: setup.php:562
-#, fuzzy
 msgid "User"
 msgstr "Usuario"
 
@@ -1044,7 +1070,6 @@ msgstr ""
 "valores predeterminados)."
 
 #: setup.php:570
-#, fuzzy
 msgid "Password"
 msgstr "Contraseña"
 
@@ -1054,9 +1079,8 @@ msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "Contraseña para la cuenta ftp remota (dejar en blanco)."
 
 #: setup.php:578
-#, fuzzy
 msgid "Private Key Path"
-msgstr "Ruta de clave privada"
+msgstr "Ruta de la clave privada"
 
 #: setup.php:579
 #, fuzzy
@@ -1069,7 +1093,6 @@ msgid "Exported Cacti Graph Pages"
 msgstr "Páginas de gráficos de cactus exportados"
 
 #: setup.php:596
-#, fuzzy
 msgid "(Edit)"
 msgstr "(Editar)"
 
