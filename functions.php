@@ -743,7 +743,7 @@ function export_graphs(&$export, $export_path) {
 			}
 		}
 	}else{
-		if ($sites != '0') {
+		if ($sites != '') {
 			$hosts = db_fetch_cell('SELECT GROUP_CONCAT(id) FROM host WHERE site_id IN(' . $sites . ')');
 		}
 

@@ -563,7 +563,7 @@ function export_filter() {
 						<?php print __('Search', 'gexport');?>
 					</td>
 					<td>
-						<input type='text' id='filter' size='25' value='<?php print get_request_var('filter');?>'>
+						<input type='text' id='filter' size='25' value='<?php print html_escape_request_var('filter');?>'>
 					</td>
 					<td>
 						<?php print __('Exports', 'gexport');?>
@@ -633,7 +633,7 @@ function export_filter() {
 function get_export_records(&$total_rows, &$rows) {
 	/* form the 'where' clause for our main sql query */
 	if (get_request_var('filter') != '') {
-		$sql_where = "WHERE (name LIKE '%" . get_request_var('filter') . "%')";
+		$sql_where = 'WHERE (name LIKE ' . db_qstr('%' . get_request_var('filter') . '%') . ')';
 	} else {
 		$sql_where = '';
 	}
@@ -665,10 +665,9 @@ function gexport($refresh = true) {
 			'default' => '1'
 			),
 		'filter' => array(
-			'filter' => FILTER_CALLBACK,
+			'filter' => FILTER_DEFAULT,
 			'pageset' => true,
-			'default' => '',
-			'options' => array('options' => 'sanitize_search_string')
+			'default' => ''
 			),
 		'sort_column' => array(
 			'filter' => FILTER_CALLBACK,
@@ -698,29 +697,86 @@ function gexport($refresh = true) {
 
 	$exports = get_export_records($total_rows, $rows);
 
-	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, 5, __('Export Definitions', 'gexport'), 'page', 'main');
+	$display_text = array(
+		'name' => array(
+			'display' => __('Export Name', 'gexport'),
+			'align' => 'left',
+			'sort' => 'ASC',
+			'tip' => __('The name of this Graph Export Definition.', 'gexport')
+		),
+		'id' => array(
+			'display' => __('ID', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The internal ID of the Graph Export Definition.', 'gexport')
+		),
+		'export_timing' => array(
+			'display' => __('Schedule', 'gexport'),
+			'align' => 'right',
+			'sort' => 'DESC',
+			'tip' => __('The frequency that Graphs will be exported.', 'gexport')
+		),
+		'next_start' => array(
+			'display' => __('Next Start', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The next time the Graph Export should run.', 'gexport')
+		),
+		'nosort' => array(
+			'display' => __('Enabled', 'gexport'),
+			'align' => 'right',
+			'tip' => __('If enabled, this Graph Export definition will run as required.', 'gexport')
+		),
+		'status' => array(
+			'display' => __('Status', 'gexport'),
+			'align' => 'right',
+			'tip' => __('The current Graph Export Status.', 'gexport')
+		),
+		'nosort1' => array(
+			'display' => __('Exporting (Sites/Trees)', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('What is being Exported.', 'gexport')
+		),
+		'export_effective_user' => array(
+			'display' => __('Effective User', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The user that this export will impersonate.', 'gexport')
+		),
+		'last_runtime' => array(
+			'display' => __('Last Runtime', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The last runtime for the Graph Export.', 'gexport')
+		),
+		'total_graphs' => array(
+			'display' => __('Graphs', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The number of Graphs Exported on the last run.', 'gexport')
+		),
+		'last_started' => array(
+			'display' => __('Last Started', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The last time that this Graph Export was started.', 'gexport')
+		),
+		'last_errored' => array(
+			'display' => __('Last Errored', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The last time that this Graph Export experienced an error.', 'gexport')
+		)
+	);
+
+	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, sizeof($display_text) + 1, __('Export Definitions', 'gexport'), 'page', 'main');
 
 	form_start('gexport.php', 'chk');
 
     print $nav;
 
 	html_start_box('', '100%', '', '3', 'center', '');
-
-	$display_text = array(
-		'name' => array('display' => __('Export Name', 'gexport'), 'align' => 'left', 'sort' => 'ASC', 'tip' => __('The name of this Graph Export Definition.', 'gexport')),
-		'id' => array('display' => __('ID', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The internal ID of the Graph Export Definition.', 'gexport')),
-		'export_timing' => array('display' => __('Schedule', 'gexport'), 'align' => 'right', 'sort' => 'DESC', 'tip' => __('The frequency that Graphs will be exported.', 'gexport')),
-		'next_start' => array('display' => __('Next Start', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The next time the Graph Export should run.', 'gexport')),
-		'nosort' => array('display' => __('Enabled', 'gexport'), 'align' => 'right', 'tip' => __('If enabled, this Graph Export definition will run as required.', 'gexport')),
-		'status' => array('display' => __('Status', 'gexport'), 'align' => 'right', 'tip' => __('The current Graph Export Status.', 'gexport')),
-
-		'nosort1' => array('display' => __('Exporting (Sites/Trees)', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('What is being Exported.', 'gexport')),
-		'export_effective_user' => array('display' => __('Effective User', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The user that this export will impersonate.', 'gexport')),
-		'last_runtime' => array('display' => __('Last Runtime', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last runtime for the Graph Export.', 'gexport')),
-		'total_graphs' => array('display' => __('Graphs', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The number of Graphs Exported on the last run.', 'gexport')),
-		'last_started' => array('display' => __('Last Started', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export was started.', 'gexport')),
-		'last_errored' => array('display' => __('Last Errored', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export experienced an error.', 'gexport'))
-	);
 
 	html_header_sort_checkbox($display_text, get_request_var('sort_column'), get_request_var('sort_direction'), false);
 
@@ -740,9 +796,9 @@ function gexport($refresh = true) {
 				}
 
 				if (!$running) {
-					db_execute_prepared('UPDATE graph_exports 
-						SET status=0, export_pid=0, last_error="Killed Outside Cacti", last_errored=NOW() 
-						WHERE id = ?', 
+					db_execute_prepared('UPDATE graph_exports
+						SET status=0, export_pid=0, last_error="Killed Outside Cacti", last_errored=NOW()
+						WHERE id = ?',
 						array($export['id']));
 				}
 			}

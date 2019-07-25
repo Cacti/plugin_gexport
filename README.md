@@ -45,6 +45,11 @@ Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
 
+--- develop ---
+
+* issue#37: Empty site variable may cause errors to appear
+* issue#38: Searching for graph exports does not work with some international characters
+
 --- 1.4.2 ---
 
 * issue#37: Empty site variable may cause errors to appear
