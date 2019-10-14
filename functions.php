@@ -776,7 +776,7 @@ function export_graphs(&$export, $export_path) {
 
 			$exported++;
 
-			if ($exported >= $export['graph_max']) {
+			if ($exported >= $export['graph_max'] && $export['graph_max'] > 0) {
 				db_execute_prepared('UPDATE graph_exports
 					SET last_error="WARNING: Max number of Graphs ' . $export['graph_max'] . ' reached",
 					last_errored=NOW()
