@@ -690,6 +690,8 @@ function export_graphs(&$export, $export_path) {
 		$user = -1;
 	}
 
+    export_debug('Export presentation is ' . $export['export_presentation']);
+
 	if ($export['export_presentation'] == 'tree') {
 		if ($trees != '0') {
 			$sql_where = 'gt.id IN(' . $trees . ')';
@@ -697,7 +699,7 @@ function export_graphs(&$export, $export_path) {
 
 		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
 
-		export_debug('There are ' . sizeof($trees) . ' to export');
+		export_debug('There are ' . sizeof($trees) . ' trees to export');
 
 		if (sizeof($trees)) {
 			foreach($trees as $tree) {
@@ -714,7 +716,7 @@ function export_graphs(&$export, $export_path) {
 				'local_graph_id', 'local_graph_id'
 			);
 
-			export_debug('There are ' . sizeof($graphs) . ' to export for all trees.');
+			export_debug('There are ' . sizeof($graphs) . ' graphs to export for all trees');
 
 			if (sizeof($graphs)) {
 				foreach($graphs as $local_graph_id) {
