@@ -704,19 +704,18 @@ function export_graphs(&$export, $export_path) {
 		if (sizeof($trees)) {
 			foreach($trees as $tree) {
 				$ntree[] = $tree['id'];
+                export_debug('Tree \'' . $tree['name'] . '\' with id \'' . $tree['id'] . '\' is allowed');
 			}
 		}
 
 		if (sizeof($ntree)) {
 			$graphs = array_rekey(
-				db_fetch_assoc('SELECT DISTINCT local_graph_id
+                db_fetch_assoc('SELECT DISTINCT local_graph_id
 					FROM graph_tree_items
 					WHERE local_graph_id > 0
 					AND graph_tree_id IN(' . implode(', ', $ntree) . ')'),
-				'local_graph_id', 'local_graph_id'
-			);
-
-			export_debug('There are ' . sizeof($graphs) . ' graphs to export for all trees');
+                'local_graph_id','local_graph_id'
+            );
 
 			if (sizeof($graphs)) {
 				foreach($graphs as $local_graph_id) {
@@ -726,10 +725,14 @@ function export_graphs(&$export, $export_path) {
 				}
 			}
 
+            export_debug('There are ' . sizeof($graphs) . ' graphs not in hosts to export for all trees');
+
 			$hosts = db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
 				FROM graph_tree_items
 				WHERE graph_tree_id IN(?)',
 				array(implode(', ', $ntree)));
+
+            export_debug('There are ' . sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
 
 			if ($hosts != '') {
 				$sql_where = 'gl.host_id IN(' . $hosts . ')';
@@ -743,6 +746,8 @@ function export_graphs(&$export, $export_path) {
 					}
 				}
 			}
+
+			export_debug('There are ' . sizeof($ngraph) . ' total graphs to export for all trees');
 		}
 	}else{
 		if ($sites != '') {
