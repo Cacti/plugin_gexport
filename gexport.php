@@ -1,7 +1,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2017 The Cacti Group                                 |
+ | Copyright (C) 2004-2020 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -105,9 +105,13 @@ function export_form_save() {
 		$save['graph_columns']           = form_input_validate(get_nfilter_request_var('graph_columns'), 'graph_columns', '^[0-9]+$', false, 3);
 		$save['graph_max']               = form_input_validate(get_nfilter_request_var('graph_max'), 'graph_max', '^[0-9]+$', false, 3);
 
+		$save['export_args']             = form_input_validate(get_nfilter_request_var('export_args'), 'export_args', '', false, 3);
+		$save['export_clear']            = isset_request_var('export_clear') ? 'on':'';
+		$save['export_thumbs']           = isset_request_var('export_thumbs') ? 'on':'';
 		$save['export_directory']        = form_input_validate(get_nfilter_request_var('export_directory'), 'export_directory', '', false, 3);
 		$save['export_temp_directory']   = form_input_validate(get_nfilter_request_var('export_temp_directory'), 'export_temp_directory', '', false, 3);
 		$save['export_timing']           = form_input_validate(get_nfilter_request_var('export_timing'), 'export_timing', '^periodic|hourly|daily$', false, 3);
+		$save['export_threads']          = form_input_validate(get_nfilter_request_var('export_threads'), 'export_threads', '^[0-9]+$', false, 3);
 		$save['export_skip']             = form_input_validate(get_nfilter_request_var('export_skip'), 'export_skip', '^[0-9]+$', false, 3);
 		$save['export_hourly']           = form_input_validate(get_nfilter_request_var('export_hourly'), 'export_hourly', '^[0-9]+$', false, 3);
 		$save['export_daily']            = form_input_validate(get_nfilter_request_var('export_daily'), 'export_daily', '^[0-9]+:[0-9]+$', false, 3);
@@ -153,7 +157,7 @@ function duplicate_export($_export_id, $export_title) {
 	$save['id']   = 0;
 
 	reset($fields_export_edit);
-	while (list($field, $array) = each($fields_export_edit)) {
+	foreach($fields_export_edit as $field => $array) {
 		if (!preg_match('/^hidden/', $array['method'])) {
 			$save[$field] = $export[$field];
 		}
@@ -225,7 +229,7 @@ function export_form_actions() {
 	$export_list = '';
 
 	/* loop through each of the graphs selected on the previous page and get more info about them */
-	while (list($var,$val) = each($_POST)) {
+	foreach ($_POST as $var => $val) {
 		if (preg_match('/^chk_([0-9]+)$/', $var, $matches)) {
 			/* ================= input validation ================= */
 			input_validate_input_number($matches[1]);
@@ -559,7 +563,7 @@ function export_filter() {
 						<?php print __('Search', 'gexport');?>
 					</td>
 					<td>
-						<input type='text' id='filter' size='25' value='<?php print get_request_var('filter');?>'>
+						<input type='text' id='filter' size='25' value='<?php print html_escape_request_var('filter');?>'>
 					</td>
 					<td>
 						<?php print __('Exports', 'gexport');?>
@@ -629,7 +633,7 @@ function export_filter() {
 function get_export_records(&$total_rows, &$rows) {
 	/* form the 'where' clause for our main sql query */
 	if (get_request_var('filter') != '') {
-		$sql_where = "WHERE (name LIKE '%" . get_request_var('filter') . "%')";
+		$sql_where = 'WHERE (name LIKE ' . db_qstr('%' . get_request_var('filter') . '%') . ')';
 	} else {
 		$sql_where = '';
 	}
@@ -661,10 +665,9 @@ function gexport($refresh = true) {
 			'default' => '1'
 			),
 		'filter' => array(
-			'filter' => FILTER_CALLBACK,
+			'filter' => FILTER_DEFAULT,
 			'pageset' => true,
-			'default' => '',
-			'options' => array('options' => 'sanitize_search_string')
+			'default' => ''
 			),
 		'sort_column' => array(
 			'filter' => FILTER_CALLBACK,
@@ -694,29 +697,86 @@ function gexport($refresh = true) {
 
 	$exports = get_export_records($total_rows, $rows);
 
-	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, 5, __('Export Definitions', 'gexport'), 'page', 'main');
+	$display_text = array(
+		'name' => array(
+			'display' => __('Export Name', 'gexport'),
+			'align' => 'left',
+			'sort' => 'ASC',
+			'tip' => __('The name of this Graph Export Definition.', 'gexport')
+		),
+		'id' => array(
+			'display' => __('ID', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The internal ID of the Graph Export Definition.', 'gexport')
+		),
+		'export_timing' => array(
+			'display' => __('Schedule', 'gexport'),
+			'align' => 'right',
+			'sort' => 'DESC',
+			'tip' => __('The frequency that Graphs will be exported.', 'gexport')
+		),
+		'next_start' => array(
+			'display' => __('Next Start', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The next time the Graph Export should run.', 'gexport')
+		),
+		'nosort' => array(
+			'display' => __('Enabled', 'gexport'),
+			'align' => 'right',
+			'tip' => __('If enabled, this Graph Export definition will run as required.', 'gexport')
+		),
+		'status' => array(
+			'display' => __('Status', 'gexport'),
+			'align' => 'right',
+			'tip' => __('The current Graph Export Status.', 'gexport')
+		),
+		'nosort1' => array(
+			'display' => __('Exporting (Sites/Trees)', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('What is being Exported.', 'gexport')
+		),
+		'export_effective_user' => array(
+			'display' => __('Effective User', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The user that this export will impersonate.', 'gexport')
+		),
+		'last_runtime' => array(
+			'display' => __('Last Runtime', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The last runtime for the Graph Export.', 'gexport')
+		),
+		'total_graphs' => array(
+			'display' => __('Graphs', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The number of Graphs Exported on the last run.', 'gexport')
+		),
+		'last_started' => array(
+			'display' => __('Last Started', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The last time that this Graph Export was started.', 'gexport')
+		),
+		'last_errored' => array(
+			'display' => __('Last Errored', 'gexport'),
+			'align' => 'right',
+			'sort' => 'ASC',
+			'tip' => __('The last time that this Graph Export experienced an error.', 'gexport')
+		)
+	);
+
+	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, sizeof($display_text) + 1, __('Export Definitions', 'gexport'), 'page', 'main');
 
 	form_start('gexport.php', 'chk');
 
     print $nav;
 
 	html_start_box('', '100%', '', '3', 'center', '');
-
-	$display_text = array(
-		'name' => array('display' => __('Export Name', 'gexport'), 'align' => 'left', 'sort' => 'ASC', 'tip' => __('The name of this Graph Export Definition.', 'gexport')),
-		'id' => array('display' => __('ID', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The internal ID of the Graph Export Definition.', 'gexport')),
-		'export_timing' => array('display' => __('Schedule', 'gexport'), 'align' => 'right', 'sort' => 'DESC', 'tip' => __('The frequency that Graphs will be exported.', 'gexport')),
-		'next_start' => array('display' => __('Next Start', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The next time the Graph Export should run.', 'gexport')),
-		'nosort' => array('display' => __('Enabled', 'gexport'), 'align' => 'right', 'tip' => __('If enabled, this Graph Export definition will run as required.', 'gexport')),
-		'status' => array('display' => __('Status', 'gexport'), 'align' => 'right', 'tip' => __('The current Graph Export Status.', 'gexport')),
-
-		'nosort1' => array('display' => __('Exporting (Sites/Trees)', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('What is being Exported.', 'gexport')),
-		'export_effective_user' => array('display' => __('Effective User', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The user that this export will impersonate.', 'gexport')),
-		'last_runtime' => array('display' => __('Last Runtime', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last runtime for the Graph Export.', 'gexport')),
-		'total_graphs' => array('display' => __('Graphs', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The number of Graphs Exported on the last run.', 'gexport')),
-		'last_started' => array('display' => __('Last Started', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export was started.', 'gexport')),
-		'last_errored' => array('display' => __('Last Errored', 'gexport'), 'align' => 'right', 'sort' => 'ASC', 'tip' => __('The last time that this Graph Export experienced an error.', 'gexport'))
-	);
 
 	html_header_sort_checkbox($display_text, get_request_var('sort_column'), get_request_var('sort_direction'), false);
 
@@ -727,6 +787,21 @@ function gexport($refresh = true) {
 				FROM user_auth
 				WHERE id = ?',
 				array($export['export_effective_user']));
+
+			if ($export['export_pid'] > 0 && $export['status'] > 0) {
+				if (function_exists('posix_getpgid')) {
+					$running = posix_getpgid($export['export_pid']);
+				} elseif (function_exists('posix_kill')) {
+					$running = posix_kill($export['export_pid'], 0);
+				}
+
+				if (!$running) {
+					db_execute_prepared('UPDATE graph_exports
+						SET status=0, export_pid=0, last_error="Killed Outside Cacti", last_errored=NOW()
+						WHERE id = ?',
+						array($export['id']));
+				}
+			}
 
 			form_alternate_row('line' . $export['id'], true);
 			form_selectable_cell(filter_value($export['name'], get_request_var('filter'), 'gexport.php?action=edit&id=' . $export['id']), $export['id']);

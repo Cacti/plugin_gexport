@@ -3,645 +3,779 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-07-21 21:17-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "Lyckades"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "Syntax eller användningsfel"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "Protokoll oförenlighet"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "Fel som väljer inmatnings- / utdatafiler, dirs"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"Den begärda åtgärden stöds inte. Ett försök gjordes för att manipulera 64-"
+"bitars filer på en plattform som inte kan stödja dem. eller ett alternativ "
+"anges som stöds av klienten och inte av servern."
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "Fel kunde starta klient-server protokoll"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "Daemon kan inte lägga till loggfilen"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "Fel i uttaget I / O"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "Fel i fil I / O"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "Fel i rsync-protokolldataströmmen"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "Fel med programdiagnostik"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "Fel i IPC-kod"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "Mottagde SIGUSR1 eller SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "Något fel returnerat av waitpid ()"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "Fel vid tilldelning av kärnminnebuffertar"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "Delvis överföring på grund av fel"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "Delvis överföring på grund av försvunna källfiler"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "Gränsen --max-delete raderade borttagningar"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "Timeout i data som skickas / mottas"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "Timeout väntar på daemon-anslutning"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "Okänt fel"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "Operation var framgångsrik"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "Allmänt fel i filkopia"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "Destination är inte katalog, men det borde vara"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "Maximal symlinknivå överskridits"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "Anslutning till värd misslyckades."
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "Anslutning bruten"
 
 #: functions.php:383
+#, fuzzy
 msgid "File does not exist"
-msgstr ""
+msgstr "Fil existerar inte"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "Ingen behörighet att komma åt filen."
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "Allmänt fel i sftp protokoll"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "Överföringsprotokollmatchning"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "Ingen fil matchar ett givet kriterier"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "Värd får inte ansluta"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "Allmänt fel i ssh protokoll"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "Viktigt utbyte misslyckades"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "Reserverad"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MAC fel"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "Komprimeringsfel"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "Tjänsten är inte tillgänglig"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "Protokollversionen stöds inte"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "Värdnyckel ej verifierbar"
 
 #: functions.php:397
+#, fuzzy
 msgid "Connection failed"
-msgstr ""
+msgstr "Anslutningen misslyckades"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "Avkopplad genom ansökan"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "För många anslutningar"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "Autentisering avbruten av användaren"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "Inga fler autentiseringsmetoder tillgängliga"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "Ogiltigt användarnamn"
 
 #: functions.php:1504 functions.php:1667
+#, fuzzy
 msgid "Non Query Based"
-msgstr ""
+msgstr "Icke-frågan baserad"
 
 #: functions.php:1751
 msgid "Graph Templates"
-msgstr ""
+msgstr "Grafmallar"
 
 #: functions.php:1780
 msgid "Data Queries"
-msgstr ""
+msgstr "Dataförfrågningar"
 
 #: gexport.php:30
 msgid "Delete"
-msgstr ""
+msgstr "Ta bort"
 
 #: gexport.php:31
 msgid "Enable"
-msgstr ""
+msgstr "Aktivera"
 
 #: gexport.php:32
 msgid "Disable"
-msgstr ""
+msgstr "Inaktivera"
 
 #: gexport.php:33
+#, fuzzy
 msgid "Export Now"
-msgstr ""
+msgstr "Exportera nu"
 
 #: gexport.php:37 setup.php:350
+#, fuzzy
 msgid "Periodic"
-msgstr ""
+msgstr "Periodisk"
 
 #: gexport.php:38 setup.php:352
 msgid "Daily"
-msgstr ""
+msgstr "Dagligen"
 
 #: gexport.php:39 setup.php:351
 msgid "Hourly"
-msgstr ""
+msgstr "Varje timme"
 
 #: gexport.php:253
+#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] ""
+"Klicka på \"Fortsätt\" för att radera följande grafexportdefinition."
 msgstr[1] ""
+"Klicka på \"Fortsätt\" för att radera följande Graph Export Definitions."
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: gexport.php:262
+#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] ""
+"Klicka på \"Fortsätt\" för att inaktivera följande grafexportdefinition."
 msgstr[1] ""
+"Klicka på \"Fortsätt\" för att inaktivera följande Graph Export Definitions."
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "Fortsätt"
 
 #: gexport.php:267
+#, fuzzy
 msgid "Disable Graph Export Definition(s)"
-msgstr ""
+msgstr "Graf Export Definitioner"
 
 #: gexport.php:271
+#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] ""
+"Klicka på \"Fortsätt\" för att aktivera följande grafexportdefinition."
 msgstr[1] ""
+"Klicka på \"Fortsätt\" för att aktivera följande grafexportdefinitioner."
 
 #: gexport.php:276
+#, fuzzy
 msgid "Enable Graph Export Definition(s)"
-msgstr ""
+msgstr "Graf Export Definitioner"
 
 #: gexport.php:280
+#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] ""
+"Klicka på \"Fortsätt\" för att köra följande grafexportdefinition nu."
 msgstr[1] ""
+"Klicka på \"Fortsätt\" för att köra följande Graph Export Definitions nu."
 
 #: gexport.php:285
+#, fuzzy
 msgid "Run Graph Export Definition(s) Now"
-msgstr ""
+msgstr "Graf Export Definitioner"
 
 #: gexport.php:288
+#, fuzzy
 msgid "You must select at least one Graph Export Definition."
-msgstr ""
+msgstr "Du måste välja minst en grafexportdefinition."
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "Tillbaka"
 
 #: gexport.php:345
-#, php-format
+#, fuzzy, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr ""
+msgstr "Graph Export Definition [redigera: %s]"
 
 #: gexport.php:347
+#, fuzzy
 msgid "Graph Export Definition [new]"
-msgstr ""
+msgstr "Graph Export Definition [new]"
 
 #: gexport.php:373
+#, fuzzy
 msgid "Select Tree(s)"
-msgstr ""
+msgstr "Välj träd (er)"
 
 #: gexport.php:375
+#, fuzzy
 msgid "Trees Selected"
-msgstr ""
+msgstr "Trees vald"
 
 #: gexport.php:378
+#, fuzzy
 msgid "All Trees Selected"
-msgstr ""
+msgstr "Alla träd väljs"
 
 #: gexport.php:384 gexport.php:430
 msgid "All"
-msgstr ""
+msgstr "Alla"
 
 #: gexport.php:385 gexport.php:431
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
 msgid "Search"
-msgstr ""
+msgstr "Sök"
 
 #: gexport.php:419
+#, fuzzy
 msgid "Select Site(s)"
-msgstr ""
+msgstr "Välj webbplats (er)"
 
 #: gexport.php:421
+#, fuzzy
 msgid "Sites Selected"
-msgstr ""
+msgstr "Utvalda webbplatser"
 
 #: gexport.php:424
+#, fuzzy
 msgid "All Sites Selected"
-msgstr ""
+msgstr "Alla webbplatser valda"
 
 #: gexport.php:555
+#, fuzzy
 msgid "Graph Export Definitions"
-msgstr ""
+msgstr "Graf Export Definitioner"
 
 #: gexport.php:569
+#, fuzzy
 msgid "Exports"
-msgstr ""
+msgstr "Export"
 
 #: gexport.php:573
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: gexport.php:585
 msgctxt "filter: use"
 msgid "Go"
-msgstr ""
+msgstr "Utför"
 
 #: gexport.php:586
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: gexport.php:701
+#, fuzzy
 msgid "Export Definitions"
-msgstr ""
+msgstr "Exportdefinitioner"
 
 #: gexport.php:710 setup.php:277
+#, fuzzy
 msgid "Export Name"
-msgstr ""
+msgstr "Exportera namn"
 
 #: gexport.php:710 setup.php:278
+#, fuzzy
 msgid "The name of this Graph Export Definition."
-msgstr ""
+msgstr "Namnet på den här grafexportdefinitionen."
 
 #: gexport.php:711
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: gexport.php:711
+#, fuzzy
 msgid "The internal ID of the Graph Export Definition."
-msgstr ""
+msgstr "Det interna ID-kortet för grafexportdefinitionen."
 
 #: gexport.php:712
 msgid "Schedule"
-msgstr ""
+msgstr "Schema"
 
 #: gexport.php:712
+#, fuzzy
 msgid "The frequency that Graphs will be exported."
-msgstr ""
+msgstr "Den frekvens som Grafer exporteras."
 
 #: gexport.php:713
+#, fuzzy
 msgid "Next Start"
-msgstr ""
+msgstr "Nästa Start"
 
 #: gexport.php:713
+#, fuzzy
 msgid "The next time the Graph Export should run."
-msgstr ""
+msgstr "Nästa gång grafexporten ska köras."
 
 #: gexport.php:714 setup.php:286
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiverad"
 
 #: gexport.php:714
+#, fuzzy
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr ""
+"Om den är aktiverad kommer denna Graph Export-definition att köras efter "
+"behov."
 
 #: gexport.php:715
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: gexport.php:715
+#, fuzzy
 msgid "The current Graph Export Status."
-msgstr ""
+msgstr "Den nuvarande grafexportstatusen."
 
 #: gexport.php:717
+#, fuzzy
 msgid "Exporting (Sites/Trees)"
-msgstr ""
+msgstr "Exportera (Platser / Träd)"
 
 #: gexport.php:717
+#, fuzzy
 msgid "What is being Exported."
-msgstr ""
+msgstr "Vad exporteras."
 
 #: gexport.php:718 setup.php:410
+#, fuzzy
 msgid "Effective User"
-msgstr ""
+msgstr "Effektiv användare"
 
 #: gexport.php:718
+#, fuzzy
 msgid "The user that this export will impersonate."
-msgstr ""
+msgstr "Användaren att denna export kommer att efterlikna."
 
 #: gexport.php:719
+#, fuzzy
 msgid "Last Runtime"
-msgstr ""
+msgstr "Senaste Runtime"
 
 #: gexport.php:719
+#, fuzzy
 msgid "The last runtime for the Graph Export."
-msgstr ""
+msgstr "Den sista körtiden för Graph Export."
 
 #: gexport.php:720
 msgid "Graphs"
-msgstr ""
+msgstr "Grafer"
 
 #: gexport.php:720
+#, fuzzy
 msgid "The number of Graphs Exported on the last run."
-msgstr ""
+msgstr "Antalet Grafer som exporteras på den sista körningen."
 
 #: gexport.php:721
+#, fuzzy
 msgid "Last Started"
-msgstr ""
+msgstr "Senast igång"
 
 #: gexport.php:721
+#, fuzzy
 msgid "The last time that this Graph Export was started."
-msgstr ""
+msgstr "Den sista gången att denna Graph Export startades."
 
 #: gexport.php:722
+#, fuzzy
 msgid "Last Errored"
-msgstr ""
+msgstr "Senast fel"
 
 #: gexport.php:722
+#, fuzzy
 msgid "The last time that this Graph Export experienced an error."
-msgstr ""
+msgstr "Den sista gången att denna Graph Export upplevde ett fel."
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: gexport.php:758
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: gexport.php:758
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: gexport.php:762
 msgid "Idle"
-msgstr ""
+msgstr "Sysslolös"
 
 #: gexport.php:765
 msgid "Running"
-msgstr ""
+msgstr "Kör"
 
 #: gexport.php:768
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
 #: gexport.php:774
+#, fuzzy
 msgid "All Sites"
-msgstr ""
+msgstr "Alla webbplatser"
 
 #: gexport.php:785
+#, fuzzy
 msgid "All Trees"
-msgstr ""
+msgstr "Alla träd"
 
 #: gexport.php:799
 msgid "Sec"
-msgstr ""
+msgstr "Sek"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 #: gexport.php:819
+#, fuzzy
 msgid "No Graph Export Definitions"
-msgstr ""
+msgstr "Inga Graph Export Definitioner"
 
 #: setup.php:31
+#, fuzzy
 msgid "Export Cacti Graphs Settings"
-msgstr ""
+msgstr "Exportera kaktifigurer"
 
 #: setup.php:265
+#, fuzzy
 msgid "Graph Exports"
-msgstr ""
+msgstr "Graf Export"
 
 #: setup.php:265
 msgid "Utilities"
-msgstr ""
+msgstr "Tillbehör"
 
 #: setup.php:272
 msgid "General"
-msgstr ""
+msgstr "Allmän"
 
 #: setup.php:287
+#, fuzzy
 msgid ""
 "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr ""
+"Markera den här kryssrutan om du vill att den här grafexportdefinitionen ska "
+"vara aktiverad."
 
 #: setup.php:293
+#, fuzzy
 msgid "Export Method"
-msgstr ""
+msgstr "Exportmetod"
 
 #: setup.php:294
+#, fuzzy
 msgid "Choose which export method to use."
-msgstr ""
+msgstr "Välj vilken exportmetod som ska användas."
 
 #: setup.php:299
 msgid "Local"
-msgstr ""
+msgstr "Lokal"
 
 #: setup.php:300
+#, fuzzy
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: setup.php:301
+#, fuzzy
 msgid "SFTP"
-msgstr ""
+msgstr "SFTP"
 
 #: setup.php:302
+#, fuzzy
 msgid "FTP NC"
-msgstr ""
+msgstr "FTP NC"
 
 #: setup.php:303
+#, fuzzy
 msgid "SCP"
-msgstr ""
+msgstr "SCP"
 
 #: setup.php:304
+#, fuzzy
 msgid "RSYNC"
-msgstr ""
+msgstr "RSYNC"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "Export Command Arguments"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "Argument att använda med icke-lokala exportmetoder. rsync ska använda"
 
 #: setup.php:321
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: setup.php:322
+#, fuzzy
 msgid ""
 "Please select one of the available Themes to skin your Cacti Graph Exports "
 "with."
 msgstr ""
+"Var god välj ett av de tillgängliga teman för att skära ut dina kaktifigurer "
+"med."
 
 #: setup.php:329
+#, fuzzy
 msgid "Presentation Method"
-msgstr ""
+msgstr "Presentation Method"
 
 #: setup.php:330
+#, fuzzy
 msgid ""
 "Choose which presentation would you want for the html generated pages. If "
 "you choose classical presentation; the Graphs will be in a only-one-html "
 "page. If you choose tree presentation, the Graph Tree architecture will be "
 "kept in the static html pages"
 msgstr ""
+"Välj vilken presentation du vill ha för de html-genererade sidorna. Om du "
+"väljer klassisk presentation Graferna kommer att finnas på en enda-en-html-"
+"sida. Om du väljer trädpresentation, sparas grafträdarkitekturen på de "
+"statiska HTML-sidorna"
 
 #: setup.php:335 setup.php:438
 msgid "Site"
-msgstr ""
+msgstr "Webbplats"
 
 #: setup.php:336 setup.php:419
 msgid "Tree"
-msgstr ""
+msgstr "Träd"
 
 #: setup.php:340
+#, fuzzy
 msgid "Export Timing"
-msgstr ""
+msgstr "Export Timing"
 
 #: setup.php:344
+#, fuzzy
 msgid "Timing Method"
-msgstr ""
+msgstr "Timing Method"
 
 #: setup.php:345
+#, fuzzy
 msgid "Choose when to Export Graphs."
-msgstr ""
+msgstr "Välj när du ska exportera grafer."
 
 #: setup.php:356
+#, fuzzy
 msgid "Periodic Export Cycle"
-msgstr ""
+msgstr "Periodisk exportcykel"
 
 #: setup.php:357
+#, fuzzy
 msgid ""
 "How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
 "Cycles you wish to export Graphs."
 msgstr ""
+"Hur ofta önskar du kaktus att exportera grafer. Det här är enheten för "
+"pollningscykler som du vill exportera Grafer."
 
 #: setup.php:361
+#, fuzzy
 msgid "Every Polling Cycle"
-msgstr ""
+msgstr "Varje omröstningscykel"
 
 #: setup.php:362 setup.php:363 setup.php:364 setup.php:365 setup.php:366
 #: setup.php:367 setup.php:368 setup.php:369 setup.php:370 setup.php:371
 #: setup.php:372
-#, php-format
+#, fuzzy, php-format
 msgid "Every %d Polling Cycles"
-msgstr ""
+msgstr "Varje% d pollningscykler"
 
 #: setup.php:376
+#, fuzzy
 msgid "Hourly at specified minutes"
-msgstr ""
+msgstr "Varje timme vid angivna minuter"
 
 #: setup.php:377
+#, fuzzy
 msgid ""
 "If you want Cacti to export static images on an hourly basis, put the "
 "minutes of the hour when to do that. Cacti assumes that you run the data "
@@ -649,234 +783,314 @@ msgid ""
 "closest to its runtime. For instance, 43 would equal 40 minutes past the "
 "hour."
 msgstr ""
+"Om du vill att kaktuserna ska exportera statiska bilder på en timme, sätt "
+"minuter i timmen när du ska göra det. Cacti förutsätter att du kör "
+"datainsamlingsskriptet var 5: e minut, så det kommer att runda ditt värde "
+"till det närmaste runtime. Till exempel skulle 43 motsvara 40 minuter förbi "
+"timmen."
 
 #: setup.php:386
+#, fuzzy
 msgid "Daily at specified time"
-msgstr ""
+msgstr "Dagligen vid angiven tidpunkt"
 
 #: setup.php:387
+#, fuzzy
 msgid ""
 "If you want Cacti to export static images on an daily basis, put here the "
 "time when to do that. Cacti assumes that you run the data gathering script "
 "every 5 minutes, so it will round your value to the one closest to its "
 "runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr ""
+"Om du vill att kaktuserna ska exportera statiska bilder dagligen, sätt här "
+"när du ska göra det. Cacti förutsätter att du kör datainsamlingsskriptet var "
+"5: e minut, så det kommer att runda ditt värde till det närmaste runtime. "
+"Till exempel skulle 21:23 vara lika med 20 minuter efter 21:00."
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "Använd x Trådar"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"Hur många bakgrundstrådar önskar du att kaktus ska användas när du "
+"exporterar grafer. Standard är 0 för att köra all export i pollergänga, 1 "
+"eller mer för att kasta separata bakgrundstrådar"
 
 #: setup.php:405
+#, fuzzy
 msgid "Graph Selection & Settings"
-msgstr ""
+msgstr "Grafval och inställningar"
 
 #: setup.php:411
+#, fuzzy
 msgid ""
 "The user name to utilize for establishing permissions to Cacti Graphs.  This "
 "user name will be used to determine which Graphs/Trees can be exported.  N/A "
 "means don't assume any security is in place."
 msgstr ""
+"Användarnamnet att använda för att skapa behörigheter för kaktigrafer. Detta "
+"användarnamn kommer att användas för att bestämma vilka Grafer / Träd kan "
+"exporteras. N / A betyder inte att någon säkerhet är på plats."
 
 #: setup.php:420
+#, fuzzy
 msgid "The Tree(s) to export."
-msgstr ""
+msgstr "Träet (arna) att exportera."
 
 #: setup.php:427
+#, fuzzy
 msgid "Expand Devices/Sites"
-msgstr ""
+msgstr "Expand Devices / Sites"
 
 #: setup.php:428
+#, fuzzy
 msgid ""
 "This setting determines if Tree Devices and Site Templates and Devices will "
 "be expanded or not.  If set to expanded, each host will have a sub-folder "
 "containing either Graph Templates or Data Query items."
 msgstr ""
+"Den här inställningen avgör om träningsenheter och sidmallar och enheter "
+"kommer att utvidgas eller inte. Om den är expanderad, kommer varje värd att "
+"ha en undermapp som innehåller antingen grafmallar eller dataquery-objekt."
 
 #: setup.php:433
 msgid "Off"
-msgstr ""
+msgstr "Av"
 
 #: setup.php:434
 msgid "On"
-msgstr ""
+msgstr "På"
 
 #: setup.php:439
+#, fuzzy
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr ""
+msgstr "Webbplatsen för kaktifigurer ska exporteras från."
 
 #: setup.php:446
+#, fuzzy
 msgid "Graph Thumbnail Width"
-msgstr ""
+msgstr "Diagramminne bredd"
 
 #: setup.php:447
+#, fuzzy
 msgid "The default width of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "Standardbredden för miniatyrdiagrammen i pixlar."
 
 #: setup.php:455
+#, fuzzy
 msgid "Graph Thumbnail Height"
-msgstr ""
+msgstr "Diagramminnehöjd"
 
 #: setup.php:456
+#, fuzzy
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "Höjden på miniatyrbilderna i pixlar."
 
 #: setup.php:464
+#, fuzzy
 msgid "Default View Thumbnails"
-msgstr ""
+msgstr "Standard Visa miniatyrbilder"
 
 #: setup.php:465
+#, fuzzy
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr ""
+"Markera det här om du vill att standard grafvy ska vara i miniatyrläge."
 
 #: setup.php:470
+#, fuzzy
 msgid "Default Graph Columns"
-msgstr ""
+msgstr "Standard grafkolumner"
 
 #: setup.php:471
+#, fuzzy
 msgid "The number of columns to use by default when displaying Graphs."
-msgstr ""
+msgstr "Antalet kolumner som ska användas som standard när du visar Grafer."
 
 #: setup.php:479
+#, fuzzy
 msgid "Graphs Per Page"
-msgstr ""
+msgstr "Grafer per sida"
 
 #: setup.php:480
+#, fuzzy
 msgid "Choose the number of Graphs Per Page to display."
-msgstr ""
+msgstr "Välj antal Grafer per sida som ska visas."
 
 #: setup.php:487
+#, fuzzy
 msgid "Maximum Graphs to Export"
-msgstr ""
+msgstr "Maximala grafer för export"
 
 #: setup.php:488
+#, fuzzy
 msgid ""
 "After this number is reached, an error will be generated, but exporting will "
 "continue.  Set to 0 for no limit."
 msgstr ""
+"När detta nummer har uppnåtts kommer ett fel att genereras, men exporten "
+"fortsätter. Ställ in till 0 för ingen gräns."
 
 #: setup.php:496
+#, fuzzy
 msgid "Export Location Information"
-msgstr ""
+msgstr "Exportera platsinformation"
 
 #: setup.php:501
+#, fuzzy
 msgid "Export Thumbnails"
-msgstr ""
+msgstr "Export Timing"
 
 #: setup.php:502
+#, fuzzy
 msgid "Check this if you want the export thumbnails mode."
 msgstr ""
+"Markera det här om du vill att standard grafvy ska vara i miniatyrläge."
 
 #: setup.php:507
+#, fuzzy
 msgid "Clear Directory"
-msgstr ""
+msgstr "Export Directory"
 
 #: setup.php:508
+#, fuzzy
 msgid ""
 "Check this Checkbox if you wish this Graph Export to clear the final "
 "directory before populating."
 msgstr ""
+"Markera den här kryssrutan om du vill att den här grafexportdefinitionen ska "
+"vara aktiverad."
 
 #: setup.php:513
+#, fuzzy
 msgid "Export Directory"
-msgstr ""
+msgstr "Export Directory"
 
 #: setup.php:514
+#, fuzzy
 msgid ""
 "This is the directory, either on the local system or on the remote system, "
 "that will contain the exported data."
 msgstr ""
+"Det här är katalogen, antingen på det lokala systemet eller på "
+"fjärrsystemet, som innehåller de exporterade data."
 
 #: setup.php:520
+#, fuzzy
 msgid "Local Scratch Directory"
-msgstr ""
+msgstr "Local Scratch Directory"
 
 #: setup.php:521
+#, fuzzy
 msgid ""
 "This is the directory that Cacti will temporarily store output prior to "
 "sending to the remote site via the transfer method.  The contents of this "
 "directory will be deleted after the data is transferred."
 msgstr ""
+"Det här är katalogen att kaktuserna tillfälligt kommer att lagra "
+"produktionen innan de skickas till fjärrsidan via överföringsmetoden. "
+"Innehållet i den här katalogen kommer att raderas efter att data har "
+"överförts."
 
 #: setup.php:528
+#, fuzzy
 msgid "Remote Options"
-msgstr ""
+msgstr "Fjärralternativ"
 
 #: setup.php:533
+#, fuzzy
 msgid "Sanitize remote directory"
-msgstr ""
+msgstr "Sanitize fjärrkatalog"
 
 #: setup.php:534
+#, fuzzy
 msgid ""
 "Check this if you want to delete any existing files in the FTP remote "
 "directory. This option is in use only when using the PHP built-in ftp "
 "functions."
 msgstr ""
+"Markera det här om du vill radera befintliga filer i FTP-fjärrkatalogen. Det "
+"här alternativet används endast när du använder PHP-inbyggda ftp-"
+"funktionerna."
 
 #: setup.php:539
 msgid "Remote Host"
-msgstr ""
+msgstr "Fjärrvärddatorns namn"
 
 #: setup.php:540
+#, fuzzy
 msgid "Denotes the host to send Exported Graphs to."
-msgstr ""
+msgstr "Anger värd att skicka exporterade grafer till."
 
 #: setup.php:547
+#, fuzzy
 msgid "Remote Port"
-msgstr ""
+msgstr "Fjärrport"
 
 #: setup.php:548
+#, fuzzy
 msgid ""
 "Communication port to use for the export method if non-standard (leave empty "
 "for defaults)."
 msgstr ""
+"Kommunikationsport som ska användas för exportmetoden om den inte är "
+"standard (lämnas tom för standard)."
 
 #: setup.php:556
+#, fuzzy
 msgid "Use passive mode"
-msgstr ""
+msgstr "Använd passivt läge"
 
 #: setup.php:557
+#, fuzzy
 msgid "Check this if you want to connect in passive mode to the FTP server."
-msgstr ""
+msgstr "Markera det här om du vill ansluta i passivt läge till FTP-servern."
 
 #: setup.php:562
 msgid "User"
-msgstr ""
+msgstr "Användare"
 
 #: setup.php:563
+#, fuzzy
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr ""
+"Konto till inloggning på fjärrservern (lämna tomt för standardinställningar)."
 
 #: setup.php:570
 msgid "Password"
-msgstr ""
+msgstr "Lösenord"
 
 #: setup.php:571
+#, fuzzy
 msgid "Password for the remote ftp account (leave empty for blank)."
-msgstr ""
+msgstr "Lösenord för fjärrfTP-kontot (lämna tomt för tomt)."
 
 #: setup.php:578
+#, fuzzy
 msgid "Private Key Path"
-msgstr ""
+msgstr "Privat nyckelväg"
 
 #: setup.php:579
+#, fuzzy
 msgid "For SCP and RSYNC, enter the Private Key path if required."
-msgstr ""
+msgstr "För SCP och RSYNC, skriv in den privata nyckelvägen om det behövs."
 
 #: setup.php:590
+#, fuzzy
 msgid "Exported Cacti Graph Pages"
-msgstr ""
+msgstr "Exporterade kaktiska diagramsidor"
 
 #: setup.php:596
 msgid "(Edit)"
-msgstr ""
+msgstr "(Redigera)"
 
 #: setup.php:602
 msgid "Actions"
-msgstr ""
+msgstr "Åtgärder"

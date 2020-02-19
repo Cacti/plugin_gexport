@@ -3,590 +3,643 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: gexport on cacti 1.1.34\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-07-21 21:19-0400\n"
+"Last-Translator: tomcat <luis_126@126.com>\n"
+"Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/"
+"cacti/gexport/zh-CN/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: functions.php:313
+#, fuzzy
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "语法或用法错误"
 
 #: functions.php:314
+#, fuzzy
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "协议不兼容"
 
 #: functions.php:315
+#, fuzzy
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "选择输入/输出文件，dirs的错误"
 
 #: functions.php:316
+#, fuzzy
 msgid ""
 "Requested action not supported: an attempt was made to manipulate 64-bit "
 "files on a platform that cannot support them; or an option was specified "
 "that is supported by the client and not by the server."
 msgstr ""
+"不支持请求的操作：尝试在不支持它们的平台上操作64位文件;或者指定了客户端而不是"
+"服务器支持的选项。"
 
 #: functions.php:317
+#, fuzzy
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "启动客户端 - 服务器协议时出错"
 
 #: functions.php:318
+#, fuzzy
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "守护程序无法附加到日志文件"
 
 #: functions.php:319
+#, fuzzy
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "套接字I / O出错"
 
 #: functions.php:320
+#, fuzzy
 msgid "Error in file I/O"
-msgstr ""
+msgstr "文件I / O出错"
 
 #: functions.php:321
+#, fuzzy
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "rsync协议数据流出错"
 
 #: functions.php:322
+#, fuzzy
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "程序诊断错误"
 
 #: functions.php:323
+#, fuzzy
 msgid "Error in IPC code"
-msgstr ""
+msgstr "IPC代码出错"
 
 #: functions.php:324
+#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "收到SIGUSR1或SIGINT"
 
 #: functions.php:325
+#, fuzzy
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "waitpid（）返回的一些错误"
 
 #: functions.php:326
+#, fuzzy
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "分配核心内存缓冲区时出错"
 
 #: functions.php:327
+#, fuzzy
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "由于错误导致的部分转移"
 
 #: functions.php:328
+#, fuzzy
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "由于源文件消失导致部分传输"
 
 #: functions.php:329
+#, fuzzy
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "--max-delete限制停止删除"
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "数据发送/接收超时"
 
 #: functions.php:331
+#, fuzzy
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "超时等待守护程序连接"
 
 #: functions.php:334 functions.php:405
+#, fuzzy
 msgid "Unknown error "
-msgstr ""
+msgstr "未知的RRDtool错误"
 
 #: functions.php:377
+#, fuzzy
 msgid "Operation was successful"
-msgstr ""
+msgstr "操作成功"
 
 #: functions.php:378
+#, fuzzy
 msgid "General error in file copy"
-msgstr ""
+msgstr "文件复制中的常规错误"
 
 #: functions.php:379
+#, fuzzy
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "目标不是目录，但它应该是"
 
 #: functions.php:380
+#, fuzzy
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "超出最大符号链接级别"
 
 #: functions.php:381
+#, fuzzy
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "连接到主机失败。"
 
 #: functions.php:382
+#, fuzzy
 msgid "Connection broken"
-msgstr ""
+msgstr "连接坏了"
 
 #: functions.php:383
+#, fuzzy
 msgid "File does not exist"
-msgstr ""
+msgstr "错误：无法清除日志，文件不存在。"
 
 #: functions.php:384
+#, fuzzy
 msgid "No permission to access file."
-msgstr ""
+msgstr "无权访问文件。"
 
 #: functions.php:385
+#, fuzzy
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "sftp协议中的一般错误"
 
 #: functions.php:386
+#, fuzzy
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "文件传输协议不匹配"
 
 #: functions.php:387
+#, fuzzy
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "没有文件符合给定条件"
 
 #: functions.php:388
+#, fuzzy
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "主机不允许连接"
 
 #: functions.php:389
+#, fuzzy
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "ssh协议中的一般错误"
 
 #: functions.php:390
+#, fuzzy
 msgid "Key exchange failed"
-msgstr ""
+msgstr "密钥交换失败"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "预留"
 
 #: functions.php:392
+#, fuzzy
 msgid "MAC error"
-msgstr ""
+msgstr "MAC错误"
 
 #: functions.php:393
+#, fuzzy
 msgid "Compression error"
-msgstr ""
+msgstr "压缩错误"
 
 #: functions.php:394
+#, fuzzy
 msgid "Service not available"
-msgstr ""
+msgstr "服务不可用"
 
 #: functions.php:395
+#, fuzzy
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "协议版本不受支持"
 
 #: functions.php:396
+#, fuzzy
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "主机密钥不可验证"
 
 #: functions.php:397
+#, fuzzy
 msgid "Connection failed"
-msgstr ""
+msgstr "连接失败"
 
 #: functions.php:398
+#, fuzzy
 msgid "Disconnected by application"
-msgstr ""
+msgstr "应用程序断开连接"
 
 #: functions.php:399
+#, fuzzy
 msgid "Too many connections"
-msgstr ""
+msgstr "太多联系"
 
 #: functions.php:400
+#, fuzzy
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "用户取消身份验证"
 
 #: functions.php:401
+#, fuzzy
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "没有更多的身份验证方法"
 
 #: functions.php:402
+#, fuzzy
 msgid "Invalid user name"
-msgstr ""
+msgstr "无效的用户名"
 
 #: functions.php:1504 functions.php:1667
 msgid "Non Query Based"
-msgstr ""
+msgstr "不基于查询"
 
 #: functions.php:1751
 msgid "Graph Templates"
-msgstr ""
+msgstr "图模板"
 
 #: functions.php:1780
 msgid "Data Queries"
-msgstr ""
+msgstr "数据查询"
 
 #: gexport.php:30
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: gexport.php:31
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: gexport.php:32
 msgid "Disable"
-msgstr ""
+msgstr "禁用"
 
 #: gexport.php:33
 msgid "Export Now"
-msgstr ""
+msgstr "立即导出"
 
 #: gexport.php:37 setup.php:350
 msgid "Periodic"
-msgstr ""
+msgstr "定期"
 
 #: gexport.php:38 setup.php:352
 msgid "Daily"
-msgstr ""
+msgstr "每日"
 
 #: gexport.php:39 setup.php:351
 msgid "Hourly"
-msgstr ""
+msgstr "每小时"
 
 #: gexport.php:253
+#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "点击“继续”删除以下图形导出定义。"
 
 #: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: gexport.php:262
+#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "点击“继续”以停用以下图形导出定义。"
 
 #: gexport.php:267 gexport.php:276 gexport.php:285
 msgid "Continue"
-msgstr ""
+msgstr "继续"
 
 #: gexport.php:267
+#, fuzzy
 msgid "Disable Graph Export Definition(s)"
-msgstr ""
+msgstr "图表导出定义"
 
 #: gexport.php:271
+#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "点击“继续”以启用以下图形导出定义。"
 
 #: gexport.php:276
+#, fuzzy
 msgid "Enable Graph Export Definition(s)"
-msgstr ""
+msgstr "图表导出定义"
 
 #: gexport.php:280
+#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "点击“继续”立即运行以下图形导出定义。"
 
 #: gexport.php:285
+#, fuzzy
 msgid "Run Graph Export Definition(s) Now"
-msgstr ""
+msgstr "图表导出定义"
 
 #: gexport.php:288
 msgid "You must select at least one Graph Export Definition."
-msgstr ""
+msgstr "您必须至少选择一个图形导出定义。"
 
 #: gexport.php:289
 msgid "Return"
-msgstr ""
+msgstr "返回"
 
 #: gexport.php:345
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr ""
+msgstr "图表导出定义[编辑：%s]"
 
 #: gexport.php:347
 msgid "Graph Export Definition [new]"
-msgstr ""
+msgstr "图表导出定义[新建]"
 
 #: gexport.php:373
 msgid "Select Tree(s)"
-msgstr ""
+msgstr "选择树"
 
 #: gexport.php:375
 msgid "Trees Selected"
-msgstr ""
+msgstr "树被选择"
 
 #: gexport.php:378
 msgid "All Trees Selected"
-msgstr ""
+msgstr "选择所有树"
 
 #: gexport.php:384 gexport.php:430
 msgid "All"
-msgstr ""
+msgstr "所有"
 
 #: gexport.php:385 gexport.php:431
 msgid "None"
-msgstr ""
+msgstr "没有"
 
 #: gexport.php:415 gexport.php:461 gexport.php:563
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: gexport.php:419
 msgid "Select Site(s)"
-msgstr ""
+msgstr "选择网站"
 
 #: gexport.php:421
 msgid "Sites Selected"
-msgstr ""
+msgstr "选择的网站"
 
 #: gexport.php:424
 msgid "All Sites Selected"
-msgstr ""
+msgstr "所有选定的站点"
 
 #: gexport.php:555
 msgid "Graph Export Definitions"
-msgstr ""
+msgstr "图表导出定义"
 
 #: gexport.php:569
 msgid "Exports"
-msgstr ""
+msgstr "导出"
 
 #: gexport.php:573
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 #: gexport.php:585
 msgctxt "filter: use"
 msgid "Go"
-msgstr ""
+msgstr "启动"
 
 #: gexport.php:586
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #: gexport.php:701
 msgid "Export Definitions"
-msgstr ""
+msgstr "导出定义"
 
 #: gexport.php:710 setup.php:277
 msgid "Export Name"
-msgstr ""
+msgstr "导出名称"
 
 #: gexport.php:710 setup.php:278
 msgid "The name of this Graph Export Definition."
-msgstr ""
+msgstr "此图形导出定义的名称。"
 
 #: gexport.php:711
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: gexport.php:711
 msgid "The internal ID of the Graph Export Definition."
-msgstr ""
+msgstr "图形导出定义的内部ID。"
 
 #: gexport.php:712
 msgid "Schedule"
-msgstr ""
+msgstr "时间表"
 
 #: gexport.php:712
 msgid "The frequency that Graphs will be exported."
-msgstr ""
+msgstr "图形将被导出的频率。"
 
 #: gexport.php:713
 msgid "Next Start"
-msgstr ""
+msgstr "下一步开始"
 
 #: gexport.php:713
 msgid "The next time the Graph Export should run."
-msgstr ""
+msgstr "下一次图导出应该运行。"
 
 #: gexport.php:714 setup.php:286
 msgid "Enabled"
-msgstr ""
+msgstr "启用"
 
 #: gexport.php:714
 msgid "If enabled, this Graph Export definition will run as required."
-msgstr ""
+msgstr "如果启用，此图形导出定义将根据需要运行。"
 
 #: gexport.php:715
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 #: gexport.php:715
 msgid "The current Graph Export Status."
-msgstr ""
+msgstr "当前的图形导出状态。"
 
 #: gexport.php:717
 msgid "Exporting (Sites/Trees)"
-msgstr ""
+msgstr "导出（网站/树）"
 
 #: gexport.php:717
 msgid "What is being Exported."
-msgstr ""
+msgstr "什么将被导出。"
 
 #: gexport.php:718 setup.php:410
 msgid "Effective User"
-msgstr ""
+msgstr "有效的用户"
 
 #: gexport.php:718
 msgid "The user that this export will impersonate."
-msgstr ""
+msgstr "该导出将模拟的用户。"
 
 #: gexport.php:719
 msgid "Last Runtime"
-msgstr ""
+msgstr "上次运行时间"
 
 #: gexport.php:719
 msgid "The last runtime for the Graph Export."
-msgstr ""
+msgstr "图表导出的最后一个运行时间。"
 
 #: gexport.php:720
 msgid "Graphs"
-msgstr ""
+msgstr "图表"
 
 #: gexport.php:720
 msgid "The number of Graphs Exported on the last run."
-msgstr ""
+msgstr "最后一次运行导出的图形数量。"
 
 #: gexport.php:721
 msgid "Last Started"
-msgstr ""
+msgstr "最后开始"
 
 #: gexport.php:721
 msgid "The last time that this Graph Export was started."
-msgstr ""
+msgstr "上次图形导出已启动。"
 
 #: gexport.php:722
 msgid "Last Errored"
-msgstr ""
+msgstr "最后的错误"
 
 #: gexport.php:722
 msgid "The last time that this Graph Export experienced an error."
-msgstr ""
+msgstr "上次图表导出出现错误。"
 
 #: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
 #: setup.php:415
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: gexport.php:758
 msgid "No"
-msgstr ""
+msgstr "不"
 
 #: gexport.php:758
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: gexport.php:762
 msgid "Idle"
-msgstr ""
+msgstr "闲"
 
 #: gexport.php:765
 msgid "Running"
-msgstr ""
+msgstr "运行"
 
 #: gexport.php:768
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: gexport.php:774
 msgid "All Sites"
-msgstr ""
+msgstr "所有网站"
 
 #: gexport.php:785
 msgid "All Trees"
-msgstr ""
+msgstr "所有树"
 
 #: gexport.php:799
 msgid "Sec"
-msgstr ""
+msgstr "秒"
 
 #: gexport.php:806 gexport.php:811 gexport.php:812
 msgid "Never"
-msgstr ""
+msgstr "从不"
 
 #: gexport.php:819
 msgid "No Graph Export Definitions"
-msgstr ""
+msgstr "没有图表导出定义"
 
 #: setup.php:31
 msgid "Export Cacti Graphs Settings"
-msgstr ""
+msgstr "导出Cacti 图形设置"
 
 #: setup.php:265
 msgid "Graph Exports"
-msgstr ""
+msgstr "图表导出"
 
 #: setup.php:265
 msgid "Utilities"
-msgstr ""
+msgstr "实用程序"
 
 #: setup.php:272
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 #: setup.php:287
 msgid ""
 "Check this Checkbox if you wish this Graph Export Definition to be enabled."
-msgstr ""
+msgstr "如果希望启用此图形导出定义，请选中此复选框。"
 
 #: setup.php:293
 msgid "Export Method"
-msgstr ""
+msgstr "导出方法"
 
 #: setup.php:294
 msgid "Choose which export method to use."
-msgstr ""
+msgstr "选择使用哪种导出方法。"
 
 #: setup.php:299
 msgid "Local"
-msgstr ""
+msgstr "本地"
 
 #: setup.php:300
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: setup.php:301
 msgid "SFTP"
-msgstr ""
+msgstr "SFTP"
 
 #: setup.php:302
 msgid "FTP NC"
-msgstr ""
+msgstr "SFTP"
 
 #: setup.php:303
 msgid "SCP"
-msgstr ""
+msgstr "SCP"
 
 #: setup.php:304
 msgid "RSYNC"
-msgstr ""
+msgstr "SCP"
 
 #: setup.php:308
+#, fuzzy
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "导出命令参数"
 
 #: setup.php:309
+#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "与非本地导出方法一起使用的参数。 rsync应该使用"
 
 #: setup.php:321
 msgid "Theme"
-msgstr ""
+msgstr "主题"
 
 #: setup.php:322
 msgid ""
 "Please select one of the available Themes to skin your Cacti Graph Exports "
 "with."
-msgstr ""
+msgstr "请选择其中一个可用的主题以使用Cacti 图形导出。"
 
 #: setup.php:329
 msgid "Presentation Method"
-msgstr ""
+msgstr "演示方法"
 
 #: setup.php:330
 msgid ""
@@ -595,51 +648,53 @@ msgid ""
 "page. If you choose tree presentation, the Graph Tree architecture will be "
 "kept in the static html pages"
 msgstr ""
+"为html生成的页面选择你想要的演示文稿。 如果您选择经典演示文稿; 图表将只在一个"
+"html页面中。 如果您选择树演示文稿，图表树架构将保留在静态html页面中"
 
 #: setup.php:335 setup.php:438
 msgid "Site"
-msgstr ""
+msgstr "网站"
 
 #: setup.php:336 setup.php:419
 msgid "Tree"
-msgstr ""
+msgstr "树"
 
 #: setup.php:340
 msgid "Export Timing"
-msgstr ""
+msgstr "导出时间"
 
 #: setup.php:344
 msgid "Timing Method"
-msgstr ""
+msgstr "时间方法"
 
 #: setup.php:345
 msgid "Choose when to Export Graphs."
-msgstr ""
+msgstr "选择何时导出图表。"
 
 #: setup.php:356
 msgid "Periodic Export Cycle"
-msgstr ""
+msgstr "周期性的导出周期"
 
 #: setup.php:357
 msgid ""
 "How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
 "Cycles you wish to export Graphs."
-msgstr ""
+msgstr "您希望Cacti导出图表的频率如何？ 这是您希望导出图表的轮询周期的单位。"
 
 #: setup.php:361
 msgid "Every Polling Cycle"
-msgstr ""
+msgstr "每个轮询周期"
 
 #: setup.php:362 setup.php:363 setup.php:364 setup.php:365 setup.php:366
 #: setup.php:367 setup.php:368 setup.php:369 setup.php:370 setup.php:371
 #: setup.php:372
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr ""
+msgstr "每 %d 轮询周期"
 
 #: setup.php:376
 msgid "Hourly at specified minutes"
-msgstr ""
+msgstr "每小时在指定的分钟"
 
 #: setup.php:377
 msgid ""
@@ -649,10 +704,13 @@ msgid ""
 "closest to its runtime. For instance, 43 would equal 40 minutes past the "
 "hour."
 msgstr ""
+"如果您希望Cacti每小时输出一次静态图像，请将时间分钟放在这样做。 Cacti假设您每"
+"5分钟运行一次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个"
+"值。 例如，43将等于过去一小时40分钟。"
 
 #: setup.php:386
 msgid "Daily at specified time"
-msgstr ""
+msgstr "每天在指定的时间"
 
 #: setup.php:387
 msgid ""
@@ -661,21 +719,28 @@ msgid ""
 "every 5 minutes, so it will round your value to the one closest to its "
 "runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr ""
+"如果您希望Cacti 每天输出静态图像，请在此处填写时间。 Cacti假设您每5分钟运行一"
+"次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个值。 例如，"
+"21点23分将等于晚上9点20分钟后。"
 
 #: setup.php:396
+#, fuzzy
 msgid "Use x Threads"
-msgstr ""
+msgstr "使用x线程"
 
 #: setup.php:397
+#, fuzzy
 msgid ""
 "How many background threads do you wish Cacti to use when exporting graphs.  "
 "Default is 0 to run all export in poller thread, 1 or more to spawn separate "
 "background threads"
 msgstr ""
+"您希望Cacti在导出图形时使用多少个后台线程。默认值为0以在轮询器线程中运行所有"
+"导出，1或更多以生成单独的后台线程"
 
 #: setup.php:405
 msgid "Graph Selection & Settings"
-msgstr ""
+msgstr "图表选择和设置"
 
 #: setup.php:411
 msgid ""
@@ -683,14 +748,16 @@ msgid ""
 "user name will be used to determine which Graphs/Trees can be exported.  N/A "
 "means don't assume any security is in place."
 msgstr ""
+"用于为Cacti图形建立权限的用户名。 此用户名将用于确定可以导出哪些图形/树。 不"
+"适用意味着不承担任何安全措施。"
 
 #: setup.php:420
 msgid "The Tree(s) to export."
-msgstr ""
+msgstr "导出的树"
 
 #: setup.php:427
 msgid "Expand Devices/Sites"
-msgstr ""
+msgstr "展开设备/站点"
 
 #: setup.php:428
 msgid ""
@@ -698,104 +765,110 @@ msgid ""
 "be expanded or not.  If set to expanded, each host will have a sub-folder "
 "containing either Graph Templates or Data Query items."
 msgstr ""
+"此设置确定树设备和站点模板和设备是否将被展开。 如果设置为展开，则每个主机都将"
+"有一个包含图形模板或数据查询项目的子文件夹。"
 
 #: setup.php:433
 msgid "Off"
-msgstr ""
+msgstr "关闭"
 
 #: setup.php:434
 msgid "On"
-msgstr ""
+msgstr "打开"
 
 #: setup.php:439
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr ""
+msgstr "Cacti图形的导出网站。"
 
 #: setup.php:446
 msgid "Graph Thumbnail Width"
-msgstr ""
+msgstr "图表缩略图宽度"
 
 #: setup.php:447
 msgid "The default width of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "缩略图图形的默认宽度（以像素为单位）。"
 
 #: setup.php:455
 msgid "Graph Thumbnail Height"
-msgstr ""
+msgstr "图缩略图高度"
 
 #: setup.php:456
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "缩略图图形的高度（以像素为单位）。"
 
 #: setup.php:464
 msgid "Default View Thumbnails"
-msgstr ""
+msgstr "默认查看缩略图"
 
 #: setup.php:465
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
-msgstr ""
+msgstr "如果您希望默认图形视图处于缩略图模式，请选中此项。"
 
 #: setup.php:470
 msgid "Default Graph Columns"
-msgstr ""
+msgstr "默认图形列"
 
 #: setup.php:471
 msgid "The number of columns to use by default when displaying Graphs."
-msgstr ""
+msgstr "显示图形时默认使用的列数。"
 
 #: setup.php:479
 msgid "Graphs Per Page"
-msgstr ""
+msgstr "每页图表数"
 
 #: setup.php:480
 msgid "Choose the number of Graphs Per Page to display."
-msgstr ""
+msgstr "选择要显示的每页图形数量。"
 
 #: setup.php:487
 msgid "Maximum Graphs to Export"
-msgstr ""
+msgstr "导出最大图表数"
 
 #: setup.php:488
 msgid ""
 "After this number is reached, an error will be generated, but exporting will "
 "continue.  Set to 0 for no limit."
-msgstr ""
+msgstr "达到此数字后，将会生成错误，但导出将继续。 无限制设置为0。"
 
 #: setup.php:496
 msgid "Export Location Information"
-msgstr ""
+msgstr "导出位置信息"
 
 #: setup.php:501
+#, fuzzy
 msgid "Export Thumbnails"
-msgstr ""
+msgstr "导出时间"
 
 #: setup.php:502
+#, fuzzy
 msgid "Check this if you want the export thumbnails mode."
-msgstr ""
+msgstr "如果您希望默认图形视图处于缩略图模式，请选中此项。"
 
 #: setup.php:507
+#, fuzzy
 msgid "Clear Directory"
-msgstr ""
+msgstr "导出目录"
 
 #: setup.php:508
+#, fuzzy
 msgid ""
 "Check this Checkbox if you wish this Graph Export to clear the final "
 "directory before populating."
-msgstr ""
+msgstr "如果希望启用此图形导出定义，请选中此复选框。"
 
 #: setup.php:513
 msgid "Export Directory"
-msgstr ""
+msgstr "导出目录"
 
 #: setup.php:514
 msgid ""
 "This is the directory, either on the local system or on the remote system, "
 "that will contain the exported data."
-msgstr ""
+msgstr "这是包含导出数据的本地系统或远程系统上的目录。"
 
 #: setup.php:520
 msgid "Local Scratch Directory"
-msgstr ""
+msgstr "本地临时目录"
 
 #: setup.php:521
 msgid ""
@@ -803,14 +876,16 @@ msgid ""
 "sending to the remote site via the transfer method.  The contents of this "
 "directory will be deleted after the data is transferred."
 msgstr ""
+"这是Cacti在通过传输方法发送到远程站点之前临时存储输出的目录。 数据传输后，该"
+"目录的内容将被删除。"
 
 #: setup.php:528
 msgid "Remote Options"
-msgstr ""
+msgstr "远程选项"
 
 #: setup.php:533
 msgid "Sanitize remote directory"
-msgstr ""
+msgstr "清理远程目录"
 
 #: setup.php:534
 msgid ""
@@ -818,65 +893,67 @@ msgid ""
 "directory. This option is in use only when using the PHP built-in ftp "
 "functions."
 msgstr ""
+"如果要删除FTP远程目录中的任何现有文件，请选中此项。 该选项仅在使用PHP内置的"
+"ftp功能时才能使用。"
 
 #: setup.php:539
 msgid "Remote Host"
-msgstr ""
+msgstr "远程主机"
 
 #: setup.php:540
 msgid "Denotes the host to send Exported Graphs to."
-msgstr ""
+msgstr "表示主机将导出的图发送到。"
 
 #: setup.php:547
 msgid "Remote Port"
-msgstr ""
+msgstr "远程端口"
 
 #: setup.php:548
 msgid ""
 "Communication port to use for the export method if non-standard (leave empty "
 "for defaults)."
-msgstr ""
+msgstr "非标准时用于导出方法的通信端口（默认为空）。"
 
 #: setup.php:556
 msgid "Use passive mode"
-msgstr ""
+msgstr "使用被动模式"
 
 #: setup.php:557
 msgid "Check this if you want to connect in passive mode to the FTP server."
-msgstr ""
+msgstr "如果要以被动模式连接到FTP服务器，请检查此选项。"
 
 #: setup.php:562
 msgid "User"
-msgstr ""
+msgstr "用户"
 
 #: setup.php:563
 msgid "Account to logon on the remote server (leave empty for defaults)."
-msgstr ""
+msgstr "帐户登录到远程服务器（默认为空）。"
 
 #: setup.php:570
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: setup.php:571
 msgid "Password for the remote ftp account (leave empty for blank)."
-msgstr ""
+msgstr "远程ftp帐户的密码（留空为空）。"
 
 #: setup.php:578
 msgid "Private Key Path"
-msgstr ""
+msgstr "私钥关键路径"
 
 #: setup.php:579
 msgid "For SCP and RSYNC, enter the Private Key path if required."
-msgstr ""
+msgstr "对于SCP和RSYNC，如果需要，输入私钥路径。"
 
 #: setup.php:590
 msgid "Exported Cacti Graph Pages"
-msgstr ""
+msgstr "导出的Cacti 图表页面"
 
 #: setup.php:596
 msgid "(Edit)"
-msgstr ""
+msgstr "（编辑）"
 
 #: setup.php:602
 msgid "Actions"
-msgstr ""
+msgstr "操作"

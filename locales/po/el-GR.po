@@ -1,0 +1,1127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-19 09:50+0000\n"
+"PO-Revision-Date: 2019-07-21 21:07-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: functions.php:312
+msgid "Success"
+msgstr "Επιτυχία"
+
+#: functions.php:313
+#, fuzzy
+msgid "Syntax or usage error"
+msgstr "Σύνταξη ή σφάλμα χρήσης"
+
+#: functions.php:314
+#, fuzzy
+msgid "Protocol incompatibility"
+msgstr "Ασυμβατότητα πρωτοκόλλου"
+
+#: functions.php:315
+#, fuzzy
+msgid "Errors selecting input/output files, dirs"
+msgstr "Σφάλματα επιλογής αρχείων εισόδου / εξόδου, διευθύνσεις"
+
+#: functions.php:316
+#, fuzzy
+msgid ""
+"Requested action not supported: an attempt was made to manipulate 64-bit "
+"files on a platform that cannot support them; or an option was specified "
+"that is supported by the client and not by the server."
+msgstr ""
+"Η ενέργεια που ζητήσατε δεν υποστηρίζεται: έγινε προσπάθεια χειρισμού "
+"αρχείων 64-bit σε μια πλατφόρμα που δεν μπορεί να τα υποστηρίξει. ή έχει "
+"οριστεί μια επιλογή που υποστηρίζεται από τον υπολογιστή-πελάτη και όχι από "
+"το διακομιστή."
+
+#: functions.php:317
+#, fuzzy
+msgid "Error starting client-server protocol"
+msgstr "Σφάλμα εκκίνησης πρωτοκόλλου πελάτη-διακομιστή"
+
+#: functions.php:318
+#, fuzzy
+msgid "Daemon unable to append to log-file"
+msgstr "Ο δαίμονας δεν μπορεί να προστεθεί στο αρχείο καταγραφής"
+
+#: functions.php:319
+#, fuzzy
+msgid "Error in socket I/O"
+msgstr "Σφάλμα στο I / O της υποδοχής"
+
+#: functions.php:320
+#, fuzzy
+msgid "Error in file I/O"
+msgstr "Σφάλμα στο αρχείο I / O"
+
+#: functions.php:321
+#, fuzzy
+msgid "Error in rsync protocol data stream"
+msgstr "Σφάλμα στη ροή δεδομένων πρωτοκόλλου rsync"
+
+#: functions.php:322
+#, fuzzy
+msgid "Errors with program diagnostics"
+msgstr "Σφάλματα με τη διάγνωση προγραμμάτων"
+
+#: functions.php:323
+#, fuzzy
+msgid "Error in IPC code"
+msgstr "Σφάλμα στον κώδικα IPC"
+
+#: functions.php:324
+#, fuzzy
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Λήφθηκαν SIGUSR1 ή SIGINT"
+
+#: functions.php:325
+#, fuzzy
+msgid "Some error returned by waitpid()"
+msgstr "Κάποιο σφάλμα που επέστρεψε το waitpid ()"
+
+#: functions.php:326
+#, fuzzy
+msgid "Error allocating core memory buffers"
+msgstr "Παρουσιάστηκε σφάλμα κατά την κατανομή buffer buffers"
+
+#: functions.php:327
+#, fuzzy
+msgid "Partial transfer due to error"
+msgstr "Μερική μεταφορά λόγω σφάλματος"
+
+#: functions.php:328
+#, fuzzy
+msgid "Partial transfer due to vanished source files"
+msgstr "Μερική μεταφορά λόγω εξαφανισμένων αρχείων προέλευσης"
+
+#: functions.php:329
+#, fuzzy
+msgid "The --max-delete limit stopped deletions"
+msgstr "Το όριο -max-delete διακόπηκε"
+
+#: functions.php:330
+#, fuzzy
+msgid "Timeout in data send/receive"
+msgstr "Χρονικό όριο στα δεδομένα αποστολής / λήψης"
+
+#: functions.php:331
+#, fuzzy
+msgid "Timeout waiting for daemon connection"
+msgstr "Χρόνος αναμονής για σύνδεση δαίμονα"
+
+#: functions.php:334 functions.php:405
+#, fuzzy
+msgid "Unknown error "
+msgstr "Αγνωστο σφάλμα"
+
+#: functions.php:377
+#, fuzzy
+msgid "Operation was successful"
+msgstr "Η λειτουργία ήταν επιτυχής"
+
+#: functions.php:378
+#, fuzzy
+msgid "General error in file copy"
+msgstr "Γενικό σφάλμα στο αντίγραφο αρχείου"
+
+#: functions.php:379
+#, fuzzy
+msgid "Destination is not directory, but it should be"
+msgstr "Ο προορισμός δεν είναι κατάλογος, αλλά πρέπει να είναι"
+
+#: functions.php:380
+#, fuzzy
+msgid "Maximum symlink level exceeded"
+msgstr "Έχει ξεπεραστεί το μέγιστο επίπεδο συμβολισμού"
+
+#: functions.php:381
+#, fuzzy
+msgid "Connecting to host failed."
+msgstr "Η σύνδεση με τον κεντρικό υπολογιστή απέτυχε."
+
+#: functions.php:382
+#, fuzzy
+msgid "Connection broken"
+msgstr "Η σύνδεση σπάσει"
+
+#: functions.php:383
+#, fuzzy
+msgid "File does not exist"
+msgstr "Το αρχείο δεν υπάρχει"
+
+#: functions.php:384
+#, fuzzy
+msgid "No permission to access file."
+msgstr "Δεν υπάρχει άδεια πρόσβασης στο αρχείο."
+
+#: functions.php:385
+#, fuzzy
+msgid "General error in sftp protocol"
+msgstr "Γενικό σφάλμα στο πρωτόκολλο sftp"
+
+#: functions.php:386
+#, fuzzy
+msgid "File transfer protocol mismatch"
+msgstr "Ασυμφωνία πρωτοκόλλου μεταφοράς αρχείων"
+
+#: functions.php:387
+#, fuzzy
+msgid "No file matches a given criteria"
+msgstr "Δεν υπάρχει αρχείο που να ταιριάζει με συγκεκριμένα κριτήρια"
+
+#: functions.php:388
+#, fuzzy
+msgid "Host not allowed to connect"
+msgstr "Ο οικοδεσπότης δεν επιτρέπεται να συνδεθεί"
+
+#: functions.php:389
+#, fuzzy
+msgid "General error in ssh protocol"
+msgstr "Γενικό σφάλμα στο πρωτόκολλο ssh"
+
+#: functions.php:390
+#, fuzzy
+msgid "Key exchange failed"
+msgstr "Η ανταλλαγή κλειδιών απέτυχε"
+
+#: functions.php:391
+#, fuzzy
+msgid "Reserved"
+msgstr "Κατοχυρωμένα"
+
+#: functions.php:392
+#, fuzzy
+msgid "MAC error"
+msgstr "Σφάλμα MAC"
+
+#: functions.php:393
+#, fuzzy
+msgid "Compression error"
+msgstr "Σφάλμα συμπίεσης"
+
+#: functions.php:394
+#, fuzzy
+msgid "Service not available"
+msgstr "Η υπηρεσία δεν είναι διαθέσιμη"
+
+#: functions.php:395
+#, fuzzy
+msgid "Protocol version not supported"
+msgstr "Η έκδοση πρωτοκόλλου δεν υποστηρίζεται"
+
+#: functions.php:396
+#, fuzzy
+msgid "Host key not verifiable"
+msgstr "Το κλειδί υποδοχής δεν είναι επαληθεύσιμο"
+
+#: functions.php:397
+#, fuzzy
+msgid "Connection failed"
+msgstr "Αποτυχημένη σύνδεση"
+
+#: functions.php:398
+#, fuzzy
+msgid "Disconnected by application"
+msgstr "Αποσυνδεδεμένος από την εφαρμογή"
+
+#: functions.php:399
+#, fuzzy
+msgid "Too many connections"
+msgstr "Πάρα πολλές συνδέσεις"
+
+#: functions.php:400
+#, fuzzy
+msgid "Authentication cancelled by user"
+msgstr "Ο έλεγχος ταυτότητας ακυρώθηκε από το χρήστη"
+
+#: functions.php:401
+#, fuzzy
+msgid "No more authentication methods available"
+msgstr "Δεν υπάρχουν πλέον διαθέσιμες μέθοδοι ελέγχου ταυτότητας"
+
+#: functions.php:402
+#, fuzzy
+msgid "Invalid user name"
+msgstr "Μη έγκυρο όνομα χρήστη"
+
+#: functions.php:1504 functions.php:1667
+#, fuzzy
+msgid "Non Query Based"
+msgstr "Μη βασισμένο σε ερωτήματα"
+
+#: functions.php:1751
+#, fuzzy
+msgid "Graph Templates"
+msgstr "Πρότυπα γραφήματος"
+
+#: functions.php:1780
+#, fuzzy
+msgid "Data Queries"
+msgstr "Ερωτήματα δεδομένων"
+
+#: gexport.php:30
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: gexport.php:31
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: gexport.php:32
+msgid "Disable"
+msgstr "Απενεργοποίηση"
+
+#: gexport.php:33
+#, fuzzy
+msgid "Export Now"
+msgstr "Εξαγωγή τώρα"
+
+#: gexport.php:37 setup.php:350
+#, fuzzy
+msgid "Periodic"
+msgstr "Περιοδικός"
+
+#: gexport.php:38 setup.php:352
+msgid "Daily"
+msgstr "Καθημερινά"
+
+#: gexport.php:39 setup.php:351
+msgid "Hourly"
+msgstr "Aνά ώρα"
+
+#: gexport.php:253
+#, fuzzy
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να διαγράψετε τον ακόλουθο ορισμό "
+"εξαγωγής γραφήματος."
+msgstr[1] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να διαγράψετε τους ακόλουθους "
+"ορισμούς εξαγωγής γραφημάτων."
+
+#: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: gexport.php:262
+#, fuzzy
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να απενεργοποιήσετε τον ακόλουθο "
+"ορισμό εξαγωγής γραφήματος."
+msgstr[1] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να απενεργοποιήσετε τους ακόλουθους "
+"ορισμούς εξαγωγής γραφημάτων."
+
+#: gexport.php:267 gexport.php:276 gexport.php:285
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#: gexport.php:267
+#, fuzzy
+msgid "Disable Graph Export Definition(s)"
+msgstr "Ορισμοί εξαγωγής γραφημάτων"
+
+#: gexport.php:271
+#, fuzzy
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να ενεργοποιήσετε τον ακόλουθο ορισμό "
+"εξαγωγής γραφήματος."
+msgstr[1] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να ενεργοποιήσετε τους παρακάτω "
+"ορισμούς εξαγωγής γραφημάτων."
+
+#: gexport.php:276
+#, fuzzy
+msgid "Enable Graph Export Definition(s)"
+msgstr "Ορισμοί εξαγωγής γραφημάτων"
+
+#: gexport.php:280
+#, fuzzy
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] ""
+"Κάντε κλικ στο κουμπί 'Συνέχεια' για να εκτελέσετε τώρα την παρακάτω γραφική "
+"παράσταση Graph Export."
+msgstr[1] ""
+"Κάντε κλικ στο κουμπί \"Συνέχεια\" για να εκτελεστεί τώρα οι ορισμοί "
+"εξαγωγής γραφήματος."
+
+#: gexport.php:285
+#, fuzzy
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Ορισμοί εξαγωγής γραφημάτων"
+
+#: gexport.php:288
+#, fuzzy
+msgid "You must select at least one Graph Export Definition."
+msgstr "Πρέπει να επιλέξετε τουλάχιστον έναν ορισμό εξαγωγής γραφήματος."
+
+#: gexport.php:289
+msgid "Return"
+msgstr "Επιστροφή"
+
+#: gexport.php:345
+#, fuzzy, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Γράφημα εξαγωγής γραφημάτων [επεξεργασία: %s]"
+
+#: gexport.php:347
+#, fuzzy
+msgid "Graph Export Definition [new]"
+msgstr "Γράφημα εξαγωγής γραφήματος [new]"
+
+#: gexport.php:373
+#, fuzzy
+msgid "Select Tree(s)"
+msgstr "Επιλέξτε Δέντρο (ες)"
+
+#: gexport.php:375
+#, fuzzy
+msgid "Trees Selected"
+msgstr "Δέντρα επιλέγονται"
+
+#: gexport.php:378
+#, fuzzy
+msgid "All Trees Selected"
+msgstr "Όλα τα δέντρα είναι επιλεγμένα"
+
+#: gexport.php:384 gexport.php:430
+msgid "All"
+msgstr "Όλα"
+
+#: gexport.php:385 gexport.php:431
+msgid "None"
+msgstr "Κανένα"
+
+#: gexport.php:415 gexport.php:461 gexport.php:563
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: gexport.php:419
+#, fuzzy
+msgid "Select Site(s)"
+msgstr "Επιλέξτε ιστότοπο"
+
+#: gexport.php:421
+#, fuzzy
+msgid "Sites Selected"
+msgstr "Επιλεγμένες τοποθεσίες"
+
+#: gexport.php:424
+#, fuzzy
+msgid "All Sites Selected"
+msgstr "Όλοι οι επιλεγμένοι ιστότοποι"
+
+#: gexport.php:555
+#, fuzzy
+msgid "Graph Export Definitions"
+msgstr "Ορισμοί εξαγωγής γραφημάτων"
+
+#: gexport.php:569
+#, fuzzy
+msgid "Exports"
+msgstr "Εξαγωγές"
+
+#: gexport.php:573
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: gexport.php:585
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Πήγαινε"
+
+#: gexport.php:586
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Καθαρισμός"
+
+#: gexport.php:701
+#, fuzzy
+msgid "Export Definitions"
+msgstr "Εξαγωγή ορισμών"
+
+#: gexport.php:710 setup.php:277
+#, fuzzy
+msgid "Export Name"
+msgstr "Όνομα εξαγωγής"
+
+#: gexport.php:710 setup.php:278
+#, fuzzy
+msgid "The name of this Graph Export Definition."
+msgstr "Το όνομα αυτού του ορισμού εξαγωγής γραφημάτων."
+
+#: gexport.php:711
+msgid "ID"
+msgstr "ID"
+
+#: gexport.php:711
+#, fuzzy
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Το εσωτερικό αναγνωριστικό του ορισμού εξαγωγής γραφημάτων."
+
+#: gexport.php:712
+msgid "Schedule"
+msgstr "Πρόγραμμα"
+
+#: gexport.php:712
+#, fuzzy
+msgid "The frequency that Graphs will be exported."
+msgstr "Η συχνότητα που θα εξάγει τα Γραφήματα."
+
+#: gexport.php:713
+#, fuzzy
+msgid "Next Start"
+msgstr "Επόμενορξη"
+
+#: gexport.php:713
+#, fuzzy
+msgid "The next time the Graph Export should run."
+msgstr "Την επόμενη φορά θα πρέπει να εκτελείται η εξαγωγή γραφημάτων."
+
+#: gexport.php:714 setup.php:286
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: gexport.php:714
+#, fuzzy
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr ""
+"Αν είναι ενεργοποιημένη, αυτός ο ορισμός Εξαγωγή γραφήματος θα εκτελείται "
+"όπως απαιτείται."
+
+#: gexport.php:715
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: gexport.php:715
+#, fuzzy
+msgid "The current Graph Export Status."
+msgstr "Η τρέχουσα κατάσταση εξαγωγής γραφημάτων."
+
+#: gexport.php:717
+#, fuzzy
+msgid "Exporting (Sites/Trees)"
+msgstr "Εξαγωγή (ιστότοποι / δέντρα)"
+
+#: gexport.php:717
+#, fuzzy
+msgid "What is being Exported."
+msgstr "Τι εξάγεται."
+
+#: gexport.php:718 setup.php:410
+#, fuzzy
+msgid "Effective User"
+msgstr "Αποτελεσματικός χρήστης"
+
+#: gexport.php:718
+#, fuzzy
+msgid "The user that this export will impersonate."
+msgstr "Ο χρήστης που θα εξαγάγει αυτή την εξαγωγή."
+
+#: gexport.php:719
+#, fuzzy
+msgid "Last Runtime"
+msgstr "Τελευταία ώρα εκτέλεσης"
+
+#: gexport.php:719
+#, fuzzy
+msgid "The last runtime for the Graph Export."
+msgstr "Ο τελευταίος χρόνος εκτέλεσης για την εξαγωγή γραφημάτων."
+
+#: gexport.php:720
+msgid "Graphs"
+msgstr "Γραφήματα"
+
+#: gexport.php:720
+#, fuzzy
+msgid "The number of Graphs Exported on the last run."
+msgstr "Ο αριθμός των εξαγόμενων γραφημάτων κατά την τελευταία εκτέλεση."
+
+#: gexport.php:721
+#, fuzzy
+msgid "Last Started"
+msgstr "Τελευταίο ξεκίνησε"
+
+#: gexport.php:721
+#, fuzzy
+msgid "The last time that this Graph Export was started."
+msgstr "Την τελευταία φορά που ξεκίνησε αυτή η εξαγωγή γραφημάτων."
+
+#: gexport.php:722
+#, fuzzy
+msgid "Last Errored"
+msgstr "Τελευταία λάθος"
+
+#: gexport.php:722
+#, fuzzy
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Την τελευταία φορά που αυτή η εξαγωγή γραφήματος παρουσιάστηκε σφάλμα."
+
+#: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
+#: setup.php:415
+msgid "N/A"
+msgstr "Μη Διαθέσιμο"
+
+#: gexport.php:758
+msgid "No"
+msgstr "Όχι"
+
+#: gexport.php:758
+msgid "Yes"
+msgstr "Ναι"
+
+#: gexport.php:762
+#, fuzzy
+msgid "Idle"
+msgstr "Αεργος"
+
+#: gexport.php:765
+#, fuzzy
+msgid "Running"
+msgstr "Τρέξιμο"
+
+#: gexport.php:768
+#, fuzzy
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: gexport.php:774
+msgid "All Sites"
+msgstr "Όλα τα Αξιοθέατα"
+
+#: gexport.php:785
+#, fuzzy
+msgid "All Trees"
+msgstr "Όλα τα δέντρα"
+
+#: gexport.php:799
+#, fuzzy
+msgid "Sec"
+msgstr "Sec"
+
+#: gexport.php:806 gexport.php:811 gexport.php:812
+msgid "Never"
+msgstr "Ποτέ"
+
+#: gexport.php:819
+#, fuzzy
+msgid "No Graph Export Definitions"
+msgstr "Δεν υπάρχουν ορισμοί εξαγωγής γραφημάτων"
+
+#: setup.php:31
+#, fuzzy
+msgid "Export Cacti Graphs Settings"
+msgstr "Εξαγωγή ρυθμίσεων γραφημάτων Cacti"
+
+#: setup.php:265
+#, fuzzy
+msgid "Graph Exports"
+msgstr "Εξαγωγή γραφημάτων"
+
+#: setup.php:265
+msgid "Utilities"
+msgstr "Παροχές"
+
+#: setup.php:272
+msgid "General"
+msgstr "Γενικά"
+
+#: setup.php:287
+#, fuzzy
+msgid ""
+"Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr ""
+"Ελέγξτε αυτό το πλαίσιο ελέγχου εάν θέλετε να ενεργοποιηθεί αυτός ο ορισμός "
+"εξαγωγής γραφημάτων."
+
+#: setup.php:293
+#, fuzzy
+msgid "Export Method"
+msgstr "Μέθοδος εξαγωγής"
+
+#: setup.php:294
+#, fuzzy
+msgid "Choose which export method to use."
+msgstr "Επιλέξτε τη μέθοδο εξαγωγής που θα χρησιμοποιηθεί."
+
+#: setup.php:299
+msgid "Local"
+msgstr "Τοπικό"
+
+#: setup.php:300
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php:301
+#, fuzzy
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php:302
+#, fuzzy
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php:303
+#, fuzzy
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php:304
+#, fuzzy
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php:308
+#, fuzzy
+msgid "Export Command Arguments"
+msgstr "Εξαγωγή εντολών επιχείρησης"
+
+#: setup.php:309
+#, fuzzy
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr ""
+"Επιχειρήματα που πρέπει να χρησιμοποιηθούν με μη τοπικές μεθόδους εξαγωγής. "
+"rsync θα πρέπει να χρησιμοποιήσει"
+
+#: setup.php:321
+msgid "Theme"
+msgstr "Θέμα"
+
+#: setup.php:322
+#, fuzzy
+msgid ""
+"Please select one of the available Themes to skin your Cacti Graph Exports "
+"with."
+msgstr ""
+"Επιλέξτε ένα από τα διαθέσιμα θέματα για να αποκτήσετε πρόσβαση στο Cacti "
+"Graph Exports."
+
+#: setup.php:329
+#, fuzzy
+msgid "Presentation Method"
+msgstr "Μέθοδος παρουσίασης"
+
+#: setup.php:330
+#, fuzzy
+msgid ""
+"Choose which presentation would you want for the html generated pages. If "
+"you choose classical presentation; the Graphs will be in a only-one-html "
+"page. If you choose tree presentation, the Graph Tree architecture will be "
+"kept in the static html pages"
+msgstr ""
+"Επιλέξτε ποια παρουσίαση θέλετε για τις σελίδες που δημιουργούνται από html. "
+"Αν επιλέξετε κλασική παρουσίαση. τα Γραφήματα θα είναι σε μια μόνο σελίδα-"
+"ένα-html. Εάν επιλέξετε εμφάνιση δέντρου, η αρχιτεκτονική Tree Tree θα "
+"διατηρηθεί στις στατικές σελίδες html"
+
+#: setup.php:335 setup.php:438
+msgid "Site"
+msgstr "Ιστοσελίδα"
+
+#: setup.php:336 setup.php:419
+#, fuzzy
+msgid "Tree"
+msgstr "Δέντρο"
+
+#: setup.php:340
+#, fuzzy
+msgid "Export Timing"
+msgstr "Εξαγωγή χρονισμού"
+
+#: setup.php:344
+#, fuzzy
+msgid "Timing Method"
+msgstr "Μέθοδος συγχρονισμού"
+
+#: setup.php:345
+#, fuzzy
+msgid "Choose when to Export Graphs."
+msgstr "Επιλέξτε πότε θα γίνει εξαγωγή γραφημάτων."
+
+#: setup.php:356
+#, fuzzy
+msgid "Periodic Export Cycle"
+msgstr "Περιοδικός κύκλος εξαγωγής"
+
+#: setup.php:357
+#, fuzzy
+msgid ""
+"How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
+"Cycles you wish to export Graphs."
+msgstr ""
+"Πόσο συχνά θέλετε το Cacti να εξάγει γραφήματα. Αυτή είναι η μονάδα κύκλων "
+"ερωτήσεων που θέλετε να εξάγετε Γραφήματα."
+
+#: setup.php:361
+#, fuzzy
+msgid "Every Polling Cycle"
+msgstr "Κάθε κύκλος τηλεπαραλαβής"
+
+#: setup.php:362 setup.php:363 setup.php:364 setup.php:365 setup.php:366
+#: setup.php:367 setup.php:368 setup.php:369 setup.php:370 setup.php:371
+#: setup.php:372
+#, fuzzy, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Κάθε% d κύκλους τηλεπαραλαβής"
+
+#: setup.php:376
+#, fuzzy
+msgid "Hourly at specified minutes"
+msgstr "Ωριαία σε συγκεκριμένα λεπτά"
+
+#: setup.php:377
+#, fuzzy
+msgid ""
+"If you want Cacti to export static images on an hourly basis, put the "
+"minutes of the hour when to do that. Cacti assumes that you run the data "
+"gathering script every 5 minutes, so it will round your value to the one "
+"closest to its runtime. For instance, 43 would equal 40 minutes past the "
+"hour."
+msgstr ""
+"Αν θέλετε το Cacti να εξάγει στατικές εικόνες σε ωριαία βάση, βάλτε τα λεπτά "
+"της ώρας πότε πρέπει να το κάνετε αυτό. Ο Cacti υποθέτει ότι εκτελείτε το "
+"σενάριο συλλογής δεδομένων κάθε 5 λεπτά, οπότε θα μετατρέψει την αξία σας σε "
+"εκείνη που βρίσκεται πλησιέστερα στο χρόνο εκτέλεσης. Για παράδειγμα, 43 θα "
+"ήταν 40 λεπτά μετά την ώρα."
+
+#: setup.php:386
+#, fuzzy
+msgid "Daily at specified time"
+msgstr "Καθημερινά σε καθορισμένο χρόνο"
+
+#: setup.php:387
+#, fuzzy
+msgid ""
+"If you want Cacti to export static images on an daily basis, put here the "
+"time when to do that. Cacti assumes that you run the data gathering script "
+"every 5 minutes, so it will round your value to the one closest to its "
+"runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr ""
+"Αν θέλετε το Cacti να εξάγει στατικές εικόνες σε καθημερινή βάση, βάλτε εδώ "
+"την ώρα για να το κάνετε αυτό. Ο Cacti υποθέτει ότι εκτελείτε το σενάριο "
+"συλλογής δεδομένων κάθε 5 λεπτά, οπότε θα μετατρέψει την αξία σας σε εκείνη "
+"που βρίσκεται πλησιέστερα στο χρόνο εκτέλεσης. Για παράδειγμα, το 21:23 θα "
+"ήταν ίσο με 20 λεπτά μετά τις 9 μ.μ."
+
+#: setup.php:396
+#, fuzzy
+msgid "Use x Threads"
+msgstr "Χρησιμοποιήστε το x Threads"
+
+#: setup.php:397
+#, fuzzy
+msgid ""
+"How many background threads do you wish Cacti to use when exporting graphs.  "
+"Default is 0 to run all export in poller thread, 1 or more to spawn separate "
+"background threads"
+msgstr ""
+"Πόσα νήματα του φόντου θέλετε να χρησιμοποιήσει το Cacti κατά την εξαγωγή "
+"γραφημάτων. Το προεπιλεγμένο είναι 0 για να εκτελέσετε όλα τα εξαγόμενα σε "
+"νήμα poller, 1 ή περισσότερα για να δημιουργήσετε ξεχωριστά νήματα φόντου"
+
+#: setup.php:405
+#, fuzzy
+msgid "Graph Selection & Settings"
+msgstr "Επιλογή και ρυθμίσεις γραφημάτων"
+
+#: setup.php:411
+#, fuzzy
+msgid ""
+"The user name to utilize for establishing permissions to Cacti Graphs.  This "
+"user name will be used to determine which Graphs/Trees can be exported.  N/A "
+"means don't assume any security is in place."
+msgstr ""
+"Το όνομα χρήστη που θα χρησιμοποιηθεί για τον καθορισμό των δικαιωμάτων στα "
+"Cacti Graphs. Αυτό το όνομα χρήστη θα χρησιμοποιηθεί για να προσδιοριστεί "
+"ποια Γραφήματα / Δέντρα μπορούν να εξαχθούν. Το μηδέν σημαίνει ότι δεν "
+"υπάρχει καμία ασφάλεια."
+
+#: setup.php:420
+#, fuzzy
+msgid "The Tree(s) to export."
+msgstr "Το δέντρο (ες) για εξαγωγή."
+
+#: setup.php:427
+#, fuzzy
+msgid "Expand Devices/Sites"
+msgstr "Επεκτείνετε τις συσκευές / ιστότοπους"
+
+#: setup.php:428
+#, fuzzy
+msgid ""
+"This setting determines if Tree Devices and Site Templates and Devices will "
+"be expanded or not.  If set to expanded, each host will have a sub-folder "
+"containing either Graph Templates or Data Query items."
+msgstr ""
+"Αυτή η ρύθμιση καθορίζει εάν τα Συσκευές και τα Πρότυπα και τα Συστήματα "
+"ιστότοπων θα επεκταθούν ή όχι. Εάν έχει οριστεί για επέκταση, κάθε κεντρικός "
+"υπολογιστής θα έχει έναν υποφάκελο που θα περιέχει είτε Πρότυπα διαγραμμάτων "
+"είτε Στοιχεία ερωτήματος δεδομένων."
+
+#: setup.php:433
+msgid "Off"
+msgstr "Απενεργοποίηση"
+
+#: setup.php:434
+msgid "On"
+msgstr "Ενεργό"
+
+#: setup.php:439
+#, fuzzy
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Η περιοχή για τα γραφήματα Cacti προς εξαγωγή από."
+
+#: setup.php:446
+#, fuzzy
+msgid "Graph Thumbnail Width"
+msgstr "Γραμματοειδής πλάτος γραφήματος"
+
+#: setup.php:447
+#, fuzzy
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Το προεπιλεγμένο πλάτος των γραφικών μικρογραφιών σε εικονοστοιχεία."
+
+#: setup.php:455
+#, fuzzy
+msgid "Graph Thumbnail Height"
+msgstr "Ύψος μικρογραφίας γραφής"
+
+#: setup.php:456
+#, fuzzy
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Το ύψος των γραφικών μικρογραφιών σε εικονοστοιχεία."
+
+#: setup.php:464
+#, fuzzy
+msgid "Default View Thumbnails"
+msgstr "Προβολή προεπιλεγμένων μικρογραφιών"
+
+#: setup.php:465
+#, fuzzy
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr ""
+"Ελέγξτε αν θέλετε η προεπιλεγμένη προβολή γραφήματος να είναι σε λειτουργία "
+"μικρογραφίας."
+
+#: setup.php:470
+#, fuzzy
+msgid "Default Graph Columns"
+msgstr "Προκαθορισμένες στήλες γραφήματος"
+
+#: setup.php:471
+#, fuzzy
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr ""
+"Ο αριθμός των στηλών που θα χρησιμοποιηθούν από προεπιλογή κατά την εμφάνιση "
+"των γραφημάτων."
+
+#: setup.php:479
+#, fuzzy
+msgid "Graphs Per Page"
+msgstr "Διαγράμματα ανά σελίδα"
+
+#: setup.php:480
+#, fuzzy
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Επιλέξτε τον αριθμό των γραφημάτων ανά σελίδα για προβολή."
+
+#: setup.php:487
+#, fuzzy
+msgid "Maximum Graphs to Export"
+msgstr "Μέγιστα γραφήματα για εξαγωγή"
+
+#: setup.php:488
+#, fuzzy
+msgid ""
+"After this number is reached, an error will be generated, but exporting will "
+"continue.  Set to 0 for no limit."
+msgstr ""
+"Μετά την επίτευξη αυτού του αριθμού, θα δημιουργηθεί ένα σφάλμα, αλλά η "
+"εξαγωγή θα συνεχιστεί. Ρυθμίστε στο 0 χωρίς όριο."
+
+#: setup.php:496
+#, fuzzy
+msgid "Export Location Information"
+msgstr "Εξαγωγή πληροφοριών τοποθεσίας"
+
+#: setup.php:501
+#, fuzzy
+msgid "Export Thumbnails"
+msgstr "Εξαγωγή χρονισμού"
+
+#: setup.php:502
+#, fuzzy
+msgid "Check this if you want the export thumbnails mode."
+msgstr ""
+"Ελέγξτε αν θέλετε η προεπιλεγμένη προβολή γραφήματος να είναι σε λειτουργία "
+"μικρογραφίας."
+
+#: setup.php:507
+#, fuzzy
+msgid "Clear Directory"
+msgstr "Κατάλογος εξαγωγής"
+
+#: setup.php:508
+#, fuzzy
+msgid ""
+"Check this Checkbox if you wish this Graph Export to clear the final "
+"directory before populating."
+msgstr ""
+"Ελέγξτε αυτό το πλαίσιο ελέγχου εάν θέλετε να ενεργοποιηθεί αυτός ο ορισμός "
+"εξαγωγής γραφημάτων."
+
+#: setup.php:513
+#, fuzzy
+msgid "Export Directory"
+msgstr "Κατάλογος εξαγωγής"
+
+#: setup.php:514
+#, fuzzy
+msgid ""
+"This is the directory, either on the local system or on the remote system, "
+"that will contain the exported data."
+msgstr ""
+"Αυτός είναι ο κατάλογος, είτε στο τοπικό σύστημα είτε στο απομακρυσμένο "
+"σύστημα, που θα περιέχει τα εξαγόμενα δεδομένα."
+
+#: setup.php:520
+#, fuzzy
+msgid "Local Scratch Directory"
+msgstr "Τοπικός κατάλογος γρατσουνιών"
+
+#: setup.php:521
+#, fuzzy
+msgid ""
+"This is the directory that Cacti will temporarily store output prior to "
+"sending to the remote site via the transfer method.  The contents of this "
+"directory will be deleted after the data is transferred."
+msgstr ""
+"Αυτός είναι ο κατάλογος στον οποίο η Cacti θα αποθηκεύσει προσωρινά την "
+"έξοδο πριν από την αποστολή στην απομακρυσμένη τοποθεσία μέσω της μεθόδου "
+"μεταφοράς. Τα περιεχόμενα αυτού του καταλόγου θα διαγραφούν μετά τη μεταφορά "
+"των δεδομένων."
+
+#: setup.php:528
+#, fuzzy
+msgid "Remote Options"
+msgstr "Απομακρυσμένες επιλογές"
+
+#: setup.php:533
+#, fuzzy
+msgid "Sanitize remote directory"
+msgstr "Απολύμανση απομακρυσμένου καταλόγου"
+
+#: setup.php:534
+#, fuzzy
+msgid ""
+"Check this if you want to delete any existing files in the FTP remote "
+"directory. This option is in use only when using the PHP built-in ftp "
+"functions."
+msgstr ""
+"Ελέγξτε αν θέλετε να διαγράψετε υπάρχοντα αρχεία στον απομακρυσμένο κατάλογο "
+"FTP. Αυτή η επιλογή χρησιμοποιείται μόνο όταν χρησιμοποιείτε τις "
+"ενσωματωμένες λειτουργίες ftp της PHP."
+
+#: setup.php:539
+msgid "Remote Host"
+msgstr "Απομακρυσμένος εξυπηρετητής"
+
+#: setup.php:540
+#, fuzzy
+msgid "Denotes the host to send Exported Graphs to."
+msgstr ""
+"Ορίζει τον κεντρικό υπολογιστή για να στείλει τα εξερχόμενα γραφήματα σε."
+
+#: setup.php:547
+#, fuzzy
+msgid "Remote Port"
+msgstr "Απομακρυσμένη θύρα"
+
+#: setup.php:548
+#, fuzzy
+msgid ""
+"Communication port to use for the export method if non-standard (leave empty "
+"for defaults)."
+msgstr ""
+"Θύρα επικοινωνίας που θα χρησιμοποιηθεί για τη μέθοδο εξαγωγής αν είναι μη "
+"τυπική (αφήστε κενή για προεπιλογές)."
+
+#: setup.php:556
+#, fuzzy
+msgid "Use passive mode"
+msgstr "Χρησιμοποιήστε παθητική λειτουργία"
+
+#: setup.php:557
+#, fuzzy
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr ""
+"Ελέγξτε αν θέλετε να συνδεθείτε σε παθητική λειτουργία στο διακομιστή FTP."
+
+#: setup.php:562
+msgid "User"
+msgstr "Χρήστης"
+
+#: setup.php:563
+#, fuzzy
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr ""
+"Λογαριασμός για σύνδεση στον απομακρυσμένο διακομιστή (αφήστε κενό για "
+"προεπιλογές)."
+
+#: setup.php:570
+msgid "Password"
+msgstr "Κωδικός"
+
+#: setup.php:571
+#, fuzzy
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr ""
+"Κωδικός πρόσβασης για τον απομακρυσμένο λογαριασμό ftp (αφήστε κενό για "
+"κενό)."
+
+#: setup.php:578
+#, fuzzy
+msgid "Private Key Path"
+msgstr "Διαδρομή ιδιωτικού κλειδιού"
+
+#: setup.php:579
+#, fuzzy
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr ""
+"Για το SCP και το RSYNC, πληκτρολογήστε τη διαδρομή του ιδιωτικού κλειδιού "
+"εάν απαιτείται."
+
+#: setup.php:590
+#, fuzzy
+msgid "Exported Cacti Graph Pages"
+msgstr "Εξαγόμενες σελίδες γραφικών Cacti"
+
+#: setup.php:596
+msgid "(Edit)"
+msgstr "(Eπεξεργασία)"
+
+#: setup.php:602
+msgid "Actions"
+msgstr "Ενέργειες"

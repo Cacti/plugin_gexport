@@ -2,7 +2,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2017 The Cacti Group                                 |
+ | Copyright (C) 2004-2020 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -71,6 +71,9 @@ if (sizeof($parms)) {
 		case '--id':
 			$id = $value;
 			break;
+		case '--thread':
+			$thread = $value;
+			break;
 		case '-d':
 		case '--debug':
 			$debug = TRUE;
@@ -98,7 +101,11 @@ if (sizeof($parms)) {
 }
 
 /* graph export */
-graph_export($id, $force);
+if (isset($thread)) {
+	export_graph_start_task($thread);
+} else {
+	graph_export($id, $force);
+}
 
 /*  display_version - displays version information */
 function display_version() {
