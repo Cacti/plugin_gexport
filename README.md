@@ -45,6 +45,10 @@ Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
 
+--- develop ----
+
+* issue: Internationalization issues on console
+
 --- 1.4.2 ---
 
 * issue#37: Empty site variable may cause errors to appear
