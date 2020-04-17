@@ -49,6 +49,7 @@ Got any ideas or complaints, please create an issue in GitHub.
 
 * issue#37: Empty site variable may cause errors to appear
 * issue#38: Searching for graph exports does not work with some international characters
+* issue#42: Setting export max graphs to 0 does not include all, as documentation suggests
 
 --- 1.4.2 ---
 

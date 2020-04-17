@@ -725,14 +725,14 @@ function export_graphs(&$export, $export_path) {
 				}
 			}
 
-            export_debug('There are ' . sizeof($graphs) . ' graphs not in hosts to export for all trees');
+			export_debug('There are ' . sizeof($graphs) . ' graphs not in hosts to export for all trees');
 
 			$hosts = db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
 				FROM graph_tree_items
 				WHERE graph_tree_id IN(?)',
 				array(implode(', ', $ntree)));
 
-            export_debug('There are ' . sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
+			export_debug('There are ' . sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
 
 			if ($hosts != '') {
 				$sql_where = 'gl.host_id IN(' . $hosts . ')';
@@ -783,7 +783,7 @@ function export_graphs(&$export, $export_path) {
 
 			$exported++;
 
-			if ($exported >= $export['graph_max'] && $export['graph_max'] > 0) {
+			if ($export['graph_max'] && $exported >= $export['graph_max']) {
 				db_execute_prepared('UPDATE graph_exports
 					SET last_error="WARNING: Max number of Graphs ' . $export['graph_max'] . ' reached",
 					last_errored=NOW()
