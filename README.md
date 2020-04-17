@@ -45,15 +45,17 @@ Got any ideas or complaints, please create an issue in GitHub.
 
 ## Changelog
 
---- develop ---
+--- develop ----
 
 * issue#37: Empty site variable may cause errors to appear
 * issue#38: Searching for graph exports does not work with some international characters
 * issue#42: Setting export max graphs to 0 does not include all, as documentation suggests
+* issue: Internationalization issues on console
 
 --- 1.4.2 ---
 
 * issue#37: Empty site variable may cause errors to appear
+* issue#38: Searching for graph exports does not work with some international characters
 
 --- 1.4.1 ---
 

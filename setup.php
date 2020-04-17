@@ -1,7 +1,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2019 The Cacti Group                                 |
+ | Copyright (C) 2004-2020 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -262,7 +262,11 @@ function gexport_config_arrays() {
 		$messages['gexport_message'] = array('message' => $_SESSION['gexport_message'], 'type' => 'info');
 	}
 
-	$menu[__('Utilities', 'gexport')]['plugins/gexport/gexport.php'] = __('Graph Exports', 'gexport');
+	$menu[__('Utilities')]['plugins/gexport/gexport.php'] = __('Graph Exports', 'gexport');
+
+	if (function_exists('auth_augment_roles')) {
+		auth_augment_roles(__('General Administration'), array('gexport.php'));
+	}
 
 	$sites = array_rekey(db_fetch_assoc('SELECT "0" AS id, "All Sites" AS name UNION SELECT id, name FROM sites ORDER BY name'), 'id', 'name');
 	$trees = array_rekey(db_fetch_assoc('SELECT "0" AS id, "All Trees" AS name UNION SELECT id, name FROM graph_tree ORDER BY name'), 'id', 'name');
