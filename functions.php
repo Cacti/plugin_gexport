@@ -710,7 +710,7 @@ function export_graphs(&$export, $export_path) {
 
 		if (sizeof($ntree)) {
 			$graphs = array_rekey(
-                db_fetch_assoc('SELECT DISTINCT local_graph_id
+				db_fetch_assoc('SELECT DISTINCT local_graph_id
 					FROM graph_tree_items
 					WHERE local_graph_id > 0
 					AND graph_tree_id IN(' . implode(', ', $ntree) . ')'),
