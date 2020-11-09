@@ -31,7 +31,7 @@ function gexport_calc_next_start($export, $start_time = 0) {
 		$now        = date('Y-m-d H:i:00', time());
 		$next_run   = strtotime($now) + $export['export_skip'] * $poller_interval;
 		$next_start = date('Y-m-d H:i:s', $next_run);
-	}else{
+	} else {
 		switch($export['export_timing']) {
 		case 'hourly':
 			$next_start = date('Y-m-d H:' . $export['export_hourly'] . ':00', $start_time);
@@ -90,7 +90,7 @@ function graph_export($id = 0, $force = false) {
 		FROM graph_exports
 		WHERE enabled="on"' . $sql_where);
 
-	if (sizeof($exports)) {
+	if (cacti_sizeof($exports)) {
 		foreach($exports as $export) {
 			export_debug("Checking export '" . $export['name'] . "' to determine if it's time to run.");
 
@@ -110,7 +110,7 @@ function graph_export($id = 0, $force = false) {
 						SET next_start = ? WHERE id = ?',
 						array($next_start, $export['id']));
 				}
-			}else{
+			} else {
 				$runnow = true;
 			}
 
@@ -174,7 +174,7 @@ function run_export(&$export) {
 		/* set the temp directory */
 		if (strlen($export['export_temp_directory']) == 0) {
 			$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
-		}else{
+		} else {
 			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
 		}
 
@@ -195,10 +195,10 @@ function run_export(&$export) {
 		if (trim($export['export_temp_directory']) == '') {
 			if ($config['cacti_server_os'] == 'win32') {
 				$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
-			}else{
+			} else {
 				$stExportDir = '/tmp/cacti-ftp-temp-' . $export['id'];
 			}
-		}else{
+		} else {
 			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
 		}
 
@@ -218,10 +218,10 @@ function run_export(&$export) {
 		if (trim($export['export_temp_directory']) == '') {
 			if ($config['cacti_server_os'] == 'win32') {
 				$stExportDir = getenv('TEMP') . '/cacti-rsync-temp-' . $export['id'];
-			}else{
+			} else {
 				$stExportDir = '/tmp/cacti-rsync-temp-' . $export['id'];
 			}
-		}else{
+		} else {
 			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\t") . '/cacti-rsync-temp-' . $export['id'];
 		}
 
@@ -237,10 +237,10 @@ function run_export(&$export) {
 		if (trim($export['export_temp_directory']) == '') {
 			if ($config['cacti_server_os'] == 'win32') {
 				$stExportDir = getenv('TEMP') . '/cacti-scp-temp-' . $export['id'];
-			}else{
+			} else {
 				$stExportDir = '/tmp/cacti-scp-temp-' . $export['id'];
 			}
-		}else{
+		} else {
 			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-scp-temp-' . $export['id'];
 		}
 
@@ -271,10 +271,10 @@ function export_rsync_execute(&$export, $stExportDir) {
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
 				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"\'';
-			}else{
+			} else {
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
-		}else{
+		} else {
 			export_fatal($export, 'ssh Private Key file does not exist.');
 		}
 	}
@@ -286,10 +286,10 @@ function export_rsync_execute(&$export, $stExportDir) {
 	if ($port != '') {
 		if (!is_numeric($port)) {
 			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
-		}else{
+		} else {
 			$keyopt .= " -e 'ssh -p " . $port  . "'";
 		}
-	}elseif ($keyopt != '') {
+	} elseif ($keyopt != '') {
 		$keyopt .= " ";
 	}
 
@@ -347,10 +347,10 @@ function export_scp_execute(&$export, $stExportDir) {
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
 				$keyopt = ' -i "' . $export['export_private_key_path'] . '"';
-			}else{
+			} else {
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
-		}else{
+		} else {
 			export_fatal($export, 'ssh Private Key file does not exist.');
 		}
 	}
@@ -538,10 +538,10 @@ function export_pre_ftp_upload(&$export) {
 	}
 
 	if ($export['export_passive'] == 'on') {
-		$aFtpExport['passive'] = TRUE;
+		$aFtpExport['passive'] = true;
 		export_log('Using passive transfer method.');
-	}else {
-		$aFtpExport['passive'] = FALSE;
+	} else {
+		$aFtpExport['passive'] = false;
 		export_log('Using active transfer method.');
 	}
 }
@@ -613,7 +613,7 @@ function check_system_paths(&$export, $export_path) {
 			if ($system_path == substr($export_path, 0, strlen($system_path))) {
 				export_fatal($export, "Export path '" . $export_path . "' is within a system path '" . $system_path . "'.  Can not continue.");
 			}
-		}elseif (substr_count(strtolower($export_path), strtolower($system_path)) > 0) {
+		} elseif (substr_count(strtolower($export_path), strtolower($system_path)) > 0) {
 			export_fatal($export, "Export path '" . $export_path . "' is within a system path '" . $system_path . "'.  Can not continue.");
 		}
 	}
@@ -634,6 +634,7 @@ function export_graphs(&$export, $export_path) {
 	if (strlen($export_path) < 3) {
 		export_fatal($export, "Export path is not long enough ! Export can not continue. ");
 	}
+
 	/* if the path is not a directory, don't continue */
 	clearstatcache();
 	if (!is_dir($export_path)) {
@@ -699,13 +700,13 @@ function export_graphs(&$export, $export_path) {
 
 		export_debug('There are ' . sizeof($trees) . ' to export');
 
-		if (sizeof($trees)) {
+		if (cacti_sizeof($trees)) {
 			foreach($trees as $tree) {
 				$ntree[] = $tree['id'];
 			}
 		}
 
-		if (sizeof($ntree)) {
+		if (cacti_sizeof($ntree)) {
 			$graphs = array_rekey(
 				db_fetch_assoc('SELECT DISTINCT local_graph_id
 					FROM graph_tree_items
@@ -716,7 +717,7 @@ function export_graphs(&$export, $export_path) {
 
 			export_debug('There are ' . sizeof($graphs) . ' to export for all trees.');
 
-			if (sizeof($graphs)) {
+			if (cacti_sizeof($graphs)) {
 				foreach($graphs as $local_graph_id) {
 					if (is_graph_allowed($local_graph_id, $user)) {
 						$ngraph[$local_graph_id] = $local_graph_id;
@@ -733,7 +734,7 @@ function export_graphs(&$export, $export_path) {
 				$sql_where = 'gl.host_id IN(' . $hosts . ')';
 				$graphs = get_allowed_graphs($sql_where, 'gtg.title_cache', '', $total_rows, $user);
 
-				if (sizeof($graphs)) {
+				if (cacti_sizeof($graphs)) {
 					foreach($graphs as $graph) {
 						if (is_graph_allowed($graph['local_graph_id'], $user)) {
 							$ngraph[$graph['local_graph_id']] = $graph['local_graph_id'];
@@ -742,9 +743,11 @@ function export_graphs(&$export, $export_path) {
 				}
 			}
 		}
-	}else{
-		if ($sites != '') {
+	} else {
+		if ($sites != '0' && $sites != '') {
 			$hosts = db_fetch_cell('SELECT GROUP_CONCAT(id) FROM host WHERE site_id IN(' . $sites . ')');
+		} elseif ($sites == '0') {
+			$hosts = db_fetch_cell('SELECT GROUP_CONCAT(id) FROM host WHERE site_id > 0');
 		}
 
 		if ($hosts != '') {
@@ -753,7 +756,7 @@ function export_graphs(&$export, $export_path) {
 
 		$graphs = get_allowed_graphs($sql_where, 'gtg.title_cache', '', $total_rows, $user);
 
-		if (sizeof($graphs)) {
+		if (cacti_sizeof($graphs)) {
 			foreach($graphs as $graph) {
 				if (is_graph_allowed($graph['local_graph_id'], $user)) {
 					$ngraph[$graph['local_graph_id']] = $graph['local_graph_id'];
@@ -762,7 +765,7 @@ function export_graphs(&$export, $export_path) {
 		}
 	}
 
-	if (sizeof($ngraph)) {
+	if (cacti_sizeof($ngraph)) {
 		if ($export['export_threads'] > 0) {
 			export_graph_clear_tasks();
 		}
@@ -881,7 +884,7 @@ function export_graph_monitor_tasks($export) {
 				LIMIT ' . $wanted_count);
 
 			export_debug('TASKS ' . $wanted_count . ' available, ' . sizeof($tasks) . ' found');
-			if (sizeof($tasks) > 0) {
+			if (cacti_sizeof($tasks) > 0) {
 				$spawn_time = new DateTime();
 
 				foreach ($tasks as $task) {
@@ -952,8 +955,7 @@ function export_graph_start_task($task_id) {
 /* export_graph_files - this function exports the actual files for a given graph
    @arg $export       - the export item structure
    @arg $export_path  - the directory holding the export contents. */
-function export_graph_files($export, $user, $export_path, $local_graph_id)
-{
+function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	if ($user == 0) {
 		$user = -1;
 	}
@@ -973,6 +975,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 		$graph_data_array['graph_width']     = $export['graph_width'];
 		$graph_data_array['graph_nolegend']  = true;
 		$graph_data_array['export']          = true;
+		$graph_data_array['graph_theme']     = $export['export_theme'];
 
 		export_log("Creating Graph Thumbnail '" . $graph_data_array['export_filename'] . "'");
 		check_remove($graph_data_array['export_filename']);
@@ -984,6 +987,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 	/* settings for preview graphs */
 	$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '.png';
 	$graph_data_array['export']          = true;
+	$graph_data_array['graph_theme']     = $export['export_theme'];
 
 	export_log("Creating Graph '" . $graph_data_array['export_filename'] . "'");
 	check_remove($graph_data_array['export_filename']);
@@ -1002,11 +1006,13 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 		$rras = get_associated_rras($local_graph_id, ' AND dspr.id IS NOT NULL');
 
 		/* generate graphs for each rra */
-		if (sizeof($rras)) {
+		if (cacti_sizeof($rras)) {
 			foreach ($rras as $rra) {
 				$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
 				$graph_data_array['export']          = true;
 				$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
+				$graph_data_array['graph_theme']     = $export['export_theme'];
+
 				if (!empty($rra['timespan'])) {
 					$graph_data_array['graph_start']  = $graph_data_array['graph_end'] - $rra['timespan'];
 				} else {
@@ -1027,7 +1033,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id)
 			fwrite($fp_graph_index, '</table>');
 			fclose($fp_graph_index);
   		}
-	}else{
+	} else {
 		export_warn('Unable to write to file ' . $export_path . '/graph_' . $local_graph_id . '.html');
 	}
 
@@ -1053,7 +1059,7 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 
 		if (!$oFtpConnection) {
 			export_fatal($export, 'FTP Connection failed! Check hostname and port.  Export can not continue.');
-		}else {
+		} else {
 			export_log('Conection to remote server was successful.');
 		}
 		break;
@@ -1062,7 +1068,7 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 
 		if (!$oFtpConnection) {
 			export_fatal($export, 'SFTP Connection failed! Check hostname and port.  Export can not continue.');
-		}else {
+		} else {
 			export_log('Conection to remote server was successful.');
 		}
 		break;
@@ -1072,15 +1078,15 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	if (!ftp_login($oFtpConnection, $aFtpExport['username'], $aFtpExport['password'])) {
 		ftp_close($oFtpConnection);
 		export_fatal($export, 'FTP Login failed! Check username and password.  Export can not continue.');
-	}else {
+	} else {
 		export_log('Remote login was successful.');
 	}
 
 	/* set connection type */
 	if ($aFtpExport['passive']) {
-		ftp_pasv($oFtpConnection, TRUE);
-	}else {
-		ftp_pasv($oFtpConnection, FALSE);
+		ftp_pasv($oFtpConnection, true);
+	} else {
+		ftp_pasv($oFtpConnection, false);
 	}
 
 	/* change directories into the remote upload directory */
@@ -1104,7 +1110,7 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 		}
 
 		$aFtpRemoteFiles = ftp_nlist($oFtpConnection, $aFtpExport['remotedir']);
-		if (sizeof($aFtpRemoteFiles) > 0) {
+		if (cacti_sizeof($aFtpRemoteFiles) > 0) {
 			ftp_close($oFtpConnection);
 			export_fatal($export, 'Problem sanitizing remote ftp location, must exit.');
 		}
@@ -1127,7 +1133,7 @@ function export_ftp_rmdirr($handle, $path) {
 	if (!@ftp_delete($handle, $path)) {
 		$list = @ftp_nlist($handle, $path);
 
-		if (sizeof($list)) {
+		if (cacti_sizeof($list)) {
 			foreach($list as $value) {
 				ftp_rmdirr($handle, $value);
 			}
@@ -1152,12 +1158,12 @@ function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 	global $aFtpExport;
 
 	export_log("Uploading directory: '$dir' to remote location.");
-	if($dh = opendir($dir)) {
+	if ($dh = opendir($dir)) {
 		export_log('Uploading files to remote location.');
 		while(($file = readdir($dh)) !== false) {
 			$filePath = $dir . '/' . $file;
-			if($file != '.' && $file != '..' && !is_dir($filePath)) {
-				if(!ftp_put($oFtpConnection, $file, $filePath, FTP_BINARY)) {
+			if ($file != '.' && $file != '..' && !is_dir($filePath)) {
+				if (!ftp_put($oFtpConnection, $file, $filePath, FTP_BINARY)) {
 					export_log("Failed to upload '$file'.");
 				}
 			}
@@ -1276,31 +1282,31 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 			AND parent = ?
 			AND local_graph_id > 0
 			ORDER BY position', array($tree_site_id, $branch_id));
-	}elseif ($type == 'gtbranch') {
+	} elseif ($type == 'gtbranch') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_gtbranch_0.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = array();
-	}elseif ($type == 'dqbranch') {
+	} elseif ($type == 'dqbranch') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_gtbranch_0.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = array();
-	}elseif ($type == 'site') {
+	} elseif ($type == 'site') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = array();
-	}elseif ($type == 'site_dt') {
+	} elseif ($type == 'site_dt') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_dt_' . $sub_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = array();
-	}elseif ($type == 'site_gt') {
+	} elseif ($type == 'site_gt') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_gt_' . $sub_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
@@ -1308,7 +1314,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
 
 		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gt.id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
-	}elseif ($type == 'site_dq') {
+	} elseif ($type == 'site_dq') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_dq_' . $sub_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
@@ -1316,7 +1322,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
 
 		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
-	}elseif ($type == 'site_dqi') {
+	} elseif ($type == 'site_dqi') {
 		$parts   = explode(':', $sub_id);
 		$dq      = $parts[0];
 		$index   = $parts[1];
@@ -1339,25 +1345,25 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 		}
 
 		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id=' . $dq . $sql_where . ')', 'gtg.title_cache', '', $total_rows, $user);
-	}elseif ($type == 'host') {
+	} elseif ($type == 'host') {
 		$json_file = $export_path . '/host_' . $host_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id, 'gtg.title_cache', '', $total_rows, $user);
-	}elseif ($type == 'host_gt') {
+	} elseif ($type == 'host_gt') {
 		$json_file = $export_path . '/host_' . $host_id . '_gt_' . $sub_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.graph_template_id=' . $sub_id, 'gtg.title_cache', '', $total_rows, $user);
-	}elseif ($type == 'host_dq') {
+	} elseif ($type == 'host_dq') {
 		$json_file = $export_path . '/host_' . $host_id . '_dq_' . $sub_id . '.json';
 
 		if (isset($json_files[$json_file])) return;
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.snmp_query_id=' . $sub_id, 'gtg.title_cache', '', $total_rows, $user);
-	}elseif ($type == 'host_dqi') {
+	} elseif ($type == 'host_dqi') {
 		$parts = explode(':', $sub_id);
 		$dq    = $parts[0];
 		$index = clean_up_name($parts[1]);
@@ -1371,13 +1377,13 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	$fp = fopen($json_file, 'w');
 
 	if (is_resource($fp)) {
-		if (sizeof($graphs)) {
+		if (cacti_sizeof($graphs)) {
 		foreach($graphs as $graph) {
 			if ($host_id == 0) {
 				if (is_graph_allowed($graph['local_graph_id'], $user)) {
 					$graph_array[] = $graph['local_graph_id'];
 				}
-			}else{
+			} else {
 				$graph_array[] = $graph['local_graph_id'];
 			}
 		}
@@ -1385,7 +1391,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 
 		fwrite($fp, json_encode($graph_array) . "\n");
 		fclose($fp);
-	}else{
+	} else {
 			cacti_log('Unable to open ' . $json_file);
 	}
 
@@ -1423,7 +1429,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 		AND parent = ?',
 		array($tree['id'], $parent));
 
-	if (sizeof($branches)) {
+	if (cacti_sizeof($branches)) {
 		foreach($branches as $branch) {
 			write_branch_conf($tree['id'], $branch['id'], 'branch', 0, 0, $user, $export_path);
 
@@ -1444,7 +1450,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 
 				$depth--;
 				$jstree .= str_repeat("\t", $depth) . "</li>\n";
-			}else{
+			} else {
 				$jstree .= "</li>\n";
 			}
 		}
@@ -1457,7 +1463,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 		AND host_id > 0
 		ORDER BY position', array($tree['id'], $parent));
 
-	if (sizeof($hosts)) {
+	if (cacti_sizeof($hosts)) {
 		foreach($hosts as $host) {
 			if (is_device_allowed($host['host_id'], $user)) {
 				write_branch_conf($tree['id'], $parent, 'host', $host['host_id'], 0, $user, $export_path);
@@ -1471,7 +1477,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 				if ($expand_hosts == 'on') {
 					$templates = get_allowed_graph_templates('gl.host_id =' . $host['host_id'], 'name', '', $total_rows, $user);
 					$count = 0;
-					if (sizeof($templates)) {
+					if (cacti_sizeof($templates)) {
 						if ($host['host_grouping_type'] == 1) {
 							foreach($templates as $template) {
 								$total_rows = write_branch_conf($tree['id'], $parent, 'host_gt', $host['host_id'], $template['id'], $user, $export_path);
@@ -1493,7 +1499,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 								$depth--;
 								$jstree .= str_repeat("\t", $depth) . "</li>\n";
 							}
-						}else{
+						} else {
 							$data_queries = db_fetch_assoc_prepared('SELECT sq.id, sq.name
 								FROM snmp_query AS sq
 								INNER JOIN host_snmp_query AS hsq
@@ -1538,7 +1544,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 										if ($total_rows) {
 											if (isset($sort_field_data[$i])) {
 												$title = $sort_field_data[$i];
-											}else{
+											} else {
 												$title = $i;
 											}
 											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
@@ -1603,7 +1609,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 		ON h.host_template_id=dt.id
 		WHERE h.site_id = ?', array($site['id']));
 
-	if (sizeof($device_templates)) {
+	if (cacti_sizeof($device_templates)) {
 		foreach($device_templates as $branch) {
 			write_branch_conf($site['id'], 0, $branch['type'], 0, $branch['id'], $user, $export_path);
 
@@ -1620,7 +1626,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 				ORDER BY description',
 				array($site['id'], $branch['id']));
 
-			if (sizeof($hosts)) {
+			if (cacti_sizeof($hosts)) {
 				foreach($hosts as $host) {
 					if (is_device_allowed($host['host_id'], $user)) {
 						write_branch_conf($site['id'], $parent, 'host', $host['host_id'], 0, $user, $export_path);
@@ -1634,7 +1640,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 						if ($expand_hosts == 'on') {
 							$templates = get_allowed_graph_templates('gl.host_id =' . $host['host_id'], 'name', '', $total_rows, $user);
 							$count = 0;
-							if (sizeof($templates)) {
+							if (cacti_sizeof($templates)) {
 								if ($host['host_grouping_type'] == 1) {
 									foreach($templates as $template) {
 										$total_rows = write_branch_conf($site['id'], $parent, 'host_gt', $host['host_id'], $template['id'], $user, $export_path);
@@ -1656,7 +1662,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 										$depth--;
 										$jstree .= str_repeat("\t", $depth) . "</li>\n";
 									}
-								}else{
+								} else {
 									$data_queries = db_fetch_assoc_prepared('SELECT sq.id, sq.name
 										FROM snmp_query AS sq
 										INNER JOIN host_snmp_query AS hsq
@@ -1701,7 +1707,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 												if ($total_rows) {
 													if (isset($sort_field_data[$i])) {
 														$title = $sort_field_data[$i];
-													}else{
+													} else {
 														$title = $i;
 													}
 													$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
@@ -1747,7 +1753,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 		WHERE h.site_id = ?
 		ORDER BY gt.name', array($site['id']));
 
-	if (sizeof($graph_templates)) {
+	if (cacti_sizeof($graph_templates)) {
 		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_gtbranch_0' data-jstree='{ \"type\" : \"graph_template_anchor\" }'>" . __('Graph Templates', 'gexport') . "\n";
 		$depth++;
 		$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -1776,7 +1782,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 		ON h.id = gl.host_id
 		WHERE h.site_id = ?', array($site['id']));
 
-	if (sizeof($data_queries)) {
+	if (cacti_sizeof($data_queries)) {
 		$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dqbranch_0' data-jstree='{ \"type\" : \"data_query_anchor\" }'>" . __('Data Queries', 'gexport') . "\n";
 		$depth++;
 		$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -1855,11 +1861,10 @@ function tree_site_export(&$export, $export_path) {
 	global $config;
 
 	// Define javascript global variables for form elements
-	$jstree     = "<script type='text/javascript'>\n";
+	$jstree     = str_repeat("\t", 4) . "<script type='text/javascript'>\n";
 	$jstree    .= str_repeat("\t", 5) . "var columnsPerRow=" . $export['graph_columns'] . ";\n";
 	$jstree    .= str_repeat("\t", 5) . "var graphsPerPage=" . $export['graph_perpage'] . ";\n";
 	$jstree    .= str_repeat("\t", 5) . "var thumbnails=" . ($export['graph_thumbnails'] == 'on' ? 'true':'false') . ";\n";
-	$jstree    .= str_repeat("\t", 5) . "var curPage=1;\n";
 	$jstree    .= str_repeat("\t", 4) . "</script>\n";
 
 	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";;
@@ -1882,27 +1887,27 @@ function tree_site_export(&$export, $export_path) {
 
 		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
 
-		if (sizeof($trees)) {
+		if (cacti_sizeof($trees)) {
 			foreach($trees as $tree) {
 				$jstree .= str_repeat("\t", 4) . "<li id='tree_" . $tree['id'] . "' data-jstree='{ \"type\" : \"tree\" }'>" . get_tree_name($tree['id']) . "\n";;
 				$jstree = export_generate_tree_html($export_path, $tree, $parent, $export['export_expand_hosts'], $user, $jstree);
 				$jstree .= str_repeat("\t", 4) . "</li>\n";
 			}
 		}
-	}else{
+	} else {
 		$sites = $export['graph_site'];
 
 		if ($sites != '0') {
 			$sites = explode(',', $sites);
-		}else{
+		} else {
 			$sites = array_rekey(db_fetch_assoc('SELECT id FROM sites ORDER BY name'), 'id', 'id');
 		}
 
-		if (sizeof($sites)) {
+		if (cacti_sizeof($sites)) {
 			foreach($sites as $site_id) {
 				$site_data = db_fetch_row_prepared('SELECT * FROM sites WHERE id = ?', array($site_id));
 
-				if (sizeof($site_data)) {
+				if (cacti_sizeof($site_data)) {
 					$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";;
 					$jstree  = export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
 					$jstree .= str_repeat("\t", 4) . "</li>\n";
@@ -1987,6 +1992,18 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 		}
 	}
 
+	if (!is_dir("$export_path/webfonts")) {
+		if (!mkdir("$export_path/webfonts", 0755, true)) {
+			export_fatal($export, "Create directory " . $export_path . "/webfonts failed.  Can not continue");
+		}
+	}
+
+	if (!is_dir("$export_path/svgs")) {
+		if (!mkdir("$export_path/svgs", 0755, true)) {
+			export_fatal($export, "Create directory " . $export_path . "/svgs failed.  Can not continue");
+		}
+	}
+
 	/* java scripts for the tree */
 	copy("$root_path/include/js/jquery.js", "$export_path/js/jquery.js");
 	copy("$root_path/include/js/jquery-ui.js", "$export_path/js/jquery-ui.js");
@@ -2010,12 +2027,12 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/include/themes/$theme/jquery-ui.css", "$export_path/css/jquery-ui.css");
 	copy("$root_path/include/themes/$theme/default/style.css", "$export_path/css/default/style.css");
 	copy("$root_path/include/themes/$theme/pace.css", "$export_path/css/pace.css");
+	copy("$root_path/include/fa/css/all.css", "$export_path/css/all.css");
 
-	if (cacti_version_compare('1.2',CACTI_VERSION,'<')) {
-		copy("$root_path/include/fa/css/fontawesome.css", "$export_path/css/fontawesome.css");
-	} else {
-		copy("$root_path/include/fa/css/fontawesome.css", "$export_path/css/fontawesome.css");
-	}
+	/* fonts */
+	copy("$root_path/include/fa/webfonts/fa-solid-900.ttf", "$export_path/webfonts/fa-solid-900.ttf");
+	copy("$root_path/include/fa/webfonts/fa-solid-900.woff", "$export_path/webfonts/fa-solid-900.woff");
+	copy("$root_path/include/fa/webfonts/fa-solid-900.woff2", "$export_path/webfonts/fa-solid-900.woff2");
 
 	/* images for html */
 	copy("$root_path/images/favicon.ico", "$export_path/images/favicon.ico");
@@ -2043,10 +2060,16 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 		copy("$root_path/include/themes/$theme/images/$file", "$export_path/css/images/$file");
 	}
 
-	$directory = "$root_path/include/fa/fonts/*.*";
+	$directory = "$root_path/include/fa/webfonts/*.*";
 	foreach(glob($directory) as $file) {
 		$file = basename($file);
-		copy("$root_path/include/fa/fonts/$file", "$export_path/fonts/$file");
+		copy("$root_path/include/fa/webfonts/$file", "$export_path/webfonts/$file");
+	}
+
+	$directory = "$root_path/include/fa/svgs/*.*";
+	foreach(glob($directory) as $file) {
+		$file = basename($file);
+		copy("$root_path/include/fa/svgs/$file", "$export_path/svgs/$file");
 	}
 }
 
@@ -2081,7 +2104,7 @@ function del_directory($path, $deldir = true) {
 				/* if it is a directory, recursive call to the function */
 				if (is_dir($rf)) {
 					del_directory($rf);
-				}else if (is_file($rf) && is_writable($rf)) {
+				} else if (is_file($rf) && is_writable($rf)) {
 					unlink($rf);
 				}
 			}

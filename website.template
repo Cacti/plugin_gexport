@@ -9,9 +9,9 @@
 	<link href='css/jquery-ui.css' type='text/css' rel='stylesheet'>
 	<link href='css/default/style.css' type='text/css' rel='stylesheet'>
 	<link href='css/pace.css' type='text/css' rel='stylesheet'>
-	<link href='css/fontawesome.css' type='text/css' rel='stylesheet'>
+	<link href='css/all.css' type='text/css' rel='stylesheet'>
 	<link href='images/favicon.ico' rel='shortcut icon'>
-	<link rel='icon' type='image/gif' href='images/cacti_logo.gif' sizes='96x96'>
+	<link rel='icon' type='image/gif' href='images/cacti_logo.svg' sizes='96x96'>
 	<script type='text/javascript' src='js/jquery.js'></script>
 	<script type='text/javascript' src='js/jquery-ui.js'></script>
 	<script type='text/javascript' src='js/jquery.ui.touch.punch.js'></script>
@@ -23,7 +23,6 @@
 	<script type='text/javascript' src='js/layout.js'></script>
 	<script type='text/javascript' src='js/main.js'></script>
 	<script type='text/javascript' src='js/csrf-magic.js'></script>
-	<script type='text/javascript'>$(function() { $('.cactiTreeNavigationArea').show() });</script>
 	<script type='text/javascript'>
 	var noFileSelected='No file selected';
 	</script>
@@ -55,19 +54,24 @@
 		<div id='navigation' class='cactiTreeNavigationArea'>
 			TREEDATA
 			<script type='text/javascript'>
-			var myGraphs    = [];
-			var totalGraphs = 0;
-			var first       = true;
-			var graphWidth  = 0;
-			var maxHeight   = 0;
+			var myGraphs      = [];
+			var totalGraphs   = 0;
+			var first         = true;
+			var graphWidth    = 0;
+			var maxHeight     = 0;
+			var curPage       = 1;
 
 			function resizeGraphContent() {
 				if ('dark' != 'classic') {
 					$('.cactiGraphContentArea').css('margin-left', parseInt($('#navigation').width()+10)+'px');
-				}else{
+				} else {
 					width = $(document).width() - $('.cactiTreeNavigationArea').width() - 22;
 					$('.cactiGraphContentArea').css('width', width).css('float', 'right');
 				}
+
+				resizeGraphs();
+
+				$('.cgraph_wrapper').show();
 			}
 
 			function getMRTG(id) {
@@ -118,7 +122,7 @@
 
 				if (startGraph + graphsPerPage >= totalGraphs) {
 					var endGraph = totalGraphs;
-				}else{
+				} else {
 					var endGraph = startGraph + graphsPerPage - 1;
 				}
 
@@ -129,14 +133,14 @@
 					if (firstPage < 1) {
 						firstPage = 1;
 					}
-				}else if (curPage >= (displayPages - 1) / 2) {
+				} else if (curPage >= (displayPages - 1) / 2) {
 					firstPage = curPage - ((displayPages - 1) / 2);
 					if (firstPage < 1) {
 						firstPage = 1;
 					}
-				}else if (totalPages > displayPages) {
+				} else if (totalPages > displayPages) {
 					firstPage = 1;
-				}else{
+				} else {
 					firstPage = 1;
 				}
 
@@ -147,7 +151,7 @@
 					// Start previous link
 					if (curPage > 1) {
 						template += "<div class='navBarNavigationPrevious'><a href='#' onClick='gotoPage(" + (curPage-1) + ");return false;'><i class='fa fa-angle-double-left previous'></i>Previous</a></div>";
-					}else{
+					} else {
 						template += "<div class='navBarNavigationPrevious'></div>";
 					}
 
@@ -157,7 +161,7 @@
 					// Always show page 1
 					if (curPage == 1) {
 						template += "<li><a href='#' class='active' onClick='gotoPage(1);return false'>1</a></li>";
-					}else{
+					} else {
 						template += "<li><a href='#' onClick='gotoPage(1);return false'>1</a></li>";
 					}
 
@@ -172,12 +176,12 @@
 
 						if (i == 1) {
 							// do nothing it's the first page
-						}else if (i >= totalPages) {
+						} else if (i >= totalPages) {
 							// break from the loop, we are done
 							break;
-						}else if (i == curPage) {
+						} else if (i == curPage) {
 							template += "<li><a href='#' class='active' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
-						}else{
+						} else {
 							template += "<li><a href='#' onClick='gotoPage(" + (i) + ");return false'>" + (i) + "</a></li>";
 						}
 					}
@@ -189,7 +193,7 @@
 					// Always show the last page
 					if (curPage == totalPages && curPage > 1) {
 						template += "<li><a href='#' class='active' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
-					}else if (totalPages > 1){
+					} else if (totalPages > 1) {
 						template += "<li><a href='#' onClick='gotoPage(" + totalPages + ");return false'>" + totalPages + "</a></li>";
 					}
 
@@ -198,10 +202,10 @@
 					// Start next link
 					if (curPage != totalPages) {
 						template += "<div class='navBarNavigationNext'><a href='#' onClick='gotoPage(" + (curPage+1) + ");return false;'>Next<i class='fa fa-angle-double-right next'></i></a></div>";
-					}else{
+					} else {
 						template += "<div class='navBarNavigationNext'></div>";
 					}
-				}else{
+				} else {
 					template += "<div class='navBarNavigationPrevious'></div>";
 					template += "<div class='navBarNavigationCenter'>No Graphs Found";
 					template += "<div class='navBarNavigationNext'></div>";
@@ -218,74 +222,107 @@
 				return t.width;
 			}
 
+			function resizeTreePanel() {
+				return true;
+			}
+
+			function resizeGraphs() {
+				var treeHeight = parseInt($(window).height() - ($('.jstree').length ? $('.jstree').offset().top-10:0));
+				var windHeight = parseInt($('.cactiContent').height());
+				var docHeight  = parseInt($('body').height());
+
+				// adjust graph size
+				var width    = $('#main').prop('clientWidth') - 20;
+				var myWidth  = 0;
+				var myHeight = 0;
+				graphWidth   = width / columnsPerRow;
+				graphWidth   = graphWidth - (4 * columnsPerRow);
+
+
+				$('#main').find('.cgraphs').each(function() {
+					myWidth    = $(this).prop('naturalWidth');
+					myHeight   = $(this).prop('naturalHeight');
+					myFactor   = graphWidth / myWidth;
+
+					if (myWidth > 0) {
+						return true;
+					}
+				});
+
+				if (treeHeight > windHeight) {
+					$('#navigation').height(treeHeight+'px');
+				} else if (docHeight < windHeight) {
+					$('#navigation').height(docHeight+'px');
+				} else {
+					$('#navigation').height(windHeight+'px');
+				}
+
+				$('.cgraphs').css({ 'width':graphWidth });
+				$('.cgraph_wrapper').show();
+			}
+
 			function renderGraphs() {
 				var myFactor = 0;
-				if (!first) {
+
+				if ($('#graphs').length) {
 					graphsPerPage = parseInt($('#graphs').val());
 					columnsPerRow = parseInt($('#columns').val());
 					thumbnails    = $('#thumbnails').is(':checked');
 				}
-				first = false;
-
-				var width = $('#main').innerWidth() - 35;
-				graphWidth = width / columnsPerRow;
 
 				$('#main').empty();
 				$('#main').append(createFilter());
 				$('#main').append(createPagination());
 
+				first = false;
+
 				// Calculate the number of graphs to render
 				if (curPage == 1) {
 					graphStart = 0;
-				}else{
+				} else {
 					graphStart = (curPage-1) * graphsPerPage;
 				}
 
 				if ((curPage + 1) * graphsPerPage > totalGraphs) {
 					graphEnd = totalGraphs;
-				}else{
+				} else {
 					graphEnd = curPage * graphsPerPage;
 				}
 
 				if (thumbnails) {
 					type = "thumb_";
-				}else{
+				} else {
 					type = "graph_";
 				}
 
-				$('#main').append('<div id="mygraphs" class="center">');
+				$('#main').append('<div id="mygraphs" class="center" style="display:flex;justify-content:space-between;flex-wrap:wrap;">');
 
-				j = 0;
-				maxHeight = 0;
 				for (var i = graphStart; i < graphEnd; i++) {
-					html = "<div class='cgraph_wrapper' style='float:left;padding:2px;'><img style='display:none;' class='cgraphs' id='graph_" + myGraphs[i] + "' onClick='getMRTG(\"graph_" + myGraphs[i] + "\")' padding='3px'></div>";
+					var graph_source = 'graphs/' + type + myGraphs[i] + '.png';
+
+					html = "<div class='cgraph_wrapper' style='float:left;padding:1px;display:none;'><img class='cgraphs' src='" + graph_source + "' id='graph_" + myGraphs[i] + "' onClick='getMRTG(\"graph_" + myGraphs[i] + "\")'></div>";
 
 					$('#mygraphs').append(html);
-
-					$('#graph_'+myGraphs[i]).attr('src', 'graphs/' + type + myGraphs[i] + '.png').load(function() {
-						var myWidth  = $(this).prop('naturalWidth');
-						var myHeight = $(this).prop('naturalHeight');
-
-						myFactor  = graphWidth / myWidth;
-						myWidth  *= myFactor;
-						myHeight *= myFactor;
-
-						$(this).css({ width : myWidth, height : myHeight }).show();
-
-						if (myHeight > maxHeight) {
-							maxHeight = myHeight;
-						}
-
-						$(this).closest('.cgraph_wrapper').css('height', maxHeight);
-					});
 				}
 
 				applySkin();
+
 		        window.scrollTo(0, 0);
+
 				resizeGraphContent();
+
+				Pace.stop();
 			}
 
 			$(function () {
+				curPage = 1;
+
+				$('#graphs').val(graphsPerPage);
+				$('#columns').val(columnsPerRow);
+				$('#thumnails').val(thumbnails);
+
+				$('.cactiTreeNavigationArea').show();
+
 				resizeGraphContent();
 
 				$('#jstree').each(function(data) {
@@ -304,11 +341,8 @@
 					.on('select_node.jstree', function(e, data) {
 						if (data.node.id) {
 							$.getJSON(data.node.id+'.json', function(data) {
-								if (!first) {
-									curPage     = 1;
-									columnsPerPage = parseInt($('#columns').val());
-									graphsPerPage  = parseInt($('#graphs').val());
-									thumbnails     = $('#thumbnails').is(':checked');
+								if (first) {
+									curPage = 1;
 								}
 
 								totalGraphs    = data.length;
@@ -371,30 +405,12 @@
 				});
 
 				$(window).resize(function() {
-					treeHeight = parseInt($(window).height()-$('.jstree').offset().top-10);
-					windHeight = parseInt($('.cactiContent').height());
-					docHeight  = parseInt($('body').height());
-
-					// adjust graph size
-					width      = $('#main').width() - 35;
-					graphWidth = width / columnsPerRow;
-					myWidth    = $('.cgraphs').first().prop('naturalWidth');
-					myHeight   = $('.cgraphs').first().prop('naturalHeight');
-					myFactor   = graphWidth / myWidth;
-
-					$('.cgraphs').css({ 'width' : (myFactor * myWidth), 'height' : (myFactor * myHeight) });
-
-					if (treeHeight > windHeight) {
-						$('#navigation').height(treeHeight+'px');
-					}else if (docHeight < windHeight) {
-						$('#navigation').height(docHeight+'px');
-					}else {
-						$('#navigation').height(windHeight+'px');
-					}
-
-					$('.cgraph_wrapper').css('height', maxHeight * myFactor);
+					resizeGraphs();
 				});
+
+				Pace.stop();
 			});
+
 			</script>
 		</div>
 		<div id='navigation_right' class='cactiGraphContentArea'>

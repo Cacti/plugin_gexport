@@ -181,13 +181,13 @@ function export_form_actions() {
 			if (get_nfilter_request_var('drp_action') === '1') { /* delete */
 				/* do a referential integrity check */
 				if (sizeof($selected_items)) {
-				foreach($selected_items as $export_id) {
-					/* ================= input validation ================= */
-					input_validate_input_number($export_id);
-					/* ==================================================== */
+					foreach($selected_items as $export_id) {
+						/* ================= input validation ================= */
+						input_validate_input_number($export_id);
+						/* ==================================================== */
 
-					$export_ids[] = $export_id;
-				}
+						$export_ids[] = $export_id;
+					}
 				}
 
 				if (isset($export_ids)) {
@@ -217,6 +217,10 @@ function export_form_actions() {
 
 					export_runnow($selected_items[$i]);
 				}
+
+				header('Location: gexport.php?header=false&refresh=20');
+
+				exit;
 			}
 		}
 
@@ -581,8 +585,30 @@ function export_filter() {
 						</select>
 					</td>
 					<td>
+						<?php print __('Refresh');?>
+					</td>
+					<td>
+						<select id='refresh' onChange='applyFilter()'>
+							<?php
+							$frequency = array(
+								99999999 => __('Never', 'gexport'),
+								10       => __('%d Seconds', 10, 'gexport'),
+								20       => __('%d Seconds', 20, 'gexport'),
+								30       => __('%d Seconds', 30, 'gexport'),
+								45       => __('%d Seconds', 45, 'gexport'),
+								60       => __('%d Minute', 1, 'gexport'),
+								120      => __('%d Minutes', 2, 'gexport'),
+								300      => __('%d Minutes', 5, 'gexport')
+							);
+
+							foreach ($frequency as $r => $row) {
+								echo "<option value='" . $r . "'" . (isset_request_var('refresh') && $r == get_request_var('refresh') ? ' selected' : '') . '>' . $row . '</option>';
+							}
+							?>
+						</select>
+					<td>
 						<span>
-							<input type='button' Value='<?php print __x('filter: use', 'Go', 'gexport');?>' id='refresh'>
+							<input type='submit' Value='<?php print __x('filter: use', 'Go', 'gexport');?>' id='go'>
 							<input type='button' Value='<?php print __x('filter: reset', 'Clear', 'gexport');?>' id='clear'>
 						</span>
 					</td>
@@ -594,6 +620,7 @@ function export_filter() {
 			function applyFilter() {
 				strURL  = 'gexport.php?header=false';
 				strURL += '&filter='+$('#filter').val();
+				strURL += '&refresh='+$('#refresh').val();
 				strURL += '&rows='+$('#rows').val();
 				loadPageNoHeader(strURL);
 			}
@@ -650,8 +677,17 @@ function get_export_records(&$total_rows, &$rows) {
 		$sql_limit");
 }
 
-function gexport($refresh = true) {
+function gexport() {
 	global $export_actions;
+
+	$running = db_fetch_cell('SELECT COUNT(*)
+		FROM graph_exports
+		WHERE export_pid > 0
+		AND status > 0');
+
+	if ($running == 0) {
+		set_request_var('refresh', 99999999);
+	}
 
     /* ================= input validation and session storage ================= */
     $filters = array(
@@ -663,6 +699,10 @@ function gexport($refresh = true) {
 		'page' => array(
 			'filter' => FILTER_VALIDATE_INT,
 			'default' => '1'
+			),
+		'refresh' => array(
+			'filter' => FILTER_VALIDATE_INT,
+			'default' => '20'
 			),
 		'filter' => array(
 			'filter' => FILTER_DEFAULT,
@@ -683,6 +723,13 @@ function gexport($refresh = true) {
 
 	validate_store_request_vars($filters, 'sess_gexport');
 	/* ================= input validation ================= */
+
+	$refresh            = array();
+	$refresh['page']    = 'gexport.php?header=false';
+	$refresh['seconds'] = get_request_var('refresh');
+	$refresh['logout']  = 'false';
+
+	set_page_refresh($refresh);
 
 	export_filter();
 
