@@ -2,6 +2,11 @@
 
 --- 2.0 ----
 
+* issue#37: Empty site variable may cause errors to appear
+* issue#38: Searching for graph exports does not work with some international characters
+* issue#39: error in functions.php
+* issue#40: graph_max set to 0 does not allow any exports
+* issue#44: Cacti Log Warning
 * issue#46: Graphs not rendering on Cacti 1.2.15
 * issue: Internationalization issues on console
 * issue: Updating gexport to support Cacti 1.2.15+

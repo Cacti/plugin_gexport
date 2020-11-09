@@ -124,7 +124,7 @@ function graph_export($id = 0, $force = false) {
 
 	$end = microtime(true);
 
-	$export_stats = sprintf('Time:%01.2f Exports:%s Exported:%s', $end - $start, sizeof($exports), $started_exports);
+	$export_stats = sprintf('Time:%01.2f Exports:%s Exported:%s', $end - $start, cacti_sizeof($exports), $started_exports);
 
 	cacti_log('MASTER STATS: ' . $export_stats, true, 'EXPORT');
 }
@@ -691,6 +691,8 @@ function export_graphs(&$export, $export_path) {
 		$user = -1;
 	}
 
+	export_debug('Export presentation is ' . $export['export_presentation']);
+
 	if ($export['export_presentation'] == 'tree') {
 		if ($trees != '0') {
 			$sql_where = 'gt.id IN(' . $trees . ')';
@@ -698,11 +700,13 @@ function export_graphs(&$export, $export_path) {
 
 		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
 
-		export_debug('There are ' . sizeof($trees) . ' to export');
+		export_debug('There are ' . cacti_sizeof($trees) . ' trees to export');
 
 		if (cacti_sizeof($trees)) {
 			foreach($trees as $tree) {
 				$ntree[] = $tree['id'];
+
+				export_debug('Tree \'' . $tree['name'] . '\' with id \'' . $tree['id'] . '\' is allowed');
 			}
 		}
 
@@ -715,8 +719,6 @@ function export_graphs(&$export, $export_path) {
 				'local_graph_id', 'local_graph_id'
 			);
 
-			export_debug('There are ' . sizeof($graphs) . ' to export for all trees.');
-
 			if (cacti_sizeof($graphs)) {
 				foreach($graphs as $local_graph_id) {
 					if (is_graph_allowed($local_graph_id, $user)) {
@@ -725,10 +727,14 @@ function export_graphs(&$export, $export_path) {
 				}
 			}
 
+			export_debug('There are ' . cacti_sizeof($graphs) . ' graphs not in hosts to export for all trees');
+
 			$hosts = db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
 				FROM graph_tree_items
 				WHERE graph_tree_id IN(?)',
 				array(implode(', ', $ntree)));
+
+			export_debug('There are ' . cacti_sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
 
 			if ($hosts != '') {
 				$sql_where = 'gl.host_id IN(' . $hosts . ')';
@@ -742,6 +748,8 @@ function export_graphs(&$export, $export_path) {
 					}
 				}
 			}
+
+			export_debug('There are ' . cacti_sizeof($ngraph) . ' total graphs to export for all trees');
 		}
 	} else {
 		if ($sites != '0' && $sites != '') {
@@ -779,7 +787,7 @@ function export_graphs(&$export, $export_path) {
 
 			$exported++;
 
-			if ($exported >= $export['graph_max']) {
+			if ($exported >= $export['graph_max'] && $export['graph_max'] > 0) {
 				db_execute_prepared('UPDATE graph_exports
 					SET last_error="WARNING: Max number of Graphs ' . $export['graph_max'] . ' reached",
 					last_errored=NOW()
@@ -855,7 +863,7 @@ function export_graph_monitor_tasks($export) {
 			'id', 'pid'
 		);
 
-		$thread_run = sizeof($pids_running);
+		$thread_run = cacti_sizeof($pids_running);
 		$thread_adj = $thread_run;
 		if ($thread_adj > 0 && $spawn_time < $expire_time) {
 			//printf("%s: Running adjustments checks\n", (new DateTime())->format('H:i:s'));
@@ -883,7 +891,7 @@ function export_graph_monitor_tasks($export) {
 				WHERE status = 0
 				LIMIT ' . $wanted_count);
 
-			export_debug('TASKS ' . $wanted_count . ' available, ' . sizeof($tasks) . ' found');
+			export_debug('TASKS ' . $wanted_count . ' available, ' . cacti_sizeof($tasks) . ' found');
 			if (cacti_sizeof($tasks) > 0) {
 				$spawn_time = new DateTime();
 
@@ -1040,7 +1048,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	/* close the rrdtool pipe */
 	rrd_close($rrdtool_pipe);
 
-	return isset($rras) ? sizeof($rras) : 0;
+	return isset($rras) ? cacti_sizeof($rras) : 0;
 }
 
 /* export_ftp_php_execute - this function creates the ftp connection object,
@@ -1335,7 +1343,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', array($tree_site_id)), 'id', 'id');
 
 		$sql_where = '';
-		if (is_array($values) && sizeof($values)) {
+		if (is_array($values) && cacti_sizeof($values)) {
 			foreach($values as $value) {
 				// host_id | snmp_index
 				$parts = explode('|', $value);
@@ -1397,7 +1405,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 
 	$json_files[$json_file] = true;
 
-	return sizeof($graph_array);;
+	return cacti_sizeof($graph_array);;
 }
 
 /* export_generate_tree_html - create jstree compatible static tree html.  This is a
