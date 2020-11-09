@@ -215,10 +215,12 @@
 
 			function resizeGraphs() {
 				if (theme != 'classic') {
-					var conWidth = parseInt($('.jstree').width()+10);
-					var grWidth  = $(window).width() - conWidth;
-					$('.cactiGraphContentArea').css('margin-left', conWidth);
-					$('.cactiGraphContentArea').css('width', grWidth);
+					var conWidth = parseInt($('#navigation').prop('offsetWidth')) + 10;
+					var grWidth  = $(document).width() - conWidth - 20;
+
+					if (conWidth > 0) {
+						$('.cactiGraphContentArea').css({ 'margin-left': conWidth, 'width': grWidth, 'float': 'left' });
+					}
 				} else {
 					var grWidth = $(window).width() - $('.cactiTreeNavigationArea').width() - 22;
 					$('.cactiGraphContentArea').css('width', grWidth).css('float', 'right');
