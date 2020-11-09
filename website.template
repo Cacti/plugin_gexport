@@ -235,17 +235,7 @@
 				var myWidth  = 0;
 				var myHeight = 0;
 				graphWidth   = width / columnsPerRow;
-				graphWidth   = graphWidth - (4 * columnsPerRow);
-
-				$('#main').find('.cgraphs').each(function() {
-					myWidth    = $(this).prop('naturalWidth');
-					myHeight   = $(this).prop('naturalHeight');
-					myFactor   = graphWidth / myWidth;
-
-					if (myWidth > 0) {
-						return true;
-					}
-				});
+				graphWidth   = graphWidth - (4 * (columnsPerRow - 1));
 
 				if (treeHeight > windHeight) {
 					$('#navigation').height(treeHeight+'px');
@@ -321,15 +311,10 @@
 
 				$('.cactiTreeNavigationArea').show();
 
-				resizeGraphs();
-
 				$('#jstree').each(function(data) {
 					$(this)
 					.on('init.jstree', function(e, data) { })
 					.on('ready.jstree', function(e, data) {	})
-					.on('changed.jstree', function(e, data) {
-						resizeGraphs();
-					})
 					.on('after_open.jstree', function(e, data) {
 						resizeGraphs();
 					})
@@ -352,8 +337,6 @@
 								renderGraphs();
 							});
 						}
-
-						resizeGraphs();
 					})
 					.jstree({
 						'types' : {
