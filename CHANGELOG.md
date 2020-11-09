@@ -2,6 +2,7 @@
 
 --- 2.0 ----
 
+* issue#46: Graphs not rendering on Cacti 1.2.15
 * issue: Internationalization issues on console
 * issue: Updating gexport to support Cacti 1.2.15+
 

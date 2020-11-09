@@ -1865,6 +1865,7 @@ function tree_site_export(&$export, $export_path) {
 	$jstree    .= str_repeat("\t", 5) . "var columnsPerRow=" . $export['graph_columns'] . ";\n";
 	$jstree    .= str_repeat("\t", 5) . "var graphsPerPage=" . $export['graph_perpage'] . ";\n";
 	$jstree    .= str_repeat("\t", 5) . "var thumbnails=" . ($export['graph_thumbnails'] == 'on' ? 'true':'false') . ";\n";
+	$jstree    .= str_repeat("\t", 5) . "var theme='" . $export['export_theme'] . "';\n";
 	$jstree    .= str_repeat("\t", 4) . "</script>\n";
 
 	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";;
