@@ -61,19 +61,6 @@
 			var maxHeight     = 0;
 			var curPage       = 1;
 
-			function resizeGraphContent() {
-				if ('dark' != 'classic') {
-					$('.cactiGraphContentArea').css('margin-left', parseInt($('#navigation').width()+10)+'px');
-				} else {
-					width = $(document).width() - $('.cactiTreeNavigationArea').width() - 22;
-					$('.cactiGraphContentArea').css('width', width).css('float', 'right');
-				}
-
-				resizeGraphs();
-
-				$('.cgraph_wrapper').show();
-			}
-
 			function getMRTG(id) {
 				$.get(id+'.html', function(data) {
 					first = true;
@@ -238,7 +225,6 @@
 				graphWidth   = width / columnsPerRow;
 				graphWidth   = graphWidth - (4 * columnsPerRow);
 
-
 				$('#main').find('.cgraphs').each(function() {
 					myWidth    = $(this).prop('naturalWidth');
 					myHeight   = $(this).prop('naturalHeight');
@@ -309,7 +295,7 @@
 
 		        window.scrollTo(0, 0);
 
-				resizeGraphContent();
+				resizeGraphs();
 
 				Pace.stop();
 			}
@@ -323,20 +309,20 @@
 
 				$('.cactiTreeNavigationArea').show();
 
-				resizeGraphContent();
+				resizeGraphs();
 
 				$('#jstree').each(function(data) {
 					$(this)
 					.on('init.jstree', function(e, data) { })
 					.on('ready.jstree', function(e, data) {	})
 					.on('changed.jstree', function(e, data) {
-						resizeGraphContent();
+						resizeGraphs();
 					})
 					.on('open_node.jstree', function(e, data) {
-						resizeGraphContent();
+						resizeGraphs();
 					})
 					.on('close_node.jstree', function(e, data) {
-						resizeGraphContent();
+						resizeGraphs();
 					})
 					.on('select_node.jstree', function(e, data) {
 						if (data.node.id) {
@@ -352,7 +338,7 @@
 							});
 						}
 
-						resizeGraphContent();
+						resizeGraphs();
 					})
 					.jstree({
 						'types' : {
