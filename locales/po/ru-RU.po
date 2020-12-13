@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 09:50+0000\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2020-12-12 22:15-0500\n"
 "PO-Revision-Date: 2019-07-21 21:16-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,8 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 2.2.3\n"
 
 #: functions.php:312
@@ -40,14 +39,8 @@ msgstr "Ошибки при выборе входных/выходных фай�
 
 #: functions.php:316
 #, fuzzy
-msgid ""
-"Requested action not supported: an attempt was made to manipulate 64-bit "
-"files on a platform that cannot support them; or an option was specified "
-"that is supported by the client and not by the server."
-msgstr ""
-"Запрошенное действие не поддерживается: была предпринята попытка "
-"манипулировать 64-битными файлами на платформе, которая их не поддерживает; "
-"или указана опция, поддерживаемая клиентом, а не сервером."
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Запрошенное действие не поддерживается: была предпринята попытка манипулировать 64-битными файлами на платформе, которая их не поддерживает; или указана опция, поддерживаемая клиентом, а не сервером."
 
 #: functions.php:317
 #, fuzzy
@@ -256,16 +249,16 @@ msgstr "Больше нет доступных методов аутентифи
 msgid "Invalid user name"
 msgstr "Неверное имя пользователя"
 
-#: functions.php:1504 functions.php:1667
+#: functions.php:1518 functions.php:1681
 #, fuzzy
 msgid "Non Query Based"
 msgstr "Не основанный на запросах"
 
-#: functions.php:1751
+#: functions.php:1765
 msgid "Graph Templates"
 msgstr "Шаблоны Графиков"
 
-#: functions.php:1780
+#: functions.php:1794
 #, fuzzy
 msgid "Data Queries"
 msgstr "Запросы данных"
@@ -286,331 +279,340 @@ msgstr "Выключить"
 msgid "Export Now"
 msgstr "Экспортировать сейчас"
 
-#: gexport.php:37 setup.php:350
+#: gexport.php:37 setup.php:354
 #, fuzzy
 msgid "Periodic"
 msgstr "Периодический"
 
-#: gexport.php:38 setup.php:352
+#: gexport.php:38 setup.php:356
 msgid "Daily"
 msgstr "Ежедневно"
 
-#: gexport.php:39 setup.php:351
+#: gexport.php:39 setup.php:355
 msgid "Hourly"
 msgstr "Каждый час"
 
-#: gexport.php:253
+#: gexport.php:257
 #, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] ""
-"Нажмите кнопку \"Продолжить\", чтобы удалить следующее определение экспорта "
-"графика."
+msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы удалить следующее определение экспорта графика."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:258 gexport.php:267 gexport.php:276 gexport.php:285
+#: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Cancel"
 msgstr "Отмена"
 
-#: gexport.php:262
+#: gexport.php:266
 #, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] ""
-"Нажмите кнопку \"Продолжить\", чтобы отключить следующее определение "
-"экспорта графиков."
+msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы отключить следующее определение экспорта графиков."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:267 gexport.php:276 gexport.php:285
+#: gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Continue"
 msgstr "Продолжить"
 
-#: gexport.php:267
+#: gexport.php:271
 #, fuzzy
 msgid "Disable Graph Export Definition(s)"
 msgstr "График Экспорт Определения Определения"
 
-#: gexport.php:271
+#: gexport.php:275
 #, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] ""
-"Нажмите кнопку \"Продолжить\", чтобы включить следующее определение экспорта "
-"графиков."
+msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы включить следующее определение экспорта графиков."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:276
+#: gexport.php:280
 #, fuzzy
 msgid "Enable Graph Export Definition(s)"
 msgstr "График Экспорт Определения Определения"
 
-#: gexport.php:280
+#: gexport.php:284
 #, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] ""
-"Нажмите кнопку \"Продолжить\", чтобы запустить следующее определение "
-"экспорта графиков сейчас."
+msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы запустить следующее определение экспорта графиков сейчас."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:285
+#: gexport.php:289
 #, fuzzy
 msgid "Run Graph Export Definition(s) Now"
 msgstr "График Экспорт Определения Определения"
 
-#: gexport.php:288
+#: gexport.php:292
 #, fuzzy
 msgid "You must select at least one Graph Export Definition."
 msgstr "Вы должны выбрать хотя бы одно определение экспорта графиков."
 
-#: gexport.php:289
+#: gexport.php:293
 msgid "Return"
 msgstr "Вернуть"
 
-#: gexport.php:345
+#: gexport.php:349
 #, fuzzy, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "Экспорт графика Определение [редактирование: %s]"
 
-#: gexport.php:347
+#: gexport.php:351
 #, fuzzy
 msgid "Graph Export Definition [new]"
 msgstr "График Определение экспорта [новое]"
 
-#: gexport.php:373
+#: gexport.php:377
 #, fuzzy
 msgid "Select Tree(s)"
 msgstr "Выберите дерево (деревья)"
 
-#: gexport.php:375
+#: gexport.php:379
 #, fuzzy
 msgid "Trees Selected"
 msgstr "Выбранные деревья"
 
-#: gexport.php:378
+#: gexport.php:382
 #, fuzzy
 msgid "All Trees Selected"
 msgstr "Все выбранные деревья"
 
-#: gexport.php:384 gexport.php:430
+#: gexport.php:388 gexport.php:434
 msgid "All"
 msgstr "Все"
 
-#: gexport.php:385 gexport.php:431
+#: gexport.php:389 gexport.php:435
 msgid "None"
 msgstr "Нет"
 
-#: gexport.php:415 gexport.php:461 gexport.php:563
+#: gexport.php:419 gexport.php:465 gexport.php:567
 msgid "Search"
 msgstr "Найти"
 
-#: gexport.php:419
+#: gexport.php:423
 #, fuzzy
 msgid "Select Site(s)"
 msgstr "Выберите сайт(ы)"
 
-#: gexport.php:421
+#: gexport.php:425
 #, fuzzy
 msgid "Sites Selected"
 msgstr "Выбранные сайты"
 
-#: gexport.php:424
+#: gexport.php:428
 #, fuzzy
 msgid "All Sites Selected"
 msgstr "Все выбранные сайты"
 
-#: gexport.php:555
+#: gexport.php:559
 #, fuzzy
 msgid "Graph Export Definitions"
 msgstr "График Экспорт Определения Определения"
 
-#: gexport.php:569
+#: gexport.php:573
 msgid "Exports"
 msgstr "Експорт"
 
-#: gexport.php:573
+#: gexport.php:577
 msgid "Default"
 msgstr "Стандартно"
 
-#: gexport.php:585
+#: gexport.php:588
+msgid "Refresh"
+msgstr ""
+
+#: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
+msgid "Never"
+msgstr "Никогда"
+
+#: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
+#, php-format
+msgid "%d Seconds"
+msgstr ""
+
+#: gexport.php:599
+#, php-format
+msgid "%d Minute"
+msgstr ""
+
+#: gexport.php:600 gexport.php:601
+#, php-format
+msgid "%d Minutes"
+msgstr ""
+
+#: gexport.php:611
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Выполнить"
 
-#: gexport.php:586
+#: gexport.php:612
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Очистить"
 
-#: gexport.php:701
-#, fuzzy
-msgid "Export Definitions"
-msgstr "Определения экспорта"
-
-#: gexport.php:710 setup.php:277
+#: gexport.php:749 setup.php:281
 #, fuzzy
 msgid "Export Name"
 msgstr "Название экспорта"
 
-#: gexport.php:710 setup.php:278
+#: gexport.php:752 setup.php:282
 #, fuzzy
 msgid "The name of this Graph Export Definition."
 msgstr "Название этого определения экспорта графиков."
 
-#: gexport.php:711
+#: gexport.php:755
 msgid "ID"
 msgstr "ИД"
 
-#: gexport.php:711
+#: gexport.php:758
 #, fuzzy
 msgid "The internal ID of the Graph Export Definition."
 msgstr "Внутренний идентификатор определения экспорта графиков."
 
-#: gexport.php:712
+#: gexport.php:761
 msgid "Schedule"
 msgstr "Расписание"
 
-#: gexport.php:712
+#: gexport.php:764
 #, fuzzy
 msgid "The frequency that Graphs will be exported."
 msgstr "Частота, с которой будут экспортированы графики."
 
-#: gexport.php:713
+#: gexport.php:767
 #, fuzzy
 msgid "Next Start"
 msgstr "Следующий старт"
 
-#: gexport.php:713
+#: gexport.php:770
 #, fuzzy
 msgid "The next time the Graph Export should run."
 msgstr "В следующий раз, когда должен запуститься Graph Export."
 
-#: gexport.php:714 setup.php:286
+#: gexport.php:773 setup.php:290
 msgid "Enabled"
 msgstr "Включено"
 
-#: gexport.php:714
+#: gexport.php:775
 #, fuzzy
 msgid "If enabled, this Graph Export definition will run as required."
-msgstr ""
-"Если включено, это определение экспорта графиков будет выполняться по мере "
-"необходимости."
+msgstr "Если включено, это определение экспорта графиков будет выполняться по мере необходимости."
 
-#: gexport.php:715
+#: gexport.php:778
 msgid "Status"
 msgstr "Статус"
 
-#: gexport.php:715
+#: gexport.php:780
 #, fuzzy
 msgid "The current Graph Export Status."
 msgstr "Текущее состояние экспорта графика."
 
-#: gexport.php:717
+#: gexport.php:783
 #, fuzzy
 msgid "Exporting (Sites/Trees)"
 msgstr "Экспорт (Веб-сайты/Деревья)"
 
-#: gexport.php:717
+#: gexport.php:786
 #, fuzzy
 msgid "What is being Exported."
 msgstr "То, что экспортируется."
 
-#: gexport.php:718 setup.php:410
+#: gexport.php:789 setup.php:414
 #, fuzzy
 msgid "Effective User"
 msgstr "Эффективный пользователь"
 
-#: gexport.php:718
+#: gexport.php:792
 #, fuzzy
 msgid "The user that this export will impersonate."
 msgstr "Пользователь, которого этот экспорт выдаст себя за пользователя."
 
-#: gexport.php:719
+#: gexport.php:795
 #, fuzzy
 msgid "Last Runtime"
 msgstr "Последнее время работы"
 
-#: gexport.php:719
+#: gexport.php:798
 #, fuzzy
 msgid "The last runtime for the Graph Export."
 msgstr "Последнее время выполнения для экспорта графиков."
 
-#: gexport.php:720
+#: gexport.php:801
 msgid "Graphs"
 msgstr "Графики"
 
-#: gexport.php:720
+#: gexport.php:804
 #, fuzzy
 msgid "The number of Graphs Exported on the last run."
 msgstr "Количество графиков, экспортированных в последнем цикле."
 
-#: gexport.php:721
+#: gexport.php:807
 #, fuzzy
 msgid "Last Started"
 msgstr "Последний раз я начинал"
 
-#: gexport.php:721
+#: gexport.php:810
 #, fuzzy
 msgid "The last time that this Graph Export was started."
 msgstr "В последний раз, когда был запущен экспорт графиков."
 
-#: gexport.php:722
+#: gexport.php:813
 #, fuzzy
 msgid "Last Errored"
 msgstr "Последняя ошибка"
 
-#: gexport.php:722
+#: gexport.php:816
 #, fuzzy
 msgid "The last time that this Graph Export experienced an error."
 msgstr "В последний раз при экспорте графика возникла ошибка."
 
-#: gexport.php:756 gexport.php:796 gexport.php:809 gexport.php:810
-#: setup.php:415
+#: gexport.php:820
+#, fuzzy
+msgid "Export Definitions"
+msgstr "Определения экспорта"
+
+#: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
+#: setup.php:419
 msgid "N/A"
 msgstr "Н/Д"
 
-#: gexport.php:758
+#: gexport.php:861
 msgid "No"
 msgstr "Нет"
 
-#: gexport.php:758
+#: gexport.php:861
 msgid "Yes"
 msgstr "Да"
 
-#: gexport.php:762
+#: gexport.php:865
 msgid "Idle"
 msgstr "Неактивно"
 
-#: gexport.php:765
+#: gexport.php:868
 msgid "Running"
 msgstr "В процессе"
 
-#: gexport.php:768
+#: gexport.php:871
 msgid "Error"
 msgstr "Ошибка"
 
-#: gexport.php:774
+#: gexport.php:877
 msgid "All Sites"
 msgstr "Все сайты"
 
-#: gexport.php:785
+#: gexport.php:888
 #, fuzzy
 msgid "All Trees"
 msgstr "Все деревья"
 
-#: gexport.php:799
+#: gexport.php:902
 msgid "Sec"
 msgstr "Сек"
 
-#: gexport.php:806 gexport.php:811 gexport.php:812
-msgid "Never"
-msgstr "Никогда"
-
-#: gexport.php:819
+#: gexport.php:922
 #, fuzzy
 msgid "No Graph Export Definitions"
 msgstr "Отсутствие определений экспорта графиков"
@@ -629,477 +631,383 @@ msgstr "График Экспорт"
 msgid "Utilities"
 msgstr "Утилиты"
 
-#: setup.php:272
+#: setup.php:268
+msgid "General Administration"
+msgstr ""
+
+#: setup.php:276
 msgid "General"
 msgstr "Общие"
 
-#: setup.php:287
+#: setup.php:291
 #, fuzzy
-msgid ""
-"Check this Checkbox if you wish this Graph Export Definition to be enabled."
-msgstr ""
-"Установите этот флажок, если вы хотите, чтобы это определение экспорта "
-"графиков было включено."
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Установите этот флажок, если вы хотите, чтобы это определение экспорта графиков было включено."
 
-#: setup.php:293
+#: setup.php:297
 #, fuzzy
 msgid "Export Method"
 msgstr "Экспорт Способ"
 
-#: setup.php:294
+#: setup.php:298
 #, fuzzy
 msgid "Choose which export method to use."
 msgstr "Выберите способ экспорта для использования."
 
-#: setup.php:299
+#: setup.php:303
 msgid "Local"
 msgstr "Локальный"
 
-#: setup.php:300
+#: setup.php:304
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:301
+#: setup.php:305
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:302
+#: setup.php:306
 #, fuzzy
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:303
+#: setup.php:307
 #, fuzzy
 msgid "SCP"
 msgstr "ПКПП"
 
-#: setup.php:304
+#: setup.php:308
 #, fuzzy
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:308
+#: setup.php:312
 #, fuzzy
 msgid "Export Command Arguments"
 msgstr "Аргументы командования экспортом"
 
-#: setup.php:309
+#: setup.php:313
 #, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
-"Аргументы для использования с нелокальными методами экспорта. rsync следует "
-"использовать"
+msgstr "Аргументы для использования с нелокальными методами экспорта. rsync следует использовать"
 
-#: setup.php:321
+#: setup.php:325
 msgid "Theme"
 msgstr "Тема"
 
-#: setup.php:322
+#: setup.php:326
 #, fuzzy
-msgid ""
-"Please select one of the available Themes to skin your Cacti Graph Exports "
-"with."
-msgstr ""
-"Пожалуйста, выберите одну из доступных тем для обдирки экспорта графиков "
-"Cacti Graph Exports."
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Пожалуйста, выберите одну из доступных тем для обдирки экспорта графиков Cacti Graph Exports."
 
-#: setup.php:329
+#: setup.php:333
 #, fuzzy
 msgid "Presentation Method"
 msgstr "Метод представления"
 
-#: setup.php:330
+#: setup.php:334
 #, fuzzy
-msgid ""
-"Choose which presentation would you want for the html generated pages. If "
-"you choose classical presentation; the Graphs will be in a only-one-html "
-"page. If you choose tree presentation, the Graph Tree architecture will be "
-"kept in the static html pages"
-msgstr ""
-"Выберите, какая презентация нужна для сгенерированных html страниц. Если вы "
-"выберете классическую презентацию, то графики будут представлены только на "
-"странице в формате-one-html. Если вы выберете представление дерева, "
-"архитектура дерева графиков будет сохранена в статических html-страницах."
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Выберите, какая презентация нужна для сгенерированных html страниц. Если вы выберете классическую презентацию, то графики будут представлены только на странице в формате-one-html. Если вы выберете представление дерева, архитектура дерева графиков будет сохранена в статических html-страницах."
 
-#: setup.php:335 setup.php:438
+#: setup.php:339 setup.php:442
 msgid "Site"
 msgstr "Узел"
 
-#: setup.php:336 setup.php:419
+#: setup.php:340 setup.php:423
 msgid "Tree"
 msgstr "Дерево"
 
-#: setup.php:340
+#: setup.php:344
 #, fuzzy
 msgid "Export Timing"
 msgstr "Сроки экспорта"
 
-#: setup.php:344
+#: setup.php:348
 #, fuzzy
 msgid "Timing Method"
 msgstr "Метод расчета времени"
 
-#: setup.php:345
+#: setup.php:349
 #, fuzzy
 msgid "Choose when to Export Graphs."
 msgstr "Выберите, когда нужно экспортировать графики."
 
-#: setup.php:356
+#: setup.php:360
 #, fuzzy
 msgid "Periodic Export Cycle"
 msgstr "Периодический цикл экспорта"
 
-#: setup.php:357
-#, fuzzy
-msgid ""
-"How often do you wish Cacti to Export Graphs.  This is the unit of Polling "
-"Cycles you wish to export Graphs."
-msgstr ""
-"Как часто вы хотите, чтобы Cacti экспортировала графики.  Это единица "
-"измерения циклов опроса, которую вы хотите экспортировать графики."
-
 #: setup.php:361
+#, fuzzy
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Как часто вы хотите, чтобы Cacti экспортировала графики.  Это единица измерения циклов опроса, которую вы хотите экспортировать графики."
+
+#: setup.php:365
 #, fuzzy
 msgid "Every Polling Cycle"
 msgstr "Каждый цикл опроса"
 
-#: setup.php:362 setup.php:363 setup.php:364 setup.php:365 setup.php:366
-#: setup.php:367 setup.php:368 setup.php:369 setup.php:370 setup.php:371
-#: setup.php:372
+#: setup.php:366 setup.php:367 setup.php:368 setup.php:369 setup.php:370
+#: setup.php:371 setup.php:372 setup.php:373 setup.php:374 setup.php:375
+#: setup.php:376
 #, fuzzy, php-format
 msgid "Every %d Polling Cycles"
 msgstr "Каждый %d Циклы опроса"
 
-#: setup.php:376
+#: setup.php:380
 #, fuzzy
 msgid "Hourly at specified minutes"
 msgstr "Часовой в указанные минуты"
 
-#: setup.php:377
+#: setup.php:381
 #, fuzzy
-msgid ""
-"If you want Cacti to export static images on an hourly basis, put the "
-"minutes of the hour when to do that. Cacti assumes that you run the data "
-"gathering script every 5 minutes, so it will round your value to the one "
-"closest to its runtime. For instance, 43 would equal 40 minutes past the "
-"hour."
-msgstr ""
-"Если вы хотите, чтобы Cacti экспортировала статичные изображения на "
-"почасовой основе, укажите минуты часа, когда это нужно сделать. Кактусы "
-"предполагают, что вы запускаете скрипт сбора данных каждые 5 минут, поэтому "
-"они округляют ваше значение до ближайшего к их исполнению. Например, 43 было "
-"бы равно 40 минутам после часа."
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Если вы хотите, чтобы Cacti экспортировала статичные изображения на почасовой основе, укажите минуты часа, когда это нужно сделать. Кактусы предполагают, что вы запускаете скрипт сбора данных каждые 5 минут, поэтому они округляют ваше значение до ближайшего к их исполнению. Например, 43 было бы равно 40 минутам после часа."
 
-#: setup.php:386
+#: setup.php:390
 #, fuzzy
 msgid "Daily at specified time"
 msgstr "Ежедневно в указанное время"
 
-#: setup.php:387
+#: setup.php:391
 #, fuzzy
-msgid ""
-"If you want Cacti to export static images on an daily basis, put here the "
-"time when to do that. Cacti assumes that you run the data gathering script "
-"every 5 minutes, so it will round your value to the one closest to its "
-"runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr ""
-"Если вы хотите, чтобы Cacti экспортировал статические изображения на "
-"ежедневной основе, укажите здесь время, когда это делать. Кактусы "
-"предполагают, что вы запускаете скрипт сбора данных каждые 5 минут, поэтому "
-"они округляют ваше значение до ближайшего к их исполнению. Например, 21:23 "
-"будет равно 20 минутам после 21:23."
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Если вы хотите, чтобы Cacti экспортировал статические изображения на ежедневной основе, укажите здесь время, когда это делать. Кактусы предполагают, что вы запускаете скрипт сбора данных каждые 5 минут, поэтому они округляют ваше значение до ближайшего к их исполнению. Например, 21:23 будет равно 20 минутам после 21:23."
 
-#: setup.php:396
+#: setup.php:400
 #, fuzzy
 msgid "Use x Threads"
 msgstr "Использовать x Резьбы"
 
-#: setup.php:397
+#: setup.php:401
 #, fuzzy
-msgid ""
-"How many background threads do you wish Cacti to use when exporting graphs.  "
-"Default is 0 to run all export in poller thread, 1 or more to spawn separate "
-"background threads"
-msgstr ""
-"Сколько фоновых потоков вы хотите использовать Cacti при экспорте графиков.  "
-"По умолчанию 0 - запуск всего экспорта в потоке опроса, 1 или более для "
-"порождения отдельных фоновых потоков"
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Сколько фоновых потоков вы хотите использовать Cacti при экспорте графиков.  По умолчанию 0 - запуск всего экспорта в потоке опроса, 1 или более для порождения отдельных фоновых потоков"
 
-#: setup.php:405
+#: setup.php:409
 #, fuzzy
 msgid "Graph Selection & Settings"
 msgstr "Выбор графика и настройки"
 
-#: setup.php:411
+#: setup.php:415
 #, fuzzy
-msgid ""
-"The user name to utilize for establishing permissions to Cacti Graphs.  This "
-"user name will be used to determine which Graphs/Trees can be exported.  N/A "
-"means don't assume any security is in place."
-msgstr ""
-"Имя пользователя для использования при установлении прав доступа к Cacti "
-"Graphs.  Это имя пользователя будет использоваться для определения того, "
-"какие графики/дерева могут быть экспортированы.  Нет-нет-нет, значит, не "
-"предполагайте, что безопасность обеспечена."
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Имя пользователя для использования при установлении прав доступа к Cacti Graphs.  Это имя пользователя будет использоваться для определения того, какие графики/дерева могут быть экспортированы.  Нет-нет-нет, значит, не предполагайте, что безопасность обеспечена."
 
-#: setup.php:420
+#: setup.php:424
 #, fuzzy
 msgid "The Tree(s) to export."
 msgstr "Дерево(ы) для экспорта."
 
-#: setup.php:427
+#: setup.php:431
 #, fuzzy
 msgid "Expand Devices/Sites"
 msgstr "Расширить устройства/сайты"
 
-#: setup.php:428
+#: setup.php:432
 #, fuzzy
-msgid ""
-"This setting determines if Tree Devices and Site Templates and Devices will "
-"be expanded or not.  If set to expanded, each host will have a sub-folder "
-"containing either Graph Templates or Data Query items."
-msgstr ""
-"Этот параметр определяет, будут ли расширены древовидные устройства и "
-"шаблоны и устройства сайта.  Если установлено расширенное значение, каждый "
-"хост будет иметь подпапку, содержащую либо шаблоны графиков, либо элементы "
-"запроса данных."
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Этот параметр определяет, будут ли расширены древовидные устройства и шаблоны и устройства сайта.  Если установлено расширенное значение, каждый хост будет иметь подпапку, содержащую либо шаблоны графиков, либо элементы запроса данных."
 
-#: setup.php:433
+#: setup.php:437
 msgid "Off"
 msgstr "Выкл"
 
-#: setup.php:434
+#: setup.php:438
 msgid "On"
 msgstr "Вкл"
 
-#: setup.php:439
+#: setup.php:443
 #, fuzzy
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "Сайт для экспортируемых графиков кактусов."
 
-#: setup.php:446
+#: setup.php:450
 #, fuzzy
 msgid "Graph Thumbnail Width"
 msgstr "График Ширина эскиза Ширина эскиза"
 
-#: setup.php:447
+#: setup.php:451
 #, fuzzy
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "Ширина миниатюрных графиков по умолчанию в пикселях."
 
-#: setup.php:455
+#: setup.php:459
 #, fuzzy
 msgid "Graph Thumbnail Height"
 msgstr "График Высота эскизов"
 
-#: setup.php:456
+#: setup.php:460
 #, fuzzy
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "Высота миниатюрных графиков в пикселях."
 
-#: setup.php:464
+#: setup.php:468
 #, fuzzy
 msgid "Default View Thumbnails"
 msgstr "Миниатюры по умолчанию"
 
-#: setup.php:465
+#: setup.php:469
 #, fuzzy
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
-msgstr ""
-"Установите этот флажок, если вы хотите, чтобы графический вид по умолчанию "
-"был в режиме миниатюр."
+msgstr "Установите этот флажок, если вы хотите, чтобы графический вид по умолчанию был в режиме миниатюр."
 
-#: setup.php:470
+#: setup.php:474
 #, fuzzy
 msgid "Default Graph Columns"
 msgstr "Колонки Графиков по умолчанию"
 
-#: setup.php:471
+#: setup.php:475
 #, fuzzy
 msgid "The number of columns to use by default when displaying Graphs."
-msgstr ""
-"Количество столбцов для использования по умолчанию при отображении графиков."
+msgstr "Количество столбцов для использования по умолчанию при отображении графиков."
 
-#: setup.php:479
+#: setup.php:483
 #, fuzzy
 msgid "Graphs Per Page"
 msgstr "Графики на страницу"
 
-#: setup.php:480
+#: setup.php:484
 #, fuzzy
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "Выберите количество отображаемых графиков на страницу."
 
-#: setup.php:487
+#: setup.php:491
 #, fuzzy
 msgid "Maximum Graphs to Export"
 msgstr "Максимальное количество графиков для экспорта"
 
-#: setup.php:488
+#: setup.php:492
 #, fuzzy
-msgid ""
-"After this number is reached, an error will be generated, but exporting will "
-"continue.  Set to 0 for no limit."
-msgstr ""
-"После достижения этого номера будет сгенерирована ошибка, но экспорт "
-"продолжится.  Устанавливается на 0 без ограничения."
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "После достижения этого номера будет сгенерирована ошибка, но экспорт продолжится.  Устанавливается на 0 без ограничения."
 
-#: setup.php:496
+#: setup.php:500
 #, fuzzy
 msgid "Export Location Information"
 msgstr "Информация о местоположении экспорта"
 
-#: setup.php:501
+#: setup.php:505
 #, fuzzy
 msgid "Export Thumbnails"
 msgstr "Сроки экспорта"
 
-#: setup.php:502
+#: setup.php:506
 #, fuzzy
 msgid "Check this if you want the export thumbnails mode."
-msgstr ""
-"Установите этот флажок, если вы хотите, чтобы графический вид по умолчанию "
-"был в режиме миниатюр."
+msgstr "Установите этот флажок, если вы хотите, чтобы графический вид по умолчанию был в режиме миниатюр."
 
-#: setup.php:507
+#: setup.php:511
 #, fuzzy
 msgid "Clear Directory"
 msgstr "Каталог экспорта"
 
-#: setup.php:508
+#: setup.php:512
 #, fuzzy
-msgid ""
-"Check this Checkbox if you wish this Graph Export to clear the final "
-"directory before populating."
-msgstr ""
-"Установите этот флажок, если вы хотите, чтобы это определение экспорта "
-"графиков было включено."
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Установите этот флажок, если вы хотите, чтобы это определение экспорта графиков было включено."
 
-#: setup.php:513
+#: setup.php:517
 #, fuzzy
 msgid "Export Directory"
 msgstr "Каталог экспорта"
 
-#: setup.php:514
+#: setup.php:518
 #, fuzzy
-msgid ""
-"This is the directory, either on the local system or on the remote system, "
-"that will contain the exported data."
-msgstr ""
-"Это каталог, либо на локальной системе, либо на удаленной системе, который "
-"будет содержать экспортированные данные."
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Это каталог, либо на локальной системе, либо на удаленной системе, который будет содержать экспортированные данные."
 
-#: setup.php:520
+#: setup.php:524
 #, fuzzy
 msgid "Local Scratch Directory"
 msgstr "Местный каталог царапин"
 
-#: setup.php:521
+#: setup.php:525
 #, fuzzy
-msgid ""
-"This is the directory that Cacti will temporarily store output prior to "
-"sending to the remote site via the transfer method.  The contents of this "
-"directory will be deleted after the data is transferred."
-msgstr ""
-"Это каталог, который Cacti будет временно хранить выходные данные перед "
-"отправкой на удаленный сайт с помощью метода передачи.  Содержимое этого "
-"каталога будет удалено после передачи данных."
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Это каталог, который Cacti будет временно хранить выходные данные перед отправкой на удаленный сайт с помощью метода передачи.  Содержимое этого каталога будет удалено после передачи данных."
 
-#: setup.php:528
+#: setup.php:532
 #, fuzzy
 msgid "Remote Options"
 msgstr "Удаленные параметры"
 
-#: setup.php:533
+#: setup.php:537
 #, fuzzy
 msgid "Sanitize remote directory"
 msgstr "Дезинфицировать удаленный каталог"
 
-#: setup.php:534
+#: setup.php:538
 #, fuzzy
-msgid ""
-"Check this if you want to delete any existing files in the FTP remote "
-"directory. This option is in use only when using the PHP built-in ftp "
-"functions."
-msgstr ""
-"Установите этот флажок, если вы хотите удалить все существующие файлы в "
-"удаленной директории FTP. Данная опция используется только при использовании "
-"встроенных в PHP ftp-функций."
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Установите этот флажок, если вы хотите удалить все существующие файлы в удаленной директории FTP. Данная опция используется только при использовании встроенных в PHP ftp-функций."
 
-#: setup.php:539
+#: setup.php:543
 msgid "Remote Host"
 msgstr "Удалить Host"
 
-#: setup.php:540
+#: setup.php:544
 #, fuzzy
 msgid "Denotes the host to send Exported Graphs to."
-msgstr ""
-"Обозначает хост, на который необходимо отправить экспортированные графики."
+msgstr "Обозначает хост, на который необходимо отправить экспортированные графики."
 
-#: setup.php:547
+#: setup.php:551
 msgid "Remote Port"
 msgstr "Удалить Port"
 
-#: setup.php:548
+#: setup.php:552
 #, fuzzy
-msgid ""
-"Communication port to use for the export method if non-standard (leave empty "
-"for defaults)."
-msgstr ""
-"Порт связи, используемый для экспорта, если он нестандартный (оставьте "
-"пустым для значений по умолчанию)."
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Порт связи, используемый для экспорта, если он нестандартный (оставьте пустым для значений по умолчанию)."
 
-#: setup.php:556
+#: setup.php:560
 #, fuzzy
 msgid "Use passive mode"
 msgstr "Использовать пассивный режим"
 
-#: setup.php:557
+#: setup.php:561
 #, fuzzy
 msgid "Check this if you want to connect in passive mode to the FTP server."
-msgstr ""
-"Установите этот флажок, если вы хотите подключиться в пассивном режиме к "
-"серверу FTP."
+msgstr "Установите этот флажок, если вы хотите подключиться в пассивном режиме к серверу FTP."
 
-#: setup.php:562
+#: setup.php:566
 msgid "User"
 msgstr "Пользователь"
 
-#: setup.php:563
+#: setup.php:567
 #, fuzzy
 msgid "Account to logon on the remote server (leave empty for defaults)."
-msgstr ""
-"Учетная запись для входа на удаленный сервер (оставьте пустой для настроек "
-"по умолчанию)."
+msgstr "Учетная запись для входа на удаленный сервер (оставьте пустой для настроек по умолчанию)."
 
-#: setup.php:570
+#: setup.php:574
 msgid "Password"
 msgstr "Пароль"
 
-#: setup.php:571
+#: setup.php:575
 #, fuzzy
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "Пароль удаленного ftp аккаунта (оставьте пустым для пустого)."
 
-#: setup.php:578
+#: setup.php:582
 #, fuzzy
 msgid "Private Key Path"
 msgstr "Путь к закрытому ключу"
 
-#: setup.php:579
+#: setup.php:583
 #, fuzzy
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "Для SCP и RSYNC введите путь закрытого ключа, если требуется."
 
-#: setup.php:590
+#: setup.php:594
 #, fuzzy
 msgid "Exported Cacti Graph Pages"
 msgstr "Экспортированные графические страницы кактусов"
 
-#: setup.php:596
+#: setup.php:600
 msgid "(Edit)"
 msgstr "(Редактировать)"
 
-#: setup.php:602
+#: setup.php:606
 msgid "Actions"
 msgstr "Действия"
