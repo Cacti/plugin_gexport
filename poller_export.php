@@ -2,7 +2,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2020 The Cacti Group                                 |
+ | Copyright (C) 2004-2022 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -23,14 +23,6 @@
  +-------------------------------------------------------------------------+
 */
 
-/* we are not talking to the browser */
-$no_http_headers = true;
-
-/* do NOT run this script through a web browser */
-if (!isset($_SERVER['argv'][0]) || isset($_SERVER['REQUEST_METHOD'])  || isset($_SERVER['REMOTE_ADDR'])) {
-	die('<br><strong>This script is only meant to run at the command line.</strong>');
-}
-
 /* Start Initialization Section */
 $dir = dirname(__FILE__);
 chdir($dir);
@@ -39,7 +31,7 @@ if (substr_count(strtolower($dir), 'gexport')) {
     chdir('../../');
 }
 
-include('./include/global.php');
+include('./include/cli_check.php');
 include_once($config['base_path'] . '/lib/poller.php');
 include_once($config['base_path'] . '/lib/data_query.php');
 include_once($config['base_path'] . '/plugins/gexport/functions.php');
@@ -54,11 +46,11 @@ array_shift($parms);
 
 global $debug;
 
-$debug = FALSE;
-$force = FALSE;
+$debug = false;
+$force = false;
 $id    = 0;
 
-if (sizeof($parms)) {
+if (cacti_sizeof($parms)) {
 	foreach($parms as $parameter) {
 		if (strpos($parameter, '=')) {
 			list($arg, $value) = explode('=', $parameter);
@@ -76,11 +68,11 @@ if (sizeof($parms)) {
 			break;
 		case '-d':
 		case '--debug':
-			$debug = TRUE;
+			$debug = true;
 			break;
 		case '-f':
 		case '--force':
-			$force = TRUE;
+			$force = true;
 			break;
 		case '--version':
 		case '-V':
@@ -93,7 +85,7 @@ if (sizeof($parms)) {
 			display_help();
 			exit;
 		default:
-			echo 'ERROR: Invalid Parameter ' . $parameter . "\n\n";
+			print 'ERROR: Invalid Parameter ' . $parameter . "\n\n";
 			display_help();
 			exit;
 		}
@@ -116,17 +108,17 @@ function display_version() {
 	}
 
     $info = plugin_gexport_version();
-	echo "Cacti Graph Export Poller, Version " . $info['version'] . ", " . COPYRIGHT_YEARS . "\n";
+	print "Cacti Graph Export Poller, Version " . $info['version'] . ", " . COPYRIGHT_YEARS . "\n";
 }
 
 /*	display_help - displays the usage of the function */
 function display_help () {
 	display_version();
 
-	echo "\nusage: poller_export.php [--id=N] [--force] [--debug]\n\n";
-	echo "Cacti's Graph Export poller.  This poller will export parts of the Cacti\n";
-	echo "website into a static representation.\n\n";
-	echo "Optional:\n";
-	echo "    --force     - Force export to run now running now\n";
-	echo "    --debug     - Display verbose output during execution\n\n";
+	print "\nusage: poller_export.php [--id=N] [--force] [--debug]\n\n";
+	print "Cacti's Graph Export poller.  This poller will export parts of the Cacti\n";
+	print "website into a static representation.\n\n";
+	print "Optional:\n";
+	print "    --force     - Force export to run now running now\n";
+	print "    --debug     - Display verbose output during execution\n\n";
 }
