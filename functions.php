@@ -2063,20 +2063,23 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 		copy("$root_path/include/themes/$theme/default/$file", "$export_path/css/default/$file");
 	}
 
-	$directory = "$root_path/include/themes/$theme/images/*.*";
-	foreach(glob($directory) as $file) {
+	$directory = "$root_path/include/themes/$theme/images";
+	$directory = array_diff(glob("$directory/*.*"), array("$directory/.", "$directory/.."));
+	foreach($directory as $file) {
 		$file = basename($file);
 		copy("$root_path/include/themes/$theme/images/$file", "$export_path/css/images/$file");
 	}
 
-	$directory = "$root_path/include/fa/webfonts/*.*";
-	foreach(glob($directory) as $file) {
+	$directory = "$root_path/include/fa/webfonts";
+	$directory = array_diff(glob("$directory/*.*"), array("$directory/.", "$directory/.."));
+	foreach($directory as $file) {
 		$file = basename($file);
 		copy("$root_path/include/fa/webfonts/$file", "$export_path/webfonts/$file");
 	}
 
-	$directory = "$root_path/include/fa/svgs/*.*";
-	foreach(glob($directory) as $file) {
+	$directory = "$root_path/include/fa/svgs";
+	$directory = array_diff(glob("$directory/*.*"), array("$directory/.", "$directory/.."));
+	foreach($directory as $file) {
 		$file = basename($file);
 		copy("$root_path/include/fa/svgs/$file", "$export_path/svgs/$file");
 	}
