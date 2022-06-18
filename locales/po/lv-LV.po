@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-18 18:42+0000\nLast-Translator: Coool <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-18 23:58+0000\nLast-Translator: Coool <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -321,7 +321,7 @@ msgstr ""
 
 #: gexport.php:419 gexport.php:465 gexport.php:567
 msgid "Search"
-msgstr ""
+msgstr "Meklēt"
 
 #: gexport.php:423
 msgid "Select Site(s)"
@@ -358,17 +358,17 @@ msgstr ""
 #: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
 #, php-format
 msgid "%d Seconds"
-msgstr ""
+msgstr "%d sekundes"
 
 #: gexport.php:599
 #, php-format
 msgid "%d Minute"
-msgstr ""
+msgstr "%d minūte"
 
 #: gexport.php:600 gexport.php:601
 #, php-format
 msgid "%d Minutes"
-msgstr ""
+msgstr "%d minūtes"
 
 #: gexport.php:611
 msgctxt "filter: use"
@@ -378,11 +378,11 @@ msgstr ""
 #: gexport.php:612
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr ""
+msgstr "Notīrīt"
 
 #: gexport.php:749 setup.php:281
 msgid "Export Name"
-msgstr ""
+msgstr "Eksportēšanas nosaukums"
 
 #: gexport.php:752 setup.php:282
 msgid "The name of this Graph Export Definition."
@@ -390,7 +390,7 @@ msgstr ""
 
 #: gexport.php:755
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: gexport.php:758
 msgid "The internal ID of the Graph Export Definition."
@@ -398,11 +398,11 @@ msgstr ""
 
 #: gexport.php:761
 msgid "Schedule"
-msgstr ""
+msgstr "Izpildes saraksts"
 
 #: gexport.php:764
 msgid "The frequency that Graphs will be exported."
-msgstr ""
+msgstr "Grafiku eksportēšanas biežums."
 
 #: gexport.php:767
 msgid "Next Start"
@@ -414,7 +414,7 @@ msgstr ""
 
 #: gexport.php:773 setup.php:290
 msgid "Enabled"
-msgstr ""
+msgstr "Iespējots"
 
 #: gexport.php:775
 msgid "If enabled, this Graph Export definition will run as required."
@@ -422,7 +422,7 @@ msgstr ""
 
 #: gexport.php:778
 msgid "Status"
-msgstr ""
+msgstr "Statuss"
 
 #: gexport.php:780
 msgid "The current Graph Export Status."
@@ -454,11 +454,11 @@ msgstr ""
 
 #: gexport.php:801
 msgid "Graphs"
-msgstr ""
+msgstr "Grafiki"
 
 #: gexport.php:804
 msgid "The number of Graphs Exported on the last run."
-msgstr ""
+msgstr "Eksportēto grafiku skaits pēdējā izpildes reizē."
 
 #: gexport.php:807
 msgid "Last Started"
@@ -466,7 +466,7 @@ msgstr ""
 
 #: gexport.php:810
 msgid "The last time that this Graph Export was started."
-msgstr ""
+msgstr "Pēdējā reize, kad tika veikta šī grafika eksportēšana."
 
 #: gexport.php:813
 msgid "Last Errored"
@@ -474,7 +474,7 @@ msgstr ""
 
 #: gexport.php:816
 msgid "The last time that this Graph Export experienced an error."
-msgstr ""
+msgstr "Pēdējā reize, kad šī grafikas eksportēšanā laikā radās kļūda."
 
 #: gexport.php:820
 msgid "Export Definitions"
@@ -483,15 +483,15 @@ msgstr ""
 #: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
 #: setup.php:419
 msgid "N/A"
-msgstr ""
+msgstr "Nav piemērojams"
 
 #: gexport.php:861
 msgid "No"
-msgstr ""
+msgstr "Nē"
 
 #: gexport.php:861
 msgid "Yes"
-msgstr ""
+msgstr "Jā"
 
 #: gexport.php:865
 msgid "Idle"
