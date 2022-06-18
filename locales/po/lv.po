@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: Automatically generated\nLanguage-Team: none\nLanguage: lv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-18 18:42+0000\nLast-Translator: Coool <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -208,7 +208,7 @@ msgstr ""
 
 #: gexport.php:30
 msgid "Delete"
-msgstr ""
+msgstr "Dzēst"
 
 #: gexport.php:31
 msgid "Enable"
@@ -243,7 +243,7 @@ msgstr[2] ""
 
 #: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: gexport.php:266
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -254,7 +254,7 @@ msgstr[2] ""
 
 #: gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Continue"
-msgstr ""
+msgstr "Turpināt"
 
 #: gexport.php:271
 msgid "Disable Graph Export Definition(s)"
@@ -288,7 +288,7 @@ msgstr ""
 
 #: gexport.php:293
 msgid "Return"
-msgstr ""
+msgstr "Atgriezties"
 
 #: gexport.php:349
 #, php-format
