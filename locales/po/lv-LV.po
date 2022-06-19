@@ -4,55 +4,55 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-18 23:58+0000\nLast-Translator: Coool <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-19 12:11+0000\nLast-Translator: Coool <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "Izpildīts"
 
 #: functions.php:313
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "Sintakses vai lietošanas kļūda"
 
 #: functions.php:314
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "Protokola nesaderība"
 
 #: functions.php:315
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "Kļūdas izvēloties ievades/izvades failus, mapes"
 
 #: functions.php:316
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr ""
+msgstr "Pieprasītā darbība netiek atbalstīta: tika mēģināts manipulēt 64 bitu failus platformā, kura tos neatbalsta; vai tika norādīta opcija, kuru atbalsta klients, bet ne serveris."
 
 #: functions.php:317
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "Kļūda, startējot klienta-servera protokolu"
 
 #: functions.php:318
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "Dēmons nevar papildināt žurnālfailu"
 
 #: functions.php:319
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "Kļūda Ievade/Izvade ligzdā"
 
 #: functions.php:320
 msgid "Error in file I/O"
-msgstr ""
+msgstr "Kļūda Ievade/Izvade failā"
 
 #: functions.php:321
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "Kļūda rsync protokola datu straumē"
 
 #: functions.php:322
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "Programmas diagnostikas kļūdas"
 
 #: functions.php:323
 msgid "Error in IPC code"
-msgstr ""
+msgstr "Kļūda IPC kodā"
 
 #: functions.php:324
 msgid "Received SIGUSR1 or SIGINT"
@@ -79,20 +79,21 @@ msgid "The --max-delete limit stopped deletions"
 msgstr ""
 
 #: functions.php:330
+#, fuzzy
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "Datu nosūtīšanas/saņemšanas noildze"
 
 #: functions.php:331
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "Noildze, gaidot dēmona savienojumu"
 
 #: functions.php:334 functions.php:405
 msgid "Unknown error "
-msgstr ""
+msgstr "Nezināma kļūda "
 
 #: functions.php:377
 msgid "Operation was successful"
-msgstr ""
+msgstr "Operācija bija veiksmīga"
 
 #: functions.php:378
 msgid "General error in file copy"
@@ -100,11 +101,11 @@ msgstr ""
 
 #: functions.php:379
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "Galamērķis nav mape, bet tam vajadzētu būt"
 
 #: functions.php:380
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "Pārsniegts maksimālais simbolsaites līmenis"
 
 #: functions.php:381
 msgid "Connecting to host failed."
