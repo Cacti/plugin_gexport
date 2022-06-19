@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-19 12:11+0000\nLast-Translator: Coool <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-19 15:36+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -68,11 +68,11 @@ msgstr ""
 
 #: functions.php:327
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "Daļēja pārsūtīšana dēļ kļūdas"
 
 #: functions.php:328
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "Daļēja pārsūtīšana dēļ pazudušiem avota failiem"
 
 #: functions.php:329
 msgid "The --max-delete limit stopped deletions"
@@ -97,7 +97,7 @@ msgstr "Operācija bija veiksmīga"
 
 #: functions.php:378
 msgid "General error in file copy"
-msgstr ""
+msgstr "Vispārēja kļūda faila kopēšanā"
 
 #: functions.php:379
 msgid "Destination is not directory, but it should be"
@@ -109,103 +109,103 @@ msgstr "Pārsniegts maksimālais simbolsaites līmenis"
 
 #: functions.php:381
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "Neizdevās izveidot savienojumu ar resursdatoru."
 
 #: functions.php:382
 msgid "Connection broken"
-msgstr ""
+msgstr "Savienojums bojāts"
 
 #: functions.php:383
 msgid "File does not exist"
-msgstr ""
+msgstr "Fails neeksistē"
 
 #: functions.php:384
 msgid "No permission to access file."
-msgstr ""
+msgstr "Nav atļaujas piekļūt failam."
 
 #: functions.php:385
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "Vispārēja kļūda sftp protokolā"
 
 #: functions.php:386
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "Faila pārsūtīšanas protokola neatbilstība"
 
 #: functions.php:387
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "Neviens fails neatbilst norādītajiem kritērijiem"
 
 #: functions.php:388
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "Resursdatoram nav atļauts izveidot savienojumu"
 
 #: functions.php:389
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "Vispārēja kļūda ssh protokolā"
 
 #: functions.php:390
 msgid "Key exchange failed"
-msgstr ""
+msgstr "Atslēgu apmaiņa neizdevās"
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "Rezervēts"
 
 #: functions.php:392
 msgid "MAC error"
-msgstr ""
+msgstr "MAC kļūda"
 
 #: functions.php:393
 msgid "Compression error"
-msgstr ""
+msgstr "Kompresijas kļūda"
 
 #: functions.php:394
 msgid "Service not available"
-msgstr ""
+msgstr "Pakalpojums nav pieejams"
 
 #: functions.php:395
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "Protokola versija netiek atbalstīta"
 
 #: functions.php:396
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "Resursdatora atslēga nav verificējama"
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr ""
+msgstr "Savienojums neizdevās"
 
 #: functions.php:398
 msgid "Disconnected by application"
-msgstr ""
+msgstr "Atvienots pateicoties programmai"
 
 #: functions.php:399
 msgid "Too many connections"
-msgstr ""
+msgstr "Pārāk daudz savienojumu"
 
 #: functions.php:400
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "Autentifikāciju atcēla lietotājs"
 
 #: functions.php:401
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "Autentifikācijas metodes vairs nav pieejamas"
 
 #: functions.php:402
 msgid "Invalid user name"
-msgstr ""
+msgstr "Nederīgs lietotājvārds"
 
 #: functions.php:1518 functions.php:1681
 msgid "Non Query Based"
-msgstr ""
+msgstr "Nebalstīts uz vaicājumiem"
 
 #: functions.php:1765
 msgid "Graph Templates"
-msgstr ""
+msgstr "Grafiku veidnes"
 
 #: functions.php:1794
 msgid "Data Queries"
-msgstr ""
+msgstr "Datu vaicājumi"
 
 #: gexport.php:30
 msgid "Delete"
@@ -213,34 +213,34 @@ msgstr "Dzēst"
 
 #: gexport.php:31
 msgid "Enable"
-msgstr ""
+msgstr "Iespējot"
 
 #: gexport.php:32
 msgid "Disable"
-msgstr ""
+msgstr "Izslēgt"
 
 #: gexport.php:33
 msgid "Export Now"
-msgstr ""
+msgstr "Eksportēt tūlīt"
 
 #: gexport.php:37 setup.php:354
 msgid "Periodic"
-msgstr ""
+msgstr "Periodiski"
 
 #: gexport.php:38 setup.php:356
 msgid "Daily"
-msgstr ""
+msgstr "Katru dienu"
 
 #: gexport.php:39 setup.php:355
 msgid "Hourly"
-msgstr ""
+msgstr "Katru stundu"
 
 #: gexport.php:257
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Noklikšķiniet 'Turpināt', lai dzēstu norādīto grafika eksportēšanas definīciju."
+msgstr[2] "Noklikšķiniet 'Turpināt', lai dzēstu norādītās grafika eksportēšanas definīcijas."
 
 #: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Cancel"
@@ -250,8 +250,8 @@ msgstr "Atcelt"
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Noklikšķiniet 'Turpināt', lai atspējotu norādīto grafika eksportēšanas definīciju."
+msgstr[2] "Noklikšķiniet 'Turpināt', lai atspējotu norādītās grafika eksportēšanas definīcijas."
 
 #: gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Continue"
@@ -259,33 +259,33 @@ msgstr "Turpināt"
 
 #: gexport.php:271
 msgid "Disable Graph Export Definition(s)"
-msgstr ""
+msgstr "Atspējot grafika eksportēšanas definīciju(-as)"
 
 #: gexport.php:275
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Noklikšķiniet 'Turpināt', lai iespējotu norādīto grafika eksportēšanas definīciju."
+msgstr[2] "Noklikšķiniet 'Turpināt', lai iespējotu norādītās grafika eksportēšanas definīcijas."
 
 #: gexport.php:280
 msgid "Enable Graph Export Definition(s)"
-msgstr ""
+msgstr "Iespējot grafika eksportēšanas definīciju(-as)"
 
 #: gexport.php:284
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Noklikšķiniet 'Turpināt', lai palaistu norādīto grafika eksportēšanas definīciju tūlīt."
+msgstr[2] "Noklikšķiniet 'Turpināt', lai palaistu norādītās grafika eksportēšanas definīcijas tūlīt."
 
 #: gexport.php:289
 msgid "Run Graph Export Definition(s) Now"
-msgstr ""
+msgstr "Palaist grafika eksportēšanas definīciju(-as) tūlīt"
 
 #: gexport.php:292
 msgid "You must select at least one Graph Export Definition."
-msgstr ""
+msgstr "Jums ir jāizvēlas vismaz viena grafika eksportēšanas definīcija."
 
 #: gexport.php:293
 msgid "Return"
@@ -294,31 +294,31 @@ msgstr "Atgriezties"
 #: gexport.php:349
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr ""
+msgstr "Grafika eksportēšanas definīcija [labot: %s]"
 
 #: gexport.php:351
 msgid "Graph Export Definition [new]"
-msgstr ""
+msgstr "Grafika eksportēšanas definīcija [jauna]"
 
 #: gexport.php:377
 msgid "Select Tree(s)"
-msgstr ""
+msgstr "Atlasīt koku(s)"
 
 #: gexport.php:379
 msgid "Trees Selected"
-msgstr ""
+msgstr "Atlasītie koki"
 
 #: gexport.php:382
 msgid "All Trees Selected"
-msgstr ""
+msgstr "Atlasīti visi koki"
 
 #: gexport.php:388 gexport.php:434
 msgid "All"
-msgstr ""
+msgstr "Visi"
 
 #: gexport.php:389 gexport.php:435
 msgid "None"
-msgstr ""
+msgstr "Nevienu"
 
 #: gexport.php:419 gexport.php:465 gexport.php:567
 msgid "Search"
@@ -326,35 +326,35 @@ msgstr "Meklēt"
 
 #: gexport.php:423
 msgid "Select Site(s)"
-msgstr ""
+msgstr "Atlasīt vietni(-es)"
 
 #: gexport.php:425
 msgid "Sites Selected"
-msgstr ""
+msgstr "Atlasītās vietnes"
 
 #: gexport.php:428
 msgid "All Sites Selected"
-msgstr ""
+msgstr "Atlasītas visas vietnes"
 
 #: gexport.php:559
 msgid "Graph Export Definitions"
-msgstr ""
+msgstr "Grafika eksportēšanas definīcijas"
 
 #: gexport.php:573
 msgid "Exports"
-msgstr ""
+msgstr "Eksportēt"
 
 #: gexport.php:577
 msgid "Default"
-msgstr ""
+msgstr "Noklusējuma"
 
 #: gexport.php:588
 msgid "Refresh"
-msgstr ""
+msgstr "Atsvaidzināt"
 
 #: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
 msgid "Never"
-msgstr ""
+msgstr "Nekad"
 
 #: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
 #, php-format
@@ -374,7 +374,7 @@ msgstr "%d minūtes"
 #: gexport.php:611
 msgctxt "filter: use"
 msgid "Go"
-msgstr ""
+msgstr "Palaist"
 
 #: gexport.php:612
 msgctxt "filter: reset"
@@ -387,7 +387,7 @@ msgstr "Eksportēšanas nosaukums"
 
 #: gexport.php:752 setup.php:282
 msgid "The name of this Graph Export Definition."
-msgstr ""
+msgstr "Šī grafika eksportēšanas definīcijas nosaukums."
 
 #: gexport.php:755
 msgid "ID"
@@ -395,7 +395,7 @@ msgstr "ID"
 
 #: gexport.php:758
 msgid "The internal ID of the Graph Export Definition."
-msgstr ""
+msgstr "Grafika eksportēšanas definīcijas iekšējais ID."
 
 #: gexport.php:761
 msgid "Schedule"
@@ -407,11 +407,11 @@ msgstr "Grafiku eksportēšanas biežums."
 
 #: gexport.php:767
 msgid "Next Start"
-msgstr ""
+msgstr "Nākamā reize"
 
 #: gexport.php:770
 msgid "The next time the Graph Export should run."
-msgstr ""
+msgstr "Nākamā reize, kad veikt grafika eksportēšanu."
 
 #: gexport.php:773 setup.php:290
 msgid "Enabled"
@@ -419,7 +419,7 @@ msgstr "Iespējots"
 
 #: gexport.php:775
 msgid "If enabled, this Graph Export definition will run as required."
-msgstr ""
+msgstr "Ja iespējots, šī grafika eksportēšanas definīcija darbosies atbilstoši prasībām."
 
 #: gexport.php:778
 msgid "Status"
@@ -427,31 +427,31 @@ msgstr "Statuss"
 
 #: gexport.php:780
 msgid "The current Graph Export Status."
-msgstr ""
+msgstr "Pašreizējais grafika eksportēšanas statuss."
 
 #: gexport.php:783
 msgid "Exporting (Sites/Trees)"
-msgstr ""
+msgstr "Eksportē (Vietnes/Kokus)"
 
 #: gexport.php:786
 msgid "What is being Exported."
-msgstr ""
+msgstr "Kas tiek eksportēts."
 
 #: gexport.php:789 setup.php:414
 msgid "Effective User"
-msgstr ""
+msgstr "Efektīvs lietotājs"
 
 #: gexport.php:792
 msgid "The user that this export will impersonate."
-msgstr ""
+msgstr "Lietotājs, par kuru uzdosies šī eksportēšana."
 
 #: gexport.php:795
 msgid "Last Runtime"
-msgstr ""
+msgstr "Pēdējā izpildes reize"
 
 #: gexport.php:798
 msgid "The last runtime for the Graph Export."
-msgstr ""
+msgstr "Pēdējā grafika eksportēšanas izpildes reize."
 
 #: gexport.php:801
 msgid "Graphs"
@@ -463,7 +463,7 @@ msgstr "Eksportēto grafiku skaits pēdējā izpildes reizē."
 
 #: gexport.php:807
 msgid "Last Started"
-msgstr ""
+msgstr "Pēdējo reizi izpildīta"
 
 #: gexport.php:810
 msgid "The last time that this Graph Export was started."
@@ -471,7 +471,7 @@ msgstr "Pēdējā reize, kad tika veikta šī grafika eksportēšana."
 
 #: gexport.php:813
 msgid "Last Errored"
-msgstr ""
+msgstr "Pēdējo reizi deva kļūdu"
 
 #: gexport.php:816
 msgid "The last time that this Graph Export experienced an error."
@@ -479,7 +479,7 @@ msgstr "Pēdējā reize, kad šī grafikas eksportēšanā laikā radās kļūda
 
 #: gexport.php:820
 msgid "Export Definitions"
-msgstr ""
+msgstr "Eksportēšanas definīcijas"
 
 #: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
 #: setup.php:419
@@ -520,11 +520,11 @@ msgstr ""
 
 #: gexport.php:922
 msgid "No Graph Export Definitions"
-msgstr ""
+msgstr "Nav grafika eksportēšanas definīciju"
 
 #: setup.php:31
 msgid "Export Cacti Graphs Settings"
-msgstr ""
+msgstr "Eksportēt Cacti grafiku iestatījumus"
 
 #: setup.php:265
 msgid "Graph Exports"
@@ -544,15 +544,15 @@ msgstr ""
 
 #: setup.php:291
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
-msgstr ""
+msgstr "Atķeksējiet, ja vēlaties iespējot šī grafika eksportēšanas definīciju."
 
 #: setup.php:297
 msgid "Export Method"
-msgstr ""
+msgstr "Eksportēšanas veids"
 
 #: setup.php:298
 msgid "Choose which export method to use."
-msgstr ""
+msgstr "Izvēlieties, kuru eksportēšanas veidu izmantot."
 
 #: setup.php:303
 msgid "Local"
@@ -580,11 +580,11 @@ msgstr ""
 
 #: setup.php:312
 msgid "Export Command Arguments"
-msgstr ""
+msgstr "Eksportēt komandu argumentus"
 
 #: setup.php:313
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "Argumenti, ko izmantot ar nelokālām eksporta metodēm. Vajadzētu izmantot rsync "
 
 #: setup.php:325
 msgid "Theme"
@@ -612,7 +612,7 @@ msgstr ""
 
 #: setup.php:344
 msgid "Export Timing"
-msgstr ""
+msgstr "Eksportēšanas ilgums"
 
 #: setup.php:348
 msgid "Timing Method"
@@ -620,15 +620,15 @@ msgstr ""
 
 #: setup.php:349
 msgid "Choose when to Export Graphs."
-msgstr ""
+msgstr "Izvēlieties, kad eksportēt grafikus."
 
 #: setup.php:360
 msgid "Periodic Export Cycle"
-msgstr ""
+msgstr "Periodiskais eksportēšanas cikls"
 
 #: setup.php:361
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
-msgstr ""
+msgstr "Cik bieži vēlaties, Cacti eksportētu grafikus.  Šī ir apjautāšanas ciklu vienība, kad vēlaties eksportēt grafikus."
 
 #: setup.php:365
 msgid "Every Polling Cycle"
@@ -647,7 +647,7 @@ msgstr ""
 
 #: setup.php:381
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
-msgstr ""
+msgstr "Ja vēlaties Cacti eksportēt statiskus attēlus katru stundu, norādiet stundu minūtes, kad to veikt. Cacti uzskata, ka datu ievākšanas skripts tiek palaists ik pēc 5 minūtēm, tāpēc tas noapaļos jūsu vērtību pēc iespējas vistuvāk izpildes reizei. Piemēram, 43 nozīmētu 40 minūtes pēc veselas stundas."
 
 #: setup.php:390
 msgid "Daily at specified time"
@@ -655,7 +655,7 @@ msgstr ""
 
 #: setup.php:391
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr ""
+msgstr "Ja vēlaties Cacti eksportēt statiskus attēlus katru dienu, norādiet laiku, kad to veikt. Cacti uzskata, ka datu ievākšanas skripts tiek palaists ik pēc 5 minūtēm, tāpēc tas noapaļos jūsu vērtību pēc iespējas vistuvāk izpildes reizei. Piemēram, pulksten 21:23 būs 20 minūtes pēc 21:00."
 
 #: setup.php:400
 msgid "Use x Threads"
@@ -663,7 +663,7 @@ msgstr ""
 
 #: setup.php:401
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr ""
+msgstr "Cik fona pavedienus vēlaties atļaut Cacti izmantot, eksportējot grafikus.  Noklusējuma vērtība ir 0, lai palaistu visu eksportēšanu apjautāšanas pavedienā, 1 un vairāk, lai izveidotu atsevišķus fona pavedienus"
 
 #: setup.php:409
 msgid "Graph Selection & Settings"
@@ -675,7 +675,7 @@ msgstr ""
 
 #: setup.php:424
 msgid "The Tree(s) to export."
-msgstr ""
+msgstr "Eksportēt koku(s)."
 
 #: setup.php:431
 msgid "Expand Devices/Sites"
@@ -739,7 +739,7 @@ msgstr ""
 
 #: setup.php:491
 msgid "Maximum Graphs to Export"
-msgstr ""
+msgstr "Maksimālais eksportējamo grafiku skaits"
 
 #: setup.php:492
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
@@ -747,15 +747,15 @@ msgstr ""
 
 #: setup.php:500
 msgid "Export Location Information"
-msgstr ""
+msgstr "Eksportēt atrašanās vietas informāciju"
 
 #: setup.php:505
 msgid "Export Thumbnails"
-msgstr ""
+msgstr "Eksportēt sīktēlus"
 
 #: setup.php:506
 msgid "Check this if you want the export thumbnails mode."
-msgstr ""
+msgstr "Atķeksējiet, ja vēlaties eksportēt sīktēlus."
 
 #: setup.php:511
 msgid "Clear Directory"
@@ -763,11 +763,11 @@ msgstr ""
 
 #: setup.php:512
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr ""
+msgstr "Atķeksējiet, ja vēlaties, lai šī grafika eksportēšana dzēstu saturu pēdējā izvēlētajā mapē pirms aizpildīšanas."
 
 #: setup.php:517
 msgid "Export Directory"
-msgstr ""
+msgstr "Eksportēšanas mape"
 
 #: setup.php:518
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
@@ -807,7 +807,7 @@ msgstr ""
 
 #: setup.php:552
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
-msgstr ""
+msgstr "Sakaru ports, ko izmantot eksportēšanas veidam, ja tas nav standarta (atstājiet tukšu noklusējuma iestatījumiem)."
 
 #: setup.php:560
 msgid "Use passive mode"
@@ -847,7 +847,7 @@ msgstr ""
 
 #: setup.php:600
 msgid "(Edit)"
-msgstr ""
+msgstr "(Rediģēt)"
 
 #: setup.php:606
 msgid "Actions"
