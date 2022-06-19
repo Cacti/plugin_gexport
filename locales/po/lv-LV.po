@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-19 15:36+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-19 16:48+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -56,7 +56,7 @@ msgstr "Kļūda IPC kodā"
 
 #: functions.php:324
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "Saņemts SIGUSR1 vai SIGINT"
 
 #: functions.php:325
 msgid "Some error returned by waitpid()"
@@ -64,7 +64,7 @@ msgstr ""
 
 #: functions.php:326
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "Piešķirot pamatatmiņas buferi, radās kļūda"
 
 #: functions.php:327
 msgid "Partial transfer due to error"
@@ -76,10 +76,9 @@ msgstr "Daļēja pārsūtīšana dēļ pazudušiem avota failiem"
 
 #: functions.php:329
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "--max-delete parametra ierobežojums apturēja dzēšanu"
 
 #: functions.php:330
-#, fuzzy
 msgid "Timeout in data send/receive"
 msgstr "Datu nosūtīšanas/saņemšanas noildze"
 
@@ -496,27 +495,27 @@ msgstr "Jā"
 
 #: gexport.php:865
 msgid "Idle"
-msgstr ""
+msgstr "Dīkstāvē"
 
 #: gexport.php:868
 msgid "Running"
-msgstr ""
+msgstr "Procesā"
 
 #: gexport.php:871
 msgid "Error"
-msgstr ""
+msgstr "Kļūda"
 
 #: gexport.php:877
 msgid "All Sites"
-msgstr ""
+msgstr "Visas vietnes"
 
 #: gexport.php:888
 msgid "All Trees"
-msgstr ""
+msgstr "Visi koki"
 
 #: gexport.php:902
 msgid "Sec"
-msgstr ""
+msgstr "Sek"
 
 #: gexport.php:922
 msgid "No Graph Export Definitions"
@@ -528,19 +527,19 @@ msgstr "Eksportēt Cacti grafiku iestatījumus"
 
 #: setup.php:265
 msgid "Graph Exports"
-msgstr ""
+msgstr "Grafika eksportēšana"
 
 #: setup.php:265
 msgid "Utilities"
-msgstr ""
+msgstr "Rīki"
 
 #: setup.php:268
 msgid "General Administration"
-msgstr ""
+msgstr "Vispārējā administrācija"
 
 #: setup.php:276
 msgid "General"
-msgstr ""
+msgstr "Pamata"
 
 #: setup.php:291
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
@@ -556,27 +555,27 @@ msgstr "Izvēlieties, kuru eksportēšanas veidu izmantot."
 
 #: setup.php:303
 msgid "Local"
-msgstr ""
+msgstr "Vietējais"
 
 #: setup.php:304
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: setup.php:305
 msgid "SFTP"
-msgstr ""
+msgstr "SFTP"
 
 #: setup.php:306
 msgid "FTP NC"
-msgstr ""
+msgstr "FTP NC"
 
 #: setup.php:307
 msgid "SCP"
-msgstr ""
+msgstr "SCP"
 
 #: setup.php:308
 msgid "RSYNC"
-msgstr ""
+msgstr "RSYNC"
 
 #: setup.php:312
 msgid "Export Command Arguments"
@@ -588,15 +587,15 @@ msgstr "Argumenti, ko izmantot ar nelokālām eksporta metodēm. Vajadzētu izma
 
 #: setup.php:325
 msgid "Theme"
-msgstr ""
+msgstr "Motīvs"
 
 #: setup.php:326
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
-msgstr ""
+msgstr "Lūdzu, izvēlieties vienu no pieejamajiem motīviem, kuru Cacti izmantos eksportējot grafikus."
 
 #: setup.php:333
 msgid "Presentation Method"
-msgstr ""
+msgstr "Prezentācijas veids"
 
 #: setup.php:334
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
