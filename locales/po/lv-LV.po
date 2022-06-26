@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-23 09:52+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-06-26 06:53+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -124,7 +124,7 @@ msgstr "Nav atļaujas piekļūt failam."
 
 #: functions.php:385
 msgid "General error in sftp protocol"
-msgstr "Vispārēja kļūda sftp protokolā"
+msgstr "Vispārēja kļūda SFTP protokolā"
 
 #: functions.php:386
 msgid "File transfer protocol mismatch"
@@ -140,7 +140,7 @@ msgstr "Resursdatoram nav atļauts izveidot savienojumu"
 
 #: functions.php:389
 msgid "General error in ssh protocol"
-msgstr "Vispārēja kļūda ssh protokolā"
+msgstr "Vispārēja kļūda SSH protokolā"
 
 #: functions.php:390
 msgid "Key exchange failed"
@@ -535,7 +535,7 @@ msgstr "Rīki"
 
 #: setup.php:268
 msgid "General Administration"
-msgstr "Vispārējā administrācija"
+msgstr "Pamatadministrācija"
 
 #: setup.php:276
 msgid "General"
@@ -662,7 +662,7 @@ msgstr "Izmantot x pavedienus"
 
 #: setup.php:401
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr "Cik fona pavedienus vēlaties atļaut Cacti izmantot, eksportējot grafikus.  Noklusējuma vērtība ir 0, lai palaistu visu eksportēšanu apjautāšanas pavedienā, 1 un vairāk, lai izveidotu atsevišķus fona pavedienus"
+msgstr "Cik fona pavedienus vēlaties atļaut Cacti izmantot, eksportējot grafikus.  Noklusējuma vērtība ir 0, lai palaistu visu eksportēšanu aptaujāšanas pavedienā, 1 un vairāk, lai izveidotu atsevišķus fona pavedienus"
 
 #: setup.php:409
 msgid "Graph Selection & Settings"
