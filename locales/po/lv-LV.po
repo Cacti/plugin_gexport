@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-07-11 21:26+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-07-19 12:53+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -88,7 +88,7 @@ msgstr "Noildze, gaidot dēmona savienojumu"
 
 #: functions.php:334 functions.php:405
 msgid "Unknown error "
-msgstr "Nezināma kļūda"
+msgstr "Nezināma kļūda "
 
 #: functions.php:377
 msgid "Operation was successful"
@@ -237,7 +237,7 @@ msgstr "Katru stundu"
 #: gexport.php:257
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] ""
+msgstr[0] "Noklikšķiniet 'Turpināt', lai dzēstu norādīto grafika eksportēšanas definīciju."
 msgstr[1] "Noklikšķiniet 'Turpināt', lai dzēstu norādīto grafika eksportēšanas definīciju."
 msgstr[2] "Noklikšķiniet 'Turpināt', lai dzēstu norādītās grafika eksportēšanas definīcijas."
 
@@ -248,7 +248,7 @@ msgstr "Atcelt"
 #: gexport.php:266
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] ""
+msgstr[0] "Noklikšķiniet 'Turpināt', lai atspējotu norādīto grafika eksportēšanas definīciju."
 msgstr[1] "Noklikšķiniet 'Turpināt', lai atspējotu norādīto grafika eksportēšanas definīciju."
 msgstr[2] "Noklikšķiniet 'Turpināt', lai atspējotu norādītās grafika eksportēšanas definīcijas."
 
@@ -263,7 +263,7 @@ msgstr "Atspējot grafika eksportēšanas definīciju(-as)"
 #: gexport.php:275
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] ""
+msgstr[0] "Noklikšķiniet 'Turpināt', lai iespējotu norādīto grafika eksportēšanas definīciju."
 msgstr[1] "Noklikšķiniet 'Turpināt', lai iespējotu norādīto grafika eksportēšanas definīciju."
 msgstr[2] "Noklikšķiniet 'Turpināt', lai iespējotu norādītās grafika eksportēšanas definīcijas."
 
@@ -274,7 +274,7 @@ msgstr "Iespējot grafika eksportēšanas definīciju(-as)"
 #: gexport.php:284
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] ""
+msgstr[0] "Noklikšķiniet 'Turpināt', lai palaistu norādīto grafika eksportēšanas definīciju tūlīt."
 msgstr[1] "Noklikšķiniet 'Turpināt', lai palaistu norādīto grafika eksportēšanas definīciju tūlīt."
 msgstr[2] "Noklikšķiniet 'Turpināt', lai palaistu norādītās grafika eksportēšanas definīcijas tūlīt."
 
@@ -482,7 +482,6 @@ msgstr "Eksportēšanas definīcijas"
 
 #: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
 #: setup.php:419
-#, fuzzy
 msgid "N/A"
 msgstr "Nav pieejams"
 
