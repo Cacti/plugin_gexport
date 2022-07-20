@@ -1181,7 +1181,7 @@ function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 				(is_dir($filePath))) {
 
 				export_log("Create remote directory: '$file'.");
-				ftp_mkdir($oFtpConnection,$file);
+				@ftp_mkdir($oFtpConnection,$file);
 
 				export_log("Change remote directory to: '$file'.");
 				ftp_chdir($oFtpConnection,$file);
