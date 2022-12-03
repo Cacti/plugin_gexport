@@ -1,5 +1,9 @@
 ## Changelog
 
+--- develop ---
+
+* issue#55: PNG not readable
+
 --- 2.0 ----
 
 * issue#37: Empty site variable may cause errors to appear

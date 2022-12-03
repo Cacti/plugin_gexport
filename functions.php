@@ -984,6 +984,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 		$graph_data_array['graph_nolegend']  = true;
 		$graph_data_array['export']          = true;
 		$graph_data_array['graph_theme']     = $export['export_theme'];
+		$graph_data_array['image_format']    = 'png';
 
 		export_log("Creating Graph Thumbnail '" . $graph_data_array['export_filename'] . "'");
 		check_remove($graph_data_array['export_filename']);
@@ -996,6 +997,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '.png';
 	$graph_data_array['export']          = true;
 	$graph_data_array['graph_theme']     = $export['export_theme'];
+	$graph_data_array['image_format']    = 'png';
 
 	export_log("Creating Graph '" . $graph_data_array['export_filename'] . "'");
 	check_remove($graph_data_array['export_filename']);
@@ -1020,6 +1022,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 				$graph_data_array['export']          = true;
 				$graph_data_array['graph_end']       = time() - read_config_option('poller_interval');
 				$graph_data_array['graph_theme']     = $export['export_theme'];
+				$graph_data_array['image_format']    = 'png';
 
 				if (!empty($rra['timespan'])) {
 					$graph_data_array['graph_start']  = $graph_data_array['graph_end'] - $rra['timespan'];
