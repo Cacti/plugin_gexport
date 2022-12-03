@@ -2,6 +2,7 @@
 
 --- develop ---
 
+* issue#54: CMDPHP PHP ERROR WARNING
 * issue#55: PNG not readable
 
 --- 2.0 ----
