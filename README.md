@@ -22,9 +22,9 @@ functionality that was removed from the Core of Cacti.
 ## Features
 
 Allows you to Export Cacti Graphs, Graph Tree's and Sites.  Multiple Graph
-Exports can be performed each impersonating a different users permissions.
-Graph Export contents can be transferred to remote sites using FTP, SFTP, RSYNC,
-and SCP.
+Exports can be performed each impersonating a different users permissions. Graph
+Export contents can be transferred to remote sites using FTP, SFTP, RSYNC, and
+SCP.
 
 ## Installation
 
@@ -43,3 +43,5 @@ If you figure out this problem, see the Cacti forums!
 
 Got any ideas or complaints, please create an issue in GitHub.
 
+-----------------------------------------------
+Copyright (c) 2004-2023 - The Cacti Group, Inc.
