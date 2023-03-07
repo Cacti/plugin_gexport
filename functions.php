@@ -1063,6 +1063,9 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	global $aFtpExport;
 
+	// Turn off warnings
+	error_reporting(0);
+
 	/* connect to foreign system */
 	switch($stFtpType) {
 	case 'ftp':
