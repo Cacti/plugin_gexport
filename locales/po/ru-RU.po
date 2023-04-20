@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-09-16 13:04+0000\nLast-Translator: Anton Zhuravlev <baka109g@gmail.com>\nLanguage-Team: Russian <http://translate.cacti.net/projects/cacti/gexport/ru/>\nLanguage: ru-RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2023-04-20 08:06+0000\nLast-Translator: Сергей <zersh@mail.ru>\nLanguage-Team: Russian <http://translate.cacti.net/projects/cacti/gexport/ru/>\nLanguage: ru-RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -420,7 +420,7 @@ msgstr "Никогда"
 #: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
 #, php-format
 msgid "%d Seconds"
-msgstr ""
+msgstr "%d секунд"
 
 #: gexport.php:599
 #, php-format
@@ -471,7 +471,6 @@ msgid "The frequency that Graphs will be exported."
 msgstr "Частота, с которой будут экспортированы графики."
 
 #: gexport.php:767
-#, fuzzy
 msgid "Next Start"
 msgstr "Следующий старт"
 
@@ -519,7 +518,6 @@ msgid "The user that this export will impersonate."
 msgstr "Пользователь, которого этот экспорт выдаст себя за пользователя."
 
 #: gexport.php:795
-#, fuzzy
 msgid "Last Runtime"
 msgstr "Последнее время работы"
 
@@ -538,9 +536,8 @@ msgid "The number of Graphs Exported on the last run."
 msgstr "Количество графиков, экспортированных в последнем цикле."
 
 #: gexport.php:807
-#, fuzzy
 msgid "Last Started"
-msgstr "Последний раз я начинал"
+msgstr "Последний запуск"
 
 #: gexport.php:810
 #, fuzzy
