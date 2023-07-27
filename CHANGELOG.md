@@ -1,6 +1,6 @@
 ## Changelog
 
---- develop ---
+--- 2.1 ---
 
 - issue#54: CMDPHP PHP ERROR WARNING
 
