@@ -21,7 +21,7 @@
 
 [info]
 name = gexport
-version = 2.0
+version = 2.1
 longname = Graph Export Package for Cacti
 author = The Cacti Group
 email = 
