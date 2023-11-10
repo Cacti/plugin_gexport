@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: gexport on cacti 1.1.34\n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
-"PO-Revision-Date: 2019-07-21 21:19-0400\n"
-"Last-Translator: tomcat <luis_126@126.com>\n"
-"Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh-CN/>\n"
-"Language: zh_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.3\n"
+msgstr "Project-Id-Version: gexport on cacti 1.1.34\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2023-11-10 02:07+0000\nLast-Translator: Ben Hsu <48728121@qq.com>\nLanguage-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\nLanguage: zh-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -405,7 +393,7 @@ msgstr "默认"
 
 #: gexport.php:588
 msgid "Refresh"
-msgstr ""
+msgstr "刷新"
 
 #: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
 msgid "Never"
@@ -414,17 +402,17 @@ msgstr "从不"
 #: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
 #, php-format
 msgid "%d Seconds"
-msgstr ""
+msgstr "%d秒"
 
 #: gexport.php:599
 #, php-format
 msgid "%d Minute"
-msgstr ""
+msgstr "%d分钟"
 
 #: gexport.php:600 gexport.php:601
 #, php-format
 msgid "%d Minutes"
-msgstr ""
+msgstr "%d分钟"
 
 #: gexport.php:611
 msgctxt "filter: use"
@@ -661,7 +649,7 @@ msgstr "为html生成的页面选择你想要的演示文稿。 如果您选择�
 
 #: setup.php:339 setup.php:442
 msgid "Site"
-msgstr "网站"
+msgstr "站点"
 
 #: setup.php:340 setup.php:423
 msgid "Tree"
@@ -910,7 +898,7 @@ msgstr "导出的Cacti 图表页面"
 
 #: setup.php:600
 msgid "(Edit)"
-msgstr "（编辑）"
+msgstr "(编辑)"
 
 #: setup.php:606
 msgid "Actions"
