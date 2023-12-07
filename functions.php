@@ -1074,7 +1074,7 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 		if (!$oFtpConnection) {
 			export_fatal($export, 'FTP Connection failed! Check hostname and port.  Export can not continue.');
 		} else {
-			export_log('Conection to remote server was successful.');
+			export_log('Connection to remote server was successful.');
 		}
 		break;
 	case 'sftp':
@@ -1083,7 +1083,7 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 		if (!$oFtpConnection) {
 			export_fatal($export, 'SFTP Connection failed! Check hostname and port.  Export can not continue.');
 		} else {
-			export_log('Conection to remote server was successful.');
+			export_log('Connection to remote server was successful.');
 		}
 		break;
 	}
@@ -1416,7 +1416,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 
 /* export_generate_tree_html - create jstree compatible static tree html.  This is a
    set of unsorted lists that jstree can properly parse into a tree object. Note that
-   this is a reentrant/recursive function that will call iteself.
+   this is a reentrant/recursive function that will call itself.
    @arg $export_path  - the location to write the resulting index.html file
    @arg $tree         - the tree array including information about the tree
    @arg $parent       - the parent of any branch to be searched
@@ -1594,7 +1594,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 
 /* export_generate_site_html - create jstree compatible static site html.  This is a
    set of unsorted lists that jstree can properly parse into a tree object. Note that
-   this is a reentrant/recursive function that will call iteself.
+   this is a reentrant/recursive function that will call itself.
    @arg $export_path  - the location to write the resulting index.html file
    @arg $site         - the site array including information about the site
    @arg $parent       - the parent of any branch to be searched
@@ -1946,7 +1946,7 @@ function tree_site_export(&$export, $export_path) {
 	}
 }
 
-/* create_export_directory_structure - builds the export directory strucutre and copies
+/* create_export_directory_structure - builds the export directory structure and copies
    graphics and treeview scripts to those directories.
    @arg $root_path   - the directory where Cacti is installed
    @arg $export_path - the export directory where graphs will either be staged or located.
@@ -2105,7 +2105,7 @@ function get_tree_name($tree_id) {
 
 /* del_directory - delete the directory pointed to by the $path variable.
    @arg $path   - the directory to delete or clean
-   @arg $deldir - (optionnal parameter, true as default) delete the diretory (true) or just clean it (false) */
+   @arg $deldir - (optional parameter, true as default) delete the directory (true) or just clean it (false) */
 function del_directory($path, $deldir = true) {
 	/* check if the directory name have a '/' at the end, add if not */
 	if ($path[strlen($path)-1] != '/') {
@@ -2136,7 +2136,7 @@ function del_directory($path, $deldir = true) {
 	}
 }
 
-/* check_remove - simple function to check for the existance of a file and remove it.
+/* check_remove - simple function to check for the existence of a file and remove it.
    @arg $filename - the file to remove. */
 function check_remove($filename) {
 	if (file_exists($filename) && is_writable($filename)) {
