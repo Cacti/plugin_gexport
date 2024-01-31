@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
-"PO-Revision-Date: 2019-07-21 21:12-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: nl_NL\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.3\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-01-31 14:27+0000\nLast-Translator: Edwin Lankamp <edwin.lankamp@gmail.com>\nLanguage-Team: Dutch <http://translate.cacti.net/projects/cacti/gexport/nl/>\nLanguage: nl-NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -53,9 +41,8 @@ msgid "Daemon unable to append to log-file"
 msgstr "Daemon niet in staat om aan het logboekbestand toe te voegen"
 
 #: functions.php:319
-#, fuzzy
 msgid "Error in socket I/O"
-msgstr "Fout in contactdoos-I/O"
+msgstr "Fout in socket-I/O"
 
 #: functions.php:320
 #, fuzzy
@@ -73,9 +60,8 @@ msgid "Errors with program diagnostics"
 msgstr "Fouten bij de programma-diagnose"
 
 #: functions.php:323
-#, fuzzy
 msgid "Error in IPC code"
-msgstr "Fout in de IPC-code"
+msgstr "Fout in de IPC code"
 
 #: functions.php:324
 #, fuzzy
@@ -118,9 +104,8 @@ msgid "Timeout waiting for daemon connection"
 msgstr "Time-out bij het wachten op een daemon-verbinding"
 
 #: functions.php:334 functions.php:405
-#, fuzzy
 msgid "Unknown error "
-msgstr "Onbekende fout"
+msgstr "Onbekende fout "
 
 #: functions.php:377
 #, fuzzy
@@ -658,7 +643,6 @@ msgid "FTP"
 msgstr "FTP"
 
 #: setup.php:305
-#, fuzzy
 msgid "SFTP"
 msgstr "SFTP"
 
@@ -668,7 +652,6 @@ msgid "FTP NC"
 msgstr "FTP NC"
 
 #: setup.php:307
-#, fuzzy
 msgid "SCP"
 msgstr "SCP"
 
@@ -683,9 +666,8 @@ msgid "Export Command Arguments"
 msgstr "Argumenten voor exportcommando's"
 
 #: setup.php:313
-#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Argumenten om te gebruiken met niet-lokale exportmethoden. rsync dient gebruik te maken van"
+msgstr "Argumenten om te gebruiken met niet-lokale exportmethoden. rsync dient gebruik te maken van "
 
 #: setup.php:325
 msgid "Theme"
@@ -1004,7 +986,7 @@ msgstr "Uitgevoerde cactusgrafiekpagina's"
 
 #: setup.php:600
 msgid "(Edit)"
-msgstr "(Wijzig)"
+msgstr "(bewerken)"
 
 #: setup.php:606
 msgid "Actions"
