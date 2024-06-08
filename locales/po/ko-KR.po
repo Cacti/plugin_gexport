@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2020-12-12 22:15-0500\n"
-"PO-Revision-Date: 2019-07-21 21:11-0400\n"
+"PO-Revision-Date: 2024-06-07 23:14-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ko_KR\n"
@@ -16,139 +16,113 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: functions.php:312
 msgid "Success"
 msgstr "성공"
 
 #: functions.php:313
-#, fuzzy
 msgid "Syntax or usage error"
 msgstr "구문 또는 사용 오류"
 
 #: functions.php:314
-#, fuzzy
 msgid "Protocol incompatibility"
 msgstr "프로토콜 비 호환성"
 
 #: functions.php:315
-#, fuzzy
 msgid "Errors selecting input/output files, dirs"
 msgstr "입 / 출력 파일, 디렉토리 선택 오류"
 
 #: functions.php:316
-#, fuzzy
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr "요청 된 동작이 지원되지 않음 : 64 비트 파일을 지원할 수없는 플랫폼에서 64 비트 파일을 조작하려는 시도가있었습니다. 또는 서버가 아닌 클라이언트가 지원하는 옵션이 지정되었습니다."
 
 #: functions.php:317
-#, fuzzy
 msgid "Error starting client-server protocol"
 msgstr "클라이언트 - 서버 프로토콜 시작 오류"
 
 #: functions.php:318
-#, fuzzy
 msgid "Daemon unable to append to log-file"
 msgstr "데몬이 로그 파일에 추가 할 수 없음"
 
 #: functions.php:319
-#, fuzzy
 msgid "Error in socket I/O"
 msgstr "소켓 I / O 오류"
 
 #: functions.php:320
-#, fuzzy
 msgid "Error in file I/O"
 msgstr "파일 I / O 오류"
 
 #: functions.php:321
-#, fuzzy
 msgid "Error in rsync protocol data stream"
 msgstr "rsync 프로토콜 데이터 스트림의 오류"
 
 #: functions.php:322
-#, fuzzy
 msgid "Errors with program diagnostics"
 msgstr "프로그램 진단을 통한 오류"
 
 #: functions.php:323
-#, fuzzy
 msgid "Error in IPC code"
 msgstr "IPC 코드 오류"
 
 #: functions.php:324
-#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
 msgstr "받은 SIGUSR1 또는 SIGINT"
 
 #: functions.php:325
-#, fuzzy
 msgid "Some error returned by waitpid()"
 msgstr "waitpid ()에 의해 반환 된 일부 오류"
 
 #: functions.php:326
-#, fuzzy
 msgid "Error allocating core memory buffers"
 msgstr "코어 메모리 버퍼 할당 오류"
 
 #: functions.php:327
-#, fuzzy
 msgid "Partial transfer due to error"
 msgstr "오류로 인해 부분 전송"
 
 #: functions.php:328
-#, fuzzy
 msgid "Partial transfer due to vanished source files"
 msgstr "사라진 소스 파일로 인한 부분 전송"
 
 #: functions.php:329
-#, fuzzy
 msgid "The --max-delete limit stopped deletions"
 msgstr "--max-delete 제한으로 삭제가 중지되었습니다."
 
 #: functions.php:330
-#, fuzzy
 msgid "Timeout in data send/receive"
 msgstr "데이터 송수신시 제한 시간"
 
 #: functions.php:331
-#, fuzzy
 msgid "Timeout waiting for daemon connection"
 msgstr "데몬 연결을 기다리는 시간 초과"
 
 #: functions.php:334 functions.php:405
-#, fuzzy
 msgid "Unknown error "
 msgstr "알수없는 오류"
 
 #: functions.php:377
-#, fuzzy
 msgid "Operation was successful"
 msgstr "작업이 성공적으로 완료되었습니다."
 
 #: functions.php:378
-#, fuzzy
 msgid "General error in file copy"
 msgstr "파일 사본의 일반 오류"
 
 #: functions.php:379
-#, fuzzy
 msgid "Destination is not directory, but it should be"
 msgstr "대상은 디렉토리가 아니지만 있어야합니다."
 
 #: functions.php:380
-#, fuzzy
 msgid "Maximum symlink level exceeded"
 msgstr "최대 심볼릭 링크 레벨 초과"
 
 #: functions.php:381
-#, fuzzy
 msgid "Connecting to host failed."
 msgstr "호스트에 연결하지 못했습니다."
 
 #: functions.php:382
-#, fuzzy
 msgid "Connection broken"
 msgstr "연결이 끊어짐"
 
@@ -157,37 +131,30 @@ msgid "File does not exist"
 msgstr "파일이 없습니다"
 
 #: functions.php:384
-#, fuzzy
 msgid "No permission to access file."
 msgstr "파일에 액세스 할 수있는 권한이 없습니다."
 
 #: functions.php:385
-#, fuzzy
 msgid "General error in sftp protocol"
 msgstr "SFTP 프로토콜의 일반 오류"
 
 #: functions.php:386
-#, fuzzy
 msgid "File transfer protocol mismatch"
 msgstr "파일 전송 프로토콜 불일치"
 
 #: functions.php:387
-#, fuzzy
 msgid "No file matches a given criteria"
 msgstr "지정된 기준과 일치하는 파일이 없습니다."
 
 #: functions.php:388
-#, fuzzy
 msgid "Host not allowed to connect"
 msgstr "호스트 연결이 허용되지 않음"
 
 #: functions.php:389
-#, fuzzy
 msgid "General error in ssh protocol"
 msgstr "ssh 프로토콜의 일반 오류"
 
 #: functions.php:390
-#, fuzzy
 msgid "Key exchange failed"
 msgstr "키 교환 실패"
 
@@ -196,27 +163,22 @@ msgid "Reserved"
 msgstr "예약됨"
 
 #: functions.php:392
-#, fuzzy
 msgid "MAC error"
 msgstr "MAC 오류"
 
 #: functions.php:393
-#, fuzzy
 msgid "Compression error"
 msgstr "압축 오류"
 
 #: functions.php:394
-#, fuzzy
 msgid "Service not available"
 msgstr "서비스를 사용할 수 없음"
 
 #: functions.php:395
-#, fuzzy
 msgid "Protocol version not supported"
 msgstr "지원되지 않는 프로토콜 버전"
 
 #: functions.php:396
-#, fuzzy
 msgid "Host key not verifiable"
 msgstr "호스트 키를 확인할 수 없음"
 
@@ -225,42 +187,34 @@ msgid "Connection failed"
 msgstr "연결에 실패"
 
 #: functions.php:398
-#, fuzzy
 msgid "Disconnected by application"
 msgstr "애플리케이션에 의해 연결 해제 됨"
 
 #: functions.php:399
-#, fuzzy
 msgid "Too many connections"
 msgstr "너무 많은 연결"
 
 #: functions.php:400
-#, fuzzy
 msgid "Authentication cancelled by user"
 msgstr "사용자가 인증을 취소했습니다."
 
 #: functions.php:401
-#, fuzzy
 msgid "No more authentication methods available"
 msgstr "더 이상 사용할 수있는 인증 방법이 없습니다."
 
 #: functions.php:402
-#, fuzzy
 msgid "Invalid user name"
 msgstr "잘못된 사용자 이름"
 
 #: functions.php:1518 functions.php:1681
-#, fuzzy
 msgid "Non Query Based"
 msgstr "비 쿼리 기반"
 
 #: functions.php:1765
-#, fuzzy
 msgid "Graph Templates"
 msgstr "그래프 템플릿"
 
 #: functions.php:1794
-#, fuzzy
 msgid "Data Queries"
 msgstr "데이터 쿼리"
 
@@ -277,12 +231,10 @@ msgid "Disable"
 msgstr "비활성화"
 
 #: gexport.php:33
-#, fuzzy
 msgid "Export Now"
 msgstr "지금 내보내기"
 
 #: gexport.php:37 setup.php:354
-#, fuzzy
 msgid "Periodic"
 msgstr "주기율표"
 
@@ -295,7 +247,6 @@ msgid "Hourly"
 msgstr "매시간 마다"
 
 #: gexport.php:257
-#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "다음 그래프 내보내기 정의를 삭제하려면 '계속'을 클릭하십시오."
@@ -305,7 +256,6 @@ msgid "Cancel"
 msgstr "취소"
 
 #: gexport.php:266
-#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 비활성화하십시오."
@@ -315,34 +265,28 @@ msgid "Continue"
 msgstr "계속"
 
 #: gexport.php:271
-#, fuzzy
 msgid "Disable Graph Export Definition(s)"
 msgstr "그래프 내보내기 정의"
 
 #: gexport.php:275
-#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 활성화하십시오."
 
 #: gexport.php:280
-#, fuzzy
 msgid "Enable Graph Export Definition(s)"
 msgstr "그래프 내보내기 정의"
 
 #: gexport.php:284
-#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 실행하십시오."
 
 #: gexport.php:289
-#, fuzzy
 msgid "Run Graph Export Definition(s) Now"
 msgstr "그래프 내보내기 정의"
 
 #: gexport.php:292
-#, fuzzy
 msgid "You must select at least one Graph Export Definition."
 msgstr "그래프 내보내기 정의를 하나 이상 선택해야합니다."
 
@@ -351,27 +295,23 @@ msgid "Return"
 msgstr "반환"
 
 #: gexport.php:349
-#, fuzzy, php-format
+#, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "그래프 내보내기 정의 [편집 :  %s]"
 
 #: gexport.php:351
-#, fuzzy
 msgid "Graph Export Definition [new]"
 msgstr "그래프 내보내기 정의 [신규]"
 
 #: gexport.php:377
-#, fuzzy
 msgid "Select Tree(s)"
 msgstr "트리 선택"
 
 #: gexport.php:379
-#, fuzzy
 msgid "Trees Selected"
 msgstr "선택된 나무"
 
 #: gexport.php:382
-#, fuzzy
 msgid "All Trees Selected"
 msgstr "선택한 모든 나무"
 
@@ -388,22 +328,18 @@ msgid "Search"
 msgstr "검색"
 
 #: gexport.php:423
-#, fuzzy
 msgid "Select Site(s)"
 msgstr "사이트 선택"
 
 #: gexport.php:425
-#, fuzzy
 msgid "Sites Selected"
 msgstr "선택한 사이트"
 
 #: gexport.php:428
-#, fuzzy
 msgid "All Sites Selected"
 msgstr "모든 사이트 선택됨"
 
 #: gexport.php:559
-#, fuzzy
 msgid "Graph Export Definitions"
 msgstr "그래프 내보내기 정의"
 
@@ -417,7 +353,7 @@ msgstr "기본값"
 
 #: gexport.php:588
 msgid "Refresh"
-msgstr ""
+msgstr "새로고침"
 
 #: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
 msgid "Never"
@@ -426,17 +362,17 @@ msgstr "안함"
 #: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
 #, php-format
 msgid "%d Seconds"
-msgstr ""
+msgstr "%d 초"
 
 #: gexport.php:599
 #, php-format
 msgid "%d Minute"
-msgstr ""
+msgstr "%d 분"
 
 #: gexport.php:600 gexport.php:601
 #, php-format
 msgid "%d Minutes"
-msgstr ""
+msgstr "%d 분"
 
 #: gexport.php:611
 msgctxt "filter: use"
@@ -449,12 +385,10 @@ msgid "Clear"
 msgstr "지우기"
 
 #: gexport.php:749 setup.php:281
-#, fuzzy
 msgid "Export Name"
 msgstr "내보내기 이름"
 
 #: gexport.php:752 setup.php:282
-#, fuzzy
 msgid "The name of this Graph Export Definition."
 msgstr "이 그래프 내보내기 정의의 이름입니다."
 
@@ -463,7 +397,6 @@ msgid "ID"
 msgstr "ID"
 
 #: gexport.php:758
-#, fuzzy
 msgid "The internal ID of the Graph Export Definition."
 msgstr "그래프 내보내기 정의의 내부 ID입니다."
 
@@ -472,17 +405,14 @@ msgid "Schedule"
 msgstr "일정"
 
 #: gexport.php:764
-#, fuzzy
 msgid "The frequency that Graphs will be exported."
 msgstr "그래프를 내보낼 빈도입니다."
 
 #: gexport.php:767
-#, fuzzy
 msgid "Next Start"
 msgstr "다음 시작"
 
 #: gexport.php:770
-#, fuzzy
 msgid "The next time the Graph Export should run."
 msgstr "다음에 그래프 내보내기를 실행해야합니다."
 
@@ -491,7 +421,6 @@ msgid "Enabled"
 msgstr "활성화"
 
 #: gexport.php:775
-#, fuzzy
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "활성화 된 경우이 그래프 내보내기 정의가 필요에 따라 실행됩니다."
 
@@ -500,37 +429,30 @@ msgid "Status"
 msgstr "상태"
 
 #: gexport.php:780
-#, fuzzy
 msgid "The current Graph Export Status."
 msgstr "현재 그래프 내보내기 상태."
 
 #: gexport.php:783
-#, fuzzy
 msgid "Exporting (Sites/Trees)"
 msgstr "내보내기 (사이트 / 트리)"
 
 #: gexport.php:786
-#, fuzzy
 msgid "What is being Exported."
 msgstr "무엇이 수출되고 있는가."
 
 #: gexport.php:789 setup.php:414
-#, fuzzy
 msgid "Effective User"
 msgstr "효과적인 사용자"
 
 #: gexport.php:792
-#, fuzzy
 msgid "The user that this export will impersonate."
 msgstr "이 내보내기가 가장 할 사용자입니다."
 
 #: gexport.php:795
-#, fuzzy
 msgid "Last Runtime"
 msgstr "마지막 런타임"
 
 #: gexport.php:798
-#, fuzzy
 msgid "The last runtime for the Graph Export."
 msgstr "그래프 내보내기의 마지막 런타임입니다."
 
@@ -539,32 +461,26 @@ msgid "Graphs"
 msgstr "그래프 "
 
 #: gexport.php:804
-#, fuzzy
 msgid "The number of Graphs Exported on the last run."
 msgstr "마지막 실행에서 내 보낸 그래프 수입니다."
 
 #: gexport.php:807
-#, fuzzy
 msgid "Last Started"
 msgstr "마지막 시작"
 
 #: gexport.php:810
-#, fuzzy
 msgid "The last time that this Graph Export was started."
 msgstr "이 그래프 내보내기가 마지막으로 시작된 시간."
 
 #: gexport.php:813
-#, fuzzy
 msgid "Last Errored"
 msgstr "최근에 오류가 발생했습니다."
 
 #: gexport.php:816
-#, fuzzy
 msgid "The last time that this Graph Export experienced an error."
 msgstr "이 그래프 내보내기에 마지막으로 오류가 발생했습니다."
 
 #: gexport.php:820
-#, fuzzy
 msgid "Export Definitions"
 msgstr "정의 내보내기"
 
@@ -590,7 +506,6 @@ msgid "Running"
 msgstr "실행 중"
 
 #: gexport.php:871
-#, fuzzy
 msgid "Error"
 msgstr "오류"
 
@@ -599,7 +514,6 @@ msgid "All Sites"
 msgstr "모든 사이트"
 
 #: gexport.php:888
-#, fuzzy
 msgid "All Trees"
 msgstr "모든 나무"
 
@@ -608,17 +522,14 @@ msgid "Sec"
 msgstr "초"
 
 #: gexport.php:922
-#, fuzzy
 msgid "No Graph Export Definitions"
 msgstr "그래프 내보내기 정의 없음"
 
 #: setup.php:31
-#, fuzzy
 msgid "Export Cacti Graphs Settings"
 msgstr "선인장 그래프 설정 내보내기"
 
 #: setup.php:265
-#, fuzzy
 msgid "Graph Exports"
 msgstr "그래프 내보내기"
 
@@ -628,24 +539,21 @@ msgstr "도구 "
 
 #: setup.php:268
 msgid "General Administration"
-msgstr ""
+msgstr "일반 행정"
 
 #: setup.php:276
 msgid "General"
 msgstr "일반"
 
 #: setup.php:291
-#, fuzzy
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "이 그래프 내보내기 정의를 활성화하려면이 확인란을 선택하십시오."
 
 #: setup.php:297
-#, fuzzy
 msgid "Export Method"
 msgstr "수출 방법"
 
 #: setup.php:298
-#, fuzzy
 msgid "Choose which export method to use."
 msgstr "사용할 내보낼 방법을 선택하십시오."
 
@@ -654,37 +562,30 @@ msgid "Local"
 msgstr "로컬"
 
 #: setup.php:304
-#, fuzzy
 msgid "FTP"
 msgstr "FTP"
 
 #: setup.php:305
-#, fuzzy
 msgid "SFTP"
 msgstr "SFTP"
 
 #: setup.php:306
-#, fuzzy
 msgid "FTP NC"
 msgstr "FTP NC"
 
 #: setup.php:307
-#, fuzzy
 msgid "SCP"
 msgstr "SCP"
 
 #: setup.php:308
-#, fuzzy
 msgid "RSYNC"
 msgstr "RSYNC"
 
 #: setup.php:312
-#, fuzzy
 msgid "Export Command Arguments"
 msgstr "내보내기 명령 인수"
 
 #: setup.php:313
-#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "비 로컬 내보내기 메소드에서 사용할 인수. rsync에서 사용해야합니다."
 
@@ -693,17 +594,14 @@ msgid "Theme"
 msgstr "테마"
 
 #: setup.php:326
-#, fuzzy
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "사용 가능한 테마 중 하나를 선택하여 Cacti 그래프 내보내기를 스킨하십시오."
 
 #: setup.php:333
-#, fuzzy
 msgid "Presentation Method"
 msgstr "발표 방법"
 
 #: setup.php:334
-#, fuzzy
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "html로 생성 된 페이지에 대해 원하는 프리젠 테이션을 선택하십시오. 고전 프리젠 테이션을 선택하면; 그래프는 하나의 HTML 페이지에 포함됩니다. 트리 프리젠 테이션을 선택하면 그래프 트리 아키텍처가 고정 html 페이지에 보관됩니다"
 
@@ -712,99 +610,81 @@ msgid "Site"
 msgstr "사이트"
 
 #: setup.php:340 setup.php:423
-#, fuzzy
 msgid "Tree"
 msgstr "나무"
 
 #: setup.php:344
-#, fuzzy
 msgid "Export Timing"
 msgstr "내보내기 타이밍"
 
 #: setup.php:348
-#, fuzzy
 msgid "Timing Method"
 msgstr "타이밍 방법"
 
 #: setup.php:349
-#, fuzzy
 msgid "Choose when to Export Graphs."
 msgstr "그래프를 내보낼시기를 선택하십시오."
 
 #: setup.php:360
-#, fuzzy
 msgid "Periodic Export Cycle"
 msgstr "주기적 수출주기"
 
 #: setup.php:361
-#, fuzzy
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "선인장이 얼마나 자주 그래프를 내보내기를 원하십니까? 그래프를 내보내려는 폴링 사이클의 단위입니다."
 
 #: setup.php:365
-#, fuzzy
 msgid "Every Polling Cycle"
 msgstr "모든 폴링주기"
 
 #: setup.php:366 setup.php:367 setup.php:368 setup.php:369 setup.php:370
 #: setup.php:371 setup.php:372 setup.php:373 setup.php:374 setup.php:375
 #: setup.php:376
-#, fuzzy, php-format
+#, php-format
 msgid "Every %d Polling Cycles"
 msgstr "매 % d 개의 폴링주기"
 
 #: setup.php:380
-#, fuzzy
 msgid "Hourly at specified minutes"
 msgstr "지정된 분당 시간당"
 
 #: setup.php:381
-#, fuzzy
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Cacti에서 매시간마다 정적 이미지를 내보내려면 시간을 설정하십시오. Cacti는 5 분마다 데이터 수집 스크립트를 실행한다고 가정하므로 런타임에 가장 가까운 값으로 값을 반올림합니다. 예를 들어, 43은 한 시간 40 분에 해당합니다."
 
 #: setup.php:390
-#, fuzzy
 msgid "Daily at specified time"
 msgstr "지정된 시간에 매일"
 
 #: setup.php:391
-#, fuzzy
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Cacti에서 매일 정적 이미지를 내보내려면 시간을 지정하십시오. Cacti는 5 분마다 데이터 수집 스크립트를 실행한다고 가정하므로 런타임에 가장 가까운 값으로 값을 반올림합니다. 예를 들어 21:23은 오후 9시 20 분에 해당합니다."
 
 #: setup.php:400
-#, fuzzy
 msgid "Use x Threads"
 msgstr "x 스레드 사용"
 
 #: setup.php:401
-#, fuzzy
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "선인장이 그래프를 내보낼 때 얼마나 많은 백그라운드 스레드를 사용하길 원하십니까? 폴러 스레드에서 모든 내보내기를 실행하려면 0, 별도의 백그라운드 스레드를 생성하려면 1 이상"
 
 #: setup.php:409
-#, fuzzy
 msgid "Graph Selection & Settings"
 msgstr "그래프 선택 및 설정"
 
 #: setup.php:415
-#, fuzzy
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Cacti Graph에 대한 사용 권한을 설정하는 데 사용할 사용자 이름입니다. 이 사용자 이름은 내보낼 수있는 그래프 / 트리를 결정하는 데 사용됩니다. N / A는 어떤 보안 장치가 있다고 가정하지 않습니다."
 
 #: setup.php:424
-#, fuzzy
 msgid "The Tree(s) to export."
 msgstr "내보낼 트리 (들)."
 
 #: setup.php:431
-#, fuzzy
 msgid "Expand Devices/Sites"
 msgstr "장치 / 사이트 확장"
 
 #: setup.php:432
-#, fuzzy
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "이 설정은 트리 장치와 사이트 서식 파일 및 장치를 확장할지 여부를 결정합니다. 확장으로 설정된 경우 각 호스트에는 그래프 템플릿 또는 데이터 쿼리 항목이 포함 된 하위 폴더가 있습니다."
 
@@ -817,92 +697,74 @@ msgid "On"
 msgstr "켜기"
 
 #: setup.php:443
-#, fuzzy
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "선인장 그래프를 내보낼 사이트."
 
 #: setup.php:450
-#, fuzzy
 msgid "Graph Thumbnail Width"
 msgstr "그래프 축소판 너비"
 
 #: setup.php:451
-#, fuzzy
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "축소판 그림의 기본 너비 (픽셀 단위)입니다."
 
 #: setup.php:459
-#, fuzzy
 msgid "Graph Thumbnail Height"
 msgstr "그래프 썸네일 높이"
 
 #: setup.php:460
-#, fuzzy
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "썸네일 그래프의 높이 (픽셀 단위)입니다."
 
 #: setup.php:468
-#, fuzzy
 msgid "Default View Thumbnails"
 msgstr "기본보기 축소판"
 
 #: setup.php:469
-#, fuzzy
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "기본 그래프 뷰를 축소판 그림 모드로 지정하려면이 옵션을 선택하십시오."
 
 #: setup.php:474
-#, fuzzy
 msgid "Default Graph Columns"
 msgstr "기본 그래프 열"
 
 #: setup.php:475
-#, fuzzy
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "그래프를 표시 할 때 기본적으로 사용할 열 수입니다."
 
 #: setup.php:483
-#, fuzzy
 msgid "Graphs Per Page"
 msgstr "페이지 당 그래프"
 
 #: setup.php:484
-#, fuzzy
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "표시 할 페이지 당 그래프 수를 선택하십시오."
 
 #: setup.php:491
-#, fuzzy
 msgid "Maximum Graphs to Export"
 msgstr "내보낼 최대 그래프"
 
 #: setup.php:492
-#, fuzzy
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "이 숫자에 도달하면 오류가 생성되지만 내보내기는 계속됩니다. 제한이 없으면 0으로 설정하십시오."
 
 #: setup.php:500
-#, fuzzy
 msgid "Export Location Information"
 msgstr "수출 위치 정보"
 
 #: setup.php:505
-#, fuzzy
 msgid "Export Thumbnails"
 msgstr "내보내기 타이밍"
 
 #: setup.php:506
-#, fuzzy
 msgid "Check this if you want the export thumbnails mode."
 msgstr "기본 그래프 뷰를 축소판 그림 모드로 지정하려면이 옵션을 선택하십시오."
 
 #: setup.php:511
-#, fuzzy
 msgid "Clear Directory"
 msgstr "내보내기 디렉토리"
 
 #: setup.php:512
-#, fuzzy
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "이 그래프 내보내기 정의를 활성화하려면이 확인란을 선택하십시오."
 
@@ -911,62 +773,50 @@ msgid "Export Directory"
 msgstr "내보내기 디렉토리"
 
 #: setup.php:518
-#, fuzzy
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "이것은 내 보낸 데이터가 들어있는 로컬 시스템 또는 원격 시스템의 디렉토리입니다."
 
 #: setup.php:524
-#, fuzzy
 msgid "Local Scratch Directory"
 msgstr "로컬 스크래치 디렉토리"
 
 #: setup.php:525
-#, fuzzy
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "이것은 Cacti가 전송 방법을 통해 원격 사이트로 보내기 전에 출력을 임시 저장하는 디렉토리입니다. 이 디렉토리의 내용은 데이터가 전송 된 후 삭제됩니다."
 
 #: setup.php:532
-#, fuzzy
 msgid "Remote Options"
 msgstr "원격 옵션"
 
 #: setup.php:537
-#, fuzzy
 msgid "Sanitize remote directory"
 msgstr "원격 디렉토리 살생"
 
 #: setup.php:538
-#, fuzzy
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "FTP 원격 디렉토리의 기존 파일을 삭제하려면이 옵션을 선택하십시오. 이 옵션은 PHP 내장 ftp 함수를 사용할 때만 사용됩니다."
 
 #: setup.php:543
-#, fuzzy
 msgid "Remote Host"
 msgstr "원격 호스트"
 
 #: setup.php:544
-#, fuzzy
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "내 보낸 그래프를 보낼 호스트를 나타냅니다."
 
 #: setup.php:551
-#, fuzzy
 msgid "Remote Port"
 msgstr "원격 포트"
 
 #: setup.php:552
-#, fuzzy
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "비표준 인 경우 내보내기 방법에 사용할 통신 포트 (기본값의 경우 비워 두십시오)."
 
 #: setup.php:560
-#, fuzzy
 msgid "Use passive mode"
 msgstr "수동 모드 사용"
 
 #: setup.php:561
-#, fuzzy
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "수동 모드에서 FTP 서버에 연결하려면이 옵션을 선택하십시오."
 
@@ -975,7 +825,6 @@ msgid "User"
 msgstr "사용자"
 
 #: setup.php:567
-#, fuzzy
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "원격 서버에 로그온 할 계정 (기본값의 경우 비워 두십시오)."
 
@@ -984,22 +833,18 @@ msgid "Password"
 msgstr "비밀번호"
 
 #: setup.php:575
-#, fuzzy
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "원격 FTP 계정의 암호입니다 (비워두면 비워 두십시오)."
 
 #: setup.php:582
-#, fuzzy
 msgid "Private Key Path"
 msgstr "개인 키 경로"
 
 #: setup.php:583
-#, fuzzy
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "SCP 및 RSYNC의 경우 필요하면 개인 키 경로를 입력하십시오."
 
 #: setup.php:594
-#, fuzzy
 msgid "Exported Cacti Graph Pages"
 msgstr "수출 Cacti 그래프 페이지"
 

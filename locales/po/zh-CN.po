@@ -4,179 +4,157 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: gexport on cacti 1.1.34\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2023-11-10 02:07+0000\nLast-Translator: Ben Hsu <48728121@qq.com>\nLanguage-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\nLanguage: zh-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.8.1\n"
+msgstr ""
+"Project-Id-Version: gexport on cacti 1.1.34\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2020-12-12 22:15-0500\n"
+"PO-Revision-Date: 2024-06-07 23:17-0400\n"
+"Last-Translator: Ben Hsu <48728121@qq.com>\n"
+"Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: functions.php:312
 msgid "Success"
 msgstr "成功"
 
 #: functions.php:313
-#, fuzzy
 msgid "Syntax or usage error"
 msgstr "语法或用法错误"
 
 #: functions.php:314
-#, fuzzy
 msgid "Protocol incompatibility"
 msgstr "协议不兼容"
 
 #: functions.php:315
-#, fuzzy
 msgid "Errors selecting input/output files, dirs"
 msgstr "选择输入/输出文件，dirs的错误"
 
 #: functions.php:316
-#, fuzzy
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr "不支持请求的操作：尝试在不支持它们的平台上操作64位文件;或者指定了客户端而不是服务器支持的选项。"
 
 #: functions.php:317
-#, fuzzy
 msgid "Error starting client-server protocol"
 msgstr "启动客户端 - 服务器协议时出错"
 
 #: functions.php:318
-#, fuzzy
 msgid "Daemon unable to append to log-file"
 msgstr "守护程序无法附加到日志文件"
 
 #: functions.php:319
-#, fuzzy
 msgid "Error in socket I/O"
 msgstr "套接字I / O出错"
 
 #: functions.php:320
-#, fuzzy
 msgid "Error in file I/O"
 msgstr "文件I / O出错"
 
 #: functions.php:321
-#, fuzzy
 msgid "Error in rsync protocol data stream"
 msgstr "rsync协议数据流出错"
 
 #: functions.php:322
-#, fuzzy
 msgid "Errors with program diagnostics"
 msgstr "程序诊断错误"
 
 #: functions.php:323
-#, fuzzy
 msgid "Error in IPC code"
 msgstr "IPC代码出错"
 
 #: functions.php:324
-#, fuzzy
 msgid "Received SIGUSR1 or SIGINT"
 msgstr "收到SIGUSR1或SIGINT"
 
 #: functions.php:325
-#, fuzzy
 msgid "Some error returned by waitpid()"
 msgstr "waitpid（）返回的一些错误"
 
 #: functions.php:326
-#, fuzzy
 msgid "Error allocating core memory buffers"
 msgstr "分配核心内存缓冲区时出错"
 
 #: functions.php:327
-#, fuzzy
 msgid "Partial transfer due to error"
 msgstr "由于错误导致的部分转移"
 
 #: functions.php:328
-#, fuzzy
 msgid "Partial transfer due to vanished source files"
 msgstr "由于源文件消失导致部分传输"
 
 #: functions.php:329
-#, fuzzy
 msgid "The --max-delete limit stopped deletions"
 msgstr "--max-delete限制停止删除"
 
 #: functions.php:330
-#, fuzzy
 msgid "Timeout in data send/receive"
 msgstr "数据发送/接收超时"
 
 #: functions.php:331
-#, fuzzy
 msgid "Timeout waiting for daemon connection"
 msgstr "超时等待守护程序连接"
 
 #: functions.php:334 functions.php:405
-#, fuzzy
 msgid "Unknown error "
 msgstr "未知的RRDtool错误"
 
 #: functions.php:377
-#, fuzzy
 msgid "Operation was successful"
 msgstr "操作成功"
 
 #: functions.php:378
-#, fuzzy
 msgid "General error in file copy"
 msgstr "文件复制中的常规错误"
 
 #: functions.php:379
-#, fuzzy
 msgid "Destination is not directory, but it should be"
 msgstr "目标不是目录，但它应该是"
 
 #: functions.php:380
-#, fuzzy
 msgid "Maximum symlink level exceeded"
 msgstr "超出最大符号链接级别"
 
 #: functions.php:381
-#, fuzzy
 msgid "Connecting to host failed."
 msgstr "连接到主机失败。"
 
 #: functions.php:382
-#, fuzzy
 msgid "Connection broken"
 msgstr "连接坏了"
 
 #: functions.php:383
-#, fuzzy
 msgid "File does not exist"
-msgstr "错误：无法清除日志，文件不存在。"
+msgstr "文件不存在"
 
 #: functions.php:384
-#, fuzzy
 msgid "No permission to access file."
 msgstr "无权访问文件。"
 
 #: functions.php:385
-#, fuzzy
 msgid "General error in sftp protocol"
 msgstr "sftp协议中的一般错误"
 
 #: functions.php:386
-#, fuzzy
 msgid "File transfer protocol mismatch"
 msgstr "文件传输协议不匹配"
 
 #: functions.php:387
-#, fuzzy
 msgid "No file matches a given criteria"
 msgstr "没有文件符合给定条件"
 
 #: functions.php:388
-#, fuzzy
 msgid "Host not allowed to connect"
 msgstr "主机不允许连接"
 
 #: functions.php:389
-#, fuzzy
 msgid "General error in ssh protocol"
 msgstr "ssh协议中的一般错误"
 
 #: functions.php:390
-#, fuzzy
 msgid "Key exchange failed"
 msgstr "密钥交换失败"
 
@@ -185,57 +163,46 @@ msgid "Reserved"
 msgstr "预留"
 
 #: functions.php:392
-#, fuzzy
 msgid "MAC error"
 msgstr "MAC错误"
 
 #: functions.php:393
-#, fuzzy
 msgid "Compression error"
 msgstr "压缩错误"
 
 #: functions.php:394
-#, fuzzy
 msgid "Service not available"
 msgstr "服务不可用"
 
 #: functions.php:395
-#, fuzzy
 msgid "Protocol version not supported"
 msgstr "协议版本不受支持"
 
 #: functions.php:396
-#, fuzzy
 msgid "Host key not verifiable"
 msgstr "主机密钥不可验证"
 
 #: functions.php:397
-#, fuzzy
 msgid "Connection failed"
 msgstr "连接失败"
 
 #: functions.php:398
-#, fuzzy
 msgid "Disconnected by application"
 msgstr "应用程序断开连接"
 
 #: functions.php:399
-#, fuzzy
 msgid "Too many connections"
 msgstr "太多联系"
 
 #: functions.php:400
-#, fuzzy
 msgid "Authentication cancelled by user"
 msgstr "用户取消身份验证"
 
 #: functions.php:401
-#, fuzzy
 msgid "No more authentication methods available"
 msgstr "没有更多的身份验证方法"
 
 #: functions.php:402
-#, fuzzy
 msgid "Invalid user name"
 msgstr "无效的用户名"
 
@@ -280,7 +247,6 @@ msgid "Hourly"
 msgstr "每小时"
 
 #: gexport.php:257
-#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "点击“继续”删除以下图形导出定义。"
@@ -290,7 +256,6 @@ msgid "Cancel"
 msgstr "取消"
 
 #: gexport.php:266
-#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "点击“继续”以停用以下图形导出定义。"
@@ -300,29 +265,24 @@ msgid "Continue"
 msgstr "继续"
 
 #: gexport.php:271
-#, fuzzy
 msgid "Disable Graph Export Definition(s)"
 msgstr "图表导出定义"
 
 #: gexport.php:275
-#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "点击“继续”以启用以下图形导出定义。"
 
 #: gexport.php:280
-#, fuzzy
 msgid "Enable Graph Export Definition(s)"
 msgstr "图表导出定义"
 
 #: gexport.php:284
-#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "点击“继续”立即运行以下图形导出定义。"
 
 #: gexport.php:289
-#, fuzzy
 msgid "Run Graph Export Definition(s) Now"
 msgstr "图表导出定义"
 
@@ -579,7 +539,7 @@ msgstr "实用程序"
 
 #: setup.php:268
 msgid "General Administration"
-msgstr ""
+msgstr "基本管理"
 
 #: setup.php:276
 msgid "General"
@@ -622,12 +582,10 @@ msgid "RSYNC"
 msgstr "SCP"
 
 #: setup.php:312
-#, fuzzy
 msgid "Export Command Arguments"
 msgstr "导出命令参数"
 
 #: setup.php:313
-#, fuzzy
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "与非本地导出方法一起使用的参数。 rsync应该使用"
 
@@ -703,12 +661,10 @@ msgid "If you want Cacti to export static images on an daily basis, put here the
 msgstr "如果您希望Cacti 每天输出静态图像，请在此处填写时间。 Cacti假设您每5分钟运行一次数据收集脚本，因此它会将您的价值四舍五入到最接近其运行时间的那个值。 例如，21点23分将等于晚上9点20分钟后。"
 
 #: setup.php:400
-#, fuzzy
 msgid "Use x Threads"
 msgstr "使用x线程"
 
 #: setup.php:401
-#, fuzzy
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "您希望Cacti在导出图形时使用多少个后台线程。默认值为0以在轮询器线程中运行所有导出，1或更多以生成单独的后台线程"
 
@@ -797,22 +753,18 @@ msgid "Export Location Information"
 msgstr "导出位置信息"
 
 #: setup.php:505
-#, fuzzy
 msgid "Export Thumbnails"
 msgstr "导出时间"
 
 #: setup.php:506
-#, fuzzy
 msgid "Check this if you want the export thumbnails mode."
 msgstr "如果您希望默认图形视图处于缩略图模式，请选中此项。"
 
 #: setup.php:511
-#, fuzzy
 msgid "Clear Directory"
 msgstr "导出目录"
 
 #: setup.php:512
-#, fuzzy
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "如果希望启用此图形导出定义，请选中此复选框。"
 
