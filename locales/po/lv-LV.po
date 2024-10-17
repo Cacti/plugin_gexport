@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2022-12-30 06:32+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-10-17 16:22+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -317,7 +317,7 @@ msgstr "Visi"
 
 #: gexport.php:389 gexport.php:435
 msgid "None"
-msgstr "Neviens"
+msgstr "Neviena"
 
 #: gexport.php:419 gexport.php:465 gexport.php:567
 msgid "Search"
@@ -507,11 +507,11 @@ msgstr "Kļūda"
 
 #: gexport.php:877
 msgid "All Sites"
-msgstr "Visas vietnes"
+msgstr "Visas ar atrašanās vietu"
 
 #: gexport.php:888
 msgid "All Trees"
-msgstr "Visi koki"
+msgstr "Visas koka"
 
 #: gexport.php:902
 msgid "Sec"
@@ -603,7 +603,7 @@ msgstr "Izvēlieties, kuru prezentāciju izmantot html ģenerētajām lapām. Ja
 
 #: setup.php:339 setup.php:442
 msgid "Site"
-msgstr "Vietne"
+msgstr "Atrašanās vieta"
 
 #: setup.php:340 setup.php:423
 msgid "Tree"
