@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-03-13 19:58+0000\nLast-Translator: Daniel Nylander <weblate@danielnylander.se>\nLanguage-Team: Swedish <http://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-03-18 07:07+0000\nLast-Translator: Daniel Nylander <weblate@danielnylander.se>\nLanguage-Team: Swedish <http://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -321,7 +321,7 @@ msgstr "Sök"
 
 #: gexport.php:423
 msgid "Select Site(s)"
-msgstr "Välj webbplats (er)"
+msgstr "Välj plats(er)"
 
 #: gexport.php:425
 msgid "Sites Selected"
@@ -599,7 +599,7 @@ msgstr "Välj vilken presentation du vill ha för de html-genererade sidorna. Om
 
 #: setup.php:339 setup.php:442
 msgid "Site"
-msgstr "Webbplats"
+msgstr "Plats"
 
 #: setup.php:340 setup.php:423
 msgid "Tree"
@@ -678,7 +678,7 @@ msgstr "Expand Devices / Sites"
 
 #: setup.php:432
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
-msgstr "Den här inställningen avgör om träningsenheter och sidmallar och enheter kommer att utvidgas eller inte. Om den är expanderad, kommer varje värd att ha en undermapp som innehåller antingen grafmallar eller dataquery-objekt."
+msgstr "Den här inställningen avgör om trädenheter och sidmallar och enheter kommer att utvidgas eller inte. Om den är expanderad, kommer varje värd att ha en undermapp som innehåller antingen grafmallar eller dataquery-objekt."
 
 #: setup.php:437
 msgid "Off"
@@ -690,7 +690,7 @@ msgstr "På"
 
 #: setup.php:443
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "Webbplatsen för kaktifigurer ska exporteras från."
+msgstr "Platsen för cacti-grafer ska exporteras från."
 
 #: setup.php:450
 msgid "Graph Thumbnail Width"
@@ -774,7 +774,7 @@ msgstr "Local Scratch Directory"
 
 #: setup.php:525
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
-msgstr "Det här är katalogen att kaktuserna tillfälligt kommer att lagra produktionen innan de skickas till fjärrsidan via överföringsmetoden. Innehållet i den här katalogen kommer att raderas efter att data har överförts."
+msgstr "Det här är katalogen som Cacti tillfälligt kommer att lagra produktionen innan de skickas till fjärrsidan via överföringsmetoden. Innehållet i den här katalogen kommer att raderas efter att data har överförts."
 
 #: setup.php:532
 msgid "Remote Options"
