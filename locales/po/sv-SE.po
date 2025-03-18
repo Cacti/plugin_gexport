@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-03-18 07:07+0000\nLast-Translator: Daniel Nylander <weblate@danielnylander.se>\nLanguage-Team: Swedish <http://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-03-18 09:57+0000\nLast-Translator: Daniel Nylander <weblate@danielnylander.se>\nLanguage-Team: Swedish <http://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -88,7 +88,7 @@ msgstr "Timeout väntar på daemon-anslutning"
 
 #: functions.php:334 functions.php:405
 msgid "Unknown error "
-msgstr "Okänt fel"
+msgstr "Okänt fel "
 
 #: functions.php:377
 msgid "Operation was successful"
@@ -172,7 +172,7 @@ msgstr "Värdnyckel ej verifierbar"
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr "% 1"
+msgstr "Anslutning misslyckades"
 
 #: functions.php:398
 msgid "Disconnected by application"
@@ -579,7 +579,7 @@ msgstr "Export Command Arguments"
 
 #: setup.php:313
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Argument att använda med icke-lokala exportmetoder. rsync ska använda"
+msgstr "Argument att använda med icke-lokala exportmetoder. rsync ska använda "
 
 #: setup.php:325
 msgid "Theme"
