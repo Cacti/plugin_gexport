@@ -4,11 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: Automatically generated\nLanguage-Team: none\nLanguage: ka\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-01 15:51+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
-msgstr ""
+msgstr "წარმატებულია"
 
 #: functions.php:313
 msgid "Syntax or usage error"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: functions.php:391
 msgid "Reserved"
-msgstr ""
+msgstr "დარეზერვებულია"
 
 #: functions.php:392
 msgid "MAC error"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: functions.php:397
 msgid "Connection failed"
-msgstr ""
+msgstr "კავშირის შეცდომა"
 
 #: functions.php:398
 msgid "Disconnected by application"
@@ -208,15 +208,15 @@ msgstr ""
 
 #: gexport.php:30
 msgid "Delete"
-msgstr ""
+msgstr "წაშლა"
 
 #: gexport.php:31
 msgid "Enable"
-msgstr ""
+msgstr "ჩართვა"
 
 #: gexport.php:32
 msgid "Disable"
-msgstr ""
+msgstr "გათიშვა"
 
 #: gexport.php:33
 msgid "Export Now"
@@ -224,15 +224,15 @@ msgstr ""
 
 #: gexport.php:37 setup.php:354
 msgid "Periodic"
-msgstr ""
+msgstr "პერიოდული"
 
 #: gexport.php:38 setup.php:356
 msgid "Daily"
-msgstr ""
+msgstr "ყოველდღიური"
 
 #: gexport.php:39 setup.php:355
 msgid "Hourly"
-msgstr ""
+msgstr "საათში ერთხელ"
 
 #: gexport.php:257
 msgid "Click 'Continue' to delete the following Graph Export Definition."
@@ -242,7 +242,7 @@ msgstr[1] ""
 
 #: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: gexport.php:266
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -252,7 +252,7 @@ msgstr[1] ""
 
 #: gexport.php:271 gexport.php:280 gexport.php:289
 msgid "Continue"
-msgstr ""
+msgstr "გაგრძელება"
 
 #: gexport.php:271
 msgid "Disable Graph Export Definition(s)"
@@ -284,7 +284,7 @@ msgstr ""
 
 #: gexport.php:293
 msgid "Return"
-msgstr ""
+msgstr "დაბრუნება"
 
 #: gexport.php:349
 #, php-format
@@ -301,7 +301,7 @@ msgstr ""
 
 #: gexport.php:379
 msgid "Trees Selected"
-msgstr ""
+msgstr "მონიშნული ხეები"
 
 #: gexport.php:382
 msgid "All Trees Selected"
@@ -309,15 +309,15 @@ msgstr ""
 
 #: gexport.php:388 gexport.php:434
 msgid "All"
-msgstr ""
+msgstr "ყველა"
 
 #: gexport.php:389 gexport.php:435
 msgid "None"
-msgstr ""
+msgstr "არცერთი"
 
 #: gexport.php:419 gexport.php:465 gexport.php:567
 msgid "Search"
-msgstr ""
+msgstr "ძებნა"
 
 #: gexport.php:423
 msgid "Select Site(s)"
@@ -337,48 +337,48 @@ msgstr ""
 
 #: gexport.php:573
 msgid "Exports"
-msgstr ""
+msgstr "გატანები"
 
 #: gexport.php:577
 msgid "Default"
-msgstr ""
+msgstr "ნაგულისხმევი"
 
 #: gexport.php:588
 msgid "Refresh"
-msgstr ""
+msgstr "განახლება"
 
 #: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
 msgid "Never"
-msgstr ""
+msgstr "არასდროს"
 
 #: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
 #, php-format
 msgid "%d Seconds"
-msgstr ""
+msgstr "%d წამი"
 
 #: gexport.php:599
 #, php-format
 msgid "%d Minute"
-msgstr ""
+msgstr "%d წუთი"
 
 #: gexport.php:600 gexport.php:601
 #, php-format
 msgid "%d Minutes"
-msgstr ""
+msgstr "%d წუთი"
 
 #: gexport.php:611
 msgctxt "filter: use"
 msgid "Go"
-msgstr ""
+msgstr "მიდი"
 
 #: gexport.php:612
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr ""
+msgstr "გასუფთავება"
 
 #: gexport.php:749 setup.php:281
 msgid "Export Name"
-msgstr ""
+msgstr "გატანის სახელი"
 
 #: gexport.php:752 setup.php:282
 msgid "The name of this Graph Export Definition."
@@ -386,7 +386,7 @@ msgstr ""
 
 #: gexport.php:755
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: gexport.php:758
 msgid "The internal ID of the Graph Export Definition."
@@ -394,7 +394,7 @@ msgstr ""
 
 #: gexport.php:761
 msgid "Schedule"
-msgstr ""
+msgstr "გეგმა"
 
 #: gexport.php:764
 msgid "The frequency that Graphs will be exported."
@@ -402,7 +402,7 @@ msgstr ""
 
 #: gexport.php:767
 msgid "Next Start"
-msgstr ""
+msgstr "შემდეგი დაწყება"
 
 #: gexport.php:770
 msgid "The next time the Graph Export should run."
@@ -410,7 +410,7 @@ msgstr ""
 
 #: gexport.php:773 setup.php:290
 msgid "Enabled"
-msgstr ""
+msgstr "ჩართულია"
 
 #: gexport.php:775
 msgid "If enabled, this Graph Export definition will run as required."
@@ -418,7 +418,7 @@ msgstr ""
 
 #: gexport.php:778
 msgid "Status"
-msgstr ""
+msgstr "სტატუსი"
 
 #: gexport.php:780
 msgid "The current Graph Export Status."
@@ -450,7 +450,7 @@ msgstr ""
 
 #: gexport.php:801
 msgid "Graphs"
-msgstr ""
+msgstr "გრაფიკები"
 
 #: gexport.php:804
 msgid "The number of Graphs Exported on the last run."
@@ -479,31 +479,31 @@ msgstr ""
 #: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
 #: setup.php:419
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: gexport.php:861
 msgid "No"
-msgstr ""
+msgstr "არა"
 
 #: gexport.php:861
 msgid "Yes"
-msgstr ""
+msgstr "კი"
 
 #: gexport.php:865
 msgid "Idle"
-msgstr ""
+msgstr "უქმე"
 
 #: gexport.php:868
 msgid "Running"
-msgstr ""
+msgstr "გაშვებულია"
 
 #: gexport.php:871
 msgid "Error"
-msgstr ""
+msgstr "შეცდომა"
 
 #: gexport.php:877
 msgid "All Sites"
-msgstr ""
+msgstr "ყველა საიტი"
 
 #: gexport.php:888
 msgid "All Trees"
@@ -511,7 +511,7 @@ msgstr ""
 
 #: gexport.php:902
 msgid "Sec"
-msgstr ""
+msgstr "წმ"
 
 #: gexport.php:922
 msgid "No Graph Export Definitions"
@@ -527,15 +527,15 @@ msgstr ""
 
 #: setup.php:265
 msgid "Utilities"
-msgstr ""
+msgstr "ხელსაწყოები"
 
 #: setup.php:268
 msgid "General Administration"
-msgstr ""
+msgstr "ზოგადი ადმინისტრირება"
 
 #: setup.php:276
 msgid "General"
-msgstr ""
+msgstr "ზოგადი"
 
 #: setup.php:291
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
@@ -551,15 +551,15 @@ msgstr ""
 
 #: setup.php:303
 msgid "Local"
-msgstr ""
+msgstr "ლოკალური"
 
 #: setup.php:304
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: setup.php:305
 msgid "SFTP"
-msgstr ""
+msgstr "SFTP"
 
 #: setup.php:306
 msgid "FTP NC"
@@ -567,11 +567,11 @@ msgstr ""
 
 #: setup.php:307
 msgid "SCP"
-msgstr ""
+msgstr "SCP"
 
 #: setup.php:308
 msgid "RSYNC"
-msgstr ""
+msgstr "RSYNC"
 
 #: setup.php:312
 msgid "Export Command Arguments"
@@ -583,7 +583,7 @@ msgstr ""
 
 #: setup.php:325
 msgid "Theme"
-msgstr ""
+msgstr "თემა"
 
 #: setup.php:326
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
@@ -599,11 +599,11 @@ msgstr ""
 
 #: setup.php:339 setup.php:442
 msgid "Site"
-msgstr ""
+msgstr "საიტი"
 
 #: setup.php:340 setup.php:423
 msgid "Tree"
-msgstr ""
+msgstr "ხე"
 
 #: setup.php:344
 msgid "Export Timing"
@@ -611,7 +611,7 @@ msgstr ""
 
 #: setup.php:348
 msgid "Timing Method"
-msgstr ""
+msgstr "დროის ათვლის მეთოდი"
 
 #: setup.php:349
 msgid "Choose when to Export Graphs."
@@ -682,11 +682,11 @@ msgstr ""
 
 #: setup.php:437
 msgid "Off"
-msgstr ""
+msgstr "გამრთ"
 
 #: setup.php:438
 msgid "On"
-msgstr ""
+msgstr "ჩრთ"
 
 #: setup.php:443
 msgid "The Site for Cacti Graphs to be Exported from."
@@ -778,7 +778,7 @@ msgstr ""
 
 #: setup.php:532
 msgid "Remote Options"
-msgstr ""
+msgstr "დაშორებულის პარამეტრები"
 
 #: setup.php:537
 msgid "Sanitize remote directory"
@@ -814,7 +814,7 @@ msgstr ""
 
 #: setup.php:566
 msgid "User"
-msgstr ""
+msgstr "მომხმარებელი"
 
 #: setup.php:567
 msgid "Account to logon on the remote server (leave empty for defaults)."
@@ -822,7 +822,7 @@ msgstr ""
 
 #: setup.php:574
 msgid "Password"
-msgstr ""
+msgstr "პაროლი"
 
 #: setup.php:575
 msgid "Password for the remote ftp account (leave empty for blank)."
@@ -842,8 +842,8 @@ msgstr ""
 
 #: setup.php:600
 msgid "(Edit)"
-msgstr ""
+msgstr "(ჩასწორება)"
 
 #: setup.php:606
 msgid "Actions"
-msgstr ""
+msgstr "ქმედებები"
