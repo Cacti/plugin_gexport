@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-01 15:51+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-02 19:26+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: functions.php:393
 msgid "Compression error"
-msgstr ""
+msgstr "შეკუმშვის შეცდომა"
 
 #: functions.php:394
 msgid "Service not available"
@@ -200,11 +200,11 @@ msgstr ""
 
 #: functions.php:1765
 msgid "Graph Templates"
-msgstr ""
+msgstr "გრაფიკის შაბლონები"
 
 #: functions.php:1794
 msgid "Data Queries"
-msgstr ""
+msgstr "მონაცემთა გამოთხოვები"
 
 #: gexport.php:30
 msgid "Delete"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: gexport.php:377
 msgid "Select Tree(s)"
-msgstr ""
+msgstr "აირჩიეთ ხე(ები)"
 
 #: gexport.php:379
 msgid "Trees Selected"
@@ -325,7 +325,7 @@ msgstr ""
 
 #: gexport.php:425
 msgid "Sites Selected"
-msgstr ""
+msgstr "არჩეული საიტები"
 
 #: gexport.php:428
 msgid "All Sites Selected"
@@ -426,7 +426,7 @@ msgstr ""
 
 #: gexport.php:783
 msgid "Exporting (Sites/Trees)"
-msgstr ""
+msgstr "გატანა (საიტები/ხეები)"
 
 #: gexport.php:786
 msgid "What is being Exported."
@@ -434,7 +434,7 @@ msgstr ""
 
 #: gexport.php:789 setup.php:414
 msgid "Effective User"
-msgstr ""
+msgstr "ეფექტური მომხმარებელი"
 
 #: gexport.php:792
 msgid "The user that this export will impersonate."
@@ -458,7 +458,7 @@ msgstr ""
 
 #: gexport.php:807
 msgid "Last Started"
-msgstr ""
+msgstr "ბოლო დაწყება"
 
 #: gexport.php:810
 msgid "The last time that this Graph Export was started."
@@ -507,7 +507,7 @@ msgstr "ყველა საიტი"
 
 #: gexport.php:888
 msgid "All Trees"
-msgstr ""
+msgstr "ყველა ხე"
 
 #: gexport.php:902
 msgid "Sec"
@@ -543,7 +543,7 @@ msgstr ""
 
 #: setup.php:297
 msgid "Export Method"
-msgstr ""
+msgstr "გატანის მეთოდი"
 
 #: setup.php:298
 msgid "Choose which export method to use."
@@ -607,7 +607,7 @@ msgstr "ხე"
 
 #: setup.php:344
 msgid "Export Timing"
-msgstr ""
+msgstr "დროების გატანა"
 
 #: setup.php:348
 msgid "Timing Method"
@@ -674,7 +674,7 @@ msgstr ""
 
 #: setup.php:431
 msgid "Expand Devices/Sites"
-msgstr ""
+msgstr "მოწყობილობების/საიტების გაშლა"
 
 #: setup.php:432
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
@@ -746,7 +746,7 @@ msgstr ""
 
 #: setup.php:505
 msgid "Export Thumbnails"
-msgstr ""
+msgstr "მინიატურების გატანა"
 
 #: setup.php:506
 msgid "Check this if you want the export thumbnails mode."
@@ -754,7 +754,7 @@ msgstr ""
 
 #: setup.php:511
 msgid "Clear Directory"
-msgstr ""
+msgstr "საქაღალდის გასუფთავება"
 
 #: setup.php:512
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
