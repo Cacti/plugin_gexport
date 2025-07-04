@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-02 19:26+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-04 06:26+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
@@ -16,7 +16,7 @@ msgstr ""
 
 #: functions.php:314
 msgid "Protocol incompatibility"
-msgstr ""
+msgstr "პროტოკოლის შეუთავსებლობა"
 
 #: functions.php:315
 msgid "Errors selecting input/output files, dirs"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: functions.php:334 functions.php:405
 msgid "Unknown error "
-msgstr ""
+msgstr "უცნობი შეცდომა "
 
 #: functions.php:377
 msgid "Operation was successful"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: functions.php:382
 msgid "Connection broken"
-msgstr ""
+msgstr "კავშირი გაფუჭებულია"
 
 #: functions.php:383
 msgid "File does not exist"
@@ -152,7 +152,7 @@ msgstr "დარეზერვებულია"
 
 #: functions.php:392
 msgid "MAC error"
-msgstr ""
+msgstr "MAC-ის შეცდომა"
 
 #: functions.php:393
 msgid "Compression error"
@@ -220,7 +220,7 @@ msgstr "გათიშვა"
 
 #: gexport.php:33
 msgid "Export Now"
-msgstr ""
+msgstr "გატანა ახლა"
 
 #: gexport.php:37 setup.php:354
 msgid "Periodic"
@@ -321,7 +321,7 @@ msgstr "ძებნა"
 
 #: gexport.php:423
 msgid "Select Site(s)"
-msgstr ""
+msgstr "აირჩიეთ საიტ(ებ)-ი"
 
 #: gexport.php:425
 msgid "Sites Selected"
@@ -442,7 +442,7 @@ msgstr ""
 
 #: gexport.php:795
 msgid "Last Runtime"
-msgstr ""
+msgstr "ბოლო გაშვების დრო"
 
 #: gexport.php:798
 msgid "The last runtime for the Graph Export."
@@ -466,7 +466,7 @@ msgstr ""
 
 #: gexport.php:813
 msgid "Last Errored"
-msgstr ""
+msgstr "ბოლო შეცდომა"
 
 #: gexport.php:816
 msgid "The last time that this Graph Export experienced an error."
@@ -474,7 +474,7 @@ msgstr ""
 
 #: gexport.php:820
 msgid "Export Definitions"
-msgstr ""
+msgstr "გატანის აღწერები"
 
 #: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
 #: setup.php:419
@@ -523,7 +523,7 @@ msgstr ""
 
 #: setup.php:265
 msgid "Graph Exports"
-msgstr ""
+msgstr "გრაფიკის გატანები"
 
 #: setup.php:265
 msgid "Utilities"
@@ -563,7 +563,7 @@ msgstr "SFTP"
 
 #: setup.php:306
 msgid "FTP NC"
-msgstr ""
+msgstr "FTP NC"
 
 #: setup.php:307
 msgid "SCP"
@@ -790,7 +790,7 @@ msgstr ""
 
 #: setup.php:543
 msgid "Remote Host"
-msgstr ""
+msgstr "დაშორებული ჰოსტი"
 
 #: setup.php:544
 msgid "Denotes the host to send Exported Graphs to."
@@ -798,7 +798,7 @@ msgstr ""
 
 #: setup.php:551
 msgid "Remote Port"
-msgstr ""
+msgstr "დაშორებული პორტი"
 
 #: setup.php:552
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
