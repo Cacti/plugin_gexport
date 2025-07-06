@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-04 18:31+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-06 03:26+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
@@ -176,7 +176,7 @@ msgstr "კავშირის შეცდომა"
 
 #: functions.php:398
 msgid "Disconnected by application"
-msgstr ""
+msgstr "გათიშულია აპლიკაციის მიერ"
 
 #: functions.php:399
 msgid "Too many connections"
@@ -329,7 +329,7 @@ msgstr "არჩეული საიტები"
 
 #: gexport.php:428
 msgid "All Sites Selected"
-msgstr ""
+msgstr "ყველა მონიშნული საიტი"
 
 #: gexport.php:559
 msgid "Graph Export Definitions"
@@ -591,7 +591,7 @@ msgstr ""
 
 #: setup.php:333
 msgid "Presentation Method"
-msgstr ""
+msgstr "წარმოდგენის მეთოდი"
 
 #: setup.php:334
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
@@ -654,7 +654,7 @@ msgstr ""
 
 #: setup.php:400
 msgid "Use x Threads"
-msgstr ""
+msgstr "x ნაკადის გამოყენება"
 
 #: setup.php:401
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
@@ -694,7 +694,7 @@ msgstr ""
 
 #: setup.php:450
 msgid "Graph Thumbnail Width"
-msgstr ""
+msgstr "გრაფიკის მინიატურის სიგანე"
 
 #: setup.php:451
 msgid "The default width of Thumbnail Graphs in pixels."
@@ -702,7 +702,7 @@ msgstr ""
 
 #: setup.php:459
 msgid "Graph Thumbnail Height"
-msgstr ""
+msgstr "გრაფიკის მინიატურის სიმაღლე"
 
 #: setup.php:460
 msgid "The height of Thumbnail Graphs in pixels."
@@ -710,7 +710,7 @@ msgstr ""
 
 #: setup.php:468
 msgid "Default View Thumbnails"
-msgstr ""
+msgstr "ნაგულისხმევი ხედის მინიატურები"
 
 #: setup.php:469
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
@@ -742,7 +742,7 @@ msgstr ""
 
 #: setup.php:500
 msgid "Export Location Information"
-msgstr ""
+msgstr "მდებარეობის ინფორმაციის გატანა"
 
 #: setup.php:505
 msgid "Export Thumbnails"
@@ -830,7 +830,7 @@ msgstr ""
 
 #: setup.php:582
 msgid "Private Key Path"
-msgstr ""
+msgstr "პირადი გასაღების ბილიკი"
 
 #: setup.php:583
 msgid "For SCP and RSYNC, enter the Private Key path if required."
