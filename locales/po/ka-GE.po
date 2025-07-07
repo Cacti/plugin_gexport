@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-06 03:26+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-07 04:26+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: functions.php:390
 msgid "Key exchange failed"
-msgstr ""
+msgstr "გასაღებების მიმოცვლა ჩავარდა"
 
 #: functions.php:391
 msgid "Reserved"
@@ -160,7 +160,7 @@ msgstr "შეკუმშვის შეცდომა"
 
 #: functions.php:394
 msgid "Service not available"
-msgstr ""
+msgstr "სერვისი ხელმისაწვდომი არაა"
 
 #: functions.php:395
 msgid "Protocol version not supported"
@@ -305,7 +305,7 @@ msgstr "მონიშნული ხეები"
 
 #: gexport.php:382
 msgid "All Trees Selected"
-msgstr ""
+msgstr "ყველა მონიშნული ხე"
 
 #: gexport.php:388 gexport.php:434
 msgid "All"
@@ -333,7 +333,7 @@ msgstr "ყველა მონიშნული საიტი"
 
 #: gexport.php:559
 msgid "Graph Export Definitions"
-msgstr ""
+msgstr "გრაფიკის გატანის აღწერები"
 
 #: gexport.php:573
 msgid "Exports"
@@ -619,7 +619,7 @@ msgstr ""
 
 #: setup.php:360
 msgid "Periodic Export Cycle"
-msgstr ""
+msgstr "პერიოდული გატანის ციკლი"
 
 #: setup.php:361
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
