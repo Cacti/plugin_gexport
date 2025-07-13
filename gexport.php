@@ -257,40 +257,44 @@ function export_form_actions() {
 						<p>" . __n('Click \'Continue\' to delete the following Graph Export Definition.', 'Click \'Continue\' to delete following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
 						<div class='itemlist'><ul>$export_list</ul></div>
 					</td>
-				</tr>\n";
+				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='Continue' title='Delete Graph Export Definition(s)'>";
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Delete Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} elseif (get_nfilter_request_var('drp_action') === '2') { /* disable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to disable the following Graph Export Definition.', 'Click \'Continue\' to disable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
 						<div class='itemlist'><ul>$export_list</ul></div>
 					</td>
-				</tr>\n";
+				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue', 'gexport') . "' title='" . __esc('Disable Graph Export Definition(s)', 'gexport') . "'>";
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Disable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} elseif (get_nfilter_request_var('drp_action') === '3') { /* enable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to enable the following Graph Export Definition.', 'Click \'Continue\' to enable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
 						<div class='itemlist'><ul>$export_list</ul></div>
 					</td>
-				</tr>\n";
+				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue', 'gexport') . "' title='" . __esc('Enable Graph Export Definition(s)', 'gexport') . "'>";
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+				<input type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Enable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
-			print "	<tr>
-					<td class='topBoxAlt'>
-						<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
-						<div class='itemlist'><ul>$export_list</ul></div>
-					</td>
-				</tr>\n";
+			print "<tr>
+				<td class='topBoxAlt'>
+					<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
+					<div class='itemlist'><ul>$export_list</ul></div>
+				</td>
+			</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel', 'gexport') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue', 'gexport') . "' title='" . __esc('Run Graph Export Definition(s) Now', 'gexport') . "'>";
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Run Graph Export Definition(s) Now', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		}
 	} else {
-		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.', 'gexport') . "</span></td></tr>\n";
-		$save_html = "<input type='button' value='" . __esc('Return', 'gexport') . "' onClick='cactiReturnTo()'>";
+		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.', 'gexport') . "</span></td></tr>";
+		$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Return', 'gexport') . '</button>';
 	}
 
 	print "<tr>
@@ -300,7 +304,7 @@ function export_form_actions() {
 			<input type='hidden' name='drp_action' value='" . get_nfilter_request_var('drp_action') . "'>
 			$save_html
 		</td>
-	</tr>\n";
+	</tr>";
 
 	html_end_box();
 
@@ -608,8 +612,8 @@ function export_filter() {
 						</select>
 					<td>
 						<span>
-							<input type='submit' Value='<?php print __x('filter: use', 'Go', 'gexport');?>' id='go'>
-							<input type='button' Value='<?php print __x('filter: reset', 'Clear', 'gexport');?>' id='clear'>
+							<button type='submit' id='go' class='ui-button ui-corner-all ui-widget ui-state-active'><?php print __x('filter: use', 'Go', 'gexport');?></button>
+							<button type='button' id='clear' class='ui-button ui-corner-all ui-widget'><?php print __x('filter: reset', 'Clear', 'gexport');?></button>
 						</span>
 					</td>
 				</tr>
