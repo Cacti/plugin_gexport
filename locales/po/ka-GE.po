@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-07-07 12:51+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2025-08-09 09:57+0000\nLast-Translator: Ekaterine papava <papava.e@gtu.ge>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
@@ -196,7 +196,7 @@ msgstr ""
 
 #: functions.php:1518 functions.php:1681
 msgid "Non Query Based"
-msgstr ""
+msgstr "არაა დაფუძნებული მოთხოვნაზე"
 
 #: functions.php:1765
 msgid "Graph Templates"
@@ -718,7 +718,7 @@ msgstr ""
 
 #: setup.php:474
 msgid "Default Graph Columns"
-msgstr ""
+msgstr "ნაგულისხმევი გრაფიკის სვეტები"
 
 #: setup.php:475
 msgid "The number of columns to use by default when displaying Graphs."
@@ -770,7 +770,7 @@ msgstr ""
 
 #: setup.php:524
 msgid "Local Scratch Directory"
-msgstr ""
+msgstr "ნაფხაჭნების ლოკალური საქაღალდე"
 
 #: setup.php:525
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
