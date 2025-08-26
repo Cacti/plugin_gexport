@@ -329,7 +329,7 @@
 
 				$('#graphs').val(graphsPerPage);
 				$('#columns').val(columnsPerRow);
-				$('#thumnails').val(thumbnails);
+				$('#thumbnails').val(thumbnails);
 
 				$('.cactiTreeNavigationArea').show();
 
