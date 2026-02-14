@@ -44,4 +44,4 @@ If you figure out this problem, see the Cacti forums!
 Got any ideas or complaints, please create an issue in GitHub.
 
 -----------------------------------------------
-Copyright (c) 2004-2025 - The Cacti Group, Inc.
+Copyright (c) 2004-2026 - The Cacti Group, Inc.
