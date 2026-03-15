@@ -181,17 +181,22 @@ function export_form_actions() {
 			if (get_nfilter_request_var('drp_action') === '1') { /* delete */
 				/* do a referential integrity check */
 				if (sizeof($selected_items)) {
+					$export_ids = array();
+
 					foreach($selected_items as $export_id) {
 						/* ================= input validation ================= */
 						input_validate_input_number($export_id);
 						/* ==================================================== */
 
-						$export_ids[] = $export_id;
+						$export_ids[] = (int)$export_id;
 					}
 				}
 
-				if (isset($export_ids)) {
-					db_execute('DELETE FROM graph_exports WHERE ' . array_to_sql_or($export_ids, 'id'));
+				if (isset($export_ids) && cacti_sizeof($export_ids)) {
+					$placeholders = implode(',', array_fill(0, cacti_sizeof($export_ids), '?'));
+					db_execute_prepared("DELETE FROM graph_exports
+						WHERE id IN ($placeholders)",
+						$export_ids);
 				}
 			} elseif (get_nfilter_request_var('drp_action') === '2') { /* enable */
 				for ($i=0;($i<count($selected_items));$i++) {
@@ -663,31 +668,40 @@ function export_filter() {
 
 function get_export_records(&$total_rows, &$rows) {
 	/* form the 'where' clause for our main sql query */
+	$sql_params = array();
+
 	if (get_request_var('filter') != '') {
-		$sql_where = 'WHERE (name LIKE ' . db_qstr('%' . get_request_var('filter') . '%') . ')';
+		$sql_where = 'WHERE (name LIKE ?)';
+		$sql_params[] = '%' . get_request_var('filter') . '%';
 	} else {
 		$sql_where = '';
 	}
 
-	$total_rows = db_fetch_cell("SELECT COUNT(*) FROM graph_exports $sql_where");
+	$total_rows = db_fetch_cell_prepared("SELECT COUNT(*)
+		FROM graph_exports
+		$sql_where",
+		$sql_params);
 
 	$sql_order = get_order_string();
-	$sql_limit = ' LIMIT ' . ($rows*(get_request_var('page')-1)) . ',' . $rows;
+	$offset = ((int)$rows * ((int)get_request_var('page') - 1));
+	$sql_limit = ' LIMIT ' . $offset . ',' . (int)$rows;
 
-	return db_fetch_assoc("SELECT *
+	return db_fetch_assoc_prepared("SELECT *
 		FROM graph_exports
 		$sql_where
 		$sql_order
-		$sql_limit");
+		$sql_limit",
+		$sql_params);
 }
 
 function gexport() {
 	global $export_actions;
 
-	$running = db_fetch_cell('SELECT COUNT(*)
+	$running = db_fetch_cell_prepared('SELECT COUNT(*)
 		FROM graph_exports
 		WHERE export_pid > 0
-		AND status > 0');
+		AND status > 0',
+		array());
 
 	if ($running == 0) {
 		set_request_var('refresh', 99999999);
@@ -881,7 +895,17 @@ function gexport() {
 					form_selectable_cell(__('All Sites', 'gexport'), $export['id'], '', 'text-align:right');
 				} else {
 					if ($export['graph_site'] != '') {
-						$sites = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $export['graph_site'] . ')');
+						$site_ids = array_values(array_filter(array_map('intval', preg_split('/\s*,\s*/', $export['graph_site'], -1, PREG_SPLIT_NO_EMPTY))));
+
+						if (cacti_sizeof($site_ids)) {
+							$placeholders = implode(',', array_fill(0, cacti_sizeof($site_ids), '?'));
+							$sites = db_fetch_cell_prepared("SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ', ')
+								FROM sites
+								WHERE id IN ($placeholders)",
+								$site_ids);
+						} else {
+							$sites = '';
+						}
 					} else {
 						$sites = '';
 					}
@@ -892,7 +916,17 @@ function gexport() {
 					form_selectable_cell(__('All Trees', 'gexport'), $export['id'], '', 'text-align:right');
 				} else {
 					if ($export['graph_tree'] != '') {
-						$trees = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $export['graph_tree'] . ')');
+						$tree_ids = array_values(array_filter(array_map('intval', preg_split('/\s*,\s*/', $export['graph_tree'], -1, PREG_SPLIT_NO_EMPTY))));
+
+						if (cacti_sizeof($tree_ids)) {
+							$placeholders = implode(',', array_fill(0, cacti_sizeof($tree_ids), '?'));
+							$trees = db_fetch_cell_prepared("SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ', ')
+								FROM graph_tree
+								WHERE id IN ($placeholders)",
+								$tree_ids);
+						} else {
+							$trees = '';
+						}
 					} else {
 						$trees = '';
 					}
@@ -937,4 +971,3 @@ function gexport() {
 
 	form_end();
 }
-

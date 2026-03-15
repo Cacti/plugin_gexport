@@ -55,7 +55,10 @@ function gexport_poller_bottom() {
 
 	/* graph export */
 	if ($config['poller_id'] == 1) {
-		$exports = db_fetch_assoc('SELECT * FROM graph_exports WHERE enabled="on"');
+		$exports = db_fetch_assoc_prepared('SELECT *
+			FROM graph_exports
+			WHERE enabled = ?',
+			array('on'));
 		if (sizeof($exports)) {
 			$command_string = read_config_option('path_php_binary');
 			$extra_args = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php"';
@@ -78,7 +81,10 @@ function gexport_check_upgrade() {
 
 	$info    = plugin_gexport_version ();
 	$current = $info['version'];
-	$old     = db_fetch_cell("SELECT version FROM plugin_config WHERE directory='gexport'");
+	$old     = db_fetch_cell_prepared('SELECT version
+		FROM plugin_config
+		WHERE directory = ?',
+		array('gexport'));
 
 	if (cacti_version_compare($old,$current,'<')) {
 		if (api_plugin_is_enabled('gexport')) {
@@ -610,4 +616,3 @@ function gexport_draw_navigation_text($nav) {
 
 	return $nav;
 }
-
