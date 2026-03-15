@@ -25,6 +25,7 @@
 chdir('../../');
 include('./include/auth.php');
 include_once('./plugins/gexport/functions.php');
+include_once('./plugins/gexport/ui_helpers.php');
 
 $export_actions = array(
 	'1' => __('Delete', 'gexport'),
@@ -51,19 +52,11 @@ switch (get_request_var('action')) {
 
 		break;
 	case 'edit':
-		top_header();
-
-		export_edit();
-
-		bottom_footer();
+		gexport_render_with_layout('export_edit');
 
 		break;
 	default:
-		top_header();
-
-		gexport();
-
-		bottom_footer();
+		gexport_render_with_layout('gexport');
 
 		break;
 }
@@ -937,4 +930,3 @@ function gexport() {
 
 	form_end();
 }
-
