@@ -27,6 +27,12 @@ function assert_true($label, $value) {
 $setup_contents = file_get_contents(__DIR__ . '/../setup.php');
 $gexport_contents = file_get_contents(__DIR__ . '/../gexport.php');
 
+assert_true('setup.php is readable', $setup_contents !== false);
+assert_true('gexport.php is readable', $gexport_contents !== false);
+
+$setup_contents = ($setup_contents === false ? '' : $setup_contents);
+$gexport_contents = ($gexport_contents === false ? '' : $gexport_contents);
+
 assert_true(
 	'setup.php uses prepared enabled exports query',
 	preg_match('/db_fetch_assoc_prepared\s*\(\s*\'SELECT \*\s+FROM graph_exports\s+WHERE enabled = \?/s', $setup_contents) === 1
