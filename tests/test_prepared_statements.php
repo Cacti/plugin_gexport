@@ -46,6 +46,14 @@ assert_true(
 	preg_match('/db_execute_prepared\s*\(\s*"DELETE FROM graph_exports\s+WHERE id IN \(/s', $gexport_contents) === 1
 );
 assert_true(
+	'gexport.php guards bulk delete on non-empty export id lists',
+	preg_match('/if\s*\(isset\(\$export_ids\)\s*&&\s*cacti_sizeof\(\$export_ids\)\s*\)/', $gexport_contents) === 1
+);
+assert_true(
+	'gexport.php builds export-id placeholders from item count',
+	strpos($gexport_contents, '$placeholders = implode(\',\', array_fill(0, cacti_sizeof($export_ids), \'?\'));') !== false
+);
+assert_true(
 	'gexport.php no longer uses array_to_sql_or for export delete',
 	strpos($gexport_contents, "array_to_sql_or(\$export_ids, 'id')") === false
 );
