@@ -150,7 +150,7 @@ function export_form_save() {
 function duplicate_export($_export_id, $export_title) {
 	global $fields_export_edit;
 
-	$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', array($_export_id));
+	$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', [$_export_id]);
 
 	/* substitute the title variable */
 	$export['name'] = str_replace('<export_title>', $export['name'], $export_title);
@@ -241,7 +241,7 @@ function export_form_actions() {
 			input_validate_input_number($matches[1]);
 			/* ==================================================== */
 
-			$export_list .= '<li>' . db_fetch_cell_prepared('SELECT name FROM graph_exports WHERE id = ?', array($matches[1])) . '</li>';
+			$export_list .= '<li>' . db_fetch_cell_prepared('SELECT name FROM graph_exports WHERE id = ?', [$matches[1]]) . '</li>';
 			$export_array[] = $matches[1];
 		}
 	}
@@ -320,11 +320,11 @@ function export_form_actions() {
    --------------------- */
 
 function export_enable($export_id) {
-	db_execute_prepared('UPDATE graph_exports SET enabled="on" WHERE id = ?', array($export_id));
+	db_execute_prepared('UPDATE graph_exports SET enabled="on" WHERE id = ?', [$export_id]);
 }
 
 function export_disable($export_id) {
-	db_execute_prepared('UPDATE graph_exports SET enabled="" WHERE id = ?', array($export_id));
+	db_execute_prepared('UPDATE graph_exports SET enabled="" WHERE id = ?', [$export_id]);
 }
 
 function export_runnow($export_id) {
@@ -332,7 +332,7 @@ function export_runnow($export_id) {
 
 	include_once('./lib/poller.php');
 
-	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', array($export_id));
+	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', [$export_id]);
 
 	if (($status['status'] == 0 || $status['status'] == 2) && $status['enabled'] == 'on') {
 		$command_string = read_config_option('path_php_binary');
@@ -363,8 +363,8 @@ function export_edit() {
 
 	draw_edit_form(
 		array(
-			'config' => array('no_form_tag' => true),
-			'fields' => inject_form_variables($fields_export_edit, (isset($export) ? $export : array()))
+			'config' => ['no_form_tag' => true],
+			'fields' => inject_form_variables($fields_export_edit, (isset($export) ? $export : []))
 		)
 	);
 
@@ -697,40 +697,40 @@ function gexport() {
 
     /* ================= input validation and session storage ================= */
     $filters = array(
-		'rows' => array(
+		'rows' => [
 			'filter' => FILTER_VALIDATE_INT,
 			'pageset' => true,
 			'default' => '-1'
-			),
-		'page' => array(
+			],
+		'page' => [
 			'filter' => FILTER_VALIDATE_INT,
 			'default' => '1'
-			),
-		'refresh' => array(
+			],
+		'refresh' => [
 			'filter' => FILTER_VALIDATE_INT,
 			'default' => '20'
-			),
-		'filter' => array(
+			],
+		'filter' => [
 			'filter' => FILTER_DEFAULT,
 			'pageset' => true,
 			'default' => ''
-			),
+			],
 		'sort_column' => array(
 			'filter' => FILTER_CALLBACK,
 			'default' => 'name',
-			'options' => array('options' => 'sanitize_search_string')
+			'options' => ['options' => 'sanitize_search_string']
 			),
 		'sort_direction' => array(
 			'filter' => FILTER_CALLBACK,
 			'default' => 'ASC',
-			'options' => array('options' => 'sanitize_search_string')
+			'options' => ['options' => 'sanitize_search_string']
 			)
 	);
 
 	validate_store_request_vars($filters, 'sess_gexport');
 	/* ================= input validation ================= */
 
-	$refresh            = array();
+	$refresh            = [];
 	$refresh['page']    = 'gexport.php?header=false';
 	$refresh['seconds'] = get_request_var('refresh');
 	$refresh['logout']  = 'false';
@@ -740,7 +740,7 @@ function gexport() {
 	export_filter();
 
 	$total_rows = 0;
-	$exports = array();
+	$exports = [];
 
 	if (get_request_var('rows') == '-1') {
 		$rows = read_config_option('num_rows_table');
@@ -839,7 +839,7 @@ function gexport() {
 			$user = db_fetch_cell_prepared('SELECT username
 				FROM user_auth
 				WHERE id = ?',
-				array($export['export_effective_user']));
+				[$export['export_effective_user']]);
 
 			if ($export['export_pid'] > 0 && $export['status'] > 0) {
 				if (function_exists('posix_getpgid')) {
@@ -852,7 +852,7 @@ function gexport() {
 					db_execute_prepared('UPDATE graph_exports
 						SET status=0, export_pid=0, last_error="Killed Outside Cacti", last_errored=NOW()
 						WHERE id = ?',
-						array($export['id']));
+						[$export['id']]);
 				}
 			}
 
