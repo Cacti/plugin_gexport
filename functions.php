@@ -22,6 +22,28 @@
  +-------------------------------------------------------------------------+
 */
 
+/* gexport_sanitise_id_list - ensures a comma-separated string contains only
+   non-negative integers. Drops any non-numeric elements. Returns the cleaned
+   CSV or empty string.  Used before interpolation into SQL IN() clauses. */
+function gexport_sanitise_id_list($raw) {
+	if ($raw === '' || $raw === null) {
+		return '';
+	}
+
+	$parts = explode(',', (string) $raw);
+	$clean = array();
+
+	foreach ($parts as $part) {
+		$trimmed = trim($part);
+
+		if ($trimmed !== '' && ctype_digit($trimmed)) {
+			$clean[] = (int) $trimmed;
+		}
+	}
+
+	return implode(',', $clean);
+}
+
 function gexport_calc_next_start($export, $start_time = 0) {
 	if ($start_time == 0) $start_time = time();
 
@@ -82,6 +104,7 @@ function graph_export($id = 0, $force = false) {
 	}
 
 	/* force run */
+	$id = (int) $id;
 	if ($id > 0) {
 		$sql_where = ' AND id=' . $id;
 	}
@@ -267,10 +290,28 @@ function export_rsync_execute(&$export, $stExportDir) {
 	$prune  = '';
 	$retvar = 0;
 
+	/* hardening: validate shell-bound parameters before command construction */
+	$allowed_args = array('-zav', '-avpro', '-avpro --delete-excluded', '-rp');
+	if (!in_array($export['export_args'], $allowed_args, true)) {
+		export_fatal($export, "Invalid export arguments '" . $export['export_args'] . "'.");
+	}
+
+	if ($user != '' && !preg_match('/^[a-zA-Z0-9._\-]+$/', $user)) {
+		export_fatal($export, "Invalid SSH username '" . $user . "'.");
+	}
+
+	if (preg_match('/[`$;|&<>!\x00\n\r]/', $host) === 1) {
+		export_fatal($export, "Hostname contains invalid characters.");
+	}
+
 	if ($export['export_private_key_path'] != '') {
+		if (preg_match('/[`$;|&<>!\x00\n\r]/', $export['export_private_key_path']) === 1 || str_contains($export['export_private_key_path'], '..')) {
+			export_fatal($export, 'ssh Private Key path contains invalid characters.');
+		}
+
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
-				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"\'';
+				$keyopt = ' -e ' . escapeshellarg('ssh -i ' . $export['export_private_key_path']);
 			} else {
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
@@ -287,7 +328,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 		if (!is_numeric($port)) {
 			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
 		} else {
-			$keyopt .= " -e 'ssh -p " . $port  . "'";
+			$keyopt .= ' -e ' . escapeshellarg('ssh -p ' . intval($port));
 		}
 	} elseif ($keyopt != '') {
 		$keyopt .= " ";
@@ -297,7 +338,8 @@ function export_rsync_execute(&$export, $stExportDir) {
 		$prune = '--delete-delay --prune-empty-dirs';
 	}
 
-	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	$remote_dest = ($user != '' ? escapeshellarg($user) . '@' : '') . escapeshellarg($host) . ':' . escapeshellarg($export['export_directory']);
+	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . escapeshellarg($stExportDir . '/.') . ' ' . $remote_dest . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
@@ -343,10 +385,28 @@ function export_scp_execute(&$export, $stExportDir) {
 	$output = array();
 	$retvar = 0;
 
+	/* hardening: validate shell-bound parameters before command construction */
+	$allowed_args = array('-zav', '-avpro', '-avpro --delete-excluded', '-rp');
+	if (!in_array($export['export_args'], $allowed_args, true)) {
+		export_fatal($export, "Invalid export arguments '" . $export['export_args'] . "'.");
+	}
+
+	if ($user != '' && !preg_match('/^[a-zA-Z0-9._\-]+$/', $user)) {
+		export_fatal($export, "Invalid SSH username '" . $user . "'.");
+	}
+
+	if (preg_match('/[`$;|&<>!\x00\n\r]/', $host) === 1) {
+		export_fatal($export, "Hostname contains invalid characters.");
+	}
+
 	if ($export['export_private_key_path'] != '') {
+		if (preg_match('/[`$;|&<>!\x00\n\r]/', $export['export_private_key_path']) === 1 || str_contains($export['export_private_key_path'], '..')) {
+			export_fatal($export, 'ssh Private Key path contains invalid characters.');
+		}
+
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
-				$keyopt = ' -i "' . $export['export_private_key_path'] . '"';
+				$keyopt = ' -i ' . escapeshellarg($export['export_private_key_path']);
 			} else {
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
@@ -363,7 +423,8 @@ function export_scp_execute(&$export, $stExportDir) {
 		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
 	}
 
-	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	$remote_dest = ($user != '' ? escapeshellarg($user) . '@' : '') . escapeshellarg($host) . ':' . escapeshellarg($export['export_directory']);
+	exec('scp ' . $export['export_args'] . ' ' . $keyopt . ($port != '' ? ' -P ' . intval($port) . ' ' : ' ') . escapeshellarg($stExportDir . '/.') . ' ' . $remote_dest . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
@@ -446,7 +507,7 @@ function config_export_stats(&$export, $exported) {
 		WHERE id = ?',
 		array($end - $start, $exported, $export['id']));
 
-	db_execute_prepared(sprintf("REPLACE INTO settings (name,value) values ('stats_export_%s', ?)", $export['id']), array($export_stats));
+	db_execute_prepared("REPLACE INTO settings (name,value) values (?, ?)", array('stats_export_' . intval($export['id']), $export_stats));
 }
 
 /* export_fatal - a simple export logging function that indicates a
@@ -672,9 +733,9 @@ function export_graphs(&$export, $export_path) {
 	export_log('Running graph export');
 
 	$user       = $export['export_effective_user'];
-	$trees      = $export['graph_tree'];
-	$sites      = $export['graph_site'];
-	$export_id  = $export['id'];
+	$trees      = gexport_sanitise_id_list($export['graph_tree']);
+	$sites      = gexport_sanitise_id_list($export['graph_site']);
+	$export_id  = (int) $export['id'];
 
 	$ntree      = array();
 	$graphs     = array();
@@ -737,6 +798,7 @@ function export_graphs(&$export, $export_path) {
 			export_debug('There are ' . cacti_sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
 
 			if ($hosts != '') {
+				$hosts = gexport_sanitise_id_list($hosts);
 				$sql_where = 'gl.host_id IN(' . $hosts . ')';
 				$graphs = get_allowed_graphs($sql_where, 'gtg.title_cache', '', $total_rows, $user);
 
@@ -753,12 +815,13 @@ function export_graphs(&$export, $export_path) {
 		}
 	} else {
 		if ($sites != '0' && $sites != '') {
-			$hosts = db_fetch_cell('SELECT GROUP_CONCAT(id) FROM host WHERE site_id IN(' . $sites . ')');
+			$hosts = db_fetch_cell_prepared('SELECT GROUP_CONCAT(id) FROM host WHERE site_id IN(' . implode(',', array_fill(0, cacti_count(explode(',', $sites)), '?')) . ')', explode(',', $sites));
 		} elseif ($sites == '0') {
 			$hosts = db_fetch_cell('SELECT GROUP_CONCAT(id) FROM host WHERE site_id > 0');
 		}
 
 		if ($hosts != '') {
+			$hosts = gexport_sanitise_id_list($hosts);
 			$sql_where = 'gl.host_id IN(' . $hosts . ')';
 		}
 

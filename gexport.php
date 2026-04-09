@@ -239,7 +239,7 @@ function export_form_actions() {
 			input_validate_input_number($matches[1]);
 			/* ==================================================== */
 
-			$export_list .= '<li>' . db_fetch_cell_prepared('SELECT name FROM graph_exports WHERE id = ?', array($matches[1])) . '</li>';
+			$export_list .= '<li>' . html_escape(db_fetch_cell_prepared('SELECT name FROM graph_exports WHERE id = ?', array($matches[1]))) . '</li>';
 			$export_array[] = $matches[1];
 		}
 	}
@@ -301,7 +301,7 @@ function export_form_actions() {
 		<td class='saveRow'>
 			<input type='hidden' name='action' value='actions'>
 			<input type='hidden' name='selected_items' value='" . (isset($export_array) ? serialize($export_array) : '') . "'>
-			<input type='hidden' name='drp_action' value='" . get_nfilter_request_var('drp_action') . "'>
+			<input type='hidden' name='drp_action' value='" . html_escape(get_nfilter_request_var('drp_action')) . "'>
 			$save_html
 		</td>
 	</tr>";
@@ -881,7 +881,8 @@ function gexport() {
 					form_selectable_cell(__('All Sites', 'gexport'), $export['id'], '', 'text-align:right');
 				} else {
 					if ($export['graph_site'] != '') {
-						$sites = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $export['graph_site'] . ')');
+						$clean_sites = gexport_sanitise_id_list($export['graph_site']);
+						$sites = $clean_sites !== '' ? db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM sites WHERE id IN(' . $clean_sites . ')') : '';
 					} else {
 						$sites = '';
 					}
@@ -892,7 +893,8 @@ function gexport() {
 					form_selectable_cell(__('All Trees', 'gexport'), $export['id'], '', 'text-align:right');
 				} else {
 					if ($export['graph_tree'] != '') {
-						$trees = db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $export['graph_tree'] . ')');
+						$clean_trees = gexport_sanitise_id_list($export['graph_tree']);
+						$trees = $clean_trees !== '' ? db_fetch_cell('SELECT GROUP_CONCAT(name ORDER BY name SEPARATOR ", ") FROM graph_tree WHERE id IN(' . $clean_trees . ')') : '';
 					} else {
 						$trees = '';
 					}
