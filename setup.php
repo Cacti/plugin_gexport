@@ -137,16 +137,18 @@ function gexport_check_upgrade() {
 				MODIFY column export_user VARCHAR(40) DEFAULT \'\'');
 		}
 
-		db_execute("UPDATE plugin_config
-			SET version='$current'
-			WHERE directory='gexport'");
+		db_execute_prepared("UPDATE plugin_config
+			SET version = ?
+			WHERE directory = 'gexport'",
+			array($current));
 
-		db_execute("UPDATE plugin_config SET
-			version='" . $info['version']  . "',
-			name='"    . $info['longname'] . "',
-			author='"  . $info['author']   . "',
-			webpage='" . $info['homepage'] . "'
-			WHERE directory='" . $info['name'] . "' ");
+		db_execute_prepared("UPDATE plugin_config SET
+			version = ?,
+			name = ?,
+			author = ?,
+			webpage = ?
+			WHERE directory = ?",
+			array($info['version'], $info['longname'], $info['author'], $info['homepage'], $info['name']));
 	}
 }
 

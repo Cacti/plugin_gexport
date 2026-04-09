@@ -268,6 +268,10 @@ function export_rsync_execute(&$export, $stExportDir) {
 	$retvar = 0;
 
 	if ($export['export_private_key_path'] != '') {
+		if (preg_match('/[`$;|&<>!\x00\n\r]/', $export['export_private_key_path']) === 1 || strpos($export['export_private_key_path'], '..') !== false) {
+			export_fatal($export, 'ssh Private Key path contains invalid characters.');
+		}
+
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
 				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"\'';
@@ -344,6 +348,10 @@ function export_scp_execute(&$export, $stExportDir) {
 	$retvar = 0;
 
 	if ($export['export_private_key_path'] != '') {
+		if (preg_match('/[`$;|&<>!\x00\n\r]/', $export['export_private_key_path']) === 1 || strpos($export['export_private_key_path'], '..') !== false) {
+			export_fatal($export, 'ssh Private Key path contains invalid characters.');
+		}
+
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
 				$keyopt = ' -i "' . $export['export_private_key_path'] . '"';

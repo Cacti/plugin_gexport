@@ -61,10 +61,10 @@ if (cacti_sizeof($parms)) {
 
 		switch ($arg) {
 		case '--id':
-			$id = $value;
+			$id = (int) $value;
 			break;
 		case '--thread':
-			$thread = $value;
+			$thread = (int) $value;
 			break;
 		case '-d':
 		case '--debug':
