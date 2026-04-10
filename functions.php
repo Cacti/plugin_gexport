@@ -1449,7 +1449,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 
 	$json_files[$json_file] = true;
 
-	return cacti_sizeof($graph_array);;
+	return cacti_sizeof($graph_array);
 }
 
 /* export_generate_tree_html - create jstree compatible static tree html.  This is a
@@ -1920,7 +1920,7 @@ function tree_site_export(&$export, $export_path) {
 	$jstree    .= str_repeat("\t", 5) . "var theme='" . $export['export_theme'] . "';\n";
 	$jstree    .= str_repeat("\t", 4) . "</script>\n";
 
-	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";;
+	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";
 	$user       = $export['export_effective_user'];
 	$ntree      = [];
 	$sql_where  = '';
@@ -1942,7 +1942,7 @@ function tree_site_export(&$export, $export_path) {
 
 		if (cacti_sizeof($trees)) {
 			foreach($trees as $tree) {
-				$jstree .= str_repeat("\t", 4) . "<li id='tree_" . $tree['id'] . "' data-jstree='{ \"type\" : \"tree\" }'>" . get_tree_name($tree['id']) . "\n";;
+				$jstree .= str_repeat("\t", 4) . "<li id='tree_" . $tree['id'] . "' data-jstree='{ \"type\" : \"tree\" }'>" . get_tree_name($tree['id']) . "\n";
 				$jstree = export_generate_tree_html($export_path, $tree, $parent, $export['export_expand_hosts'], $user, $jstree);
 				$jstree .= str_repeat("\t", 4) . "</li>\n";
 			}
@@ -1961,7 +1961,7 @@ function tree_site_export(&$export, $export_path) {
 				$site_data = db_fetch_row_prepared('SELECT * FROM sites WHERE id = ?', [$site_id]);
 
 				if (cacti_sizeof($site_data)) {
-					$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";;
+					$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";
 					$jstree  = export_generate_site_html($export_path, $site_data, $parent, $export['export_expand_hosts'], $user, $jstree);
 					$jstree .= str_repeat("\t", 4) . "</li>\n";
 				}
