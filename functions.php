@@ -1353,7 +1353,11 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', [$tree_site_id]), 'id', 'id');
 
-		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gt.id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
+		if (empty($devices)) {
+			$graphs = [];
+		} else {
+			$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gt.id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
+		}
 	} elseif ($type == 'site_dq') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_dq_' . $sub_id . '.json';
 
@@ -1361,7 +1365,11 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', [$tree_site_id]), 'id', 'id');
 
-		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
+		if (empty($devices)) {
+			$graphs = [];
+		} else {
+			$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
+		}
 	} elseif ($type == 'site_dqi') {
 		$parts   = explode(':', $sub_id);
 		$dq      = $parts[0];
@@ -1384,7 +1392,11 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 			$sql_where .= ')';
 		}
 
-		$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id=' . $dq . $sql_where . ')', 'gtg.title_cache', '', $total_rows, $user);
+		if (empty($devices)) {
+			$graphs = [];
+		} else {
+			$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id=' . $dq . $sql_where . ')', 'gtg.title_cache', '', $total_rows, $user);
+		}
 	} elseif ($type == 'host') {
 		$json_file = $export_path . '/host_' . $host_id . '.json';
 
