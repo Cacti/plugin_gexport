@@ -1,6 +1,4 @@
 <?php
-
-declare(strict_types=1);
 /*
  +-------------------------------------------------------------------------+
  | Copyright (C) 2004-2026 The Cacti Group                                 |
@@ -209,7 +207,7 @@ function run_export(&$export) {
 		export_pre_ftp_upload($export, $stExportDir);
 
 		export_log('Using ncftpput.');
-		export_ftp_ncftpput_execute($export, $stExportDir);
+		export_ftp_ncftpput_execute($stExportDir);
 		export_post_ftp_upload($export, $stExportDir);
 
 		break;
@@ -809,9 +807,21 @@ function export_graphs(&$export, $export_path) {
 }
 
 function delTree($dir, $skip = false) {
+	$dir = realpath($dir);
+	if ($dir === false) {
+		return false;
+	}
+
 	$files = array_diff(scandir($dir), ['.','..']);
 	foreach ($files as $file) {
-		(is_dir("$dir/$file") && !is_link($dir)) ? delTree("$dir/$file") : unlink("$dir/$file");
+		$path = "$dir/$file";
+		if (is_link($path)) {
+			unlink($path);
+		} elseif (is_dir($path)) {
+			delTree($path);
+		} else {
+			unlink($path);
+		}
 	}
 	return ($skip ? 0 : rmdir($dir));
 }
@@ -1209,6 +1219,12 @@ function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 function export_ftp_ncftpput_execute($stExportDir) {
 	global $aFtpExport;
 
+	$stExportDir = realpath($stExportDir);
+	if ($stExportDir === false) {
+		cacti_log('ERROR: Export directory does not exist for ncftpput', true, 'EXPORT');
+		return;
+	}
+
 	chdir($stExportDir);
 
 	/* set the initial command structure */
@@ -1286,6 +1302,14 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	static $json_files = [];
 	$total_rows  = 0;
 	$graph_array = [];
+
+	$export_path   = realpath($export_path);
+	if ($export_path === false) {
+		return 0;
+	}
+	$tree_site_id  = (int) $tree_site_id;
+	$branch_id     = (int) $branch_id;
+	$host_id       = (int) $host_id;
 
 	if ($type == 'branch') {
 		$json_file = $export_path . '/tree_' . $tree_site_id . '_branch_' . $branch_id . '.json';
