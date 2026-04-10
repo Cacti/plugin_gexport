@@ -1118,7 +1118,7 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 		/* get rid of the files first */
 		$aFtpRemoteFiles = ftp_nlist($oFtpConnection, $aFtpExport['remotedir']);
 
-		if (is_[$aFtpRemoteFiles]) {
+		if (is_array($aFtpRemoteFiles)) {
 			foreach ($aFtpRemoteFiles as $stFile) {
 				export_log("Removing recursively remote file/directory '" . $stFile . "'");
 				export_ftp_rmdirr($oFtpConnection, $stFile);
@@ -1351,7 +1351,7 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', [$tree_site_id]), 'id', 'id');
 
 		$sql_where = '';
-		if (is_[$values] && cacti_sizeof($values)) {
+		if (is_array($values) && cacti_sizeof($values)) {
 			foreach($values as $value) {
 				// host_id | snmp_index
 				$parts = explode('|', $value);
