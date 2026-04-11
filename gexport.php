@@ -25,6 +25,7 @@
 chdir('../../');
 include('./include/auth.php');
 include_once('./plugins/gexport/functions.php');
+include_once('./plugins/gexport/gexport_security.php');
 
 $export_actions = array(
 	'1' => __('Delete', 'gexport'),
@@ -173,12 +174,14 @@ function duplicate_export($_export_id, $export_title) {
 function export_form_actions() {
 	global $export_actions;
 
+	$bulk_action = gexport_normalize_bulk_action(get_nfilter_request_var('drp_action'));
+
 	/* if we are to save this form, instead of display it */
 	if (isset_request_var('selected_items')) {
 		$selected_items = sanitize_unserialize_selected_items(get_nfilter_request_var('selected_items'));
 
 		if ($selected_items != false) {
-			if (get_nfilter_request_var('drp_action') === '1') { /* delete */
+			if ($bulk_action === '1') { /* delete */
 				/* do a referential integrity check */
 				if (sizeof($selected_items)) {
 					foreach($selected_items as $export_id) {
@@ -193,7 +196,7 @@ function export_form_actions() {
 				if (isset($export_ids)) {
 					db_execute('DELETE FROM graph_exports WHERE ' . array_to_sql_or($export_ids, 'id'));
 				}
-			} elseif (get_nfilter_request_var('drp_action') === '2') { /* enable */
+			} elseif ($bulk_action === '2') { /* enable */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -201,7 +204,7 @@ function export_form_actions() {
 
 					export_enable($selected_items[$i]);
 				}
-			} elseif (get_nfilter_request_var('drp_action') === '3') { /* disable */
+			} elseif ($bulk_action === '3') { /* disable */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -209,7 +212,7 @@ function export_form_actions() {
 
 					export_disable($selected_items[$i]);
 				}
-			} elseif (get_nfilter_request_var('drp_action') === '4') { /* run now */
+			} elseif ($bulk_action === '4') { /* run now */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -248,10 +251,10 @@ function export_form_actions() {
 
 	form_start('gexport.php', 'export_actions');
 
-	html_start_box($export_actions[get_nfilter_request_var('drp_action')], '60%', '', '3', 'center', '');
+	html_start_box(isset($export_actions[$bulk_action]) ? $export_actions[$bulk_action] : '', '60%', '', '3', 'center', '');
 
 	if (isset($export_array)) {
-		if (get_nfilter_request_var('drp_action') === '1') { /* delete */
+		if ($bulk_action === '1') { /* delete */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to delete the following Graph Export Definition.', 'Click \'Continue\' to delete following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
@@ -261,7 +264,7 @@ function export_form_actions() {
 
 			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Delete Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
-		} elseif (get_nfilter_request_var('drp_action') === '2') { /* disable */
+		} elseif ($bulk_action === '2') { /* disable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to disable the following Graph Export Definition.', 'Click \'Continue\' to disable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
@@ -271,7 +274,7 @@ function export_form_actions() {
 
 			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Disable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
-		} elseif (get_nfilter_request_var('drp_action') === '3') { /* enable */
+		} elseif ($bulk_action === '3') { /* enable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to enable the following Graph Export Definition.', 'Click \'Continue\' to enable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
@@ -281,7 +284,7 @@ function export_form_actions() {
 
 			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
 				<input type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Enable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
-		} elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
+		} elseif ($bulk_action === '4') { /* export now */
 			print "<tr>
 				<td class='topBoxAlt'>
 					<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
@@ -301,7 +304,7 @@ function export_form_actions() {
 		<td class='saveRow'>
 			<input type='hidden' name='action' value='actions'>
 			<input type='hidden' name='selected_items' value='" . (isset($export_array) ? serialize($export_array) : '') . "'>
-			<input type='hidden' name='drp_action' value='" . get_nfilter_request_var('drp_action') . "'>
+			<input type='hidden' name='drp_action' value='" . html_escape($bulk_action) . "'>
 			$save_html
 		</td>
 	</tr>";
@@ -821,7 +824,7 @@ function gexport() {
 		)
 	);
 
-	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, sizeof($display_text) + 1, __('Export Definitions', 'gexport'), 'page', 'main');
+	$nav = html_nav_bar(gexport_build_nav_filter_url(get_request_var('filter')), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, sizeof($display_text) + 1, __('Export Definitions', 'gexport'), 'page', 'main');
 
 	form_start('gexport.php', 'chk');
 
@@ -937,4 +940,3 @@ function gexport() {
 
 	form_end();
 }
-
