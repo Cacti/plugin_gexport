@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-10-17 16:22+0000\nLast-Translator: Coool (github.com/Coool) <coool@mail.lv>\nLanguage-Team: Latvian <http://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2026-05-09 10:18+0000\nLast-Translator: \"Coool (github.com/Coool)\" <coool@mail.lv>\nLanguage-Team: Latvian <https://translate.cacti.net/projects/cacti/gexport/lv/>\nLanguage: lv-LV\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\nX-Generator: Weblate 5.11.4\n"
 
 #: functions.php:312
 msgid "Success"
@@ -220,7 +220,7 @@ msgstr "Atspējot"
 
 #: gexport.php:33
 msgid "Export Now"
-msgstr "Eksportēt tūlīt"
+msgstr "Izgūt tūlīt"
 
 #: gexport.php:37 setup.php:354
 msgid "Periodic"
@@ -402,7 +402,7 @@ msgstr "Izpildes saraksts"
 
 #: gexport.php:764
 msgid "The frequency that Graphs will be exported."
-msgstr "Grafiku eksportēšanas biežums."
+msgstr "Grafiku izgūšanas biežums."
 
 #: gexport.php:767
 msgid "Next Start"
@@ -426,7 +426,7 @@ msgstr "Statuss"
 
 #: gexport.php:780
 msgid "The current Graph Export Status."
-msgstr "Pašreizējais grafika eksportēšanas statuss."
+msgstr "Pašreizējais grafika izgūšanas statuss."
 
 #: gexport.php:783
 msgid "Exporting (Sites/Trees)"
@@ -450,7 +450,7 @@ msgstr "Pēdējā izpildes reize"
 
 #: gexport.php:798
 msgid "The last runtime for the Graph Export."
-msgstr "Pēdējā grafika eksportēšanas izpildes reize."
+msgstr "Pēdējā grafika izgūšanas izpildes reize."
 
 #: gexport.php:801
 msgid "Graphs"
@@ -547,11 +547,11 @@ msgstr "Atķeksējiet, ja vēlaties iespējot šī grafika eksportēšanas defin
 
 #: setup.php:297
 msgid "Export Method"
-msgstr "Eksportēšanas veids"
+msgstr "Izgūšanas veids"
 
 #: setup.php:298
 msgid "Choose which export method to use."
-msgstr "Izvēlieties, kuru eksportēšanas veidu izmantot."
+msgstr "Atlasiet, kuru izgūšanas veidu izmantot."
 
 #: setup.php:303
 msgid "Local"
@@ -611,7 +611,7 @@ msgstr "Koks"
 
 #: setup.php:344
 msgid "Export Timing"
-msgstr "Eksportēšanas ilgums"
+msgstr "Izgūšanas ilgums"
 
 #: setup.php:348
 msgid "Timing Method"
@@ -623,7 +623,7 @@ msgstr "Izvēlieties, kad eksportēt grafikus."
 
 #: setup.php:360
 msgid "Periodic Export Cycle"
-msgstr "Periodiskais eksportēšanas cikls"
+msgstr "Periodiskais izgūšanas cikls"
 
 #: setup.php:361
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
@@ -766,7 +766,7 @@ msgstr "Atķeksējiet, ja vēlaties, lai šī grafika eksportēšana dzēstu sat
 
 #: setup.php:517
 msgid "Export Directory"
-msgstr "Eksportēšanas mape"
+msgstr "Izgūšanas mape"
 
 #: setup.php:518
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
