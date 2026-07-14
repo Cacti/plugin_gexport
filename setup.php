@@ -71,7 +71,7 @@ function gexport_check_upgrade() {
 	include_once($config['library_path'] . '/functions.php');
 
 	// Let's only run this check if we are on a page that actually needs the data
-	$files = array('plugins.php', 'gexport.php');
+	$files = ['plugins.php', 'gexport.php'];
 	if (!in_array(get_current_page(), $files)) {
 		return;
 	}
@@ -259,13 +259,13 @@ function gexport_config_arrays() {
 	$tmp = sys_get_temp_dir() . DIRECTORY_SEPARATOR;
 
 	if (isset($_SESSION['gexport_message']) && $_SESSION['gexport_message'] != '') {
-		$messages['gexport_message'] = array('message' => $_SESSION['gexport_message'], 'type' => 'info');
+		$messages['gexport_message'] = ['message' => $_SESSION['gexport_message'], 'type' => 'info'];
 	}
 
 	$menu[__('Utilities')]['plugins/gexport/gexport.php'] = __('Graph Exports', 'gexport');
 
 	if (function_exists('auth_augment_roles')) {
-		auth_augment_roles(__('General Administration'), array('gexport.php'));
+		auth_augment_roles(__('General Administration'), ['gexport.php']);
 	}
 
 	$sites = array_rekey(db_fetch_assoc('SELECT "0" AS id, "All Sites" AS name UNION SELECT id, name FROM sites ORDER BY name'), 'id', 'name');

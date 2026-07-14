@@ -25,6 +25,7 @@
 chdir('../../');
 include('./include/auth.php');
 include_once('./plugins/gexport/functions.php');
+include_once('./plugins/gexport/gexport_security.php');
 
 $export_actions = array(
 	'1' => __('Delete', 'gexport'),
@@ -148,7 +149,7 @@ function export_form_save() {
 function duplicate_export($_export_id, $export_title) {
 	global $fields_export_edit;
 
-	$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', array($_export_id));
+	$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', [$_export_id]);
 
 	/* substitute the title variable */
 	$export['name'] = str_replace('<export_title>', $export['name'], $export_title);
@@ -173,12 +174,14 @@ function duplicate_export($_export_id, $export_title) {
 function export_form_actions() {
 	global $export_actions;
 
+	$bulk_action = gexport_normalize_bulk_action(get_nfilter_request_var('drp_action'));
+
 	/* if we are to save this form, instead of display it */
 	if (isset_request_var('selected_items')) {
 		$selected_items = sanitize_unserialize_selected_items(get_nfilter_request_var('selected_items'));
 
 		if ($selected_items != false) {
-			if (get_nfilter_request_var('drp_action') === '1') { /* delete */
+			if ($bulk_action === '1') { /* delete */
 				/* do a referential integrity check */
 				if (sizeof($selected_items)) {
 					foreach($selected_items as $export_id) {
@@ -193,7 +196,7 @@ function export_form_actions() {
 				if (isset($export_ids)) {
 					db_execute('DELETE FROM graph_exports WHERE ' . array_to_sql_or($export_ids, 'id'));
 				}
-			} elseif (get_nfilter_request_var('drp_action') === '2') { /* enable */
+			} elseif ($bulk_action === '2') { /* enable */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -201,7 +204,7 @@ function export_form_actions() {
 
 					export_enable($selected_items[$i]);
 				}
-			} elseif (get_nfilter_request_var('drp_action') === '3') { /* disable */
+			} elseif ($bulk_action === '3') { /* disable */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -209,7 +212,7 @@ function export_form_actions() {
 
 					export_disable($selected_items[$i]);
 				}
-			} elseif (get_nfilter_request_var('drp_action') === '4') { /* run now */
+			} elseif ($bulk_action === '4') { /* run now */
 				for ($i=0;($i<count($selected_items));$i++) {
 					/* ================= input validation ================= */
 					input_validate_input_number($selected_items[$i]);
@@ -239,7 +242,7 @@ function export_form_actions() {
 			input_validate_input_number($matches[1]);
 			/* ==================================================== */
 
-			$export_list .= '<li>' . db_fetch_cell_prepared('SELECT name FROM graph_exports WHERE id = ?', array($matches[1])) . '</li>';
+			$export_list .= '<li>' . db_fetch_cell_prepared('SELECT name FROM graph_exports WHERE id = ?', [$matches[1]]) . '</li>';
 			$export_array[] = $matches[1];
 		}
 	}
@@ -248,10 +251,10 @@ function export_form_actions() {
 
 	form_start('gexport.php', 'export_actions');
 
-	html_start_box($export_actions[get_nfilter_request_var('drp_action')], '60%', '', '3', 'center', '');
+	html_start_box(isset($export_actions[$bulk_action]) ? $export_actions[$bulk_action] : '', '60%', '', '3', 'center', '');
 
 	if (isset($export_array)) {
-		if (get_nfilter_request_var('drp_action') === '1') { /* delete */
+		if ($bulk_action === '1') { /* delete */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to delete the following Graph Export Definition.', 'Click \'Continue\' to delete following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
@@ -261,7 +264,7 @@ function export_form_actions() {
 
 			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Delete Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
-		} elseif (get_nfilter_request_var('drp_action') === '2') { /* disable */
+		} elseif ($bulk_action === '2') { /* disable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to disable the following Graph Export Definition.', 'Click \'Continue\' to disable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
@@ -271,7 +274,7 @@ function export_form_actions() {
 
 			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Disable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
-		} elseif (get_nfilter_request_var('drp_action') === '3') { /* enable */
+		} elseif ($bulk_action === '3') { /* enable */
 			print "	<tr>
 					<td class='topBoxAlt'>
 						<p>" . __n('Click \'Continue\' to enable the following Graph Export Definition.', 'Click \'Continue\' to enable following Graph Export Definitions.', sizeof($export_array), 'gexport') . "</p>
@@ -281,7 +284,7 @@ function export_form_actions() {
 
 			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
 				<input type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Enable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
-		} elseif (get_nfilter_request_var('drp_action') === '4') { /* export now */
+		} elseif ($bulk_action === '4') { /* export now */
 			print "<tr>
 				<td class='topBoxAlt'>
 					<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
@@ -301,7 +304,7 @@ function export_form_actions() {
 		<td class='saveRow'>
 			<input type='hidden' name='action' value='actions'>
 			<input type='hidden' name='selected_items' value='" . (isset($export_array) ? serialize($export_array) : '') . "'>
-			<input type='hidden' name='drp_action' value='" . get_nfilter_request_var('drp_action') . "'>
+			<input type='hidden' name='drp_action' value='" . html_escape($bulk_action) . "'>
 			$save_html
 		</td>
 	</tr>";
@@ -318,11 +321,11 @@ function export_form_actions() {
    --------------------- */
 
 function export_enable($export_id) {
-	db_execute_prepared('UPDATE graph_exports SET enabled="on" WHERE id = ?', array($export_id));
+	db_execute_prepared('UPDATE graph_exports SET enabled="on" WHERE id = ?', [$export_id]);
 }
 
 function export_disable($export_id) {
-	db_execute_prepared('UPDATE graph_exports SET enabled="" WHERE id = ?', array($export_id));
+	db_execute_prepared('UPDATE graph_exports SET enabled="" WHERE id = ?', [$export_id]);
 }
 
 function export_runnow($export_id) {
@@ -330,7 +333,7 @@ function export_runnow($export_id) {
 
 	include_once('./lib/poller.php');
 
-	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', array($export_id));
+	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', [$export_id]);
 
 	if (($status['status'] == 0 || $status['status'] == 2) && $status['enabled'] == 'on') {
 		$command_string = read_config_option('path_php_binary');
@@ -361,8 +364,8 @@ function export_edit() {
 
 	draw_edit_form(
 		array(
-			'config' => array('no_form_tag' => true),
-			'fields' => inject_form_variables($fields_export_edit, (isset($export) ? $export : array()))
+			'config' => ['no_form_tag' => true],
+			'fields' => inject_form_variables($fields_export_edit, (isset($export) ? $export : []))
 		)
 	);
 
@@ -695,40 +698,40 @@ function gexport() {
 
     /* ================= input validation and session storage ================= */
     $filters = array(
-		'rows' => array(
+		'rows' => [
 			'filter' => FILTER_VALIDATE_INT,
 			'pageset' => true,
 			'default' => '-1'
-			),
-		'page' => array(
+			],
+		'page' => [
 			'filter' => FILTER_VALIDATE_INT,
 			'default' => '1'
-			),
-		'refresh' => array(
+			],
+		'refresh' => [
 			'filter' => FILTER_VALIDATE_INT,
 			'default' => '20'
-			),
-		'filter' => array(
+			],
+		'filter' => [
 			'filter' => FILTER_DEFAULT,
 			'pageset' => true,
 			'default' => ''
-			),
+			],
 		'sort_column' => array(
 			'filter' => FILTER_CALLBACK,
 			'default' => 'name',
-			'options' => array('options' => 'sanitize_search_string')
+			'options' => ['options' => 'sanitize_search_string']
 			),
 		'sort_direction' => array(
 			'filter' => FILTER_CALLBACK,
 			'default' => 'ASC',
-			'options' => array('options' => 'sanitize_search_string')
+			'options' => ['options' => 'sanitize_search_string']
 			)
 	);
 
 	validate_store_request_vars($filters, 'sess_gexport');
 	/* ================= input validation ================= */
 
-	$refresh            = array();
+	$refresh            = [];
 	$refresh['page']    = 'gexport.php?header=false';
 	$refresh['seconds'] = get_request_var('refresh');
 	$refresh['logout']  = 'false';
@@ -738,7 +741,7 @@ function gexport() {
 	export_filter();
 
 	$total_rows = 0;
-	$exports = array();
+	$exports = [];
 
 	if (get_request_var('rows') == '-1') {
 		$rows = read_config_option('num_rows_table');
@@ -821,7 +824,7 @@ function gexport() {
 		)
 	);
 
-	$nav = html_nav_bar('gexport.php?filter=' . get_request_var('filter'), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, sizeof($display_text) + 1, __('Export Definitions', 'gexport'), 'page', 'main');
+	$nav = html_nav_bar(gexport_build_nav_filter_url(get_request_var('filter')), MAX_DISPLAY_PAGES, get_request_var('page'), $rows, $total_rows, sizeof($display_text) + 1, __('Export Definitions', 'gexport'), 'page', 'main');
 
 	form_start('gexport.php', 'chk');
 
@@ -837,7 +840,7 @@ function gexport() {
 			$user = db_fetch_cell_prepared('SELECT username
 				FROM user_auth
 				WHERE id = ?',
-				array($export['export_effective_user']));
+				[$export['export_effective_user']]);
 
 			if ($export['export_pid'] > 0 && $export['status'] > 0) {
 				if (function_exists('posix_getpgid')) {
@@ -850,7 +853,7 @@ function gexport() {
 					db_execute_prepared('UPDATE graph_exports
 						SET status=0, export_pid=0, last_error="Killed Outside Cacti", last_errored=NOW()
 						WHERE id = ?',
-						array($export['id']));
+						[$export['id']]);
 				}
 			}
 
@@ -937,4 +940,3 @@ function gexport() {
 
 	form_end();
 }
-
