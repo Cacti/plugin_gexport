@@ -4,7 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-11-21 22:59+0000\nLast-Translator: Nakayama Kito <nakayamakito@icloud.com>\nLanguage-Team: Japanese <http://translate.cacti.net/projects/cacti/gexport/ja/>\nLanguage: ja-JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.8.1\n"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-21 13:13-0400\n"
+"PO-Revision-Date: 2024-11-21 22:59+0000\n"
+"Last-Translator: Nakayama Kito <nakayamakito@icloud.com>\n"
+"Language-Team: Japanese <http://translate.cacti.net/projects/cacti/gexport/ja/>\n"
+"Language: ja-JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -194,322 +206,328 @@ msgstr "これ以上利用できる認証方法はありません"
 msgid "Invalid user name"
 msgstr "無効なユーザー名"
 
-#: functions.php:1518 functions.php:1681
+#: functions.php:1562 functions.php:1725
 msgid "Non Query Based"
 msgstr "非クエリベース"
 
-#: functions.php:1765
+#: functions.php:1809
 msgid "Graph Templates"
 msgstr "グラフテンプレート"
 
-#: functions.php:1794
+#: functions.php:1838
 msgid "Data Queries"
 msgstr "データ問合せ"
 
-#: gexport.php:30
+#: gexport.php:31
 msgid "Delete"
 msgstr "削除"
 
-#: gexport.php:31
+#: gexport.php:32
 msgid "Enable"
 msgstr "有効"
 
-#: gexport.php:32
+#: gexport.php:33
 msgid "Disable"
 msgstr "無効"
 
-#: gexport.php:33
+#: gexport.php:34
 msgid "Export Now"
 msgstr "エクスポート"
 
-#: gexport.php:37 setup.php:354
+#: gexport.php:38 setup.php:354
 msgid "Periodic"
 msgstr "定期的"
 
-#: gexport.php:38 setup.php:356
+#: gexport.php:39 setup.php:356
 msgid "Daily"
 msgstr "毎日"
 
-#: gexport.php:39 setup.php:355
+#: gexport.php:40 setup.php:355
 msgid "Hourly"
 msgstr "一時間ごと"
 
-#: gexport.php:257
+#: gexport.php:260
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "[続行]をクリックして、次のグラフエクスポート定義を削除します。"
 
-#: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
+#: gexport.php:265 gexport.php:275 gexport.php:285 gexport.php:295
 msgid "Cancel"
 msgstr "取り消し"
 
+#: gexport.php:266 gexport.php:276 gexport.php:286 gexport.php:296
+msgid "Continue"
+msgstr "続ける"
+
 #: gexport.php:266
+#, fuzzy
+#| msgid "Disable Graph Export Definition(s)"
+msgid "Delete Graph Export Definition(s)"
+msgstr "グラフエクスポート定義"
+
+#: gexport.php:270
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "次のグラフエクスポート定義を無効にするには、[続行]をクリックします。"
 
-#: gexport.php:271 gexport.php:280 gexport.php:289
-msgid "Continue"
-msgstr "続ける"
-
-#: gexport.php:271
+#: gexport.php:276
 msgid "Disable Graph Export Definition(s)"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:275
+#: gexport.php:280
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "次のグラフエクスポート定義を有効にするには、[続行]をクリックします。"
 
-#: gexport.php:280
+#: gexport.php:286
 msgid "Enable Graph Export Definition(s)"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:284
+#: gexport.php:290
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "[続行]をクリックして、次のグラフエクスポート定義を今すぐ実行します。"
 
-#: gexport.php:289
+#: gexport.php:296
 msgid "Run Graph Export Definition(s) Now"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:292
+#: gexport.php:299
 msgid "You must select at least one Graph Export Definition."
 msgstr "少なくとも1つのグラフエクスポート定義を選択する必要があります。"
 
-#: gexport.php:293
+#: gexport.php:300
 msgid "Return"
 msgstr "帰還"
 
-#: gexport.php:349
+#: gexport.php:356
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "グラフエクスポート定義 [編集: %s]"
 
-#: gexport.php:351
+#: gexport.php:358
 msgid "Graph Export Definition [new]"
 msgstr "グラフエクスポート定義[new]"
 
-#: gexport.php:377
+#: gexport.php:384
 msgid "Select Tree(s)"
 msgstr "ツリーを選択"
 
-#: gexport.php:379
+#: gexport.php:386
 msgid "Trees Selected"
 msgstr "選択された木"
 
-#: gexport.php:382
+#: gexport.php:389
 msgid "All Trees Selected"
 msgstr "選択したすべての木"
 
-#: gexport.php:388 gexport.php:434
+#: gexport.php:395 gexport.php:441
 msgid "All"
 msgstr "すべて"
 
-#: gexport.php:389 gexport.php:435
+#: gexport.php:396 gexport.php:442
 msgid "None"
 msgstr "なし"
 
-#: gexport.php:419 gexport.php:465 gexport.php:567
+#: gexport.php:426 gexport.php:472 gexport.php:574
 msgid "Search"
 msgstr "検索"
 
-#: gexport.php:423
+#: gexport.php:430
 msgid "Select Site(s)"
 msgstr "サイトを選択"
 
-#: gexport.php:425
+#: gexport.php:432
 msgid "Sites Selected"
 msgstr "選択したサイト"
 
-#: gexport.php:428
+#: gexport.php:435
 msgid "All Sites Selected"
 msgstr "選択したすべてのサイト"
 
-#: gexport.php:559
+#: gexport.php:566
 msgid "Graph Export Definitions"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:573
+#: gexport.php:580
 msgid "Exports"
 msgstr "エクスポート"
 
-#: gexport.php:577
+#: gexport.php:584
 msgid "Default"
 msgstr "デフォルト"
 
-#: gexport.php:588
+#: gexport.php:595
 msgid "Refresh"
 msgstr "更新"
 
-#: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
+#: gexport.php:601 gexport.php:916 gexport.php:921 gexport.php:922
 msgid "Never"
 msgstr "決して"
 
-#: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
+#: gexport.php:602 gexport.php:603 gexport.php:604 gexport.php:605
 #, php-format
 msgid "%d Seconds"
 msgstr "%d 秒"
 
-#: gexport.php:599
+#: gexport.php:606
 #, fuzzy, php-format
 msgid "%d Minute"
 msgstr "%d分"
 
-#: gexport.php:600 gexport.php:601
+#: gexport.php:607 gexport.php:608
 #, php-format
 msgid "%d Minutes"
 msgstr "%d 分"
 
-#: gexport.php:611
+#: gexport.php:618
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Go"
 
-#: gexport.php:612
+#: gexport.php:619
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "クリア"
 
-#: gexport.php:749 setup.php:281
+#: gexport.php:756 setup.php:281
 msgid "Export Name"
 msgstr "出力名"
 
-#: gexport.php:752 setup.php:282
+#: gexport.php:759 setup.php:282
 msgid "The name of this Graph Export Definition."
 msgstr "このグラフエクスポート定義の名前。"
 
-#: gexport.php:755
+#: gexport.php:762
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:758
+#: gexport.php:765
 msgid "The internal ID of the Graph Export Definition."
 msgstr "グラフエクスポート定義の内部ID。"
 
-#: gexport.php:761
+#: gexport.php:768
 msgid "Schedule"
 msgstr "スケジュール"
 
-#: gexport.php:764
+#: gexport.php:771
 msgid "The frequency that Graphs will be exported."
 msgstr "グラフがエクスポートされる頻度。"
 
-#: gexport.php:767
+#: gexport.php:774
 msgid "Next Start"
 msgstr "次のスタート"
 
-#: gexport.php:770
+#: gexport.php:777
 msgid "The next time the Graph Export should run."
 msgstr "次回グラフエクスポートを実行する必要があります。"
 
-#: gexport.php:773 setup.php:290
+#: gexport.php:780 setup.php:290
 msgid "Enabled"
 msgstr "有効"
 
-#: gexport.php:775
+#: gexport.php:782
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "有効にすると、このグラフエクスポート定義は必要に応じて実行されます。"
 
-#: gexport.php:778
+#: gexport.php:785
 msgid "Status"
 msgstr "状態"
 
-#: gexport.php:780
+#: gexport.php:787
 msgid "The current Graph Export Status."
 msgstr "現在のグラフエクスポートステータス。"
 
-#: gexport.php:783
+#: gexport.php:790
 msgid "Exporting (Sites/Trees)"
 msgstr "エクスポート（サイト/木）"
 
-#: gexport.php:786
+#: gexport.php:793
 msgid "What is being Exported."
 msgstr "エクスポートされているもの"
 
-#: gexport.php:789 setup.php:414
+#: gexport.php:796 setup.php:414
 msgid "Effective User"
 msgstr "有効ユーザー"
 
-#: gexport.php:792
+#: gexport.php:799
 msgid "The user that this export will impersonate."
 msgstr "このエクスポートが偽装するユーザー。"
 
-#: gexport.php:795
+#: gexport.php:802
 msgid "Last Runtime"
 msgstr "最後のランタイム"
 
-#: gexport.php:798
+#: gexport.php:805
 msgid "The last runtime for the Graph Export."
 msgstr "グラフエクスポートの最後のランタイム。"
 
-#: gexport.php:801
+#: gexport.php:808
 msgid "Graphs"
 msgstr "グラフ"
 
-#: gexport.php:804
+#: gexport.php:811
 msgid "The number of Graphs Exported on the last run."
 msgstr "最後の実行でエクスポートされたグラフの数。"
 
-#: gexport.php:807
+#: gexport.php:814
 msgid "Last Started"
 msgstr "最後に始めた"
 
-#: gexport.php:810
+#: gexport.php:817
 msgid "The last time that this Graph Export was started."
 msgstr "このグラフエクスポートが最後に開始された時刻。"
 
-#: gexport.php:813
+#: gexport.php:820
 msgid "Last Errored"
 msgstr "最後のエラー"
 
-#: gexport.php:816
+#: gexport.php:823
 msgid "The last time that this Graph Export experienced an error."
 msgstr "このグラフエクスポートで最後にエラーが発生した時間。"
 
-#: gexport.php:820
+#: gexport.php:827
 msgid "Export Definitions"
 msgstr "エクスポート定義"
 
-#: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
+#: gexport.php:866 gexport.php:906 gexport.php:919 gexport.php:920
 #: setup.php:419
 msgid "N/A"
 msgstr "該当なし"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "No"
 msgstr "いいえ"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "Yes"
 msgstr "はい"
 
-#: gexport.php:865
+#: gexport.php:872
 msgid "Idle"
 msgstr "待機"
 
-#: gexport.php:868
+#: gexport.php:875
 msgid "Running"
 msgstr "実行中"
 
-#: gexport.php:871
+#: gexport.php:878
 msgid "Error"
 msgstr "エラー"
 
-#: gexport.php:877
+#: gexport.php:884
 msgid "All Sites"
 msgstr "すべてのサイト"
 
-#: gexport.php:888
+#: gexport.php:895
 msgid "All Trees"
 msgstr "すべての木"
 
-#: gexport.php:902
+#: gexport.php:909
 msgid "Sec"
 msgstr "秒"
 
-#: gexport.php:922
+#: gexport.php:929
 msgid "No Graph Export Definitions"
 msgstr "グラフエクスポート定義なし"
 
