@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
+"POT-Creation-Date: 2026-09-21 13:13-0400\n"
 "PO-Revision-Date: 2024-06-07 23:11-0400\n"
 "Last-Translator: Tadeo Briceño <tadeobriceno@vencable.com>\n"
 "Language-Team: Spanish <http://translate.cacti.net/projects/cacti/gexport/es/>\n"
@@ -206,326 +206,332 @@ msgstr "No hay más métodos de autenticación disponibles"
 msgid "Invalid user name"
 msgstr "Nombre de usuario no válido"
 
-#: functions.php:1518 functions.php:1681
+#: functions.php:1562 functions.php:1725
 msgid "Non Query Based"
 msgstr "No basado en consulta"
 
-#: functions.php:1765
+#: functions.php:1809
 msgid "Graph Templates"
 msgstr "Plantilla de gráficos"
 
-#: functions.php:1794
+#: functions.php:1838
 msgid "Data Queries"
 msgstr "Consultas de datos"
 
-#: gexport.php:30
+#: gexport.php:31
 msgid "Delete"
 msgstr "Eliminar"
 
-#: gexport.php:31
+#: gexport.php:32
 msgid "Enable"
 msgstr "Habilitar"
 
-#: gexport.php:32
+#: gexport.php:33
 msgid "Disable"
 msgstr "Deshabilitar"
 
-#: gexport.php:33
+#: gexport.php:34
 msgid "Export Now"
 msgstr "Exportar ahora"
 
-#: gexport.php:37 setup.php:354
+#: gexport.php:38 setup.php:354
 msgid "Periodic"
 msgstr "Periódico"
 
-#: gexport.php:38 setup.php:356
+#: gexport.php:39 setup.php:356
 msgid "Daily"
 msgstr "diario"
 
-#: gexport.php:39 setup.php:355
+#: gexport.php:40 setup.php:355
 msgid "Hourly"
 msgstr "Cada hora"
 
-#: gexport.php:257
+#: gexport.php:260
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Haga clic en'Continuar' para eliminar la siguiente definición de exportación de gráficos."
 msgstr[1] "Haga clic en'Continuar' para eliminar las siguientes definiciones de exportación de gráficos."
 
-#: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
+#: gexport.php:265 gexport.php:275 gexport.php:285 gexport.php:295
 msgid "Cancel"
 msgstr "Cancelar"
 
+#: gexport.php:266 gexport.php:276 gexport.php:286 gexport.php:296
+msgid "Continue"
+msgstr "Continuar"
+
 #: gexport.php:266
+#, fuzzy
+#| msgid "Disable Graph Export Definition(s)"
+msgid "Delete Graph Export Definition(s)"
+msgstr "Definiciones de exportación de gráficos"
+
+#: gexport.php:270
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Haga clic en'Continuar' para desactivar la siguiente Definición de Exportación de Gráficos."
 msgstr[1] "Haga clic en'Continuar' para desactivar las siguientes Definiciones de Exportación de Gráficos."
 
-#: gexport.php:271 gexport.php:280 gexport.php:289
-msgid "Continue"
-msgstr "Continuar"
-
-#: gexport.php:271
+#: gexport.php:276
 msgid "Disable Graph Export Definition(s)"
 msgstr "Definiciones de exportación de gráficos"
 
-#: gexport.php:275
+#: gexport.php:280
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "Haga clic en'Continuar' para habilitar la siguiente Definición de Exportación de Gráficos."
 msgstr[1] "Haga clic en'Continuar' para habilitar las siguientes Definiciones de Exportación de Gráficos."
 
-#: gexport.php:280
+#: gexport.php:286
 msgid "Enable Graph Export Definition(s)"
 msgstr "Definiciones de exportación de gráficos"
 
-#: gexport.php:284
+#: gexport.php:290
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Haga clic en'Continuar' para ejecutar la siguiente Definición de Exportación de Gráficos ahora."
 msgstr[1] "Haga clic en'Continuar' para ejecutar las siguientes Definiciones de Exportación de Gráficos ahora."
 
-#: gexport.php:289
+#: gexport.php:296
 msgid "Run Graph Export Definition(s) Now"
 msgstr "Definiciones de exportación de gráficos"
 
-#: gexport.php:292
+#: gexport.php:299
 msgid "You must select at least one Graph Export Definition."
 msgstr "Debe seleccionar por lo menos una definición de exportación de gráficos."
 
-#: gexport.php:293
+#: gexport.php:300
 msgid "Return"
 msgstr "Regresar"
 
-#: gexport.php:349
+#: gexport.php:356
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "Definición de exportación de gráficos[editar: %s]"
 
-#: gexport.php:351
+#: gexport.php:358
 msgid "Graph Export Definition [new]"
 msgstr "Definición de Exportación de Gráficos[nuevo]"
 
-#: gexport.php:377
+#: gexport.php:384
 msgid "Select Tree(s)"
 msgstr "Seleccione Árbol(s)"
 
-#: gexport.php:379
+#: gexport.php:386
 msgid "Trees Selected"
 msgstr "Árboles Seleccionados"
 
-#: gexport.php:382
+#: gexport.php:389
 msgid "All Trees Selected"
 msgstr "Todos los árboles seleccionados"
 
-#: gexport.php:388 gexport.php:434
+#: gexport.php:395 gexport.php:441
 msgid "All"
 msgstr "Todos"
 
-#: gexport.php:389 gexport.php:435
+#: gexport.php:396 gexport.php:442
 msgid "None"
 msgstr "Ninguno"
 
-#: gexport.php:419 gexport.php:465 gexport.php:567
+#: gexport.php:426 gexport.php:472 gexport.php:574
 msgid "Search"
 msgstr "Buscar"
 
-#: gexport.php:423
+#: gexport.php:430
 msgid "Select Site(s)"
 msgstr "Seleccione Sitio(s)"
 
-#: gexport.php:425
+#: gexport.php:432
 msgid "Sites Selected"
 msgstr "Sitios Seleccionados"
 
-#: gexport.php:428
+#: gexport.php:435
 msgid "All Sites Selected"
 msgstr "Todos los sitios seleccionados"
 
-#: gexport.php:559
+#: gexport.php:566
 msgid "Graph Export Definitions"
 msgstr "Definiciones de exportación de gráficos"
 
-#: gexport.php:573
+#: gexport.php:580
 msgid "Exports"
 msgstr "Exportar"
 
-#: gexport.php:577
+#: gexport.php:584
 msgid "Default"
 msgstr "Predeterminado"
 
-#: gexport.php:588
+#: gexport.php:595
 msgid "Refresh"
 msgstr "Actualizar"
 
-#: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
+#: gexport.php:601 gexport.php:916 gexport.php:921 gexport.php:922
 msgid "Never"
 msgstr "Nunca"
 
-#: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
+#: gexport.php:602 gexport.php:603 gexport.php:604 gexport.php:605
 #, php-format
 msgid "%d Seconds"
 msgstr "%d Segundos"
 
-#: gexport.php:599
+#: gexport.php:606
 #, php-format
 msgid "%d Minute"
 msgstr "%d Minuto"
 
-#: gexport.php:600 gexport.php:601
+#: gexport.php:607 gexport.php:608
 #, php-format
 msgid "%d Minutes"
 msgstr "%d Minutos"
 
-#: gexport.php:611
+#: gexport.php:618
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Ir"
 
-#: gexport.php:612
+#: gexport.php:619
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Restablecer"
 
-#: gexport.php:749 setup.php:281
+#: gexport.php:756 setup.php:281
 msgid "Export Name"
 msgstr "Nombre de exportación"
 
-#: gexport.php:752 setup.php:282
+#: gexport.php:759 setup.php:282
 msgid "The name of this Graph Export Definition."
 msgstr "El nombre de esta definición de exportación de gráficos."
 
-#: gexport.php:755
+#: gexport.php:762
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:758
+#: gexport.php:765
 msgid "The internal ID of the Graph Export Definition."
 msgstr "ID interno de la definición de exportación de gráficos."
 
-#: gexport.php:761
+#: gexport.php:768
 msgid "Schedule"
 msgstr "Tarea programada"
 
-#: gexport.php:764
+#: gexport.php:771
 msgid "The frequency that Graphs will be exported."
 msgstr "La frecuencia con la que se exportarán los gráficos."
 
-#: gexport.php:767
+#: gexport.php:774
 msgid "Next Start"
 msgstr "Próximo inicio"
 
-#: gexport.php:770
+#: gexport.php:777
 msgid "The next time the Graph Export should run."
 msgstr "La próxima vez que se ejecute la exportación de gráficos."
 
-#: gexport.php:773 setup.php:290
+#: gexport.php:780 setup.php:290
 msgid "Enabled"
 msgstr "Habilitado"
 
-#: gexport.php:775
+#: gexport.php:782
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "Si está habilitada, esta definición de exportación de gráficos se ejecutará según sea necesario."
 
-#: gexport.php:778
+#: gexport.php:785
 msgid "Status"
 msgstr "Estado"
 
-#: gexport.php:780
+#: gexport.php:787
 msgid "The current Graph Export Status."
 msgstr "El estado actual de la exportación de gráficos."
 
-#: gexport.php:783
+#: gexport.php:790
 msgid "Exporting (Sites/Trees)"
 msgstr "Exportación (centros/árboles)"
 
-#: gexport.php:786
+#: gexport.php:793
 msgid "What is being Exported."
 msgstr "Qué se está exportando."
 
-#: gexport.php:789 setup.php:414
+#: gexport.php:796 setup.php:414
 msgid "Effective User"
 msgstr "Usuario en uso"
 
-#: gexport.php:792
+#: gexport.php:799
 msgid "The user that this export will impersonate."
 msgstr "El usuario al que se suplantará esta exportación."
 
-#: gexport.php:795
+#: gexport.php:802
 msgid "Last Runtime"
 msgstr "Ultima ejecución"
 
-#: gexport.php:798
+#: gexport.php:805
 msgid "The last runtime for the Graph Export."
 msgstr "El último tiempo de ejecución para la exportación de gráficos."
 
-#: gexport.php:801
+#: gexport.php:808
 msgid "Graphs"
 msgstr "Gráficos"
 
-#: gexport.php:804
+#: gexport.php:811
 msgid "The number of Graphs Exported on the last run."
 msgstr "El número de gráficos exportados en la última ejecución."
 
-#: gexport.php:807
+#: gexport.php:814
 msgid "Last Started"
 msgstr "Ultima vez iniciado"
 
-#: gexport.php:810
+#: gexport.php:817
 msgid "The last time that this Graph Export was started."
 msgstr "La última vez que se inició esta exportación de gráficos."
 
-#: gexport.php:813
+#: gexport.php:820
 msgid "Last Errored"
 msgstr "Último error"
 
-#: gexport.php:816
+#: gexport.php:823
 msgid "The last time that this Graph Export experienced an error."
 msgstr "La última vez que esta exportación de gráficos experimentó un error."
 
-#: gexport.php:820
+#: gexport.php:827
 msgid "Export Definitions"
 msgstr "Definiciones de exportación"
 
-#: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
+#: gexport.php:866 gexport.php:906 gexport.php:919 gexport.php:920
 #: setup.php:419
 msgid "N/A"
 msgstr "n/d"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "No"
 msgstr "No"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "Yes"
 msgstr "Sí"
 
-#: gexport.php:865
+#: gexport.php:872
 msgid "Idle"
 msgstr "Ocioso"
 
-#: gexport.php:868
+#: gexport.php:875
 msgid "Running"
 msgstr "Ejecutando"
 
-#: gexport.php:871
+#: gexport.php:878
 msgid "Error"
 msgstr "Error"
 
-#: gexport.php:877
+#: gexport.php:884
 msgid "All Sites"
 msgstr "Todos los sitios"
 
-#: gexport.php:888
+#: gexport.php:895
 msgid "All Trees"
 msgstr "Todos los Arboles"
 
-#: gexport.php:902
+#: gexport.php:909
 msgid "Sec"
 msgstr "Seg"
 
-#: gexport.php:922
+#: gexport.php:929
 msgid "No Graph Export Definitions"
 msgstr "Sin Definiciones de Exportación de Gráficos"
 
