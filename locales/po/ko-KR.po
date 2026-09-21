@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
+"POT-Creation-Date: 2026-09-21 13:13-0400\n"
 "PO-Revision-Date: 2024-06-07 23:14-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -206,322 +206,328 @@ msgstr "더 이상 사용할 수있는 인증 방법이 없습니다."
 msgid "Invalid user name"
 msgstr "잘못된 사용자 이름"
 
-#: functions.php:1518 functions.php:1681
+#: functions.php:1562 functions.php:1725
 msgid "Non Query Based"
 msgstr "비 쿼리 기반"
 
-#: functions.php:1765
+#: functions.php:1809
 msgid "Graph Templates"
 msgstr "그래프 템플릿"
 
-#: functions.php:1794
+#: functions.php:1838
 msgid "Data Queries"
 msgstr "데이터 쿼리"
 
-#: gexport.php:30
+#: gexport.php:31
 msgid "Delete"
 msgstr "삭제"
 
-#: gexport.php:31
+#: gexport.php:32
 msgid "Enable"
 msgstr "활성화"
 
-#: gexport.php:32
+#: gexport.php:33
 msgid "Disable"
 msgstr "비활성화"
 
-#: gexport.php:33
+#: gexport.php:34
 msgid "Export Now"
 msgstr "지금 내보내기"
 
-#: gexport.php:37 setup.php:354
+#: gexport.php:38 setup.php:354
 msgid "Periodic"
 msgstr "주기율표"
 
-#: gexport.php:38 setup.php:356
+#: gexport.php:39 setup.php:356
 msgid "Daily"
 msgstr "매일"
 
-#: gexport.php:39 setup.php:355
+#: gexport.php:40 setup.php:355
 msgid "Hourly"
 msgstr "매시간 마다"
 
-#: gexport.php:257
+#: gexport.php:260
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "다음 그래프 내보내기 정의를 삭제하려면 '계속'을 클릭하십시오."
 
-#: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
+#: gexport.php:265 gexport.php:275 gexport.php:285 gexport.php:295
 msgid "Cancel"
 msgstr "취소"
 
+#: gexport.php:266 gexport.php:276 gexport.php:286 gexport.php:296
+msgid "Continue"
+msgstr "계속"
+
 #: gexport.php:266
+#, fuzzy
+#| msgid "Disable Graph Export Definition(s)"
+msgid "Delete Graph Export Definition(s)"
+msgstr "그래프 내보내기 정의"
+
+#: gexport.php:270
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 비활성화하십시오."
 
-#: gexport.php:271 gexport.php:280 gexport.php:289
-msgid "Continue"
-msgstr "계속"
-
-#: gexport.php:271
+#: gexport.php:276
 msgid "Disable Graph Export Definition(s)"
 msgstr "그래프 내보내기 정의"
 
-#: gexport.php:275
+#: gexport.php:280
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 활성화하십시오."
 
-#: gexport.php:280
+#: gexport.php:286
 msgid "Enable Graph Export Definition(s)"
 msgstr "그래프 내보내기 정의"
 
-#: gexport.php:284
+#: gexport.php:290
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "'계속'을 클릭하여 다음 그래프 내보내기 정의를 실행하십시오."
 
-#: gexport.php:289
+#: gexport.php:296
 msgid "Run Graph Export Definition(s) Now"
 msgstr "그래프 내보내기 정의"
 
-#: gexport.php:292
+#: gexport.php:299
 msgid "You must select at least one Graph Export Definition."
 msgstr "그래프 내보내기 정의를 하나 이상 선택해야합니다."
 
-#: gexport.php:293
+#: gexport.php:300
 msgid "Return"
 msgstr "반환"
 
-#: gexport.php:349
+#: gexport.php:356
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "그래프 내보내기 정의 [편집 :  %s]"
 
-#: gexport.php:351
+#: gexport.php:358
 msgid "Graph Export Definition [new]"
 msgstr "그래프 내보내기 정의 [신규]"
 
-#: gexport.php:377
+#: gexport.php:384
 msgid "Select Tree(s)"
 msgstr "트리 선택"
 
-#: gexport.php:379
+#: gexport.php:386
 msgid "Trees Selected"
 msgstr "선택된 나무"
 
-#: gexport.php:382
+#: gexport.php:389
 msgid "All Trees Selected"
 msgstr "선택한 모든 나무"
 
-#: gexport.php:388 gexport.php:434
+#: gexport.php:395 gexport.php:441
 msgid "All"
 msgstr "모두"
 
-#: gexport.php:389 gexport.php:435
+#: gexport.php:396 gexport.php:442
 msgid "None"
 msgstr "없음"
 
-#: gexport.php:419 gexport.php:465 gexport.php:567
+#: gexport.php:426 gexport.php:472 gexport.php:574
 msgid "Search"
 msgstr "검색"
 
-#: gexport.php:423
+#: gexport.php:430
 msgid "Select Site(s)"
 msgstr "사이트 선택"
 
-#: gexport.php:425
+#: gexport.php:432
 msgid "Sites Selected"
 msgstr "선택한 사이트"
 
-#: gexport.php:428
+#: gexport.php:435
 msgid "All Sites Selected"
 msgstr "모든 사이트 선택됨"
 
-#: gexport.php:559
+#: gexport.php:566
 msgid "Graph Export Definitions"
 msgstr "그래프 내보내기 정의"
 
-#: gexport.php:573
+#: gexport.php:580
 msgid "Exports"
 msgstr "내보내기"
 
-#: gexport.php:577
+#: gexport.php:584
 msgid "Default"
 msgstr "기본값"
 
-#: gexport.php:588
+#: gexport.php:595
 msgid "Refresh"
 msgstr "새로고침"
 
-#: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
+#: gexport.php:601 gexport.php:916 gexport.php:921 gexport.php:922
 msgid "Never"
 msgstr "안함"
 
-#: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
+#: gexport.php:602 gexport.php:603 gexport.php:604 gexport.php:605
 #, php-format
 msgid "%d Seconds"
 msgstr "%d 초"
 
-#: gexport.php:599
+#: gexport.php:606
 #, php-format
 msgid "%d Minute"
 msgstr "%d 분"
 
-#: gexport.php:600 gexport.php:601
+#: gexport.php:607 gexport.php:608
 #, php-format
 msgid "%d Minutes"
 msgstr "%d 분"
 
-#: gexport.php:611
+#: gexport.php:618
 msgctxt "filter: use"
 msgid "Go"
 msgstr "가기"
 
-#: gexport.php:612
+#: gexport.php:619
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "지우기"
 
-#: gexport.php:749 setup.php:281
+#: gexport.php:756 setup.php:281
 msgid "Export Name"
 msgstr "내보내기 이름"
 
-#: gexport.php:752 setup.php:282
+#: gexport.php:759 setup.php:282
 msgid "The name of this Graph Export Definition."
 msgstr "이 그래프 내보내기 정의의 이름입니다."
 
-#: gexport.php:755
+#: gexport.php:762
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:758
+#: gexport.php:765
 msgid "The internal ID of the Graph Export Definition."
 msgstr "그래프 내보내기 정의의 내부 ID입니다."
 
-#: gexport.php:761
+#: gexport.php:768
 msgid "Schedule"
 msgstr "일정"
 
-#: gexport.php:764
+#: gexport.php:771
 msgid "The frequency that Graphs will be exported."
 msgstr "그래프를 내보낼 빈도입니다."
 
-#: gexport.php:767
+#: gexport.php:774
 msgid "Next Start"
 msgstr "다음 시작"
 
-#: gexport.php:770
+#: gexport.php:777
 msgid "The next time the Graph Export should run."
 msgstr "다음에 그래프 내보내기를 실행해야합니다."
 
-#: gexport.php:773 setup.php:290
+#: gexport.php:780 setup.php:290
 msgid "Enabled"
 msgstr "활성화"
 
-#: gexport.php:775
+#: gexport.php:782
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "활성화 된 경우이 그래프 내보내기 정의가 필요에 따라 실행됩니다."
 
-#: gexport.php:778
+#: gexport.php:785
 msgid "Status"
 msgstr "상태"
 
-#: gexport.php:780
+#: gexport.php:787
 msgid "The current Graph Export Status."
 msgstr "현재 그래프 내보내기 상태."
 
-#: gexport.php:783
+#: gexport.php:790
 msgid "Exporting (Sites/Trees)"
 msgstr "내보내기 (사이트 / 트리)"
 
-#: gexport.php:786
+#: gexport.php:793
 msgid "What is being Exported."
 msgstr "무엇이 수출되고 있는가."
 
-#: gexport.php:789 setup.php:414
+#: gexport.php:796 setup.php:414
 msgid "Effective User"
 msgstr "효과적인 사용자"
 
-#: gexport.php:792
+#: gexport.php:799
 msgid "The user that this export will impersonate."
 msgstr "이 내보내기가 가장 할 사용자입니다."
 
-#: gexport.php:795
+#: gexport.php:802
 msgid "Last Runtime"
 msgstr "마지막 런타임"
 
-#: gexport.php:798
+#: gexport.php:805
 msgid "The last runtime for the Graph Export."
 msgstr "그래프 내보내기의 마지막 런타임입니다."
 
-#: gexport.php:801
+#: gexport.php:808
 msgid "Graphs"
 msgstr "그래프 "
 
-#: gexport.php:804
+#: gexport.php:811
 msgid "The number of Graphs Exported on the last run."
 msgstr "마지막 실행에서 내 보낸 그래프 수입니다."
 
-#: gexport.php:807
+#: gexport.php:814
 msgid "Last Started"
 msgstr "마지막 시작"
 
-#: gexport.php:810
+#: gexport.php:817
 msgid "The last time that this Graph Export was started."
 msgstr "이 그래프 내보내기가 마지막으로 시작된 시간."
 
-#: gexport.php:813
+#: gexport.php:820
 msgid "Last Errored"
 msgstr "최근에 오류가 발생했습니다."
 
-#: gexport.php:816
+#: gexport.php:823
 msgid "The last time that this Graph Export experienced an error."
 msgstr "이 그래프 내보내기에 마지막으로 오류가 발생했습니다."
 
-#: gexport.php:820
+#: gexport.php:827
 msgid "Export Definitions"
 msgstr "정의 내보내기"
 
-#: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
+#: gexport.php:866 gexport.php:906 gexport.php:919 gexport.php:920
 #: setup.php:419
 msgid "N/A"
 msgstr "N/A"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "No"
 msgstr "아니오"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "Yes"
 msgstr "예"
 
-#: gexport.php:865
+#: gexport.php:872
 msgid "Idle"
 msgstr "게으른"
 
-#: gexport.php:868
+#: gexport.php:875
 msgid "Running"
 msgstr "실행 중"
 
-#: gexport.php:871
+#: gexport.php:878
 msgid "Error"
 msgstr "오류"
 
-#: gexport.php:877
+#: gexport.php:884
 msgid "All Sites"
 msgstr "모든 사이트"
 
-#: gexport.php:888
+#: gexport.php:895
 msgid "All Trees"
 msgstr "모든 나무"
 
-#: gexport.php:902
+#: gexport.php:909
 msgid "Sec"
 msgstr "초"
 
-#: gexport.php:922
+#: gexport.php:929
 msgid "No Graph Export Definitions"
 msgstr "그래프 내보내기 정의 없음"
 
