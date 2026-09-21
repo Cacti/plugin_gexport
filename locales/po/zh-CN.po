@@ -4,7 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: gexport on cacti 1.1.34\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-06-23 04:08+0000\nLast-Translator: tql <fttx31@126.com>\nLanguage-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\nLanguage: zh-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.8.1\n"
+msgstr ""
+"Project-Id-Version: gexport on cacti 1.1.34\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-21 13:13-0400\n"
+"PO-Revision-Date: 2024-06-23 04:08+0000\n"
+"Last-Translator: tql <fttx31@126.com>\n"
+"Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.8.1\n"
 
 #: functions.php:312
 msgid "Success"
@@ -194,322 +206,328 @@ msgstr "没有更多的身份验证方法"
 msgid "Invalid user name"
 msgstr "无效的用户名"
 
-#: functions.php:1518 functions.php:1681
+#: functions.php:1562 functions.php:1725
 msgid "Non Query Based"
 msgstr "非基于查询"
 
-#: functions.php:1765
+#: functions.php:1809
 msgid "Graph Templates"
 msgstr "图模板"
 
-#: functions.php:1794
+#: functions.php:1838
 msgid "Data Queries"
 msgstr "数据查询"
 
-#: gexport.php:30
+#: gexport.php:31
 msgid "Delete"
 msgstr "删除"
 
-#: gexport.php:31
+#: gexport.php:32
 msgid "Enable"
 msgstr "启用"
 
-#: gexport.php:32
+#: gexport.php:33
 msgid "Disable"
 msgstr "禁用"
 
-#: gexport.php:33
+#: gexport.php:34
 msgid "Export Now"
 msgstr "立即导出"
 
-#: gexport.php:37 setup.php:354
+#: gexport.php:38 setup.php:354
 msgid "Periodic"
 msgstr "定期"
 
-#: gexport.php:38 setup.php:356
+#: gexport.php:39 setup.php:356
 msgid "Daily"
 msgstr "每日"
 
-#: gexport.php:39 setup.php:355
+#: gexport.php:40 setup.php:355
 msgid "Hourly"
 msgstr "每小时"
 
-#: gexport.php:257
+#: gexport.php:260
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "点击“继续”删除以下图形导出定义。"
 
-#: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
+#: gexport.php:265 gexport.php:275 gexport.php:285 gexport.php:295
 msgid "Cancel"
 msgstr "取消"
 
+#: gexport.php:266 gexport.php:276 gexport.php:286 gexport.php:296
+msgid "Continue"
+msgstr "继续"
+
 #: gexport.php:266
+#, fuzzy
+#| msgid "Disable Graph Export Definition(s)"
+msgid "Delete Graph Export Definition(s)"
+msgstr "图表导出定义"
+
+#: gexport.php:270
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "点击“继续”以停用以下图形导出定义。"
 
-#: gexport.php:271 gexport.php:280 gexport.php:289
-msgid "Continue"
-msgstr "继续"
-
-#: gexport.php:271
+#: gexport.php:276
 msgid "Disable Graph Export Definition(s)"
 msgstr "图表导出定义"
 
-#: gexport.php:275
+#: gexport.php:280
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "点击“继续”以启用以下图形导出定义。"
 
-#: gexport.php:280
+#: gexport.php:286
 msgid "Enable Graph Export Definition(s)"
 msgstr "图表导出定义"
 
-#: gexport.php:284
+#: gexport.php:290
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "点击“继续”立即运行以下图形导出定义。"
 
-#: gexport.php:289
+#: gexport.php:296
 msgid "Run Graph Export Definition(s) Now"
 msgstr "图表导出定义"
 
-#: gexport.php:292
+#: gexport.php:299
 msgid "You must select at least one Graph Export Definition."
 msgstr "您必须至少选择一个图形导出定义。"
 
-#: gexport.php:293
+#: gexport.php:300
 msgid "Return"
 msgstr "返回"
 
-#: gexport.php:349
+#: gexport.php:356
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "图表导出定义[编辑：%s]"
 
-#: gexport.php:351
+#: gexport.php:358
 msgid "Graph Export Definition [new]"
 msgstr "图表导出定义[新建]"
 
-#: gexport.php:377
+#: gexport.php:384
 msgid "Select Tree(s)"
 msgstr "选择树"
 
-#: gexport.php:379
+#: gexport.php:386
 msgid "Trees Selected"
 msgstr "树被选择"
 
-#: gexport.php:382
+#: gexport.php:389
 msgid "All Trees Selected"
 msgstr "选择所有树"
 
-#: gexport.php:388 gexport.php:434
+#: gexport.php:395 gexport.php:441
 msgid "All"
 msgstr "所有"
 
-#: gexport.php:389 gexport.php:435
+#: gexport.php:396 gexport.php:442
 msgid "None"
 msgstr "没有"
 
-#: gexport.php:419 gexport.php:465 gexport.php:567
+#: gexport.php:426 gexport.php:472 gexport.php:574
 msgid "Search"
 msgstr "搜索"
 
-#: gexport.php:423
+#: gexport.php:430
 msgid "Select Site(s)"
 msgstr "选择网站"
 
-#: gexport.php:425
+#: gexport.php:432
 msgid "Sites Selected"
 msgstr "选择的网站"
 
-#: gexport.php:428
+#: gexport.php:435
 msgid "All Sites Selected"
 msgstr "所有选定的站点"
 
-#: gexport.php:559
+#: gexport.php:566
 msgid "Graph Export Definitions"
 msgstr "图表导出定义"
 
-#: gexport.php:573
+#: gexport.php:580
 msgid "Exports"
 msgstr "导出"
 
-#: gexport.php:577
+#: gexport.php:584
 msgid "Default"
 msgstr "默认"
 
-#: gexport.php:588
+#: gexport.php:595
 msgid "Refresh"
 msgstr "刷新"
 
-#: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
+#: gexport.php:601 gexport.php:916 gexport.php:921 gexport.php:922
 msgid "Never"
 msgstr "从不"
 
-#: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
+#: gexport.php:602 gexport.php:603 gexport.php:604 gexport.php:605
 #, php-format
 msgid "%d Seconds"
 msgstr "%d秒"
 
-#: gexport.php:599
+#: gexport.php:606
 #, php-format
 msgid "%d Minute"
 msgstr "%d分钟"
 
-#: gexport.php:600 gexport.php:601
+#: gexport.php:607 gexport.php:608
 #, php-format
 msgid "%d Minutes"
 msgstr "%d分钟"
 
-#: gexport.php:611
+#: gexport.php:618
 msgctxt "filter: use"
 msgid "Go"
 msgstr "启动"
 
-#: gexport.php:612
+#: gexport.php:619
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "清除"
 
-#: gexport.php:749 setup.php:281
+#: gexport.php:756 setup.php:281
 msgid "Export Name"
 msgstr "导出名称"
 
-#: gexport.php:752 setup.php:282
+#: gexport.php:759 setup.php:282
 msgid "The name of this Graph Export Definition."
 msgstr "此图形导出定义的名称。"
 
-#: gexport.php:755
+#: gexport.php:762
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:758
+#: gexport.php:765
 msgid "The internal ID of the Graph Export Definition."
 msgstr "图形导出定义的内部ID。"
 
-#: gexport.php:761
+#: gexport.php:768
 msgid "Schedule"
 msgstr "计划表"
 
-#: gexport.php:764
+#: gexport.php:771
 msgid "The frequency that Graphs will be exported."
 msgstr "图形将被导出的频率。"
 
-#: gexport.php:767
+#: gexport.php:774
 msgid "Next Start"
 msgstr "下一步开始"
 
-#: gexport.php:770
+#: gexport.php:777
 msgid "The next time the Graph Export should run."
 msgstr "下一次图导出应该运行。"
 
-#: gexport.php:773 setup.php:290
+#: gexport.php:780 setup.php:290
 msgid "Enabled"
 msgstr "已启用"
 
-#: gexport.php:775
+#: gexport.php:782
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "如果启用，此图形导出定义将根据需要运行。"
 
-#: gexport.php:778
+#: gexport.php:785
 msgid "Status"
 msgstr "状态"
 
-#: gexport.php:780
+#: gexport.php:787
 msgid "The current Graph Export Status."
 msgstr "当前的图形导出状态。"
 
-#: gexport.php:783
+#: gexport.php:790
 msgid "Exporting (Sites/Trees)"
 msgstr "导出（网站/树）"
 
-#: gexport.php:786
+#: gexport.php:793
 msgid "What is being Exported."
 msgstr "什么将被导出。"
 
-#: gexport.php:789 setup.php:414
+#: gexport.php:796 setup.php:414
 msgid "Effective User"
 msgstr "有效的用户"
 
-#: gexport.php:792
+#: gexport.php:799
 msgid "The user that this export will impersonate."
 msgstr "该导出将模拟的用户。"
 
-#: gexport.php:795
+#: gexport.php:802
 msgid "Last Runtime"
 msgstr "上次运行时间"
 
-#: gexport.php:798
+#: gexport.php:805
 msgid "The last runtime for the Graph Export."
 msgstr "图表导出的最后一个运行时间。"
 
-#: gexport.php:801
+#: gexport.php:808
 msgid "Graphs"
 msgstr "图表"
 
-#: gexport.php:804
+#: gexport.php:811
 msgid "The number of Graphs Exported on the last run."
 msgstr "最后一次运行导出的图形数量。"
 
-#: gexport.php:807
+#: gexport.php:814
 msgid "Last Started"
 msgstr "最后开始"
 
-#: gexport.php:810
+#: gexport.php:817
 msgid "The last time that this Graph Export was started."
 msgstr "上次图形导出已启动。"
 
-#: gexport.php:813
+#: gexport.php:820
 msgid "Last Errored"
 msgstr "最后的错误"
 
-#: gexport.php:816
+#: gexport.php:823
 msgid "The last time that this Graph Export experienced an error."
 msgstr "上次图表导出出现错误。"
 
-#: gexport.php:820
+#: gexport.php:827
 msgid "Export Definitions"
 msgstr "导出定义"
 
-#: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
+#: gexport.php:866 gexport.php:906 gexport.php:919 gexport.php:920
 #: setup.php:419
 msgid "N/A"
 msgstr "不可用"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "No"
 msgstr "否"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "Yes"
 msgstr "是"
 
-#: gexport.php:865
+#: gexport.php:872
 msgid "Idle"
 msgstr "闲"
 
-#: gexport.php:868
+#: gexport.php:875
 msgid "Running"
 msgstr "运行"
 
-#: gexport.php:871
+#: gexport.php:878
 msgid "Error"
 msgstr "错误"
 
-#: gexport.php:877
+#: gexport.php:884
 msgid "All Sites"
 msgstr "所有网站"
 
-#: gexport.php:888
+#: gexport.php:895
 msgid "All Trees"
 msgstr "所有树"
 
-#: gexport.php:902
+#: gexport.php:909
 msgid "Sec"
 msgstr "秒"
 
-#: gexport.php:922
+#: gexport.php:929
 msgid "No Graph Export Definitions"
 msgstr "没有图表导出定义"
 
