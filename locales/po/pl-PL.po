@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
+"POT-Creation-Date: 2026-09-21 13:13-0400\n"
 "PO-Revision-Date: 2024-06-07 23:15-0400\n"
 "Last-Translator: kaktus <kaktus_j_p@o2.pl>\n"
 "Language-Team: Polish <http://translate.cacti.net/projects/cacti/gexport/pl/>\n"
@@ -206,330 +206,336 @@ msgstr "Nie ma już dostępnych metod uwierzytelniania"
 msgid "Invalid user name"
 msgstr "Nieprawidłowa nazwa użytkownika"
 
-#: functions.php:1518 functions.php:1681
+#: functions.php:1562 functions.php:1725
 msgid "Non Query Based"
 msgstr "Nieoparte na zapytaniach"
 
-#: functions.php:1765
+#: functions.php:1809
 msgid "Graph Templates"
 msgstr "Szablony wykresów"
 
-#: functions.php:1794
+#: functions.php:1838
 msgid "Data Queries"
 msgstr "Zapytania o dane"
 
-#: gexport.php:30
+#: gexport.php:31
 msgid "Delete"
 msgstr "Usuń"
 
-#: gexport.php:31
+#: gexport.php:32
 msgid "Enable"
 msgstr "Włącz"
 
-#: gexport.php:32
+#: gexport.php:33
 msgid "Disable"
 msgstr "Wyłącz"
 
-#: gexport.php:33
+#: gexport.php:34
 msgid "Export Now"
 msgstr "Eksport teraz"
 
-#: gexport.php:37 setup.php:354
+#: gexport.php:38 setup.php:354
 msgid "Periodic"
 msgstr "Okresowy"
 
-#: gexport.php:38 setup.php:356
+#: gexport.php:39 setup.php:356
 msgid "Daily"
 msgstr "Dziennie"
 
-#: gexport.php:39 setup.php:355
+#: gexport.php:40 setup.php:355
 msgid "Hourly"
 msgstr "Co godzinę"
 
-#: gexport.php:257
+#: gexport.php:260
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następującą definicję eksportu wykresu."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:262 gexport.php:271 gexport.php:280 gexport.php:289
+#: gexport.php:265 gexport.php:275 gexport.php:285 gexport.php:295
 msgid "Cancel"
 msgstr "Anuluj"
 
+#: gexport.php:266 gexport.php:276 gexport.php:286 gexport.php:296
+msgid "Continue"
+msgstr "Kontynuuj"
+
 #: gexport.php:266
+#, fuzzy
+#| msgid "Disable Graph Export Definition(s)"
+msgid "Delete Graph Export Definition(s)"
+msgstr "Wykres Definicje eksportu"
+
+#: gexport.php:270
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następującą definicję eksportu wykresu."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:271 gexport.php:280 gexport.php:289
-msgid "Continue"
-msgstr "Kontynuuj"
-
-#: gexport.php:271
+#: gexport.php:276
 msgid "Disable Graph Export Definition(s)"
 msgstr "Wykres Definicje eksportu"
 
-#: gexport.php:275
+#: gexport.php:280
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następującą definicję eksportu wykresu."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:280
+#: gexport.php:286
 msgid "Enable Graph Export Definition(s)"
 msgstr "Wykres Definicje eksportu"
 
-#: gexport.php:284
+#: gexport.php:290
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następującą definicję eksportu wykresu."
 msgstr[1] ""
 msgstr[2] ""
 
-#: gexport.php:289
+#: gexport.php:296
 msgid "Run Graph Export Definition(s) Now"
 msgstr "Wykres Definicje eksportu"
 
-#: gexport.php:292
+#: gexport.php:299
 msgid "You must select at least one Graph Export Definition."
 msgstr "Należy wybrać co najmniej jedną definicję eksportu wykresu."
 
-#: gexport.php:293
+#: gexport.php:300
 msgid "Return"
 msgstr "Powróć"
 
-#: gexport.php:349
+#: gexport.php:356
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "Definicja eksportu wykresu [edytuj: %s]"
 
-#: gexport.php:351
+#: gexport.php:358
 msgid "Graph Export Definition [new]"
 msgstr "Wykres Definicja eksportu [nowe]"
 
-#: gexport.php:377
+#: gexport.php:384
 msgid "Select Tree(s)"
 msgstr "Wybierz Drzewo(-a)"
 
-#: gexport.php:379
+#: gexport.php:386
 msgid "Trees Selected"
 msgstr "Wybrane drzewa"
 
-#: gexport.php:382
+#: gexport.php:389
 msgid "All Trees Selected"
 msgstr "Wszystkie wybrane drzewa"
 
-#: gexport.php:388 gexport.php:434
+#: gexport.php:395 gexport.php:441
 msgid "All"
 msgstr "Wszystkie"
 
-#: gexport.php:389 gexport.php:435
+#: gexport.php:396 gexport.php:442
 msgid "None"
 msgstr "Brak"
 
-#: gexport.php:419 gexport.php:465 gexport.php:567
+#: gexport.php:426 gexport.php:472 gexport.php:574
 msgid "Search"
 msgstr "Szukaj"
 
-#: gexport.php:423
+#: gexport.php:430
 msgid "Select Site(s)"
 msgstr "Wybierz stronę (strony)"
 
-#: gexport.php:425
+#: gexport.php:432
 msgid "Sites Selected"
 msgstr "Wybrane miejsca"
 
-#: gexport.php:428
+#: gexport.php:435
 msgid "All Sites Selected"
 msgstr "Wszystkie wybrane miejsca"
 
-#: gexport.php:559
+#: gexport.php:566
 msgid "Graph Export Definitions"
 msgstr "Wykres Definicje eksportu"
 
-#: gexport.php:573
+#: gexport.php:580
 msgid "Exports"
 msgstr "Eksport"
 
-#: gexport.php:577
+#: gexport.php:584
 msgid "Default"
 msgstr "Domyślny"
 
-#: gexport.php:588
+#: gexport.php:595
 msgid "Refresh"
 msgstr "Odśwież"
 
-#: gexport.php:594 gexport.php:909 gexport.php:914 gexport.php:915
+#: gexport.php:601 gexport.php:916 gexport.php:921 gexport.php:922
 msgid "Never"
 msgstr "Nigdy"
 
-#: gexport.php:595 gexport.php:596 gexport.php:597 gexport.php:598
+#: gexport.php:602 gexport.php:603 gexport.php:604 gexport.php:605
 #, php-format
 msgid "%d Seconds"
 msgstr "%d Sekund"
 
-#: gexport.php:599
+#: gexport.php:606
 #, php-format
 msgid "%d Minute"
 msgstr "%d minuta"
 
-#: gexport.php:600 gexport.php:601
+#: gexport.php:607 gexport.php:608
 #, php-format
 msgid "%d Minutes"
 msgstr "%d minut"
 
-#: gexport.php:611
+#: gexport.php:618
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Idź"
 
-#: gexport.php:612
+#: gexport.php:619
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Wyczyść"
 
-#: gexport.php:749 setup.php:281
+#: gexport.php:756 setup.php:281
 msgid "Export Name"
 msgstr "Nazwa eksportu"
 
-#: gexport.php:752 setup.php:282
+#: gexport.php:759 setup.php:282
 msgid "The name of this Graph Export Definition."
 msgstr "Nazwa tej definicji eksportu wykresu."
 
-#: gexport.php:755
+#: gexport.php:762
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:758
+#: gexport.php:765
 msgid "The internal ID of the Graph Export Definition."
 msgstr "Wewnętrzny identyfikator definicji eksportu wykresu."
 
-#: gexport.php:761
+#: gexport.php:768
 msgid "Schedule"
 msgstr "Harmonogram"
 
-#: gexport.php:764
+#: gexport.php:771
 msgid "The frequency that Graphs will be exported."
 msgstr "Częstotliwość, z jaką wykresy będą eksportowane."
 
-#: gexport.php:767
+#: gexport.php:774
 msgid "Next Start"
 msgstr "Następny start"
 
-#: gexport.php:770
+#: gexport.php:777
 msgid "The next time the Graph Export should run."
 msgstr "Następnym razem powinien zostać uruchomiony eksport wykresu."
 
-#: gexport.php:773 setup.php:290
+#: gexport.php:780 setup.php:290
 msgid "Enabled"
 msgstr "Włączone"
 
-#: gexport.php:775
+#: gexport.php:782
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "Jeśli jest włączona, ta definicja eksportu wykresu będzie działać zgodnie z wymaganiami."
 
-#: gexport.php:778
+#: gexport.php:785
 msgid "Status"
 msgstr "Status"
 
-#: gexport.php:780
+#: gexport.php:787
 msgid "The current Graph Export Status."
 msgstr "Bieżący status eksportu wykresu."
 
-#: gexport.php:783
+#: gexport.php:790
 msgid "Exporting (Sites/Trees)"
 msgstr "Eksport (miejsca/drzewa)"
 
-#: gexport.php:786
+#: gexport.php:793
 msgid "What is being Exported."
 msgstr "Co to jest eksportowane."
 
-#: gexport.php:789 setup.php:414
+#: gexport.php:796 setup.php:414
 msgid "Effective User"
 msgstr "Efektywny użytkownik"
 
-#: gexport.php:792
+#: gexport.php:799
 msgid "The user that this export will impersonate."
 msgstr "Użytkownik, który będzie podszywał się pod ten eksport."
 
-#: gexport.php:795
+#: gexport.php:802
 msgid "Last Runtime"
 msgstr "Ostatnia runda"
 
-#: gexport.php:798
+#: gexport.php:805
 msgid "The last runtime for the Graph Export."
 msgstr "Ostatni runtime dla eksportu wykresu."
 
-#: gexport.php:801
+#: gexport.php:808
 msgid "Graphs"
 msgstr "Wykresy"
 
-#: gexport.php:804
+#: gexport.php:811
 msgid "The number of Graphs Exported on the last run."
 msgstr "Liczba wykresów wyeksportowanych na ostatnim przebiegu."
 
-#: gexport.php:807
+#: gexport.php:814
 msgid "Last Started"
 msgstr "Ostatnio uruchomiony"
 
-#: gexport.php:810
+#: gexport.php:817
 msgid "The last time that this Graph Export was started."
 msgstr "Ostatni raz, gdy ten eksport wykresu został rozpoczęty."
 
-#: gexport.php:813
+#: gexport.php:820
 msgid "Last Errored"
 msgstr "Ostatni błąd"
 
-#: gexport.php:816
+#: gexport.php:823
 msgid "The last time that this Graph Export experienced an error."
 msgstr "Ostatnim razem, gdy ten eksport wykresu doznał błędu."
 
-#: gexport.php:820
+#: gexport.php:827
 msgid "Export Definitions"
 msgstr "Definicje eksportu"
 
-#: gexport.php:859 gexport.php:899 gexport.php:912 gexport.php:913
+#: gexport.php:866 gexport.php:906 gexport.php:919 gexport.php:920
 #: setup.php:419
 msgid "N/A"
 msgstr "N/D"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "No"
 msgstr "Nie"
 
-#: gexport.php:861
+#: gexport.php:868
 msgid "Yes"
 msgstr "Tak"
 
-#: gexport.php:865
+#: gexport.php:872
 msgid "Idle"
 msgstr "Bezczynny"
 
-#: gexport.php:868
+#: gexport.php:875
 msgid "Running"
 msgstr "Pracuje"
 
-#: gexport.php:871
+#: gexport.php:878
 msgid "Error"
 msgstr "Błąd"
 
-#: gexport.php:877
+#: gexport.php:884
 msgid "All Sites"
 msgstr "Wszystkie strony"
 
-#: gexport.php:888
+#: gexport.php:895
 msgid "All Trees"
 msgstr "Wszystkie drzewa"
 
-#: gexport.php:902
+#: gexport.php:909
 msgid "Sec"
 msgstr "Sek"
 
-#: gexport.php:922
+#: gexport.php:929
 msgid "No Graph Export Definitions"
 msgstr "Nr Wykres Definicje eksportowe"
 
