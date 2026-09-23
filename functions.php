@@ -22,6 +22,23 @@
  +-------------------------------------------------------------------------+
 */
 
+/**
+ * Computes an export configuration's next scheduled run time, based on
+ * its timing mode (periodic/hourly/daily) and configured skip interval/
+ * time-of-day. Called from gexport.php's form_save() when a schedule is
+ * saved, and from graph_export() after each periodic run to schedule the
+ * next one.
+ *
+ * @param array $export     The graph_exports row (or submitted form
+ *                          values) describing the export's timing
+ *                          configuration.
+ * @param int   $start_time The reference Unix timestamp to compute the
+ *                          next run relative to; defaults to the current
+ *                          time when 0.
+ *
+ * @return string The computed next start time, formatted
+ *                'Y-m-d H:i:s'/'Y-m-d H:i:00'.
+ */
 function gexport_calc_next_start($export, $start_time = 0) {
 	if ($start_time == 0) $start_time = time();
 
@@ -61,11 +78,29 @@ function gexport_calc_next_start($export, $start_time = 0) {
 	return $next_start;
 }
 
-/* graph_export - a function that determines, for each export definition
-   if it's time to run or not.  this function is currently single threaded
-   and some thought should be given to making multi-threaded.
-   @arg $id    - the id of the export to check, '0' for all export definitions.
-   @arg $force - force the export to run no regardless of it's timing settings. */
+/**
+ * A function that determines, for each export definition, if it's time
+ * to run or not. This function is currently single threaded and some
+ * thought should be given to making multi-threaded. Called from
+ * poller_export.php's main flow (or, for a single export, via the
+ * '--id' CLI argument) once per poller cycle to check every enabled
+ * export definition and start any that are due.
+ *
+ * @arg $id    - the id of the export to check, '0' for all export definitions.
+ * @arg $force - force the export to run no regardless of it's timing settings.
+ *
+ * @param int  $id    The graph_exports.id to check, or 0 for every
+ *                    enabled export definition; defaults to 0.
+ * @param bool $force Whether to run regardless of scheduled timing;
+ *                    defaults to false.
+ *
+ * @return void
+ *
+ * @global bool  $debug Reserved/declared for parity with other export
+ *                       functions; not used directly here.
+ * @global float $start Set to the run's start time (from microtime(true)),
+ *                       used to compute and log overall run duration.
+ */
 function graph_export($id = 0, $force = false) {
 	global $debug, $start;
 
@@ -129,11 +164,30 @@ function graph_export($id = 0, $force = false) {
 	cacti_log('MASTER STATS: ' . $export_stats, true, 'EXPORT');
 }
 
-/* run_export - a function the pre-processes the export structure and
-   then executes the required functions to export graphs, html and
-   config, to sanitize directories, and transfer data to the remote
-   host(s).
-   @arg $export   - the export item structure. */
+/**
+ * A function the pre-processes the export structure and then executes
+ * the required functions to export graphs, html and config, to sanitize
+ * directories, and transfer data to the remote host(s). Dispatches to
+ * the type-specific exporter/transfer functions based on the export's
+ * configured 'export_type' (local, sftp, ftp, ftp_nc, rsync, scp).
+ * Called from graph_export() for each export definition that is due to
+ * run.
+ *
+ * @arg $export   - the export item structure.
+ *
+ * @param array $export Reference to the graph_exports row describing the
+ *                      export to run; its export_pid/status/last_started
+ *                      fields are updated as a side effect.
+ *
+ * @return void
+ *
+ * @global array  $config      Cacti global configuration array; used to
+ *                             resolve OS-specific temp directory
+ *                             defaults.
+ * @global string $export_path Set to the resolved local/temp export
+ *                             directory for the current export, for
+ *                             other functions in this file to read.
+ */
 function run_export(&$export) {
 	global $config, $export_path;
 
@@ -258,6 +312,20 @@ function run_export(&$export) {
 	config_export_stats($export, $exported);
 }
 
+/**
+ * Transfers the exported files in the temporary export directory to a
+ * remote host via rsync, honoring an optional SSH private key and port,
+ * and optionally pruning empty/deleted directories on the destination.
+ * Calls export_fatal() (which exits) on validation or transfer failure.
+ * Called from run_export() for exports of type 'rsync'.
+ *
+ * @param array  $export      Reference to the graph_exports row; used
+ *                            for its rsync/SSH connection settings.
+ * @param string $stExportDir The local temp directory whose contents are
+ *                            rsync'd to the remote host.
+ *
+ * @return void
+ */
 function export_rsync_execute(&$export, $stExportDir) {
 	$keyopt = '';
 	$user   = $export['export_user'];
@@ -306,6 +374,18 @@ function export_rsync_execute(&$export, $stExportDir) {
 	}
 }
 
+/**
+ * Translates an rsync process exit code into a human-readable message.
+ * Called from export_rsync_execute() (and, atypically, reused by
+ * export_scp_execute()) when a transfer fails, to describe the failure
+ * in the fatal error message.
+ *
+ * @param int $error_code The rsync process's exit code.
+ *
+ * @return string The corresponding human-readable error description, or
+ *                a generic 'Unknown error' message with the code
+ *                appended.
+ */
 function export_rsync_get_message($error_code) {
 
 	switch ($error_code) {
@@ -335,6 +415,19 @@ function export_rsync_get_message($error_code) {
 	}
 }
 
+/**
+ * Transfers the exported files in the temporary export directory to a
+ * remote host via scp, honoring an optional SSH private key and port.
+ * Calls export_fatal() (which exits) on validation or transfer failure.
+ * Called from run_export() for exports of type 'scp'.
+ *
+ * @param array  $export      Reference to the graph_exports row; used
+ *                            for its scp/SSH connection settings.
+ * @param string $stExportDir The local temp directory whose contents are
+ *                            copied to the remote host.
+ *
+ * @return void
+ */
 function export_scp_execute(&$export, $stExportDir) {
 	$keyopt = '';
 	$user   = $export['export_user'];
@@ -372,6 +465,17 @@ function export_scp_execute(&$export, $stExportDir) {
 	}
 }
 
+/**
+ * Translates an scp process exit code into a human-readable message.
+ * Called from export_scp_execute() when a transfer fails, to describe
+ * the failure in the fatal error message.
+ *
+ * @param int $error_code The scp process's exit code.
+ *
+ * @return string The corresponding human-readable error description, or
+ *                a generic 'Unknown error' message with the code
+ *                appended.
+ */
 function export_scp_get_message($error_code) {
 	switch ($error_code) {
 		case 0: return __("Operation was successful");
@@ -405,10 +509,25 @@ function export_scp_get_message($error_code) {
 			return __('Unknown error ','gexport') . $error_code;
 	}
 }
-/* exporter - a wrapper function that reduces clutter in the run_export
-   function.
-   @arg $export      - the export item structure.
-   @arg $export_path - the location to storage export output. */
+/**
+ * A wrapper function that reduces clutter in the run_export function.
+ * Creates the export directory structure and generates the exported
+ * graph images/HTML/config for a single export definition. Called from
+ * run_export() for every export type, before any remote transfer step.
+ *
+ * @arg $export      - the export item structure.
+ * @arg $export_path - the location to storage export output.
+ *
+ * @param array  $export      Reference to the graph_exports row
+ *                            describing the export to generate.
+ * @param string $export_path The local (or temp) directory to write the
+ *                            exported graphs/HTML/config into.
+ *
+ * @return int The number of graphs exported.
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       resolve the base install path.
+ */
 function exporter(&$export, $export_path) {
 	global $config;
 
@@ -424,11 +543,26 @@ function exporter(&$export, $export_path) {
 	return $exported;
 }
 
-/* config_export_stats - a function to export stats to the Cacti system for information
-   and possible graphing. It uses a global variable to get the start time of the
-   export process.
-   @arg $export   - the export item structure
-   @arg $exported - the number of graphs exported. */
+/**
+ * A function to export stats to the Cacti system for information and
+ * possible graphing. It uses a global variable to get the start time of
+ * the export process. Called from run_export() after an export
+ * definition finishes (successfully or not), to record run duration and
+ * counts.
+ *
+ * @arg $export   - the export item structure
+ * @arg $exported - the number of graphs exported.
+ *
+ * @param array $export   Reference to the graph_exports row being
+ *                        updated with its final run statistics.
+ * @param int   $exported The number of graphs exported during this run.
+ *
+ * @return void
+ *
+ * @global float $start The run's start time (from microtime(true)), set
+ *                      by run_export()'s caller, used to compute
+ *                      duration.
+ */
 function config_export_stats(&$export, $exported) {
 	global $start;
 	/* take time to log performance data */
@@ -449,10 +583,22 @@ function config_export_stats(&$export, $exported) {
 	db_execute_prepared(sprintf("REPLACE INTO settings (name,value) values ('stats_export_%s', ?)", $export['id']), [$export_stats]);
 }
 
-/* export_fatal - a simple export logging function that indicates a
-   fatal condition for developers and users.
-   @arg $export    - the export item structure
-   @arg $stMessage - the debug message. */
+/**
+ * A simple export logging function that indicates a fatal condition for
+ * developers and users. Records the error on the export's graph_exports
+ * row and terminates the script. Called throughout this file whenever an
+ * unrecoverable export/transfer error occurs.
+ *
+ * @arg $export    - the export item structure
+ * @arg $stMessage - the debug message.
+ *
+ * @param array  $export    Reference to the graph_exports row to record
+ *                          the fatal error against.
+ * @param string $stMessage The fatal error message to log and record.
+ *
+ * @return void This function always terminates script execution via
+ *              exit and therefore never returns.
+ */
 function export_fatal(&$export, $stMessage) {
 	export_recordlog('FATAL ERROR: ' . $stMessage, POLLER_VERBOSITY_NONE);
 
@@ -465,37 +611,85 @@ function export_fatal(&$export, $stMessage) {
 	exit;
 }
 
-/* export_warn - a simple export logging function that indicates a
-   warning condition for developers and users
-   @arg $stMessage - the message */
+/**
+ * A simple export logging function that indicates a warning condition
+ * for developers and users. Called from run_export() when a previous run
+ * ended in an unclean state.
+ *
+ * @arg $stMessage - the message
+ *
+ * @param string $stMessage The warning message to log.
+ *
+ * @return void
+ */
 function export_warn($stMessage) {
 	export_recordlog($stMessage, POLLER_VERBOSITY_MEDIUM);
 }
 
-/* export_note - a simple export logging function */
+/**
+ * A simple export logging function, logged at the 'none' verbosity
+ * level so it is always recorded. Called throughout this file to record
+ * transfer command output for troubleshooting failures.
+ *
+ * @param string $stMessage The message to log.
+ *
+ * @return void
+ */
 function export_note($stMessage) {
 	export_recordlog($stMessage, POLLER_VERBOSITY_NONE);
 }
 
-/* export_log - a simple export logging function that also logs to stdout
-   for developers.
-   @arg $stMessage - the debug message. */
+/**
+ * A simple export logging function that also logs to stdout for
+ * developers. Called throughout this file to record notable
+ * higher-level progress messages.
+ *
+ * @arg $stMessage - the debug message.
+ *
+ * @param string $stMessage The message to log.
+ *
+ * @return void
+ */
 function export_log($stMessage) {
 	export_recordlog($stMessage, POLLER_VERBOSITY_HIGH);
 }
 
-/* export_debug - a common cli debug level output for developers.
-   @arg $stMessage - the debug message. */
+/**
+ * A common cli debug level output for developers. Called throughout this
+ * file to record verbose diagnostic/progress messages during an export
+ * run.
+ *
+ * @arg $stMessage - the debug message.
+ *
+ * @param string $stMessage The debug message to log.
+ *
+ * @return void
+ */
 function export_debug($stMessage) {
 	export_recordlog($stMessage, POLLER_VERBOSITY_DEBUG);
 }
 
-/* export_recordlog - a common logging function to output to the
-   cacti log file and screen.  Default is to use debug mode unless
-   the @loglevel is overridden or the global debug flag is set
-   @message  - the message to record
-   @loglevel - the cacti loggiing level to use which affects both
-               screen and log file output */
+/**
+ * A common logging function to output to the cacti log file and screen.
+ * Default is to use debug mode unless the loglevel is overridden or the
+ * global debug flag is set. Called by all of this file's export_fatal/
+ * export_warn/export_note/export_log/export_debug wrapper functions to
+ * actually perform the logging.
+ *
+ * @message  - the message to record
+ * @loglevel - the cacti loggiing level to use which affects both
+ *             screen and log file output
+ *
+ * @param string $message  The message to record.
+ * @param int    $loglevel The Cacti logging verbosity level to use;
+ *                         defaults to POLLER_VERBOSITY_DEBUG.
+ *
+ * @return void
+ *
+ * @global bool $debug When true, forces the log level to
+ *                     POLLER_VERBOSITY_NONE and prepends the current
+ *                     memory usage to the message.
+ */
 function export_recordlog($message, $loglevel = POLLER_VERBOSITY_DEBUG) {
 	global $debug;
 
@@ -512,6 +706,25 @@ function export_recordlog($message, $loglevel = POLLER_VERBOSITY_DEBUG) {
    of your pre-checked ftp credentials and settings that will be used
    for the actual ftp transfer.
    @arg $export       - the export item structure */
+/**
+ * Builds the $aFtpExport connection-settings array (host, remote
+ * directory, port, credentials, passive/active mode) used by the
+ * PHP-native FTP transfer functions, defaulting to anonymous/active
+ * transfer when no username is configured. Calls export_fatal() when
+ * the host or remote directory is blank. Called from run_export() before
+ * an FTP-based transfer.
+ *
+ * @param array $export Reference to the graph_exports row supplying the
+ *                      FTP connection settings.
+ *
+ * @return void
+ *
+ * @global array $config     Cacti global configuration array (declared
+ *                           but not directly used here).
+ * @global array $aFtpExport Set to the resolved FTP connection settings
+ *                           for export_ftp_php_execute() and related
+ *                           functions to use.
+ */
 function export_pre_ftp_upload(&$export) {
 	global $config, $aFtpExport;
 
@@ -546,11 +759,26 @@ function export_pre_ftp_upload(&$export) {
 	}
 }
 
-/* check_cacti_paths - this function is looking for bad export paths that
-   can potentially get the user in trouble.  We avoid paths that can
-   get erased by accident.
-   @arg $export       - the export item structure
-   @arg $export_path  - the directory holding the export contents. */
+/**
+ * This function is looking for bad export paths that can potentially get
+ * the user in trouble. We avoid paths that can get erased by accident,
+ * such as being within, equal to, or a parent of the Cacti install's own
+ * system directories. Calls export_fatal() (which exits) when the export
+ * path is unsafe. Called from export_graphs() before any local export
+ * path is created or cleared.
+ *
+ * @arg $export       - the export item structure
+ * @arg $export_path  - the directory holding the export contents.
+ *
+ * @param array  $export      Reference to the graph_exports row, used
+ *                            for fatal-error reporting.
+ * @param string $export_path The local export path to validate.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       resolve the web root path to compare against.
+ */
 function check_cacti_paths(&$export, $export_path) {
 	global $config;
 
@@ -589,6 +817,19 @@ function check_cacti_paths(&$export, $export_path) {
 
 }
 
+/**
+ * Prevents exporting to well-known operating system directories (e.g.
+ * /boot, /etc, Windows/Program Files) by comparing the export path
+ * against a denylist. Calls export_fatal() (which exits) when the export
+ * path matches a system path. Called from export_graphs() before any
+ * local export path is created or cleared.
+ *
+ * @param array  $export      Reference to the graph_exports row, used
+ *                            for fatal-error reporting.
+ * @param string $export_path The local export path to validate.
+ *
+ * @return void
+ */
 function check_system_paths(&$export, $export_path) {
 	/* don't allow to export to system paths */
 	$system_paths = [
@@ -619,11 +860,28 @@ function check_system_paths(&$export, $export_path) {
 	}
 }
 
-/* export_graphs - this function exports all the graphs and some html for
-   mgtg view data.  these are all the graphs that are in scope for the export
-   be it a tree export, or a site export.
-   @arg $export       - the export item structure
-   @arg $export_path  - the directory holding the export contents. */
+/**
+ * This function exports all the graphs and some html for mgtg view data.
+ * These are all the graphs that are in scope for the export be it a tree
+ * export, or a site export. Validates/prepares the local export
+ * directory, determines the set of graphs allowed for the configured
+ * user and tree/site selection, then exports each one (directly, or via
+ * the multi-threaded task queue when export_threads > 0). Called from
+ * exporter() for every export run.
+ *
+ * @arg $export       - the export item structure
+ * @arg $export_path  - the directory holding the export contents.
+ *
+ * @param array  $export      Reference to the graph_exports row
+ *                            describing what/how to export.
+ * @param string $export_path The local directory to write exported
+ *                            graphs/HTML into.
+ *
+ * @return int The number of graphs actually exported.
+ *
+ * @global array $config Cacti global configuration array (declared but
+ *                       not directly used here).
+ */
 function export_graphs(&$export, $export_path) {
 	global $config;
 
@@ -806,6 +1064,22 @@ function export_graphs(&$export, $export_path) {
 	return $exported;
 }
 
+/**
+ * Recursively deletes all files and subdirectories under a directory
+ * (following/removing symlinks without traversing them), optionally
+ * leaving the top-level directory itself in place. Called from
+ * export_graphs() to clear a previous export's contents when the export
+ * definition's 'export_clear' option is enabled.
+ *
+ * @param string $dir  The directory to empty.
+ * @param bool   $skip Whether to leave the top-level directory itself in
+ *                     place after emptying it; defaults to false
+ *                     (removes it too).
+ *
+ * @return bool|int False if $dir does not resolve to a real path;
+ *                  otherwise 0 when $skip is true, or the result of
+ *                  rmdir() on the now-empty directory.
+ */
 function delTree($dir, $skip = false) {
 	$dir = realpath($dir);
 	if ($dir === false) {
@@ -826,10 +1100,39 @@ function delTree($dir, $skip = false) {
 	return ($skip ? 0 : rmdir($dir));
 }
 
+/**
+ * Checks whether a process id is still alive, without actually sending a
+ * signal (signal 0 is a no-op used purely for existence testing). Called
+ * from export_graph_monitor_tasks() to detect worker processes that died
+ * without updating their task status.
+ *
+ * @param int $pid The process id to check.
+ *
+ * @return bool True if the process exists (and is signalable), false
+ *              otherwise.
+ */
 function export_is_task_running($pid) {
     return posix_kill($pid, 0);
 }
 
+/**
+ * Runs the multi-threaded export supervisor loop: periodically checks
+ * the graph_exports_tasks queue, marks stalled tasks as failed, detects
+ * worker processes that died without updating their status, and spawns
+ * new background poller_export.php worker processes (up to the export's
+ * configured thread count) until every queued task has completed.
+ * Called from export_graphs() after all tasks have been queued, when the
+ * export definition's 'export_threads' setting is greater than 0.
+ *
+ * @param array $export The graph_exports row; used for its
+ *                      'export_threads' concurrency limit.
+ *
+ * @return void Blocks (looping with a 2-second sleep) until all queued
+ *              tasks reach a terminal status.
+ *
+ * @global bool $debug Reserved/declared for parity with other export
+ *                     functions; not used directly here.
+ */
 function export_graph_monitor_tasks($export) {
 	global $debug;
 
@@ -923,10 +1226,33 @@ function export_graph_monitor_tasks($export) {
 	}
 }
 
+/**
+ * Empties the graph_exports_tasks queue table. Called from
+ * export_graphs() before queuing a new batch of per-graph export tasks,
+ * when multi-threaded exporting is enabled.
+ *
+ * @return void
+ */
 function export_graph_clear_tasks() {
 	db_execute('TRUNCATE TABLE graph_exports_tasks');
 }
 
+/**
+ * Queues a single graph's export as a pending row in graph_exports_tasks
+ * for a background worker to later pick up and process. Called from
+ * export_graphs() for each allowed graph, when multi-threaded exporting
+ * is enabled.
+ *
+ * @param int    $export_id      The graph_exports.id this task belongs
+ *                               to.
+ * @param int    $user           The effective user id to export the
+ *                               graph as (permissions context).
+ * @param string $folder         The local export directory the worker
+ *                               should write the graph's files into.
+ * @param int    $local_graph_id The graph_local.id to export.
+ *
+ * @return void
+ */
 function export_graph_prepare_task($export_id, $user, $folder, $local_graph_id) {
 	export_debug('TASKS Preparing task for Export[' . $export_id . '], Graph[' . $local_graph_id .']');
 
@@ -935,6 +1261,17 @@ function export_graph_prepare_task($export_id, $user, $folder, $local_graph_id) 
 		VALUES (?, ?, ?, ?)', [$export_id, $local_graph_id, $user, $folder]);
 }
 
+/**
+ * Executes a single queued export task: looks up its graph_exports_tasks
+ * and parent graph_exports rows, records this worker process's pid,
+ * exports the graph's files, and marks the task complete. Invoked by a
+ * background poller_export.php worker process started (via
+ * export_graph_monitor_tasks()) with a '--thread=<task_id>' argument.
+ *
+ * @param int $task_id The graph_exports_tasks.id to execute.
+ *
+ * @return void
+ */
 function export_graph_start_task($task_id) {
 	$start = microtime(true);
 
@@ -972,9 +1309,28 @@ function export_graph_start_task($task_id) {
 	export_debug('THREAD STATS: ' . $export_stats);
 }
 
-/* export_graph_files - this function exports the actual files for a given graph
-   @arg $export       - the export item structure
-   @arg $export_path  - the directory holding the export contents. */
+/**
+ * This function exports the actual files for a given graph: the graph's
+ * PNG image (and optional thumbnail), and an HTML wrapper page linking
+ * to it, applying the export definition's sizing/theme/thumbnail
+ * settings. Called from export_graphs() (directly, in single-threaded
+ * mode) or export_graph_start_task() (for a queued multi-threaded task)
+ * for each graph in scope for the export.
+ *
+ * @arg $export       - the export item structure
+ * @arg $export_path  - the directory holding the export contents.
+ *
+ * @param array  $export         The graph_exports row describing the
+ *                               export's graph sizing/theme/thumbnail
+ *                               settings.
+ * @param int    $user           The effective user id to export the
+ *                               graph as (permissions context).
+ * @param string $export_path    The local directory to write the
+ *                               graph's PNG/HTML files into.
+ * @param int    $local_graph_id The graph_local.id to export.
+ *
+ * @return int The number of graph files successfully exported (0 or 1).
+ */
 function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	if ($user == 0) {
 		$user = -1;
@@ -1072,6 +1428,28 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
    @arg $export       - the export item structure
    @arg $stExportDir  - the temporary data holding the staged export contents.
    @arg $stFtpType    - the type of ftp transfer, secure or unsecure. */
+/**
+ * Connects to the remote FTP/SFTP server using the PHP FTP extension,
+ * logs in, sets active/passive mode, changes into the remote directory,
+ * optionally sanitizes (deletes) its existing contents, uploads the
+ * local export directory's contents, then closes the connection. Calls
+ * export_fatal() (which exits) on any connection/login/directory
+ * failure. Called from run_export() for exports of type 'ftp' or
+ * 'sftp'.
+ *
+ * @param array  $export      Reference to the graph_exports row; used
+ *                            for its remote-sanitize option.
+ * @param string $stExportDir The local temp directory whose contents are
+ *                            uploaded.
+ * @param string $stFtpType   Either 'ftp' or 'sftp', selecting the PHP
+ *                            connection function to use; defaults to
+ *                            'ftp'.
+ *
+ * @return void
+ *
+ * @global array $aFtpExport The FTP connection settings prepared by
+ *                           export_pre_ftp_upload().
+ */
 function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	global $aFtpExport;
 
@@ -1152,6 +1530,19 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	ftp_close($oFtpConnection);
 }
 
+/**
+ * Recursively removes a remote file or directory over an existing FTP
+ * connection: attempts a direct delete first, and if that fails (because
+ * it is a non-empty directory), lists and removes its contents before
+ * removing the directory itself. Called from export_ftp_php_execute()
+ * when sanitizing the remote destination before upload.
+ *
+ * @param resource $handle The active FTP connection resource.
+ * @param string   $path   The remote file or directory path to remove.
+ *
+ * @return bool True if the path was successfully removed, false
+ *              otherwise.
+ */
 function export_ftp_rmdirr($handle, $path) {
 	// Remove the cacti error handler
 	restore_error_handler();
@@ -1176,10 +1567,23 @@ function export_ftp_rmdirr($handle, $path) {
 	set_error_handler('CactiErrorHandler');
 }
 
-/* export_ftp_php_uploaddir - this function performs the transfer of the exported
-   data to the remote host.
-   @arg $dir - the directory to transfer to the remote host.
-   @arge $oFtpConnection - the ftp connection object created previously. */
+/**
+ * This function performs the transfer of the exported data to the remote
+ * host, recursing into subdirectories and re-creating them remotely as
+ * needed. Called from export_ftp_php_execute() to upload the local
+ * export directory's contents over an existing FTP connection.
+ *
+ * @arg $dir - the directory to transfer to the remote host.
+ * @arge $oFtpConnection - the ftp connection object created previously.
+ *
+ * @param string   $dir            The local directory to upload.
+ * @param resource $oFtpConnection The active FTP connection resource.
+ *
+ * @return void
+ *
+ * @global array $aFtpExport The FTP connection settings (declared but
+ *                           not directly used here).
+ */
 function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 	global $aFtpExport;
 
@@ -1213,9 +1617,21 @@ function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 	}
 }
 
-/* export_ftp_ncftpput_execute - this function performs the transfer of the exported
-   data to the remote host.
-   @arg $stExportDir - the directory to transfer to the remote host. */
+/**
+ * This function performs the transfer of the exported data to the remote
+ * host, using the external ncftpput command-line utility instead of
+ * PHP's FTP extension. Called from run_export() for exports of type
+ * 'ftp_nc'.
+ *
+ * @arg $stExportDir - the directory to transfer to the remote host.
+ *
+ * @param string $stExportDir The local directory to transfer.
+ *
+ * @return void
+ *
+ * @global array $aFtpExport The FTP connection settings prepared by
+ *                           export_pre_ftp_upload().
+ */
 function export_ftp_ncftpput_execute($stExportDir) {
 	global $aFtpExport;
 
@@ -1259,10 +1675,23 @@ function export_ftp_ncftpput_execute($stExportDir) {
 	export_log('Ncftpput returned: ' . $aNcftpputStatusCodes[$iExecuteReturns]);
 }
 
-/* export_post_ftp_upload - this function clean's up the local temporary
-   directory after the data transfer has completed.
-   @arg $export - the export structure
-   @arg $stExportDir  - the temporary directory where files were staged. */
+/**
+ * This function clean's up the local temporary directory after the data
+ * transfer has completed, recursively deleting its files and
+ * subdirectories but preserving the configured temp-directory root
+ * itself. Called from run_export() after an FTP/ncftpput/rsync transfer
+ * completes.
+ *
+ * @arg $export - the export structure
+ * @arg $stExportDir  - the temporary directory where files were staged.
+ *
+ * @param array  $export      Reference to the graph_exports row; used to
+ *                            check its configured temp directory so it
+ *                            is not itself removed.
+ * @param string $stExportDir The temporary directory to clean up.
+ *
+ * @return void
+ */
 function export_post_ftp_upload(&$export, $stExportDir) {
 	/* clean-up after ftp-put */
 	if ($dh = opendir($stExportDir)) {
@@ -1288,16 +1717,49 @@ function export_post_ftp_upload(&$export, $stExportDir) {
 	}
 }
 
-/* write_branch_conf - this function writes a json array of all graphs
-   that lie on a branch within a tree.
-   @arg $tree_site_id - the tree or site id of the branch
-   @arg $branch_id    - the branch id of the branch
-   @arg $type         - the type of conf file including tree, branch, host, host_gt, host_dq, and host_dqi
-   @arg $host_id      - the host id of any host level tree objects
-   @arg $sub_id       - the sub id of the object passed.  This is either a numeric data point, or a hybrid
-                        the case of the host_dqi object.
-   @arg $user         - the effective user to use for export, -1 indicates no permission check
-   @arg $export_path  - the location to store the json array configuration file */
+/**
+ * This function writes a json array of all graphs that lie on a branch
+ * within a tree (or the equivalent grouping for a site/host/data-query
+ * branch type), to a per-branch .json file used by the exported jstree
+ * navigation to lazily load each branch's graph list. Memoizes already-
+ * written files (via a static array) so repeated calls for the same
+ * branch are a no-op. Called from create_export_directory_structure()
+ * while walking a tree's or site's branches during export.
+ *
+ * @arg $tree_site_id - the tree or site id of the branch
+ * @arg $branch_id    - the branch id of the branch
+ * @arg $type         - the type of conf file including tree, branch, host, host_gt, host_dq, and host_dqi
+ * @arg $host_id      - the host id of any host level tree objects
+ * @arg $sub_id       - the sub id of the object passed.  This is either a numeric data point, or a hybrid
+ *                      the case of the host_dqi object.
+ * @arg $user         - the effective user to use for export, -1 indicates no permission check
+ * @arg $export_path  - the location to store the json array configuration file
+ *
+ * @param int    $tree_site_id The tree or site id of the branch.
+ * @param int    $branch_id    The branch id of the branch (used for the
+ *                             'branch' type).
+ * @param string $type         The type of conf file: 'branch',
+ *                             'gtbranch', 'dqbranch', 'site',
+ *                             'site_dt', 'site_gt', 'site_dq',
+ *                             'site_dqi', 'host', 'host_gt', 'host_dq',
+ *                             or 'host_dqi'.
+ * @param int    $host_id      The host id, for host-level tree object
+ *                             types.
+ * @param mixed  $sub_id       An additional sub-identifier whose meaning
+ *                             depends on $type (a data query id,
+ *                             graph template id, or a
+ *                             'dq:index:values' composite string for
+ *                             the *_dqi types).
+ * @param int    $user         The effective user id for permission
+ *                             checks; -1 indicates no permission check.
+ * @param string $export_path  The directory to write the resulting
+ *                             .json configuration file into.
+ *
+ * @return int|void The number of graphs written to the json file; returns
+ *                  early with no value if the file was already written
+ *                  for this branch in this run, or 0 if $export_path
+ *                  does not resolve to a real path.
+ */
 function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, $user, $export_path) {
 	static $json_files = [];
 	$total_rows  = 0;
@@ -1452,16 +1914,41 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	return cacti_sizeof($graph_array);
 }
 
-/* export_generate_tree_html - create jstree compatible static tree html.  This is a
-   set of unsorted lists that jstree can properly parse into a tree object. Note that
-   this is a reentrant/recursive function that will call itself.
-   @arg $export_path  - the location to write the resulting index.html file
-   @arg $tree         - the tree array including information about the tree
-   @arg $parent       - the parent of any branch to be searched
-   @arg $expand_hosts - the setting of expand hosts for the export
-   @arg $user         - the effective user to use for permission checks.  -1 indicated
-                        no permission check.
-   @arg $jstree       - the html of the jstree compatible unsorted list */
+/**
+ * Creates jstree compatible static tree html. This is a set of unsorted
+ * lists that jstree can properly parse into a tree object. Note that
+ * this is a reentrant/recursive function that will call itself for each
+ * child branch/host. Called from tree_site_export() for each tree in
+ * scope for the export, and recursively by itself while descending the
+ * tree structure.
+ *
+ * @arg $export_path  - the location to write the resulting index.html file
+ * @arg $tree         - the tree array including information about the tree
+ * @arg $parent       - the parent of any branch to be searched
+ * @arg $expand_hosts - the setting of expand hosts for the export
+ * @arg $user         - the effective user to use for permission checks.  -1 indicated
+ *                      no permission check.
+ * @arg $jstree       - the html of the jstree compatible unsorted list
+ *
+ * @param string $export_path  The directory to write the resulting
+ *                             index.html file into.
+ * @param array  $tree         The tree array including information
+ *                             about the tree.
+ * @param int    $parent       The parent branch id to search under (0
+ *                             for the tree's top level).
+ * @param bool   $expand_hosts The export's 'export_expand_hosts'
+ *                             setting, controlling whether hosts under
+ *                             a branch are expanded inline.
+ * @param int    $user         The effective user id for permission
+ *                             checks; -1 indicates no permission check.
+ * @param string $jstree       The accumulated html of the jstree
+ *                             compatible unsorted list built up across
+ *                             recursive calls.
+ *
+ * @return string The jstree compatible unsorted-list html fragment for
+ *                this branch (and, at the top-level call, written to
+ *                $export_path's index.html).
+ */
 function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, $user, $jstree) {
 	static $depth = 5;
 
@@ -1630,16 +2117,40 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 	return $jstree;
 }
 
-/* export_generate_site_html - create jstree compatible static site html.  This is a
-   set of unsorted lists that jstree can properly parse into a tree object. Note that
-   this is a reentrant/recursive function that will call itself.
-   @arg $export_path  - the location to write the resulting index.html file
-   @arg $site         - the site array including information about the site
-   @arg $parent       - the parent of any branch to be searched
-   @arg $expand_hosts - the setting of expand hosts for the export
-   @arg $user         - the effective user to use for permission checks.  -1 indicated
-                        no permission check.
-   @arg $jstree       - the html of the jstree compatible unsorted list */
+/**
+ * Creates jstree compatible static site html. This is a set of unsorted
+ * lists that jstree can properly parse into a tree object. Note that
+ * this is a reentrant/recursive function that will call itself for each
+ * device-template/data-query branch and host. Called from
+ * tree_site_export() for each site in scope for the export, and
+ * recursively by itself while descending the site's structure.
+ *
+ * @arg $export_path  - the location to write the resulting index.html file
+ * @arg $site         - the site array including information about the site
+ * @arg $parent       - the parent of any branch to be searched
+ * @arg $expand_hosts - the setting of expand hosts for the export
+ * @arg $user         - the effective user to use for permission checks.  -1 indicated
+ *                      no permission check.
+ * @arg $jstree       - the html of the jstree compatible unsorted list
+ *
+ * @param string $export_path  The directory to write the resulting
+ *                             index.html file into.
+ * @param array  $site         The site array including information
+ *                             about the site.
+ * @param int    $parent       The parent branch id to search under.
+ * @param bool   $expand_hosts The export's 'export_expand_hosts'
+ *                             setting, controlling whether hosts under
+ *                             a branch are expanded inline.
+ * @param int    $user         The effective user id for permission
+ *                             checks; -1 indicates no permission check.
+ * @param string $jstree       The accumulated html of the jstree
+ *                             compatible unsorted list built up across
+ *                             recursive calls.
+ *
+ * @return string The jstree compatible unsorted-list html fragment for
+ *                this site/branch (and, at the top-level call, written
+ *                to $export_path's index.html).
+ */
 function export_generate_site_html($export_path, $site, $parent, $expand_hosts, $user, $jstree) {
 	static $depth = 5;
 
@@ -1904,11 +2415,32 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 	return $jstree;
 }
 
-/* tree_site_export - the first of a series of functions that are designed to
-   create the jstree in html, and present the graphs within the tree into
-   static configuration files that will hold the graphs to be rendered.
-   @arg $export       - the export item data structure
-   @arg $export_path  - the location to write the resulting index.html file */
+/**
+ * The first of a series of functions that are designed to create the
+ * jstree in html, and present the graphs within the tree into static
+ * configuration files that will hold the graphs to be rendered. Builds
+ * the top-level jstree HTML (including a small inline script exposing
+ * display settings to client-side JavaScript) for each allowed tree or
+ * site in scope, delegating branch-level generation to
+ * export_generate_tree_html()/export_generate_site_html(), then writes
+ * the result into the export directory's index.html using the plugin's
+ * website.template. Called from exporter() after graphs have been
+ * exported.
+ *
+ * @arg $export       - the export item data structure
+ * @arg $export_path  - the location to write the resulting index.html file
+ *
+ * @param array  $export      Reference to the graph_exports row
+ *                            describing the tree/site scope and display
+ *                            settings.
+ * @param string $export_path The directory to write the resulting
+ *                            index.html file into.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate the website.template file.
+ */
 function tree_site_export(&$export, $export_path) {
 	global $config;
 
@@ -1984,11 +2516,27 @@ function tree_site_export(&$export, $export_path) {
 	}
 }
 
-/* create_export_directory_structure - builds the export directory structure and copies
-   graphics and treeview scripts to those directories.
-   @arg $root_path   - the directory where Cacti is installed
-   @arg $export_path - the export directory where graphs will either be staged or located.
-*/
+/**
+ * Builds the export directory structure and copies graphics and
+ * treeview scripts to those directories: creates the js/, js/images/,
+ * images/, fonts/, css/, css/images/, webfonts/, and svgs/
+ * subdirectories under the export path and copies the configured
+ * theme's images/fonts/icons into them. Calls export_fatal() (which
+ * exits) if any subdirectory cannot be created. Called from exporter()
+ * before graphs are exported.
+ *
+ * @arg $root_path   - the directory where Cacti is installed
+ * @arg $export_path - the export directory where graphs will either be staged or located.
+ *
+ * @param array  $export      Reference to the graph_exports row; used
+ *                            for its configured display theme and for
+ *                            fatal-error reporting.
+ * @param string $root_path   The directory where Cacti is installed.
+ * @param string $export_path The export directory to build the
+ *                            supporting directory structure under.
+ *
+ * @return void
+ */
 function create_export_directory_structure(&$export, $root_path, $export_path) {
 	$theme = $export['export_theme'];
 
@@ -2129,21 +2677,49 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	}
 }
 
-/* get_host_description - a simple function to return the host description of a host.
-   @arg $host_id - the id of the host in question */
+/**
+ * A simple function to return the host description of a host. Called
+ * while building the jstree html to label host-level tree nodes.
+ *
+ * @arg $host_id - the id of the host in question
+ *
+ * @param int $host_id The id of the host in question.
+ *
+ * @return string|false The host's description, or false if not found.
+ */
 function get_host_description($host_id) {
 	return db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$host_id]);
 }
 
-/* get_tree_name - a simple function to return the tree name of a tree.
-   @arg $tree_id - the id of the tree in question */
+/**
+ * A simple function to return the tree name of a tree. Called from
+ * tree_site_export() to label a tree's top-level jstree node.
+ *
+ * @arg $tree_id - the id of the tree in question
+ *
+ * @param int $tree_id The id of the tree in question.
+ *
+ * @return string|false The tree's name, or false if not found.
+ */
 function get_tree_name($tree_id) {
 	return db_fetch_cell_prepared('SELECT name FROM graph_tree WHERE id = ?', [$tree_id]);
 }
 
-/* del_directory - delete the directory pointed to by the $path variable.
-   @arg $path   - the directory to delete or clean
-   @arg $deldir - (optional parameter, true as default) delete the directory (true) or just clean it (false) */
+/**
+ * Delete the directory pointed to by the $path variable, recursively
+ * removing writable files and subdirectories. Currently unused/dead
+ * code: not called from anywhere else in this file.
+ *
+ * @arg $path   - the directory to delete or clean
+ * @arg $deldir - (optional parameter, true as default) delete the directory (true) or just clean it (false)
+ *
+ * @param string $path   The directory to delete or clean.
+ * @param bool   $deldir Whether to also remove the directory itself
+ *                       (true) or just empty it (false); defaults to
+ *                       true.
+ *
+ * @return void
+ */
 function del_directory($path, $deldir = true) {
 	/* check if the directory name have a '/' at the end, add if not */
 	if ($path[strlen($path)-1] != '/') {
@@ -2174,8 +2750,17 @@ function del_directory($path, $deldir = true) {
 	}
 }
 
-/* check_remove - simple function to check for the existence of a file and remove it.
-   @arg $filename - the file to remove. */
+/**
+ * Simple function to check for the existence of a file and remove it.
+ * Called from export_graph_files() to remove a previously exported
+ * graph's HTML file before regenerating it.
+ *
+ * @arg $filename - the file to remove.
+ *
+ * @param string $filename The file to remove.
+ *
+ * @return void
+ */
 function check_remove($filename) {
 	if (file_exists($filename) && is_writable($filename)) {
 		unlink($filename);

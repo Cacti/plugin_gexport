@@ -73,6 +73,16 @@ switch (get_request_var('action')) {
     The Save Function
    -------------------------- */
 
+/**
+ * Validates and saves a single Graph Export configuration (type, enabled
+ * flag, presentation, theme, tree/site selection, graph sizing/paging,
+ * timing, and remote delivery/SCP credentials) from the submitted edit
+ * form, computing its next scheduled run time. Invoked from this file's
+ * dispatcher when the request's 'action' is 'save'.
+ *
+ * @return void Redirects back to the edit form for this export
+ *              definition; does not return a value.
+ */
 function export_form_save() {
 	if (isset_request_var('save_component_export')) {
 		$save['id']                      = get_filter_request_var('id');
@@ -146,6 +156,25 @@ function export_form_save() {
 	}
 }
 
+/**
+ * Creates a copy of an existing Graph Export configuration under a new
+ * name (substituting the '<export_title>' placeholder with the original
+ * name), copying every non-hidden field. Currently unused/dead code: not
+ * called from anywhere else in this file (no 'duplicate' bulk action is
+ * wired up), and its final sql_save() call also targets a non-existent
+ * 'export' table rather than 'graph_exports'.
+ *
+ * @param int    $_export_id   The graph_exports.id to duplicate.
+ * @param string $export_title The new name pattern, with
+ *                             '<export_title>' replaced by the original
+ *                             export's name.
+ *
+ * @return void
+ *
+ * @global array $fields_export_edit The Export edit form's field
+ *                                   definitions, used to determine which
+ *                                   fields are copyable (non-hidden).
+ */
 function duplicate_export($_export_id, $export_title) {
 	global $fields_export_edit;
 
@@ -171,6 +200,21 @@ function duplicate_export($_export_id, $export_title) {
     The 'actions' function
    ------------------------ */
 
+/**
+ * Handles the bulk-actions form for the Graph Exports list (delete/
+ * enable/disable/export-now). On first display, renders the
+ * confirmation dialog listing the selected export definitions; once
+ * confirmed, applies the chosen action to each selected row. Invoked
+ * from this file's dispatcher when the request's 'action' is 'actions'.
+ *
+ * @return void Either redirects back to this page after applying the
+ *              action, or prints the confirmation dialog and returns
+ *              nothing.
+ *
+ * @global array $export_actions Map of bulk-action ids to their display
+ *                               labels, used for the confirmation
+ *                               dialog title.
+ */
 function export_form_actions() {
 	global $export_actions;
 
@@ -320,14 +364,45 @@ function export_form_actions() {
     Graph Export Functions
    --------------------- */
 
+/**
+ * Marks a single Graph Export configuration as enabled. Called from
+ * export_form_actions() for each export selected for the 'Enable' bulk
+ * action.
+ *
+ * @param int $export_id The graph_exports.id to enable.
+ *
+ * @return void
+ */
 function export_enable($export_id) {
 	db_execute_prepared('UPDATE graph_exports SET enabled="on" WHERE id = ?', [$export_id]);
 }
 
+/**
+ * Marks a single Graph Export configuration as disabled. Called from
+ * export_form_actions() for each export selected for the 'Disable' bulk
+ * action.
+ *
+ * @param int $export_id The graph_exports.id to disable.
+ *
+ * @return void
+ */
 function export_disable($export_id) {
 	db_execute_prepared('UPDATE graph_exports SET enabled="" WHERE id = ?', [$export_id]);
 }
 
+/**
+ * Immediately launches a background poller_export.php process to run a
+ * single enabled, non-currently-running export configuration, bypassing
+ * its normal schedule. Called from export_form_actions() for each export
+ * selected for the 'Export Now' bulk action.
+ *
+ * @param int $export_id The graph_exports.id to run immediately.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to locate
+ *                        the PHP binary and this plugin's poller script.
+ */
 function export_runnow($export_id) {
 	global $config;
 
@@ -344,6 +419,18 @@ function export_runnow($export_id) {
 	}
 }
 
+/**
+ * Renders the add/edit form for a single Graph Export configuration,
+ * pre-populating its fields when editing an existing export. Invoked
+ * from this file's dispatcher when the request's 'action' is 'edit'.
+ *
+ * @return void Outputs the edit form HTML directly.
+ *
+ * @global array $fields_export_edit The edit form's field definitions
+ *                                   (populated by gexport_config_arrays()),
+ *                                   filled in here with the export's
+ *                                   current values.
+ */
 function export_edit() {
 	global $fields_export_edit;
 
@@ -560,6 +647,16 @@ function export_edit() {
 	<?php
 }
 
+/**
+ * Renders the Graph Exports list's search/filter toolbar (name search
+ * box, rows-per-page selector) and its client-side JavaScript. Called
+ * from gexport() before the exports table itself is rendered.
+ *
+ * @return void Outputs HTML and JavaScript directly.
+ *
+ * @global array $item_rows Rows-per-page options offered by Cacti core,
+ *                          used to populate the 'rows' select list.
+ */
 function export_filter() {
 	global $item_rows;
 
@@ -664,6 +761,17 @@ function export_filter() {
 	html_end_box();
 }
 
+/**
+ * Queries graph_exports for the current filter/sort/pagination settings.
+ * Called from gexport() to fetch the rows to display on the current
+ * list page.
+ *
+ * @param int   $total_rows Reference, set to the total number of
+ *                          matching rows (ignoring pagination).
+ * @param int   $rows       The number of rows to return per page.
+ *
+ * @return array The matching graph_exports rows for the current page.
+ */
 function get_export_records(&$total_rows, &$rows) {
 	/* form the 'where' clause for our main sql query */
 	if (get_request_var('filter') != '') {
@@ -684,6 +792,19 @@ function get_export_records(&$total_rows, &$rows) {
 		$sql_limit");
 }
 
+/**
+ * Renders the main Graph Exports list page: disables page auto-refresh
+ * when no export is currently running, draws the search filter toolbar,
+ * and prints the paginated, sortable table of configured exports with
+ * their status. Invoked from this file's dispatcher for the default (no
+ * 'action') request.
+ *
+ * @return void Outputs the list page HTML directly.
+ *
+ * @global array $export_actions Map of bulk-action ids to their display
+ *                               labels, used to populate the actions
+ *                               dropdown.
+ */
 function gexport() {
 	global $export_actions;
 

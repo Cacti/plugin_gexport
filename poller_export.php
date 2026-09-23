@@ -99,7 +99,18 @@ if (isset($thread)) {
 	graph_export($id, $force);
 }
 
-/*  display_version - displays version information */
+/**
+ * Prints this script's name, plugin version, and copyright banner.
+ * Called from this script's own CLI argument parsing when
+ * '--version'/'-V'/'-v' is passed, and from display_help() before
+ * printing usage text.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to load
+ *                        this plugin's setup.php if needed to determine
+ *                        the plugin version.
+ */
 function display_version() {
 	global $config;
 
@@ -111,7 +122,15 @@ function display_version() {
 	print "Cacti Graph Export Poller, Version " . $info['version'] . ", " . COPYRIGHT_YEARS . "\n";
 }
 
-/*	display_help - displays the usage of the function */
+/**
+ * display_help - displays the usage of the function
+ *
+ * Called from this script's own CLI argument parsing when
+ * '--help'/'-H'/'-h' is passed, or when an unrecognized argument was
+ * given.
+ *
+ * @return void
+ */
 function display_help () {
 	display_version();
 
