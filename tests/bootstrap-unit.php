@@ -80,6 +80,45 @@ $GLOBALS['config'] = array(
 );
 
 $GLOBALS['__test_db_calls'] = array();
+$GLOBALS['__test_db_fixtures'] = array();
+
+if (!function_exists('gexport_test_mock_db')) {
+	function gexport_test_mock_db($fn, $match, $result) {
+		$GLOBALS['__test_db_fixtures'][] = array('fn' => $fn, 'match' => $match, 'result' => $result);
+	}
+}
+
+if (!function_exists('gexport_test_reset_db_mocks')) {
+	function gexport_test_reset_db_mocks() {
+		$GLOBALS['__test_db_fixtures'] = array();
+	}
+}
+
+if (!function_exists('gexport_test_db_result')) {
+	function gexport_test_db_result($fn, $sql, $params, $default) {
+		foreach (array_reverse($GLOBALS['__test_db_fixtures']) as $fixture) {
+			if ($fixture['fn'] !== $fn) {
+				continue;
+			}
+
+			$match = $fixture['match'];
+
+			if (is_callable($match)) {
+				if (!$match($sql, $params)) {
+					continue;
+				}
+			} elseif (strpos($sql, $match) === false) {
+				continue;
+			}
+
+			$result = $fixture['result'];
+
+			return is_callable($result) ? $result($sql, $params) : $result;
+		}
+
+		return $default;
+	}
+}
 
 if (!function_exists('db_execute')) {
 	function db_execute($sql) {
@@ -97,37 +136,37 @@ if (!function_exists('db_execute_prepared')) {
 
 if (!function_exists('db_fetch_assoc')) {
 	function db_fetch_assoc($sql) {
-		return array();
+		return gexport_test_db_result('db_fetch_assoc', $sql, array(), array());
 	}
 }
 
 if (!function_exists('db_fetch_assoc_prepared')) {
 	function db_fetch_assoc_prepared($sql, $params = array()) {
-		return array();
+		return gexport_test_db_result('db_fetch_assoc_prepared', $sql, $params, array());
 	}
 }
 
 if (!function_exists('db_fetch_row')) {
 	function db_fetch_row($sql) {
-		return array();
+		return gexport_test_db_result('db_fetch_row', $sql, array(), array());
 	}
 }
 
 if (!function_exists('db_fetch_row_prepared')) {
 	function db_fetch_row_prepared($sql, $params = array()) {
-		return array();
+		return gexport_test_db_result('db_fetch_row_prepared', $sql, $params, array());
 	}
 }
 
 if (!function_exists('db_fetch_cell')) {
 	function db_fetch_cell($sql) {
-		return '';
+		return gexport_test_db_result('db_fetch_cell', $sql, array(), '');
 	}
 }
 
 if (!function_exists('db_fetch_cell_prepared')) {
 	function db_fetch_cell_prepared($sql, $params = array()) {
-		return '';
+		return gexport_test_db_result('db_fetch_cell_prepared', $sql, $params, '');
 	}
 }
 
@@ -143,6 +182,12 @@ if (!function_exists('db_column_exists')) {
 	}
 }
 
+if (!function_exists('db_table_exists')) {
+	function db_table_exists($table) {
+		return gexport_test_db_result('db_table_exists', $table, array(), false);
+	}
+}
+
 if (!function_exists('api_plugin_db_add_column')) {
 	function api_plugin_db_add_column($plugin, $table, $data) {
 		return true;
@@ -152,6 +197,78 @@ if (!function_exists('api_plugin_db_add_column')) {
 if (!function_exists('api_plugin_db_table_create')) {
 	function api_plugin_db_table_create($plugin, $table, $data) {
 		return true;
+	}
+}
+
+$GLOBALS['__test_registered_hooks'] = array();
+
+if (!function_exists('api_plugin_register_hook')) {
+	function api_plugin_register_hook($plugin, $hook, $function, $file, $subtype = '') {
+		$GLOBALS['__test_registered_hooks'][] = array(
+			'name'     => $plugin,
+			'hook'     => $hook,
+			'function' => $function,
+			'file'     => $file,
+		);
+
+		return true;
+	}
+}
+
+$GLOBALS['__test_registered_realms'] = array();
+
+if (!function_exists('api_plugin_register_realm')) {
+	function api_plugin_register_realm($plugin, $file, $description, $enabled) {
+		$GLOBALS['__test_registered_realms'][] = array(
+			'name'        => $plugin,
+			'file'        => $file,
+			'description' => $description,
+			'enabled'     => $enabled,
+		);
+
+		return true;
+	}
+}
+
+if (!function_exists('cacti_version_compare')) {
+	function cacti_version_compare($a, $b, $op) {
+		return version_compare((string) $a, (string) $b, $op);
+	}
+}
+
+if (!function_exists('api_plugin_is_enabled')) {
+	function api_plugin_is_enabled($plugin) {
+		return true;
+	}
+}
+
+$GLOBALS['__test_enabled_hooks_calls'] = array();
+
+if (!function_exists('api_plugin_enable_hooks')) {
+	function api_plugin_enable_hooks($plugin) {
+		$GLOBALS['__test_enabled_hooks_calls'][] = $plugin;
+
+		return true;
+	}
+}
+
+if (!function_exists('get_current_page')) {
+	function get_current_page() {
+		return isset($GLOBALS['__test_current_page']) ? $GLOBALS['__test_current_page'] : '';
+	}
+}
+
+if (!function_exists('test_set_current_page')) {
+	function test_set_current_page($page) {
+		$GLOBALS['__test_current_page'] = $page;
+	}
+}
+
+$GLOBALS['__test_exec_calls'] = array();
+
+if (!function_exists('exec_background')) {
+	function exec_background($command, $args = '') {
+		$GLOBALS['__test_exec_calls'][] = array('command' => $command, 'args' => $args);
 	}
 }
 
