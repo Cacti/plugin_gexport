@@ -22,6 +22,15 @@
  +-------------------------------------------------------------------------+
 */
 
+/**
+ * Installs the Graph Export plugin: registers its Cacti hooks
+ * (config_arrays, draw_navigation_text, poller_bottom), registers its
+ * gexport.php realm, and creates its database tables. Invoked by Cacti's
+ * plugin architecture when an administrator installs this plugin from
+ * Console > Plugin Management.
+ *
+ * @return void
+ */
 function plugin_gexport_install() {
 	# graph setup all arrays needed for automation
 	api_plugin_register_hook('gexport', 'config_arrays',        'gexport_config_arrays',        'setup.php');
@@ -33,6 +42,14 @@ function plugin_gexport_install() {
 	gexport_setup_table();
 }
 
+/**
+ * Uninstalls the Graph Export plugin, dropping its graph_exports and
+ * graph_exports_tasks tables. Invoked by Cacti's plugin architecture
+ * when an administrator uninstalls this plugin from Console > Plugin
+ * Management.
+ *
+ * @return bool Always returns true.
+ */
 function plugin_gexport_uninstall() {
 	db_execute('DROP TABLE graph_exports');
 	db_execute('DROP TABLE graph_exports_tasks');
@@ -40,16 +57,47 @@ function plugin_gexport_uninstall() {
 	return true;
 }
 
+/**
+ * Verifies the plugin's configuration; currently a no-op placeholder.
+ * Invoked by Cacti's plugin architecture on relevant page loads.
+ *
+ * @return bool Always returns true.
+ */
 function plugin_gexport_check_config() {
 	return true;
 }
 
+/**
+ * Reads this plugin's INFO file and returns its [info] section. Used by
+ * Cacti's plugin architecture via the api_plugin_version hook, and
+ * internally by gexport_check_upgrade() and poller_export.php's
+ * display_version() to detect/report the plugin's version.
+ *
+ * @return array The parsed [info] section of the plugin's INFO file (keys
+ *               such as name, version, author, homepage, longname).
+ *
+ * @global array $config Cacti global configuration array; used to locate
+ *                        the plugin's base path.
+ */
 function plugin_gexport_version() {
 	global $config;
 	$info = parse_ini_file($config['base_path'] . '/plugins/gexport/INFO', true);
 	return $info['info'];
 }
 
+/**
+ * Hook implementation for Cacti's 'poller_bottom' filter. On the primary
+ * poller, when at least one graph export configuration is enabled,
+ * launches poller_export.php as a background process to perform this
+ * cycle's graph exports. Called by Cacti's poller via
+ * api_plugin_hook('poller_bottom', ...) at the end of each polling cycle.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to locate
+ *                        the PHP binary and this plugin's poller script,
+ *                        and to check the current poller_id.
+ */
 function gexport_poller_bottom() {
 	global $config;
 
@@ -64,6 +112,25 @@ function gexport_poller_bottom() {
 	}
 }
 
+/**
+ * Detects whether the installed plugin_config version differs from this
+ * plugin's INFO file version and, if so, re-enables its hooks (to pick
+ * up any newly added ones), applies a series of version-gated
+ * graph_exports/graph_exports_tasks schema migrations, and updates the
+ * stored plugin_config record. Only runs on plugins.php/gexport.php.
+ * Called from gexport_config_arrays() on every relevant page load.
+ *
+ * @return void
+ *
+ * @global array  $config           Cacti global configuration array;
+ *                                   used to load database.php/
+ *                                   functions.php.
+ * @global object $database_default Cacti's default database connection
+ *                                   handle (unused directly here;
+ *                                   declared for parity with other
+ *                                   database-touching functions in this
+ *                                   file).
+ */
 function gexport_check_upgrade() {
 	global $config, $database_default;
 
@@ -150,10 +217,33 @@ function gexport_check_upgrade() {
 	}
 }
 
+/**
+ * Verifies that this plugin's PHP/Cacti dependencies are met; currently
+ * always reports success. Invoked by Cacti's plugin architecture before
+ * enabling the plugin.
+ *
+ * @return bool Always returns true.
+ */
 function gexport_check_dependencies() {
 	return true;
 }
 
+/**
+ * Creates this plugin's graph_exports (export configuration) and
+ * graph_exports_tasks (per-export worker task) database tables, if they
+ * don't already exist. Called from plugin_gexport_install() during
+ * plugin installation.
+ *
+ * @return bool Always returns true.
+ *
+ * @global array  $config           Cacti global configuration array;
+ *                                   used to load database.php.
+ * @global object $database_default Cacti's default database connection
+ *                                   handle (unused directly here;
+ *                                   declared for parity with other
+ *                                   database-touching functions in this
+ *                                   file).
+ */
 function gexport_setup_table() {
 	global $config, $database_default;
 	include_once($config['library_path'] . '/database.php');
@@ -164,6 +254,13 @@ function gexport_setup_table() {
 	return true;
 }
 
+/**
+ * Creates the graph_exports table (holding each configured export job's
+ * settings and last-run status), if it doesn't already exist. Called
+ * from gexport_setup_table() during installation.
+ *
+ * @return bool Always returns true.
+ */
 function gexport_create_table() {
 	if (!db_table_exists('graph_exports')) {
 		db_execute("CREATE TABLE `graph_exports` (
@@ -217,6 +314,15 @@ function gexport_create_table() {
 	return true;
 }
 
+/**
+ * Creates the graph_exports_tasks table (holding per-graph worker tasks
+ * for an in-progress export job), if it doesn't already exist. Called
+ * from gexport_setup_table() during installation and
+ * gexport_check_upgrade() when upgrading from a version that predates
+ * this table.
+ *
+ * @return bool Always returns true.
+ */
 function gexport_create_table_tasks() {
 	if (!db_table_exists('graph_exports_tasks')) {
 		db_execute("CREATE TABLE `graph_exports_tasks` (
@@ -238,6 +344,35 @@ function gexport_create_table_tasks() {
 	return true;
 }
 
+/**
+ * Hook implementation for Cacti's 'config_arrays' filter. Triggers this
+ * plugin's database upgrade check, discovers available Cacti themes,
+ * resolves the system temp directory, and defines the Export edit form's
+ * field set (presentation/theme/tree/site selection, graph sizing,
+ * timing, and remote-delivery/SCP options). Called by Cacti core via
+ * api_plugin_hook('config_arrays', ...) while building the navigation
+ * menu.
+ *
+ * @return void
+ *
+ * @global array $menu               Cacti's registered admin menu;
+ *                                    appended with this plugin's
+ *                                    'Graph Export' entry under
+ *                                    'Utilities'.
+ * @global array $fields_export_edit Populated here with the Export edit
+ *                                    form's field definitions, used by
+ *                                    gexport.php's edit form.
+ * @global array $messages           Populated here (from the session)
+ *                                    with a pending flash message for
+ *                                    the Export edit form, when one is
+ *                                    set.
+ * @global array $config             Cacti global configuration array;
+ *                                    used to discover installed themes.
+ * @global array $graphs_per_page    Reserved/declared for parity with
+ *                                    other config_arrays hook
+ *                                    implementations; not used directly
+ *                                    here.
+ */
 function gexport_config_arrays() {
 	global $menu, $fields_export_edit, $messages, $config, $graphs_per_page;
 
@@ -589,6 +724,18 @@ function gexport_config_arrays() {
 	);
 }
 
+/**
+ * Hook implementation for Cacti's 'draw_navigation_text' filter. Adds
+ * breadcrumb entries for gexport.php's default, edit, and actions views.
+ * Called by Cacti core via api_plugin_hook('draw_navigation_text', ...)
+ * while rendering the page breadcrumb trail.
+ *
+ * @param array $nav The existing breadcrumb map contributed by Cacti
+ *                    core and other plugins.
+ *
+ * @return array The $nav array with this plugin's breadcrumb entries
+ *               added.
+ */
 function gexport_draw_navigation_text($nav) {
 	$nav['gexport.php:'] = array(
 		'title' => __('Exported Cacti Graph Pages', 'gexport'),
