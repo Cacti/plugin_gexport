@@ -355,17 +355,17 @@ function gexport_create_table_tasks() {
  *
  * @return void
  *
- * @global array $menu               Reserved/declared for parity with
- *                                    other config_arrays hook
- *                                    implementations; not used directly
- *                                    here.
+ * @global array $menu               Cacti's registered admin menu;
+ *                                    appended with this plugin's
+ *                                    'Graph Export' entry under
+ *                                    'Utilities'.
  * @global array $fields_export_edit Populated here with the Export edit
  *                                    form's field definitions, used by
  *                                    gexport.php's edit form.
- * @global array $messages           Reserved/declared for parity with
- *                                    other config_arrays hook
- *                                    implementations; not used directly
- *                                    here.
+ * @global array $messages           Populated here (from the session)
+ *                                    with a pending flash message for
+ *                                    the Export edit form, when one is
+ *                                    set.
  * @global array $config             Cacti global configuration array;
  *                                    used to discover installed themes.
  * @global array $graphs_per_page    Reserved/declared for parity with

@@ -26,8 +26,8 @@
  * Computes an export configuration's next scheduled run time, based on
  * its timing mode (periodic/hourly/daily) and configured skip interval/
  * time-of-day. Called from gexport.php's form_save() when a schedule is
- * saved, and from graph_export() after each periodic run to schedule the
- * next one.
+ * saved, and from graph_export() when a due export is detected, to
+ * schedule its next run before executing it via run_export().
  *
  * @param array $export     The graph_exports row (or submitted form
  *                          values) describing the export's timing
@@ -459,7 +459,7 @@ function export_scp_execute(&$export, $stExportDir) {
 	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
-		$retvar_message = export_rsync_get_message($retvar);
+		$retvar_message = export_scp_get_message($retvar);
 		export_note('SCP OUTPUT: \'' . trim(implode(',',$output)) . '\'');
 		export_fatal($export, "SCP FAILED! Return Code was '$retvar' with message '" . $retvar_message . "'");
 	}
