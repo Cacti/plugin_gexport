@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-21 13:13-0400\n"
+"POT-Creation-Date: 2026-09-24 11:42-0400\n"
 "PO-Revision-Date: 2024-06-07 23:11-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,203 +18,203 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: functions.php:312
+#: functions.php:392
 msgid "Success"
 msgstr "Επιτυχία"
 
-#: functions.php:313
+#: functions.php:393
 msgid "Syntax or usage error"
 msgstr "Σύνταξη ή σφάλμα χρήσης"
 
-#: functions.php:314
+#: functions.php:394
 msgid "Protocol incompatibility"
 msgstr "Ασυμβατότητα πρωτοκόλλου"
 
-#: functions.php:315
+#: functions.php:395
 msgid "Errors selecting input/output files, dirs"
 msgstr "Σφάλματα επιλογής αρχείων εισόδου / εξόδου, διευθύνσεις"
 
-#: functions.php:316
+#: functions.php:396
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr "Η ενέργεια που ζητήσατε δεν υποστηρίζεται: έγινε προσπάθεια χειρισμού αρχείων 64-bit σε μια πλατφόρμα που δεν μπορεί να τα υποστηρίξει. ή έχει οριστεί μια επιλογή που υποστηρίζεται από τον υπολογιστή-πελάτη και όχι από το διακομιστή."
 
-#: functions.php:317
+#: functions.php:397
 msgid "Error starting client-server protocol"
 msgstr "Σφάλμα εκκίνησης πρωτοκόλλου πελάτη-διακομιστή"
 
-#: functions.php:318
+#: functions.php:398
 msgid "Daemon unable to append to log-file"
 msgstr "Ο δαίμονας δεν μπορεί να προστεθεί στο αρχείο καταγραφής"
 
-#: functions.php:319
+#: functions.php:399
 msgid "Error in socket I/O"
 msgstr "Σφάλμα στο I / O της υποδοχής"
 
-#: functions.php:320
+#: functions.php:400
 msgid "Error in file I/O"
 msgstr "Σφάλμα στο αρχείο I / O"
 
-#: functions.php:321
+#: functions.php:401
 msgid "Error in rsync protocol data stream"
 msgstr "Σφάλμα στη ροή δεδομένων πρωτοκόλλου rsync"
 
-#: functions.php:322
+#: functions.php:402
 msgid "Errors with program diagnostics"
 msgstr "Σφάλματα με τη διάγνωση προγραμμάτων"
 
-#: functions.php:323
+#: functions.php:403
 msgid "Error in IPC code"
 msgstr "Σφάλμα στον κώδικα IPC"
 
-#: functions.php:324
+#: functions.php:404
 msgid "Received SIGUSR1 or SIGINT"
 msgstr "Λήφθηκαν SIGUSR1 ή SIGINT"
 
-#: functions.php:325
+#: functions.php:405
 msgid "Some error returned by waitpid()"
 msgstr "Κάποιο σφάλμα που επέστρεψε το waitpid ()"
 
-#: functions.php:326
+#: functions.php:406
 msgid "Error allocating core memory buffers"
 msgstr "Παρουσιάστηκε σφάλμα κατά την κατανομή buffer buffers"
 
-#: functions.php:327
+#: functions.php:407
 msgid "Partial transfer due to error"
 msgstr "Μερική μεταφορά λόγω σφάλματος"
 
-#: functions.php:328
+#: functions.php:408
 msgid "Partial transfer due to vanished source files"
 msgstr "Μερική μεταφορά λόγω εξαφανισμένων αρχείων προέλευσης"
 
-#: functions.php:329
+#: functions.php:409
 msgid "The --max-delete limit stopped deletions"
 msgstr "Το όριο -max-delete διακόπηκε"
 
-#: functions.php:330
+#: functions.php:410
 msgid "Timeout in data send/receive"
 msgstr "Χρονικό όριο στα δεδομένα αποστολής / λήψης"
 
-#: functions.php:331
+#: functions.php:411
 msgid "Timeout waiting for daemon connection"
 msgstr "Χρόνος αναμονής για σύνδεση δαίμονα"
 
-#: functions.php:334 functions.php:405
+#: functions.php:414 functions.php:509
 msgid "Unknown error "
 msgstr "Αγνωστο σφάλμα"
 
-#: functions.php:377
+#: functions.php:481
 msgid "Operation was successful"
 msgstr "Η λειτουργία ήταν επιτυχής"
 
-#: functions.php:378
+#: functions.php:482
 msgid "General error in file copy"
 msgstr "Γενικό σφάλμα στο αντίγραφο αρχείου"
 
-#: functions.php:379
+#: functions.php:483
 msgid "Destination is not directory, but it should be"
 msgstr "Ο προορισμός δεν είναι κατάλογος, αλλά πρέπει να είναι"
 
-#: functions.php:380
+#: functions.php:484
 msgid "Maximum symlink level exceeded"
 msgstr "Έχει ξεπεραστεί το μέγιστο επίπεδο συμβολισμού"
 
-#: functions.php:381
+#: functions.php:485
 msgid "Connecting to host failed."
 msgstr "Η σύνδεση με τον κεντρικό υπολογιστή απέτυχε."
 
-#: functions.php:382
+#: functions.php:486
 msgid "Connection broken"
 msgstr "Η σύνδεση σπάσει"
 
-#: functions.php:383
+#: functions.php:487
 msgid "File does not exist"
 msgstr "Το αρχείο δεν υπάρχει"
 
-#: functions.php:384
+#: functions.php:488
 msgid "No permission to access file."
 msgstr "Δεν υπάρχει άδεια πρόσβασης στο αρχείο."
 
-#: functions.php:385
+#: functions.php:489
 msgid "General error in sftp protocol"
 msgstr "Γενικό σφάλμα στο πρωτόκολλο sftp"
 
-#: functions.php:386
+#: functions.php:490
 msgid "File transfer protocol mismatch"
 msgstr "Ασυμφωνία πρωτοκόλλου μεταφοράς αρχείων"
 
-#: functions.php:387
+#: functions.php:491
 msgid "No file matches a given criteria"
 msgstr "Δεν υπάρχει αρχείο που να ταιριάζει με συγκεκριμένα κριτήρια"
 
-#: functions.php:388
+#: functions.php:492
 msgid "Host not allowed to connect"
 msgstr "Ο οικοδεσπότης δεν επιτρέπεται να συνδεθεί"
 
-#: functions.php:389
+#: functions.php:493
 msgid "General error in ssh protocol"
 msgstr "Γενικό σφάλμα στο πρωτόκολλο ssh"
 
-#: functions.php:390
+#: functions.php:494
 msgid "Key exchange failed"
 msgstr "Η ανταλλαγή κλειδιών απέτυχε"
 
-#: functions.php:391
+#: functions.php:495
 msgid "Reserved"
 msgstr "Κράτηση"
 
-#: functions.php:392
+#: functions.php:496
 msgid "MAC error"
 msgstr "Σφάλμα MAC"
 
-#: functions.php:393
+#: functions.php:497
 msgid "Compression error"
 msgstr "Σφάλμα συμπίεσης"
 
-#: functions.php:394
+#: functions.php:498
 msgid "Service not available"
 msgstr "Η υπηρεσία δεν είναι διαθέσιμη"
 
-#: functions.php:395
+#: functions.php:499
 msgid "Protocol version not supported"
 msgstr "Η έκδοση πρωτοκόλλου δεν υποστηρίζεται"
 
-#: functions.php:396
+#: functions.php:500
 msgid "Host key not verifiable"
 msgstr "Το κλειδί υποδοχής δεν είναι επαληθεύσιμο"
 
-#: functions.php:397
+#: functions.php:501
 msgid "Connection failed"
 msgstr "Η σύνδεση απέτυχε"
 
-#: functions.php:398
+#: functions.php:502
 msgid "Disconnected by application"
 msgstr "Αποσυνδεδεμένος από την εφαρμογή"
 
-#: functions.php:399
+#: functions.php:503
 msgid "Too many connections"
 msgstr "Πάρα πολλές συνδέσεις"
 
-#: functions.php:400
+#: functions.php:504
 msgid "Authentication cancelled by user"
 msgstr "Ο έλεγχος ταυτότητας ακυρώθηκε από το χρήστη"
 
-#: functions.php:401
+#: functions.php:505
 msgid "No more authentication methods available"
 msgstr "Δεν υπάρχουν πλέον διαθέσιμες μέθοδοι ελέγχου ταυτότητας"
 
-#: functions.php:402
+#: functions.php:506
 msgid "Invalid user name"
 msgstr "Μη έγκυρο όνομα χρήστη"
 
-#: functions.php:1562 functions.php:1725
+#: functions.php:2049 functions.php:2236
 msgid "Non Query Based"
 msgstr "Μη βασισμένο σε ερωτήματα"
 
-#: functions.php:1809
+#: functions.php:2320
 msgid "Graph Templates"
 msgstr "Πρότυπα γραφήματος"
 
-#: functions.php:1838
+#: functions.php:2349
 msgid "Data Queries"
 msgstr "Ερωτήματα δεδομένων"
 
@@ -234,634 +234,634 @@ msgstr "Απενεργοποίηση"
 msgid "Export Now"
 msgstr "Εξαγωγή τώρα"
 
-#: gexport.php:38 setup.php:354
+#: gexport.php:38 setup.php:489
 msgid "Periodic"
 msgstr "Περιοδικός"
 
-#: gexport.php:39 setup.php:356
+#: gexport.php:39 setup.php:491
 msgid "Daily"
 msgstr "Καθημερινά"
 
-#: gexport.php:40 setup.php:355
+#: gexport.php:40 setup.php:490
 msgid "Hourly"
 msgstr "Aνά ώρα"
 
-#: gexport.php:260
+#: gexport.php:304
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να διαγράψετε τον ακόλουθο ορισμό εξαγωγής γραφήματος."
 msgstr[1] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να διαγράψετε τους ακόλουθους ορισμούς εξαγωγής γραφημάτων."
 
-#: gexport.php:265 gexport.php:275 gexport.php:285 gexport.php:295
+#: gexport.php:309 gexport.php:319 gexport.php:329 gexport.php:339
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: gexport.php:266 gexport.php:276 gexport.php:286 gexport.php:296
+#: gexport.php:310 gexport.php:320 gexport.php:330 gexport.php:340
 msgid "Continue"
 msgstr "Συνέχεια"
 
-#: gexport.php:266
+#: gexport.php:310
 #, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
 msgstr "Ορισμοί εξαγωγής γραφημάτων"
 
-#: gexport.php:270
+#: gexport.php:314
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να απενεργοποιήσετε τον ακόλουθο ορισμό εξαγωγής γραφήματος."
 msgstr[1] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να απενεργοποιήσετε τους ακόλουθους ορισμούς εξαγωγής γραφημάτων."
 
-#: gexport.php:276
+#: gexport.php:320
 msgid "Disable Graph Export Definition(s)"
 msgstr "Ορισμοί εξαγωγής γραφημάτων"
 
-#: gexport.php:280
+#: gexport.php:324
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να ενεργοποιήσετε τον ακόλουθο ορισμό εξαγωγής γραφήματος."
 msgstr[1] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να ενεργοποιήσετε τους παρακάτω ορισμούς εξαγωγής γραφημάτων."
 
-#: gexport.php:286
+#: gexport.php:330
 msgid "Enable Graph Export Definition(s)"
 msgstr "Ορισμοί εξαγωγής γραφημάτων"
 
-#: gexport.php:290
+#: gexport.php:334
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Κάντε κλικ στο κουμπί 'Συνέχεια' για να εκτελέσετε τώρα την παρακάτω γραφική παράσταση Graph Export."
 msgstr[1] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για να εκτελεστεί τώρα οι ορισμοί εξαγωγής γραφήματος."
 
-#: gexport.php:296
+#: gexport.php:340
 msgid "Run Graph Export Definition(s) Now"
 msgstr "Ορισμοί εξαγωγής γραφημάτων"
 
-#: gexport.php:299
+#: gexport.php:343
 msgid "You must select at least one Graph Export Definition."
 msgstr "Πρέπει να επιλέξετε τουλάχιστον έναν ορισμό εξαγωγής γραφήματος."
 
-#: gexport.php:300
+#: gexport.php:344
 msgid "Return"
 msgstr "Επιστροφή"
 
-#: gexport.php:356
+#: gexport.php:443
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "Γράφημα εξαγωγής γραφημάτων [επεξεργασία: %s]"
 
-#: gexport.php:358
+#: gexport.php:445
 msgid "Graph Export Definition [new]"
 msgstr "Γράφημα εξαγωγής γραφήματος [new]"
 
-#: gexport.php:384
+#: gexport.php:471
 msgid "Select Tree(s)"
 msgstr "Επιλέξτε Δέντρο (ες)"
 
-#: gexport.php:386
+#: gexport.php:473
 msgid "Trees Selected"
 msgstr "Δέντρα επιλέγονται"
 
-#: gexport.php:389
+#: gexport.php:476
 msgid "All Trees Selected"
 msgstr "Όλα τα δέντρα είναι επιλεγμένα"
 
-#: gexport.php:395 gexport.php:441
+#: gexport.php:482 gexport.php:528
 msgid "All"
 msgstr "Όλα"
 
-#: gexport.php:396 gexport.php:442
+#: gexport.php:483 gexport.php:529
 msgid "None"
 msgstr "Κανένα"
 
-#: gexport.php:426 gexport.php:472 gexport.php:574
+#: gexport.php:513 gexport.php:559 gexport.php:671
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#: gexport.php:430
+#: gexport.php:517
 msgid "Select Site(s)"
 msgstr "Επιλέξτε ιστότοπο"
 
-#: gexport.php:432
+#: gexport.php:519
 msgid "Sites Selected"
 msgstr "Επιλεγμένες τοποθεσίες"
 
-#: gexport.php:435
+#: gexport.php:522
 msgid "All Sites Selected"
 msgstr "Όλοι οι επιλεγμένοι ιστότοποι"
 
-#: gexport.php:566
+#: gexport.php:663
 msgid "Graph Export Definitions"
 msgstr "Ορισμοί εξαγωγής γραφημάτων"
 
-#: gexport.php:580
+#: gexport.php:677
 msgid "Exports"
 msgstr "Εξαγωγές"
 
-#: gexport.php:584
+#: gexport.php:681
 msgid "Default"
 msgstr "Προεπιλογή"
 
-#: gexport.php:595
+#: gexport.php:692
 msgid "Refresh"
 msgstr "Ανανέωση"
 
-#: gexport.php:601 gexport.php:916 gexport.php:921 gexport.php:922
+#: gexport.php:698 gexport.php:1037 gexport.php:1042 gexport.php:1043
 msgid "Never"
 msgstr "Ποτέ"
 
-#: gexport.php:602 gexport.php:603 gexport.php:604 gexport.php:605
+#: gexport.php:699 gexport.php:700 gexport.php:701 gexport.php:702
 #, php-format
 msgid "%d Seconds"
 msgstr "%d δευτερόλεπτα"
 
-#: gexport.php:606
+#: gexport.php:703
 #, php-format
 msgid "%d Minute"
 msgstr "%d λεπτό"
 
-#: gexport.php:607 gexport.php:608
+#: gexport.php:704 gexport.php:705
 #, php-format
 msgid "%d Minutes"
 msgstr "%d λεπτά"
 
-#: gexport.php:618
+#: gexport.php:715
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Πήγαινε"
 
-#: gexport.php:619
+#: gexport.php:716
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Καθαρισμός"
 
-#: gexport.php:756 setup.php:281
+#: gexport.php:877 setup.php:416
 msgid "Export Name"
 msgstr "Όνομα εξαγωγής"
 
-#: gexport.php:759 setup.php:282
+#: gexport.php:880 setup.php:417
 msgid "The name of this Graph Export Definition."
 msgstr "Το όνομα αυτού του ορισμού εξαγωγής γραφημάτων."
 
-#: gexport.php:762
+#: gexport.php:883
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:765
+#: gexport.php:886
 msgid "The internal ID of the Graph Export Definition."
 msgstr "Το εσωτερικό αναγνωριστικό του ορισμού εξαγωγής γραφημάτων."
 
-#: gexport.php:768
+#: gexport.php:889
 msgid "Schedule"
 msgstr "Πρόγραμμα"
 
-#: gexport.php:771
+#: gexport.php:892
 msgid "The frequency that Graphs will be exported."
 msgstr "Η συχνότητα που θα εξάγει τα Γραφήματα."
 
-#: gexport.php:774
+#: gexport.php:895
 msgid "Next Start"
 msgstr "Επόμενορξη"
 
-#: gexport.php:777
+#: gexport.php:898
 msgid "The next time the Graph Export should run."
 msgstr "Την επόμενη φορά θα πρέπει να εκτελείται η εξαγωγή γραφημάτων."
 
-#: gexport.php:780 setup.php:290
+#: gexport.php:901 setup.php:425
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
 
-#: gexport.php:782
+#: gexport.php:903
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "Αν είναι ενεργοποιημένη, αυτός ο ορισμός Εξαγωγή γραφήματος θα εκτελείται όπως απαιτείται."
 
-#: gexport.php:785
+#: gexport.php:906
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: gexport.php:787
+#: gexport.php:908
 msgid "The current Graph Export Status."
 msgstr "Η τρέχουσα κατάσταση εξαγωγής γραφημάτων."
 
-#: gexport.php:790
+#: gexport.php:911
 msgid "Exporting (Sites/Trees)"
 msgstr "Εξαγωγή (ιστότοποι / δέντρα)"
 
-#: gexport.php:793
+#: gexport.php:914
 msgid "What is being Exported."
 msgstr "Τι εξάγεται."
 
-#: gexport.php:796 setup.php:414
+#: gexport.php:917 setup.php:549
 msgid "Effective User"
 msgstr "Αποτελεσματικός χρήστης"
 
-#: gexport.php:799
+#: gexport.php:920
 msgid "The user that this export will impersonate."
 msgstr "Ο χρήστης που θα εξαγάγει αυτή την εξαγωγή."
 
-#: gexport.php:802
+#: gexport.php:923
 msgid "Last Runtime"
 msgstr "Τελευταία ώρα εκτέλεσης"
 
-#: gexport.php:805
+#: gexport.php:926
 msgid "The last runtime for the Graph Export."
 msgstr "Ο τελευταίος χρόνος εκτέλεσης για την εξαγωγή γραφημάτων."
 
-#: gexport.php:808
+#: gexport.php:929
 msgid "Graphs"
 msgstr "Γραφήματα"
 
-#: gexport.php:811
+#: gexport.php:932
 msgid "The number of Graphs Exported on the last run."
 msgstr "Ο αριθμός των εξαγόμενων γραφημάτων κατά την τελευταία εκτέλεση."
 
-#: gexport.php:814
+#: gexport.php:935
 msgid "Last Started"
 msgstr "Τελευταίο ξεκίνησε"
 
-#: gexport.php:817
+#: gexport.php:938
 msgid "The last time that this Graph Export was started."
 msgstr "Την τελευταία φορά που ξεκίνησε αυτή η εξαγωγή γραφημάτων."
 
-#: gexport.php:820
+#: gexport.php:941
 msgid "Last Errored"
 msgstr "Τελευταία λάθος"
 
-#: gexport.php:823
+#: gexport.php:944
 msgid "The last time that this Graph Export experienced an error."
 msgstr "Την τελευταία φορά που αυτή η εξαγωγή γραφήματος παρουσιάστηκε σφάλμα."
 
-#: gexport.php:827
+#: gexport.php:948
 msgid "Export Definitions"
 msgstr "Εξαγωγή ορισμών"
 
-#: gexport.php:866 gexport.php:906 gexport.php:919 gexport.php:920
-#: setup.php:419
+#: gexport.php:987 gexport.php:1027 gexport.php:1040 gexport.php:1041
+#: setup.php:554
 msgid "N/A"
 msgstr "Μη Διαθέσιμο"
 
-#: gexport.php:868
+#: gexport.php:989
 msgid "No"
 msgstr "Όχι"
 
-#: gexport.php:868
+#: gexport.php:989
 msgid "Yes"
 msgstr "Ναι"
 
-#: gexport.php:872
+#: gexport.php:993
 msgid "Idle"
 msgstr "Στροφές βραδυπορίας"
 
-#: gexport.php:875
+#: gexport.php:996
 msgid "Running"
 msgstr "Τρέχουσες"
 
-#: gexport.php:878
+#: gexport.php:999
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: gexport.php:884
+#: gexport.php:1005
 msgid "All Sites"
 msgstr "Όλα τα Αξιοθέατα"
 
-#: gexport.php:895
+#: gexport.php:1016
 msgid "All Trees"
 msgstr "Όλα τα δέντρα"
 
-#: gexport.php:909
+#: gexport.php:1030
 msgid "Sec"
 msgstr "Δευτ"
 
-#: gexport.php:929
+#: gexport.php:1050
 msgid "No Graph Export Definitions"
 msgstr "Δεν υπάρχουν ορισμοί εξαγωγής γραφημάτων"
 
-#: setup.php:31
+#: setup.php:40
 msgid "Export Cacti Graphs Settings"
 msgstr "Εξαγωγή ρυθμίσεων γραφημάτων Cacti"
 
-#: setup.php:265
+#: setup.php:400
 msgid "Graph Exports"
 msgstr "Εξαγωγή γραφημάτων"
 
-#: setup.php:265
+#: setup.php:400
 msgid "Utilities"
 msgstr "Παροχές"
 
-#: setup.php:268
+#: setup.php:403
 msgid "General Administration"
 msgstr "Γενική Διοίκηση"
 
-#: setup.php:276
+#: setup.php:411
 msgid "General"
 msgstr "Γενικά"
 
-#: setup.php:291
+#: setup.php:426
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "Ελέγξτε αυτό το πλαίσιο ελέγχου εάν θέλετε να ενεργοποιηθεί αυτός ο ορισμός εξαγωγής γραφημάτων."
 
-#: setup.php:297
+#: setup.php:432
 msgid "Export Method"
 msgstr "Μέθοδος εξαγωγής"
 
-#: setup.php:298
+#: setup.php:433
 msgid "Choose which export method to use."
 msgstr "Επιλέξτε τη μέθοδο εξαγωγής που θα χρησιμοποιηθεί."
 
-#: setup.php:303
+#: setup.php:438
 msgid "Local"
 msgstr "Τοπικό"
 
-#: setup.php:304
+#: setup.php:439
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:305
+#: setup.php:440
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:306
+#: setup.php:441
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:307
+#: setup.php:442
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:308
+#: setup.php:443
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:312
+#: setup.php:447
 msgid "Export Command Arguments"
 msgstr "Εξαγωγή εντολών επιχείρησης"
 
-#: setup.php:313
+#: setup.php:448
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "Επιχειρήματα που πρέπει να χρησιμοποιηθούν με μη τοπικές μεθόδους εξαγωγής. rsync θα πρέπει να χρησιμοποιήσει"
 
-#: setup.php:325
+#: setup.php:460
 msgid "Theme"
 msgstr "Θέμα"
 
-#: setup.php:326
+#: setup.php:461
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "Επιλέξτε ένα από τα διαθέσιμα θέματα για να αποκτήσετε πρόσβαση στο Cacti Graph Exports."
 
-#: setup.php:333
+#: setup.php:468
 msgid "Presentation Method"
 msgstr "Μέθοδος παρουσίασης"
 
-#: setup.php:334
+#: setup.php:469
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "Επιλέξτε ποια παρουσίαση θέλετε για τις σελίδες που δημιουργούνται από html. Αν επιλέξετε κλασική παρουσίαση. τα Γραφήματα θα είναι σε μια μόνο σελίδα-ένα-html. Εάν επιλέξετε εμφάνιση δέντρου, η αρχιτεκτονική Tree Tree θα διατηρηθεί στις στατικές σελίδες html"
 
-#: setup.php:339 setup.php:442
+#: setup.php:474 setup.php:577
 msgid "Site"
 msgstr "Ιστοσελίδα"
 
-#: setup.php:340 setup.php:423
+#: setup.php:475 setup.php:558
 msgid "Tree"
 msgstr "Δέντρο"
 
-#: setup.php:344
+#: setup.php:479
 msgid "Export Timing"
 msgstr "Εξαγωγή χρονισμού"
 
-#: setup.php:348
+#: setup.php:483
 msgid "Timing Method"
 msgstr "Μέθοδος συγχρονισμού"
 
-#: setup.php:349
+#: setup.php:484
 msgid "Choose when to Export Graphs."
 msgstr "Επιλέξτε πότε θα γίνει εξαγωγή γραφημάτων."
 
-#: setup.php:360
+#: setup.php:495
 msgid "Periodic Export Cycle"
 msgstr "Περιοδικός κύκλος εξαγωγής"
 
-#: setup.php:361
+#: setup.php:496
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "Πόσο συχνά θέλετε το Cacti να εξάγει γραφήματα. Αυτή είναι η μονάδα κύκλων ερωτήσεων που θέλετε να εξάγετε Γραφήματα."
 
-#: setup.php:365
+#: setup.php:500
 msgid "Every Polling Cycle"
 msgstr "Κάθε κύκλος τηλεπαραλαβής"
 
-#: setup.php:366 setup.php:367 setup.php:368 setup.php:369 setup.php:370
-#: setup.php:371 setup.php:372 setup.php:373 setup.php:374 setup.php:375
-#: setup.php:376
+#: setup.php:501 setup.php:502 setup.php:503 setup.php:504 setup.php:505
+#: setup.php:506 setup.php:507 setup.php:508 setup.php:509 setup.php:510
+#: setup.php:511
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "Κάθε% d κύκλους τηλεπαραλαβής"
 
-#: setup.php:380
+#: setup.php:515
 msgid "Hourly at specified minutes"
 msgstr "Ωριαία σε συγκεκριμένα λεπτά"
 
-#: setup.php:381
+#: setup.php:516
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Αν θέλετε το Cacti να εξάγει στατικές εικόνες σε ωριαία βάση, βάλτε τα λεπτά της ώρας πότε πρέπει να το κάνετε αυτό. Ο Cacti υποθέτει ότι εκτελείτε το σενάριο συλλογής δεδομένων κάθε 5 λεπτά, οπότε θα μετατρέψει την αξία σας σε εκείνη που βρίσκεται πλησιέστερα στο χρόνο εκτέλεσης. Για παράδειγμα, 43 θα ήταν 40 λεπτά μετά την ώρα."
 
-#: setup.php:390
+#: setup.php:525
 msgid "Daily at specified time"
 msgstr "Καθημερινά σε καθορισμένο χρόνο"
 
-#: setup.php:391
+#: setup.php:526
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Αν θέλετε το Cacti να εξάγει στατικές εικόνες σε καθημερινή βάση, βάλτε εδώ την ώρα για να το κάνετε αυτό. Ο Cacti υποθέτει ότι εκτελείτε το σενάριο συλλογής δεδομένων κάθε 5 λεπτά, οπότε θα μετατρέψει την αξία σας σε εκείνη που βρίσκεται πλησιέστερα στο χρόνο εκτέλεσης. Για παράδειγμα, το 21:23 θα ήταν ίσο με 20 λεπτά μετά τις 9 μ.μ."
 
-#: setup.php:400
+#: setup.php:535
 msgid "Use x Threads"
 msgstr "Χρησιμοποιήστε το x Threads"
 
-#: setup.php:401
+#: setup.php:536
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "Πόσα νήματα του φόντου θέλετε να χρησιμοποιήσει το Cacti κατά την εξαγωγή γραφημάτων. Το προεπιλεγμένο είναι 0 για να εκτελέσετε όλα τα εξαγόμενα σε νήμα poller, 1 ή περισσότερα για να δημιουργήσετε ξεχωριστά νήματα φόντου"
 
-#: setup.php:409
+#: setup.php:544
 msgid "Graph Selection & Settings"
 msgstr "Επιλογή και ρυθμίσεις γραφημάτων"
 
-#: setup.php:415
+#: setup.php:550
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Το όνομα χρήστη που θα χρησιμοποιηθεί για τον καθορισμό των δικαιωμάτων στα Cacti Graphs. Αυτό το όνομα χρήστη θα χρησιμοποιηθεί για να προσδιοριστεί ποια Γραφήματα / Δέντρα μπορούν να εξαχθούν. Το μηδέν σημαίνει ότι δεν υπάρχει καμία ασφάλεια."
 
-#: setup.php:424
+#: setup.php:559
 msgid "The Tree(s) to export."
 msgstr "Το δέντρο (ες) για εξαγωγή."
 
-#: setup.php:431
+#: setup.php:566
 msgid "Expand Devices/Sites"
 msgstr "Επεκτείνετε τις συσκευές / ιστότοπους"
 
-#: setup.php:432
+#: setup.php:567
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "Αυτή η ρύθμιση καθορίζει εάν τα Συσκευές και τα Πρότυπα και τα Συστήματα ιστότοπων θα επεκταθούν ή όχι. Εάν έχει οριστεί για επέκταση, κάθε κεντρικός υπολογιστής θα έχει έναν υποφάκελο που θα περιέχει είτε Πρότυπα διαγραμμάτων είτε Στοιχεία ερωτήματος δεδομένων."
 
-#: setup.php:437
+#: setup.php:572
 msgid "Off"
 msgstr "Απενεργοποίηση"
 
-#: setup.php:438
+#: setup.php:573
 msgid "On"
 msgstr "Ενεργό"
 
-#: setup.php:443
+#: setup.php:578
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "Η περιοχή για τα γραφήματα Cacti προς εξαγωγή από."
 
-#: setup.php:450
+#: setup.php:585
 msgid "Graph Thumbnail Width"
 msgstr "Γραμματοειδής πλάτος γραφήματος"
 
-#: setup.php:451
+#: setup.php:586
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "Το προεπιλεγμένο πλάτος των γραφικών μικρογραφιών σε εικονοστοιχεία."
 
-#: setup.php:459
+#: setup.php:594
 msgid "Graph Thumbnail Height"
 msgstr "Ύψος μικρογραφίας γραφής"
 
-#: setup.php:460
+#: setup.php:595
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "Το ύψος των γραφικών μικρογραφιών σε εικονοστοιχεία."
 
-#: setup.php:468
+#: setup.php:603
 msgid "Default View Thumbnails"
 msgstr "Προβολή προεπιλεγμένων μικρογραφιών"
 
-#: setup.php:469
+#: setup.php:604
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "Ελέγξτε αν θέλετε η προεπιλεγμένη προβολή γραφήματος να είναι σε λειτουργία μικρογραφίας."
 
-#: setup.php:474
+#: setup.php:609
 msgid "Default Graph Columns"
 msgstr "Προκαθορισμένες στήλες γραφήματος"
 
-#: setup.php:475
+#: setup.php:610
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "Ο αριθμός των στηλών που θα χρησιμοποιηθούν από προεπιλογή κατά την εμφάνιση των γραφημάτων."
 
-#: setup.php:483
+#: setup.php:618
 msgid "Graphs Per Page"
 msgstr "Διαγράμματα ανά σελίδα"
 
-#: setup.php:484
+#: setup.php:619
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "Επιλέξτε τον αριθμό των γραφημάτων ανά σελίδα για προβολή."
 
-#: setup.php:491
+#: setup.php:626
 msgid "Maximum Graphs to Export"
 msgstr "Μέγιστα γραφήματα για εξαγωγή"
 
-#: setup.php:492
+#: setup.php:627
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "Μετά την επίτευξη αυτού του αριθμού, θα δημιουργηθεί ένα σφάλμα, αλλά η εξαγωγή θα συνεχιστεί. Ρυθμίστε στο 0 χωρίς όριο."
 
-#: setup.php:500
+#: setup.php:635
 msgid "Export Location Information"
 msgstr "Εξαγωγή πληροφοριών τοποθεσίας"
 
-#: setup.php:505
+#: setup.php:640
 msgid "Export Thumbnails"
 msgstr "Εξαγωγή χρονισμού"
 
-#: setup.php:506
+#: setup.php:641
 msgid "Check this if you want the export thumbnails mode."
 msgstr "Ελέγξτε αν θέλετε η προεπιλεγμένη προβολή γραφήματος να είναι σε λειτουργία μικρογραφίας."
 
-#: setup.php:511
+#: setup.php:646
 msgid "Clear Directory"
 msgstr "Κατάλογος εξαγωγής"
 
-#: setup.php:512
+#: setup.php:647
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "Ελέγξτε αυτό το πλαίσιο ελέγχου εάν θέλετε να ενεργοποιηθεί αυτός ο ορισμός εξαγωγής γραφημάτων."
 
-#: setup.php:517
+#: setup.php:652
 msgid "Export Directory"
 msgstr "Κατάλογος εξαγωγής"
 
-#: setup.php:518
+#: setup.php:653
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "Αυτός είναι ο κατάλογος, είτε στο τοπικό σύστημα είτε στο απομακρυσμένο σύστημα, που θα περιέχει τα εξαγόμενα δεδομένα."
 
-#: setup.php:524
+#: setup.php:659
 msgid "Local Scratch Directory"
 msgstr "Τοπικός κατάλογος γρατσουνιών"
 
-#: setup.php:525
+#: setup.php:660
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "Αυτός είναι ο κατάλογος στον οποίο η Cacti θα αποθηκεύσει προσωρινά την έξοδο πριν από την αποστολή στην απομακρυσμένη τοποθεσία μέσω της μεθόδου μεταφοράς. Τα περιεχόμενα αυτού του καταλόγου θα διαγραφούν μετά τη μεταφορά των δεδομένων."
 
-#: setup.php:532
+#: setup.php:667
 msgid "Remote Options"
 msgstr "Απομακρυσμένες επιλογές"
 
-#: setup.php:537
+#: setup.php:672
 msgid "Sanitize remote directory"
 msgstr "Απολύμανση απομακρυσμένου καταλόγου"
 
-#: setup.php:538
+#: setup.php:673
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "Ελέγξτε αν θέλετε να διαγράψετε υπάρχοντα αρχεία στον απομακρυσμένο κατάλογο FTP. Αυτή η επιλογή χρησιμοποιείται μόνο όταν χρησιμοποιείτε τις ενσωματωμένες λειτουργίες ftp της PHP."
 
-#: setup.php:543
+#: setup.php:678
 msgid "Remote Host"
 msgstr "Απομακρυσμένος εξυπηρετητής"
 
-#: setup.php:544
+#: setup.php:679
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "Ορίζει τον κεντρικό υπολογιστή για να στείλει τα εξερχόμενα γραφήματα σε."
 
-#: setup.php:551
+#: setup.php:686
 msgid "Remote Port"
 msgstr "Απομακρυσμένη θύρα"
 
-#: setup.php:552
+#: setup.php:687
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "Θύρα επικοινωνίας που θα χρησιμοποιηθεί για τη μέθοδο εξαγωγής αν είναι μη τυπική (αφήστε κενή για προεπιλογές)."
 
-#: setup.php:560
+#: setup.php:695
 msgid "Use passive mode"
 msgstr "Χρησιμοποιήστε παθητική λειτουργία"
 
-#: setup.php:561
+#: setup.php:696
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "Ελέγξτε αν θέλετε να συνδεθείτε σε παθητική λειτουργία στο διακομιστή FTP."
 
-#: setup.php:566
+#: setup.php:701
 msgid "User"
 msgstr "Χρήστης"
 
-#: setup.php:567
+#: setup.php:702
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "Λογαριασμός για σύνδεση στον απομακρυσμένο διακομιστή (αφήστε κενό για προεπιλογές)."
 
-#: setup.php:574
+#: setup.php:709
 msgid "Password"
 msgstr "Κωδικός"
 
-#: setup.php:575
+#: setup.php:710
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "Κωδικός πρόσβασης για τον απομακρυσμένο λογαριασμό ftp (αφήστε κενό για κενό)."
 
-#: setup.php:582
+#: setup.php:717
 msgid "Private Key Path"
 msgstr "Διαδρομή ιδιωτικού κλειδιού"
 
-#: setup.php:583
+#: setup.php:718
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "Για το SCP και το RSYNC, πληκτρολογήστε τη διαδρομή του ιδιωτικού κλειδιού εάν απαιτείται."
 
-#: setup.php:594
+#: setup.php:741
 msgid "Exported Cacti Graph Pages"
 msgstr "Εξαγόμενες σελίδες γραφικών Cacti"
 
-#: setup.php:600
+#: setup.php:747
 msgid "(Edit)"
 msgstr "(Eπεξεργασία)"
 
-#: setup.php:606
+#: setup.php:753
 msgid "Actions"
 msgstr "Ενέργειες"
