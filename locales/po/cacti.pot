@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 13:05-0400\n"
+"POT-Creation-Date: 2026-09-25 13:18-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -18,203 +18,203 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:404
+#: functions.php:418
 msgid "Success"
 msgstr ""
 
-#: functions.php:405
+#: functions.php:419
 msgid "Syntax or usage error"
 msgstr ""
 
-#: functions.php:406
+#: functions.php:420
 msgid "Protocol incompatibility"
 msgstr ""
 
-#: functions.php:407
+#: functions.php:421
 msgid "Errors selecting input/output files, dirs"
 msgstr ""
 
-#: functions.php:408
+#: functions.php:422
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr ""
 
-#: functions.php:409
+#: functions.php:423
 msgid "Error starting client-server protocol"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:424
 msgid "Daemon unable to append to log-file"
 msgstr ""
 
-#: functions.php:411
+#: functions.php:425
 msgid "Error in socket I/O"
 msgstr ""
 
-#: functions.php:412
+#: functions.php:426
 msgid "Error in file I/O"
 msgstr ""
 
-#: functions.php:413
+#: functions.php:427
 msgid "Error in rsync protocol data stream"
 msgstr ""
 
-#: functions.php:414
+#: functions.php:428
 msgid "Errors with program diagnostics"
 msgstr ""
 
-#: functions.php:415
+#: functions.php:429
 msgid "Error in IPC code"
 msgstr ""
 
-#: functions.php:416
+#: functions.php:430
 msgid "Received SIGUSR1 or SIGINT"
 msgstr ""
 
-#: functions.php:417
+#: functions.php:431
 msgid "Some error returned by waitpid()"
 msgstr ""
 
-#: functions.php:418
+#: functions.php:432
 msgid "Error allocating core memory buffers"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:433
 msgid "Partial transfer due to error"
 msgstr ""
 
-#: functions.php:420
+#: functions.php:434
 msgid "Partial transfer due to vanished source files"
 msgstr ""
 
-#: functions.php:421
+#: functions.php:435
 msgid "The --max-delete limit stopped deletions"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:436
 msgid "Timeout in data send/receive"
 msgstr ""
 
-#: functions.php:423
+#: functions.php:437
 msgid "Timeout waiting for daemon connection"
 msgstr ""
 
-#: functions.php:425 functions.php:519
+#: functions.php:439 functions.php:542
 msgid "Unknown error "
 msgstr ""
 
-#: functions.php:492
+#: functions.php:515
 msgid "Operation was successful"
 msgstr ""
 
-#: functions.php:493
+#: functions.php:516
 msgid "General error in file copy"
 msgstr ""
 
-#: functions.php:494
+#: functions.php:517
 msgid "Destination is not directory, but it should be"
 msgstr ""
 
-#: functions.php:495
+#: functions.php:518
 msgid "Maximum symlink level exceeded"
 msgstr ""
 
-#: functions.php:496
+#: functions.php:519
 msgid "Connecting to host failed."
 msgstr ""
 
-#: functions.php:497
+#: functions.php:520
 msgid "Connection broken"
 msgstr ""
 
-#: functions.php:498
+#: functions.php:521
 msgid "File does not exist"
 msgstr ""
 
-#: functions.php:499
+#: functions.php:522
 msgid "No permission to access file."
 msgstr ""
 
-#: functions.php:500
+#: functions.php:523
 msgid "General error in sftp protocol"
 msgstr ""
 
-#: functions.php:501
+#: functions.php:524
 msgid "File transfer protocol mismatch"
 msgstr ""
 
-#: functions.php:502
+#: functions.php:525
 msgid "No file matches a given criteria"
 msgstr ""
 
-#: functions.php:503
+#: functions.php:526
 msgid "Host not allowed to connect"
 msgstr ""
 
-#: functions.php:504
+#: functions.php:527
 msgid "General error in ssh protocol"
 msgstr ""
 
-#: functions.php:505
+#: functions.php:528
 msgid "Key exchange failed"
 msgstr ""
 
-#: functions.php:506
+#: functions.php:529
 msgid "Reserved"
 msgstr ""
 
-#: functions.php:507
+#: functions.php:530
 msgid "MAC error"
 msgstr ""
 
-#: functions.php:508
+#: functions.php:531
 msgid "Compression error"
 msgstr ""
 
-#: functions.php:509
+#: functions.php:532
 msgid "Service not available"
 msgstr ""
 
-#: functions.php:510
+#: functions.php:533
 msgid "Protocol version not supported"
 msgstr ""
 
-#: functions.php:511
+#: functions.php:534
 msgid "Host key not verifiable"
 msgstr ""
 
-#: functions.php:512
+#: functions.php:535
 msgid "Connection failed"
 msgstr ""
 
-#: functions.php:513
+#: functions.php:536
 msgid "Disconnected by application"
 msgstr ""
 
-#: functions.php:514
+#: functions.php:537
 msgid "Too many connections"
 msgstr ""
 
-#: functions.php:515
+#: functions.php:538
 msgid "Authentication cancelled by user"
 msgstr ""
 
-#: functions.php:516
+#: functions.php:539
 msgid "No more authentication methods available"
 msgstr ""
 
-#: functions.php:517
+#: functions.php:540
 msgid "Invalid user name"
 msgstr ""
 
-#: functions.php:2119 functions.php:2311
+#: functions.php:2147 functions.php:2339
 msgid "Non Query Based"
 msgstr ""
 
-#: functions.php:2398
+#: functions.php:2426
 msgid "Graph Templates"
 msgstr ""
 
-#: functions.php:2427
+#: functions.php:2455
 msgid "Data Queries"
 msgstr ""
 
@@ -246,294 +246,294 @@ msgstr ""
 msgid "Hourly"
 msgstr ""
 
-#: gexport.php:306
+#: gexport.php:310
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gexport.php:311 gexport.php:321 gexport.php:331 gexport.php:341
+#: gexport.php:315 gexport.php:325 gexport.php:335 gexport.php:345
 msgid "Cancel"
 msgstr ""
 
-#: gexport.php:312 gexport.php:322 gexport.php:332 gexport.php:342
+#: gexport.php:316 gexport.php:326 gexport.php:336 gexport.php:346
 msgid "Continue"
 msgstr ""
 
-#: gexport.php:312
+#: gexport.php:316
 msgid "Delete Graph Export Definition(s)"
 msgstr ""
 
-#: gexport.php:316
+#: gexport.php:320
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gexport.php:322
+#: gexport.php:326
 msgid "Disable Graph Export Definition(s)"
 msgstr ""
 
-#: gexport.php:326
+#: gexport.php:330
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gexport.php:332
+#: gexport.php:336
 msgid "Enable Graph Export Definition(s)"
 msgstr ""
 
-#: gexport.php:336
+#: gexport.php:340
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gexport.php:342
+#: gexport.php:346
 msgid "Run Graph Export Definition(s) Now"
 msgstr ""
 
-#: gexport.php:344
+#: gexport.php:348
 msgid "You must select a valid action."
 msgstr ""
 
-#: gexport.php:345 gexport.php:349
+#: gexport.php:349 gexport.php:353
 msgid "Return"
 msgstr ""
 
-#: gexport.php:348
+#: gexport.php:352
 msgid "You must select at least one Graph Export Definition."
 msgstr ""
 
-#: gexport.php:450
+#: gexport.php:460 gexport.php:465
+msgid "Graph Export Definition [new]"
+msgstr ""
+
+#: gexport.php:462
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr ""
 
-#: gexport.php:452
-msgid "Graph Export Definition [new]"
-msgstr ""
-
-#: gexport.php:478
+#: gexport.php:491
 msgid "Select Tree(s)"
 msgstr ""
 
-#: gexport.php:480
+#: gexport.php:493
 msgid "Trees Selected"
 msgstr ""
 
-#: gexport.php:483
+#: gexport.php:496
 msgid "All Trees Selected"
 msgstr ""
 
-#: gexport.php:489 gexport.php:535
+#: gexport.php:502 gexport.php:548
 msgid "All"
 msgstr ""
 
-#: gexport.php:490 gexport.php:536
+#: gexport.php:503 gexport.php:549
 msgid "None"
 msgstr ""
 
-#: gexport.php:520 gexport.php:566 gexport.php:678
+#: gexport.php:533 gexport.php:579 gexport.php:691
 msgid "Search"
 msgstr ""
 
-#: gexport.php:524
+#: gexport.php:537
 msgid "Select Site(s)"
 msgstr ""
 
-#: gexport.php:526
+#: gexport.php:539
 msgid "Sites Selected"
 msgstr ""
 
-#: gexport.php:529
+#: gexport.php:542
 msgid "All Sites Selected"
 msgstr ""
 
-#: gexport.php:670
+#: gexport.php:683
 msgid "Graph Export Definitions"
 msgstr ""
 
-#: gexport.php:684
+#: gexport.php:697
 msgid "Exports"
 msgstr ""
 
-#: gexport.php:688
+#: gexport.php:701
 msgid "Default"
 msgstr ""
 
-#: gexport.php:703
+#: gexport.php:716
 msgid "Refresh"
 msgstr ""
 
-#: gexport.php:709 gexport.php:1052 gexport.php:1057 gexport.php:1058
+#: gexport.php:722 gexport.php:1065 gexport.php:1070 gexport.php:1071
 msgid "Never"
 msgstr ""
 
-#: gexport.php:710 gexport.php:711 gexport.php:712 gexport.php:713
+#: gexport.php:723 gexport.php:724 gexport.php:725 gexport.php:726
 #, php-format
 msgid "%d Seconds"
 msgstr ""
 
-#: gexport.php:714
+#: gexport.php:727
 #, php-format
 msgid "%d Minute"
 msgstr ""
 
-#: gexport.php:715 gexport.php:716
+#: gexport.php:728 gexport.php:729
 #, php-format
 msgid "%d Minutes"
 msgstr ""
 
-#: gexport.php:726
+#: gexport.php:739
 msgctxt "filter: use"
 msgid "Go"
 msgstr ""
 
-#: gexport.php:727
+#: gexport.php:740
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr ""
 
-#: gexport.php:888 setup.php:432
+#: gexport.php:901 setup.php:432
 msgid "Export Name"
 msgstr ""
 
-#: gexport.php:891 setup.php:433
+#: gexport.php:904 setup.php:433
 msgid "The name of this Graph Export Definition."
 msgstr ""
 
-#: gexport.php:894
+#: gexport.php:907
 msgid "ID"
 msgstr ""
 
-#: gexport.php:897
+#: gexport.php:910
 msgid "The internal ID of the Graph Export Definition."
 msgstr ""
 
-#: gexport.php:900
+#: gexport.php:913
 msgid "Schedule"
 msgstr ""
 
-#: gexport.php:903
+#: gexport.php:916
 msgid "The frequency that Graphs will be exported."
 msgstr ""
 
-#: gexport.php:906
+#: gexport.php:919
 msgid "Next Start"
 msgstr ""
 
-#: gexport.php:909
+#: gexport.php:922
 msgid "The next time the Graph Export should run."
 msgstr ""
 
-#: gexport.php:912 setup.php:441
+#: gexport.php:925 setup.php:441
 msgid "Enabled"
 msgstr ""
 
-#: gexport.php:914
+#: gexport.php:927
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr ""
 
-#: gexport.php:917
+#: gexport.php:930
 msgid "Status"
 msgstr ""
 
-#: gexport.php:919
+#: gexport.php:932
 msgid "The current Graph Export Status."
 msgstr ""
 
-#: gexport.php:922
+#: gexport.php:935
 msgid "Exporting (Sites/Trees)"
 msgstr ""
 
-#: gexport.php:925
+#: gexport.php:938
 msgid "What is being Exported."
 msgstr ""
 
-#: gexport.php:928 setup.php:565
+#: gexport.php:941 setup.php:565
 msgid "Effective User"
 msgstr ""
 
-#: gexport.php:931
+#: gexport.php:944
 msgid "The user that this export will impersonate."
 msgstr ""
 
-#: gexport.php:934
+#: gexport.php:947
 msgid "Last Runtime"
 msgstr ""
 
-#: gexport.php:937
+#: gexport.php:950
 msgid "The last runtime for the Graph Export."
 msgstr ""
 
-#: gexport.php:940
+#: gexport.php:953
 msgid "Graphs"
 msgstr ""
 
-#: gexport.php:943
+#: gexport.php:956
 msgid "The number of Graphs Exported on the last run."
 msgstr ""
 
-#: gexport.php:946
+#: gexport.php:959
 msgid "Last Started"
 msgstr ""
 
-#: gexport.php:949
+#: gexport.php:962
 msgid "The last time that this Graph Export was started."
 msgstr ""
 
-#: gexport.php:952
+#: gexport.php:965
 msgid "Last Errored"
 msgstr ""
 
-#: gexport.php:955
+#: gexport.php:968
 msgid "The last time that this Graph Export experienced an error."
 msgstr ""
 
-#: gexport.php:959
+#: gexport.php:972
 msgid "Export Definitions"
 msgstr ""
 
-#: gexport.php:999 gexport.php:1042 gexport.php:1055 gexport.php:1056
+#: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
 #: setup.php:570
 msgid "N/A"
 msgstr ""
 
-#: gexport.php:1001
+#: gexport.php:1014
 msgid "No"
 msgstr ""
 
-#: gexport.php:1001
+#: gexport.php:1014
 msgid "Yes"
 msgstr ""
 
-#: gexport.php:1005
+#: gexport.php:1018
 msgid "Idle"
 msgstr ""
 
-#: gexport.php:1009
+#: gexport.php:1022
 msgid "Running"
 msgstr ""
 
-#: gexport.php:1013
+#: gexport.php:1026
 msgid "Error"
 msgstr ""
 
-#: gexport.php:1020
+#: gexport.php:1033
 msgid "All Sites"
 msgstr ""
 
-#: gexport.php:1031
+#: gexport.php:1044
 msgid "All Trees"
 msgstr ""
 
-#: gexport.php:1045
+#: gexport.php:1058
 msgid "Sec"
 msgstr ""
 
-#: gexport.php:1065
+#: gexport.php:1078
 msgid "No Graph Export Definitions"
 msgstr ""
 

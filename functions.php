@@ -46,9 +46,12 @@ function gexport_calc_next_start($export, $start_time = 0) {
 
 	$poller_interval = read_config_option('poller_interval');
 
-	// Fallback for an unrecognized/disabled export_timing value, so the
-	// caller always receives a valid timestamp string.
-	$next_start = date('Y-m-d H:i:s', $start_time);
+	// Fallback for an unrecognized/'disabled' export_timing value (the
+	// graph_exports.export_timing column's own DB default). Push this
+	// far into the future rather than "now", so an enabled row with an
+	// invalid/disabled schedule is treated as never-due instead of
+	// running on every subsequent poller cycle.
+	$next_start = date('Y-m-d H:i:s', $start_time + (86400 * 365 * 100));
 
 	if ($export['export_timing'] == 'periodic') {
 		$now        = date('Y-m-d H:i:00', time());
@@ -351,7 +354,7 @@ function export_rsync_execute(&$export, $stExportDir) {
 	if ($export['export_private_key_path'] != '') {
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
-				$keyopt = ' -e \'ssh -i "' . $export['export_private_key_path'] . '"\'';
+				$ssh_cmd = 'ssh -i ' . cacti_escapeshellarg($export['export_private_key_path']);
 			} else {
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
@@ -368,17 +371,28 @@ function export_rsync_execute(&$export, $stExportDir) {
 		if (!is_numeric($port)) {
 			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
 		} else {
-			$keyopt .= " -e 'ssh -p " . $port . "'";
+			$ssh_cmd = (isset($ssh_cmd) ? $ssh_cmd : 'ssh') . ' -p ' . cacti_escapeshellarg((string) $port);
 		}
-	} elseif ($keyopt != '') {
-		$keyopt .= ' ';
+	}
+
+	if (isset($ssh_cmd)) {
+		$keyopt = ' -e ' . cacti_escapeshellarg($ssh_cmd);
 	}
 
 	if ($export['export_sanitize_remote'] == 'on') {
 		$prune = '--delete-delay --prune-empty-dirs';
 	}
 
-	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@" : '') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	// NOTE: export_args is a free-form, admin-configured rsync option
+	// string; it is intentionally not escaped as a single argument
+	// since it can legitimately hold multiple options/flags, matching
+	// this plugin's existing configuration model (Cacti admin-only,
+	// realm-gated access).
+	$remote_target = ($user != '' ? $user . '@' : '') . $host . ':' . $export['export_directory'];
+
+	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' .
+		cacti_escapeshellarg($stExportDir . '/.') . ' ' .
+		cacti_escapeshellarg($remote_target) . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
@@ -450,7 +464,7 @@ function export_scp_execute(&$export, $stExportDir) {
 	if ($export['export_private_key_path'] != '') {
 		if (file_exists($export['export_private_key_path'])) {
 			if (is_readable($export['export_private_key_path'])) {
-				$keyopt = ' -i "' . $export['export_private_key_path'] . '"';
+				$keyopt = ' -i ' . cacti_escapeshellarg($export['export_private_key_path']);
 			} else {
 				export_fatal($export, 'ssh Private Key file is not readable.');
 			}
@@ -467,7 +481,16 @@ function export_scp_execute(&$export, $stExportDir) {
 		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
 	}
 
-	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port " : '') . $stExportDir . '/. ' . ($user != '' ? "$user@" : '') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	// NOTE: export_args is a free-form, admin-configured scp option
+	// string; it is intentionally not escaped as a single argument
+	// since it can legitimately hold multiple options/flags, matching
+	// this plugin's existing configuration model (Cacti admin-only,
+	// realm-gated access).
+	$remote_target = ($user != '' ? $user . '@' : '') . $host . ':' . $export['export_directory'];
+
+	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . cacti_escapeshellarg((string) $port) . ' ' : '') .
+		cacti_escapeshellarg($stExportDir . '/.') . ' ' .
+		cacti_escapeshellarg($remote_target) . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_scp_get_message($retvar);
@@ -489,34 +512,34 @@ function export_scp_execute(&$export, $stExportDir) {
  */
 function export_scp_get_message($error_code) {
 	switch ($error_code) {
-		case 0: return __('Operation was successful');
-		case 1: return __('General error in file copy');
-		case 2: return __('Destination is not directory, but it should be');
-		case 3: return __('Maximum symlink level exceeded');
-		case 4: return __('Connecting to host failed.');
-		case 5: return __('Connection broken');
-		case 6: return __('File does not exist');
-		case 7: return __('No permission to access file.');
-		case 8: return __('General error in sftp protocol');
-		case 9: return __('File transfer protocol mismatch');
-		case 10: return __('No file matches a given criteria');
-		case 65: return __('Host not allowed to connect');
-		case 66: return __('General error in ssh protocol');
-		case 67: return __('Key exchange failed');
-		case 68: return __('Reserved');
-		case 69: return __('MAC error');
-		case 70: return __('Compression error');
-		case 71: return __('Service not available');
-		case 72: return __('Protocol version not supported');
-		case 73: return __('Host key not verifiable');
-		case 74: return __('Connection failed');
-		case 75: return __('Disconnected by application');
-		case 76: return __('Too many connections');
-		case 77: return __('Authentication cancelled by user');
-		case 78: return __('No more authentication methods available');
-		case 79: return __('Invalid user name');
+		case 0: return __('Operation was successful', 'gexport');
+		case 1: return __('General error in file copy', 'gexport');
+		case 2: return __('Destination is not directory, but it should be', 'gexport');
+		case 3: return __('Maximum symlink level exceeded', 'gexport');
+		case 4: return __('Connecting to host failed.', 'gexport');
+		case 5: return __('Connection broken', 'gexport');
+		case 6: return __('File does not exist', 'gexport');
+		case 7: return __('No permission to access file.', 'gexport');
+		case 8: return __('General error in sftp protocol', 'gexport');
+		case 9: return __('File transfer protocol mismatch', 'gexport');
+		case 10: return __('No file matches a given criteria', 'gexport');
+		case 65: return __('Host not allowed to connect', 'gexport');
+		case 66: return __('General error in ssh protocol', 'gexport');
+		case 67: return __('Key exchange failed', 'gexport');
+		case 68: return __('Reserved', 'gexport');
+		case 69: return __('MAC error', 'gexport');
+		case 70: return __('Compression error', 'gexport');
+		case 71: return __('Service not available', 'gexport');
+		case 72: return __('Protocol version not supported', 'gexport');
+		case 73: return __('Host key not verifiable', 'gexport');
+		case 74: return __('Connection failed', 'gexport');
+		case 75: return __('Disconnected by application', 'gexport');
+		case 76: return __('Too many connections', 'gexport');
+		case 77: return __('Authentication cancelled by user', 'gexport');
+		case 78: return __('No more authentication methods available', 'gexport');
+		case 79: return __('Invalid user name', 'gexport');
 		default:
-			return __('Unknown error ','gexport') . $error_code;
+			return __('Unknown error ', 'gexport') . $error_code;
 	}
 }
 /**
@@ -713,10 +736,10 @@ function export_recordlog($message, $loglevel = POLLER_VERBOSITY_DEBUG) {
 }
 
 /** export_pre_ftp_upload - this function creates a global variable
-   of your pre-checked ftp credentials and settings that will be used
-   for the actual ftp transfer.
-   * @param mixed $export
-   @arg $export       - the export item structure */
+ * of your pre-checked ftp credentials and settings that will be used
+ * for the actual ftp transfer.
+ * @param mixed $export
+ * @arg $export       - the export item structure */
 /**
  * Builds the $aFtpExport connection-settings array (host, remote
  * directory, port, credentials, passive/active mode) used by the
@@ -1104,7 +1127,8 @@ function delTree($dir, $skip = false) {
 		return false;
 	}
 
-	$files = array_diff(scandir($dir), ['.', '..']);
+	$scan_result = scandir($dir);
+	$files       = array_diff(is_array($scan_result) ? $scan_result : [], ['.', '..']);
 
 	foreach ($files as $file) {
 		$path = "$dir/$file";
@@ -1322,7 +1346,11 @@ function export_graph_start_task($task_id) {
 			[$task['export_id']]);
 		$export = is_array($export) ? $export : [];
 
-		$exports = export_graph_files($export, $task['user'], $task['folder'], $task['local_graph_id']);
+		if (empty($export)) {
+			export_warn('TASKS Launched ' . $task['id'] . ' - Export[' . $task['export_id'] . '] no longer exists, Aborting');
+		} else {
+			$exports = export_graph_files($export, $task['user'], $task['folder'], $task['local_graph_id']);
+		}
 
 		db_execute_prepared('UPDATE graph_exports_tasks
 			SET status = 2
@@ -1444,20 +1472,20 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	}
 
 	// close the rrdtool pipe
-	rrd_close();
+	rrd_close($rrdtool_pipe);
 
 	return isset($rras) ? cacti_sizeof($rras) : 0;
 }
 
 /** export_ftp_php_execute - this function creates the ftp connection object,
-   optionally sanitizes the destination and then calls the function to copy
-   data to the remote host.
-   @arg $export       - the export item structure
-   @arg $stExportDir  - the temporary data holding the staged export contents.
-   * @param mixed $export
-   * @param mixed $stExportDir
-   * @param mixed $stFtpType
-   @arg $stFtpType    - the type of ftp transfer, secure or unsecure. */
+ * optionally sanitizes the destination and then calls the function to copy
+ * data to the remote host.
+ * @arg $export       - the export item structure
+ * @arg $stExportDir  - the temporary data holding the staged export contents.
+ * @param mixed $export
+ * @param mixed $stExportDir
+ * @param mixed $stFtpType
+ * @arg $stFtpType    - the type of ftp transfer, secure or unsecure. */
 /**
  * Connects to the remote FTP/SFTP server using the PHP FTP extension,
  * logs in, sets active/passive mode, changes into the remote directory,

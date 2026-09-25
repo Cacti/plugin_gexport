@@ -181,6 +181,10 @@ function duplicate_export($_export_id, $export_title) {
 	$export = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', [$_export_id]);
 	$export = is_array($export) ? $export : [];
 
+	if (empty($export)) {
+		return;
+	}
+
 	// substitute the title variable
 	$export['name'] = str_replace('<export_title>', $export['name'], $export_title);
 
@@ -416,6 +420,10 @@ function export_runnow($export_id) {
 	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', [$export_id]);
 	$status = is_array($status) ? $status : [];
 
+	if (empty($status)) {
+		return;
+	}
+
 	if (($status['status'] == 0 || $status['status'] == 2) && $status['enabled'] == 'on') {
 		$command_string = read_config_option('path_php_binary');
 		$extra_args     = '-q "' . $config['base_path'] . '/plugins/gexport/poller_export.php" --id=' . $export_id . ' --force';
@@ -447,7 +455,12 @@ function export_edit() {
 	if (!isempty_request_var('id')) {
 		$export       = db_fetch_row_prepared('SELECT * FROM graph_exports WHERE id = ?', [get_request_var('id')]);
 		$export       = is_array($export) ? $export : [];
-		$header_label = __('Graph Export Definition [edit: %s]', $export['name'], 'gexport');
+
+		if (empty($export)) {
+			$header_label = __('Graph Export Definition [new]', 'gexport');
+		} else {
+			$header_label = __('Graph Export Definition [edit: %s]', $export['name'], 'gexport');
+		}
 	} else {
 		$header_label = __('Graph Export Definition [new]', 'gexport');
 	}
@@ -700,7 +713,7 @@ function export_filter() {
 						</select>
 					</td>
 					<td>
-						<?php print __('Refresh'); ?>
+						<?php print __('Refresh', 'gexport'); ?>
 					</td>
 					<td>
 						<select id='refresh' onChange='applyFilter()'>
