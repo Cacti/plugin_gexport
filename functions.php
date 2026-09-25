@@ -40,38 +40,46 @@
  *                'Y-m-d H:i:s'/'Y-m-d H:i:00'.
  */
 function gexport_calc_next_start($export, $start_time = 0) {
-	if ($start_time == 0) $start_time = time();
+	if ($start_time == 0) {
+		$start_time = time();
+	}
 
 	$poller_interval = read_config_option('poller_interval');
 
+	// Fallback for an unrecognized/disabled export_timing value, so the
+	// caller always receives a valid timestamp string.
+	$next_start = date('Y-m-d H:i:s', $start_time);
+
 	if ($export['export_timing'] == 'periodic') {
 		$now        = date('Y-m-d H:i:00', time());
-		$next_run   = strtotime($now) + $export['export_skip'] * $poller_interval;
+		$next_run   = (int) strtotime($now) + $export['export_skip'] * $poller_interval;
 		$next_start = date('Y-m-d H:i:s', $next_run);
 	} else {
 		switch($export['export_timing']) {
-		case 'hourly':
-			$next_start = date('Y-m-d H:' . $export['export_hourly'] . ':00', $start_time);
-			$now_time   = strtotime(date('Y-m-d H:i:00', $start_time));
-			$next_run   = strtotime($next_start);
-			if ($next_run <= $now_time) {
-				$next_run += 3600;
-			}
+			case 'hourly':
+				$next_start = date('Y-m-d H:' . $export['export_hourly'] . ':00', $start_time);
+				$now_time   = (int) strtotime(date('Y-m-d H:i:00', $start_time));
+				$next_run   = (int) strtotime($next_start);
 
-			$next_start = date('Y-m-d H:i:00', $next_run);
+				if ($next_run <= $now_time) {
+					$next_run += 3600;
+				}
 
-			break;
-		case 'daily':
-			$next_start = date('Y-m-d ' . $export['export_daily'] . ':00', $start_time);
-			$now_time   = strtotime(date('Y-m-d H:i:00', $start_time));
-			$next_run   = strtotime($next_start);
-			if ($next_run <= $now_time) {
-				$next_run += 86400;
-			}
+				$next_start = date('Y-m-d H:i:00', $next_run);
 
-			$next_start = date('Y-m-d H:i:00', $next_run);
+				break;
+			case 'daily':
+				$next_start = date('Y-m-d ' . $export['export_daily'] . ':00', $start_time);
+				$now_time   = (int) strtotime(date('Y-m-d H:i:00', $start_time));
+				$next_run   = (int) strtotime($next_start);
 
-			break;
+				if ($next_run <= $now_time) {
+					$next_run += 86400;
+				}
+
+				$next_start = date('Y-m-d H:i:00', $next_run);
+
+				break;
 		}
 	}
 
@@ -104,7 +112,7 @@ function gexport_calc_next_start($export, $start_time = 0) {
 function graph_export($id = 0, $force = false) {
 	global $debug, $start;
 
-	/* take time to log performance data */
+	// take time to log performance data
 	$start           = microtime(true);
 	$start_time      = time();
 	$poller_interval = read_config_option('poller_interval');
@@ -116,7 +124,7 @@ function graph_export($id = 0, $force = false) {
 		export_debug('This is a forced run');
 	}
 
-	/* force run */
+	// force run
 	if ($id > 0) {
 		$sql_where = ' AND id=' . $id;
 	}
@@ -126,19 +134,20 @@ function graph_export($id = 0, $force = false) {
 		WHERE enabled="on"' . $sql_where);
 
 	if (cacti_sizeof($exports)) {
-		foreach($exports as $export) {
+		foreach ($exports as $export) {
 			export_debug("Checking export '" . $export['name'] . "' to determine if it's time to run.");
 
-			/* insert poller stats into the settings table */
+			// insert poller stats into the settings table
 			db_execute_prepared('UPDATE graph_exports
 				SET last_checked = NOW()
 				WHERE id = ?',
 				[$export['id']]);
 
 			$runnow = false;
+
 			if (!$force) {
 				if (strtotime($export['next_start']) < $start_time) {
-					$runnow = true;
+					$runnow     = true;
 					$next_start = gexport_calc_next_start($export);
 
 					db_execute_prepared('UPDATE graph_exports
@@ -198,6 +207,7 @@ function run_export(&$export) {
 
 		if (posix_kill($export['export_pid'], 0) !== false) {
 			export_warn('Can not start the following Graph Export:' . $export['name'] . ' is still running');
+
 			return;
 		}
 	}
@@ -205,106 +215,109 @@ function run_export(&$export) {
 	db_execute_prepared('UPDATE graph_exports
 		SET export_pid = ?, status = 1, last_started=NOW()
 		WHERE id = ?',
-		array(getmypid(), $export['id']));
+		[getmypid(), $export['id']]);
 
 	switch ($export['export_type']) {
-	case 'local':
-		export_debug("Export Type is 'local'");
+		case 'local':
+			export_debug("Export Type is 'local'");
 
-		$export_path = $export['export_directory'];
+			$export_path = $export['export_directory'];
 
-		$exported = exporter($export, $export_path);
+			$exported = exporter($export, $export_path);
 
-		break;
-	case 'sftp':
-		export_debug("Export Type is 'sftp_php'");
+			break;
+		case 'sftp':
+			export_debug("Export Type is 'sftp_php'");
 
-		if (!function_exists('ftp_ssl_connect')) {
-			export_fatal($export, 'Secure FTP Function does not exist.  Export can not continue.');
-		}
-	case 'ftp':
-		export_debug("Export Type is 'ftp'");
+			if (!function_exists('ftp_ssl_connect')) {
+				export_fatal($export, 'Secure FTP Function does not exist.  Export can not continue.');
+			}
+		case 'ftp':
+			export_debug("Export Type is 'ftp'");
 
-		/* set the temp directory */
-		if (strlen($export['export_temp_directory']) == 0) {
-			$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
-		} else {
-			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
-		}
-
-		$exported = exporter($export, $stExportDir);
-
-		export_pre_ftp_upload($export, $stExportDir);
-
-		export_log('Using PHP built-in FTP functions.');
-		export_ftp_php_execute($export, $stExportDir);
-		export_post_ftp_upload($export, $stExportDir);
-
-		break;
-	case 'ftp_nc':
-		export_debug("Export Type is 'ftp_nc'");
-		if (strstr(PHP_OS, 'WIN')) export_fatal($export, 'ncftpput only available in unix environment!  Export can not continue.');
-
-		/* set the temp directory */
-		if (trim($export['export_temp_directory']) == '') {
-			if ($config['cacti_server_os'] == 'win32') {
+			// set the temp directory
+			if (strlen($export['export_temp_directory']) == 0) {
 				$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
 			} else {
-				$stExportDir = '/tmp/cacti-ftp-temp-' . $export['id'];
+				$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
 			}
-		} else {
-			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
-		}
 
-		$exported = exporter($export, $stExportDir);
+			$exported = exporter($export, $stExportDir);
 
-		export_pre_ftp_upload($export, $stExportDir);
+			export_pre_ftp_upload($export);
 
-		export_log('Using ncftpput.');
-		export_ftp_ncftpput_execute($stExportDir);
-		export_post_ftp_upload($export, $stExportDir);
+			export_log('Using PHP built-in FTP functions.');
+			export_ftp_php_execute($export, $stExportDir);
+			export_post_ftp_upload($export, $stExportDir);
 
-		break;
-	case 'rsync':
-		export_debug("Export Type is 'rsync'");
+			break;
+		case 'ftp_nc':
+			export_debug("Export Type is 'ftp_nc'");
 
-		/* set the temp directory */
-		if (trim($export['export_temp_directory']) == '') {
-			if ($config['cacti_server_os'] == 'win32') {
-				$stExportDir = getenv('TEMP') . '/cacti-rsync-temp-' . $export['id'];
+			if (strstr(PHP_OS, 'WIN')) {
+				export_fatal($export, 'ncftpput only available in unix environment!  Export can not continue.');
+			}
+
+			// set the temp directory
+			if (trim($export['export_temp_directory']) == '') {
+				if ($config['cacti_server_os'] == 'win32') {
+					$stExportDir = getenv('TEMP') . '/cacti-ftp-temp-' . $export['id'];
+				} else {
+					$stExportDir = '/tmp/cacti-ftp-temp-' . $export['id'];
+				}
 			} else {
-				$stExportDir = '/tmp/cacti-rsync-temp-' . $export['id'];
+				$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-ftp-temp-' . $export['id'];
 			}
-		} else {
-			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\t") . '/cacti-rsync-temp-' . $export['id'];
-		}
 
-		$exported = exporter($export, $stExportDir);
+			$exported = exporter($export, $stExportDir);
 
-		export_rsync_execute($export, $stExportDir);
+			export_pre_ftp_upload($export);
 
-		break;
-	case 'scp':
-		export_debug("Export Type is 'scp'");
+			export_log('Using ncftpput.');
+			export_ftp_ncftpput_execute($stExportDir);
+			export_post_ftp_upload($export, $stExportDir);
 
-		/* set the temp directory */
-		if (trim($export['export_temp_directory']) == '') {
-			if ($config['cacti_server_os'] == 'win32') {
-				$stExportDir = getenv('TEMP') . '/cacti-scp-temp-' . $export['id'];
+			break;
+		case 'rsync':
+			export_debug("Export Type is 'rsync'");
+
+			// set the temp directory
+			if (trim($export['export_temp_directory']) == '') {
+				if ($config['cacti_server_os'] == 'win32') {
+					$stExportDir = getenv('TEMP') . '/cacti-rsync-temp-' . $export['id'];
+				} else {
+					$stExportDir = '/tmp/cacti-rsync-temp-' . $export['id'];
+				}
 			} else {
-				$stExportDir = '/tmp/cacti-scp-temp-' . $export['id'];
+				$stExportDir = rtrim($export['export_temp_directory'], "/ \n\t") . '/cacti-rsync-temp-' . $export['id'];
 			}
-		} else {
-			$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-scp-temp-' . $export['id'];
-		}
 
-		$exported = exporter($export, $stExportDir);
+			$exported = exporter($export, $stExportDir);
 
-		export_scp_execute($export, $stExportDir);
+			export_rsync_execute($export, $stExportDir);
 
-		break;
-	default:
-		export_fatal($export, 'Export method not specified. Exporting can not continue.  Please set method properly in Cacti configuration.');
+			break;
+		case 'scp':
+			export_debug("Export Type is 'scp'");
+
+			// set the temp directory
+			if (trim($export['export_temp_directory']) == '') {
+				if ($config['cacti_server_os'] == 'win32') {
+					$stExportDir = getenv('TEMP') . '/cacti-scp-temp-' . $export['id'];
+				} else {
+					$stExportDir = '/tmp/cacti-scp-temp-' . $export['id'];
+				}
+			} else {
+				$stExportDir = rtrim($export['export_temp_directory'], "/ \n\r") . '/cacti-scp-temp-' . $export['id'];
+			}
+
+			$exported = exporter($export, $stExportDir);
+
+			export_scp_execute($export, $stExportDir);
+
+			break;
+		default:
+			export_fatal($export, 'Export method not specified. Exporting can not continue.  Please set method properly in Cacti configuration.');
 	}
 
 	db_execute_prepared('UPDATE graph_exports SET export_pid = 0 WHERE id = ?', [$export['id']]);
@@ -355,17 +368,17 @@ function export_rsync_execute(&$export, $stExportDir) {
 		if (!is_numeric($port)) {
 			export_fatal($export, "SSH port '" . $port . "' must be numeric.");
 		} else {
-			$keyopt .= " -e 'ssh -p " . $port  . "'";
+			$keyopt .= " -e 'ssh -p " . $port . "'";
 		}
 	} elseif ($keyopt != '') {
-		$keyopt .= " ";
+		$keyopt .= ' ';
 	}
 
 	if ($export['export_sanitize_remote'] == 'on') {
 		$prune = '--delete-delay --prune-empty-dirs';
 	}
 
-	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	exec('rsync -q ' . $export['export_args'] . ' ' . $prune . $keyopt . ' ' . $stExportDir . '/. ' . ($user != '' ? "$user@" : '') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_rsync_get_message($retvar);
@@ -387,7 +400,6 @@ function export_rsync_execute(&$export, $stExportDir) {
  *                appended.
  */
 function export_rsync_get_message($error_code) {
-
 	switch ($error_code) {
 		case 0: return __('Success','gexport');
 		case 1: return __('Syntax or usage error','gexport');
@@ -409,7 +421,6 @@ function export_rsync_get_message($error_code) {
 		case 25: return __('The --max-delete limit stopped deletions','gexport');
 		case 30: return __('Timeout in data send/receive','gexport');
 		case 35: return __('Timeout waiting for daemon connection','gexport');
-
 		default:
 			return __('Unknown error ','gexport') . $error_code;
 	}
@@ -456,7 +467,7 @@ function export_scp_execute(&$export, $stExportDir) {
 		export_fatal($export, "SCP port '" . $port . "' must be numeric.");
 	}
 
-	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port ":"") . $stExportDir . '/. ' . ($user != '' ? "$user@":'') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
+	exec('scp ' . $export['export_args'] . '  ' . $keyopt . ($port != '' ? ' -P ' . "$port " : '') . $stExportDir . '/. ' . ($user != '' ? "$user@" : '') . $host . ':' . $export['export_directory'] . ' 2>&1', $output, $retvar);
 
 	if ($retvar != 0) {
 		$retvar_message = export_scp_get_message($retvar);
@@ -478,33 +489,32 @@ function export_scp_execute(&$export, $stExportDir) {
  */
 function export_scp_get_message($error_code) {
 	switch ($error_code) {
-		case 0: return __("Operation was successful");
-		case 1: return __("General error in file copy");
-		case 2: return __("Destination is not directory, but it should be");
-		case 3: return __("Maximum symlink level exceeded");
-		case 4: return __("Connecting to host failed.");
-		case 5: return __("Connection broken");
-		case 6: return __("File does not exist");
-		case 7: return __("No permission to access file.");
-		case 8: return __("General error in sftp protocol");
-		case 9: return __("File transfer protocol mismatch");
-		case 10: return __("No file matches a given criteria");
-		case 65: return __("Host not allowed to connect");
-		case 66: return __("General error in ssh protocol");
-		case 67: return __("Key exchange failed");
-		case 68: return __("Reserved");
-		case 69: return __("MAC error");
-		case 70: return __("Compression error");
-		case 71: return __("Service not available");
-		case 72: return __("Protocol version not supported");
-		case 73: return __("Host key not verifiable");
-		case 74: return __("Connection failed");
-		case 75: return __("Disconnected by application");
-		case 76: return __("Too many connections");
-		case 77: return __("Authentication cancelled by user");
-		case 78: return __("No more authentication methods available");
-		case 79: return __("Invalid user name");
-
+		case 0: return __('Operation was successful');
+		case 1: return __('General error in file copy');
+		case 2: return __('Destination is not directory, but it should be');
+		case 3: return __('Maximum symlink level exceeded');
+		case 4: return __('Connecting to host failed.');
+		case 5: return __('Connection broken');
+		case 6: return __('File does not exist');
+		case 7: return __('No permission to access file.');
+		case 8: return __('General error in sftp protocol');
+		case 9: return __('File transfer protocol mismatch');
+		case 10: return __('No file matches a given criteria');
+		case 65: return __('Host not allowed to connect');
+		case 66: return __('General error in ssh protocol');
+		case 67: return __('Key exchange failed');
+		case 68: return __('Reserved');
+		case 69: return __('MAC error');
+		case 70: return __('Compression error');
+		case 71: return __('Service not available');
+		case 72: return __('Protocol version not supported');
+		case 73: return __('Host key not verifiable');
+		case 74: return __('Connection failed');
+		case 75: return __('Disconnected by application');
+		case 76: return __('Too many connections');
+		case 77: return __('Authentication cancelled by user');
+		case 78: return __('No more authentication methods available');
+		case 79: return __('Invalid user name');
 		default:
 			return __('Unknown error ','gexport') . $error_code;
 	}
@@ -565,7 +575,7 @@ function exporter(&$export, $export_path) {
  */
 function config_export_stats(&$export, $exported) {
 	global $start;
-	/* take time to log performance data */
+	// take time to log performance data
 	$end = microtime(true);
 
 	$export_stats = sprintf(
@@ -574,7 +584,7 @@ function config_export_stats(&$export, $exported) {
 
 	cacti_log('STATS: ' . $export_stats, true, 'EXPORT');
 
-	/* insert poller stats into the settings table */
+	// insert poller stats into the settings table
 	db_execute_prepared('UPDATE graph_exports
 		SET last_runtime = ?, total_graphs = ?, last_ended=NOW(), status=0
 		WHERE id = ?',
@@ -596,13 +606,13 @@ function config_export_stats(&$export, $exported) {
  *                          the fatal error against.
  * @param string $stMessage The fatal error message to log and record.
  *
- * @return void This function always terminates script execution via
- *              exit and therefore never returns.
+ * @return never This function always terminates script execution via
+ *               exit and therefore never returns.
  */
 function export_fatal(&$export, $stMessage) {
 	export_recordlog('FATAL ERROR: ' . $stMessage, POLLER_VERBOSITY_NONE);
 
-	/* insert poller stats into the settings table */
+	// insert poller stats into the settings table
 	db_execute_prepared('UPDATE graph_exports
 		SET last_error = ?, last_ended=NOW(), last_errored=NOW(), status=2
 		WHERE id = ?',
@@ -695,16 +705,17 @@ function export_recordlog($message, $loglevel = POLLER_VERBOSITY_DEBUG) {
 
 	if ($debug) {
 		$loglevel = POLLER_VERBOSITY_NONE;
-		$message = 'MEMUSE: ' . number_format_i18n(memory_get_usage()) . ', MESSAGE: ' . rtrim($message);
+		$message  = 'MEMUSE: ' . number_format_i18n(memory_get_usage()) . ', MESSAGE: ' . rtrim($message);
 	}
 
 	$message = 'PID: ' . getmypid() . ' ' . rtrim($message);
 	cacti_log($message, true, 'EXPORT', $loglevel);
 }
 
-/* export_pre_ftp_upload - this function creates a global variable
+/** export_pre_ftp_upload - this function creates a global variable
    of your pre-checked ftp credentials and settings that will be used
    for the actual ftp transfer.
+   * @param mixed $export
    @arg $export       - the export item structure */
 /**
  * Builds the $aFtpExport connection-settings array (host, remote
@@ -729,11 +740,13 @@ function export_pre_ftp_upload(&$export) {
 	global $config, $aFtpExport;
 
 	$aFtpExport['server'] = $export['export_host'];
+
 	if (empty($aFtpExport['server'])) {
 		export_fatal($export, 'FTP Hostname is not expected to be blank!');
 	}
 
 	$aFtpExport['remotedir'] = $export['export_directory'];
+
 	if (empty($aFtpExport['remotedir'])) {
 		export_fatal($export, 'FTP Remote export path is not expected to be blank!');
 	}
@@ -784,7 +797,7 @@ function check_cacti_paths(&$export, $export_path) {
 
 	$root_path = $config['base_path'];
 
-	/* check for bad directories within the cacti path */
+	// check for bad directories within the cacti path
 	if (strcasecmp($root_path, $export_path) < 0) {
 		$cacti_system_paths = [
 			'include',
@@ -797,24 +810,23 @@ function check_cacti_paths(&$export, $export_path) {
 			'images',
 			'resource'];
 
-		foreach($cacti_system_paths as $cacti_system_path) {
+		foreach ($cacti_system_paths as $cacti_system_path) {
 			if (substr_count(strtolower($export_path), strtolower($cacti_system_path)) > 0) {
 				export_fatal($export, "Export path '" . $export_path . "' is potentially within a Cacti system path '" . $cacti_system_path . "'.  Can not continue.");
 			}
 		}
 	}
 
-	/* can not be the web root */
+	// can not be the web root
 	if ((strcasecmp($root_path, $export_path) == 0) &&
 		(read_config_option('export_type') == 'local')) {
 		export_fatal($export, "Export path '" . $export_path . "' is the Cacti web root.  Can not continue.");
 	}
 
-	/* can not be a parent of the Cacti web root */
-	if (strncasecmp($root_path, $export_path, strlen($export_path))== 0) {
+	// can not be a parent of the Cacti web root
+	if (strncasecmp($root_path, $export_path, strlen($export_path)) == 0) {
 		export_fatal($export, "Export path '" . $export_path . "' is a parent folder from the Cacti web root.  Can not continue.");
 	}
-
 }
 
 /**
@@ -831,7 +843,7 @@ function check_cacti_paths(&$export, $export_path) {
  * @return void
  */
 function check_system_paths(&$export, $export_path) {
-	/* don't allow to export to system paths */
+	// don't allow to export to system paths
 	$system_paths = [
 		'/boot',
 		'/lib',
@@ -849,7 +861,7 @@ function check_system_paths(&$export, $export_path) {
 		'winnt',
 		'program files'];
 
-	foreach($system_paths as $system_path) {
+	foreach ($system_paths as $system_path) {
 		if (substr($system_path, 0, 1) == '/') {
 			if ($system_path == substr($export_path, 0, strlen($system_path))) {
 				export_fatal($export, "Export path '" . $export_path . "' is within a system path '" . $system_path . "'.  Can not continue.");
@@ -885,16 +897,17 @@ function check_system_paths(&$export, $export_path) {
 function export_graphs(&$export, $export_path) {
 	global $config;
 
-	/* check for bad directories */
+	// check for bad directories
 	check_cacti_paths($export, $export_path);
 	check_system_paths($export, $export_path);
 
 	if (strlen($export_path) < 3) {
-		export_fatal($export, "Export path is not long enough ! Export can not continue. ");
+		export_fatal($export, 'Export path is not long enough ! Export can not continue. ');
 	}
 
-	/* if the path is not a directory, don't continue */
+	// if the path is not a directory, don't continue
 	clearstatcache();
+
 	if (!is_dir($export_path)) {
 		if (!mkdir($export_path)) {
 			export_fatal($export, "Unable to create path '" . $export_path . "'!  Export can not continue.");
@@ -906,6 +919,7 @@ function export_graphs(&$export, $export_path) {
 	}
 
 	clearstatcache();
+
 	if (!is_dir($export_path . '/graphs')) {
 		if (!mkdir($export_path . '/graphs')) {
 			export_fatal($export, "Unable to create path '" . $export_path . "/graphs'!  Export can not continue.");
@@ -913,16 +927,18 @@ function export_graphs(&$export, $export_path) {
 	}
 
 	clearstatcache();
+
 	if (!is_writable($export_path)) {
 		export_fatal($export, "Unable to write to path '" . $export_path . "'!  Export can not continue.");
 	}
 
 	clearstatcache();
+
 	if (!is_writable($export_path . '/graphs')) {
 		export_fatal($export, "Unable to write to path '" . $export_path . "/graphs'!  Export can not continue.");
 	}
 
-	/* blank paths are not good */
+	// blank paths are not good
 	if (strlen($export_path) == 0) {
 		export_fatal($export, 'Export path is null!  Export can not continue.');
 	}
@@ -957,11 +973,12 @@ function export_graphs(&$export, $export_path) {
 		}
 
 		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
+		$trees = is_array($trees) ? $trees : [];
 
 		export_debug('There are ' . cacti_sizeof($trees) . ' trees to export');
 
 		if (cacti_sizeof($trees)) {
-			foreach($trees as $tree) {
+			foreach ($trees as $tree) {
 				$ntree[] = $tree['id'];
 
 				export_debug('Tree \'' . $tree['name'] . '\' with id \'' . $tree['id'] . '\' is allowed');
@@ -978,7 +995,7 @@ function export_graphs(&$export, $export_path) {
 			);
 
 			if (cacti_sizeof($graphs)) {
-				foreach($graphs as $local_graph_id) {
+				foreach ($graphs as $local_graph_id) {
 					if (is_graph_allowed($local_graph_id, $user)) {
 						$ngraph[$local_graph_id] = $local_graph_id;
 					}
@@ -990,16 +1007,16 @@ function export_graphs(&$export, $export_path) {
 			$hosts = db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
 				FROM graph_tree_items
 				WHERE graph_tree_id IN(?)',
-				array(implode(', ', $ntree)));
+				[implode(', ', $ntree)]);
 
 			export_debug('There are ' . cacti_sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
 
 			if ($hosts != '') {
 				$sql_where = 'gl.host_id IN(' . $hosts . ')';
-				$graphs = get_allowed_graphs($sql_where, 'gtg.title_cache', '', $total_rows, $user);
+				$graphs    = get_allowed_graphs($sql_where, 'gtg.title_cache', '', $total_rows, $user);
 
 				if (cacti_sizeof($graphs)) {
-					foreach($graphs as $graph) {
+					foreach ($graphs as $graph) {
 						if (is_graph_allowed($graph['local_graph_id'], $user)) {
 							$ngraph[$graph['local_graph_id']] = $graph['local_graph_id'];
 						}
@@ -1023,7 +1040,7 @@ function export_graphs(&$export, $export_path) {
 		$graphs = get_allowed_graphs($sql_where, 'gtg.title_cache', '', $total_rows, $user);
 
 		if (cacti_sizeof($graphs)) {
-			foreach($graphs as $graph) {
+			foreach ($graphs as $graph) {
 				if (is_graph_allowed($graph['local_graph_id'], $user)) {
 					$ngraph[$graph['local_graph_id']] = $graph['local_graph_id'];
 				}
@@ -1036,7 +1053,7 @@ function export_graphs(&$export, $export_path) {
 			export_graph_clear_tasks();
 		}
 
-		foreach($ngraph as $local_graph_id) {
+		foreach ($ngraph as $local_graph_id) {
 			if ($export['export_threads'] > 0) {
 				export_graph_prepare_task($export_id, $user, $export_path, $local_graph_id);
 			} else {
@@ -1082,13 +1099,16 @@ function export_graphs(&$export, $export_path) {
  */
 function delTree($dir, $skip = false) {
 	$dir = realpath($dir);
+
 	if ($dir === false) {
 		return false;
 	}
 
-	$files = array_diff(scandir($dir), ['.','..']);
+	$files = array_diff(scandir($dir), ['.', '..']);
+
 	foreach ($files as $file) {
 		$path = "$dir/$file";
+
 		if (is_link($path)) {
 			unlink($path);
 		} elseif (is_dir($path)) {
@@ -1097,6 +1117,7 @@ function delTree($dir, $skip = false) {
 			unlink($path);
 		}
 	}
+
 	return ($skip ? 0 : rmdir($dir));
 }
 
@@ -1112,7 +1133,7 @@ function delTree($dir, $skip = false) {
  *              otherwise.
  */
 function export_is_task_running($pid) {
-    return posix_kill($pid, 0);
+	return posix_kill($pid, 0);
 }
 
 /**
@@ -1137,10 +1158,11 @@ function export_graph_monitor_tasks($export) {
 	global $debug;
 
 	$max_threads = $export['export_threads'];
-	$script_file = dirname(__FILE__) .'/poller_export.php';
-	$script_php = read_config_option('path_php_binary');
+	$script_file = __DIR__ . '/poller_export.php';
+	$script_php  = read_config_option('path_php_binary');
 
 	$spawn_time = new DateTime();
+
 	while (true) {
 		$expire_time = new DateTime();
 		$expire_time->modify('-30 seconds');
@@ -1149,17 +1171,19 @@ function export_graph_monitor_tasks($export) {
 			FROM graph_exports_tasks
 			WHERE status IN (0,1)');
 
-		//printf("%s: Found %s pids, spawn %s, expire %s\n", (new DateTime())->format('H:i:s'), $pids_left, $spawn_time->format('H:i:s'), $expire_time->format('H:i:s'));
-		if ($pids_left == 0) break;
+		// printf("%s: Found %s pids, spawn %s, expire %s\n", (new DateTime())->format('H:i:s'), $pids_left, $spawn_time->format('H:i:s'), $expire_time->format('H:i:s'));
+		if ($pids_left == 0) {
+			break;
+		}
 
 		if ($spawn_time < $expire_time) {
-			//printf("%s: Running failure checks\n", (new DateTime())->format('H:i:s'));
+			// printf("%s: Running failure checks\n", (new DateTime())->format('H:i:s'));
 			$pids_fail = db_fetch_cell_prepared('SELECT COUNT(*)
 				FROM graph_exports_tasks
 				WHERE status < 2
 				AND start_time != 0
 				AND start_time < ?',
-				array($expire_time->getTimestamp()));
+				[$expire_time->getTimestamp()]);
 
 			if ($pids_fail > 0) {
 				db_execute_prepared('UPDATE graph_exports_tasks
@@ -1167,7 +1191,7 @@ function export_graph_monitor_tasks($export) {
 					WHERE status = 1
 					AND start_time != 0
 					AND start_time < ?',
-					array($expire_time->getTimestamp()));
+					[$expire_time->getTimestamp()]);
 			}
 		}
 
@@ -1180,11 +1204,12 @@ function export_graph_monitor_tasks($export) {
 
 		$thread_run = cacti_sizeof($pids_running);
 		$thread_adj = $thread_run;
+
 		if ($thread_adj > 0 && $spawn_time < $expire_time) {
-			//printf("%s: Running adjustments checks\n", (new DateTime())->format('H:i:s'));
+			// printf("%s: Running adjustments checks\n", (new DateTime())->format('H:i:s'));
 			foreach ($pids_running as $id => $pid) {
 				if ($pid != 0 && !export_is_task_running($pid)) {
-					export_debug('TASKS Pid ' . $pid .' is not running, adjusting');
+					export_debug('TASKS Pid ' . $pid . ' is not running, adjusting');
 					db_execute_prepared('UPDATE graph_exports_tasks
 						SET status = 4
 						WHERE status = 1
@@ -1199,7 +1224,7 @@ function export_graph_monitor_tasks($export) {
 
 		if ($thread_adj < $max_threads) {
 			$wanted_count = $max_threads - $thread_adj;
-			//printf("%s: Spawning threads %s of %s\n", (new DateTime())->format('H:i:s'), $wanted_count, $max_threads);
+			// printf("%s: Spawning threads %s of %s\n", (new DateTime())->format('H:i:s'), $wanted_count, $max_threads);
 
 			$tasks = db_fetch_assoc('SELECT DISTINCT *
 				FROM graph_exports_tasks
@@ -1207,6 +1232,7 @@ function export_graph_monitor_tasks($export) {
 				LIMIT ' . $wanted_count);
 
 			export_debug('TASKS ' . $wanted_count . ' available, ' . cacti_sizeof($tasks) . ' found');
+
 			if (cacti_sizeof($tasks) > 0) {
 				$spawn_time = new DateTime();
 
@@ -1214,9 +1240,9 @@ function export_graph_monitor_tasks($export) {
 					db_execute_prepared('UPDATE graph_exports_tasks
 						SET status = 1, start_time = ?
 						WHERE id = ?',
-						array(time(), $task['id']));
+						[time(), $task['id']]);
 
-					export_debug('TASKS Spawning task ' . $task['id'] . ' for Export[' . $task['export_id'] . '], Graph[' . $task['local_graph_id'] .']');
+					export_debug('TASKS Spawning task ' . $task['id'] . ' for Export[' . $task['export_id'] . '], Graph[' . $task['local_graph_id'] . ']');
 					exec_background($script_php, '-q ' . $script_file . ' --thread=' . $task['id']);
 				}
 			}
@@ -1254,7 +1280,7 @@ function export_graph_clear_tasks() {
  * @return void
  */
 function export_graph_prepare_task($export_id, $user, $folder, $local_graph_id) {
-	export_debug('TASKS Preparing task for Export[' . $export_id . '], Graph[' . $local_graph_id .']');
+	export_debug('TASKS Preparing task for Export[' . $export_id . '], Graph[' . $local_graph_id . ']');
 
 	// MJV: Do something here
 	db_execute_prepared('INSERT INTO graph_exports_tasks (export_id, local_graph_id, user, folder)
@@ -1281,19 +1307,20 @@ function export_graph_start_task($task_id) {
 		WHERE id = ?',
 		[$task_id]);
 
-	if (!sizeof($task)) {
+	if (!is_array($task) || !cacti_sizeof($task)) {
 		export_warn('TASKS Launched ' . $task_id . ' - Invalid ID, Aborting');
 	} else {
 		db_execute_prepared('UPDATE graph_exports_tasks
 			SET pid = ?
 			WHERE id = ?',
-			array(getmypid(), $task['id']));
+			[getmypid(), $task['id']]);
 
 		export_debug('TASKS Launched ' . $task['id'] . ', exporting graph ' . $task['local_graph_id'] . ' as user \'' . $task['user'] . '\'');
 
 		$export = db_fetch_row_prepared('SELECT * FROM graph_exports
 			WHERE id = ?',
 			[$task['export_id']]);
+		$export = is_array($export) ? $export : [];
 
 		$exports = export_graph_files($export, $task['user'], $task['folder'], $task['local_graph_id']);
 
@@ -1336,7 +1363,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 		$user = -1;
 	}
 
-	/* open a pipe to rrdtool for writing */
+	// open a pipe to rrdtool for writing
 	$rrdtool_pipe = rrd_init();
 
 	export_debug('Exporting Graph ID: ' . $local_graph_id);
@@ -1344,7 +1371,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	check_remove($export_path . '/graph_' . $local_graph_id . '.html');
 
 	if ($export['export_thumbs'] == 'on') {
-		/* settings for preview graphs */
+		// settings for preview graphs
 		$graph_data_array['export_filename'] = $export_path . '/graphs/thumb_' . $local_graph_id . '.png';
 
 		$graph_data_array['graph_height']    = $export['graph_height'];
@@ -1361,7 +1388,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 		unset($graph_data_array);
 	}
 
-	/* settings for preview graphs */
+	// settings for preview graphs
 	$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '.png';
 	$graph_data_array['export']          = true;
 	$graph_data_array['graph_theme']     = $export['export_theme'];
@@ -1373,7 +1400,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 	rrdtool_function_graph($local_graph_id, 0, $graph_data_array, $rrdtool_pipe, $metadata, $user);
 	unset($graph_data_array);
 
-	/* generate html files for each graph */
+	// generate html files for each graph
 	export_log("Creating File  '" . $export_path . '/graph_' . $local_graph_id . '.html');
 
 	$fp_graph_index = fopen($export_path . '/graph_' . $local_graph_id . '.html', 'w');
@@ -1383,7 +1410,7 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 
 		$rras = get_associated_rras($local_graph_id, ' AND dspr.id IS NOT NULL');
 
-		/* generate graphs for each rra */
+		// generate graphs for each rra
 		if (cacti_sizeof($rras)) {
 			foreach ($rras as $rra) {
 				$graph_data_array['export_filename'] = $export_path . '/graphs/graph_' . $local_graph_id . '_' . $rra['id'] . '.png';
@@ -1411,22 +1438,25 @@ function export_graph_files($export, $user, $export_path, $local_graph_id) {
 
 			fwrite($fp_graph_index, '</table>');
 			fclose($fp_graph_index);
-  		}
+		}
 	} else {
 		export_warn('Unable to write to file ' . $export_path . '/graph_' . $local_graph_id . '.html');
 	}
 
-	/* close the rrdtool pipe */
-	rrd_close($rrdtool_pipe);
+	// close the rrdtool pipe
+	rrd_close();
 
 	return isset($rras) ? cacti_sizeof($rras) : 0;
 }
 
-/* export_ftp_php_execute - this function creates the ftp connection object,
+/** export_ftp_php_execute - this function creates the ftp connection object,
    optionally sanitizes the destination and then calls the function to copy
    data to the remote host.
    @arg $export       - the export item structure
    @arg $stExportDir  - the temporary data holding the staged export contents.
+   * @param mixed $export
+   * @param mixed $stExportDir
+   * @param mixed $stFtpType
    @arg $stFtpType    - the type of ftp transfer, secure or unsecure. */
 /**
  * Connects to the remote FTP/SFTP server using the PHP FTP extension,
@@ -1456,29 +1486,33 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 	// Turn off warnings
 	error_reporting(0);
 
-	/* connect to foreign system */
+	// connect to foreign system
 	switch($stFtpType) {
-	case 'ftp':
-		$oFtpConnection = ftp_connect($aFtpExport['server'], $aFtpExport['port']);
+		case 'ftp':
+			$oFtpConnection = ftp_connect($aFtpExport['server'], $aFtpExport['port']);
 
-		if (!$oFtpConnection) {
-			export_fatal($export, 'FTP Connection failed! Check hostname and port.  Export can not continue.');
-		} else {
-			export_log('Connection to remote server was successful.');
-		}
-		break;
-	case 'sftp':
-		$oFtpConnection = ftp_ssl_connect($aFtpExport['server'], $aFtpExport['port']);
+			if (!$oFtpConnection) {
+				export_fatal($export, 'FTP Connection failed! Check hostname and port.  Export can not continue.');
+			} else {
+				export_log('Connection to remote server was successful.');
+			}
 
-		if (!$oFtpConnection) {
-			export_fatal($export, 'SFTP Connection failed! Check hostname and port.  Export can not continue.');
-		} else {
-			export_log('Connection to remote server was successful.');
-		}
-		break;
+			break;
+		case 'sftp':
+			$oFtpConnection = ftp_ssl_connect($aFtpExport['server'], $aFtpExport['port']);
+
+			if (!$oFtpConnection) {
+				export_fatal($export, 'SFTP Connection failed! Check hostname and port.  Export can not continue.');
+			} else {
+				export_log('Connection to remote server was successful.');
+			}
+
+			break;
+		default:
+			export_fatal($export, "FTP type '" . $stFtpType . "' is not supported.  Export can not continue.");
 	}
 
-	/* login to foreign system */
+	// login to foreign system
 	if (!ftp_login($oFtpConnection, $aFtpExport['username'], $aFtpExport['password'])) {
 		ftp_close($oFtpConnection);
 		export_fatal($export, 'FTP Login failed! Check username and password.  Export can not continue.');
@@ -1486,24 +1520,24 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 		export_log('Remote login was successful.');
 	}
 
-	/* set connection type */
+	// set connection type
 	if ($aFtpExport['passive']) {
 		ftp_pasv($oFtpConnection, true);
 	} else {
 		ftp_pasv($oFtpConnection, false);
 	}
 
-	/* change directories into the remote upload directory */
+	// change directories into the remote upload directory
 	if (!@ftp_chdir($oFtpConnection, $aFtpExport['remotedir'])) {
 		ftp_close($oFtpConnection);
 		export_fatal($export, "FTP Remote directory '" . $aFtpExport['remotedir'] . "' does not exist!.  Export can not continue.");
 	}
 
-	/* sanitize the remote location if the user has asked so */
+	// sanitize the remote location if the user has asked so
 	if ($export['export_sanitize_remote'] == 'on') {
 		export_log('Deleting remote files.');
 
-		/* get rid of the files first */
+		// get rid of the files first
 		$aFtpRemoteFiles = ftp_nlist($oFtpConnection, $aFtpExport['remotedir']);
 
 		if (is_array($aFtpRemoteFiles)) {
@@ -1514,18 +1548,19 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
 		}
 
 		$aFtpRemoteFiles = ftp_nlist($oFtpConnection, $aFtpExport['remotedir']);
+
 		if (cacti_sizeof($aFtpRemoteFiles) > 0) {
 			ftp_close($oFtpConnection);
 			export_fatal($export, 'Problem sanitizing remote ftp location, must exit.');
 		}
 	}
 
-	/* upload files to remote system */
+	// upload files to remote system
 	export_log('Uploading files to remote location.');
 	ftp_chdir($oFtpConnection, $aFtpExport['remotedir']);
 	export_ftp_php_uploaddir($stExportDir,$oFtpConnection);
 
-	/* end connection */
+	// end connection
 	export_log('Closing ftp connection.');
 	ftp_close($oFtpConnection);
 }
@@ -1537,8 +1572,8 @@ function export_ftp_php_execute(&$export, $stExportDir, $stFtpType = 'ftp') {
  * removing the directory itself. Called from export_ftp_php_execute()
  * when sanitizing the remote destination before upload.
  *
- * @param resource $handle The active FTP connection resource.
- * @param string   $path   The remote file or directory path to remove.
+ * @param \FTP\Connection $handle The active FTP connection resource.
+ * @param string          $path   The remote file or directory path to remove.
  *
  * @return bool True if the path was successfully removed, false
  *              otherwise.
@@ -1549,22 +1584,21 @@ function export_ftp_rmdirr($handle, $path) {
 
 	if (!@ftp_delete($handle, $path)) {
 		$list = @ftp_nlist($handle, $path);
+		$list = is_array($list) ? $list : [];
 
 		if (cacti_sizeof($list)) {
-			foreach($list as $value) {
-				ftp_rmdirr($handle, $value);
+			foreach ($list as $value) {
+				export_ftp_rmdirr($handle, $value);
 			}
 		}
 	}
 
-    if (@ftp_rmdir($handle, $path)) {
-		return true;
-	} else {
-		return false;
-	}
+	$result = @ftp_rmdir($handle, $path) ? true : false;
 
 	// Restore the cacti error handler
 	set_error_handler('CactiErrorHandler');
+
+	return $result;
 }
 
 /**
@@ -1576,8 +1610,8 @@ function export_ftp_rmdirr($handle, $path) {
  * @arg $dir - the directory to transfer to the remote host.
  * @arge $oFtpConnection - the ftp connection object created previously.
  *
- * @param string   $dir            The local directory to upload.
- * @param resource $oFtpConnection The active FTP connection resource.
+ * @param string          $dir            The local directory to upload.
+ * @param \FTP\Connection $oFtpConnection The active FTP connection resource.
  *
  * @return void
  *
@@ -1588,10 +1622,13 @@ function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 	global $aFtpExport;
 
 	export_log("Uploading directory: '$dir' to remote location.");
+
 	if ($dh = opendir($dir)) {
 		export_log('Uploading files to remote location.');
-		while(($file = readdir($dh)) !== false) {
+
+		while (($file = readdir($dh)) !== false) {
 			$filePath = $dir . '/' . $file;
+
 			if ($file != '.' && $file != '..' && !is_dir($filePath)) {
 				if (!ftp_put($oFtpConnection, $file, $filePath, FTP_BINARY)) {
 					export_log("Failed to upload '$file'.");
@@ -1601,7 +1638,6 @@ function export_ftp_php_uploaddir($dir, $oFtpConnection) {
 			if (($file != '.') &&
 				($file != '..') &&
 				(is_dir($filePath))) {
-
 				export_log("Create remote directory: '$file'.");
 				@ftp_mkdir($oFtpConnection,$file);
 
@@ -1636,25 +1672,27 @@ function export_ftp_ncftpput_execute($stExportDir) {
 	global $aFtpExport;
 
 	$stExportDir = realpath($stExportDir);
+
 	if ($stExportDir === false) {
 		cacti_log('ERROR: Export directory does not exist for ncftpput', true, 'EXPORT');
+
 		return;
 	}
 
 	chdir($stExportDir);
 
-	/* set the initial command structure */
+	// set the initial command structure
 	$stExecute = 'ncftpput -R -V -r 1 -u ' . cacti_escapeshellarg($aFtpExport['username']) . ' -p ' . cacti_escapeshellarg($aFtpExport['password']);
 
-	/* if the user requested passive mode, use it */
+	// if the user requested passive mode, use it
 	if ($aFtpExport['passive']) {
 		$stExecute .= ' -F ';
 	}
 
-	/* setup the port, server, remote directory and all files */
+	// setup the port, server, remote directory and all files
 	$stExecute .= ' -P ' . cacti_escapeshellarg($aFtpExport['port']) . ' ' . cacti_escapeshellarg($aFtpExport['server']) . ' ' . cacti_escapeshellarg($aFtpExport['remotedir']) . '.';
 
-	/* run the command */
+	// run the command
 	$iExecuteReturns = 0;
 	system($stExecute, $iExecuteReturns);
 
@@ -1693,16 +1731,17 @@ function export_ftp_ncftpput_execute($stExportDir) {
  * @return void
  */
 function export_post_ftp_upload(&$export, $stExportDir) {
-	/* clean-up after ftp-put */
+	// clean-up after ftp-put
 	if ($dh = opendir($stExportDir)) {
 		while (($file = readdir($dh)) !== false) {
 			$filePath = $stExportDir . '/' . $file;
+
 			if ($file != '.' && $file != '..' && !is_dir($filePath)) {
 				export_log("Removing Local File '" . $file . "'");
 				unlink($filePath);
 			}
 
-			/* if the directory turns out to be a sub-directory, delete it too */
+			// if the directory turns out to be a sub-directory, delete it too
 			if ($file != '.' && $file != '..' && is_dir($filePath)) {
 				export_log("Removing Local Directory '" . $filePath . "'");
 				export_post_ftp_upload($export, $filePath);
@@ -1710,7 +1749,7 @@ function export_post_ftp_upload(&$export, $stExportDir) {
 		}
 		closedir($dh);
 
-		/* don't delete the root of the temporary export directory */
+		// don't delete the root of the temporary export directory
 		if ($export['export_temp_directory'] != $stExportDir) {
 			rmdir($stExportDir);
 		}
@@ -1762,10 +1801,11 @@ function export_post_ftp_upload(&$export, $stExportDir) {
  */
 function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, $user, $export_path) {
 	static $json_files = [];
-	$total_rows  = 0;
-	$graph_array = [];
+	$total_rows        = 0;
+	$graph_array       = [];
 
 	$export_path   = realpath($export_path);
+
 	if ($export_path === false) {
 		return 0;
 	}
@@ -1776,7 +1816,9 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	if ($type == 'branch') {
 		$json_file = $export_path . '/tree_' . $tree_site_id . '_branch_' . $branch_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = db_fetch_assoc_prepared('SELECT DISTINCT local_graph_id
 			FROM graph_tree_items
@@ -1787,31 +1829,41 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	} elseif ($type == 'gtbranch') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_gtbranch_0.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = [];
 	} elseif ($type == 'dqbranch') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_gtbranch_0.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = [];
 	} elseif ($type == 'site') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = [];
 	} elseif ($type == 'site_dt') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_dt_' . $sub_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = [];
 	} elseif ($type == 'site_gt') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_gt_' . $sub_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', [$tree_site_id]), 'id', 'id');
 
@@ -1823,7 +1875,9 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	} elseif ($type == 'site_dq') {
 		$json_file = $export_path . '/site_' . $tree_site_id . '_dq_' . $sub_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', [$tree_site_id]), 'id', 'id');
 
@@ -1833,23 +1887,26 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 			$graphs = get_allowed_graphs('(gl.host_id IN(' . implode(',', $devices) . ') AND gl.snmp_query_id = ' . $sub_id . ')', 'gtg.title_cache', '', $total_rows, $user);
 		}
 	} elseif ($type == 'site_dqi') {
-		$parts   = explode(':', $sub_id);
-		$dq      = $parts[0];
-		$index   = $parts[1];
-		$values  = json_decode($parts[2]);
-		$nindex  = clean_up_name($parts[1]);
+		$parts     = explode(':', $sub_id);
+		$dq        = $parts[0];
+		$index     = $parts[1];
+		$values    = json_decode($parts[2]);
+		$nindex    = clean_up_name($parts[1]);
 		$json_file = $export_path . '/site_' . $tree_site_id . '_dq_' . $dq . '_dqi_' . $nindex . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$devices = array_rekey(db_fetch_assoc_prepared('SELECT id FROM host WHERE site_id = ?', [$tree_site_id]), 'id', 'id');
 
 		$sql_where = '';
+
 		if (is_array($values) && cacti_sizeof($values)) {
-			foreach($values as $value) {
+			foreach ($values as $value) {
 				// host_id | snmp_index
 				$parts = explode('|', $value);
-				$sql_where .= ($sql_where != '' ? ' OR ':' AND (') . '(host_id = ' . $parts[0] . ' AND snmp_index = ' . db_qstr($parts[1]) . ')';
+				$sql_where .= ($sql_where != '' ? ' OR ' : ' AND (') . '(host_id = ' . $parts[0] . ' AND snmp_index = ' . db_qstr($parts[1]) . ')';
 			}
 			$sql_where .= ')';
 		}
@@ -1862,51 +1919,62 @@ function write_branch_conf($tree_site_id, $branch_id, $type, $host_id, $sub_id, 
 	} elseif ($type == 'host') {
 		$json_file = $export_path . '/host_' . $host_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id, 'gtg.title_cache', '', $total_rows, $user);
 	} elseif ($type == 'host_gt') {
 		$json_file = $export_path . '/host_' . $host_id . '_gt_' . $sub_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.graph_template_id=' . $sub_id, 'gtg.title_cache', '', $total_rows, $user);
 	} elseif ($type == 'host_dq') {
 		$json_file = $export_path . '/host_' . $host_id . '_dq_' . $sub_id . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.snmp_query_id=' . $sub_id, 'gtg.title_cache', '', $total_rows, $user);
 	} elseif ($type == 'host_dqi') {
-		$parts = explode(':', $sub_id);
-		$dq    = $parts[0];
-		$index = clean_up_name($parts[1]);
+		$parts     = explode(':', $sub_id);
+		$dq        = $parts[0];
+		$index     = clean_up_name($parts[1]);
 		$json_file = $export_path . '/host_' . $host_id . '_dq_' . $dq . '_dqi_' . $index . '.json';
 
-		if (isset($json_files[$json_file])) return;
+		if (isset($json_files[$json_file])) {
+			return;
+		}
 
 		$graphs = get_allowed_graphs('gl.host_id=' . $host_id . ' AND gl.snmp_query_id=' . $dq . ' AND gl.snmp_index=' . db_qstr($parts[1]), 'gtg.title_cache', '', $total_rows, $user);
+	} else {
+		// Unrecognized $type; nothing to write.
+		return 0;
 	}
 
 	$fp = fopen($json_file, 'w');
 
 	if (is_resource($fp)) {
 		if (cacti_sizeof($graphs)) {
-		foreach($graphs as $graph) {
-			if ($host_id == 0) {
-				if (is_graph_allowed($graph['local_graph_id'], $user)) {
+			foreach ($graphs as $graph) {
+				if ($host_id == 0) {
+					if (is_graph_allowed($graph['local_graph_id'], $user)) {
+						$graph_array[] = $graph['local_graph_id'];
+					}
+				} else {
 					$graph_array[] = $graph['local_graph_id'];
 				}
-			} else {
-				$graph_array[] = $graph['local_graph_id'];
 			}
-		}
 		}
 
 		fwrite($fp, json_encode($graph_array) . "\n");
 		fclose($fp);
 	} else {
-			cacti_log('Unable to open ' . $json_file);
+		cacti_log('Unable to open ' . $json_file);
 	}
 
 	$json_files[$json_file] = true;
@@ -1954,7 +2022,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 
 	$total_rows = 0;
 
-	$jstree    .= str_repeat("\t", $depth) . "<ul>\n";
+	$jstree .= str_repeat("\t", $depth) . "<ul>\n";
 
 	$depth++;
 
@@ -1969,7 +2037,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 		[$tree['id'], $parent]);
 
 	if (cacti_sizeof($branches)) {
-		foreach($branches as $branch) {
+		foreach ($branches as $branch) {
 			write_branch_conf($tree['id'], $branch['id'], 'branch', 0, 0, $user, $export_path);
 
 			$has_children = db_fetch_cell_prepared('SELECT count(*)
@@ -2003,7 +2071,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 		ORDER BY position', [$tree['id'], $parent]);
 
 	if (cacti_sizeof($hosts)) {
-		foreach($hosts as $host) {
+		foreach ($hosts as $host) {
 			if (is_device_allowed($host['host_id'], $user)) {
 				write_branch_conf($tree['id'], $parent, 'host', $host['host_id'], 0, $user, $export_path);
 
@@ -2015,11 +2083,13 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 
 				if ($expand_hosts == 'on') {
 					$templates = get_allowed_graph_templates('gl.host_id =' . $host['host_id'], 'name', '', $total_rows, $user);
-					$count = 0;
+					$count     = 0;
+
 					if (cacti_sizeof($templates)) {
 						if ($host['host_grouping_type'] == 1) {
-							foreach($templates as $template) {
+							foreach ($templates as $template) {
 								$total_rows = write_branch_conf($tree['id'], $parent, 'host_gt', $host['host_id'], $template['id'], $user, $export_path);
+
 								if ($total_rows) {
 									if ($count == 0) {
 										$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2028,7 +2098,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 									}
 									$count++;
 
-									$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_gt_" . $template['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $template['name'] . "</li>\n";
+									$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . '_gt_' . $template['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $template['name'] . "</li>\n";
 								}
 							}
 
@@ -2046,10 +2116,11 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 								WHERE hsq.host_id = ?',
 								[$host['host_id']]);
 
-							$data_queries[] = array('id' => '0', 'name' => __('Non Query Based', 'gexport'));
+							$data_queries[] = ['id' => '0', 'name' => __('Non Query Based', 'gexport')];
 
-							foreach($data_queries as $query) {
+							foreach ($data_queries as $query) {
 								$total_rows = write_branch_conf($tree['id'], $parent, 'host_dq', $host['host_id'], $query['id'], $user, $export_path);
+
 								if ($total_rows && $query['id'] > 0) {
 									if ($count == 0) {
 										$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2057,7 +2128,7 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 									}
 									$count++;
 
-									$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $query['name'] . "\n";
+									$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . '_dq_' . $query['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $query['name'] . "\n";
 
 									$depth++;
 									$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2071,22 +2142,24 @@ function export_generate_tree_html($export_path, $tree, $parent, $expand_hosts, 
 										[$host['host_id'], $query['id']]);
 
 									$dqi = [];
-									foreach($graphs as $graph) {
+
+									foreach ($graphs as $graph) {
 										$dqi[$graph['snmp_index']] = $graph['snmp_index'];
 									}
 
-									/* fetch a list of field names that are sorted by the preferred sort field */
+									// fetch a list of field names that are sorted by the preferred sort field
 									$sort_field_data = get_formatted_data_query_indexes($host['host_id'], $query['id']);
 
-									foreach($dqi as $i) {
+									foreach ($dqi as $i) {
 										$total_rows = write_branch_conf($tree['id'], $parent, 'host_dqi', $host['host_id'], $query['id'] . ':' . $i, $user, $export_path);
+
 										if ($total_rows) {
 											if (isset($sort_field_data[$i])) {
 												$title = $sort_field_data[$i];
 											} else {
 												$title = $i;
 											}
-											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
+											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . '_dq_' . $query['id'] . '_dqi_' . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
 										}
 									}
 
@@ -2155,7 +2228,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 	static $depth = 5;
 
 	$total_rows = 0;
-	$jstree    .= str_repeat("\t", $depth) . "<ul>\n";
+	$jstree .= str_repeat("\t", $depth) . "<ul>\n";
 
 	$depth++;
 
@@ -2173,10 +2246,10 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 		WHERE h.site_id = ?', [$site['id']]);
 
 	if (cacti_sizeof($device_templates)) {
-		foreach($device_templates as $branch) {
+		foreach ($device_templates as $branch) {
 			write_branch_conf($site['id'], 0, $branch['type'], 0, $branch['id'], $user, $export_path);
 
-			$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dt_" . $branch['id'] . "' data-jstree='{ \"type\" : \"device_template\" }'>" . $branch['name'] . "\n";
+			$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . '_dt_' . $branch['id'] . "' data-jstree='{ \"type\" : \"device_template\" }'>" . $branch['name'] . "\n";
 			$depth++;
 
 			$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2190,7 +2263,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 				[$site['id'], $branch['id']]);
 
 			if (cacti_sizeof($hosts)) {
-				foreach($hosts as $host) {
+				foreach ($hosts as $host) {
 					if (is_device_allowed($host['host_id'], $user)) {
 						write_branch_conf($site['id'], $parent, 'host', $host['host_id'], 0, $user, $export_path);
 
@@ -2202,11 +2275,13 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 
 						if ($expand_hosts == 'on') {
 							$templates = get_allowed_graph_templates('gl.host_id =' . $host['host_id'], 'name', '', $total_rows, $user);
-							$count = 0;
+							$count     = 0;
+
 							if (cacti_sizeof($templates)) {
 								if ($host['host_grouping_type'] == 1) {
-									foreach($templates as $template) {
+									foreach ($templates as $template) {
 										$total_rows = write_branch_conf($site['id'], $parent, 'host_gt', $host['host_id'], $template['id'], $user, $export_path);
+
 										if ($total_rows) {
 											if ($count == 0) {
 												$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2215,7 +2290,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 											}
 											$count++;
 
-											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_gt_" . $template['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $template['name'] . "</li>\n";
+											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . '_gt_' . $template['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $template['name'] . "</li>\n";
 										}
 									}
 
@@ -2233,10 +2308,11 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 										WHERE hsq.host_id = ?',
 										[$host['host_id']]);
 
-									$data_queries[] = array('id' => '0', 'name' => __('Non Query Based', 'gexport'));
+									$data_queries[] = ['id' => '0', 'name' => __('Non Query Based', 'gexport')];
 
-									foreach($data_queries as $query) {
+									foreach ($data_queries as $query) {
 										$total_rows = write_branch_conf($site['id'], $parent, 'host_dq', $host['host_id'], $query['id'], $user, $export_path);
+
 										if ($total_rows && $query['id'] > 0) {
 											if ($count == 0) {
 												$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2244,7 +2320,7 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 											}
 											$count++;
 
-											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $query['name'] . "\n";
+											$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . '_dq_' . $query['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $query['name'] . "\n";
 
 											$depth++;
 											$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2258,22 +2334,24 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 												[$host['host_id'], $query['id']]);
 
 											$dqi = [];
-											foreach($graphs as $graph) {
+
+											foreach ($graphs as $graph) {
 												$dqi[$graph['snmp_index']] = $graph['snmp_index'];
 											}
 
-											/* fetch a list of field names that are sorted by the preferred sort field */
+											// fetch a list of field names that are sorted by the preferred sort field
 											$sort_field_data = get_formatted_data_query_indexes($host['host_id'], $query['id']);
 
-											foreach($dqi as $i) {
+											foreach ($dqi as $i) {
 												$total_rows = write_branch_conf($site['id'], $parent, 'host_dqi', $host['host_id'], $query['id'] . ':' . $i, $user, $export_path);
+
 												if ($total_rows) {
 													if (isset($sort_field_data[$i])) {
 														$title = $sort_field_data[$i];
 													} else {
 														$title = $i;
 													}
-													$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . "_dq_" . $query['id'] . "_dqi_" . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
+													$jstree .= str_repeat("\t", $depth) . "<li id='host_" . $host['host_id'] . '_dq_' . $query['id'] . '_dqi_' . clean_up_name($i) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $title . "</li>\n";
 												}
 											}
 
@@ -2324,9 +2402,9 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 
 		write_branch_conf($site['id'], 0, 'gtbranch', 0, 0, $user, $export_path);
 
-		foreach($graph_templates as $branch) {
+		foreach ($graph_templates as $branch) {
 			if (is_graph_template_allowed($branch['id'], $user)) {
-				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_gt_" . $branch['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $branch['name'] . "</li>\n";
+				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . '_gt_' . $branch['id'] . "' data-jstree='{ \"type\" : \"graph_template\" }'>" . $branch['name'] . "</li>\n";
 				write_branch_conf($site['id'], 0, $branch['type'], 0, $branch['id'], $user, $export_path);
 			}
 		}
@@ -2353,11 +2431,11 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 
 		write_branch_conf($site['id'], 0, 'dqbranch', 0, 0, $user, $export_path);
 
-		foreach($data_queries as $branch) {
-			$total_rows = write_branch_conf($site['id'], '0', 'site_dq', 0, $branch['id'], $user, $export_path);
+		foreach ($data_queries as $branch) {
+			$total_rows = write_branch_conf($site['id'], 0, 'site_dq', 0, $branch['id'], $user, $export_path);
 
 			if ($total_rows) {
-				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dq_" . $branch['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $branch['name'] . "\n";
+				$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . '_dq_' . $branch['id'] . "' data-jstree='{ \"type\" : \"data_query\" }'>" . $branch['name'] . "\n";
 				$depth++;
 
 				$jstree .= str_repeat("\t", $depth) . "<ul>\n";
@@ -2374,7 +2452,8 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 				$sort_field_data = [];
 
 				$dqi = [];
-				foreach($graphs as $graph) {
+
+				foreach ($graphs as $graph) {
 					if (!isset($sort_field_data[$graph['host_id']])) {
 						$sort_field_data[$graph['host_id']] = get_formatted_data_query_indexes($graph['host_id'], $branch['id']);
 					}
@@ -2387,11 +2466,12 @@ function export_generate_site_html($export_path, $site, $parent, $expand_hosts, 
 					}
 				}
 
-				foreach($dqi as $index => $values) {
-					$values = json_encode($values);
+				foreach ($dqi as $index => $values) {
+					$values     = json_encode($values);
 					$total_rows = write_branch_conf($site['id'], 0, 'site_dqi', 0, $branch['id'] . ':' . $index . ':' . $values, $user, $export_path);
+
 					if ($total_rows) {
-						$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . "_dq_" . $branch['id'] . "_dqi_" . clean_up_name($index) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $index . "</li>\n";
+						$jstree .= str_repeat("\t", $depth) . "<li id='site_" . $site['id'] . '_dq_' . $branch['id'] . '_dqi_' . clean_up_name($index) . "' data-jstree='{ \"type\" : \"graph\" }'>" . $index . "</li>\n";
 					}
 				}
 
@@ -2446,13 +2526,13 @@ function tree_site_export(&$export, $export_path) {
 
 	// Define javascript global variables for form elements
 	$jstree     = str_repeat("\t", 4) . "<script type='text/javascript'>\n";
-	$jstree    .= str_repeat("\t", 5) . "var columnsPerRow=" . $export['graph_columns'] . ";\n";
-	$jstree    .= str_repeat("\t", 5) . "var graphsPerPage=" . $export['graph_perpage'] . ";\n";
-	$jstree    .= str_repeat("\t", 5) . "var thumbnails=" . ($export['graph_thumbnails'] == 'on' ? 'true':'false') . ";\n";
-	$jstree    .= str_repeat("\t", 5) . "var theme='" . $export['export_theme'] . "';\n";
-	$jstree    .= str_repeat("\t", 4) . "</script>\n";
+	$jstree .= str_repeat("\t", 5) . 'var columnsPerRow=' . $export['graph_columns'] . ";\n";
+	$jstree .= str_repeat("\t", 5) . 'var graphsPerPage=' . $export['graph_perpage'] . ";\n";
+	$jstree .= str_repeat("\t", 5) . 'var thumbnails=' . ($export['graph_thumbnails'] == 'on' ? 'true' : 'false') . ";\n";
+	$jstree .= str_repeat("\t", 5) . "var theme='" . $export['export_theme'] . "';\n";
+	$jstree .= str_repeat("\t", 4) . "</script>\n";
 
-	$jstree    .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";
+	$jstree .= str_repeat("\t", 4) . "<div id='jstree'><ul>\n";
 	$user       = $export['export_effective_user'];
 	$ntree      = [];
 	$sql_where  = '';
@@ -2471,9 +2551,10 @@ function tree_site_export(&$export, $export_path) {
 		}
 
 		$trees = get_allowed_trees(false, false, $sql_where, 'name', '', $total_rows, $user);
+		$trees = is_array($trees) ? $trees : [];
 
 		if (cacti_sizeof($trees)) {
-			foreach($trees as $tree) {
+			foreach ($trees as $tree) {
 				$jstree .= str_repeat("\t", 4) . "<li id='tree_" . $tree['id'] . "' data-jstree='{ \"type\" : \"tree\" }'>" . get_tree_name($tree['id']) . "\n";
 				$jstree = export_generate_tree_html($export_path, $tree, $parent, $export['export_expand_hosts'], $user, $jstree);
 				$jstree .= str_repeat("\t", 4) . "</li>\n";
@@ -2489,8 +2570,9 @@ function tree_site_export(&$export, $export_path) {
 		}
 
 		if (cacti_sizeof($sites)) {
-			foreach($sites as $site_id) {
+			foreach ($sites as $site_id) {
 				$site_data = db_fetch_row_prepared('SELECT * FROM sites WHERE id = ?', [$site_id]);
+				$site_data = is_array($site_data) ? $site_data : [];
 
 				if (cacti_sizeof($site_data)) {
 					$jstree .= str_repeat("\t", 4) . "<li id='site_" . $site_id . "' data-jstree='{ \"type\" : \"site\" }'>" . $site_data['name'] . "\n";
@@ -2505,6 +2587,7 @@ function tree_site_export(&$export, $export_path) {
 		$jstree .= str_repeat("\t", 3) . "</ul></div>\n";
 
 		$website = file_get_contents($config['base_path'] . '/plugins/gexport/website.template');
+		$website = is_string($website) ? $website : '';
 		$website = str_replace('TREEDATA', $jstree, $website);
 
 		$fp = fopen($export_path . '/index.html', 'w');
@@ -2540,72 +2623,72 @@ function tree_site_export(&$export, $export_path) {
 function create_export_directory_structure(&$export, $root_path, $export_path) {
 	$theme = $export['export_theme'];
 
-	/* create the treeview sub-directory */
+	// create the treeview sub-directory
 	if (!is_dir("$export_path/js")) {
 		if (!mkdir("$export_path/js", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/js failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/js failed.  Can not continue');
 		}
 	}
 
 	if (!is_dir("$export_path/js/images")) {
 		if (!mkdir("$export_path/js/images", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/js/images failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/js/images failed.  Can not continue');
 		}
 	}
 
-	/* create the images sub-directory */
+	// create the images sub-directory
 	if (!is_dir("$export_path/images")) {
 		if (!mkdir("$export_path/images", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/images failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/images failed.  Can not continue');
 		}
 	}
 
-	/* create the images sub-directory */
+	// create the images sub-directory
 	if (!is_dir("$export_path/fonts")) {
 		if (!mkdir("$export_path/fonts", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/fonts failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/fonts failed.  Can not continue');
 		}
 	}
 
-	/* create the images sub-directory */
+	// create the images sub-directory
 	if (!is_dir("$export_path/css")) {
 		if (!mkdir("$export_path/css", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/css failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/css failed.  Can not continue');
 		}
 	}
 
 	if (!is_dir("$export_path/css/default")) {
 		if (!mkdir("$export_path/css/default", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/css/default failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/css/default failed.  Can not continue');
 		}
 	}
 
 	if (!is_dir("$export_path/css/images")) {
 		if (!mkdir("$export_path/css/images", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/css/images failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/css/images failed.  Can not continue');
 		}
 	}
 
-	/* create the graphs sub-directory */
+	// create the graphs sub-directory
 	if (!is_dir("$export_path/graphs")) {
 		if (!mkdir("$export_path/graphs", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/graphs failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/graphs failed.  Can not continue');
 		}
 	}
 
 	if (!is_dir("$export_path/webfonts")) {
 		if (!mkdir("$export_path/webfonts", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/webfonts failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/webfonts failed.  Can not continue');
 		}
 	}
 
 	if (!is_dir("$export_path/svgs")) {
 		if (!mkdir("$export_path/svgs", 0755, true)) {
-			export_fatal($export, "Create directory " . $export_path . "/svgs failed.  Can not continue");
+			export_fatal($export, 'Create directory ' . $export_path . '/svgs failed.  Can not continue');
 		}
 	}
 
-	/* java scripts for the tree */
+	// java scripts for the tree
 	copy("$root_path/include/js/jquery.js", "$export_path/js/jquery.js");
 	copy("$root_path/include/js/jquery-ui.js", "$export_path/js/jquery-ui.js");
 	copy("$root_path/include/js/jquery.tablesorter.js", "$export_path/js/jquery.tablesorter.js");
@@ -2623,19 +2706,19 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	}
 	copy("$root_path/include/themes/$theme/main.js", "$export_path/js/main.js");
 
-	/* css */
+	// css
 	copy("$root_path/include/themes/$theme/main.css", "$export_path/css/main.css");
 	copy("$root_path/include/themes/$theme/jquery-ui.css", "$export_path/css/jquery-ui.css");
 	copy("$root_path/include/themes/$theme/default/style.css", "$export_path/css/default/style.css");
 	copy("$root_path/include/themes/$theme/pace.css", "$export_path/css/pace.css");
 	copy("$root_path/include/fa/css/all.css", "$export_path/css/all.css");
 
-	/* fonts */
+	// fonts
 	copy("$root_path/include/fa/webfonts/fa-solid-900.ttf", "$export_path/webfonts/fa-solid-900.ttf");
 	copy("$root_path/include/fa/webfonts/fa-solid-900.woff", "$export_path/webfonts/fa-solid-900.woff");
 	copy("$root_path/include/fa/webfonts/fa-solid-900.woff2", "$export_path/webfonts/fa-solid-900.woff2");
 
-	/* images for html */
+	// images for html
 	copy("$root_path/images/favicon.ico", "$export_path/images/favicon.ico");
 
 	copy("$root_path/images/tree.png", "$export_path/images/tree.png");
@@ -2649,29 +2732,36 @@ function create_export_directory_structure(&$export, $root_path, $export_path) {
 	copy("$root_path/images/server_graph_template.png", "$export_path/images/server_graph_template.png");
 	copy("$root_path/include/themes/$theme/images/cacti_logo.svg", "$export_path/images/cacti_logo.svg");
 
-	/* jstree theme files */
+	// jstree theme files
 	$files = ['32px.png', '40px.png', 'style.css', 'throbber.gif'];
-	foreach($files as $file) {
+
+	foreach ($files as $file) {
 		copy("$root_path/include/themes/$theme/default/$file", "$export_path/css/default/$file");
 	}
 
-	$directory = "$root_path/include/themes/$theme/images";
-	$directory = array_diff(glob("$directory/*.*"), ["$directory/.", "$directory/.."]);
-	foreach($directory as $file) {
+	$directory   = "$root_path/include/themes/$theme/images";
+	$glob_result = glob("$directory/*.*");
+	$directory   = array_diff(is_array($glob_result) ? $glob_result : [], ["$directory/.", "$directory/.."]);
+
+	foreach ($directory as $file) {
 		$file = basename($file);
 		copy("$root_path/include/themes/$theme/images/$file", "$export_path/css/images/$file");
 	}
 
-	$directory = "$root_path/include/fa/webfonts";
-	$directory = array_diff(glob("$directory/*.*"), ["$directory/.", "$directory/.."]);
-	foreach($directory as $file) {
+	$directory   = "$root_path/include/fa/webfonts";
+	$glob_result = glob("$directory/*.*");
+	$directory   = array_diff(is_array($glob_result) ? $glob_result : [], ["$directory/.", "$directory/.."]);
+
+	foreach ($directory as $file) {
 		$file = basename($file);
 		copy("$root_path/include/fa/webfonts/$file", "$export_path/webfonts/$file");
 	}
 
-	$directory = "$root_path/include/fa/svgs";
-	$directory = array_diff(glob("$directory/*.*"), ["$directory/.", "$directory/.."]);
-	foreach($directory as $file) {
+	$directory   = "$root_path/include/fa/svgs";
+	$glob_result = glob("$directory/*.*");
+	$directory   = array_diff(is_array($glob_result) ? $glob_result : [], ["$directory/.", "$directory/.."]);
+
+	foreach ($directory as $file) {
 		$file = basename($file);
 		copy("$root_path/include/fa/svgs/$file", "$export_path/svgs/$file");
 	}
@@ -2721,29 +2811,32 @@ function get_tree_name($tree_id) {
  * @return void
  */
 function del_directory($path, $deldir = true) {
-	/* check if the directory name have a '/' at the end, add if not */
-	if ($path[strlen($path)-1] != '/') {
+	// check if the directory name have a '/' at the end, add if not
+	if ($path[strlen($path) - 1] != '/') {
 		$path .= '/';
 	}
 
-	/* cascade through the directory structure(s) until they are all delected */
+	// cascade through the directory structure(s) until they are all delected
 	if (is_dir($path)) {
 		$d = opendir($path);
-		while ($f = readdir($d)) {
-			if ($f != '.' && $f != '..') {
-				$rf = $path . $f;
 
-				/* if it is a directory, recursive call to the function */
-				if (is_dir($rf)) {
-					del_directory($rf);
-				} else if (is_file($rf) && is_writable($rf)) {
-					unlink($rf);
+		if ($d !== false) {
+			while ($f = readdir($d)) {
+				if ($f != '.' && $f != '..') {
+					$rf = $path . $f;
+
+					// if it is a directory, recursive call to the function
+					if (is_dir($rf)) {
+						del_directory($rf);
+					} elseif (is_file($rf) && is_writable($rf)) {
+						unlink($rf);
+					}
 				}
 			}
+			closedir($d);
 		}
-		closedir($d);
 
-		/* if $deldir is true, remove the directory */
+		// if $deldir is true, remove the directory
 		if ($deldir && is_writable($path)) {
 			rmdir($path);
 		}
@@ -2766,4 +2859,3 @@ function check_remove($filename) {
 		unlink($filename);
 	}
 }
-
