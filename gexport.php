@@ -464,7 +464,7 @@ function export_edit() {
 	form_save_button('gexport.php', 'return');
 
 	?>
-	<script type='text/javascript'>
+	<script type='text/javascript' <?php print plugin_gexport_csp_nonce(); ?>>
 
 	$(function() {
 		$('#graph_tree').multiselect({
@@ -719,7 +719,7 @@ function export_filter() {
 				</tr>
 			</table>
 			</form>
-			<script type='text/javascript'>
+			<script type='text/javascript' <?php print plugin_gexport_csp_nonce(); ?>>
 
 			function applyFilter() {
 				strURL  = 'gexport.php?header=false';
