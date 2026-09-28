@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 13:18-0400\n"
+"POT-Creation-Date: 2026-09-28 09:23-0400\n"
 "PO-Revision-Date: 2024-06-07 23:14-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -234,15 +234,15 @@ msgstr "비활성화"
 msgid "Export Now"
 msgstr "지금 내보내기"
 
-#: gexport.php:38 setup.php:505
+#: gexport.php:38 setup.php:521
 msgid "Periodic"
 msgstr "주기율표"
 
-#: gexport.php:39 setup.php:507
+#: gexport.php:39 setup.php:523
 msgid "Daily"
 msgstr "매일"
 
-#: gexport.php:40 setup.php:506
+#: gexport.php:40 setup.php:522
 msgid "Hourly"
 msgstr "매시간 마다"
 
@@ -396,11 +396,11 @@ msgctxt "filter: reset"
 msgid "Clear"
 msgstr "지우기"
 
-#: gexport.php:901 setup.php:432
+#: gexport.php:901 setup.php:448
 msgid "Export Name"
 msgstr "내보내기 이름"
 
-#: gexport.php:904 setup.php:433
+#: gexport.php:904 setup.php:449
 msgid "The name of this Graph Export Definition."
 msgstr "이 그래프 내보내기 정의의 이름입니다."
 
@@ -428,7 +428,7 @@ msgstr "다음 시작"
 msgid "The next time the Graph Export should run."
 msgstr "다음에 그래프 내보내기를 실행해야합니다."
 
-#: gexport.php:925 setup.php:441
+#: gexport.php:925 setup.php:457
 msgid "Enabled"
 msgstr "활성화"
 
@@ -452,7 +452,7 @@ msgstr "내보내기 (사이트 / 트리)"
 msgid "What is being Exported."
 msgstr "무엇이 수출되고 있는가."
 
-#: gexport.php:941 setup.php:565
+#: gexport.php:941 setup.php:581
 msgid "Effective User"
 msgstr "효과적인 사용자"
 
@@ -497,7 +497,7 @@ msgid "Export Definitions"
 msgstr "정의 내보내기"
 
 #: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:570
+#: setup.php:586
 msgid "N/A"
 msgstr "N/A"
 
@@ -537,333 +537,333 @@ msgstr "초"
 msgid "No Graph Export Definitions"
 msgstr "그래프 내보내기 정의 없음"
 
-#: setup.php:40
+#: setup.php:56
 msgid "Export Cacti Graphs Settings"
 msgstr "선인장 그래프 설정 내보내기"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Graph Exports"
 msgstr "그래프 내보내기"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Utilities"
 msgstr "도구 "
 
-#: setup.php:419
+#: setup.php:435
 msgid "General Administration"
 msgstr "일반 행정"
 
-#: setup.php:427
+#: setup.php:443
 msgid "General"
 msgstr "일반"
 
-#: setup.php:442
+#: setup.php:458
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "이 그래프 내보내기 정의를 활성화하려면이 확인란을 선택하십시오."
 
-#: setup.php:448
+#: setup.php:464
 msgid "Export Method"
 msgstr "수출 방법"
 
-#: setup.php:449
+#: setup.php:465
 msgid "Choose which export method to use."
 msgstr "사용할 내보낼 방법을 선택하십시오."
 
-#: setup.php:454
+#: setup.php:470
 msgid "Local"
 msgstr "로컬"
 
-#: setup.php:455
+#: setup.php:471
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:456
+#: setup.php:472
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:457
+#: setup.php:473
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:458
+#: setup.php:474
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:459
+#: setup.php:475
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:463
+#: setup.php:479
 msgid "Export Command Arguments"
 msgstr "내보내기 명령 인수"
 
-#: setup.php:464
+#: setup.php:480
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "비 로컬 내보내기 메소드에서 사용할 인수. rsync에서 사용해야합니다."
 
-#: setup.php:476
+#: setup.php:492
 msgid "Theme"
 msgstr "테마"
 
-#: setup.php:477
+#: setup.php:493
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "사용 가능한 테마 중 하나를 선택하여 Cacti 그래프 내보내기를 스킨하십시오."
 
-#: setup.php:484
+#: setup.php:500
 msgid "Presentation Method"
 msgstr "발표 방법"
 
-#: setup.php:485
+#: setup.php:501
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "html로 생성 된 페이지에 대해 원하는 프리젠 테이션을 선택하십시오. 고전 프리젠 테이션을 선택하면; 그래프는 하나의 HTML 페이지에 포함됩니다. 트리 프리젠 테이션을 선택하면 그래프 트리 아키텍처가 고정 html 페이지에 보관됩니다"
 
-#: setup.php:490 setup.php:593
+#: setup.php:506 setup.php:609
 msgid "Site"
 msgstr "사이트"
 
-#: setup.php:491 setup.php:574
+#: setup.php:507 setup.php:590
 msgid "Tree"
 msgstr "나무"
 
-#: setup.php:495
+#: setup.php:511
 msgid "Export Timing"
 msgstr "내보내기 타이밍"
 
-#: setup.php:499
+#: setup.php:515
 msgid "Timing Method"
 msgstr "타이밍 방법"
 
-#: setup.php:500
+#: setup.php:516
 msgid "Choose when to Export Graphs."
 msgstr "그래프를 내보낼시기를 선택하십시오."
 
-#: setup.php:511
+#: setup.php:527
 msgid "Periodic Export Cycle"
 msgstr "주기적 수출주기"
 
-#: setup.php:512
+#: setup.php:528
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "선인장이 얼마나 자주 그래프를 내보내기를 원하십니까? 그래프를 내보내려는 폴링 사이클의 단위입니다."
 
-#: setup.php:516
+#: setup.php:532
 msgid "Every Polling Cycle"
 msgstr "모든 폴링주기"
 
-#: setup.php:517 setup.php:518 setup.php:519 setup.php:520 setup.php:521
-#: setup.php:522 setup.php:523 setup.php:524 setup.php:525 setup.php:526
-#: setup.php:527
+#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
+#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
+#: setup.php:543
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "매 % d 개의 폴링주기"
 
-#: setup.php:531
+#: setup.php:547
 msgid "Hourly at specified minutes"
 msgstr "지정된 분당 시간당"
 
-#: setup.php:532
+#: setup.php:548
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Cacti에서 매시간마다 정적 이미지를 내보내려면 시간을 설정하십시오. Cacti는 5 분마다 데이터 수집 스크립트를 실행한다고 가정하므로 런타임에 가장 가까운 값으로 값을 반올림합니다. 예를 들어, 43은 한 시간 40 분에 해당합니다."
 
-#: setup.php:541
+#: setup.php:557
 msgid "Daily at specified time"
 msgstr "지정된 시간에 매일"
 
-#: setup.php:542
+#: setup.php:558
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Cacti에서 매일 정적 이미지를 내보내려면 시간을 지정하십시오. Cacti는 5 분마다 데이터 수집 스크립트를 실행한다고 가정하므로 런타임에 가장 가까운 값으로 값을 반올림합니다. 예를 들어 21:23은 오후 9시 20 분에 해당합니다."
 
-#: setup.php:551
+#: setup.php:567
 msgid "Use x Threads"
 msgstr "x 스레드 사용"
 
-#: setup.php:552
+#: setup.php:568
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "선인장이 그래프를 내보낼 때 얼마나 많은 백그라운드 스레드를 사용하길 원하십니까? 폴러 스레드에서 모든 내보내기를 실행하려면 0, 별도의 백그라운드 스레드를 생성하려면 1 이상"
 
-#: setup.php:560
+#: setup.php:576
 msgid "Graph Selection & Settings"
 msgstr "그래프 선택 및 설정"
 
-#: setup.php:566
+#: setup.php:582
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Cacti Graph에 대한 사용 권한을 설정하는 데 사용할 사용자 이름입니다. 이 사용자 이름은 내보낼 수있는 그래프 / 트리를 결정하는 데 사용됩니다. N / A는 어떤 보안 장치가 있다고 가정하지 않습니다."
 
-#: setup.php:575
+#: setup.php:591
 msgid "The Tree(s) to export."
 msgstr "내보낼 트리 (들)."
 
-#: setup.php:582
+#: setup.php:598
 msgid "Expand Devices/Sites"
 msgstr "장치 / 사이트 확장"
 
-#: setup.php:583
+#: setup.php:599
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "이 설정은 트리 장치와 사이트 서식 파일 및 장치를 확장할지 여부를 결정합니다. 확장으로 설정된 경우 각 호스트에는 그래프 템플릿 또는 데이터 쿼리 항목이 포함 된 하위 폴더가 있습니다."
 
-#: setup.php:588
+#: setup.php:604
 msgid "Off"
 msgstr "끄기"
 
-#: setup.php:589
+#: setup.php:605
 msgid "On"
 msgstr "켜기"
 
-#: setup.php:594
+#: setup.php:610
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "선인장 그래프를 내보낼 사이트."
 
-#: setup.php:601
+#: setup.php:617
 msgid "Graph Thumbnail Width"
 msgstr "그래프 축소판 너비"
 
-#: setup.php:602
+#: setup.php:618
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "축소판 그림의 기본 너비 (픽셀 단위)입니다."
 
-#: setup.php:610
+#: setup.php:626
 msgid "Graph Thumbnail Height"
 msgstr "그래프 썸네일 높이"
 
-#: setup.php:611
+#: setup.php:627
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "썸네일 그래프의 높이 (픽셀 단위)입니다."
 
-#: setup.php:619
+#: setup.php:635
 msgid "Default View Thumbnails"
 msgstr "기본보기 축소판"
 
-#: setup.php:620
+#: setup.php:636
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "기본 그래프 뷰를 축소판 그림 모드로 지정하려면이 옵션을 선택하십시오."
 
-#: setup.php:625
+#: setup.php:641
 msgid "Default Graph Columns"
 msgstr "기본 그래프 열"
 
-#: setup.php:626
+#: setup.php:642
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "그래프를 표시 할 때 기본적으로 사용할 열 수입니다."
 
-#: setup.php:634
+#: setup.php:650
 msgid "Graphs Per Page"
 msgstr "페이지 당 그래프"
 
-#: setup.php:635
+#: setup.php:651
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "표시 할 페이지 당 그래프 수를 선택하십시오."
 
-#: setup.php:642
+#: setup.php:658
 msgid "Maximum Graphs to Export"
 msgstr "내보낼 최대 그래프"
 
-#: setup.php:643
+#: setup.php:659
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "이 숫자에 도달하면 오류가 생성되지만 내보내기는 계속됩니다. 제한이 없으면 0으로 설정하십시오."
 
-#: setup.php:651
+#: setup.php:667
 msgid "Export Location Information"
 msgstr "수출 위치 정보"
 
-#: setup.php:656
+#: setup.php:672
 msgid "Export Thumbnails"
 msgstr "내보내기 타이밍"
 
-#: setup.php:657
+#: setup.php:673
 msgid "Check this if you want the export thumbnails mode."
 msgstr "기본 그래프 뷰를 축소판 그림 모드로 지정하려면이 옵션을 선택하십시오."
 
-#: setup.php:662
+#: setup.php:678
 msgid "Clear Directory"
 msgstr "내보내기 디렉토리"
 
-#: setup.php:663
+#: setup.php:679
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "이 그래프 내보내기 정의를 활성화하려면이 확인란을 선택하십시오."
 
-#: setup.php:668
+#: setup.php:684
 msgid "Export Directory"
 msgstr "내보내기 디렉토리"
 
-#: setup.php:669
+#: setup.php:685
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "이것은 내 보낸 데이터가 들어있는 로컬 시스템 또는 원격 시스템의 디렉토리입니다."
 
-#: setup.php:675
+#: setup.php:691
 msgid "Local Scratch Directory"
 msgstr "로컬 스크래치 디렉토리"
 
-#: setup.php:676
+#: setup.php:692
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "이것은 Cacti가 전송 방법을 통해 원격 사이트로 보내기 전에 출력을 임시 저장하는 디렉토리입니다. 이 디렉토리의 내용은 데이터가 전송 된 후 삭제됩니다."
 
-#: setup.php:683
+#: setup.php:699
 msgid "Remote Options"
 msgstr "원격 옵션"
 
-#: setup.php:688
+#: setup.php:704
 msgid "Sanitize remote directory"
 msgstr "원격 디렉토리 살생"
 
-#: setup.php:689
+#: setup.php:705
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "FTP 원격 디렉토리의 기존 파일을 삭제하려면이 옵션을 선택하십시오. 이 옵션은 PHP 내장 ftp 함수를 사용할 때만 사용됩니다."
 
-#: setup.php:694
+#: setup.php:710
 msgid "Remote Host"
 msgstr "원격 호스트"
 
-#: setup.php:695
+#: setup.php:711
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "내 보낸 그래프를 보낼 호스트를 나타냅니다."
 
-#: setup.php:702
+#: setup.php:718
 msgid "Remote Port"
 msgstr "원격 포트"
 
-#: setup.php:703
+#: setup.php:719
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "비표준 인 경우 내보내기 방법에 사용할 통신 포트 (기본값의 경우 비워 두십시오)."
 
-#: setup.php:711
+#: setup.php:727
 msgid "Use passive mode"
 msgstr "수동 모드 사용"
 
-#: setup.php:712
+#: setup.php:728
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "수동 모드에서 FTP 서버에 연결하려면이 옵션을 선택하십시오."
 
-#: setup.php:717
+#: setup.php:733
 msgid "User"
 msgstr "사용자"
 
-#: setup.php:718
+#: setup.php:734
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "원격 서버에 로그온 할 계정 (기본값의 경우 비워 두십시오)."
 
-#: setup.php:725
+#: setup.php:741
 msgid "Password"
 msgstr "비밀번호"
 
-#: setup.php:726
+#: setup.php:742
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "원격 FTP 계정의 암호입니다 (비워두면 비워 두십시오)."
 
-#: setup.php:733
+#: setup.php:749
 msgid "Private Key Path"
 msgstr "개인 키 경로"
 
-#: setup.php:734
+#: setup.php:750
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "SCP 및 RSYNC의 경우 필요하면 개인 키 경로를 입력하십시오."
 
-#: setup.php:757
+#: setup.php:773
 msgid "Exported Cacti Graph Pages"
 msgstr "수출 Cacti 그래프 페이지"
 
-#: setup.php:763
+#: setup.php:779
 msgid "(Edit)"
 msgstr "(편집)"
 
-#: setup.php:769
+#: setup.php:785
 msgid "Actions"
 msgstr "작업"
