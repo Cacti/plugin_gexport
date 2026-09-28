@@ -2,6 +2,8 @@
 
 --- 2.1 ---
 
+- security: Add a version-safe CSP nonce (`plugin_gexport_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
+
 - issue: Fix undefined function call in export_ftp_rmdirr() (recursive
   call referenced the non-existent 'ftp_rmdirr' instead of
   'export_ftp_rmdirr', causing a fatal error whenever a non-empty remote

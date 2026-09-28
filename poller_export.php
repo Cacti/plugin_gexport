@@ -37,7 +37,13 @@ include_once($config['base_path'] . '/lib/data_query.php');
 include_once($config['base_path'] . '/plugins/gexport/functions.php');
 include_once($config['base_path'] . '/lib/rrd.php');
 
-// Let PHP Run Just as Long as It Has To
+/* poller_export.php runs outside the web UI and does not load setup.php, which
+ * defines the CSP nonce helper used by functions.php; ensure it is available. */
+if (!function_exists('plugin_gexport_csp_nonce')) {
+	include_once($config['base_path'] . '/plugins/gexport/setup.php');
+}
+
+/* Let PHP Run Just as Long as It Has To */
 ini_set('max_execution_time', '0');
 
 // process calling arguments
