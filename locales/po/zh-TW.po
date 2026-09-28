@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 13:18-0400\n"
+"POT-Creation-Date: 2026-09-28 09:23-0400\n"
 "PO-Revision-Date: 2026-01-16 03:18+0000\n"
 "Last-Translator: sucharlie <su.charlie@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/gexport/zh_Hant/>\n"
@@ -242,16 +242,16 @@ msgstr "停用"
 msgid "Export Now"
 msgstr "匯出"
 
-#: gexport.php:38 setup.php:505
+#: gexport.php:38 setup.php:521
 msgid "Periodic"
 msgstr "週期"
 
-#: gexport.php:39 setup.php:507
+#: gexport.php:39 setup.php:523
 #, fuzzy
 msgid "Daily"
 msgstr "每日"
 
-#: gexport.php:40 setup.php:506
+#: gexport.php:40 setup.php:522
 msgid "Hourly"
 msgstr "每小時"
 
@@ -416,11 +416,11 @@ msgctxt "filter: reset"
 msgid "Clear"
 msgstr "清除"
 
-#: gexport.php:901 setup.php:432
+#: gexport.php:901 setup.php:448
 msgid "Export Name"
 msgstr "導出名稱"
 
-#: gexport.php:904 setup.php:433
+#: gexport.php:904 setup.php:449
 msgid "The name of this Graph Export Definition."
 msgstr "此圖形導出定義的名稱。"
 
@@ -451,7 +451,7 @@ msgstr "下一步開始"
 msgid "The next time the Graph Export should run."
 msgstr "下次運行Graph Export時。"
 
-#: gexport.php:925 setup.php:441
+#: gexport.php:925 setup.php:457
 #, fuzzy
 msgid "Enabled"
 msgstr "啟用"
@@ -477,7 +477,7 @@ msgstr "導出（站點/樹）"
 msgid "What is being Exported."
 msgstr "什麼是出口。"
 
-#: gexport.php:941 setup.php:565
+#: gexport.php:941 setup.php:581
 #, fuzzy
 msgid "Effective User"
 msgstr "有效的用戶"
@@ -526,7 +526,7 @@ msgid "Export Definitions"
 msgstr "出口定義"
 
 #: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:570
+#: setup.php:586
 #, fuzzy
 msgid "N/A"
 msgstr "不适用"
@@ -572,346 +572,346 @@ msgstr "秒"
 msgid "No Graph Export Definitions"
 msgstr "沒有圖表導出定義"
 
-#: setup.php:40
+#: setup.php:56
 msgid "Export Cacti Graphs Settings"
 msgstr "導出仙人掌圖設置"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Graph Exports"
 msgstr "圖表導出"
 
-#: setup.php:416
+#: setup.php:432
 #, fuzzy
 msgid "Utilities"
 msgstr "公用程式"
 
-#: setup.php:419
+#: setup.php:435
 #, fuzzy
 msgid "General Administration"
 msgstr "總務局"
 
-#: setup.php:427
+#: setup.php:443
 #, fuzzy
 msgid "General"
 msgstr "一般"
 
-#: setup.php:442
+#: setup.php:458
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "如果希望啟用此圖形導出定義，請選中此復選框。"
 
-#: setup.php:448
+#: setup.php:464
 msgid "Export Method"
 msgstr "出口方式"
 
-#: setup.php:449
+#: setup.php:465
 msgid "Choose which export method to use."
 msgstr "選擇要使用的導出方法。"
 
-#: setup.php:454
+#: setup.php:470
 #, fuzzy
 msgid "Local"
 msgstr "本地"
 
-#: setup.php:455
+#: setup.php:471
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:456
+#: setup.php:472
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:457
+#: setup.php:473
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:458
+#: setup.php:474
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:459
+#: setup.php:475
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:463
+#: setup.php:479
 msgid "Export Command Arguments"
 msgstr "導出命令參數"
 
-#: setup.php:464
+#: setup.php:480
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "與非本地導出方法一起使用的參數。 rsync應該使用"
 
-#: setup.php:476
+#: setup.php:492
 #, fuzzy
 msgid "Theme"
 msgstr "佈景主題"
 
-#: setup.php:477
+#: setup.php:493
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "請選擇一個可用的主題來為您的Cacti Graph Exports提供皮膚。"
 
-#: setup.php:484
+#: setup.php:500
 msgid "Presentation Method"
 msgstr "演示方法"
 
-#: setup.php:485
+#: setup.php:501
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "選擇要為html生成的頁面顯示哪個演示文稿。如果你選擇經典的演示;圖表將只在一個html頁面中。如果選擇樹表示，則圖樹結構將保留在靜態html頁面中"
 
-#: setup.php:490 setup.php:593
+#: setup.php:506 setup.php:609
 #, fuzzy
 msgid "Site"
 msgstr "網站"
 
-#: setup.php:491 setup.php:574
+#: setup.php:507 setup.php:590
 #, fuzzy
 msgid "Tree"
 msgstr "樹"
 
-#: setup.php:495
+#: setup.php:511
 msgid "Export Timing"
 msgstr "出口時間"
 
-#: setup.php:499
+#: setup.php:515
 msgid "Timing Method"
 msgstr "時間方法"
 
-#: setup.php:500
+#: setup.php:516
 msgid "Choose when to Export Graphs."
 msgstr "選擇何時導出圖形。"
 
-#: setup.php:511
+#: setup.php:527
 msgid "Periodic Export Cycle"
 msgstr "定期出口周期"
 
-#: setup.php:512
+#: setup.php:528
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "您希望Cacti多久導出一次圖表。這是您要導出圖表的輪詢週期的單位。"
 
-#: setup.php:516
+#: setup.php:532
 msgid "Every Polling Cycle"
 msgstr "每個投票週期"
 
-#: setup.php:517 setup.php:518 setup.php:519 setup.php:520 setup.php:521
-#: setup.php:522 setup.php:523 setup.php:524 setup.php:525 setup.php:526
-#: setup.php:527
+#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
+#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
+#: setup.php:543
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "每%d輪詢週期"
 
-#: setup.php:531
+#: setup.php:547
 msgid "Hourly at specified minutes"
 msgstr "每小時指定的分鐘"
 
-#: setup.php:532
+#: setup.php:548
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "如果您希望Cacti每小時導出靜態圖像，請將時間分鐘放在何時進行。 Cacti假設您每5分鐘運行一次數據採集腳本，因此它會將您的值四捨五入到最接近其運行時的值。例如，43等於40小時。"
 
-#: setup.php:541
+#: setup.php:557
 msgid "Daily at specified time"
 msgstr "每天在指定時間"
 
-#: setup.php:542
+#: setup.php:558
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "如果您希望Cacti每天導出靜態圖像，請將此時間放在此處。 Cacti假設您每5分鐘運行一次數據採集腳本，因此它會將您的值四捨五入到最接近其運行時的值。例如，21：23將在晚上9點後等於20分鐘。"
 
-#: setup.php:551
+#: setup.php:567
 msgid "Use x Threads"
 msgstr "使用x線程"
 
-#: setup.php:552
+#: setup.php:568
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "您希望Cacti在導出圖形時使用多少個後台線程。默認值為0以在輪詢器線程中運行所有導出，1或更多以生成單獨的後台線程"
 
-#: setup.php:560
+#: setup.php:576
 msgid "Graph Selection & Settings"
 msgstr "圖表選擇和設置"
 
-#: setup.php:566
+#: setup.php:582
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "用於建立Cacti Graphs權限的用戶名。此用戶名將用於確定可以導出哪些圖/樹。 N / A表示不承擔任何安全措施。"
 
-#: setup.php:575
+#: setup.php:591
 msgid "The Tree(s) to export."
 msgstr "樹出口。"
 
-#: setup.php:582
+#: setup.php:598
 msgid "Expand Devices/Sites"
 msgstr "展開設備/站點"
 
-#: setup.php:583
+#: setup.php:599
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "此設置確定是否將擴展樹設備和站點模板和設備。如果設置為展開，則每個主機都將具有包含圖表模板或數據查詢項的子文件夾。"
 
-#: setup.php:588
+#: setup.php:604
 msgid "Off"
 msgstr "關"
 
-#: setup.php:589
+#: setup.php:605
 msgid "On"
 msgstr "開"
 
-#: setup.php:594
+#: setup.php:610
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "要導出的仙人掌圖的網站。"
 
-#: setup.php:601
+#: setup.php:617
 msgid "Graph Thumbnail Width"
 msgstr "圖形縮略圖寬度"
 
-#: setup.php:602
+#: setup.php:618
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "縮略圖的默認寬度（以像素為單位）。"
 
-#: setup.php:610
+#: setup.php:626
 msgid "Graph Thumbnail Height"
 msgstr "圖表縮略圖高度"
 
-#: setup.php:611
+#: setup.php:627
 #, fuzzy
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "縮略圖的高度（以像素為單位）。"
 
-#: setup.php:619
+#: setup.php:635
 msgid "Default View Thumbnails"
 msgstr "默認視圖縮略圖"
 
-#: setup.php:620
+#: setup.php:636
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "如果您希望默認的Graph View處於縮略圖模式，請選中此項。"
 
-#: setup.php:625
+#: setup.php:641
 msgid "Default Graph Columns"
 msgstr "默認圖表列"
 
-#: setup.php:626
+#: setup.php:642
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "顯示圖形時默認使用的列數。"
 
-#: setup.php:634
+#: setup.php:650
 #, fuzzy
 msgid "Graphs Per Page"
 msgstr "每頁圖表"
 
-#: setup.php:635
+#: setup.php:651
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "選擇要顯示的每頁圖表數。"
 
-#: setup.php:642
+#: setup.php:658
 msgid "Maximum Graphs to Export"
 msgstr "要導出的最大圖表"
 
-#: setup.php:643
+#: setup.php:659
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "達到此數字後，將生成錯誤，但導出將繼續。設置為0表示無限制。"
 
-#: setup.php:651
+#: setup.php:667
 msgid "Export Location Information"
 msgstr "導出位置信息"
 
-#: setup.php:656
+#: setup.php:672
 msgid "Export Thumbnails"
 msgstr "出口時間"
 
-#: setup.php:657
+#: setup.php:673
 msgid "Check this if you want the export thumbnails mode."
 msgstr "如果您希望默認的Graph View處於縮略圖模式，請選中此項。"
 
-#: setup.php:662
+#: setup.php:678
 msgid "Clear Directory"
 msgstr "出口目錄"
 
-#: setup.php:663
+#: setup.php:679
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "如果希望啟用此圖形導出定義，請選中此復選框。"
 
-#: setup.php:668
+#: setup.php:684
 msgid "Export Directory"
 msgstr "出口目錄"
 
-#: setup.php:669
+#: setup.php:685
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "這是本地系統或遠程系統上將包含導出數據的目錄。"
 
-#: setup.php:675
+#: setup.php:691
 msgid "Local Scratch Directory"
 msgstr "本地Scratch目錄"
 
-#: setup.php:676
+#: setup.php:692
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "這是Cacti在通過傳輸方法發送到遠程站點之前臨時存儲輸出的目錄。傳輸數據後，將刪除此目錄的內容。"
 
-#: setup.php:683
+#: setup.php:699
 msgid "Remote Options"
 msgstr "遠程選項"
 
-#: setup.php:688
+#: setup.php:704
 msgid "Sanitize remote directory"
 msgstr "清理遠程目錄"
 
-#: setup.php:689
+#: setup.php:705
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "如果要刪除FTP遠程目錄中的任何現有文件，請選中此項。僅在使用PHP內置ftp函數時才使用此選項。"
 
-#: setup.php:694
+#: setup.php:710
 msgid "Remote Host"
 msgstr "遠程主機"
 
-#: setup.php:695
+#: setup.php:711
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "表示主機將導出的圖形發送到。"
 
-#: setup.php:702
+#: setup.php:718
 msgid "Remote Port"
 msgstr "遠端埠號"
 
-#: setup.php:703
+#: setup.php:719
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "非標準用於導出方法的通信端口（默認為空）。"
 
-#: setup.php:711
+#: setup.php:727
 msgid "Use passive mode"
 msgstr "使用被動模式"
 
-#: setup.php:712
+#: setup.php:728
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "如果要以被動模式連接到FTP服務器，請選中此項。"
 
-#: setup.php:717
+#: setup.php:733
 #, fuzzy
 msgid "User"
 msgstr "使用者"
 
-#: setup.php:718
+#: setup.php:734
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "帳戶登錄遠程服務器（默認為空）。"
 
-#: setup.php:725
+#: setup.php:741
 #, fuzzy
 msgid "Password"
 msgstr "密碼"
 
-#: setup.php:726
+#: setup.php:742
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "遠程ftp帳戶的密碼（留空為空）。"
 
-#: setup.php:733
+#: setup.php:749
 msgid "Private Key Path"
 msgstr "私鑰路徑"
 
-#: setup.php:734
+#: setup.php:750
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "對於SCP和RSYNC，如果需要，請輸入私鑰路徑。"
 
-#: setup.php:757
+#: setup.php:773
 msgid "Exported Cacti Graph Pages"
 msgstr "導出的仙人掌圖頁"
 
-#: setup.php:763
+#: setup.php:779
 #, fuzzy
 msgid "(Edit)"
 msgstr "(編輯)"
 
-#: setup.php:769
+#: setup.php:785
 #, fuzzy
 msgid "Actions"
 msgstr "動作"
