@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 13:18-0400\n"
+"POT-Creation-Date: 2026-09-28 09:23-0400\n"
 "PO-Revision-Date: 2024-06-07 23:10-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -234,15 +234,15 @@ msgstr "Изключи"
 msgid "Export Now"
 msgstr "Експортиране сега"
 
-#: gexport.php:38 setup.php:505
+#: gexport.php:38 setup.php:521
 msgid "Periodic"
 msgstr "периодичен"
 
-#: gexport.php:39 setup.php:507
+#: gexport.php:39 setup.php:523
 msgid "Daily"
 msgstr "Ежедневно"
 
-#: gexport.php:40 setup.php:506
+#: gexport.php:40 setup.php:522
 msgid "Hourly"
 msgstr "всеки час"
 
@@ -400,11 +400,11 @@ msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Изчисти"
 
-#: gexport.php:901 setup.php:432
+#: gexport.php:901 setup.php:448
 msgid "Export Name"
 msgstr "Име на Експорта"
 
-#: gexport.php:904 setup.php:433
+#: gexport.php:904 setup.php:449
 msgid "The name of this Graph Export Definition."
 msgstr "Името на това определение за експортиране на графика."
 
@@ -432,7 +432,7 @@ msgstr "Следващ старт"
 msgid "The next time the Graph Export should run."
 msgstr "Следващия път Експортирането на графиката трябва да се изпълни."
 
-#: gexport.php:925 setup.php:441
+#: gexport.php:925 setup.php:457
 msgid "Enabled"
 msgstr "Разрешен"
 
@@ -456,7 +456,7 @@ msgstr "Експортиране (сайтове / дървета)"
 msgid "What is being Exported."
 msgstr "Какво се изнася."
 
-#: gexport.php:941 setup.php:565
+#: gexport.php:941 setup.php:581
 msgid "Effective User"
 msgstr "Ефективен потребител"
 
@@ -501,7 +501,7 @@ msgid "Export Definitions"
 msgstr "Дефиниции за експортиране"
 
 #: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:570
+#: setup.php:586
 msgid "N/A"
 msgstr "Няма"
 
@@ -541,333 +541,333 @@ msgstr "Detik"
 msgid "No Graph Export Definitions"
 msgstr "Няма определения за експортиране на графика"
 
-#: setup.php:40
+#: setup.php:56
 msgid "Export Cacti Graphs Settings"
 msgstr "Експортиране на настройки за графики на кактуси"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Graph Exports"
 msgstr "Експорт на графиката"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Utilities"
 msgstr "Приложения"
 
-#: setup.php:419
+#: setup.php:435
 msgid "General Administration"
 msgstr "Обща администрация"
 
-#: setup.php:427
+#: setup.php:443
 msgid "General"
 msgstr "Основни"
 
-#: setup.php:442
+#: setup.php:458
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "Поставете отметка в това квадратче за отметка, ако искате тази дефиниция за експортиране на графика да бъде активирана."
 
-#: setup.php:448
+#: setup.php:464
 msgid "Export Method"
 msgstr "Метод за износ"
 
-#: setup.php:449
+#: setup.php:465
 msgid "Choose which export method to use."
 msgstr "Изберете кой метод за износ да използвате."
 
-#: setup.php:454
+#: setup.php:470
 msgid "Local"
 msgstr "Местен"
 
-#: setup.php:455
+#: setup.php:471
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:456
+#: setup.php:472
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:457
+#: setup.php:473
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:458
+#: setup.php:474
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:459
+#: setup.php:475
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:463
+#: setup.php:479
 msgid "Export Command Arguments"
 msgstr "Аргументи за експортно командване"
 
-#: setup.php:464
+#: setup.php:480
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "Аргументи за използване с нелокални методи за износ. rsync трябва да използва"
 
-#: setup.php:476
+#: setup.php:492
 msgid "Theme"
 msgstr "Теми:"
 
-#: setup.php:477
+#: setup.php:493
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "Моля, изберете една от наличните палитри, с които да изтриете Cacti Graph Exports с."
 
-#: setup.php:484
+#: setup.php:500
 msgid "Presentation Method"
 msgstr "Метод за представяне"
 
-#: setup.php:485
+#: setup.php:501
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "Изберете коя презентация искате за HTML генерираните страници. Ако изберете класическа презентация; графиките ще бъдат в само една-html страница. Ако изберете дървовидна презентация, архитектурата Tree Tree ще се съхранява в статичните html страници"
 
-#: setup.php:490 setup.php:593
+#: setup.php:506 setup.php:609
 msgid "Site"
 msgstr "Tочка на продажба"
 
-#: setup.php:491 setup.php:574
+#: setup.php:507 setup.php:590
 msgid "Tree"
 msgstr "‎درخت"
 
-#: setup.php:495
+#: setup.php:511
 msgid "Export Timing"
 msgstr "Време за експортиране"
 
-#: setup.php:499
+#: setup.php:515
 msgid "Timing Method"
 msgstr "Метод за синхронизиране"
 
-#: setup.php:500
+#: setup.php:516
 msgid "Choose when to Export Graphs."
 msgstr "Изберете кога да експортирате графики."
 
-#: setup.php:511
+#: setup.php:527
 msgid "Periodic Export Cycle"
 msgstr "Периодичен износен цикъл"
 
-#: setup.php:512
+#: setup.php:528
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "Колко често желаете Cacti да експортира графики. Това е единицата за цикли на гласуване, която искате да експортирате графики."
 
-#: setup.php:516
+#: setup.php:532
 msgid "Every Polling Cycle"
 msgstr "Всеки избирателен цикъл"
 
-#: setup.php:517 setup.php:518 setup.php:519 setup.php:520 setup.php:521
-#: setup.php:522 setup.php:523 setup.php:524 setup.php:525 setup.php:526
-#: setup.php:527
+#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
+#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
+#: setup.php:543
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "Всеки% d цикъла на гласуване"
 
-#: setup.php:531
+#: setup.php:547
 msgid "Hourly at specified minutes"
 msgstr "По часове на определени минути"
 
-#: setup.php:532
+#: setup.php:548
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Ако искате Cacti да експортира статични изображения на почасова база, поставете минутите от часа, когато трябва да направите това. Cacti приема, че вие стартирате скрипта за събиране на данни на всеки 5 минути, така че той ще закръгли стойността ви до тази, която е най-близо до времето на изпълнение. Например 43 биха били равни на 40 минути след часа."
 
-#: setup.php:541
+#: setup.php:557
 msgid "Daily at specified time"
 msgstr "Ежедневно в определено време"
 
-#: setup.php:542
+#: setup.php:558
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Ако искате Cacti да експортира статични изображения на дневна база, поставете тук кога да направите това. Cacti приема, че вие стартирате скрипта за събиране на данни на всеки 5 минути, така че той ще закръгли стойността ви до тази, която е най-близо до времето на изпълнение. Например, 21:23 ще бъде равно на 20 минути след 21 часа."
 
-#: setup.php:551
+#: setup.php:567
 msgid "Use x Threads"
 msgstr "Използвайте x Threads"
 
-#: setup.php:552
+#: setup.php:568
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "Колко фонови нишки искате Cacti да използва при експортиране на графики. По подразбиране е 0, за да стартирате целия износ в нишката на полера, 1 или повече, за да създадете отделни фонови нишки"
 
-#: setup.php:560
+#: setup.php:576
 msgid "Graph Selection & Settings"
 msgstr "Избор на графика и настройки"
 
-#: setup.php:566
+#: setup.php:582
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Потребителското име за използване за създаване на разрешения за Cacti Graphs. Това потребителско име ще се използва, за да се определи кои графики / дървета могат да бъдат експортирани. N / A означава, че не приемате никаква сигурност."
 
-#: setup.php:575
+#: setup.php:591
 msgid "The Tree(s) to export."
 msgstr "Дървото (ите) за експортиране."
 
-#: setup.php:582
+#: setup.php:598
 msgid "Expand Devices/Sites"
 msgstr "Разгънете Устройства / Сайтове"
 
-#: setup.php:583
+#: setup.php:599
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "Тази настройка определя дали Tree Devices и Site Templates и Devices ще бъдат разширени или не. Ако е настроено на разширено, всеки хост ще има подпапка, съдържаща или шаблони за графики, или елементи на заявка за данни."
 
-#: setup.php:588
+#: setup.php:604
 msgid "Off"
 msgstr "Изкл."
 
-#: setup.php:589
+#: setup.php:605
 msgid "On"
 msgstr "Включено"
 
-#: setup.php:594
+#: setup.php:610
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "Сайтът за Cacti графики, които трябва да бъдат експортирани от."
 
-#: setup.php:601
+#: setup.php:617
 msgid "Graph Thumbnail Width"
 msgstr "Ширина на иконата на графиката"
 
-#: setup.php:602
+#: setup.php:618
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "Ширината по подразбиране на графиките с миниатюри в пиксели."
 
-#: setup.php:610
+#: setup.php:626
 msgid "Graph Thumbnail Height"
 msgstr "Височина на иконата на графиката"
 
-#: setup.php:611
+#: setup.php:627
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "Височината на графиките с миниатюри в пиксели."
 
-#: setup.php:619
+#: setup.php:635
 msgid "Default View Thumbnails"
 msgstr "Стандартни миниатюри за преглед"
 
-#: setup.php:620
+#: setup.php:636
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "Поставете отметка, ако искате графичният изглед по подразбиране да е в режим на миниатюри."
 
-#: setup.php:625
+#: setup.php:641
 msgid "Default Graph Columns"
 msgstr "По подразбиране графични колони"
 
-#: setup.php:626
+#: setup.php:642
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "Броят колони, които да се използват по подразбиране при показване на графики."
 
-#: setup.php:634
+#: setup.php:650
 msgid "Graphs Per Page"
 msgstr "Графики на страница"
 
-#: setup.php:635
+#: setup.php:651
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "Изберете броя графики за страница, които да се показват."
 
-#: setup.php:642
+#: setup.php:658
 msgid "Maximum Graphs to Export"
 msgstr "Максимален брой графики за експортиране"
 
-#: setup.php:643
+#: setup.php:659
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "След достигане на този номер ще се генерира грешка, но експортирането ще продължи. Задайте 0 без ограничение."
 
-#: setup.php:651
+#: setup.php:667
 msgid "Export Location Information"
 msgstr "Експортиране на информация за местоположението"
 
-#: setup.php:656
+#: setup.php:672
 msgid "Export Thumbnails"
 msgstr "Време за експортиране"
 
-#: setup.php:657
+#: setup.php:673
 msgid "Check this if you want the export thumbnails mode."
 msgstr "Поставете отметка, ако искате графичният изглед по подразбиране да е в режим на миниатюри."
 
-#: setup.php:662
+#: setup.php:678
 msgid "Clear Directory"
 msgstr "Експортиране на директория"
 
-#: setup.php:663
+#: setup.php:679
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "Поставете отметка в това квадратче за отметка, ако искате тази дефиниция за експортиране на графика да бъде активирана."
 
-#: setup.php:668
+#: setup.php:684
 msgid "Export Directory"
 msgstr "Експортиране на директория"
 
-#: setup.php:669
+#: setup.php:685
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "Това е директорията на локалната система или на отдалечената система, която ще съдържа експортираните данни."
 
-#: setup.php:675
+#: setup.php:691
 msgid "Local Scratch Directory"
 msgstr "Локален справочник"
 
-#: setup.php:676
+#: setup.php:692
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "Това е директорията, в която Cacti ще съхранява временно продукцията преди изпращане на отдалечения сайт чрез метода на прехвърляне. Съдържанието на тази директория ще бъде изтрито след прехвърляне на данните."
 
-#: setup.php:683
+#: setup.php:699
 msgid "Remote Options"
 msgstr "Отдалечени опции"
 
-#: setup.php:688
+#: setup.php:704
 msgid "Sanitize remote directory"
 msgstr "Дезинфекцирайте отдалечената директория"
 
-#: setup.php:689
+#: setup.php:705
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "Маркирайте това, ако искате да изтриете всички съществуващи файлове в отдалечената директория на FTP. Тази опция се използва само при използване на PHP вградените ftp функции."
 
-#: setup.php:694
+#: setup.php:710
 msgid "Remote Host"
 msgstr "Отдалечен хост"
 
-#: setup.php:695
+#: setup.php:711
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "Означава, че хостът изпраща изнесени графики към."
 
-#: setup.php:702
+#: setup.php:718
 msgid "Remote Port"
 msgstr "Отдалечен порт"
 
-#: setup.php:703
+#: setup.php:719
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "Комуникационен порт, който да се използва за метода за експортиране, ако е нестандартно (оставете празно за настройките по подразбиране)."
 
-#: setup.php:711
+#: setup.php:727
 msgid "Use passive mode"
 msgstr "Използвайте пасивен режим"
 
-#: setup.php:712
+#: setup.php:728
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "Маркирайте това, ако искате да се свържете в пасивен режим към FTP сървъра."
 
-#: setup.php:717
+#: setup.php:733
 msgid "User"
 msgstr "Потребител"
 
-#: setup.php:718
+#: setup.php:734
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "Акаунт за влизане на отдалечения сървър (оставете празно за настройките по подразбиране)."
 
-#: setup.php:725
+#: setup.php:741
 msgid "Password"
 msgstr "Парола"
 
-#: setup.php:726
+#: setup.php:742
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "Парола за отдалечения ftp акаунт (оставете празно за празно)."
 
-#: setup.php:733
+#: setup.php:749
 msgid "Private Key Path"
 msgstr "Път на частния ключ"
 
-#: setup.php:734
+#: setup.php:750
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "За SCP и RSYNC въведете пътя на частния ключ, ако е необходимо."
 
-#: setup.php:757
+#: setup.php:773
 msgid "Exported Cacti Graph Pages"
 msgstr "Експортирани страници с графики за кактуси"
 
-#: setup.php:763
+#: setup.php:779
 msgid "(Edit)"
 msgstr "(Редактирай)"
 
-#: setup.php:769
+#: setup.php:785
 msgid "Actions"
 msgstr "Действия"
