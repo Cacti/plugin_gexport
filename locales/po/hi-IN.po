@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 13:18-0400\n"
+"POT-Creation-Date: 2026-09-28 09:23-0400\n"
 "PO-Revision-Date: 2024-06-07 23:13-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -234,15 +234,15 @@ msgstr "अक्षम करें"
 msgid "Export Now"
 msgstr "अभी निर्यात करें"
 
-#: gexport.php:38 setup.php:505
+#: gexport.php:38 setup.php:521
 msgid "Periodic"
 msgstr "सामयिक"
 
-#: gexport.php:39 setup.php:507
+#: gexport.php:39 setup.php:523
 msgid "Daily"
 msgstr "प्रतिदिन"
 
-#: gexport.php:40 setup.php:506
+#: gexport.php:40 setup.php:522
 msgid "Hourly"
 msgstr "प्रति घंटा"
 
@@ -400,11 +400,11 @@ msgctxt "filter: reset"
 msgid "Clear"
 msgstr "明确"
 
-#: gexport.php:901 setup.php:432
+#: gexport.php:901 setup.php:448
 msgid "Export Name"
 msgstr "निर्यात नाम"
 
-#: gexport.php:904 setup.php:433
+#: gexport.php:904 setup.php:449
 msgid "The name of this Graph Export Definition."
 msgstr "इस ग्राफ निर्यात परिभाषा का नाम।"
 
@@ -432,7 +432,7 @@ msgstr "अगली शुरुआत"
 msgid "The next time the Graph Export should run."
 msgstr "अगली बार ग्राफ एक्सपोर्ट चलना चाहिए।"
 
-#: gexport.php:925 setup.php:441
+#: gexport.php:925 setup.php:457
 msgid "Enabled"
 msgstr "सक्षम"
 
@@ -456,7 +456,7 @@ msgstr "निर्यात (साइट / पेड़)"
 msgid "What is being Exported."
 msgstr "क्या निर्यात किया जा रहा है।"
 
-#: gexport.php:941 setup.php:565
+#: gexport.php:941 setup.php:581
 msgid "Effective User"
 msgstr "प्रभावी उपयोगकर्ता"
 
@@ -501,7 +501,7 @@ msgid "Export Definitions"
 msgstr "निर्यात परिभाषाएँ"
 
 #: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:570
+#: setup.php:586
 msgid "N/A"
 msgstr "लागू नहीं"
 
@@ -541,333 +541,333 @@ msgstr "सेकंड"
 msgid "No Graph Export Definitions"
 msgstr "कोई ग्राफ़ निर्यात परिभाषाएँ नहीं"
 
-#: setup.php:40
+#: setup.php:56
 msgid "Export Cacti Graphs Settings"
 msgstr "निर्यात कैक्टि रेखांकन सेटिंग्स"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Graph Exports"
 msgstr "ग्राफ एक्सपोर्ट्स"
 
-#: setup.php:416
+#: setup.php:432
 msgid "Utilities"
 msgstr "यूटिलिटीज"
 
-#: setup.php:419
+#: setup.php:435
 msgid "General Administration"
 msgstr "सामान्य प्रशासन"
 
-#: setup.php:427
+#: setup.php:443
 msgid "General"
 msgstr "सामान्य"
 
-#: setup.php:442
+#: setup.php:458
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "यदि आप इस ग्राफ़ निर्यात परिभाषा को सक्षम करना चाहते हैं तो इस चेकबॉक्स की जाँच करें।"
 
-#: setup.php:448
+#: setup.php:464
 msgid "Export Method"
 msgstr "निर्यात विधि"
 
-#: setup.php:449
+#: setup.php:465
 msgid "Choose which export method to use."
 msgstr "उपयोग करने के लिए कौन सी निर्यात विधि चुनें।"
 
-#: setup.php:454
+#: setup.php:470
 msgid "Local"
 msgstr "स्थानीय"
 
-#: setup.php:455
+#: setup.php:471
 msgid "FTP"
 msgstr "एफ़टीपी"
 
-#: setup.php:456
+#: setup.php:472
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:457
+#: setup.php:473
 msgid "FTP NC"
 msgstr "एफ़टीपी नेकां"
 
-#: setup.php:458
+#: setup.php:474
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:459
+#: setup.php:475
 msgid "RSYNC"
 msgstr "rsync"
 
-#: setup.php:463
+#: setup.php:479
 msgid "Export Command Arguments"
 msgstr "निर्यात आदेश तर्क"
 
-#: setup.php:464
+#: setup.php:480
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "गैर-स्थानीय निर्यात विधियों के साथ उपयोग करने के लिए तर्क। rsync का उपयोग करना चाहिए"
 
-#: setup.php:476
+#: setup.php:492
 msgid "Theme"
 msgstr "थीम"
 
-#: setup.php:477
+#: setup.php:493
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "कृपया अपने उपलब्ध कैक्टि ग्राफ़ एक्सपोर्ट्स को स्किन करने के लिए उपलब्ध थीम में से एक का चयन करें।"
 
-#: setup.php:484
+#: setup.php:500
 msgid "Presentation Method"
 msgstr "प्रस्तुति विधि"
 
-#: setup.php:485
+#: setup.php:501
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "एचटीएमएल जेनरेट किए गए पेजों के लिए आप कौन सी प्रेजेंटेशन चाहेंगे। यदि आप शास्त्रीय प्रस्तुति चुनते हैं; रेखांकन केवल-एक-html पृष्ठ में होगा। यदि आप ट्री प्रेजेंटेशन चुनते हैं, तो ग्राफ ट्री आर्किटेक्चर को स्थिर HTML पृष्ठों में रखा जाएगा"
 
-#: setup.php:490 setup.php:593
+#: setup.php:506 setup.php:609
 msgid "Site"
 msgstr "साइट"
 
-#: setup.php:491 setup.php:574
+#: setup.php:507 setup.php:590
 msgid "Tree"
 msgstr "वृक्षugiou"
 
-#: setup.php:495
+#: setup.php:511
 msgid "Export Timing"
 msgstr "निर्यात समय"
 
-#: setup.php:499
+#: setup.php:515
 msgid "Timing Method"
 msgstr "समय की विधि"
 
-#: setup.php:500
+#: setup.php:516
 msgid "Choose when to Export Graphs."
 msgstr "कब निर्यात करें चुनें।"
 
-#: setup.php:511
+#: setup.php:527
 msgid "Periodic Export Cycle"
 msgstr "आवधिक निर्यात चक्र"
 
-#: setup.php:512
+#: setup.php:528
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "आप कितनी बार Cacti को रेखांकन निर्यात करना चाहते हैं। यह मतदान चक्रों की इकाई है जिसे आप ग्राफ़ निर्यात करना चाहते हैं।"
 
-#: setup.php:516
+#: setup.php:532
 msgid "Every Polling Cycle"
 msgstr "हर मतदान चक्र"
 
-#: setup.php:517 setup.php:518 setup.php:519 setup.php:520 setup.php:521
-#: setup.php:522 setup.php:523 setup.php:524 setup.php:525 setup.php:526
-#: setup.php:527
+#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
+#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
+#: setup.php:543
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "हर% d पोलिंग साइकिल"
 
-#: setup.php:531
+#: setup.php:547
 msgid "Hourly at specified minutes"
 msgstr "प्रति मिनट निर्दिष्ट मिनट पर"
 
-#: setup.php:532
+#: setup.php:548
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "यदि आप चाहते हैं कि कैक्टि एक घंटे के आधार पर स्थिर छवियों को निर्यात करे, तो ऐसा करने के लिए घंटे के मिनट लगाएं। कैक्टि मानती है कि आप हर 5 मिनट में डेटा इकट्ठा करने की स्क्रिप्ट चलाते हैं, इसलिए यह आपके मूल्य को उसके रनटाइम के सबसे करीब ले जाएगा। उदाहरण के लिए, 43 घंटे के 40 मिनट के बराबर होगा।"
 
-#: setup.php:541
+#: setup.php:557
 msgid "Daily at specified time"
 msgstr "निर्दिष्ट समय पर दैनिक"
 
-#: setup.php:542
+#: setup.php:558
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "यदि आप चाहते हैं कि कैक्टि एक दैनिक आधार पर स्थिर छवियों का निर्यात करे, तो उस समय को यहां रखें जब ऐसा करना हो। कैक्टि मानती है कि आप हर 5 मिनट में डेटा इकट्ठा करने की स्क्रिप्ट चलाते हैं, इसलिए यह आपके मूल्य को उसके रनटाइम के सबसे करीब ले जाएगा। उदाहरण के लिए, 21:23 9 मिनट के बाद 20 मिनट के बराबर होगा।"
 
-#: setup.php:551
+#: setup.php:567
 msgid "Use x Threads"
 msgstr "एक्स थ्रेड्स का उपयोग करें"
 
-#: setup.php:552
+#: setup.php:568
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "रेखांकन निर्यात करते समय आप कितने बैकग्राउंड थ्रेड का उपयोग करना चाहते हैं। डिफॉल्ट 0, सभी निर्यात को पोलेर थ्रेड, 1 या अधिक में अलग-अलग बैकग्राउंड थ्रेड्स को चलाने के लिए है"
 
-#: setup.php:560
+#: setup.php:576
 msgid "Graph Selection & Settings"
 msgstr "ग्राफ चयन और सेटिंग्स"
 
-#: setup.php:566
+#: setup.php:582
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Cacti रेखांकन के लिए अनुमतियाँ स्थापित करने के लिए उपयोग करने के लिए उपयोगकर्ता नाम। इस उपयोगकर्ता नाम का उपयोग यह निर्धारित करने के लिए किया जाएगा कि कौन से ग्राफ़ / पेड़ निर्यात किए जा सकते हैं। N / A का अर्थ है कि कोई सुरक्षा नहीं है।"
 
-#: setup.php:575
+#: setup.php:591
 msgid "The Tree(s) to export."
 msgstr "निर्यात करने के लिए ट्री (एस)।"
 
-#: setup.php:582
+#: setup.php:598
 msgid "Expand Devices/Sites"
 msgstr "डिवाइस / साइटें विस्तृत करें"
 
-#: setup.php:583
+#: setup.php:599
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "यह सेटिंग निर्धारित करती है कि ट्री डिवाइसेस और साइट टेम्प्लेट्स और डिवाइसेस का विस्तार किया जाएगा या नहीं। यदि विस्तारित करने के लिए सेट किया गया है, तो प्रत्येक होस्ट में एक उप-फ़ोल्डर होगा जिसमें ग्राफ़ टेम्पलेट या डेटा क्वेरी आइटम होंगे।"
 
-#: setup.php:588
+#: setup.php:604
 msgid "Off"
 msgstr "बंद करना"
 
-#: setup.php:589
+#: setup.php:605
 msgid "On"
 msgstr "चालू करना"
 
-#: setup.php:594
+#: setup.php:610
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "Cacti रेखांकन के लिए साइट से निर्यात किया जाएगा।"
 
-#: setup.php:601
+#: setup.php:617
 msgid "Graph Thumbnail Width"
 msgstr "ग्राफ थंबनेल चौड़ाई"
 
-#: setup.php:602
+#: setup.php:618
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "पिक्सेल में थंबनेल ग्राफ़ की डिफ़ॉल्ट चौड़ाई।"
 
-#: setup.php:610
+#: setup.php:626
 msgid "Graph Thumbnail Height"
 msgstr "ग्राफ थंबनेल ऊंचाई"
 
-#: setup.php:611
+#: setup.php:627
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "पिक्सेल में थंबनेल ग्राफ़ की ऊंचाई।"
 
-#: setup.php:619
+#: setup.php:635
 msgid "Default View Thumbnails"
 msgstr "डिफ़ॉल्ट दृश्य थंबनेल"
 
-#: setup.php:620
+#: setup.php:636
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें"
 
-#: setup.php:625
+#: setup.php:641
 msgid "Default Graph Columns"
 msgstr "डिफ़ॉल्ट ग्राफ़ कॉलम"
 
-#: setup.php:626
+#: setup.php:642
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "रेखांकन प्रदर्शित करते समय डिफ़ॉल्ट रूप से उपयोग करने के लिए स्तंभों की संख्या।"
 
-#: setup.php:634
+#: setup.php:650
 msgid "Graphs Per Page"
 msgstr "प्रति पेज रेखांकन"
 
-#: setup.php:635
+#: setup.php:651
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "प्रदर्शित करने के लिए प्रति पृष्ठ ग्राफ़ की संख्या चुनें।"
 
-#: setup.php:642
+#: setup.php:658
 msgid "Maximum Graphs to Export"
 msgstr "निर्यात करने के लिए अधिकतम रेखांकन"
 
-#: setup.php:643
+#: setup.php:659
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "इस नंबर तक पहुंचने के बाद, एक त्रुटि उत्पन्न होगी, लेकिन निर्यात जारी रहेगा। बिना किसी सीमा के 0 पर सेट करें।"
 
-#: setup.php:651
+#: setup.php:667
 msgid "Export Location Information"
 msgstr "स्थान जानकारी निर्यात करें"
 
-#: setup.php:656
+#: setup.php:672
 msgid "Export Thumbnails"
 msgstr "निर्यात समय"
 
-#: setup.php:657
+#: setup.php:673
 msgid "Check this if you want the export thumbnails mode."
 msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें"
 
-#: setup.php:662
+#: setup.php:678
 msgid "Clear Directory"
 msgstr "निर्यात निर्देशिका"
 
-#: setup.php:663
+#: setup.php:679
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "यदि आप इस ग्राफ़ निर्यात परिभाषा को सक्षम करना चाहते हैं तो इस चेकबॉक्स की जाँच करें।"
 
-#: setup.php:668
+#: setup.php:684
 msgid "Export Directory"
 msgstr "निर्यात निर्देशिका"
 
-#: setup.php:669
+#: setup.php:685
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "यह निर्देशिका है, या तो स्थानीय प्रणाली पर या दूरस्थ प्रणाली पर, जिसमें निर्यात किया गया डेटा होगा।"
 
-#: setup.php:675
+#: setup.php:691
 msgid "Local Scratch Directory"
 msgstr "स्थानीय स्क्रैच निर्देशिका"
 
-#: setup.php:676
+#: setup.php:692
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "यह वह निर्देशिका है जो Cacti अस्थायी रूप से स्थानांतरण साइट के माध्यम से दूरस्थ साइट पर भेजने से पहले आउटपुट को संग्रहीत करेगी। डेटा ट्रांसफर होने के बाद इस निर्देशिका की सामग्री हटा दी जाएगी।"
 
-#: setup.php:683
+#: setup.php:699
 msgid "Remote Options"
 msgstr "रिमोट विकल्प"
 
-#: setup.php:688
+#: setup.php:704
 msgid "Sanitize remote directory"
 msgstr "रिमोट डायरेक्टरी को सैनिटाइज करें"
 
-#: setup.php:689
+#: setup.php:705
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "यदि आप एफ़टीपी दूरस्थ निर्देशिका में किसी भी मौजूदा फ़ाइलों को हटाना चाहते हैं तो इसे जांचें। यह विकल्प केवल तभी उपयोग किया जाता है जब PHP बिल्ट-इन ftp फ़ंक्शन का उपयोग करता है।"
 
-#: setup.php:694
+#: setup.php:710
 msgid "Remote Host"
 msgstr "रिमोट होस्ट"
 
-#: setup.php:695
+#: setup.php:711
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "निर्यात किए गए रेखांकन भेजने के लिए होस्ट को अस्वीकार करता है।"
 
-#: setup.php:702
+#: setup.php:718
 msgid "Remote Port"
 msgstr "रिमोट पोर्ट"
 
-#: setup.php:703
+#: setup.php:719
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "यदि गैर-मानक (चूक के लिए खाली छोड़ दें) निर्यात विधि के लिए उपयोग करने के लिए संचार पोर्ट"
 
-#: setup.php:711
+#: setup.php:727
 msgid "Use passive mode"
 msgstr "निष्क्रिय मोड का उपयोग करें"
 
-#: setup.php:712
+#: setup.php:728
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "यदि आप एफ़टीपी सर्वर को निष्क्रिय मोड में कनेक्ट करना चाहते हैं तो यह जांचें।"
 
-#: setup.php:717
+#: setup.php:733
 msgid "User"
 msgstr "उपयोगकर्ता "
 
-#: setup.php:718
+#: setup.php:734
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "रिमोट सर्वर पर लॉगऑन करने के लिए खाता (चूक के लिए खाली छोड़ दें)।"
 
-#: setup.php:725
+#: setup.php:741
 msgid "Password"
 msgstr "पासवर्ड"
 
-#: setup.php:726
+#: setup.php:742
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "दूरस्थ ftp खाते के लिए पासवर्ड (खाली के लिए खाली छोड़ें)।"
 
-#: setup.php:733
+#: setup.php:749
 msgid "Private Key Path"
 msgstr "निजी कुंजी पथ"
 
-#: setup.php:734
+#: setup.php:750
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "SCP और RSYNC के लिए, यदि आवश्यक हो तो निजी कुंजी पथ दर्ज करें।"
 
-#: setup.php:757
+#: setup.php:773
 msgid "Exported Cacti Graph Pages"
 msgstr "निर्यात किए गए कैक्टि ग्राफ़ पेज"
 
-#: setup.php:763
+#: setup.php:779
 msgid "(Edit)"
 msgstr "संपादित करें"
 
-#: setup.php:769
+#: setup.php:785
 msgid "Actions"
 msgstr "कार्रवाइयाँ"
