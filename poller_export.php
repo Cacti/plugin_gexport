@@ -23,12 +23,12 @@
  +-------------------------------------------------------------------------+
 */
 
-/* Start Initialization Section */
-$dir = dirname(__FILE__);
+// Start Initialization Section
+$dir = __DIR__;
 chdir($dir);
 
 if (substr_count(strtolower($dir), 'gexport')) {
-    chdir('../../');
+	chdir('../../');
 }
 
 include('./include/cli_check.php');
@@ -37,10 +37,10 @@ include_once($config['base_path'] . '/lib/data_query.php');
 include_once($config['base_path'] . '/plugins/gexport/functions.php');
 include_once($config['base_path'] . '/lib/rrd.php');
 
-/* Let PHP Run Just as Long as It Has To */
+// Let PHP Run Just as Long as It Has To
 ini_set('max_execution_time', '0');
 
-/* process calling arguments */
+// process calling arguments
 $parms = $_SERVER['argv'];
 array_shift($parms);
 
@@ -51,48 +51,52 @@ $force = false;
 $id    = 0;
 
 if (cacti_sizeof($parms)) {
-	foreach($parms as $parameter) {
+	foreach ($parms as $parameter) {
 		if (strpos($parameter, '=')) {
-			list($arg, $value) = explode('=', $parameter);
+			[$arg, $value] = explode('=', $parameter);
 		} else {
-			$arg = $parameter;
+			$arg   = $parameter;
 			$value = '';
 		}
 
 		switch ($arg) {
-		case '--id':
-			$id = $value;
-			break;
-		case '--thread':
-			$thread = $value;
-			break;
-		case '-d':
-		case '--debug':
-			$debug = true;
-			break;
-		case '-f':
-		case '--force':
-			$force = true;
-			break;
-		case '--version':
-		case '-V':
-		case '-v':
-			display_version();
-			exit;
-		case '--help':
-		case '-H':
-		case '-h':
-			display_help();
-			exit;
-		default:
-			print 'ERROR: Invalid Parameter ' . $parameter . "\n\n";
-			display_help();
-			exit;
+			case '--id':
+				$id = (int) $value;
+
+				break;
+			case '--thread':
+				$thread = $value;
+
+				break;
+			case '-d':
+			case '--debug':
+				$debug = true;
+
+				break;
+			case '-f':
+			case '--force':
+				$force = true;
+
+				break;
+			case '--version':
+			case '-V':
+			case '-v':
+				display_version();
+				exit;
+			case '--help':
+			case '-H':
+			case '-h':
+				display_help();
+				exit;
+			default:
+				print 'ERROR: Invalid Parameter ' . $parameter . "\n\n";
+				display_help();
+				exit;
 		}
 	}
 }
 
-/* graph export */
+// graph export
 if (isset($thread)) {
 	export_graph_start_task($thread);
 } else {
@@ -118,8 +122,8 @@ function display_version() {
 		include_once($config['base_path'] . '/plugins/gexport/setup.php');
 	}
 
-    $info = plugin_gexport_version();
-	print "Cacti Graph Export Poller, Version " . $info['version'] . ", " . COPYRIGHT_YEARS . "\n";
+	$info = plugin_gexport_version();
+	print 'Cacti Graph Export Poller, Version ' . (isset($info['version']) ? $info['version'] : 'unknown') . ', ' . COPYRIGHT_YEARS . "\n";
 }
 
 /**
@@ -131,7 +135,7 @@ function display_version() {
  *
  * @return void
  */
-function display_help () {
+function display_help() {
 	display_version();
 
 	print "\nusage: poller_export.php [--id=N] [--force] [--debug]\n\n";

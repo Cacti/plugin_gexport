@@ -2,6 +2,21 @@
 
 --- 2.1 ---
 
+- issue: Fix undefined function call in export_ftp_rmdirr() (recursive
+  call referenced the non-existent 'ftp_rmdirr' instead of
+  'export_ftp_rmdirr', causing a fatal error whenever a non-empty remote
+  directory needed to be sanitized before an FTP upload)
+
+- issue: Fix gexport_calc_next_start() returning an undefined value for
+  an unrecognized/disabled export timing setting
+
+- issue: Fix write_branch_conf() writing to an undefined json file path
+  for an unrecognized branch type
+
+- issue: Fix export_form_actions() and duplicate_export()/export_edit()/
+  export_runnow() not safely handling a missing/invalid bulk action or
+  database row
+
 - issue#54: CMDPHP PHP ERROR WARNING
 
 - issue#55: PNG not readable
