@@ -188,6 +188,13 @@ if (!function_exists('db_table_exists')) {
 	}
 }
 
+if (!function_exists('db_update_table')) {
+	function db_update_table($table, $data, $removecolumns = false, $log = true, $db_conn = false) {
+		$GLOBALS['__test_db_calls'][] = array('fn' => 'db_update_table', 'table' => $table, 'data' => $data);
+		return true;
+	}
+}
+
 if (!function_exists('api_plugin_db_add_column')) {
 	function api_plugin_db_add_column($plugin, $table, $data) {
 		return true;
@@ -196,6 +203,7 @@ if (!function_exists('api_plugin_db_add_column')) {
 
 if (!function_exists('api_plugin_db_table_create')) {
 	function api_plugin_db_table_create($plugin, $table, $data) {
+		$GLOBALS['__test_db_calls'][] = array('fn' => 'api_plugin_db_table_create', 'plugin' => $plugin, 'table' => $table, 'data' => $data);
 		return true;
 	}
 }

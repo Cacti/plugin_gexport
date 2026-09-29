@@ -53,7 +53,13 @@ it('registers every hook gexport depends on, its realm, and provisions its table
 	expect($GLOBALS['__test_registered_realms'])->toHaveCount(1);
 	expect($GLOBALS['__test_registered_realms'][0]['file'])->toBe('gexport.php');
 
-	$sql = implode("\n", array_column($GLOBALS['__test_db_calls'], 'sql'));
+	$tables = array_column(
+		array_filter($GLOBALS['__test_db_calls'], function ($call) {
+			return $call['fn'] === 'api_plugin_db_table_create';
+		}),
+		'table'
+	);
 
-	expect($sql)->toContain('graph_exports');
+	expect($tables)->toContain('graph_exports')
+		->and($tables)->toContain('graph_exports_tasks');
 });

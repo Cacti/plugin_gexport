@@ -2,6 +2,7 @@
 
 --- 2.1 ---
 
+- refactor: Manage the graph_exports/graph_exports_tasks schema through Cacti's plugin table API - create with api_plugin_db_table_create() and refresh existing tables with db_update_table() from a single shared definition, replacing the raw CREATE TABLE/version-gated ALTER TABLE migrations (the one column rename is kept as a pre-step since db_update_table() can not rename)
 - dev: Enforce patch coverage of changed lines in CI and remove the inert COMPOSER_ROOT_VERSION env from the Pest step
 - security: Add a version-safe CSP nonce (`plugin_gexport_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
 

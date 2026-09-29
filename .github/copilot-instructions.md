@@ -189,10 +189,26 @@ existing code or adding new code, not just in dedicated cleanup passes:
 - **i18n text domain.** Every `__()`/`__esc()` call must include this plugin's text domain as the
   final argument, except when deliberately comparing against a literal, untranslated Cacti-core
   label.
-- **Plugin table-creation API.** Use `api_plugin_db_table_create()`/`api_plugin_db_add_column()`
-  (from Cacti core's `lib/plugins.php`) instead of raw `CREATE TABLE`/`ALTER TABLE ... ADD COLUMN`.
-  Both are idempotent (safe no-ops when already applied), so the same call can run unconditionally
-  from both the install AND upgrade paths.
+- **Plugin schema management.** Own every plugin-created table through Cacti core's schema API in
+  `lib/plugins.php`; never use raw `CREATE TABLE`/`ALTER TABLE` for a plugin-owned table.
+  - Define each table once in a `*_table_data()` helper that returns the Cacti table-definition
+    array (`columns`/`primary`/`keys`/`type`/`comment`). Both the install and upgrade paths consume
+    that single definition so they can never drift.
+  - **Install:** create every table with
+    `api_plugin_db_table_create('<plugin>', '<table>', <table>_table_data())`.
+  - **Upgrade:** refresh each table from the same definition — `db_update_table('<table>', <table>_table_data())`
+    when the table already exists (it diffs the live schema and issues the exact combined `ALTER`),
+    otherwise `api_plugin_db_table_create()` to create it. Do **not** hand-write
+    `db_column_exists()`/`db_index_exists()` guards around `ALTER TABLE`. The one exception is a true
+    column **rename**, which `db_update_table()` cannot express: keep a guarded
+    `ALTER TABLE ... CHANGE COLUMN` as a pre-step immediately before the refresh.
+  - Avoid `api_plugin_db_add_column()`, `api_plugin_db_add_index()`, and `api_plugin_db_drop_*()` for
+    this plugin's own tables — the create + `db_update_table()` pair already covers new columns,
+    indexes, and type changes. Those helpers are only appropriate when modifying a **non-plugin**
+    Cacti core table (for example adding a column to `host`).
+- **Plugin upgrade bookkeeping.** When the stored version differs from the INFO version, update the
+  whole `plugin_config` record, not just `version`:
+  `db_execute_prepared('UPDATE plugin_config SET version = ?, name = ?, author = ?, webpage = ? WHERE directory = ?', [$info['version'], $info['longname'], $info['author'], $info['homepage'], $info['name']])`.
 - **PHPDoc shape.** Every function gets a PHPDoc block: a one-line description, a blank comment
   line, `@param` lines, a blank comment line, then `@return`. Infer parameter/return types from
   actual usage; don't change the function's real type-hints in the same pass (let static analysis

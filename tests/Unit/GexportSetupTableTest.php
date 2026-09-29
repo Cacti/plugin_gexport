@@ -33,28 +33,27 @@ beforeEach(function () {
 	$GLOBALS['__test_db_calls'] = array();
 });
 
-it('creates both tables when neither exists', function () {
-	gexport_test_mock_db('db_table_exists', 'graph_exports_tasks', false);
-	gexport_test_mock_db('db_table_exists', 'graph_exports', false);
-
+it('creates both tables via the tracked plugin table API', function () {
 	expect(gexport_setup_table())->toBeTrue();
 
-	$sql = implode("\n", array_column($GLOBALS['__test_db_calls'], 'sql'));
+	$tables = array_column(
+		array_filter($GLOBALS['__test_db_calls'], function ($call) {
+			return $call['fn'] === 'api_plugin_db_table_create';
+		}),
+		'table'
+	);
 
-	expect($sql)->toContain('CREATE TABLE `graph_exports`');
-	expect($sql)->toContain('CREATE TABLE `graph_exports_tasks`');
+	expect($tables)->toContain('graph_exports')
+		->and($tables)->toContain('graph_exports_tasks');
 });
 
-it('does not recreate a table that already exists', function () {
-	gexport_test_mock_db('db_table_exists', 'graph_exports_tasks', true);
-	gexport_test_mock_db('db_table_exists', 'graph_exports', true);
-
+it('never emits a raw CREATE TABLE statement', function () {
 	gexport_create_table();
 	gexport_create_table_tasks();
 
-	$creates = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+	$raw = array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'CREATE TABLE') !== false;
 	});
 
-	expect($creates)->toBeEmpty();
+	expect($raw)->toBeEmpty();
 });
