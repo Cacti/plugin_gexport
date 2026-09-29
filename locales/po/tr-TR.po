@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 09:23-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-06-07 23:17-0400\n"
 "Last-Translator: San IPE <sanipe1949@krunsea.com>\n"
 "Language-Team: Turkish <http://translate.cacti.net/projects/cacti/gexport/tr/>\n"
@@ -18,856 +18,853 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: functions.php:418
+#: functions.php
 msgid "Success"
 msgstr "Başarılı"
 
-#: functions.php:419
+#: functions.php
 msgid "Syntax or usage error"
 msgstr "Sözdizimi veya kullanım hatası"
 
-#: functions.php:420
+#: functions.php
 msgid "Protocol incompatibility"
 msgstr "Protokol uyumsuzluğu"
 
-#: functions.php:421
+#: functions.php
 msgid "Errors selecting input/output files, dirs"
 msgstr "Giriş / çıkış dosyalarını seçerken hata, dir"
 
-#: functions.php:422
+#: functions.php
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr "İstenen eylem desteklenmiyor: 64 bit dosyaları destekleyemeyen bir platformda işlemeye çalışıldı; veya sunucu tarafından değil, istemci tarafından desteklenen bir seçenek belirtildi."
 
-#: functions.php:423
+#: functions.php
 msgid "Error starting client-server protocol"
 msgstr "İstemci-sunucu protokolünü başlatırken hata oluştu"
 
-#: functions.php:424
+#: functions.php
 msgid "Daemon unable to append to log-file"
 msgstr "Daemon log dosyasına eklenemedi"
 
-#: functions.php:425
+#: functions.php
 msgid "Error in socket I/O"
 msgstr "Soket G / Ç'de hata"
 
-#: functions.php:426
+#: functions.php
 msgid "Error in file I/O"
 msgstr "G / Ç dosyasında hata"
 
-#: functions.php:427
+#: functions.php
 msgid "Error in rsync protocol data stream"
 msgstr "Rsync protokolü veri akışında hata"
 
-#: functions.php:428
+#: functions.php
 msgid "Errors with program diagnostics"
 msgstr "Program tanılama hataları"
 
-#: functions.php:429
+#: functions.php
 msgid "Error in IPC code"
 msgstr "IPC kodunda hata"
 
-#: functions.php:430
+#: functions.php
 msgid "Received SIGUSR1 or SIGINT"
 msgstr "SIGUSR1 veya SIGINT aldı"
 
-#: functions.php:431
+#: functions.php
 msgid "Some error returned by waitpid()"
 msgstr "Waitpid () tarafından döndürülen bazı hatalar"
 
-#: functions.php:432
+#: functions.php
 msgid "Error allocating core memory buffers"
 msgstr "Çekirdek bellek arabelleği ayırma hatası"
 
-#: functions.php:433
+#: functions.php
 msgid "Partial transfer due to error"
 msgstr "Hata nedeniyle kısmi transfer"
 
-#: functions.php:434
+#: functions.php
 msgid "Partial transfer due to vanished source files"
 msgstr "Kaybolan kaynak dosyaları nedeniyle kısmi transfer"
 
-#: functions.php:435
+#: functions.php
 msgid "The --max-delete limit stopped deletions"
 msgstr "--Max-delete limiti silmeleri durdurdu"
 
-#: functions.php:436
+#: functions.php
 msgid "Timeout in data send/receive"
 msgstr "Veri gönderme / alma işleminde zaman aşımı"
 
-#: functions.php:437
+#: functions.php
 msgid "Timeout waiting for daemon connection"
 msgstr "Daemon bağlantısı için bekleyen zaman aşımı"
 
-#: functions.php:439 functions.php:542
+#: functions.php
 msgid "Unknown error "
 msgstr "Bilinmeyen hata"
 
-#: functions.php:515
+#: functions.php
 msgid "Operation was successful"
 msgstr "İşlem başarılı oldu"
 
-#: functions.php:516
+#: functions.php
 msgid "General error in file copy"
 msgstr "Dosya kopyasında genel hata"
 
-#: functions.php:517
+#: functions.php
 msgid "Destination is not directory, but it should be"
 msgstr "Hedef dizin değil, öyle olmalı"
 
-#: functions.php:518
+#: functions.php
 msgid "Maximum symlink level exceeded"
 msgstr "Maksimum sembolik bağlantı seviyesi aşıldı"
 
-#: functions.php:519
+#: functions.php
 msgid "Connecting to host failed."
 msgstr "Ana bilgisayara bağlanma başarısız oldu."
 
-#: functions.php:520
+#: functions.php
 msgid "Connection broken"
 msgstr "Bağlantı koptu"
 
-#: functions.php:521
+#: functions.php
 msgid "File does not exist"
 msgstr "Dosya yok"
 
-#: functions.php:522
+#: functions.php
 msgid "No permission to access file."
 msgstr "Dosyaya erişim izni yok."
 
-#: functions.php:523
+#: functions.php
 msgid "General error in sftp protocol"
 msgstr "Sftp protokolünde genel hata"
 
-#: functions.php:524
+#: functions.php
 msgid "File transfer protocol mismatch"
 msgstr "Dosya aktarım protokolü uyuşmazlığı"
 
-#: functions.php:525
+#: functions.php
 msgid "No file matches a given criteria"
 msgstr "Belirli bir ölçütle eşleşen dosya yok"
 
-#: functions.php:526
+#: functions.php
 msgid "Host not allowed to connect"
 msgstr "Ana bilgisayarın bağlanmasına izin verilmiyor"
 
-#: functions.php:527
+#: functions.php
 msgid "General error in ssh protocol"
 msgstr "Ssh protokolünde genel hata"
 
-#: functions.php:528
+#: functions.php
 msgid "Key exchange failed"
 msgstr "Anahtar değişimi başarısız oldu"
 
-#: functions.php:529
+#: functions.php
 msgid "Reserved"
 msgstr "Rezerve"
 
-#: functions.php:530
+#: functions.php
 msgid "MAC error"
 msgstr "MAC hatası"
 
-#: functions.php:531
+#: functions.php
 msgid "Compression error"
 msgstr "Sıkıştırma hatası"
 
-#: functions.php:532
+#: functions.php
 msgid "Service not available"
 msgstr "Servis dışı"
 
-#: functions.php:533
+#: functions.php
 msgid "Protocol version not supported"
 msgstr "Protokol sürümü desteklenmiyor"
 
-#: functions.php:534
+#: functions.php
 msgid "Host key not verifiable"
 msgstr "Ana bilgisayar anahtarı doğrulanamıyor"
 
-#: functions.php:535
+#: functions.php
 msgid "Connection failed"
 msgstr "Bağlantı kurulamadı"
 
-#: functions.php:536
+#: functions.php
 msgid "Disconnected by application"
 msgstr "Uygulama ile bağlantısı kesildi"
 
-#: functions.php:537
+#: functions.php
 msgid "Too many connections"
 msgstr "Çok fazla bağlantı"
 
-#: functions.php:538
+#: functions.php
 msgid "Authentication cancelled by user"
 msgstr "Kimlik doğrulama kullanıcı tarafından iptal edildi"
 
-#: functions.php:539
+#: functions.php
 msgid "No more authentication methods available"
 msgstr "Başka doğrulama yöntemi yok"
 
-#: functions.php:540
+#: functions.php
 msgid "Invalid user name"
 msgstr "Geçersiz kullanıcı adı"
 
-#: functions.php:2147 functions.php:2339
+#: functions.php
 msgid "Non Query Based"
 msgstr "Sorgu Tabanlı Olmayan"
 
-#: functions.php:2426
+#: functions.php
 msgid "Graph Templates"
 msgstr "Grafik Şablonları"
 
-#: functions.php:2455
+#: functions.php
 msgid "Data Queries"
 msgstr "Veri Sorguları"
 
-#: gexport.php:31
+#: gexport.php
 msgid "Delete"
 msgstr "Sil"
 
-#: gexport.php:32
+#: gexport.php
 msgid "Enable"
 msgstr "Etkinleştir"
 
-#: gexport.php:33
+#: gexport.php
 msgid "Disable"
 msgstr "Devre Dışı"
 
-#: gexport.php:34
+#: gexport.php
 msgid "Export Now"
 msgstr "Dışa aktar"
 
-#: gexport.php:38 setup.php:521
+#: gexport.php setup.php
 msgid "Periodic"
 msgstr "Periyodik"
 
-#: gexport.php:39 setup.php:523
+#: gexport.php setup.php
 msgid "Daily"
 msgstr "Günlük"
 
-#: gexport.php:40 setup.php:522
+#: gexport.php setup.php
 msgid "Hourly"
 msgstr "Saatlik"
 
-#: gexport.php:310
+#: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Aşağıdaki Grafik Verme Tanımını silmek için 'Devam Et'i tıklayın."
 msgstr[1] "Aşağıdaki Grafik Verme Tanımlarını silmek için 'Devam Et'i tıklayın."
 
-#: gexport.php:315 gexport.php:325 gexport.php:335 gexport.php:345
+#: gexport.php
 msgid "Cancel"
 msgstr "İptal"
 
-#: gexport.php:316 gexport.php:326 gexport.php:336 gexport.php:346
+#: gexport.php
 msgid "Continue"
 msgstr "Devam et"
 
-#: gexport.php:316
+#: gexport.php
 #, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
 msgstr "Grafik Verme Tanımları"
 
-#: gexport.php:320
+#: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Aşağıdaki Grafik Verme Tanımını devre dışı bırakmak için 'Devam Et'i tıklayın."
 msgstr[1] "Grafik Dışa Aktarma Tanımlarının ardından devre dışı bırakmak için 'Devam Et'i tıklayın."
 
-#: gexport.php:326
+#: gexport.php
 msgid "Disable Graph Export Definition(s)"
 msgstr "Grafik Verme Tanımları"
 
-#: gexport.php:330
+#: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "Aşağıdaki Grafik Verme Tanımını etkinleştirmek için 'Devam Et'i tıklayın."
 msgstr[1] "Aşağıdaki Grafik Verme Tanımlarını etkinleştirmek için 'Devam Et'i tıklayın."
 
-#: gexport.php:336
+#: gexport.php
 msgid "Enable Graph Export Definition(s)"
 msgstr "Grafik Verme Tanımları"
 
-#: gexport.php:340
+#: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Aşağıdaki Grafik Verme Tanımını şimdi çalıştırmak için 'Devam Et'i tıklayın."
 msgstr[1] "Şimdi Grafik Verme Tanımlarını takip etmek için 'Devam Et'i tıklayın."
 
-#: gexport.php:346
+#: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "Grafik Verme Tanımları"
 
-#: gexport.php:348
+#: gexport.php
 #, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
 msgstr "En az bir Grafik Verme Tanımı seçmelisiniz."
 
-#: gexport.php:349 gexport.php:353
+#: gexport.php
 msgid "Return"
 msgstr "Dönüş"
 
-#: gexport.php:352
+#: gexport.php
 msgid "You must select at least one Graph Export Definition."
 msgstr "En az bir Grafik Verme Tanımı seçmelisiniz."
 
-#: gexport.php:460 gexport.php:465
+#: gexport.php
 msgid "Graph Export Definition [new]"
 msgstr "Grafik Verme Tanımı [yeni]"
 
-#: gexport.php:462
+#: gexport.php
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "Grafik Verme Tanımı [değiştir: %s]"
 
-#: gexport.php:491
+#: gexport.php
 msgid "Select Tree(s)"
 msgstr "Ağaç Seç"
 
-#: gexport.php:493
+#: gexport.php
 msgid "Trees Selected"
 msgstr "Seçilen Ağaçlar"
 
-#: gexport.php:496
+#: gexport.php
 msgid "All Trees Selected"
 msgstr "Tüm Ağaçlar Seçildi"
 
-#: gexport.php:502 gexport.php:548
+#: gexport.php
 msgid "All"
 msgstr "Tümü"
 
-#: gexport.php:503 gexport.php:549
+#: gexport.php
 msgid "None"
 msgstr "Yok"
 
-#: gexport.php:533 gexport.php:579 gexport.php:691
+#: gexport.php
 msgid "Search"
 msgstr "Ara"
 
-#: gexport.php:537
+#: gexport.php
 msgid "Select Site(s)"
 msgstr "Site Seç"
 
-#: gexport.php:539
+#: gexport.php
 msgid "Sites Selected"
 msgstr "Seçilen Siteler"
 
-#: gexport.php:542
+#: gexport.php
 msgid "All Sites Selected"
 msgstr "Tüm Siteler Seçildi"
 
-#: gexport.php:683
+#: gexport.php
 msgid "Graph Export Definitions"
 msgstr "Grafik Verme Tanımları"
 
-#: gexport.php:697
+#: gexport.php
 msgid "Exports"
 msgstr "Dışa aktarmak"
 
-#: gexport.php:701
+#: gexport.php
 msgid "Default"
 msgstr "Varsayılan"
 
-#: gexport.php:716
+#: gexport.php
 msgid "Refresh"
 msgstr "Yenile"
 
-#: gexport.php:722 gexport.php:1065 gexport.php:1070 gexport.php:1071
+#: gexport.php
 msgid "Never"
 msgstr "Asla"
 
-#: gexport.php:723 gexport.php:724 gexport.php:725 gexport.php:726
+#: gexport.php
 #, php-format
 msgid "%d Seconds"
 msgstr "%d saniye"
 
-#: gexport.php:727
+#: gexport.php
 #, php-format
 msgid "%d Minute"
 msgstr "% d dakika"
 
-#: gexport.php:728 gexport.php:729
+#: gexport.php
 #, php-format
 msgid "%d Minutes"
 msgstr "%d Dakika"
 
-#: gexport.php:739
+#: gexport.php
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Git"
 
-#: gexport.php:740
+#: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Temizle"
 
-#: gexport.php:901 setup.php:448
+#: gexport.php setup.php
 msgid "Export Name"
 msgstr "İhracat adı"
 
-#: gexport.php:904 setup.php:449
+#: gexport.php setup.php
 msgid "The name of this Graph Export Definition."
 msgstr "Bu Grafik Dışa Aktarma Tanımının adı."
 
-#: gexport.php:907
+#: gexport.php
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:910
+#: gexport.php
 msgid "The internal ID of the Graph Export Definition."
 msgstr "Grafik Verme Tanımının dahili kimliği."
 
-#: gexport.php:913
+#: gexport.php
 msgid "Schedule"
 msgstr "Program"
 
-#: gexport.php:916
+#: gexport.php
 msgid "The frequency that Graphs will be exported."
 msgstr "Grafiklerin dışa aktarılacağı frekans."
 
-#: gexport.php:919
+#: gexport.php
 msgid "Next Start"
 msgstr "Bir sonraki başlangıç"
 
-#: gexport.php:922
+#: gexport.php
 msgid "The next time the Graph Export should run."
 msgstr "Grafik Dışa Aktarmanın bir sonraki çalıştırması gerekir."
 
-#: gexport.php:925 setup.php:457
+#: gexport.php setup.php
 msgid "Enabled"
 msgstr "Etkin"
 
-#: gexport.php:927
+#: gexport.php
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "Etkinleştirilirse, bu Grafik Verme tanımı gerektiği gibi çalışır."
 
-#: gexport.php:930
+#: gexport.php
 msgid "Status"
 msgstr "Durum"
 
-#: gexport.php:932
+#: gexport.php
 msgid "The current Graph Export Status."
 msgstr "Mevcut Grafik Verme Durumu."
 
-#: gexport.php:935
+#: gexport.php
 msgid "Exporting (Sites/Trees)"
 msgstr "İhracat (Siteler / Ağaçlar)"
 
-#: gexport.php:938
+#: gexport.php
 msgid "What is being Exported."
 msgstr "Ne ihraç ediliyor?"
 
-#: gexport.php:941 setup.php:581
+#: gexport.php setup.php
 msgid "Effective User"
 msgstr "Etkili Kullanıcı"
 
-#: gexport.php:944
+#: gexport.php
 msgid "The user that this export will impersonate."
 msgstr "Bu dışa aktarmanın taklit edeceği kullanıcı."
 
-#: gexport.php:947
+#: gexport.php
 msgid "Last Runtime"
 msgstr "Son Çalışma Zamanı"
 
-#: gexport.php:950
+#: gexport.php
 msgid "The last runtime for the Graph Export."
 msgstr "Grafik Verme için son çalışma zamanı."
 
-#: gexport.php:953
+#: gexport.php
 msgid "Graphs"
 msgstr "Grafikler"
 
-#: gexport.php:956
+#: gexport.php
 msgid "The number of Graphs Exported on the last run."
 msgstr "Son çalıştırmada Dışa Aktarılan Grafiklerin sayısı."
 
-#: gexport.php:959
+#: gexport.php
 msgid "Last Started"
 msgstr "Son Başlayan"
 
-#: gexport.php:962
+#: gexport.php
 msgid "The last time that this Graph Export was started."
 msgstr "Bu Grafik İhracatının en son başlatıldığı saat."
 
-#: gexport.php:965
+#: gexport.php
 msgid "Last Errored"
 msgstr "Son Hata"
 
-#: gexport.php:968
+#: gexport.php
 msgid "The last time that this Graph Export experienced an error."
 msgstr "Bu grafik verme işleminin en son bir hatayla karşılaştı."
 
-#: gexport.php:972
+#: gexport.php
 msgid "Export Definitions"
 msgstr "Tanımları Dışa Aktar"
 
-#: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:586
+#: gexport.php setup.php
 msgid "N/A"
 msgstr "Yok"
 
-#: gexport.php:1014
+#: gexport.php
 msgid "No"
 msgstr "Hayır"
 
-#: gexport.php:1014
+#: gexport.php
 msgid "Yes"
 msgstr "Evet"
 
-#: gexport.php:1018
+#: gexport.php
 msgid "Idle"
 msgstr "Boşta"
 
-#: gexport.php:1022
+#: gexport.php
 msgid "Running"
 msgstr "Çalışıyor"
 
-#: gexport.php:1026
+#: gexport.php
 msgid "Error"
 msgstr "Hata"
 
-#: gexport.php:1033
+#: gexport.php
 msgid "All Sites"
 msgstr "Tüm Siteler"
 
-#: gexport.php:1044
+#: gexport.php
 msgid "All Trees"
 msgstr "Tüm Ağaçlar"
 
-#: gexport.php:1058
+#: gexport.php
 msgid "Sec"
 msgstr "Saniye"
 
-#: gexport.php:1078
+#: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Grafik Verme Tanımları Yok"
 
-#: setup.php:56
+#: setup.php
 msgid "Export Cacti Graphs Settings"
 msgstr "Kaktüs Grafikleri Ayarlarını Dışa Aktar"
 
-#: setup.php:432
+#: setup.php
 msgid "Graph Exports"
 msgstr "Grafik İhracatı"
 
-#: setup.php:432
+#: setup.php
 msgid "Utilities"
 msgstr "Araçlar"
 
-#: setup.php:435
+#: setup.php
 msgid "General Administration"
 msgstr "Genel Yönetim"
 
-#: setup.php:443
+#: setup.php
 msgid "General"
 msgstr "Genel"
 
-#: setup.php:458
+#: setup.php
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "Bu Grafik Verme Tanımının etkinleştirilmesini istiyorsanız, bu Onay Kutusunu işaretleyin."
 
-#: setup.php:464
+#: setup.php
 msgid "Export Method"
 msgstr "İhracat yöntemi"
 
-#: setup.php:465
+#: setup.php
 msgid "Choose which export method to use."
 msgstr "Kullanılacak dışa aktarma yöntemini seçin."
 
-#: setup.php:470
+#: setup.php
 msgid "Local"
 msgstr "Yerel"
 
-#: setup.php:471
+#: setup.php
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:472
+#: setup.php
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:473
+#: setup.php
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:474
+#: setup.php
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:475
+#: setup.php
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:479
+#: setup.php
 msgid "Export Command Arguments"
 msgstr "Komut Argümanlarını Dışa Aktar"
 
-#: setup.php:480
+#: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "Yerel olmayan ihracat yöntemleriyle kullanılacak argümanlar. rsync kullanmalı"
 
-#: setup.php:492
+#: setup.php
 msgid "Theme"
 msgstr "Tema"
 
-#: setup.php:493
+#: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "Kaktüs Grafiğinizi dışa aktarmak için mevcut Temalardan birini seçin."
 
-#: setup.php:500
+#: setup.php
 msgid "Presentation Method"
 msgstr "Sunum Yöntemi"
 
-#: setup.php:501
+#: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "Html ile oluşturulan sayfalar için hangi sunumun olmasını istediğinizi seçin. Klasik sunumu seçerseniz; Grafikler sadece bir-html sayfasında olacaktır. Ağaç sunumunu seçerseniz, Grafik Ağacı mimarisi statik html sayfalarında tutulur"
 
-#: setup.php:506 setup.php:609
+#: setup.php
 msgid "Site"
 msgstr "Site"
 
-#: setup.php:507 setup.php:590
+#: setup.php
 msgid "Tree"
 msgstr "Ağaç"
 
-#: setup.php:511
+#: setup.php
 msgid "Export Timing"
 msgstr "Dışa Aktarma Zamanlaması"
 
-#: setup.php:515
+#: setup.php
 msgid "Timing Method"
 msgstr "Zamanlama yöntemi"
 
-#: setup.php:516
+#: setup.php
 msgid "Choose when to Export Graphs."
 msgstr "Grafiklerin Ne Zaman Verileceğini Seçin."
 
-#: setup.php:527
+#: setup.php
 msgid "Periodic Export Cycle"
 msgstr "Periyodik İhracat Döngüsü"
 
-#: setup.php:528
+#: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "Kaktüslerin Ne Sıklıkta Grafikleri Dışa Aktarmasını İstiyorsunuz? Bu, Grafikleri dışa aktarmak istediğiniz Yoklama Döngüleri birimidir."
 
-#: setup.php:532
+#: setup.php
 msgid "Every Polling Cycle"
 msgstr "Her Oylama Döngüsü"
 
-#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
-#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
-#: setup.php:543
+#: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "Her% d Polling Döngüsü"
 
-#: setup.php:547
+#: setup.php
 msgid "Hourly at specified minutes"
 msgstr "Belirtilen dakikalarda saat başı"
 
-#: setup.php:548
+#: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Cacti'nin statik görüntüleri saatlik olarak dışa aktarmasını istiyorsanız, saatin dakikasını ne zaman yapacağınızı belirleyin. Cacti, veri toplama komut dosyasını her 5 dakikada bir çalıştırdığınızı varsaydığından, değerinizi çalışma zamanına en yakın olana yuvarlar. Örneğin, 43 saatten 40 dakika sonraya eşittir."
 
-#: setup.php:557
+#: setup.php
 msgid "Daily at specified time"
 msgstr "Belirtilen zamanda günlük"
 
-#: setup.php:558
+#: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Cacti'nin günlük olarak statik görüntüleri dışa aktarmasını istiyorsanız, bunun ne zaman yapılacağını buraya koyun. Cacti, veri toplama komut dosyasını her 5 dakikada bir çalıştırdığınızı varsaydığından, değerinizi çalışma zamanına en yakın olana yuvarlar. Örneğin, 21:23, saat 9'dan 20 dakika sonra eşit olur."
 
-#: setup.php:567
+#: setup.php
 msgid "Use x Threads"
 msgstr "X Konuları kullan"
 
-#: setup.php:568
+#: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "Cacti'nin grafikleri dışa aktarırken kaç arka plan iş parçacığı kullanmasını istiyorsunuz? Yoklama iş parçacığındaki tüm dışa aktarımı çalıştırmak için varsayılan değer 0'dır, ayrı arka plan iş parçacıkları oluşturmak için 1 veya daha fazla"
 
-#: setup.php:576
+#: setup.php
 msgid "Graph Selection & Settings"
 msgstr "Grafik Seçimi ve Ayarları"
 
-#: setup.php:582
+#: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Cacti Graphs'a izinler oluşturmak için kullanılacak kullanıcı adı. Bu kullanıcı adı, hangi Grafiklerin / Ağaçların dışa aktarılabileceğini belirlemek için kullanılacaktır. Yok, herhangi bir güvenliğin var olduğunu varsaymadığı anlamına gelir."
 
-#: setup.php:591
+#: setup.php
 msgid "The Tree(s) to export."
 msgstr "Verilecek Ağaç (lar)."
 
-#: setup.php:598
+#: setup.php
 msgid "Expand Devices/Sites"
 msgstr "Cihazları / Siteleri Genişlet"
 
-#: setup.php:599
+#: setup.php
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "Bu ayar, Ağaç Aygıtları ve Site Şablonları ve Aygıtlarının genişletilip genişletilmeyeceğini belirler. Genişletilmiş olarak ayarlanırsa, her ana bilgisayarda Grafik Şablonları veya Veri Sorgu öğeleri içeren bir alt klasör bulunur."
 
-#: setup.php:604
+#: setup.php
 msgid "Off"
 msgstr "Kapalı"
 
-#: setup.php:605
+#: setup.php
 msgid "On"
 msgstr "Açık"
 
-#: setup.php:610
+#: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "Alınacak Kaktüs Grafikleri Sitesi."
 
-#: setup.php:617
+#: setup.php
 msgid "Graph Thumbnail Width"
 msgstr "Grafik Küçük Resmi Genişliği"
 
-#: setup.php:618
+#: setup.php
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "Küçük Resim Grafiklerinin varsayılan genişliği piksel cinsinden."
 
-#: setup.php:626
+#: setup.php
 msgid "Graph Thumbnail Height"
 msgstr "Grafik Küçük Resmi Yüksekliği"
 
-#: setup.php:627
+#: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "Küçük Resim Grafiklerinin piksel cinsinden yüksekliği."
 
-#: setup.php:635
+#: setup.php
 msgid "Default View Thumbnails"
 msgstr "Varsayılan Görünüm Küçük resimleri"
 
-#: setup.php:636
+#: setup.php
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "Varsayılan Grafik Görünümü'nün Küçük Resim modunda olmasını istiyorsanız bunu kontrol edin."
 
-#: setup.php:641
+#: setup.php
 msgid "Default Graph Columns"
 msgstr "Varsayılan Grafik Sütunları"
 
-#: setup.php:642
+#: setup.php
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "Grafikleri görüntülerken varsayılan olarak kullanılacak sütun sayısı."
 
-#: setup.php:650
+#: setup.php
 msgid "Graphs Per Page"
 msgstr "Sayfa Başına Grafik"
 
-#: setup.php:651
+#: setup.php
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "Görüntülenecek Sayfa Başına Grafik sayısını seçin."
 
-#: setup.php:658
+#: setup.php
 msgid "Maximum Graphs to Export"
 msgstr "Dışa Aktarılacak Maksimum Grafikler"
 
-#: setup.php:659
+#: setup.php
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "Bu sayıya ulaşıldıktan sonra bir hata üretilecek, ancak verme işlemi devam edecek. Sınırsız olarak 0'a ayarlayın."
 
-#: setup.php:667
+#: setup.php
 msgid "Export Location Information"
 msgstr "Konum Bilgilerini Dışarı Aktar"
 
-#: setup.php:672
+#: setup.php
 msgid "Export Thumbnails"
 msgstr "Dışa Aktarma Zamanlaması"
 
-#: setup.php:673
+#: setup.php
 msgid "Check this if you want the export thumbnails mode."
 msgstr "Varsayılan Grafik Görünümü'nün Küçük Resim modunda olmasını istiyorsanız bunu kontrol edin."
 
-#: setup.php:678
+#: setup.php
 msgid "Clear Directory"
 msgstr "Dizini Ver"
 
-#: setup.php:679
+#: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "Bu Grafik Verme Tanımının etkinleştirilmesini istiyorsanız, bu Onay Kutusunu işaretleyin."
 
-#: setup.php:684
+#: setup.php
 msgid "Export Directory"
 msgstr "Dizini Ver"
 
-#: setup.php:685
+#: setup.php
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "Dışa aktarılan verileri içerecek yerel sistemde veya uzaktaki sistemde bu dizindir."
 
-#: setup.php:691
+#: setup.php
 msgid "Local Scratch Directory"
 msgstr "Yerel Scratch Dizini"
 
-#: setup.php:692
+#: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "Bu, Cacti'nin uzak siteye transfer yöntemi ile gönderilmeden önce çıktıyı geçici olarak depolayacağı dizindir. Veri aktarıldıktan sonra bu dizinin içeriği silinir."
 
-#: setup.php:699
+#: setup.php
 msgid "Remote Options"
 msgstr "Uzaktan Seçenekler"
 
-#: setup.php:704
+#: setup.php
 msgid "Sanitize remote directory"
 msgstr "Uzak dizini temizle"
 
-#: setup.php:705
+#: setup.php
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "FTP uzak dizinindeki mevcut dosyaları silmek istiyorsanız bunu kontrol edin. Bu seçenek yalnızca PHP yerleşik ftp işlevlerini kullanırken kullanılır."
 
-#: setup.php:710
+#: setup.php
 msgid "Remote Host"
 msgstr "Uzak Sunucu Adresi"
 
-#: setup.php:711
+#: setup.php
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "Dışa Aktarılan Grafiklerin gönderileceği ana bilgisayarı belirtir."
 
-#: setup.php:718
+#: setup.php
 msgid "Remote Port"
 msgstr "Uzak bağlantı noktası"
 
-#: setup.php:719
+#: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "Standart değilse ihracat yöntemi için kullanılacak iletişim bağlantı noktası (varsayılanları boş bırakın)."
 
-#: setup.php:727
+#: setup.php
 msgid "Use passive mode"
 msgstr "Pasif mod kullan"
 
-#: setup.php:728
+#: setup.php
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "Pasif modda FTP sunucusuna bağlanmak istiyorsanız bunu kontrol edin."
 
-#: setup.php:733
+#: setup.php
 msgid "User"
 msgstr "Kullanıcı"
 
-#: setup.php:734
+#: setup.php
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "Uzak sunucuda oturum açmak için hesap (varsayılanları boş bırakın)."
 
-#: setup.php:741
+#: setup.php
 msgid "Password"
 msgstr "Şifre"
 
-#: setup.php:742
+#: setup.php
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "Uzak ftp hesabı için şifre (boş bırakınız)."
 
-#: setup.php:749
+#: setup.php
 msgid "Private Key Path"
 msgstr "Özel Anahtar Yolu"
 
-#: setup.php:750
+#: setup.php
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "SCP ve RSYNC için, gerekirse Özel Anahtar yolunu girin."
 
-#: setup.php:773
+#: setup.php
 msgid "Exported Cacti Graph Pages"
 msgstr "Dışa Aktarılan Kaktüs Grafiği Sayfaları"
 
-#: setup.php:779
+#: setup.php
 msgid "(Edit)"
 msgstr "(Düzenle)"
 
-#: setup.php:785
+#: setup.php
 msgid "Actions"
 msgstr "Eylemler"
