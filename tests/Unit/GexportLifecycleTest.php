@@ -11,7 +11,7 @@
  * gexport_check_dependencies(), and gexport_check_upgrade()'s page-guard,
  * already-current, and version-drift branches.
  *
- * gexport_check_upgrade() include_once()s Cacti core's database.php/
+ * gexport_check_upgrade() require_once()s Cacti core's database.php/
  * functions.php via $config['library_path'], so that is pointed at
  * throwaway empty stub files for the duration of these tests.
  */

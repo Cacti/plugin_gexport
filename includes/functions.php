@@ -1182,7 +1182,7 @@ function export_graph_monitor_tasks($export) {
 	global $debug;
 
 	$max_threads = $export['export_threads'];
-	$script_file = __DIR__ . '/poller_export.php';
+	$script_file = __DIR__ . '/../poller_export.php';
 	$script_php  = read_config_option('path_php_binary');
 
 	$spawn_time = new DateTime();

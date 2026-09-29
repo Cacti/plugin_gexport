@@ -10,7 +10,7 @@
  * and the realm the plugin depends on at runtime are actually registered,
  * together with the tables it needs, in a single end-to-end pass.
  *
- * gexport_setup_table() include_once()s Cacti core's database.php via
+ * gexport_setup_table() require_once()s Cacti core's database.php via
  * $config['library_path'], so that is pointed at a throwaway empty stub
  * file for the duration of this test.
  */

@@ -13,7 +13,7 @@
  */
 
 beforeAll(function () {
-	require_once __DIR__ . '/../../gexport_security.php';
+	require_once __DIR__ . '/../../includes/gexport_security.php';
 });
 
 it('normalizes a valid low bound bulk action', function () {

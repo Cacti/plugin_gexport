@@ -26,14 +26,17 @@ When generating code for this repository:
 
 ```
 gexport/               # Repository root (install to plugins/gexport/ in Cacti)
-├── locales/             # Internationalization files
-├── functions.php          # Export engine: run_export(), exporter(), rsync/scp helpers
-├── gexport.php              # Main export definition administration UI
-├── poller_export.php         # Background export runner (CLI, spawned from poller_bottom)
-├── website.template            # HTML template used for exported site view
-├── INFO                          # Plugin metadata (name, version, compat)
+├── includes/            # Library/helper files, require_once'd from the entry points
+│   ├── database.php       # Schema management: *_table_data() + create/upgrade/drop helpers
+│   ├── functions.php        # Export engine: run_export(), exporter(), rsync/scp helpers
+│   └── gexport_security.php   # Bulk-action normalization and output-escaping helpers
+├── locales/                     # Internationalization files
+├── gexport.php                    # Main export definition administration UI
+├── poller_export.php                # Background export runner (CLI, spawned from poller_bottom)
+├── website.template                   # HTML template used for exported site view
+├── INFO                                 # Plugin metadata (name, version, compat)
 ├── README.md
-└── setup.php                      # Plugin install/uninstall/upgrade hooks
+└── setup.php                              # Plugin install/uninstall/upgrade hooks
 ```
 
 ## Naming Conventions
@@ -131,7 +134,7 @@ api_plugin_register_realm('gexport', 'gexport.php', __('Export Cacti Graphs Sett
 `gexport_poller_bottom()` only fires on `poller_id == 1` and only spawns `poller_export.php` in the background if at least one `graph_exports` row is `enabled='on'`; keep new export-triggering logic behind the same guard to avoid running exports on every poller cycle needlessly.
 
 ### Export Engine Conventions
-Logging inside the export engine uses a family of small helpers — `export_fatal()`, `export_warn()`, `export_note()`, `export_log()`, `export_debug()` — keep using the matching severity helper rather than calling `cacti_log()` directly from within `functions.php`.
+Logging inside the export engine uses a family of small helpers ΓÇö `export_fatal()`, `export_warn()`, `export_note()`, `export_log()`, `export_debug()` ΓÇö keep using the matching severity helper rather than calling `cacti_log()` directly from within `includes/functions.php`.
 
 ## Best Practices
 
@@ -189,6 +192,11 @@ existing code or adding new code, not just in dedicated cleanup passes:
 - **i18n text domain.** Every `__()`/`__esc()` call must include this plugin's text domain as the
   final argument, except when deliberately comparing against a literal, untranslated Cacti-core
   label.
+- **File inclusion uses `require`/`require_once`.** Always use `require`/`require_once` (never
+  `include`/`include_once`) so a missing dependency fails fast and loudly. Keep library/helper files
+  (e.g. `functions.php`, `gexport_security.php`, `includes/database.php`) under `includes/` and
+  reference them from that path; entry points (`gexport.php`, `poller_export.php`, `setup.php`) stay
+  in the plugin root.
 - **Plugin schema management.** Own every plugin-created table through Cacti core's schema API in
   `lib/plugins.php`; never use raw `CREATE TABLE`/`ALTER TABLE` for a plugin-owned table. Keep all of
   these schema functions in the plugin's `includes/database.php`, included from `setup.php`'s

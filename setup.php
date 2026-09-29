@@ -57,7 +57,7 @@ function plugin_gexport_install() {
 
 	api_plugin_register_realm('gexport', 'gexport.php', __('Export Cacti Graphs Settings', 'gexport'), 1);
 
-	include_once($config['base_path'] . '/plugins/gexport/includes/database.php');
+	require_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	gexport_setup_table();
 }
@@ -73,7 +73,7 @@ function plugin_gexport_install() {
 function plugin_gexport_uninstall() {
 	global $config;
 
-	include_once($config['base_path'] . '/plugins/gexport/includes/database.php');
+	require_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	gexport_drop_tables();
 
@@ -159,9 +159,9 @@ function gexport_poller_bottom() {
 function gexport_check_upgrade() {
 	global $config, $database_default;
 
-	include_once($config['library_path'] . '/database.php');
-	include_once($config['library_path'] . '/functions.php');
-	include_once($config['base_path'] . '/plugins/gexport/includes/database.php');
+	require_once($config['library_path'] . '/database.php');
+	require_once($config['library_path'] . '/functions.php');
+	require_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	// Let's only run this check if we are on a page that actually needs the data
 	$files = ['plugins.php', 'gexport.php'];

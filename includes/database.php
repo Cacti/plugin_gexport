@@ -125,7 +125,7 @@ function gexport_graph_exports_tasks_table_data(): array {
  */
 function gexport_setup_table() {
 	global $config, $database_default;
-	include_once($config['library_path'] . '/database.php');
+	require_once($config['library_path'] . '/database.php');
 
 	gexport_create_table();
 	gexport_create_table_tasks();
@@ -177,7 +177,7 @@ function gexport_create_table_tasks() {
  */
 function gexport_upgrade_tables() {
 	global $config, $database_default;
-	include_once($config['library_path'] . '/database.php');
+	require_once($config['library_path'] . '/database.php');
 
 	// db_update_table() diffs by column name and can not rename, so preserve
 	// this historical rename (and its data) before the schema refresh below.
