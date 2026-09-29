@@ -299,7 +299,7 @@ function gexport_graph_exports_table_data(): array {
 	$data['columns'][]  = ['name' => 'last_runtime', 'type' => 'double', 'NULL' => false, 'default' => '0'];
 	$data['columns'][]  = ['name' => 'last_error', 'type' => 'varchar(255)', 'NULL' => true, 'default' => null];
 	$data['columns'][]  = ['name' => 'total_graphs', 'type' => 'double', 'NULL' => true, 'default' => '0'];
-	$data['primary']    = 'id';
+	$data['primary']    = ['id'];
 	$data['type']       = 'InnoDB';
 	$data['comment']    = 'Stores Graph Export Settings for Cacti';
 
@@ -337,7 +337,7 @@ function gexport_graph_exports_tasks_table_data(): array {
 	$data['columns'][]  = ['name' => 'folder', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
 	$data['columns'][]  = ['name' => 'status', 'type' => 'int(1)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
 	$data['columns'][]  = ['name' => 'start_time', 'type' => 'int(1)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['primary']    = 'id';
+	$data['primary']    = ['id'];
 	$data['keys'][]     = ['name' => 'status', 'columns' => ['status']];
 	$data['keys'][]     = ['name' => 'pid', 'columns' => ['pid']];
 	$data['keys'][]     = ['name' => 'start_time', 'columns' => ['start_time']];
