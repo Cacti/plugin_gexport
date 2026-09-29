@@ -48,12 +48,16 @@ function plugin_gexport_csp_nonce(): string {
  * @return void
  */
 function plugin_gexport_install() {
+	global $config;
+
 	// graph setup all arrays needed for automation
 	api_plugin_register_hook('gexport', 'config_arrays',        'gexport_config_arrays',        'setup.php');
 	api_plugin_register_hook('gexport', 'draw_navigation_text', 'gexport_draw_navigation_text', 'setup.php');
 	api_plugin_register_hook('gexport', 'poller_bottom',        'gexport_poller_bottom',        'setup.php');
 
 	api_plugin_register_realm('gexport', 'gexport.php', __('Export Cacti Graphs Settings', 'gexport'), 1);
+
+	include_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	gexport_setup_table();
 }
@@ -67,8 +71,11 @@ function plugin_gexport_install() {
  * @return bool Always returns true.
  */
 function plugin_gexport_uninstall() {
-	db_execute('DROP TABLE graph_exports');
-	db_execute('DROP TABLE graph_exports_tasks');
+	global $config;
+
+	include_once($config['base_path'] . '/plugins/gexport/includes/database.php');
+
+	gexport_drop_tables();
 
 	return true;
 }
@@ -154,6 +161,7 @@ function gexport_check_upgrade() {
 
 	include_once($config['library_path'] . '/database.php');
 	include_once($config['library_path'] . '/functions.php');
+	include_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	// Let's only run this check if we are on a page that actually needs the data
 	$files = ['plugins.php', 'gexport.php'];
@@ -179,28 +187,10 @@ function gexport_check_upgrade() {
 			api_plugin_enable_hooks('gexport');
 		}
 
-		// db_update_table() diffs by column name and can not rename, so preserve
-		// this historical rename (and its data) before the schema refresh below.
-		if (db_column_exists('graph_exports', 'export_index_key_path')) {
-			db_execute('ALTER TABLE graph_exports
-				CHANGE COLUMN `export_index_key_path` `export_private_key_path` varchar(255)');
-		}
-
-		// Refresh each table to its current definition: db_update_table() diffs the
-		// live schema and issues the exact ALTER (columns, indexes, engine) needed;
-		// create it outright when it does not exist yet.
-		$tables = [
-			'graph_exports'       => gexport_graph_exports_table_data(),
-			'graph_exports_tasks' => gexport_graph_exports_tasks_table_data(),
-		];
-
-		foreach ($tables as $table => $data) {
-			if (db_table_exists($table)) {
-				db_update_table($table, $data);
-			} else {
-				api_plugin_db_table_create('gexport', $table, $data);
-			}
-		}
+		// db_update_table() diffs the live schema against each table definition
+		// and issues the exact ALTER (or creates the table when missing); the one
+		// column rename is applied as a guarded pre-step inside this helper.
+		gexport_upgrade_tables();
 
 		db_execute_prepared('UPDATE plugin_config
 			SET version = ?, name = ?, author = ?, webpage = ?
@@ -217,147 +207,6 @@ function gexport_check_upgrade() {
  * @return bool Always returns true.
  */
 function gexport_check_dependencies() {
-	return true;
-}
-
-/**
- * Creates this plugin's graph_exports (export configuration) and
- * graph_exports_tasks (per-export worker task) database tables, if they
- * don't already exist. Called from plugin_gexport_install() during
- * plugin installation.
- *
- * @return bool Always returns true.
- *
- * @global array  $config           Cacti global configuration array;
- *                                   used to load database.php.
- * @global object $database_default Cacti's default database connection
- *                                   handle (unused directly here;
- *                                   declared for parity with other
- *                                   database-touching functions in this
- *                                   file).
- */
-function gexport_setup_table() {
-	global $config, $database_default;
-	include_once($config['library_path'] . '/database.php');
-
-	gexport_create_table();
-	gexport_create_table_tasks();
-
-	return true;
-}
-
-/**
- * The graph_exports table definition (each configured export job's
- * settings and last-run status), shared by the create path
- * (api_plugin_db_table_create()) and the upgrade path (db_update_table())
- * so both stay in sync from a single source.
- *
- * @return array<string, mixed> The table definition array.
- */
-function gexport_graph_exports_table_data(): array {
-	$data               = [];
-	$data['columns'][]  = ['name' => 'id', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => false, 'auto_increment' => true];
-	$data['columns'][]  = ['name' => 'name', 'type' => 'varchar(64)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_type', 'type' => 'varchar(12)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'enabled', 'type' => 'char(3)', 'NULL' => true, 'default' => 'on'];
-	$data['columns'][]  = ['name' => 'export_presentation', 'type' => 'varchar(20)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_effective_user', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'export_expand_hosts', 'type' => 'char(3)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_theme', 'type' => 'varchar(20)', 'NULL' => true, 'default' => 'modern'];
-	$data['columns'][]  = ['name' => 'graph_tree', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'graph_site', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'graph_height', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '100'];
-	$data['columns'][]  = ['name' => 'graph_width', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '300'];
-	$data['columns'][]  = ['name' => 'graph_thumbnails', 'type' => 'char(3)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'graph_columns', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '2'];
-	$data['columns'][]  = ['name' => 'graph_perpage', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '50'];
-	$data['columns'][]  = ['name' => 'graph_max', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '2000'];
-	$data['columns'][]  = ['name' => 'export_clear', 'type' => 'char(3)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_thumbs', 'type' => 'char(3)', 'NULL' => true, 'default' => 'on'];
-	$data['columns'][]  = ['name' => 'export_args', 'type' => 'char(25)', 'NULL' => true, 'default' => '-zav'];
-	$data['columns'][]  = ['name' => 'export_directory', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_temp_directory', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_timing', 'type' => 'varchar(20)', 'NULL' => true, 'default' => 'disabled'];
-	$data['columns'][]  = ['name' => 'export_skip', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'export_hourly', 'type' => 'varchar(20)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_daily', 'type' => 'varchar(20)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_threads', 'type' => 'int(10)', 'NULL' => true, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'export_sanitize_remote', 'type' => 'char(3)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_host', 'type' => 'varchar(64)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_port', 'type' => 'varchar(5)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_passive', 'type' => 'char(3)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_user', 'type' => 'varchar(40)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_password', 'type' => 'varchar(64)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'export_private_key_path', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'status', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'export_pid', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => true, 'default' => null];
-	$data['columns'][]  = ['name' => 'next_start', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
-	$data['columns'][]  = ['name' => 'last_checked', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
-	$data['columns'][]  = ['name' => 'last_started', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
-	$data['columns'][]  = ['name' => 'last_ended', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
-	$data['columns'][]  = ['name' => 'last_errored', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
-	$data['columns'][]  = ['name' => 'last_runtime', 'type' => 'double', 'NULL' => false, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'last_error', 'type' => 'varchar(255)', 'NULL' => true, 'default' => null];
-	$data['columns'][]  = ['name' => 'total_graphs', 'type' => 'double', 'NULL' => true, 'default' => '0'];
-	$data['primary']    = ['id'];
-	$data['type']       = 'InnoDB';
-	$data['comment']    = 'Stores Graph Export Settings for Cacti';
-
-	return $data;
-}
-
-/**
- * Creates the graph_exports table (holding each configured export job's
- * settings and last-run status) via the tracked plugin table API. Called
- * from gexport_setup_table() during installation.
- *
- * @return bool Always returns true.
- */
-function gexport_create_table() {
-	api_plugin_db_table_create('gexport', 'graph_exports', gexport_graph_exports_table_data());
-
-	return true;
-}
-
-/**
- * The graph_exports_tasks table definition (per-graph worker tasks for an
- * in-progress export job), shared by the create path
- * (api_plugin_db_table_create()) and the upgrade path (db_update_table())
- * so both stay in sync from a single source.
- *
- * @return array<string, mixed> The table definition array.
- */
-function gexport_graph_exports_tasks_table_data(): array {
-	$data               = [];
-	$data['columns'][]  = ['name' => 'id', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => false, 'auto_increment' => true];
-	$data['columns'][]  = ['name' => 'local_graph_id', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'export_id', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'pid', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'user', 'type' => 'int(10)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'folder', 'type' => 'varchar(255)', 'NULL' => true, 'default' => ''];
-	$data['columns'][]  = ['name' => 'status', 'type' => 'int(1)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['columns'][]  = ['name' => 'start_time', 'type' => 'int(1)', 'unsigned' => true, 'NULL' => false, 'default' => '0'];
-	$data['primary']    = ['id'];
-	$data['keys'][]     = ['name' => 'status', 'columns' => ['status']];
-	$data['keys'][]     = ['name' => 'pid', 'columns' => ['pid']];
-	$data['keys'][]     = ['name' => 'start_time', 'columns' => ['start_time']];
-	$data['type']       = 'InnoDB';
-	$data['comment']    = 'Stores Graph Export Tasks for Cacti';
-
-	return $data;
-}
-
-/**
- * Creates the graph_exports_tasks table (holding per-graph worker tasks
- * for an in-progress export job) via the tracked plugin table API. Called
- * from gexport_setup_table() during installation and gexport_check_upgrade()
- * when upgrading from a version that predates this table.
- *
- * @return bool Always returns true.
- */
-function gexport_create_table_tasks() {
-	api_plugin_db_table_create('gexport', 'graph_exports_tasks', gexport_graph_exports_tasks_table_data());
-
 	return true;
 }
 

@@ -16,6 +16,7 @@
 
 beforeAll(function () {
 	require_once __DIR__ . '/../../setup.php';
+	require_once __DIR__ . '/../../includes/database.php';
 
 	$stubLibraryPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'gexport-test-lib-stub';
 

@@ -190,7 +190,9 @@ existing code or adding new code, not just in dedicated cleanup passes:
   final argument, except when deliberately comparing against a literal, untranslated Cacti-core
   label.
 - **Plugin schema management.** Own every plugin-created table through Cacti core's schema API in
-  `lib/plugins.php`; never use raw `CREATE TABLE`/`ALTER TABLE` for a plugin-owned table.
+  `lib/plugins.php`; never use raw `CREATE TABLE`/`ALTER TABLE` for a plugin-owned table. Keep all of
+  these schema functions in the plugin's `includes/database.php`, included from `setup.php`'s
+  install/upgrade paths (the thold model).
   - Define each table once in a `*_table_data()` helper that returns the Cacti table-definition
     array (`columns`/`primary`/`keys`/`type`/`comment`). Both the install and upgrade paths consume
     that single definition so they can never drift.
