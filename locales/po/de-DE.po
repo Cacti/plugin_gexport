@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 09:23-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-06-07 23:11-0400\n"
 "Last-Translator: Mark Brugnoli-Vinten <netniv@cacti.net>\n"
 "Language-Team: German <http://translate.cacti.net/projects/cacti/gexport/de-DE/>\n"
@@ -18,856 +18,853 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: functions.php:418
+#: functions.php
 msgid "Success"
 msgstr "Erfolgreich"
 
-#: functions.php:419
+#: functions.php
 msgid "Syntax or usage error"
 msgstr "Syntax- oder Bedienungsfehler"
 
-#: functions.php:420
+#: functions.php
 msgid "Protocol incompatibility"
 msgstr "Protokollinkompatibilität"
 
-#: functions.php:421
+#: functions.php
 msgid "Errors selecting input/output files, dirs"
 msgstr "Fehler bei der Auswahl von Ein-/Ausgabedateien, Verzeichnissen und Verzeichnissen"
 
-#: functions.php:422
+#: functions.php
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr "Angeforderte Aktion nicht unterstützt: Es wurde versucht, 64-Bit-Dateien auf einer Plattform zu manipulieren, die sie nicht unterstützt; oder es wurde eine Option angegeben, die vom Client und nicht vom Server unterstützt wird."
 
-#: functions.php:423
+#: functions.php
 msgid "Error starting client-server protocol"
 msgstr "Fehler beim Starten des Client-Server-Protokolls"
 
-#: functions.php:424
+#: functions.php
 msgid "Daemon unable to append to log-file"
 msgstr "Daemon kann nicht an die Protokolldatei angehängt werden"
 
-#: functions.php:425
+#: functions.php
 msgid "Error in socket I/O"
 msgstr "Fehler in Socket I/O"
 
-#: functions.php:426
+#: functions.php
 msgid "Error in file I/O"
 msgstr "Fehler in der Datei I/O"
 
-#: functions.php:427
+#: functions.php
 msgid "Error in rsync protocol data stream"
 msgstr "Fehler im Datenstrom des rsync-Protokolls"
 
-#: functions.php:428
+#: functions.php
 msgid "Errors with program diagnostics"
 msgstr "Fehler bei der Programmdiagnose"
 
-#: functions.php:429
+#: functions.php
 msgid "Error in IPC code"
 msgstr "Fehler im IPC-Code"
 
-#: functions.php:430
+#: functions.php
 msgid "Received SIGUSR1 or SIGINT"
 msgstr "Empfangener SIGUSR1 oder SIGINT"
 
-#: functions.php:431
+#: functions.php
 msgid "Some error returned by waitpid()"
 msgstr "Ein Fehler, der von waitpid() zurückgegeben wurde"
 
-#: functions.php:432
+#: functions.php
 msgid "Error allocating core memory buffers"
 msgstr "Fehler beim Zuweisen von Kernspeicherpuffern"
 
-#: functions.php:433
+#: functions.php
 msgid "Partial transfer due to error"
 msgstr "Teiltransfer aufgrund von Fehlern"
 
-#: functions.php:434
+#: functions.php
 msgid "Partial transfer due to vanished source files"
 msgstr "Partielle Übertragung aufgrund von verschwundenen Quelldateien"
 
-#: functions.php:435
+#: functions.php
 msgid "The --max-delete limit stopped deletions"
 msgstr "Das --max-Löschlimit stoppte die Löschvorgänge"
 
-#: functions.php:436
+#: functions.php
 msgid "Timeout in data send/receive"
 msgstr "Zeitüberschreitung beim Senden/Empfangen von Daten"
 
-#: functions.php:437
+#: functions.php
 msgid "Timeout waiting for daemon connection"
 msgstr "Timeout wartet auf Daemon-Verbindung"
 
-#: functions.php:439 functions.php:542
+#: functions.php
 msgid "Unknown error "
 msgstr "Unbekannter Fehler"
 
-#: functions.php:515
+#: functions.php
 msgid "Operation was successful"
 msgstr "Der Betrieb war erfolgreich"
 
-#: functions.php:516
+#: functions.php
 msgid "General error in file copy"
 msgstr "Allgemeiner Fehler bei der Dateikopie"
 
-#: functions.php:517
+#: functions.php
 msgid "Destination is not directory, but it should be"
 msgstr "Ziel ist nicht Verzeichnis, aber es sollte sein"
 
-#: functions.php:518
+#: functions.php
 msgid "Maximum symlink level exceeded"
 msgstr "Maximaler Symlink-Level überschritten"
 
-#: functions.php:519
+#: functions.php
 msgid "Connecting to host failed."
 msgstr "Die Verbindung zum Host ist fehlgeschlagen."
 
-#: functions.php:520
+#: functions.php
 msgid "Connection broken"
 msgstr "Verbindung unterbrochen"
 
-#: functions.php:521
+#: functions.php
 msgid "File does not exist"
 msgstr "Datei existiert nicht"
 
-#: functions.php:522
+#: functions.php
 msgid "No permission to access file."
 msgstr "Keine Berechtigung zum Zugriff auf die Datei."
 
-#: functions.php:523
+#: functions.php
 msgid "General error in sftp protocol"
 msgstr "Allgemeiner Fehler im sftp-Protokoll"
 
-#: functions.php:524
+#: functions.php
 msgid "File transfer protocol mismatch"
 msgstr "Fehlanpassung des Dateiübertragungsprotokolls"
 
-#: functions.php:525
+#: functions.php
 msgid "No file matches a given criteria"
 msgstr "Keine Datei entspricht einem bestimmten Kriterium"
 
-#: functions.php:526
+#: functions.php
 msgid "Host not allowed to connect"
 msgstr "Host darf sich nicht verbinden"
 
-#: functions.php:527
+#: functions.php
 msgid "General error in ssh protocol"
 msgstr "Allgemeiner Fehler im ssh-Protokoll"
 
-#: functions.php:528
+#: functions.php
 msgid "Key exchange failed"
 msgstr "Schlüsselaustausch fehlgeschlagen"
 
-#: functions.php:529
+#: functions.php
 msgid "Reserved"
 msgstr "Reserviert"
 
-#: functions.php:530
+#: functions.php
 msgid "MAC error"
 msgstr "MAC-Fehler"
 
-#: functions.php:531
+#: functions.php
 msgid "Compression error"
 msgstr "Komprimierungsfehler"
 
-#: functions.php:532
+#: functions.php
 msgid "Service not available"
 msgstr "Service nicht verfügbar"
 
-#: functions.php:533
+#: functions.php
 msgid "Protocol version not supported"
 msgstr "Protokollversion wird nicht unterstützt"
 
-#: functions.php:534
+#: functions.php
 msgid "Host key not verifiable"
 msgstr "Hostschlüssel nicht verifizierbar"
 
-#: functions.php:535
+#: functions.php
 msgid "Connection failed"
 msgstr "Verbindung gescheitert"
 
-#: functions.php:536
+#: functions.php
 msgid "Disconnected by application"
 msgstr "Von der Anwendung getrennt"
 
-#: functions.php:537
+#: functions.php
 msgid "Too many connections"
 msgstr "Zu viele Verbindungen"
 
-#: functions.php:538
+#: functions.php
 msgid "Authentication cancelled by user"
 msgstr "Vom Benutzer abgebrochene Authentifizierung"
 
-#: functions.php:539
+#: functions.php
 msgid "No more authentication methods available"
 msgstr "Keine weiteren Authentifizierungsmethoden verfügbar"
 
-#: functions.php:540
+#: functions.php
 msgid "Invalid user name"
 msgstr "Ungültiger Benutzername"
 
-#: functions.php:2147 functions.php:2339
+#: functions.php
 msgid "Non Query Based"
 msgstr "Nicht abfragebasiert"
 
-#: functions.php:2426
+#: functions.php
 msgid "Graph Templates"
 msgstr "Graph-Templates"
 
-#: functions.php:2455
+#: functions.php
 msgid "Data Queries"
 msgstr "Datenabfragen"
 
-#: gexport.php:31
+#: gexport.php
 msgid "Delete"
 msgstr "Löschen"
 
-#: gexport.php:32
+#: gexport.php
 msgid "Enable"
 msgstr "Aktivieren"
 
-#: gexport.php:33
+#: gexport.php
 msgid "Disable"
 msgstr "Deaktivieren"
 
-#: gexport.php:34
+#: gexport.php
 msgid "Export Now"
 msgstr "Exportieren"
 
-#: gexport.php:38 setup.php:521
+#: gexport.php setup.php
 msgid "Periodic"
 msgstr "Zeitraum"
 
-#: gexport.php:39 setup.php:523
+#: gexport.php setup.php
 msgid "Daily"
 msgstr "Täglich"
 
-#: gexport.php:40 setup.php:522
+#: gexport.php setup.php
 msgid "Hourly"
 msgstr "Stündlich"
 
-#: gexport.php:310
+#: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Klicken Sie auf \"Weiter\", um die folgende Definition des Grafikexports zu löschen."
 msgstr[1] "Klicken Sie auf \"Weiter\", um die folgenden Graphen-Export-Definitionen zu löschen."
 
-#: gexport.php:315 gexport.php:325 gexport.php:335 gexport.php:345
+#: gexport.php
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: gexport.php:316 gexport.php:326 gexport.php:336 gexport.php:346
+#: gexport.php
 msgid "Continue"
 msgstr "Fortsetzen"
 
-#: gexport.php:316
+#: gexport.php
 #, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
 msgstr "Definitionen für den Grafikexport"
 
-#: gexport.php:320
+#: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Klicken Sie auf \"Weiter\", um die folgende Definition des Grafikexports zu deaktivieren."
 msgstr[1] "Klicken Sie auf \"Weiter\", um die folgenden Definitionen für den Grafikexport zu deaktivieren."
 
-#: gexport.php:326
+#: gexport.php
 msgid "Disable Graph Export Definition(s)"
 msgstr "Definitionen für den Grafikexport"
 
-#: gexport.php:330
+#: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "Klicken Sie auf \"Fortfahren\", um die folgende Definition des Grafikexports zu aktivieren."
 msgstr[1] "Klicken Sie auf \"Weiter\", um folgende Definitionen für den Grafikexport zu aktivieren."
 
-#: gexport.php:336
+#: gexport.php
 msgid "Enable Graph Export Definition(s)"
 msgstr "Definitionen für den Grafikexport"
 
-#: gexport.php:340
+#: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Klicken Sie auf \"Fortfahren\", um die folgende Definition für den Grafikexport auszuführen."
 msgstr[1] "Klicken Sie auf'Fortfahren', um nun die folgenden Graphen-Export-Definitionen auszuführen."
 
-#: gexport.php:346
+#: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "Definitionen für den Grafikexport"
 
-#: gexport.php:348
+#: gexport.php
 #, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
 msgstr "Sie müssen mindestens eine Grafik-Exportdefinition auswählen."
 
-#: gexport.php:349 gexport.php:353
+#: gexport.php
 msgid "Return"
 msgstr "Zurück"
 
-#: gexport.php:352
+#: gexport.php
 msgid "You must select at least one Graph Export Definition."
 msgstr "Sie müssen mindestens eine Grafik-Exportdefinition auswählen."
 
-#: gexport.php:460 gexport.php:465
+#: gexport.php
 msgid "Graph Export Definition [new]"
 msgstr "Definition des Grafikexports[neu]]."
 
-#: gexport.php:462
+#: gexport.php
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "Definition des Grafikexports [Bearbeiten: %s]"
 
-#: gexport.php:491
+#: gexport.php
 msgid "Select Tree(s)"
 msgstr "Baum(e) auswählen"
 
-#: gexport.php:493
+#: gexport.php
 msgid "Trees Selected"
 msgstr "Ausgewählte Bäume"
 
-#: gexport.php:496
+#: gexport.php
 msgid "All Trees Selected"
 msgstr "Alle Bäume ausgewählt"
 
-#: gexport.php:502 gexport.php:548
+#: gexport.php
 msgid "All"
 msgstr "Alle"
 
-#: gexport.php:503 gexport.php:549
+#: gexport.php
 msgid "None"
 msgstr "Nichts"
 
-#: gexport.php:533 gexport.php:579 gexport.php:691
+#: gexport.php
 msgid "Search"
 msgstr "Suche"
 
-#: gexport.php:537
+#: gexport.php
 msgid "Select Site(s)"
 msgstr "Standort(e) auswählen"
 
-#: gexport.php:539
+#: gexport.php
 msgid "Sites Selected"
 msgstr "Ausgewählte Standorte"
 
-#: gexport.php:542
+#: gexport.php
 msgid "All Sites Selected"
 msgstr "Alle Standorte ausgewählt"
 
-#: gexport.php:683
+#: gexport.php
 msgid "Graph Export Definitions"
 msgstr "Definitionen für den Grafikexport"
 
-#: gexport.php:697
+#: gexport.php
 msgid "Exports"
 msgstr "Exporte"
 
-#: gexport.php:701
+#: gexport.php
 msgid "Default"
 msgstr "Voreinstellung"
 
-#: gexport.php:716
+#: gexport.php
 msgid "Refresh"
 msgstr "Aktualisieren"
 
-#: gexport.php:722 gexport.php:1065 gexport.php:1070 gexport.php:1071
+#: gexport.php
 msgid "Never"
 msgstr "Niemals"
 
-#: gexport.php:723 gexport.php:724 gexport.php:725 gexport.php:726
+#: gexport.php
 #, php-format
 msgid "%d Seconds"
 msgstr "%d Sekunden"
 
-#: gexport.php:727
+#: gexport.php
 #, php-format
 msgid "%d Minute"
 msgstr "%d Minute"
 
-#: gexport.php:728 gexport.php:729
+#: gexport.php
 #, php-format
 msgid "%d Minutes"
 msgstr "%d Minuten"
 
-#: gexport.php:739
+#: gexport.php
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Anwenden"
 
-#: gexport.php:740
+#: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "Zurücksetzen"
 
-#: gexport.php:901 setup.php:448
+#: gexport.php setup.php
 msgid "Export Name"
 msgstr "Export Name"
 
-#: gexport.php:904 setup.php:449
+#: gexport.php setup.php
 msgid "The name of this Graph Export Definition."
 msgstr "Der Name dieser Grafik-Export-Definition."
 
-#: gexport.php:907
+#: gexport.php
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:910
+#: gexport.php
 msgid "The internal ID of the Graph Export Definition."
 msgstr "Die interne ID der Graph Export Definition."
 
-#: gexport.php:913
+#: gexport.php
 msgid "Schedule"
 msgstr "Zeitplan"
 
-#: gexport.php:916
+#: gexport.php
 msgid "The frequency that Graphs will be exported."
 msgstr "Die Häufigkeit, mit der Grafiken exportiert werden."
 
-#: gexport.php:919
+#: gexport.php
 msgid "Next Start"
 msgstr "Nächste Startzeit:"
 
-#: gexport.php:922
+#: gexport.php
 msgid "The next time the Graph Export should run."
 msgstr "Beim nächsten Mal sollte der Grafikexport ausgeführt werden."
 
-#: gexport.php:925 setup.php:457
+#: gexport.php setup.php
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: gexport.php:927
+#: gexport.php
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "Wenn diese Option aktiviert ist, wird diese Definition des Grafikexports bei Bedarf ausgeführt."
 
-#: gexport.php:930
+#: gexport.php
 msgid "Status"
 msgstr "Status"
 
-#: gexport.php:932
+#: gexport.php
 msgid "The current Graph Export Status."
 msgstr "Der aktuelle Status des Grafikexports."
 
-#: gexport.php:935
+#: gexport.php
 msgid "Exporting (Sites/Trees)"
 msgstr "Exportieren (Standorte/Bäume)"
 
-#: gexport.php:938
+#: gexport.php
 msgid "What is being Exported."
 msgstr "Was exportiert wird."
 
-#: gexport.php:941 setup.php:581
+#: gexport.php setup.php
 msgid "Effective User"
 msgstr "Effektiver Benutzer"
 
-#: gexport.php:944
+#: gexport.php
 msgid "The user that this export will impersonate."
 msgstr "Der Benutzer, den dieser Export ausgibt."
 
-#: gexport.php:947
+#: gexport.php
 msgid "Last Runtime"
 msgstr "Letzter Durchlauf"
 
-#: gexport.php:950
+#: gexport.php
 msgid "The last runtime for the Graph Export."
 msgstr "Die letzte Laufzeit für den Graphen-Export."
 
-#: gexport.php:953
+#: gexport.php
 msgid "Graphs"
 msgstr "Diagramme"
 
-#: gexport.php:956
+#: gexport.php
 msgid "The number of Graphs Exported on the last run."
 msgstr "Die Anzahl der Graphen, die beim letzten Lauf exportiert wurden."
 
-#: gexport.php:959
+#: gexport.php
 msgid "Last Started"
 msgstr "Letzter Start"
 
-#: gexport.php:962
+#: gexport.php
 msgid "The last time that this Graph Export was started."
 msgstr "Das letzte Mal, als dieser Grafikexport gestartet wurde."
 
-#: gexport.php:965
+#: gexport.php
 msgid "Last Errored"
 msgstr "Letzter Fehler"
 
-#: gexport.php:968
+#: gexport.php
 msgid "The last time that this Graph Export experienced an error."
 msgstr "Beim letzten Mal, als dieser Grafikexport einen Fehler aufwies."
 
-#: gexport.php:972
+#: gexport.php
 msgid "Export Definitions"
 msgstr "Exportkonfigurationen"
 
-#: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:586
+#: gexport.php setup.php
 msgid "N/A"
 msgstr "Nicht verfügbar"
 
-#: gexport.php:1014
+#: gexport.php
 msgid "No"
 msgstr "Nein"
 
-#: gexport.php:1014
+#: gexport.php
 msgid "Yes"
 msgstr "Ja"
 
-#: gexport.php:1018
+#: gexport.php
 msgid "Idle"
 msgstr "Leerlauf"
 
-#: gexport.php:1022
+#: gexport.php
 msgid "Running"
 msgstr "Läuft"
 
-#: gexport.php:1026
+#: gexport.php
 msgid "Error"
 msgstr "Fehler"
 
-#: gexport.php:1033
+#: gexport.php
 msgid "All Sites"
 msgstr "Alle Websites"
 
-#: gexport.php:1044
+#: gexport.php
 msgid "All Trees"
 msgstr "Alle Bäume"
 
-#: gexport.php:1058
+#: gexport.php
 msgid "Sec"
 msgstr "Sek"
 
-#: gexport.php:1078
+#: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Keine Definitionen für den Grafik-Export"
 
-#: setup.php:56
+#: setup.php
 msgid "Export Cacti Graphs Settings"
 msgstr "Einstellungen der Kakteengrafiken exportieren"
 
-#: setup.php:432
+#: setup.php
 msgid "Graph Exports"
 msgstr "Grafik-Exporte"
 
-#: setup.php:432
+#: setup.php
 msgid "Utilities"
 msgstr "Werkzeuge"
 
-#: setup.php:435
+#: setup.php
 msgid "General Administration"
 msgstr "Allgemeine Administration"
 
-#: setup.php:443
+#: setup.php
 msgid "General"
 msgstr "Allgemein"
 
-#: setup.php:458
+#: setup.php
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "Aktivieren Sie dieses Kontrollkästchen, wenn Sie möchten, dass diese Grafik-Exportdefinition aktiviert wird."
 
-#: setup.php:464
+#: setup.php
 msgid "Export Method"
 msgstr "Export-Methode"
 
-#: setup.php:465
+#: setup.php
 msgid "Choose which export method to use."
 msgstr "Wählen Sie die zu verwendende Exportmethode."
 
-#: setup.php:470
+#: setup.php
 msgid "Local"
 msgstr "Lokal"
 
-#: setup.php:471
+#: setup.php
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:472
+#: setup.php
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:473
+#: setup.php
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:474
+#: setup.php
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:475
+#: setup.php
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:479
+#: setup.php
 msgid "Export Command Arguments"
 msgstr "Exportbefehlsargumente"
 
-#: setup.php:480
+#: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "Argumente für die Verwendung mit nicht-lokalen Exportmethoden. rsync sollte Folgendes verwenden"
 
-#: setup.php:492
+#: setup.php
 msgid "Theme"
 msgstr "Theme"
 
-#: setup.php:493
+#: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "Bitte wählen Sie eines der verfügbaren Designs aus, mit dem Sie Ihre Kakteengrafiken exportieren können."
 
-#: setup.php:500
+#: setup.php
 msgid "Presentation Method"
 msgstr "Präsentationsmethode"
 
-#: setup.php:501
+#: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "Wählen Sie, welche Präsentation Sie für die von HTML generierten Seiten wünschen. Wenn Sie sich für eine klassische Präsentation entscheiden, werden die Grafiken auf einer einzigen html-Seite angezeigt. Wenn Sie die Baumdarstellung wählen, wird die Graph Tree Architektur in den statischen HTML-Seiten beibehalten."
 
-#: setup.php:506 setup.php:609
+#: setup.php
 msgid "Site"
 msgstr "Standort"
 
-#: setup.php:507 setup.php:590
+#: setup.php
 msgid "Tree"
 msgstr "Baum"
 
-#: setup.php:511
+#: setup.php
 msgid "Export Timing"
 msgstr "Export-Timing"
 
-#: setup.php:515
+#: setup.php
 msgid "Timing Method"
 msgstr "Timing-Methode"
 
-#: setup.php:516
+#: setup.php
 msgid "Choose when to Export Graphs."
 msgstr "Wählen Sie, wann Grafiken exportiert werden sollen."
 
-#: setup.php:527
+#: setup.php
 msgid "Periodic Export Cycle"
 msgstr "Periodischer Exportzyklus"
 
-#: setup.php:528
+#: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "Wie oft möchten Sie, dass Cacti Grafiken exportiert?  Dies ist die Einheit der Abfragezyklen, die Sie exportieren möchten."
 
-#: setup.php:532
+#: setup.php
 msgid "Every Polling Cycle"
 msgstr "Jeder Abrufzyklus"
 
-#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
-#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
-#: setup.php:543
+#: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "Alle %d Abfragezyklen"
 
-#: setup.php:547
+#: setup.php
 msgid "Hourly at specified minutes"
 msgstr "Stündlich zu bestimmten Minuten"
 
-#: setup.php:548
+#: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Wenn Sie möchten, dass Cacti statische Bilder stündlich exportiert, geben Sie die Minuten der Stunde an, wann Sie das tun sollen. Cacti geht davon aus, dass Sie das Skript zur Datenerfassung alle 5 Minuten ausführen, so dass es Ihren Wert auf den Wert rundet, der der Laufzeit am nächsten liegt. Zum Beispiel würde 43 40 Minuten nach der Stunde entsprechen."
 
-#: setup.php:557
+#: setup.php
 msgid "Daily at specified time"
 msgstr "Täglich zu einer bestimmten Zeit"
 
-#: setup.php:558
+#: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Wenn Sie möchten, dass Cacti täglich statische Bilder exportiert, geben Sie hier die Zeit an, wann dies zu tun ist. Cacti geht davon aus, dass Sie das Skript zur Datenerfassung alle 5 Minuten ausführen, so dass es Ihren Wert auf den Wert rundet, der der Laufzeit am nächsten liegt. Zum Beispiel würde 21:23 20 Minuten nach 21 Uhr entsprechen."
 
-#: setup.php:567
+#: setup.php
 msgid "Use x Threads"
 msgstr "Verwenden Sie x Gewinde"
 
-#: setup.php:568
+#: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "Wie viele Hintergrund-Threads soll Cacti beim Export von Grafiken verwenden?  Standard ist 0, um den gesamten Export im Poller-Thread auszuführen, 1 oder mehr, um separate Hintergrundthreads zu erzeugen"
 
-#: setup.php:576
+#: setup.php
 msgid "Graph Selection & Settings"
 msgstr "Grafikauswahl & Einstellungen"
 
-#: setup.php:582
+#: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "Der Benutzername, der für die Einrichtung von Berechtigungen für Cacti Graphs verwendet werden soll.  Dieser Benutzername wird verwendet, um festzulegen, welche Grafiken/Bäume exportiert werden können.  N/A bedeutet, dass nicht davon ausgegangen werden darf, dass eine Sicherheit vorhanden ist."
 
-#: setup.php:591
+#: setup.php
 msgid "The Tree(s) to export."
 msgstr "Die zu exportierenden Tree(s)."
 
-#: setup.php:598
+#: setup.php
 msgid "Expand Devices/Sites"
 msgstr "Erweitern Sie Geräte/Seiten"
 
-#: setup.php:599
+#: setup.php
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "Diese Einstellung legt fest, ob Baumgeräte und Standortvorlagen und Geräte erweitert werden sollen oder nicht.  Wenn auf Erweitert gesetzt, hat jeder Host einen Unterordner, der entweder Grafikvorlagen oder Datenabfrageelemente enthält."
 
-#: setup.php:604
+#: setup.php
 msgid "Off"
 msgstr "Aus"
 
-#: setup.php:605
+#: setup.php
 msgid "On"
 msgstr "An"
 
-#: setup.php:610
+#: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "Die Seite für Kakteengrafiken, von der exportiert werden soll."
 
-#: setup.php:617
+#: setup.php
 msgid "Graph Thumbnail Width"
 msgstr "Breite der Diagramm-Miniaturansicht"
 
-#: setup.php:618
+#: setup.php
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "Die Standardbreite der Miniaturansichtsgrafiken in Pixeln."
 
-#: setup.php:626
+#: setup.php
 msgid "Graph Thumbnail Height"
 msgstr "Höhe der Diagramm-Miniaturansicht"
 
-#: setup.php:627
+#: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "Die Höhe der Miniaturansichtsgrafiken in Pixeln."
 
-#: setup.php:635
+#: setup.php
 msgid "Default View Thumbnails"
 msgstr "Standard-Ansicht Miniaturansichten"
 
-#: setup.php:636
+#: setup.php
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "Aktivieren Sie dies, wenn Sie möchten, dass sich die Standard-Grafikansicht im Miniaturansichtsmodus befindet."
 
-#: setup.php:641
+#: setup.php
 msgid "Default Graph Columns"
 msgstr "Standard-Grafikspalten"
 
-#: setup.php:642
+#: setup.php
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "Die Anzahl der Spalten, die standardmäßig bei der Anzeige von Grafiken verwendet werden."
 
-#: setup.php:650
+#: setup.php
 msgid "Graphs Per Page"
 msgstr "Diagramme pro Seite"
 
-#: setup.php:651
+#: setup.php
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "Wählen Sie die Anzahl der Grafiken pro Seite, die angezeigt werden sollen."
 
-#: setup.php:658
+#: setup.php
 msgid "Maximum Graphs to Export"
 msgstr "Maximale zu exportierende Grafiken"
 
-#: setup.php:659
+#: setup.php
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "Nachdem diese Zahl erreicht ist, wird ein Fehler erzeugt, aber der Export wird fortgesetzt.  Wird für No Limit auf 0 gesetzt."
 
-#: setup.php:667
+#: setup.php
 msgid "Export Location Information"
 msgstr "Standortinformationen exportieren"
 
-#: setup.php:672
+#: setup.php
 msgid "Export Thumbnails"
 msgstr "Export-Timing"
 
-#: setup.php:673
+#: setup.php
 msgid "Check this if you want the export thumbnails mode."
 msgstr "Aktivieren Sie dies, wenn Sie möchten, dass sich die Standard-Grafikansicht im Miniaturansichtsmodus befindet."
 
-#: setup.php:678
+#: setup.php
 msgid "Clear Directory"
 msgstr "Exportverzeichnis"
 
-#: setup.php:679
+#: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "Aktivieren Sie dieses Kontrollkästchen, wenn Sie möchten, dass diese Grafik-Exportdefinition aktiviert wird."
 
-#: setup.php:684
+#: setup.php
 msgid "Export Directory"
 msgstr "Exportverzeichnis"
 
-#: setup.php:685
+#: setup.php
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "Dies ist das Verzeichnis, entweder auf dem lokalen System oder auf dem entfernten System, das die exportierten Daten enthält."
 
-#: setup.php:691
+#: setup.php
 msgid "Local Scratch Directory"
 msgstr "Lokales Scratch-Verzeichnis"
 
-#: setup.php:692
+#: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "Dies ist das Verzeichnis, das Cacti zwischenspeichert, bevor es über die Übertragungsmethode an den entfernten Standort sendet.  Der Inhalt dieses Verzeichnisses wird nach der Übertragung der Daten gelöscht."
 
-#: setup.php:699
+#: setup.php
 msgid "Remote Options"
 msgstr "Remote Eigenschaften"
 
-#: setup.php:704
+#: setup.php
 msgid "Sanitize remote directory"
 msgstr "Remote-Verzeichnis desinfizieren"
 
-#: setup.php:705
+#: setup.php
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "Aktivieren Sie dies, wenn Sie vorhandene Dateien im FTP-Remote-Verzeichnis löschen möchten. Diese Option wird nur verwendet, wenn Sie die in PHP integrierten FTP-Funktionen verwenden."
 
-#: setup.php:710
+#: setup.php
 msgid "Remote Host"
 msgstr "遠端 Host"
 
-#: setup.php:711
+#: setup.php
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "Gibt den Host an, an den exportierte Grafiken gesendet werden sollen."
 
-#: setup.php:718
+#: setup.php
 msgid "Remote Port"
 msgstr "Fernanschluss"
 
-#: setup.php:719
+#: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "Kommunikationsport, der für die Exportmethode verwendet werden soll, wenn er nicht dem Standard entspricht (für Standardeinstellungen leer lassen)."
 
-#: setup.php:727
+#: setup.php
 msgid "Use passive mode"
 msgstr "Passivmodus verwenden"
 
-#: setup.php:728
+#: setup.php
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "Aktivieren Sie dies, wenn Sie sich im passiven Modus mit dem FTP-Server verbinden möchten."
 
-#: setup.php:733
+#: setup.php
 msgid "User"
 msgstr "Benutzer"
 
-#: setup.php:734
+#: setup.php
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "Konto, um sich am Remote-Server anzumelden (für Standardeinstellungen leer lassen)."
 
-#: setup.php:741
+#: setup.php
 msgid "Password"
 msgstr "Kennwort"
 
-#: setup.php:742
+#: setup.php
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "Passwort für das Remote-FTP-Konto (leer lassen)."
 
-#: setup.php:749
+#: setup.php
 msgid "Private Key Path"
 msgstr "Privater Schlüsselpfad"
 
-#: setup.php:750
+#: setup.php
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "Geben Sie bei SCP und RSYNC bei Bedarf den Pfad zum privaten Schlüssel ein."
 
-#: setup.php:773
+#: setup.php
 msgid "Exported Cacti Graph Pages"
 msgstr "Exportierte Kakteen-Diagrammseiten"
 
-#: setup.php:779
+#: setup.php
 msgid "(Edit)"
 msgstr "(Verändern)"
 
-#: setup.php:785
+#: setup.php
 msgid "Actions"
 msgstr "Aktionen"
