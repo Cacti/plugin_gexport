@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 09:23-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-11-21 22:59+0000\n"
 "Last-Translator: Nakayama Kito <nakayamakito@icloud.com>\n"
 "Language-Team: Japanese <http://translate.cacti.net/projects/cacti/gexport/ja/>\n"
@@ -18,852 +18,849 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.8.1\n"
 
-#: functions.php:418
+#: functions.php
 msgid "Success"
 msgstr "成功"
 
-#: functions.php:419
+#: functions.php
 msgid "Syntax or usage error"
 msgstr "構文エラーまたは使用方法エラー"
 
-#: functions.php:420
+#: functions.php
 msgid "Protocol incompatibility"
 msgstr "プロトコルの非互換性"
 
-#: functions.php:421
+#: functions.php
 msgid "Errors selecting input/output files, dirs"
 msgstr "入出力ファイルの選択エラー、ディレクトリ"
 
-#: functions.php:422
+#: functions.php
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
 msgstr "要求されたアクションはサポートされていません：サポートできないプラットフォームで64ビットファイルを操作しようとしました。または、サーバーではなくクライアントによってサポートされているオプションが指定されました。"
 
-#: functions.php:423
+#: functions.php
 msgid "Error starting client-server protocol"
 msgstr "クライアント/サーバープロトコルの起動エラー"
 
-#: functions.php:424
+#: functions.php
 msgid "Daemon unable to append to log-file"
 msgstr "デーモンはログファイルに追加できません"
 
-#: functions.php:425
+#: functions.php
 msgid "Error in socket I/O"
 msgstr "ソケット入出力エラー"
 
-#: functions.php:426
+#: functions.php
 msgid "Error in file I/O"
 msgstr "ファイル入出力エラー"
 
-#: functions.php:427
+#: functions.php
 msgid "Error in rsync protocol data stream"
 msgstr "rsyncプロトコルデータストリームのエラー"
 
-#: functions.php:428
+#: functions.php
 msgid "Errors with program diagnostics"
 msgstr "プログラム診断のエラー"
 
-#: functions.php:429
+#: functions.php
 msgid "Error in IPC code"
 msgstr "IPCコードのエラー"
 
-#: functions.php:430
+#: functions.php
 msgid "Received SIGUSR1 or SIGINT"
 msgstr "SIGUSR1またはSIGINTを受け取りました"
 
-#: functions.php:431
+#: functions.php
 msgid "Some error returned by waitpid()"
 msgstr "waitpid（）から返されるエラー"
 
-#: functions.php:432
+#: functions.php
 msgid "Error allocating core memory buffers"
 msgstr "コアメモリバッファの割り当てエラー"
 
-#: functions.php:433
+#: functions.php
 msgid "Partial transfer due to error"
 msgstr "エラーによる部分的な転送"
 
-#: functions.php:434
+#: functions.php
 msgid "Partial transfer due to vanished source files"
 msgstr "ソースファイルの消失による部分転送"
 
-#: functions.php:435
+#: functions.php
 msgid "The --max-delete limit stopped deletions"
 msgstr "--max-delete制限により削除が停止されました"
 
-#: functions.php:436
+#: functions.php
 msgid "Timeout in data send/receive"
 msgstr "データ送受信のタイムアウト"
 
-#: functions.php:437
+#: functions.php
 msgid "Timeout waiting for daemon connection"
 msgstr "デーモン接続待ちタイムアウト"
 
-#: functions.php:439 functions.php:542
+#: functions.php
 msgid "Unknown error "
 msgstr "未知のエラー"
 
-#: functions.php:515
+#: functions.php
 msgid "Operation was successful"
 msgstr "操作は成功しました"
 
-#: functions.php:516
+#: functions.php
 msgid "General error in file copy"
 msgstr "ファイルコピー中の一般エラー"
 
-#: functions.php:517
+#: functions.php
 msgid "Destination is not directory, but it should be"
 msgstr "目的地はディレクトリではありませんが、それはあるべきです"
 
-#: functions.php:518
+#: functions.php
 msgid "Maximum symlink level exceeded"
 msgstr "最大シンボリックリンクレベルを超えました"
 
-#: functions.php:519
+#: functions.php
 msgid "Connecting to host failed."
 msgstr "ホストへの接続に失敗しました。"
 
-#: functions.php:520
+#: functions.php
 msgid "Connection broken"
 msgstr "接続が切れました"
 
-#: functions.php:521
+#: functions.php
 msgid "File does not exist"
 msgstr "ファイルが存在しません"
 
-#: functions.php:522
+#: functions.php
 msgid "No permission to access file."
 msgstr "ファイルにアクセスする権限がありません。"
 
-#: functions.php:523
+#: functions.php
 msgid "General error in sftp protocol"
 msgstr "sftpプロトコルの一般エラー"
 
-#: functions.php:524
+#: functions.php
 msgid "File transfer protocol mismatch"
 msgstr "ファイル転送プロトコルの不一致"
 
-#: functions.php:525
+#: functions.php
 msgid "No file matches a given criteria"
 msgstr "指定された条件に一致するファイルがありません"
 
-#: functions.php:526
+#: functions.php
 msgid "Host not allowed to connect"
 msgstr "ホストは接続を許可されていません"
 
-#: functions.php:527
+#: functions.php
 msgid "General error in ssh protocol"
 msgstr "SSHプロトコルの一般エラー"
 
-#: functions.php:528
+#: functions.php
 msgid "Key exchange failed"
 msgstr "鍵交換に失敗しました"
 
-#: functions.php:529
+#: functions.php
 msgid "Reserved"
 msgstr "予約済み"
 
-#: functions.php:530
+#: functions.php
 msgid "MAC error"
 msgstr "MACエラー"
 
-#: functions.php:531
+#: functions.php
 msgid "Compression error"
 msgstr "圧縮エラー"
 
-#: functions.php:532
+#: functions.php
 msgid "Service not available"
 msgstr "サービスは利用できません"
 
-#: functions.php:533
+#: functions.php
 msgid "Protocol version not supported"
 msgstr "プロトコルバージョンはサポートされていません"
 
-#: functions.php:534
+#: functions.php
 msgid "Host key not verifiable"
 msgstr "ホスト鍵を検証できません"
 
-#: functions.php:535
+#: functions.php
 msgid "Connection failed"
 msgstr "接続に失敗しました"
 
-#: functions.php:536
+#: functions.php
 msgid "Disconnected by application"
 msgstr "アプリケーションによって切断されました"
 
-#: functions.php:537
+#: functions.php
 msgid "Too many connections"
 msgstr "あまりにも多くの接続"
 
-#: functions.php:538
+#: functions.php
 msgid "Authentication cancelled by user"
 msgstr "ユーザーによって認証がキャンセルされました"
 
-#: functions.php:539
+#: functions.php
 msgid "No more authentication methods available"
 msgstr "これ以上利用できる認証方法はありません"
 
-#: functions.php:540
+#: functions.php
 msgid "Invalid user name"
 msgstr "無効なユーザー名"
 
-#: functions.php:2147 functions.php:2339
+#: functions.php
 msgid "Non Query Based"
 msgstr "非クエリベース"
 
-#: functions.php:2426
+#: functions.php
 msgid "Graph Templates"
 msgstr "グラフテンプレート"
 
-#: functions.php:2455
+#: functions.php
 msgid "Data Queries"
 msgstr "データ問合せ"
 
-#: gexport.php:31
+#: gexport.php
 msgid "Delete"
 msgstr "削除"
 
-#: gexport.php:32
+#: gexport.php
 msgid "Enable"
 msgstr "有効"
 
-#: gexport.php:33
+#: gexport.php
 msgid "Disable"
 msgstr "無効"
 
-#: gexport.php:34
+#: gexport.php
 msgid "Export Now"
 msgstr "エクスポート"
 
-#: gexport.php:38 setup.php:521
+#: gexport.php setup.php
 msgid "Periodic"
 msgstr "定期的"
 
-#: gexport.php:39 setup.php:523
+#: gexport.php setup.php
 msgid "Daily"
 msgstr "毎日"
 
-#: gexport.php:40 setup.php:522
+#: gexport.php setup.php
 msgid "Hourly"
 msgstr "一時間ごと"
 
-#: gexport.php:310
+#: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "[続行]をクリックして、次のグラフエクスポート定義を削除します。"
 
-#: gexport.php:315 gexport.php:325 gexport.php:335 gexport.php:345
+#: gexport.php
 msgid "Cancel"
 msgstr "取り消し"
 
-#: gexport.php:316 gexport.php:326 gexport.php:336 gexport.php:346
+#: gexport.php
 msgid "Continue"
 msgstr "続ける"
 
-#: gexport.php:316
+#: gexport.php
 #, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:320
+#: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "次のグラフエクスポート定義を無効にするには、[続行]をクリックします。"
 
-#: gexport.php:326
+#: gexport.php
 msgid "Disable Graph Export Definition(s)"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:330
+#: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "次のグラフエクスポート定義を有効にするには、[続行]をクリックします。"
 
-#: gexport.php:336
+#: gexport.php
 msgid "Enable Graph Export Definition(s)"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:340
+#: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "[続行]をクリックして、次のグラフエクスポート定義を今すぐ実行します。"
 
-#: gexport.php:346
+#: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:348
+#: gexport.php
 #, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
 msgstr "少なくとも1つのグラフエクスポート定義を選択する必要があります。"
 
-#: gexport.php:349 gexport.php:353
+#: gexport.php
 msgid "Return"
 msgstr "帰還"
 
-#: gexport.php:352
+#: gexport.php
 msgid "You must select at least one Graph Export Definition."
 msgstr "少なくとも1つのグラフエクスポート定義を選択する必要があります。"
 
-#: gexport.php:460 gexport.php:465
+#: gexport.php
 msgid "Graph Export Definition [new]"
 msgstr "グラフエクスポート定義[new]"
 
-#: gexport.php:462
+#: gexport.php
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
 msgstr "グラフエクスポート定義 [編集: %s]"
 
-#: gexport.php:491
+#: gexport.php
 msgid "Select Tree(s)"
 msgstr "ツリーを選択"
 
-#: gexport.php:493
+#: gexport.php
 msgid "Trees Selected"
 msgstr "選択された木"
 
-#: gexport.php:496
+#: gexport.php
 msgid "All Trees Selected"
 msgstr "選択したすべての木"
 
-#: gexport.php:502 gexport.php:548
+#: gexport.php
 msgid "All"
 msgstr "すべて"
 
-#: gexport.php:503 gexport.php:549
+#: gexport.php
 msgid "None"
 msgstr "なし"
 
-#: gexport.php:533 gexport.php:579 gexport.php:691
+#: gexport.php
 msgid "Search"
 msgstr "検索"
 
-#: gexport.php:537
+#: gexport.php
 msgid "Select Site(s)"
 msgstr "サイトを選択"
 
-#: gexport.php:539
+#: gexport.php
 msgid "Sites Selected"
 msgstr "選択したサイト"
 
-#: gexport.php:542
+#: gexport.php
 msgid "All Sites Selected"
 msgstr "選択したすべてのサイト"
 
-#: gexport.php:683
+#: gexport.php
 msgid "Graph Export Definitions"
 msgstr "グラフエクスポート定義"
 
-#: gexport.php:697
+#: gexport.php
 msgid "Exports"
 msgstr "エクスポート"
 
-#: gexport.php:701
+#: gexport.php
 msgid "Default"
 msgstr "デフォルト"
 
-#: gexport.php:716
+#: gexport.php
 msgid "Refresh"
 msgstr "更新"
 
-#: gexport.php:722 gexport.php:1065 gexport.php:1070 gexport.php:1071
+#: gexport.php
 msgid "Never"
 msgstr "決して"
 
-#: gexport.php:723 gexport.php:724 gexport.php:725 gexport.php:726
+#: gexport.php
 #, php-format
 msgid "%d Seconds"
 msgstr "%d 秒"
 
-#: gexport.php:727
+#: gexport.php
 #, fuzzy, php-format
 msgid "%d Minute"
 msgstr "%d分"
 
-#: gexport.php:728 gexport.php:729
+#: gexport.php
 #, php-format
 msgid "%d Minutes"
 msgstr "%d 分"
 
-#: gexport.php:739
+#: gexport.php
 msgctxt "filter: use"
 msgid "Go"
 msgstr "Go"
 
-#: gexport.php:740
+#: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
 msgstr "クリア"
 
-#: gexport.php:901 setup.php:448
+#: gexport.php setup.php
 msgid "Export Name"
 msgstr "出力名"
 
-#: gexport.php:904 setup.php:449
+#: gexport.php setup.php
 msgid "The name of this Graph Export Definition."
 msgstr "このグラフエクスポート定義の名前。"
 
-#: gexport.php:907
+#: gexport.php
 msgid "ID"
 msgstr "ID"
 
-#: gexport.php:910
+#: gexport.php
 msgid "The internal ID of the Graph Export Definition."
 msgstr "グラフエクスポート定義の内部ID。"
 
-#: gexport.php:913
+#: gexport.php
 msgid "Schedule"
 msgstr "スケジュール"
 
-#: gexport.php:916
+#: gexport.php
 msgid "The frequency that Graphs will be exported."
 msgstr "グラフがエクスポートされる頻度。"
 
-#: gexport.php:919
+#: gexport.php
 msgid "Next Start"
 msgstr "次のスタート"
 
-#: gexport.php:922
+#: gexport.php
 msgid "The next time the Graph Export should run."
 msgstr "次回グラフエクスポートを実行する必要があります。"
 
-#: gexport.php:925 setup.php:457
+#: gexport.php setup.php
 msgid "Enabled"
 msgstr "有効"
 
-#: gexport.php:927
+#: gexport.php
 msgid "If enabled, this Graph Export definition will run as required."
 msgstr "有効にすると、このグラフエクスポート定義は必要に応じて実行されます。"
 
-#: gexport.php:930
+#: gexport.php
 msgid "Status"
 msgstr "状態"
 
-#: gexport.php:932
+#: gexport.php
 msgid "The current Graph Export Status."
 msgstr "現在のグラフエクスポートステータス。"
 
-#: gexport.php:935
+#: gexport.php
 msgid "Exporting (Sites/Trees)"
 msgstr "エクスポート（サイト/木）"
 
-#: gexport.php:938
+#: gexport.php
 msgid "What is being Exported."
 msgstr "エクスポートされているもの"
 
-#: gexport.php:941 setup.php:581
+#: gexport.php setup.php
 msgid "Effective User"
 msgstr "有効ユーザー"
 
-#: gexport.php:944
+#: gexport.php
 msgid "The user that this export will impersonate."
 msgstr "このエクスポートが偽装するユーザー。"
 
-#: gexport.php:947
+#: gexport.php
 msgid "Last Runtime"
 msgstr "最後のランタイム"
 
-#: gexport.php:950
+#: gexport.php
 msgid "The last runtime for the Graph Export."
 msgstr "グラフエクスポートの最後のランタイム。"
 
-#: gexport.php:953
+#: gexport.php
 msgid "Graphs"
 msgstr "グラフ"
 
-#: gexport.php:956
+#: gexport.php
 msgid "The number of Graphs Exported on the last run."
 msgstr "最後の実行でエクスポートされたグラフの数。"
 
-#: gexport.php:959
+#: gexport.php
 msgid "Last Started"
 msgstr "最後に始めた"
 
-#: gexport.php:962
+#: gexport.php
 msgid "The last time that this Graph Export was started."
 msgstr "このグラフエクスポートが最後に開始された時刻。"
 
-#: gexport.php:965
+#: gexport.php
 msgid "Last Errored"
 msgstr "最後のエラー"
 
-#: gexport.php:968
+#: gexport.php
 msgid "The last time that this Graph Export experienced an error."
 msgstr "このグラフエクスポートで最後にエラーが発生した時間。"
 
-#: gexport.php:972
+#: gexport.php
 msgid "Export Definitions"
 msgstr "エクスポート定義"
 
-#: gexport.php:1012 gexport.php:1055 gexport.php:1068 gexport.php:1069
-#: setup.php:586
+#: gexport.php setup.php
 msgid "N/A"
 msgstr "該当なし"
 
-#: gexport.php:1014
+#: gexport.php
 msgid "No"
 msgstr "いいえ"
 
-#: gexport.php:1014
+#: gexport.php
 msgid "Yes"
 msgstr "はい"
 
-#: gexport.php:1018
+#: gexport.php
 msgid "Idle"
 msgstr "待機"
 
-#: gexport.php:1022
+#: gexport.php
 msgid "Running"
 msgstr "実行中"
 
-#: gexport.php:1026
+#: gexport.php
 msgid "Error"
 msgstr "エラー"
 
-#: gexport.php:1033
+#: gexport.php
 msgid "All Sites"
 msgstr "すべてのサイト"
 
-#: gexport.php:1044
+#: gexport.php
 msgid "All Trees"
 msgstr "すべての木"
 
-#: gexport.php:1058
+#: gexport.php
 msgid "Sec"
 msgstr "秒"
 
-#: gexport.php:1078
+#: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "グラフエクスポート定義なし"
 
-#: setup.php:56
+#: setup.php
 msgid "Export Cacti Graphs Settings"
 msgstr "サボテングラフの書き出し設定"
 
-#: setup.php:432
+#: setup.php
 msgid "Graph Exports"
 msgstr "グラフのエクスポート"
 
-#: setup.php:432
+#: setup.php
 msgid "Utilities"
 msgstr "ユーティリティ"
 
-#: setup.php:435
+#: setup.php
 msgid "General Administration"
 msgstr "一般事務"
 
-#: setup.php:443
+#: setup.php
 msgid "General"
 msgstr "一般"
 
-#: setup.php:458
+#: setup.php
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
 msgstr "このグラフエクスポート定義を有効にする場合は、このチェックボックスをオンにします。"
 
-#: setup.php:464
+#: setup.php
 msgid "Export Method"
 msgstr "エクスポート方法"
 
-#: setup.php:465
+#: setup.php
 msgid "Choose which export method to use."
 msgstr "使用するエクスポート方法を選択してください。"
 
-#: setup.php:470
+#: setup.php
 msgid "Local"
 msgstr "ローカル"
 
-#: setup.php:471
+#: setup.php
 msgid "FTP"
 msgstr "FTP"
 
-#: setup.php:472
+#: setup.php
 msgid "SFTP"
 msgstr "SFTP"
 
-#: setup.php:473
+#: setup.php
 msgid "FTP NC"
 msgstr "FTP NC"
 
-#: setup.php:474
+#: setup.php
 msgid "SCP"
 msgstr "SCP"
 
-#: setup.php:475
+#: setup.php
 msgid "RSYNC"
 msgstr "RSYNC"
 
-#: setup.php:479
+#: setup.php
 msgid "Export Command Arguments"
 msgstr "エクスポートコマンド引数"
 
-#: setup.php:480
+#: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
 msgstr "非ローカルのエクスポート方法で使用する引数。 rsyncは使うべきです"
 
-#: setup.php:492
+#: setup.php
 msgid "Theme"
 msgstr "テーマ"
 
-#: setup.php:493
+#: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
 msgstr "Cacti Graph Exportsをスキンするために利用可能なテーマの1つを選択してください。"
 
-#: setup.php:500
+#: setup.php
 msgid "Presentation Method"
 msgstr "発表方法"
 
-#: setup.php:501
+#: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
 msgstr "HTMLで生成されたページにどのプレゼンテーションを表示するかを選択します。古典的なプレゼンテーションを選択した場合グラフはHTML 1ページのみになります。ツリー表示を選択した場合、グラフツリーアーキテクチャは静的なHTMLページに保存されます。"
 
-#: setup.php:506 setup.php:609
+#: setup.php
 msgid "Site"
 msgstr "サイト"
 
-#: setup.php:507 setup.php:590
+#: setup.php
 msgid "Tree"
 msgstr "ツリー"
 
-#: setup.php:511
+#: setup.php
 msgid "Export Timing"
 msgstr "輸出タイミング"
 
-#: setup.php:515
+#: setup.php
 msgid "Timing Method"
 msgstr "タイミング方法"
 
-#: setup.php:516
+#: setup.php
 msgid "Choose when to Export Graphs."
 msgstr "いつグラフをエクスポートするかを選択します。"
 
-#: setup.php:527
+#: setup.php
 msgid "Periodic Export Cycle"
 msgstr "定期輸出サイクル"
 
-#: setup.php:528
+#: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
 msgstr "Cactiにグラフのエクスポートをどのくらいの頻度で希望しますか。これはあなたがグラフをエクスポートしたいポーリングサイクルの単位です。"
 
-#: setup.php:532
+#: setup.php
 msgid "Every Polling Cycle"
 msgstr "すべてのポーリングサイクル"
 
-#: setup.php:533 setup.php:534 setup.php:535 setup.php:536 setup.php:537
-#: setup.php:538 setup.php:539 setup.php:540 setup.php:541 setup.php:542
-#: setup.php:543
+#: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
 msgstr "%d ポーリング サイクルごと"
 
-#: setup.php:547
+#: setup.php
 msgid "Hourly at specified minutes"
 msgstr "指定された時間に毎時"
 
-#: setup.php:548
+#: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
 msgstr "Cactiに静止画像を1時間ごとにエクスポートさせたい場合は、その時間を分単位で指定します。 Cactiは、ユーザーが5分ごとにデータ収集スクリプトを実行すると想定しているので、実行時間に最も近い値に丸められます。たとえば、43はその時間の40分後に相当します。"
 
-#: setup.php:557
+#: setup.php
 msgid "Daily at specified time"
 msgstr "指定された時間に毎日"
 
-#: setup.php:558
+#: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
 msgstr "Cactiに静止画像を毎日エクスポートさせたい場合は、ここでそれを行う時間を設定してください。 Cactiは、ユーザーが5分ごとにデータ収集スクリプトを実行すると想定しているので、実行時間に最も近い値に丸められます。たとえば、21時23分は午後9時20分です。"
 
-#: setup.php:567
+#: setup.php
 msgid "Use x Threads"
 msgstr "x個のスレッドを使用"
 
-#: setup.php:568
+#: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
 msgstr "グラフをエクスポートするときにCactiにバックグラウンドスレッドをいくつ使用させたいですか。デフォルトは、すべてのエクスポートをポーラースレッドで実行する場合は1、別のバックグラウンドスレッドを生成する場合は1以上です。"
 
-#: setup.php:576
+#: setup.php
 msgid "Graph Selection & Settings"
 msgstr "グラフ選択と設定"
 
-#: setup.php:582
+#: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
 msgstr "サボテングラフへの許可を確立するために利用するユーザー名。このユーザー名はどのグラフ/ツリーをエクスポートできるかを決定するために使用されます。 N / Aは、セキュリティが設定されていると想定しないことを意味します。"
 
-#: setup.php:591
+#: setup.php
 msgid "The Tree(s) to export."
 msgstr "エクスポートするツリー。"
 
-#: setup.php:598
+#: setup.php
 msgid "Expand Devices/Sites"
 msgstr "デバイス/サイトを展開"
 
-#: setup.php:599
+#: setup.php
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
 msgstr "この設定は、ツリーデバイスとサイトテンプレートおよびデバイスを展開するかどうかを決定します。 extendedに設定すると、各ホストはGraph TemplatesまたはData Query項目を含むサブフォルダを持ちます。"
 
-#: setup.php:604
+#: setup.php
 msgid "Off"
 msgstr "オフ"
 
-#: setup.php:605
+#: setup.php
 msgid "On"
 msgstr "オン"
 
-#: setup.php:610
+#: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
 msgstr "サボテングラフのエクスポート元サイト。"
 
-#: setup.php:617
+#: setup.php
 msgid "Graph Thumbnail Width"
 msgstr "グラフのサムネイルの幅"
 
-#: setup.php:618
+#: setup.php
 msgid "The default width of Thumbnail Graphs in pixels."
 msgstr "サムネイルグラフのデフォルトの幅（ピクセル単位）。"
 
-#: setup.php:626
+#: setup.php
 msgid "Graph Thumbnail Height"
 msgstr "グラフのサムネイルの高さ"
 
-#: setup.php:627
+#: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
 msgstr "サムネイルグラフの高さ（ピクセル単位）。"
 
-#: setup.php:635
+#: setup.php
 msgid "Default View Thumbnails"
 msgstr "デフォルトビューのサムネイル"
 
-#: setup.php:636
+#: setup.php
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
 msgstr "デフォルトのグラフ表示をサムネイルモードにする場合は、これをチェックします。"
 
-#: setup.php:641
+#: setup.php
 msgid "Default Graph Columns"
 msgstr "デフォルトのグラフ列"
 
-#: setup.php:642
+#: setup.php
 msgid "The number of columns to use by default when displaying Graphs."
 msgstr "グラフ表示時にデフォルトで使用する列数。"
 
-#: setup.php:650
+#: setup.php
 msgid "Graphs Per Page"
 msgstr "1ページあたりのグラフ"
 
-#: setup.php:651
+#: setup.php
 msgid "Choose the number of Graphs Per Page to display."
 msgstr "表示する1ページあたりのグラフ数を選択します。"
 
-#: setup.php:658
+#: setup.php
 msgid "Maximum Graphs to Export"
 msgstr "エクスポートする最大グラフ"
 
-#: setup.php:659
+#: setup.php
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
 msgstr "この数に達するとエラーが発生しますが、エクスポートは続行されます。無制限の場合は0に設定してください。"
 
-#: setup.php:667
+#: setup.php
 msgid "Export Location Information"
 msgstr "位置情報のエクスポート"
 
-#: setup.php:672
+#: setup.php
 msgid "Export Thumbnails"
 msgstr "輸出タイミング"
 
-#: setup.php:673
+#: setup.php
 msgid "Check this if you want the export thumbnails mode."
 msgstr "デフォルトのグラフ表示をサムネイルモードにする場合は、これをチェックします。"
 
-#: setup.php:678
+#: setup.php
 msgid "Clear Directory"
 msgstr "エクスポートディレクトリ"
 
-#: setup.php:679
+#: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
 msgstr "このグラフエクスポート定義を有効にする場合は、このチェックボックスをオンにします。"
 
-#: setup.php:684
+#: setup.php
 msgid "Export Directory"
 msgstr "エクスポートディレクトリ"
 
-#: setup.php:685
+#: setup.php
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
 msgstr "これは、エクスポートされたデータを含む、ローカルシステム上またはリモートシステム上のディレクトリです。"
 
-#: setup.php:691
+#: setup.php
 msgid "Local Scratch Directory"
 msgstr "ローカルスクラッチディレクトリ"
 
-#: setup.php:692
+#: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
 msgstr "これは、転送方法でリモートサイトに送信する前に、Cactiが一時的に出力を保存するディレクトリです。このディレクトリの内容は、データが転送された後に削除されます。"
 
-#: setup.php:699
+#: setup.php
 msgid "Remote Options"
 msgstr "リモートオプション"
 
-#: setup.php:704
+#: setup.php
 msgid "Sanitize remote directory"
 msgstr "リモートディレクトリをサニタイズする"
 
-#: setup.php:705
+#: setup.php
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
 msgstr "FTPリモートディレクトリ内の既存のファイルを削除したい場合はこれをチェックしてください。このオプションは、PHPに組み込まれているftp関数を使用している場合にのみ使用されます。"
 
-#: setup.php:710
+#: setup.php
 msgid "Remote Host"
 msgstr "リモートホスト"
 
-#: setup.php:711
+#: setup.php
 msgid "Denotes the host to send Exported Graphs to."
 msgstr "エクスポートされたグラフを送信するホストを示します。"
 
-#: setup.php:718
+#: setup.php
 msgid "Remote Port"
 msgstr "リモート ポート"
 
-#: setup.php:719
+#: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
 msgstr "非標準の場合にエクスポート方法に使用する通信ポート（デフォルトの場合は空のままにします）。"
 
-#: setup.php:727
+#: setup.php
 msgid "Use passive mode"
 msgstr "パッシブモードを使用"
 
-#: setup.php:728
+#: setup.php
 msgid "Check this if you want to connect in passive mode to the FTP server."
 msgstr "FTPサーバーにパッシブモードで接続したい場合はこれをチェックしてください。"
 
-#: setup.php:733
+#: setup.php
 msgid "User"
 msgstr "ユーザー"
 
-#: setup.php:734
+#: setup.php
 msgid "Account to logon on the remote server (leave empty for defaults)."
 msgstr "リモートサーバーにログオンするためのアカウント（デフォルトは空欄）"
 
-#: setup.php:741
+#: setup.php
 msgid "Password"
 msgstr "パスワード"
 
-#: setup.php:742
+#: setup.php
 msgid "Password for the remote ftp account (leave empty for blank)."
 msgstr "リモートFTPアカウントのパスワード（空白のままにしておく）。"
 
-#: setup.php:749
+#: setup.php
 msgid "Private Key Path"
 msgstr "秘密鍵パス"
 
-#: setup.php:750
+#: setup.php
 msgid "For SCP and RSYNC, enter the Private Key path if required."
 msgstr "SCPおよびRSYNCの場合は、必要に応じて秘密鍵のパスを入力してください。"
 
-#: setup.php:773
+#: setup.php
 msgid "Exported Cacti Graph Pages"
 msgstr "エクスポートされたサボテングラフページ"
 
-#: setup.php:779
+#: setup.php
 msgid "(Edit)"
 msgstr "(編集)"
 
-#: setup.php:785
+#: setup.php
 msgid "Actions"
 msgstr "操作"
