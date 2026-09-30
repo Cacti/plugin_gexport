@@ -160,6 +160,12 @@ foreach ($clover->xpath('//file') as $file) {
  * Empty by default; add entries per repository as the need arises.
  */
 $unmeasured_allowlist = [
+	// Web UI / CLI entry points: each does a top-level chdir + require of
+	// include/auth.php or include/cli_check.php and dispatches on request/CLI
+	// args, so it cannot be loaded into the isolated unit process. Only the
+	// extracted helpers (includes/*.php) are unit-tested and measured.
+	'gexport.php',
+	'poller_export.php',
 ];
 $unmeasured            = array_values(array_diff(array_keys($changed), array_keys($measured)));
 $unexpected_unmeasured = array_values(array_diff($unmeasured, $unmeasured_allowlist));

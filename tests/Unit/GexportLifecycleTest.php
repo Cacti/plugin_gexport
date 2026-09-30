@@ -83,8 +83,8 @@ it('re-enables hooks and updates plugin_config when an old version upgrades', fu
 	expect($GLOBALS['__test_enabled_hooks_calls'])->toBe(array('gexport'));
 
 	$updates = array_values(array_filter($GLOBALS['__test_db_calls'], function ($call) {
-		return $call['fn'] === 'db_execute' && stripos($call['sql'], "UPDATE plugin_config") !== false;
+		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'UPDATE plugin_config') !== false;
 	}));
 
-	expect($updates)->not->toBeEmpty();
+	expect($updates)->toHaveCount(1);
 });

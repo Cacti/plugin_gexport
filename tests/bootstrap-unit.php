@@ -178,7 +178,7 @@ if (!function_exists('db_index_exists')) {
 
 if (!function_exists('db_column_exists')) {
 	function db_column_exists($table, $column) {
-		return false;
+		return gexport_test_db_result('db_column_exists', $table . '.' . $column, array(), false);
 	}
 }
 

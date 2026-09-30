@@ -58,3 +58,25 @@ it('never emits a raw CREATE TABLE statement', function () {
 
 	expect($raw)->toBeEmpty();
 });
+
+it('renames the legacy key-path column and refreshes existing tables on upgrade', function () {
+	// Legacy column still present and both tables already exist, so the guarded
+	// rename pre-step fires and each table is refreshed via db_update_table().
+	gexport_test_mock_db('db_column_exists', 'export_index_key_path', true);
+	gexport_test_mock_db('db_table_exists', 'graph_exports', true);
+
+	gexport_upgrade_tables();
+
+	$alters = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'CHANGE COLUMN') !== false;
+	});
+
+	expect($alters)->not->toBeEmpty();
+
+	$refreshed = array_column(array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'db_update_table';
+	}), 'table');
+
+	expect($refreshed)->toContain('graph_exports')
+		->and($refreshed)->toContain('graph_exports_tasks');
+});
