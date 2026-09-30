@@ -1,0 +1,18 @@
+{
+    "tombstones": [],
+    "expected": [
+        "CHANGELOG.md",
+        "INFO",
+        "LICENSE",
+        "README.md",
+        "gexport.php",
+        "includes/",
+        "locales/",
+        "manifest.json",
+        "phpunit.xml",
+        "poller_export.php",
+        "setup.php",
+        "website.template"
+    ],
+    "whitelist": []
+}
