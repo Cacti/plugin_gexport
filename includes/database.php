@@ -181,9 +181,11 @@ function gexport_upgrade_tables() {
 
 	// db_update_table() diffs by column name and can not rename, so preserve
 	// this historical rename (and its data) before the schema refresh below.
+	// Cacti 1.2.x's db_update_table() does not reconcile column defaults, so the
+	// rename must set the canonical DEFAULT '' itself to avoid leaving DEFAULT NULL.
 	if (db_column_exists('graph_exports', 'export_index_key_path')) {
-		db_execute('ALTER TABLE graph_exports
-			CHANGE COLUMN `export_index_key_path` `export_private_key_path` varchar(255)');
+		db_execute("ALTER TABLE graph_exports
+			CHANGE COLUMN `export_index_key_path` `export_private_key_path` varchar(255) DEFAULT ''");
 	}
 
 	$tables = [
