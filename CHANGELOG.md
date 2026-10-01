@@ -2,6 +2,8 @@
 
 --- 2.1 ---
 
+- refactor: Move the functions.php and gexport_security.php library files into includes/ and switch every file inclusion from include/include_once to require/require_once for fail-fast consistency (references updated across setup.php, gexport.php, poller_export.php, and the test suite)
+- refactor: Move all schema management into includes/database.php (the thold model) and manage the graph_exports/graph_exports_tasks schema through Cacti's plugin table API - create with api_plugin_db_table_create() and refresh existing tables with db_update_table() from a single shared definition, replacing the raw CREATE TABLE/version-gated ALTER TABLE migrations (the one column rename is kept as a pre-step since db_update_table() can not rename)
 - dev: Measure CI coverage with xdebug instead of pcov so the plugin's own sources are instrumented (pcov auto-scopes to the Composer root and skipped cacti/plugins/, leaving the patch-coverage gate with nothing to measure)
 - dev: Enforce patch coverage of changed lines in CI and remove the inert COMPOSER_ROOT_VERSION env from the Pest step
 - security: Add a version-safe CSP nonce (`plugin_gexport_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class

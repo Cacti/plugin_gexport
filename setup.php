@@ -48,12 +48,16 @@ function plugin_gexport_csp_nonce(): string {
  * @return void
  */
 function plugin_gexport_install() {
+	global $config;
+
 	// graph setup all arrays needed for automation
 	api_plugin_register_hook('gexport', 'config_arrays',        'gexport_config_arrays',        'setup.php');
 	api_plugin_register_hook('gexport', 'draw_navigation_text', 'gexport_draw_navigation_text', 'setup.php');
 	api_plugin_register_hook('gexport', 'poller_bottom',        'gexport_poller_bottom',        'setup.php');
 
 	api_plugin_register_realm('gexport', 'gexport.php', __('Export Cacti Graphs Settings', 'gexport'), 1);
+
+	require_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	gexport_setup_table();
 }
@@ -67,8 +71,11 @@ function plugin_gexport_install() {
  * @return bool Always returns true.
  */
 function plugin_gexport_uninstall() {
-	db_execute('DROP TABLE graph_exports');
-	db_execute('DROP TABLE graph_exports_tasks');
+	global $config;
+
+	require_once($config['base_path'] . '/plugins/gexport/includes/database.php');
+
+	gexport_drop_tables();
 
 	return true;
 }
@@ -152,8 +159,9 @@ function gexport_poller_bottom() {
 function gexport_check_upgrade() {
 	global $config, $database_default;
 
-	include_once($config['library_path'] . '/database.php');
-	include_once($config['library_path'] . '/functions.php');
+	require_once($config['library_path'] . '/database.php');
+	require_once($config['library_path'] . '/functions.php');
+	require_once($config['base_path'] . '/plugins/gexport/includes/database.php');
 
 	// Let's only run this check if we are on a page that actually needs the data
 	$files = ['plugins.php', 'gexport.php'];
@@ -179,67 +187,18 @@ function gexport_check_upgrade() {
 			api_plugin_enable_hooks('gexport');
 		}
 
-		if (cacti_version_compare($old,'1.4.1', '<')) {
-			if (db_column_exists('graph_exports','export_index_key_path')) {
-				db_execute('ALTER TABLE graph_exports
-					CHANGE COLUMN `export_index_key_path` `export_private_key_path` varchar(255)');
-			}
-		}
+		// db_update_table() diffs the live schema against each table definition
+		// and issues the exact ALTER (or creates the table when missing); the one
+		// column rename is applied as a guarded pre-step inside this helper.
+		gexport_upgrade_tables();
 
-		if (cacti_version_compare($old,'1.4','<')) {
-			gexport_create_table_tasks();
+		db_execute_prepared('UPDATE plugin_config
+			SET version = ?, name = ?, author = ?, webpage = ?
+			WHERE directory = ?',
+			[$info['version'], $info['longname'], $info['author'], $info['homepage'], $info['name']]);
 
-			if (!db_column_exists('graph_exports','export_threads')) {
-				db_execute('ALTER TABLE graph_exports
-					ADD COLUMN `export_threads` int(10) DEFAULT \'0\'');
-			}
-
-			if (!db_column_exists('graph_exports','export_args')) {
-				db_execute('ALTER TABLE graph_exports
-					ADD COLUMN `export_args` char(25) DEFAULT \'-zav\'');
-			}
-
-			if (!db_column_exists('graph_exports','export_clear')) {
-				db_execute('ALTER TABLE graph_exports
-					ADD COLUMN `export_clear` char(3) DEFAULT \'\'');
-			}
-
-			if (!db_column_exists('graph_exports','export_thumbs')) {
-				db_execute('ALTER TABLE graph_exports
-					ADD COLUMN `export_thumbs` char(3) DEFAULT \'on\'');
-			}
-
-			if (!db_index_exists('graph_exports_tasks','status')) {
-				db_execute('ALTER TABLE graph_exports_tasks
-					ADD KEY `status` (`status`)');
-			}
-
-			if (!db_index_exists('graph_exports_tasks','pid')) {
-				db_execute('ALTER TABLE graph_exports_tasks
-					ADD KEY `pid` (`pid`)');
-			}
-
-			if (!db_index_exists('graph_exports_tasks','start_time')) {
-				db_execute('ALTER TABLE graph_exports_tasks
-					ADD KEY `start_time` (`start_time`)');
-			}
-		}
-
-		if (cacti_version_compare($old,'1.3','<')) {
-			db_execute('ALTER TABLE graph_exports
-				MODIFY column export_user VARCHAR(40) DEFAULT \'\'');
-		}
-
-		db_execute("UPDATE plugin_config
-			SET version='$current'
-			WHERE directory='gexport'");
-
-		db_execute("UPDATE plugin_config SET
-			version='" . $info['version'] . "',
-			name='" . $info['longname'] . "',
-			author='" . $info['author'] . "',
-			webpage='" . $info['homepage'] . "'
-			WHERE directory='" . $info['name'] . "' ");
+		// Remove files tombstoned in manifest.json plus the dev-only tests/ tree.
+		gexport_prune_files();
 	}
 }
 
@@ -251,124 +210,6 @@ function gexport_check_upgrade() {
  * @return bool Always returns true.
  */
 function gexport_check_dependencies() {
-	return true;
-}
-
-/**
- * Creates this plugin's graph_exports (export configuration) and
- * graph_exports_tasks (per-export worker task) database tables, if they
- * don't already exist. Called from plugin_gexport_install() during
- * plugin installation.
- *
- * @return bool Always returns true.
- *
- * @global array  $config           Cacti global configuration array;
- *                                   used to load database.php.
- * @global object $database_default Cacti's default database connection
- *                                   handle (unused directly here;
- *                                   declared for parity with other
- *                                   database-touching functions in this
- *                                   file).
- */
-function gexport_setup_table() {
-	global $config, $database_default;
-	include_once($config['library_path'] . '/database.php');
-
-	gexport_create_table();
-	gexport_create_table_tasks();
-
-	return true;
-}
-
-/**
- * Creates the graph_exports table (holding each configured export job's
- * settings and last-run status), if it doesn't already exist. Called
- * from gexport_setup_table() during installation.
- *
- * @return bool Always returns true.
- */
-function gexport_create_table() {
-	if (!db_table_exists('graph_exports')) {
-		db_execute("CREATE TABLE `graph_exports` (
-			`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-			`name` varchar(64) DEFAULT '',
-			`export_type` varchar(12) DEFAULT '',
-			`enabled` char(3) DEFAULT 'on',
-			`export_presentation` varchar(20) DEFAULT '',
-			`export_effective_user` int(10) unsigned DEFAULT '0',
-			`export_expand_hosts` char(3) DEFAULT '',
-			`export_theme` varchar(20) DEFAULT 'modern',
-			`graph_tree` varchar(255) DEFAULT '',
-			`graph_site` varchar(255) DEFAULT '',
-			`graph_height` int(10) unsigned DEFAULT '100',
-			`graph_width` int(10) unsigned DEFAULT '300',
-			`graph_thumbnails` char(3) DEFAULT '',
-			`graph_columns` int(10) unsigned DEFAULT '2',
-			`graph_perpage` int(10) unsigned DEFAULT '50',
-			`graph_max` int(10) unsigned DEFAULT '2000',
-			`export_clear` char(3) DEFAULT '',
-			`export_thumbs` char(3) DEFAULT 'on',
-			`export_args` char(25) DEFAULT '-zav',
-			`export_directory` varchar(255) DEFAULT '',
-			`export_temp_directory` varchar(255) DEFAULT '',
-			`export_timing` varchar(20) DEFAULT 'disabled',
-			`export_skip` int(10) unsigned DEFAULT '0',
-			`export_hourly` varchar(20) DEFAULT '',
-			`export_daily` varchar(20) DEFAULT '',
-			`export_threads` int(10) DEFAULT '0',
-			`export_sanitize_remote` char(3) DEFAULT '',
-			`export_host` varchar(64) DEFAULT '',
-			`export_port` varchar(5) DEFAULT '',
-			`export_passive` char(3) DEFAULT '',
-			`export_user` varchar(40) DEFAULT '',
-			`export_password` varchar(64) DEFAULT '',
-			`export_private_key_path` varchar(255) DEFAULT '',
-			`status` int(10) unsigned DEFAULT '0',
-			`export_pid` int(10) unsigned DEFAULT NULL,
-			`next_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-			`last_checked` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-			`last_started` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-			`last_ended` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-			`last_errored` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-			`last_runtime` double NOT NULL DEFAULT '0',
-			`last_error` varchar(255) DEFAULT NULL,
-			`total_graphs` double DEFAULT '0',
-			PRIMARY KEY (`id`))
-			ENGINE=InnoDB
-			COMMENT='Stores Graph Export Settings for Cacti'");
-	}
-
-	return true;
-}
-
-/**
- * Creates the graph_exports_tasks table (holding per-graph worker tasks
- * for an in-progress export job), if it doesn't already exist. Called
- * from gexport_setup_table() during installation and
- * gexport_check_upgrade() when upgrading from a version that predates
- * this table.
- *
- * @return bool Always returns true.
- */
-function gexport_create_table_tasks() {
-	if (!db_table_exists('graph_exports_tasks')) {
-		db_execute("CREATE TABLE `graph_exports_tasks` (
-			`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-			`local_graph_id` int(10) unsigned NOT NULL DEFAULT '0',
-			`export_id` int(10) unsigned NOT NULL DEFAULT '0',
-			`pid` int(10) unsigned NOT NULL DEFAULT '0',
-			`user` int(10) unsigned NOT NULL DEFAULT '0',
-			`folder` varchar(255) DEFAULT '',
-			`status` int(1) unsigned NOT NULL DEFAULT '0',
-			`start_time` int(1) unsigned NOT NULL DEFAULT '0',
-			PRIMARY KEY (`id`),
-			KEY `status` (`status`),
-			KEY `pid` (`pid`),
-			KEY `start_time` (`start_time`))
-			ENGINE=InnoDB
-			COMMENT='Stores Graph Export Tasks for Cacti'");
-	}
-
 	return true;
 }
 
@@ -788,4 +629,174 @@ function gexport_draw_navigation_text($nav) {
 		'level'   => '2'];
 
 	return $nav;
+}
+
+/**
+ * Removes files and directories that a previous version of this plugin
+ * shipped but that have since moved or been deleted, using the tombstone
+ * and whitelist lists in manifest.json. Whitelisted (user-data) paths and
+ * any VCS metadata (.git*) are never touched; the dev-only tests/ tree is
+ * removed. Any path that resolves outside the plugin directory (a tampered
+ * manifest.json) is refused, and any file/directory that cannot be removed
+ * (e.g. read-only) is reported to the Cacti log. Any top-level entry that is
+ * neither expected nor a tombstone nor whitelisted is logged to the Cacti
+ * log and left in place. Called on a plugin version change.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to resolve
+ *                       the plugin directory.
+ */
+function gexport_prune_files(): void {
+	global $config;
+
+	$plugin_dir    = $config['base_path'] . '/plugins/gexport';
+	$manifest_path = $plugin_dir . '/manifest.json';
+
+	if (!is_readable($manifest_path)) {
+		return;
+	}
+
+	$manifest = json_decode((string) file_get_contents($manifest_path), true);
+
+	if (!is_array($manifest)) {
+		cacti_log('WARNING: gexport manifest.json could not be parsed; skipping file prune', false, 'GEXPORT');
+
+		return;
+	}
+
+	$tombstones = isset($manifest['tombstones']) && is_array($manifest['tombstones']) ? $manifest['tombstones'] : [];
+	$expected   = isset($manifest['expected'])   && is_array($manifest['expected'])   ? $manifest['expected']   : [];
+	$whitelist  = isset($manifest['whitelist'])  && is_array($manifest['whitelist'])  ? $manifest['whitelist']  : [];
+
+	$protected = function (string $rel) use ($whitelist): bool {
+		if (strncmp($rel, '.git', 4) === 0 || strncmp($rel, '.md', 3) === 0) {
+			return true;
+		}
+
+		foreach ($whitelist as $entry) {
+			$entry = trim((string) $entry, '/');
+
+			if ($entry !== '' && ($rel === $entry
+				|| strncmp($rel, $entry . '/', strlen($entry) + 1) === 0
+				|| strncmp($entry, $rel . '/', strlen($rel) + 1) === 0)) {
+				return true;
+			}
+		}
+
+		return false;
+	};
+
+	// Security: resolve the plugin directory so a tampered manifest.json
+	// cannot steer the prune outside of it.
+	$plugin_real = realpath($plugin_dir);
+
+	// Remove tombstoned (moved/deleted) paths plus the dev-only tests/
+	// tree and the phpunit.xml test configuration.
+	$remove   = $tombstones;
+	$remove[] = 'tests/';
+	$remove[] = 'phpunit.xml';
+
+	foreach ($remove as $rel) {
+		$rel = trim((string) $rel, '/');
+
+		if ($rel === '' || $protected($rel)) {
+			continue;
+		}
+
+		// A tombstone must never contain '.'/'..' segments; a tampered manifest
+		// could use them to escape the plugin directory or target its root.
+		$segments = explode('/', $rel);
+
+		if (in_array('.', $segments, true) || in_array('..', $segments, true)) {
+			cacti_log(sprintf('WARNING: gexport prune refused to remove %s: path contains a traversal segment (tampered manifest.json?)', $rel), false, 'GEXPORT');
+
+			continue;
+		}
+
+		$path = $plugin_dir . '/' . $rel;
+
+		if (!is_link($path) && !file_exists($path)) {
+			continue;
+		}
+
+		// Refuse any path that, after resolving symlinks and ../ segments,
+		// escapes the plugin directory (protects user data from a tampered
+		// manifest.json).
+		$anchor = is_link($path) ? dirname($path) : $path;
+		$real   = realpath($anchor);
+
+		if ($real === false || ($real !== $plugin_real && strncmp($real, $plugin_real . DIRECTORY_SEPARATOR, strlen((string) $plugin_real) + 1) !== 0)) {
+			cacti_log(sprintf('WARNING: gexport prune refused to remove %s: path resolves outside the plugin directory (tampered manifest.json?)', $rel), false, 'GEXPORT');
+
+			continue;
+		}
+
+		if (is_dir($path) && !is_link($path)) {
+			$removed = gexport_rmtree($path);
+		} else {
+			$removed = @unlink($path);
+		}
+
+		if (!$removed) {
+			cacti_log(sprintf('WARNING: gexport upgrade could not remove %s (check file/directory permissions)', $rel), false, 'GEXPORT');
+		}
+	}
+
+	// Surface any top-level entry the manifest does not account for.
+	$known = [];
+
+	foreach (array_merge($expected, $tombstones) as $entry) {
+		$top = explode('/', trim((string) $entry, '/'))[0];
+
+		if ($top !== '') {
+			$known[$top] = true;
+		}
+	}
+
+	$entries = scandir($plugin_dir);
+
+	foreach (($entries !== false ? $entries : []) as $entry) {
+		if ($entry === '.' || $entry === '..' || $entry === 'tests' || $entry === 'phpunit.xml' || $protected($entry) || isset($known[$entry])) {
+			continue;
+		}
+
+		cacti_log(sprintf('WARNING: gexport upgrade found a file/directory not described in manifest.json: %s (left in place)', $entry), false, 'GEXPORT');
+	}
+}
+
+/**
+ * Recursively deletes a directory and its contents. Symlinks are removed
+ * without being followed. Helper for gexport_prune_files().
+ *
+ * @param string $dir Absolute path to the directory to remove.
+ *
+ * @return bool True if the directory and everything under it was removed;
+ *              false if any entry could not be deleted.
+ */
+function gexport_rmtree(string $dir): bool {
+	$entries = scandir($dir);
+	$ok      = true;
+
+	foreach (($entries !== false ? $entries : []) as $entry) {
+		if ($entry === '.' || $entry === '..') {
+			continue;
+		}
+
+		$path = $dir . '/' . $entry;
+
+		if (is_dir($path) && !is_link($path)) {
+			if (!gexport_rmtree($path)) {
+				$ok = false;
+			}
+		} elseif (!@unlink($path)) {
+			$ok = false;
+		}
+	}
+
+	if (!@rmdir($dir)) {
+		$ok = false;
+	}
+
+	return $ok;
 }

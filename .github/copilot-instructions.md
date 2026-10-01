@@ -25,15 +25,18 @@ When generating code for this repository:
 ## Project Structure
 
 ```
-gexport/               # Repository root (install to plugins/gexport/ in Cacti)
-├── locales/             # Internationalization files
-├── functions.php          # Export engine: run_export(), exporter(), rsync/scp helpers
+gexport/                     # Repository root (install to plugins/gexport/ in Cacti)
+├── includes/                # Library/helper files, require_once'd from the entry points
+│   ├── database.php         # Schema management: *_table_data() + create/upgrade/drop helpers
+│   ├── functions.php        # Export engine: run_export(), exporter(), rsync/scp helpers
+│   └── gexport_security.php # Bulk-action normalization and output-escaping helpers
+├── locales/                 # Internationalization files
 ├── gexport.php              # Main export definition administration UI
-├── poller_export.php         # Background export runner (CLI, spawned from poller_bottom)
-├── website.template            # HTML template used for exported site view
-├── INFO                          # Plugin metadata (name, version, compat)
+├── poller_export.php        # Background export runner (CLI, spawned from poller_bottom)
+├── website.template         # HTML template used for exported site view
+├── INFO                     # Plugin metadata (name, version, compat)
 ├── README.md
-└── setup.php                      # Plugin install/uninstall/upgrade hooks
+└── setup.php                # Plugin install/uninstall/upgrade hooks
 ```
 
 ## Naming Conventions
@@ -131,7 +134,7 @@ api_plugin_register_realm('gexport', 'gexport.php', __('Export Cacti Graphs Sett
 `gexport_poller_bottom()` only fires on `poller_id == 1` and only spawns `poller_export.php` in the background if at least one `graph_exports` row is `enabled='on'`; keep new export-triggering logic behind the same guard to avoid running exports on every poller cycle needlessly.
 
 ### Export Engine Conventions
-Logging inside the export engine uses a family of small helpers — `export_fatal()`, `export_warn()`, `export_note()`, `export_log()`, `export_debug()` — keep using the matching severity helper rather than calling `cacti_log()` directly from within `functions.php`.
+Logging inside the export engine uses a family of small helpers ΓÇö `export_fatal()`, `export_warn()`, `export_note()`, `export_log()`, `export_debug()` ΓÇö keep using the matching severity helper rather than calling `cacti_log()` directly from within `includes/functions.php`.
 
 ## Best Practices
 
@@ -189,11 +192,38 @@ existing code or adding new code, not just in dedicated cleanup passes:
 - **i18n text domain.** Every `__()`/`__esc()` call must include this plugin's text domain as the
   final argument, except when deliberately comparing against a literal, untranslated Cacti-core
   label.
-- **Plugin table-creation API.** Use `api_plugin_db_table_create()`/`api_plugin_db_add_column()`
-  (from Cacti core's `lib/plugins.php`) instead of raw `CREATE TABLE`/`ALTER TABLE ... ADD COLUMN`.
-  Both are idempotent (safe no-ops when already applied), so the same call can run unconditionally
-  from both the install AND upgrade paths.
+- **File inclusion uses `require`/`require_once`.** Always use `require`/`require_once` (never
+  `include`/`include_once`) so a missing dependency fails fast and loudly. Keep library/helper files
+  (e.g. `functions.php`, `gexport_security.php`, `includes/database.php`) under `includes/` and
+  reference them from that path; entry points (`gexport.php`, `poller_export.php`, `setup.php`) stay
+  in the plugin root.
+- **Plugin schema management.** Own every plugin-created table through Cacti core's schema API in
+  `lib/plugins.php`; never use raw `CREATE TABLE`/`ALTER TABLE` for a plugin-owned table. Keep all of
+  these schema functions in the plugin's `includes/database.php`, included from `setup.php`'s
+  install/upgrade paths (the thold model).
+  - Define each table once in a `*_table_data()` helper that returns the Cacti table-definition
+    array (`columns`/`primary`/`keys`/`type`/`comment`). Both the install and upgrade paths consume
+    that single definition so they can never drift.
+  - **Install:** create every table with
+    `api_plugin_db_table_create('<plugin>', '<table>', <table>_table_data())`.
+  - **Upgrade:** refresh each table from the same definition — `db_update_table('<table>', <table>_table_data())`
+    when the table already exists (it diffs the live schema and issues the exact combined `ALTER`),
+    otherwise `api_plugin_db_table_create()` to create it. Do **not** hand-write
+    `db_column_exists()`/`db_index_exists()` guards around `ALTER TABLE`. The one exception is a true
+    column **rename**, which `db_update_table()` cannot express: keep a guarded
+    `ALTER TABLE ... CHANGE COLUMN` as a pre-step immediately before the refresh.
+  - Avoid `api_plugin_db_add_column()`, `api_plugin_db_add_index()`, and `api_plugin_db_drop_*()` for
+    this plugin's own tables — the create + `db_update_table()` pair already covers new columns,
+    indexes, and type changes. Those helpers are only appropriate when modifying a **non-plugin**
+    Cacti core table (for example adding a column to `host`).
+- **Plugin upgrade bookkeeping.** When the stored version differs from the INFO version, update the
+  whole `plugin_config` record, not just `version`:
+  `db_execute_prepared('UPDATE plugin_config SET version = ?, name = ?, author = ?, webpage = ? WHERE directory = ?', [$info['version'], $info['longname'], $info['author'], $info['homepage'], $info['name']])`.
 - **PHPDoc shape.** Every function gets a PHPDoc block: a one-line description, a blank comment
   line, `@param` lines, a blank comment line, then `@return`. Infer parameter/return types from
   actual usage; don't change the function's real type-hints in the same pass (let static analysis
   flag mismatches separately). Skip vendored third-party library files.
+
+## File manifest & upgrade pruning
+
+The plugin ships a root `manifest.json` with three arrays: `tombstones` (files/directories older versions shipped that have since moved or been removed), `expected` (the top-level files and directories that ship today, directories written with a trailing `/`), and `whitelist` (paths holding user data that must never be touched). Keep `expected` current: CI runs `tests/bin/validate-manifest.php`, which fails on any drift between `expected` and the real top-level tree (it ignores `tests/`, `phpunit.xml`, `.git*`, `.md*`, and whitelisted paths). Custom customer CSS/theme files belong in `expected`, and stylesheets live in `css/` (not `themes/`). On upgrade, `gexport_prune_files()` deletes the tombstoned paths, the dev-only `tests/` tree, and the `phpunit.xml` test config, leaves `whitelist`, `.git*`, and `.md*` alone, and logs (without removing) any top-level entry the manifest does not account for. As a safety measure it refuses any tombstone that resolves outside the plugin directory (a tampered manifest.json) and logs a warning for any file or directory it cannot remove. When you move or delete a shipped file, add its old path to `tombstones` and update `expected` in the same change.

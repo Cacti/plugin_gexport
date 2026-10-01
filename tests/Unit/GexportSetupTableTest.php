@@ -9,13 +9,14 @@
  * Unit coverage for gexport_setup_table(), gexport_create_table(), and
  * gexport_create_table_tasks() in setup.php.
  *
- * gexport_setup_table() include_once()s Cacti core's database.php via
+ * gexport_setup_table() require_once()s Cacti core's database.php via
  * $config['library_path'], so that is pointed at a throwaway empty stub
  * file for the duration of these tests.
  */
 
 beforeAll(function () {
 	require_once __DIR__ . '/../../setup.php';
+	require_once __DIR__ . '/../../includes/database.php';
 
 	$stubLibraryPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'gexport-test-lib-stub';
 
@@ -33,28 +34,49 @@ beforeEach(function () {
 	$GLOBALS['__test_db_calls'] = array();
 });
 
-it('creates both tables when neither exists', function () {
-	gexport_test_mock_db('db_table_exists', 'graph_exports_tasks', false);
-	gexport_test_mock_db('db_table_exists', 'graph_exports', false);
-
+it('creates both tables via the tracked plugin table API', function () {
 	expect(gexport_setup_table())->toBeTrue();
 
-	$sql = implode("\n", array_column($GLOBALS['__test_db_calls'], 'sql'));
+	$tables = array_column(
+		array_filter($GLOBALS['__test_db_calls'], function ($call) {
+			return $call['fn'] === 'api_plugin_db_table_create';
+		}),
+		'table'
+	);
 
-	expect($sql)->toContain('CREATE TABLE `graph_exports`');
-	expect($sql)->toContain('CREATE TABLE `graph_exports_tasks`');
+	expect($tables)->toContain('graph_exports')
+		->and($tables)->toContain('graph_exports_tasks');
 });
 
-it('does not recreate a table that already exists', function () {
-	gexport_test_mock_db('db_table_exists', 'graph_exports_tasks', true);
-	gexport_test_mock_db('db_table_exists', 'graph_exports', true);
-
+it('never emits a raw CREATE TABLE statement', function () {
 	gexport_create_table();
 	gexport_create_table_tasks();
 
-	$creates = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+	$raw = array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'CREATE TABLE') !== false;
 	});
 
-	expect($creates)->toBeEmpty();
+	expect($raw)->toBeEmpty();
+});
+
+it('renames the legacy key-path column and refreshes existing tables on upgrade', function () {
+	// Legacy column still present and both tables already exist, so the guarded
+	// rename pre-step fires and each table is refreshed via db_update_table().
+	gexport_test_mock_db('db_column_exists', 'export_index_key_path', true);
+	gexport_test_mock_db('db_table_exists', 'graph_exports', true);
+
+	gexport_upgrade_tables();
+
+	$alters = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'CHANGE COLUMN') !== false;
+	});
+
+	expect($alters)->not->toBeEmpty();
+
+	$refreshed = array_column(array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'db_update_table';
+	}), 'table');
+
+	expect($refreshed)->toContain('graph_exports')
+		->and($refreshed)->toContain('graph_exports_tasks');
 });

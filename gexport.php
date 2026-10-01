@@ -23,9 +23,9 @@
 */
 
 chdir('../../');
-include('./include/auth.php');
-include_once('./plugins/gexport/functions.php');
-include_once('./plugins/gexport/gexport_security.php');
+require('./include/auth.php');
+require_once('./plugins/gexport/includes/functions.php');
+require_once('./plugins/gexport/includes/gexport_security.php');
 
 $export_actions = [
 	'1' => __('Delete', 'gexport'),
@@ -415,7 +415,7 @@ function export_disable($export_id) {
 function export_runnow($export_id) {
 	global $config;
 
-	include_once('./lib/poller.php');
+	require_once('./lib/poller.php');
 
 	$status = db_fetch_row_prepared('SELECT status, enabled FROM graph_exports WHERE id = ?', [$export_id]);
 	$status = is_array($status) ? $status : [];

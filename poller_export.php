@@ -31,16 +31,16 @@ if (substr_count(strtolower($dir), 'gexport')) {
 	chdir('../../');
 }
 
-include('./include/cli_check.php');
-include_once($config['base_path'] . '/lib/poller.php');
-include_once($config['base_path'] . '/lib/data_query.php');
-include_once($config['base_path'] . '/plugins/gexport/functions.php');
-include_once($config['base_path'] . '/lib/rrd.php');
+require('./include/cli_check.php');
+require_once($config['base_path'] . '/lib/poller.php');
+require_once($config['base_path'] . '/lib/data_query.php');
+require_once($config['base_path'] . '/plugins/gexport/includes/functions.php');
+require_once($config['base_path'] . '/lib/rrd.php');
 
 /* poller_export.php runs outside the web UI and does not load setup.php, which
  * defines the CSP nonce helper used by functions.php; ensure it is available. */
 if (!function_exists('plugin_gexport_csp_nonce')) {
-	include_once($config['base_path'] . '/plugins/gexport/setup.php');
+	require_once($config['base_path'] . '/plugins/gexport/setup.php');
 }
 
 /* Let PHP Run Just as Long as It Has To */
@@ -125,7 +125,7 @@ function display_version() {
 	global $config;
 
 	if (!function_exists('plugin_gexport_version')) {
-		include_once($config['base_path'] . '/plugins/gexport/setup.php');
+		require_once($config['base_path'] . '/plugins/gexport/setup.php');
 	}
 
 	$info = plugin_gexport_version();

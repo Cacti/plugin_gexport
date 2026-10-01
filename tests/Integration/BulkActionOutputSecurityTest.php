@@ -21,7 +21,7 @@ if ($contents === false) {
 }
 
 it('includes the gexport_security helper file', function () use ($contents) {
-	expect($contents)->toContain("include_once('./plugins/gexport/gexport_security.php');");
+	expect($contents)->toContain("require_once('./plugins/gexport/includes/gexport_security.php');");
 });
 
 it('normalizes the bulk action from the request before use', function () use ($contents) {

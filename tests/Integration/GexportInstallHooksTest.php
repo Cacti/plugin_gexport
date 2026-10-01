@@ -10,7 +10,7 @@
  * and the realm the plugin depends on at runtime are actually registered,
  * together with the tables it needs, in a single end-to-end pass.
  *
- * gexport_setup_table() include_once()s Cacti core's database.php via
+ * gexport_setup_table() require_once()s Cacti core's database.php via
  * $config['library_path'], so that is pointed at a throwaway empty stub
  * file for the duration of this test.
  */
@@ -53,7 +53,13 @@ it('registers every hook gexport depends on, its realm, and provisions its table
 	expect($GLOBALS['__test_registered_realms'])->toHaveCount(1);
 	expect($GLOBALS['__test_registered_realms'][0]['file'])->toBe('gexport.php');
 
-	$sql = implode("\n", array_column($GLOBALS['__test_db_calls'], 'sql'));
+	$tables = array_column(
+		array_filter($GLOBALS['__test_db_calls'], function ($call) {
+			return $call['fn'] === 'api_plugin_db_table_create';
+		}),
+		'table'
+	);
 
-	expect($sql)->toContain('graph_exports');
+	expect($tables)->toContain('graph_exports')
+		->and($tables)->toContain('graph_exports_tasks');
 });
