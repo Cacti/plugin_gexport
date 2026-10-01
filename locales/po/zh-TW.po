@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2026-01-16 03:18+0000\n"
 "Last-Translator: sucharlie <su.charlie@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/gexport/zh_Hant/>\n"
@@ -17,211 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.11.4\n"
-
-#: functions.php
-#, fuzzy
-msgid "Success"
-msgstr "成功"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "語法或用法錯誤"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "協議不兼容"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "選擇輸入/輸出文件，dirs的錯誤"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "不支持請求的操作：嘗試在不支持它們的平台上操作64位文件;或者指定了客戶端而不是服務器支持的選項。"
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "啟動客戶端 - 服務器協議時出錯"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "守護程序無法附加到日誌文件"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "套接字I / O出錯"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "文件I / O出錯"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "rsync協議數據流出錯"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "程序診斷錯誤"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "IPC代碼出錯"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "收到SIGUSR1或SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "waitpid（）返回的一些錯誤"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "分配核心內存緩衝區時出錯"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "由於錯誤導致的部分轉移"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "由於源文件消失導致部分傳輸"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "--max-delete限制停止刪除"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "數據發送/接收超時"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "超時等待守護程序連接"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "未知錯誤"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "操作成功"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "文件複製中的常規錯誤"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "目標不是目錄，但它應該是"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "超出最大符號鏈接級別"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "連接到主機失敗。"
-
-#: functions.php
-msgid "Connection broken"
-msgstr "連接壞了"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "檔案不存在"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "無權訪問文件。"
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "sftp協議中的一般錯誤"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "文件傳輸協議不匹配"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "沒有文件符合給定條件"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "主機不允許連接"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "ssh協議中的一般錯誤"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "密鑰交換失敗"
-
-#: functions.php
-msgid "Reserved"
-msgstr "預訂"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MAC錯誤"
-
-#: functions.php
-msgid "Compression error"
-msgstr "壓縮錯誤"
-
-#: functions.php
-msgid "Service not available"
-msgstr "服務不可用"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "協議版本不受支持"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "主機密鑰不可驗證"
-
-#: functions.php
-#, fuzzy
-msgid "Connection failed"
-msgstr "連線失敗"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "應用程序斷開連接"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "太多聯繫"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "用戶取消身份驗證"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "沒有更多的身份驗證方法"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "無效的用戶名"
-
-#: functions.php
-#, fuzzy
-msgid "Non Query Based"
-msgstr "非查詢"
-
-#: functions.php
-#, fuzzy
-msgid "Graph Templates"
-msgstr "圖表模板"
-
-#: functions.php
-#, fuzzy
-msgid "Data Queries"
-msgstr "數據查詢"
 
 #: gexport.php
 #, fuzzy
@@ -570,6 +365,211 @@ msgstr "秒"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "沒有圖表導出定義"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Success"
+msgstr "成功"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "語法或用法錯誤"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "協議不兼容"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "選擇輸入/輸出文件，dirs的錯誤"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "不支持請求的操作：嘗試在不支持它們的平台上操作64位文件;或者指定了客戶端而不是服務器支持的選項。"
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "啟動客戶端 - 服務器協議時出錯"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "守護程序無法附加到日誌文件"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "套接字I / O出錯"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "文件I / O出錯"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "rsync協議數據流出錯"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "程序診斷錯誤"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "IPC代碼出錯"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "收到SIGUSR1或SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "waitpid（）返回的一些錯誤"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "分配核心內存緩衝區時出錯"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "由於錯誤導致的部分轉移"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "由於源文件消失導致部分傳輸"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "--max-delete限制停止刪除"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "數據發送/接收超時"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "超時等待守護程序連接"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "未知錯誤"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "操作成功"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "文件複製中的常規錯誤"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "目標不是目錄，但它應該是"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "超出最大符號鏈接級別"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "連接到主機失敗。"
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "連接壞了"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "檔案不存在"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "無權訪問文件。"
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "sftp協議中的一般錯誤"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "文件傳輸協議不匹配"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "沒有文件符合給定條件"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "主機不允許連接"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "ssh協議中的一般錯誤"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "密鑰交換失敗"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "預訂"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MAC錯誤"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "壓縮錯誤"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "服務不可用"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "協議版本不受支持"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "主機密鑰不可驗證"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Connection failed"
+msgstr "連線失敗"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "應用程序斷開連接"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "太多聯繫"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "用戶取消身份驗證"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "沒有更多的身份驗證方法"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "無效的用戶名"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Non Query Based"
+msgstr "非查詢"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Graph Templates"
+msgstr "圖表模板"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Data Queries"
+msgstr "數據查詢"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
