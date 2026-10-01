@@ -41,7 +41,7 @@ beforeEach(function () {
 	test_set_current_page('gexport.php');
 
 	// Sandbox base_path (temp INFO + empty includes/database.php stub) so any
-	// upgrade-path test runs plugin_gexport_prune_files() against a throwaway
+	// upgrade-path test runs gexport_prune_files() against a throwaway
 	// tree, never the real checkout.
 	$GLOBALS['__gexport_base_restore'] = $GLOBALS['config']['base_path'];
 	$base = sys_get_temp_dir() . '/gexport-test-' . uniqid();
