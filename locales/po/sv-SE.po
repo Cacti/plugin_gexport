@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2026-09-12 08:18+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Lyckades"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Syntax eller användningsfel"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Protokoll oförenlighet"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Fel som väljer inmatnings- / utdatafiler, dirs"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Den begärda åtgärden stöds inte. Ett försök gjordes för att manipulera 64-bitars filer på en plattform som inte kan stödja dem. eller ett alternativ anges som stöds av klienten och inte av servern."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "Fel kunde starta klient-server protokoll"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Daemon kan inte lägga till loggfilen"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Fel i uttaget I / O"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "Fel i fil I / O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Fel i rsync-protokolldataströmmen"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Fel med programdiagnostik"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "Fel i IPC-kod"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Mottagde SIGUSR1 eller SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Något fel returnerat av waitpid ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Fel vid tilldelning av kärnminnebuffertar"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Delvis överföring på grund av fel"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Delvis överföring på grund av försvunna källfiler"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "Gränsen --max-delete raderade borttagningar"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Timeout i data som skickas / mottas"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Timeout väntar på daemon-anslutning"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Okänt fel "
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "Operation var framgångsrik"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Allmänt fel i filkopia"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Destination är inte katalog, men det borde vara"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Maximal symlinknivå överskridits"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Anslutning till värd misslyckades."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Anslutning bruten"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Filen finns inte"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Ingen behörighet att komma åt filen."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Allmänt fel i sftp protokoll"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Överföringsprotokollmatchning"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Ingen fil matchar ett givet kriterier"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Värd får inte ansluta"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Allmänt fel i ssh protokoll"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Viktigt utbyte misslyckades"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Reserverad"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MAC fel"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Komprimeringsfel"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Tjänsten är inte tillgänglig"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Protokollversionen stöds inte"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Värdnyckel ej verifierbar"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "% 1"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Avkopplad genom ansökan"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "För många anslutningar"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Autentisering avbruten av användaren"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Inga fler autentiseringsmetoder tillgängliga"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Ogiltigt användarnamn"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Icke-frågan baserad"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Grafmallar"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Dataförfrågningar"
 
 #: gexport.php
 msgid "Delete"
@@ -539,6 +339,206 @@ msgstr "Sek"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Inga Graph Export Definitioner"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Lyckades"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Syntax eller användningsfel"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Protokoll oförenlighet"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Fel som väljer inmatnings- / utdatafiler, dirs"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Den begärda åtgärden stöds inte. Ett försök gjordes för att manipulera 64-bitars filer på en plattform som inte kan stödja dem. eller ett alternativ anges som stöds av klienten och inte av servern."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Fel kunde starta klient-server protokoll"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon kan inte lägga till loggfilen"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Fel i uttaget I / O"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Fel i fil I / O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Fel i rsync-protokolldataströmmen"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Fel med programdiagnostik"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Fel i IPC-kod"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Mottagde SIGUSR1 eller SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Något fel returnerat av waitpid ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Fel vid tilldelning av kärnminnebuffertar"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Delvis överföring på grund av fel"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Delvis överföring på grund av försvunna källfiler"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Gränsen --max-delete raderade borttagningar"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Timeout i data som skickas / mottas"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Timeout väntar på daemon-anslutning"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Okänt fel "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Operation var framgångsrik"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Allmänt fel i filkopia"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Destination är inte katalog, men det borde vara"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Maximal symlinknivå överskridits"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Anslutning till värd misslyckades."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Anslutning bruten"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Filen finns inte"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Ingen behörighet att komma åt filen."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Allmänt fel i sftp protokoll"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Överföringsprotokollmatchning"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Ingen fil matchar ett givet kriterier"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Värd får inte ansluta"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Allmänt fel i ssh protokoll"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Viktigt utbyte misslyckades"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Reserverad"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MAC fel"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Komprimeringsfel"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Tjänsten är inte tillgänglig"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Protokollversionen stöds inte"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Värdnyckel ej verifierbar"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "% 1"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Avkopplad genom ansökan"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "För många anslutningar"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Autentisering avbruten av användaren"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Inga fler autentiseringsmetoder tillgängliga"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Ogiltigt användarnamn"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Icke-frågan baserad"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Grafmallar"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Dataförfrågningar"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
