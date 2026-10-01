@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2026-05-09 10:18+0000\n"
 "Last-Translator: \"Coool (github.com/Coool)\" <coool@mail.lv>\n"
 "Language-Team: Latvian <https://translate.cacti.net/projects/cacti/gexport/lv/>\n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 "X-Generator: Weblate 5.11.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Izpildīts"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Sintakses vai lietošanas kļūda"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Protokola nesaderība"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Kļūdas izvēloties ievades/izvades failus, mapes"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Pieprasītā darbība netiek atbalstīta: tika mēģināts manipulēt 64 bitu failus platformā, kura tos neatbalsta; vai tika norādīta opcija, kuru atbalsta klients, bet ne serveris."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "Kļūda, startējot klienta-servera protokolu"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Dēmons nevar papildināt žurnālfailu"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Kļūda Ievade/Izvade ligzdā"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "Kļūda Ievade/Izvade failā"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Kļūda rsync protokola datu straumē"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Programmas diagnostikas kļūdas"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "Kļūda IPC kodā"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Saņemts SIGUSR1 vai SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Dažas kļūdas no waitpid()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Piešķirot pamatatmiņas buferi, radās kļūda"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Daļēja pārsūtīšana dēļ kļūdas"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Daļēja pārsūtīšana dēļ pazudušiem avota failiem"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "--max-delete parametra ierobežojums apturēja dzēšanu"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Datu nosūtīšanas/saņemšanas noildze"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Noildze, gaidot dēmona savienojumu"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Nezināma kļūda"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "Operācija bija veiksmīga"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Vispārēja kļūda faila kopēšanā"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Galamērķis nav mape, bet tam vajadzētu būt"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Pārsniegts maksimālais simbolsaites līmenis"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Neizdevās izveidot savienojumu ar resursdatoru."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Savienojums bojāts"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Fails neeksistē"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Nav atļaujas piekļūt failam."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Vispārēja kļūda SFTP protokolā"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Faila pārsūtīšanas protokola neatbilstība"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Neviens fails neatbilst norādītajiem kritērijiem"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Resursdatoram nav atļauts izveidot savienojumu"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Vispārēja kļūda SSH protokolā"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Atslēgu apmaiņa neizdevās"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Rezervēts"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MAC kļūda"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Kompresijas kļūda"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Pakalpojums nav pieejams"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Protokola versija netiek atbalstīta"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Resursdatora atslēga nav verificējama"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Savienojums neizdevās"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Atvienots pateicoties programmai"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "Pārāk daudz savienojumu"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Autentifikāciju atcēla lietotājs"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Autentifikācijas metodes vairs nav pieejamas"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Nederīgs lietotājvārds"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Nebalstīts uz vaicājumiem"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Grafiku veidnes"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Datu vaicājumi"
 
 #: gexport.php
 msgid "Delete"
@@ -543,6 +343,206 @@ msgstr "Sek"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Nav grafika eksportēšanas definīciju"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Izpildīts"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Sintakses vai lietošanas kļūda"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Protokola nesaderība"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Kļūdas izvēloties ievades/izvades failus, mapes"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Pieprasītā darbība netiek atbalstīta: tika mēģināts manipulēt 64 bitu failus platformā, kura tos neatbalsta; vai tika norādīta opcija, kuru atbalsta klients, bet ne serveris."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Kļūda, startējot klienta-servera protokolu"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Dēmons nevar papildināt žurnālfailu"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Kļūda Ievade/Izvade ligzdā"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Kļūda Ievade/Izvade failā"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Kļūda rsync protokola datu straumē"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Programmas diagnostikas kļūdas"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Kļūda IPC kodā"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Saņemts SIGUSR1 vai SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Dažas kļūdas no waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Piešķirot pamatatmiņas buferi, radās kļūda"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Daļēja pārsūtīšana dēļ kļūdas"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Daļēja pārsūtīšana dēļ pazudušiem avota failiem"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "--max-delete parametra ierobežojums apturēja dzēšanu"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Datu nosūtīšanas/saņemšanas noildze"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Noildze, gaidot dēmona savienojumu"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Nezināma kļūda"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Operācija bija veiksmīga"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Vispārēja kļūda faila kopēšanā"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Galamērķis nav mape, bet tam vajadzētu būt"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Pārsniegts maksimālais simbolsaites līmenis"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Neizdevās izveidot savienojumu ar resursdatoru."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Savienojums bojāts"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Fails neeksistē"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Nav atļaujas piekļūt failam."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Vispārēja kļūda SFTP protokolā"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Faila pārsūtīšanas protokola neatbilstība"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Neviens fails neatbilst norādītajiem kritērijiem"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Resursdatoram nav atļauts izveidot savienojumu"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Vispārēja kļūda SSH protokolā"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Atslēgu apmaiņa neizdevās"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Rezervēts"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MAC kļūda"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Kompresijas kļūda"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Pakalpojums nav pieejams"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Protokola versija netiek atbalstīta"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Resursdatora atslēga nav verificējama"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Savienojums neizdevās"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Atvienots pateicoties programmai"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Pārāk daudz savienojumu"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Autentifikāciju atcēla lietotājs"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Autentifikācijas metodes vairs nav pieejamas"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Nederīgs lietotājvārds"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Nebalstīts uz vaicājumiem"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Grafiku veidnes"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Datu vaicājumi"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
