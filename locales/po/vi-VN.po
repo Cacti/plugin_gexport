@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:17-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Thành công"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Cú pháp hoặc lỗi sử dụng"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Giao thức không tương thích"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Lỗi chọn tập tin đầu vào / đầu ra, thư mục"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Hành động được yêu cầu không được hỗ trợ: một nỗ lực đã được thực hiện để thao tác các tệp 64 bit trên nền tảng không thể hỗ trợ chúng; hoặc một tùy chọn đã được chỉ định được hỗ trợ bởi máy khách chứ không phải bởi máy chủ."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "Lỗi khi bắt đầu giao thức máy khách-máy chủ"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Daemon không thể nối vào tệp nhật ký"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Lỗi trong I / O ổ cắm"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "Lỗi trong tệp I / O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Lỗi trong luồng dữ liệu giao thức rsync"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Lỗi với chẩn đoán chương trình"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "Lỗi mã IPC"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Đã nhận SIGUSR1 hoặc SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Một số lỗi được trả về bởi Waitpid ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Lỗi phân bổ bộ nhớ lõi"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Chuyển một phần do lỗi"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Chuyển một phần do tập tin nguồn biến mất"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "Giới hạn --max-xóa đã dừng xóa"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Hết thời gian gửi / nhận dữ liệu"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Hết thời gian chờ kết nối daemon"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Lỗi không rõ"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "Hoạt động đã thành công"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Lỗi chung trong sao chép tập tin"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Đích đến không phải là thư mục, nhưng nó phải là"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Vượt quá mức symlink tối đa"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Kết nối với máy chủ không thành công."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Kết nối bị hỏng"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Tập tin không tồn tại"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Không được phép truy cập tập tin."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Lỗi chung trong giao thức sftp"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Giao thức truyền tệp không khớp"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Không có tệp nào khớp với một tiêu chí nhất định"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Máy chủ không được phép kết nối"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Lỗi chung trong giao thức ssh"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Trao đổi khóa không thành công"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Đã đặt"
-
-#: functions.php
-msgid "MAC error"
-msgstr "Lỗi MAC"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Lỗi nén"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Dịch vụ không có sẵn"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Phiên bản giao thức không được hỗ trợ"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Khóa máy chủ không thể kiểm chứng"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Kết nối thất bại"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Ngắt kết nối bởi ứng dụng"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "Quá nhiều kết nối"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Xác thực bị hủy bởi người dùng"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Không có thêm phương thức xác thực có sẵn"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Tên sử dụng không hợp lệ"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Không dựa trên truy vấn"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Mẫu đồ thị"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Truy vấn dữ liệu"
 
 #: gexport.php
 msgid "Delete"
@@ -535,6 +335,206 @@ msgstr "Giây"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Không có định nghĩa xuất đồ thị"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Thành công"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Cú pháp hoặc lỗi sử dụng"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Giao thức không tương thích"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Lỗi chọn tập tin đầu vào / đầu ra, thư mục"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Hành động được yêu cầu không được hỗ trợ: một nỗ lực đã được thực hiện để thao tác các tệp 64 bit trên nền tảng không thể hỗ trợ chúng; hoặc một tùy chọn đã được chỉ định được hỗ trợ bởi máy khách chứ không phải bởi máy chủ."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Lỗi khi bắt đầu giao thức máy khách-máy chủ"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon không thể nối vào tệp nhật ký"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Lỗi trong I / O ổ cắm"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Lỗi trong tệp I / O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Lỗi trong luồng dữ liệu giao thức rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Lỗi với chẩn đoán chương trình"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Lỗi mã IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Đã nhận SIGUSR1 hoặc SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Một số lỗi được trả về bởi Waitpid ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Lỗi phân bổ bộ nhớ lõi"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Chuyển một phần do lỗi"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Chuyển một phần do tập tin nguồn biến mất"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Giới hạn --max-xóa đã dừng xóa"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Hết thời gian gửi / nhận dữ liệu"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Hết thời gian chờ kết nối daemon"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Lỗi không rõ"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Hoạt động đã thành công"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Lỗi chung trong sao chép tập tin"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Đích đến không phải là thư mục, nhưng nó phải là"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Vượt quá mức symlink tối đa"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Kết nối với máy chủ không thành công."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Kết nối bị hỏng"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Tập tin không tồn tại"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Không được phép truy cập tập tin."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Lỗi chung trong giao thức sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Giao thức truyền tệp không khớp"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Không có tệp nào khớp với một tiêu chí nhất định"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Máy chủ không được phép kết nối"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Lỗi chung trong giao thức ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Trao đổi khóa không thành công"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Đã đặt"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Lỗi MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Lỗi nén"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Dịch vụ không có sẵn"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Phiên bản giao thức không được hỗ trợ"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Khóa máy chủ không thể kiểm chứng"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Kết nối thất bại"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Ngắt kết nối bởi ứng dụng"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Quá nhiều kết nối"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Xác thực bị hủy bởi người dùng"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Không có thêm phương thức xác thực có sẵn"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Tên sử dụng không hợp lệ"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Không dựa trên truy vấn"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Mẫu đồ thị"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Truy vấn dữ liệu"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
