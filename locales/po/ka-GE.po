@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2025-09-23 05:09+0000\n"
 "Last-Translator: Ekaterine papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "წარმატებულია"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr ""
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "პროტოკოლის შეუთავსებლობა"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr ""
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr ""
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr ""
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr ""
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr ""
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr ""
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr ""
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr ""
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr ""
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr ""
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr ""
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr ""
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr ""
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr ""
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr ""
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr ""
-
-#: functions.php
-msgid "Unknown error "
-msgstr "უცნობი შეცდომა "
-
-#: functions.php
-msgid "Operation was successful"
-msgstr ""
-
-#: functions.php
-msgid "General error in file copy"
-msgstr ""
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr ""
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr ""
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr ""
-
-#: functions.php
-msgid "Connection broken"
-msgstr "კავშირი გაფუჭებულია"
-
-#: functions.php
-msgid "File does not exist"
-msgstr ""
-
-#: functions.php
-msgid "No permission to access file."
-msgstr ""
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr ""
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr ""
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr ""
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr ""
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr ""
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "გასაღებების მიმოცვლა ჩავარდა"
-
-#: functions.php
-msgid "Reserved"
-msgstr "დარეზერვებულია"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MAC-ის შეცდომა"
-
-#: functions.php
-msgid "Compression error"
-msgstr "შეკუმშვის შეცდომა"
-
-#: functions.php
-msgid "Service not available"
-msgstr "სერვისი ხელმისაწვდომი არაა"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr ""
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr ""
-
-#: functions.php
-msgid "Connection failed"
-msgstr "კავშირის შეცდომა"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "გათიშულია აპლიკაციის მიერ"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "მეტისმეტად ბევრი მიერთება"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr ""
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr ""
-
-#: functions.php
-msgid "Invalid user name"
-msgstr ""
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "არაა დაფუძნებული მოთხოვნაზე"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "გრაფიკის შაბლონები"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "მონაცემთა გამოთხოვები"
 
 #: gexport.php
 msgid "Delete"
@@ -537,6 +337,206 @@ msgstr "წმ"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr ""
+
+#: includes/functions.php
+msgid "Success"
+msgstr "წარმატებულია"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr ""
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "პროტოკოლის შეუთავსებლობა"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr ""
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr ""
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr ""
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr ""
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr ""
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr ""
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr ""
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr ""
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr ""
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr ""
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr ""
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr ""
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr ""
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr ""
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr ""
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr ""
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr ""
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "უცნობი შეცდომა "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr ""
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr ""
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr ""
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr ""
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr ""
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "კავშირი გაფუჭებულია"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr ""
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr ""
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr ""
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr ""
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr ""
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr ""
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr ""
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "გასაღებების მიმოცვლა ჩავარდა"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "დარეზერვებულია"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MAC-ის შეცდომა"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "შეკუმშვის შეცდომა"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "სერვისი ხელმისაწვდომი არაა"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr ""
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr ""
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "კავშირის შეცდომა"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "გათიშულია აპლიკაციის მიერ"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "მეტისმეტად ბევრი მიერთება"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr ""
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr ""
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr ""
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "არაა დაფუძნებული მოთხოვნაზე"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "გრაფიკის შაბლონები"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "მონაცემთა გამოთხოვები"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
