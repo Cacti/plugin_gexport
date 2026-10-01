@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:10-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Готово"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Синтаксис или грешка в използването"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Несъвместимост на протокола"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Грешки при избора на входни / изходни файлове, dirs"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Заявеното действие не се поддържа: направен е опит за манипулиране на 64-битови файлове на платформа, която не може да ги поддържа; или е зададена опция, която се поддържа от клиента, а не от сървъра."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "Грешка при стартирането на протокол клиент-сървър"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Daemon не може да добави към лог-файл"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Грешка в гнездото I / O"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "Грешка във файла I / O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Грешка в потока данни на протокола rsync"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Грешки при диагностика на програмата"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "Грешка в кода на IPC"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Получени са SIGUSR1 или SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Някои грешки, върнати от waitpid ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Грешка при разпределянето на буфери на основната памет"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Частично прехвърляне поради грешка"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Частично прехвърляне поради изчезнали източници"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "Лимитът --max-delete е спрял изтриването"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Прекъсване на времето за изпращане / получаване на данни"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Времето за изчакване на връзката с демон"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Неизвестна грешка"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "Операцията беше успешна"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Обща грешка при копиране на файл"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Дестинацията не е директория, но трябва да бъде"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Превишено е максималното ниво на символни връзки"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Неуспешно свързване с хост."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Връзката е прекъсната"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Файлът не съществува"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Няма разрешение за достъп до файла."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Обща грешка в протокола sftp"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Несъответствие между протокола за прехвърляне на файлове"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Никой файл не отговаря на даден критерий"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Хостът не може да се свързва"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Обща грешка в ssh протокола"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Обмяната на ключове е неуспешна"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Запазен"
-
-#: functions.php
-msgid "MAC error"
-msgstr "Грешка в MAC"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Грешка при компресиране"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Услугата не е налична"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Версията на протокола не се поддържа"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Ключът на хоста не може да бъде проверен"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Свързването е неуспешно."
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Изключено от приложението"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "Твърде много връзки"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Удостоверяването е анулирано от потребителя"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Няма повече налични методи за удостоверяване"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Невалидно потребителско име"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Въз основа на заявките"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Шаблони за графики"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Автоматизирани данни"
 
 #: gexport.php
 msgid "Delete"
@@ -539,6 +339,206 @@ msgstr "Detik"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Няма определения за експортиране на графика"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Готово"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Синтаксис или грешка в използването"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Несъвместимост на протокола"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Грешки при избора на входни / изходни файлове, dirs"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Заявеното действие не се поддържа: направен е опит за манипулиране на 64-битови файлове на платформа, която не може да ги поддържа; или е зададена опция, която се поддържа от клиента, а не от сървъра."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Грешка при стартирането на протокол клиент-сървър"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon не може да добави към лог-файл"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Грешка в гнездото I / O"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Грешка във файла I / O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Грешка в потока данни на протокола rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Грешки при диагностика на програмата"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Грешка в кода на IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Получени са SIGUSR1 или SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Някои грешки, върнати от waitpid ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Грешка при разпределянето на буфери на основната памет"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Частично прехвърляне поради грешка"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Частично прехвърляне поради изчезнали източници"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Лимитът --max-delete е спрял изтриването"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Прекъсване на времето за изпращане / получаване на данни"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Времето за изчакване на връзката с демон"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Неизвестна грешка"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Операцията беше успешна"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Обща грешка при копиране на файл"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Дестинацията не е директория, но трябва да бъде"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Превишено е максималното ниво на символни връзки"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Неуспешно свързване с хост."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Връзката е прекъсната"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Файлът не съществува"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Няма разрешение за достъп до файла."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Обща грешка в протокола sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Несъответствие между протокола за прехвърляне на файлове"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Никой файл не отговаря на даден критерий"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Хостът не може да се свързва"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Обща грешка в ssh протокола"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Обмяната на ключове е неуспешна"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Запазен"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Грешка в MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Грешка при компресиране"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Услугата не е налична"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Версията на протокола не се поддържа"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ключът на хоста не може да бъде проверен"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Свързването е неуспешно."
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Изключено от приложението"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Твърде много връзки"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Удостоверяването е анулирано от потребителя"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Няма повече налични методи за удостоверяване"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Невалидно потребителско име"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Въз основа на заявките"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Шаблони за графики"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Автоматизирани данни"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
