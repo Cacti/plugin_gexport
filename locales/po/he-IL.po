@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:12-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "הצלחה"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "שגיאת תחביר או שימוש"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "פרוטוקול אי תאימות"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "שגיאות בחירת קלט / פלט קבצים, dirs"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "הפעולה המבוקשת אינה נתמכת: נעשה ניסיון לתפעל קבצים של 64 סיביות על פלטפורמה שאינה תומכת בהם; או שצוין אופציה הנתמכת על-ידי הלקוח ולא על-ידי השרת."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "שגיאה בהפעלת פרוטוקול שרת לקוח"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Daemon לא יכול לצרף קובץ יומן"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "שגיאה בשקע I / O"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "שגיאה בקובץ I / O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "שגיאה בזרם הנתונים של פרוטוקול rsync"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "טעויות עם אבחון התוכנית"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "שגיאה בקוד IPC"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "קיבל SIGUSR1 או SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "שגיאה שהוחזרה על ידי waitpid ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "שגיאה בהקצאת מאגרי זיכרון מרכזיים"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "העברה חלקית עקב שגיאה"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "העברה חלקית עקב קבצי המקור שנעלמו"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "המגבלה --max-delete עצרה את המחיקות"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "פסק זמן בשליחה / קבלה של נתונים"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "זמן קצוב מחכה לחיבור הדמון"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "שגיאה לא ידועה"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "המבצע היה מוצלח"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "שגיאה כללית בהעתקת הקובץ"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "היעד אינו ספריה, אבל זה צריך להיות"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "חריגה מרמת הסימניות המקסימלית"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "החיבור למארח נכשל."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "החיבורים שבורים"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "לא קיים."
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "אין הרשאה לגשת לקובץ."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "שגיאה כללית בפרוטוקול sftp"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "פרוטוקול העברת הקבצים אינו תואם"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "אין קובץ שמתאים לקריטריונים מסוימים"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "מארח אינו מורשה להתחבר"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "שגיאה כללית בפרוטוקול SSH"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "החלפת המקשים נכשלה"
-
-#: functions.php
-msgid "Reserved"
-msgstr "שמורות"
-
-#: functions.php
-msgid "MAC error"
-msgstr "שגיאת MAC"
-
-#: functions.php
-msgid "Compression error"
-msgstr "שגיאת דחיסה"
-
-#: functions.php
-msgid "Service not available"
-msgstr "השירות אינו זמין"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "גרסת הפרוטוקול אינה נתמכת"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "מפתח מארח לא ניתן לאמת"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "החיבור נכשל"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "מנותק על ידי היישום"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "חיבורים רבים מדי"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "האימות בוטל על ידי המשתמש"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "אין עוד שיטות אימות זמינות"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "שם משתמש לא חוקי"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "מבוסס על שאילתה"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "תבניות גרף"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "שאילתות נתונים"
 
 #: gexport.php
 msgid "Delete"
@@ -547,6 +347,206 @@ msgstr "שניות"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "אין הגדרות ייצוא גרף"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "הצלחה"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "שגיאת תחביר או שימוש"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "פרוטוקול אי תאימות"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "שגיאות בחירת קלט / פלט קבצים, dirs"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "הפעולה המבוקשת אינה נתמכת: נעשה ניסיון לתפעל קבצים של 64 סיביות על פלטפורמה שאינה תומכת בהם; או שצוין אופציה הנתמכת על-ידי הלקוח ולא על-ידי השרת."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "שגיאה בהפעלת פרוטוקול שרת לקוח"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon לא יכול לצרף קובץ יומן"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "שגיאה בשקע I / O"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "שגיאה בקובץ I / O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "שגיאה בזרם הנתונים של פרוטוקול rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "טעויות עם אבחון התוכנית"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "שגיאה בקוד IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "קיבל SIGUSR1 או SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "שגיאה שהוחזרה על ידי waitpid ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "שגיאה בהקצאת מאגרי זיכרון מרכזיים"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "העברה חלקית עקב שגיאה"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "העברה חלקית עקב קבצי המקור שנעלמו"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "המגבלה --max-delete עצרה את המחיקות"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "פסק זמן בשליחה / קבלה של נתונים"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "זמן קצוב מחכה לחיבור הדמון"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "שגיאה לא ידועה"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "המבצע היה מוצלח"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "שגיאה כללית בהעתקת הקובץ"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "היעד אינו ספריה, אבל זה צריך להיות"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "חריגה מרמת הסימניות המקסימלית"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "החיבור למארח נכשל."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "החיבורים שבורים"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "לא קיים."
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "אין הרשאה לגשת לקובץ."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "שגיאה כללית בפרוטוקול sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "פרוטוקול העברת הקבצים אינו תואם"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "אין קובץ שמתאים לקריטריונים מסוימים"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "מארח אינו מורשה להתחבר"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "שגיאה כללית בפרוטוקול SSH"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "החלפת המקשים נכשלה"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "שמורות"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "שגיאת MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "שגיאת דחיסה"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "השירות אינו זמין"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "גרסת הפרוטוקול אינה נתמכת"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "מפתח מארח לא ניתן לאמת"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "החיבור נכשל"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "מנותק על ידי היישום"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "חיבורים רבים מדי"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "האימות בוטל על ידי המשתמש"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "אין עוד שיטות אימות זמינות"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "שם משתמש לא חוקי"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "מבוסס על שאילתה"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "תבניות גרף"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "שאילתות נתונים"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
