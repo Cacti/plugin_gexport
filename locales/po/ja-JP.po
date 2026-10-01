@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-11-21 22:59+0000\n"
 "Last-Translator: Nakayama Kito <nakayamakito@icloud.com>\n"
 "Language-Team: Japanese <http://translate.cacti.net/projects/cacti/gexport/ja/>\n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.8.1\n"
-
-#: functions.php
-msgid "Success"
-msgstr "成功"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "構文エラーまたは使用方法エラー"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "プロトコルの非互換性"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "入出力ファイルの選択エラー、ディレクトリ"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "要求されたアクションはサポートされていません：サポートできないプラットフォームで64ビットファイルを操作しようとしました。または、サーバーではなくクライアントによってサポートされているオプションが指定されました。"
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "クライアント/サーバープロトコルの起動エラー"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "デーモンはログファイルに追加できません"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "ソケット入出力エラー"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "ファイル入出力エラー"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "rsyncプロトコルデータストリームのエラー"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "プログラム診断のエラー"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "IPCコードのエラー"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "SIGUSR1またはSIGINTを受け取りました"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "waitpid（）から返されるエラー"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "コアメモリバッファの割り当てエラー"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "エラーによる部分的な転送"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "ソースファイルの消失による部分転送"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "--max-delete制限により削除が停止されました"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "データ送受信のタイムアウト"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "デーモン接続待ちタイムアウト"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "未知のエラー"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "操作は成功しました"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "ファイルコピー中の一般エラー"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "目的地はディレクトリではありませんが、それはあるべきです"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "最大シンボリックリンクレベルを超えました"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "ホストへの接続に失敗しました。"
-
-#: functions.php
-msgid "Connection broken"
-msgstr "接続が切れました"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "ファイルが存在しません"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "ファイルにアクセスする権限がありません。"
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "sftpプロトコルの一般エラー"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "ファイル転送プロトコルの不一致"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "指定された条件に一致するファイルがありません"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "ホストは接続を許可されていません"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "SSHプロトコルの一般エラー"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "鍵交換に失敗しました"
-
-#: functions.php
-msgid "Reserved"
-msgstr "予約済み"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MACエラー"
-
-#: functions.php
-msgid "Compression error"
-msgstr "圧縮エラー"
-
-#: functions.php
-msgid "Service not available"
-msgstr "サービスは利用できません"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "プロトコルバージョンはサポートされていません"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "ホスト鍵を検証できません"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "接続に失敗しました"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "アプリケーションによって切断されました"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "あまりにも多くの接続"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "ユーザーによって認証がキャンセルされました"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "これ以上利用できる認証方法はありません"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "無効なユーザー名"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "非クエリベース"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "グラフテンプレート"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "データ問合せ"
 
 #: gexport.php
 msgid "Delete"
@@ -535,6 +335,206 @@ msgstr "秒"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "グラフエクスポート定義なし"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "成功"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "構文エラーまたは使用方法エラー"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "プロトコルの非互換性"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "入出力ファイルの選択エラー、ディレクトリ"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "要求されたアクションはサポートされていません：サポートできないプラットフォームで64ビットファイルを操作しようとしました。または、サーバーではなくクライアントによってサポートされているオプションが指定されました。"
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "クライアント/サーバープロトコルの起動エラー"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "デーモンはログファイルに追加できません"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "ソケット入出力エラー"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "ファイル入出力エラー"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "rsyncプロトコルデータストリームのエラー"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "プログラム診断のエラー"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "IPCコードのエラー"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "SIGUSR1またはSIGINTを受け取りました"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "waitpid（）から返されるエラー"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "コアメモリバッファの割り当てエラー"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "エラーによる部分的な転送"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "ソースファイルの消失による部分転送"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "--max-delete制限により削除が停止されました"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "データ送受信のタイムアウト"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "デーモン接続待ちタイムアウト"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "未知のエラー"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "操作は成功しました"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "ファイルコピー中の一般エラー"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "目的地はディレクトリではありませんが、それはあるべきです"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "最大シンボリックリンクレベルを超えました"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "ホストへの接続に失敗しました。"
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "接続が切れました"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "ファイルが存在しません"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "ファイルにアクセスする権限がありません。"
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "sftpプロトコルの一般エラー"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "ファイル転送プロトコルの不一致"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "指定された条件に一致するファイルがありません"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "ホストは接続を許可されていません"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "SSHプロトコルの一般エラー"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "鍵交換に失敗しました"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "予約済み"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MACエラー"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "圧縮エラー"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "サービスは利用できません"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "プロトコルバージョンはサポートされていません"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "ホスト鍵を検証できません"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "接続に失敗しました"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "アプリケーションによって切断されました"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "あまりにも多くの接続"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "ユーザーによって認証がキャンセルされました"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "これ以上利用できる認証方法はありません"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "無効なユーザー名"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "非クエリベース"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "グラフテンプレート"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "データ問合せ"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
