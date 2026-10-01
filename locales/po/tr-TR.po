@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:17-0400\n"
 "Last-Translator: San IPE <sanipe1949@krunsea.com>\n"
 "Language-Team: Turkish <http://translate.cacti.net/projects/cacti/gexport/tr/>\n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Başarılı"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Sözdizimi veya kullanım hatası"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Protokol uyumsuzluğu"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Giriş / çıkış dosyalarını seçerken hata, dir"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "İstenen eylem desteklenmiyor: 64 bit dosyaları destekleyemeyen bir platformda işlemeye çalışıldı; veya sunucu tarafından değil, istemci tarafından desteklenen bir seçenek belirtildi."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "İstemci-sunucu protokolünü başlatırken hata oluştu"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Daemon log dosyasına eklenemedi"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Soket G / Ç'de hata"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "G / Ç dosyasında hata"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Rsync protokolü veri akışında hata"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Program tanılama hataları"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "IPC kodunda hata"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "SIGUSR1 veya SIGINT aldı"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Waitpid () tarafından döndürülen bazı hatalar"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Çekirdek bellek arabelleği ayırma hatası"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Hata nedeniyle kısmi transfer"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Kaybolan kaynak dosyaları nedeniyle kısmi transfer"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "--Max-delete limiti silmeleri durdurdu"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Veri gönderme / alma işleminde zaman aşımı"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Daemon bağlantısı için bekleyen zaman aşımı"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Bilinmeyen hata"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "İşlem başarılı oldu"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Dosya kopyasında genel hata"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Hedef dizin değil, öyle olmalı"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Maksimum sembolik bağlantı seviyesi aşıldı"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Ana bilgisayara bağlanma başarısız oldu."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Bağlantı koptu"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Dosya yok"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Dosyaya erişim izni yok."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Sftp protokolünde genel hata"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Dosya aktarım protokolü uyuşmazlığı"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Belirli bir ölçütle eşleşen dosya yok"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Ana bilgisayarın bağlanmasına izin verilmiyor"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Ssh protokolünde genel hata"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Anahtar değişimi başarısız oldu"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Rezerve"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MAC hatası"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Sıkıştırma hatası"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Servis dışı"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Protokol sürümü desteklenmiyor"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Ana bilgisayar anahtarı doğrulanamıyor"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Bağlantı kurulamadı"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Uygulama ile bağlantısı kesildi"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "Çok fazla bağlantı"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Kimlik doğrulama kullanıcı tarafından iptal edildi"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Başka doğrulama yöntemi yok"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Geçersiz kullanıcı adı"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Sorgu Tabanlı Olmayan"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Grafik Şablonları"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Veri Sorguları"
 
 #: gexport.php
 msgid "Delete"
@@ -539,6 +339,206 @@ msgstr "Saniye"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Grafik Verme Tanımları Yok"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Başarılı"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Sözdizimi veya kullanım hatası"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Protokol uyumsuzluğu"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Giriş / çıkış dosyalarını seçerken hata, dir"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "İstenen eylem desteklenmiyor: 64 bit dosyaları destekleyemeyen bir platformda işlemeye çalışıldı; veya sunucu tarafından değil, istemci tarafından desteklenen bir seçenek belirtildi."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "İstemci-sunucu protokolünü başlatırken hata oluştu"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon log dosyasına eklenemedi"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Soket G / Ç'de hata"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "G / Ç dosyasında hata"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Rsync protokolü veri akışında hata"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Program tanılama hataları"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "IPC kodunda hata"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "SIGUSR1 veya SIGINT aldı"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Waitpid () tarafından döndürülen bazı hatalar"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Çekirdek bellek arabelleği ayırma hatası"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Hata nedeniyle kısmi transfer"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Kaybolan kaynak dosyaları nedeniyle kısmi transfer"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "--Max-delete limiti silmeleri durdurdu"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Veri gönderme / alma işleminde zaman aşımı"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Daemon bağlantısı için bekleyen zaman aşımı"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Bilinmeyen hata"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "İşlem başarılı oldu"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Dosya kopyasında genel hata"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Hedef dizin değil, öyle olmalı"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Maksimum sembolik bağlantı seviyesi aşıldı"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Ana bilgisayara bağlanma başarısız oldu."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Bağlantı koptu"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Dosya yok"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Dosyaya erişim izni yok."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Sftp protokolünde genel hata"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Dosya aktarım protokolü uyuşmazlığı"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Belirli bir ölçütle eşleşen dosya yok"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Ana bilgisayarın bağlanmasına izin verilmiyor"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Ssh protokolünde genel hata"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Anahtar değişimi başarısız oldu"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Rezerve"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MAC hatası"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Sıkıştırma hatası"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Servis dışı"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Protokol sürümü desteklenmiyor"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ana bilgisayar anahtarı doğrulanamıyor"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Bağlantı kurulamadı"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Uygulama ile bağlantısı kesildi"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Çok fazla bağlantı"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Kimlik doğrulama kullanıcı tarafından iptal edildi"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Başka doğrulama yöntemi yok"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Geçersiz kullanıcı adı"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Sorgu Tabanlı Olmayan"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Grafik Şablonları"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Veri Sorguları"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
