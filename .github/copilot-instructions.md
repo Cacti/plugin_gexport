@@ -25,18 +25,18 @@ When generating code for this repository:
 ## Project Structure
 
 ```
-gexport/               # Repository root (install to plugins/gexport/ in Cacti)
-├── includes/            # Library/helper files, require_once'd from the entry points
-│   ├── database.php       # Schema management: *_table_data() + create/upgrade/drop helpers
+gexport/                     # Repository root (install to plugins/gexport/ in Cacti)
+├── includes/                # Library/helper files, require_once'd from the entry points
+│   ├── database.php         # Schema management: *_table_data() + create/upgrade/drop helpers
 │   ├── functions.php        # Export engine: run_export(), exporter(), rsync/scp helpers
-│   └── gexport_security.php   # Bulk-action normalization and output-escaping helpers
-├── locales/                     # Internationalization files
-├── gexport.php                    # Main export definition administration UI
-├── poller_export.php                # Background export runner (CLI, spawned from poller_bottom)
-├── website.template                   # HTML template used for exported site view
-├── INFO                                 # Plugin metadata (name, version, compat)
+│   └── gexport_security.php # Bulk-action normalization and output-escaping helpers
+├── locales/                 # Internationalization files
+├── gexport.php              # Main export definition administration UI
+├── poller_export.php        # Background export runner (CLI, spawned from poller_bottom)
+├── website.template         # HTML template used for exported site view
+├── INFO                     # Plugin metadata (name, version, compat)
 ├── README.md
-└── setup.php                              # Plugin install/uninstall/upgrade hooks
+└── setup.php                # Plugin install/uninstall/upgrade hooks
 ```
 
 ## Naming Conventions
