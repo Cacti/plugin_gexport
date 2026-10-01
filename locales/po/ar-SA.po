@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:10-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "نجاح"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "خطأ في بناء الجملة أو الاستخدام"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "عدم توافق البروتوكول"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "أخطاء اختيار إدخال / إخراج الملفات ، dirs"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "الإجراء المطلوب غير مدعوم: جرت محاولة لمعالجة ملفات 64 بت على نظام أساسي لا يمكنه دعمها ؛ أو تم تحديد خيار معتمد من قبل العميل وليس من قبل الخادم."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "خطأ في بدء بروتوكول خادم العميل"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "شيطان غير قادر على إلحاق ملف السجل"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "خطأ في المقبس I / O"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "خطأ في الملف I / O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "خطأ في دفق بيانات بروتوكول rsync"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "أخطاء في برنامج التشخيص"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "خطأ في كود IPC"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "تلقى SIGUSR1 أو SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "تم إرجاع بعض الأخطاء بواسطة waitpid ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "خطأ في تخصيص مخازن الذاكرة الأساسية"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "نقل جزئي بسبب خطأ"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "نقل جزئي بسبب اختفاء الملفات المصدر"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "توقف الحد الأقصى للحذف - الحذف"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "مهلة في إرسال البيانات / تلقي"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "مهلة انتظار اتصال الخفي"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "خطأ غير معروف"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "العملية كانت ناجحة"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "خطأ عام في نسخة الملف"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "الوجهة ليست دليلًا ، لكن يجب أن تكون"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "تم تجاوز الحد الأقصى لمستوى الارتباط"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "فشل الاتصال بالمضيف."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "اتصال مكسورة"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "الملف غير موجود"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "لا يوجد إذن للوصول إلى الملف."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "خطأ عام في بروتوكول sftp"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "عدم تطابق بروتوكول نقل الملفات"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "لا يوجد ملف مطابق لمعايير معينة"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "المضيف غير مسموح للاتصال"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "خطأ عام في بروتوكول ssh"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "فشل تبادل المفاتيح"
-
-#: functions.php
-msgid "Reserved"
-msgstr "محجوز"
-
-#: functions.php
-msgid "MAC error"
-msgstr "خطأ MAC"
-
-#: functions.php
-msgid "Compression error"
-msgstr "خطأ ضغط"
-
-#: functions.php
-msgid "Service not available"
-msgstr "الخدمة غير متوفرة"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "نسخة البروتوكول غير مدعومة"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "مفتاح المضيف غير قابل للتحقق"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "فشل الاتصال"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "تم قطع الاتصال عن طريق التطبيق"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "الكثير من الاتصالات"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "تم إلغاء المصادقة من قبل المستخدم"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "لا مزيد من أساليب المصادقة المتاحة"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "اسم المستخدم غير صحيح"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "غير الاستفسار القائمة"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "قوالب الرسم البياني"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "استعلامات البيانات"
 
 #: gexport.php
 msgid "Delete"
@@ -555,6 +355,206 @@ msgstr "ثانية"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "لا يوجد تعريفات تصدير الرسم البياني"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "نجاح"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "خطأ في بناء الجملة أو الاستخدام"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "عدم توافق البروتوكول"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "أخطاء اختيار إدخال / إخراج الملفات ، dirs"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "الإجراء المطلوب غير مدعوم: جرت محاولة لمعالجة ملفات 64 بت على نظام أساسي لا يمكنه دعمها ؛ أو تم تحديد خيار معتمد من قبل العميل وليس من قبل الخادم."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "خطأ في بدء بروتوكول خادم العميل"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "شيطان غير قادر على إلحاق ملف السجل"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "خطأ في المقبس I / O"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "خطأ في الملف I / O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "خطأ في دفق بيانات بروتوكول rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "أخطاء في برنامج التشخيص"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "خطأ في كود IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "تلقى SIGUSR1 أو SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "تم إرجاع بعض الأخطاء بواسطة waitpid ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "خطأ في تخصيص مخازن الذاكرة الأساسية"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "نقل جزئي بسبب خطأ"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "نقل جزئي بسبب اختفاء الملفات المصدر"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "توقف الحد الأقصى للحذف - الحذف"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "مهلة في إرسال البيانات / تلقي"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "مهلة انتظار اتصال الخفي"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "خطأ غير معروف"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "العملية كانت ناجحة"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "خطأ عام في نسخة الملف"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "الوجهة ليست دليلًا ، لكن يجب أن تكون"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "تم تجاوز الحد الأقصى لمستوى الارتباط"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "فشل الاتصال بالمضيف."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "اتصال مكسورة"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "الملف غير موجود"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "لا يوجد إذن للوصول إلى الملف."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "خطأ عام في بروتوكول sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "عدم تطابق بروتوكول نقل الملفات"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "لا يوجد ملف مطابق لمعايير معينة"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "المضيف غير مسموح للاتصال"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "خطأ عام في بروتوكول ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "فشل تبادل المفاتيح"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "محجوز"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "خطأ MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "خطأ ضغط"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "الخدمة غير متوفرة"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "نسخة البروتوكول غير مدعومة"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "مفتاح المضيف غير قابل للتحقق"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "فشل الاتصال"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "تم قطع الاتصال عن طريق التطبيق"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "الكثير من الاتصالات"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "تم إلغاء المصادقة من قبل المستخدم"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "لا مزيد من أساليب المصادقة المتاحة"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "اسم المستخدم غير صحيح"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "غير الاستفسار القائمة"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "قوالب الرسم البياني"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "استعلامات البيانات"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
