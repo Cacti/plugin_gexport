@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:11-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Επιτυχία"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Σύνταξη ή σφάλμα χρήσης"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Ασυμβατότητα πρωτοκόλλου"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Σφάλματα επιλογής αρχείων εισόδου / εξόδου, διευθύνσεις"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Η ενέργεια που ζητήσατε δεν υποστηρίζεται: έγινε προσπάθεια χειρισμού αρχείων 64-bit σε μια πλατφόρμα που δεν μπορεί να τα υποστηρίξει. ή έχει οριστεί μια επιλογή που υποστηρίζεται από τον υπολογιστή-πελάτη και όχι από το διακομιστή."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "Σφάλμα εκκίνησης πρωτοκόλλου πελάτη-διακομιστή"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Ο δαίμονας δεν μπορεί να προστεθεί στο αρχείο καταγραφής"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Σφάλμα στο I / O της υποδοχής"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "Σφάλμα στο αρχείο I / O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Σφάλμα στη ροή δεδομένων πρωτοκόλλου rsync"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Σφάλματα με τη διάγνωση προγραμμάτων"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "Σφάλμα στον κώδικα IPC"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Λήφθηκαν SIGUSR1 ή SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Κάποιο σφάλμα που επέστρεψε το waitpid ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Παρουσιάστηκε σφάλμα κατά την κατανομή buffer buffers"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Μερική μεταφορά λόγω σφάλματος"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Μερική μεταφορά λόγω εξαφανισμένων αρχείων προέλευσης"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "Το όριο -max-delete διακόπηκε"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Χρονικό όριο στα δεδομένα αποστολής / λήψης"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Χρόνος αναμονής για σύνδεση δαίμονα"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Αγνωστο σφάλμα"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "Η λειτουργία ήταν επιτυχής"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Γενικό σφάλμα στο αντίγραφο αρχείου"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Ο προορισμός δεν είναι κατάλογος, αλλά πρέπει να είναι"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Έχει ξεπεραστεί το μέγιστο επίπεδο συμβολισμού"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Η σύνδεση με τον κεντρικό υπολογιστή απέτυχε."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Η σύνδεση σπάσει"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Το αρχείο δεν υπάρχει"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Δεν υπάρχει άδεια πρόσβασης στο αρχείο."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Γενικό σφάλμα στο πρωτόκολλο sftp"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Ασυμφωνία πρωτοκόλλου μεταφοράς αρχείων"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Δεν υπάρχει αρχείο που να ταιριάζει με συγκεκριμένα κριτήρια"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Ο οικοδεσπότης δεν επιτρέπεται να συνδεθεί"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Γενικό σφάλμα στο πρωτόκολλο ssh"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Η ανταλλαγή κλειδιών απέτυχε"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Κράτηση"
-
-#: functions.php
-msgid "MAC error"
-msgstr "Σφάλμα MAC"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Σφάλμα συμπίεσης"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Η υπηρεσία δεν είναι διαθέσιμη"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Η έκδοση πρωτοκόλλου δεν υποστηρίζεται"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Το κλειδί υποδοχής δεν είναι επαληθεύσιμο"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Η σύνδεση απέτυχε"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Αποσυνδεδεμένος από την εφαρμογή"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "Πάρα πολλές συνδέσεις"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Ο έλεγχος ταυτότητας ακυρώθηκε από το χρήστη"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Δεν υπάρχουν πλέον διαθέσιμες μέθοδοι ελέγχου ταυτότητας"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Μη έγκυρο όνομα χρήστη"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Μη βασισμένο σε ερωτήματα"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Πρότυπα γραφήματος"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Ερωτήματα δεδομένων"
 
 #: gexport.php
 msgid "Delete"
@@ -539,6 +339,206 @@ msgstr "Δευτ"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Δεν υπάρχουν ορισμοί εξαγωγής γραφημάτων"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Επιτυχία"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Σύνταξη ή σφάλμα χρήσης"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Ασυμβατότητα πρωτοκόλλου"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Σφάλματα επιλογής αρχείων εισόδου / εξόδου, διευθύνσεις"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Η ενέργεια που ζητήσατε δεν υποστηρίζεται: έγινε προσπάθεια χειρισμού αρχείων 64-bit σε μια πλατφόρμα που δεν μπορεί να τα υποστηρίξει. ή έχει οριστεί μια επιλογή που υποστηρίζεται από τον υπολογιστή-πελάτη και όχι από το διακομιστή."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Σφάλμα εκκίνησης πρωτοκόλλου πελάτη-διακομιστή"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Ο δαίμονας δεν μπορεί να προστεθεί στο αρχείο καταγραφής"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Σφάλμα στο I / O της υποδοχής"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Σφάλμα στο αρχείο I / O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Σφάλμα στη ροή δεδομένων πρωτοκόλλου rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Σφάλματα με τη διάγνωση προγραμμάτων"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Σφάλμα στον κώδικα IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Λήφθηκαν SIGUSR1 ή SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Κάποιο σφάλμα που επέστρεψε το waitpid ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Παρουσιάστηκε σφάλμα κατά την κατανομή buffer buffers"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Μερική μεταφορά λόγω σφάλματος"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Μερική μεταφορά λόγω εξαφανισμένων αρχείων προέλευσης"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Το όριο -max-delete διακόπηκε"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Χρονικό όριο στα δεδομένα αποστολής / λήψης"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Χρόνος αναμονής για σύνδεση δαίμονα"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Αγνωστο σφάλμα"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Η λειτουργία ήταν επιτυχής"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Γενικό σφάλμα στο αντίγραφο αρχείου"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Ο προορισμός δεν είναι κατάλογος, αλλά πρέπει να είναι"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Έχει ξεπεραστεί το μέγιστο επίπεδο συμβολισμού"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Η σύνδεση με τον κεντρικό υπολογιστή απέτυχε."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Η σύνδεση σπάσει"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Το αρχείο δεν υπάρχει"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Δεν υπάρχει άδεια πρόσβασης στο αρχείο."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Γενικό σφάλμα στο πρωτόκολλο sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Ασυμφωνία πρωτοκόλλου μεταφοράς αρχείων"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Δεν υπάρχει αρχείο που να ταιριάζει με συγκεκριμένα κριτήρια"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Ο οικοδεσπότης δεν επιτρέπεται να συνδεθεί"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Γενικό σφάλμα στο πρωτόκολλο ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Η ανταλλαγή κλειδιών απέτυχε"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Κράτηση"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Σφάλμα MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Σφάλμα συμπίεσης"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Η υπηρεσία δεν είναι διαθέσιμη"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Η έκδοση πρωτοκόλλου δεν υποστηρίζεται"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Το κλειδί υποδοχής δεν είναι επαληθεύσιμο"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Η σύνδεση απέτυχε"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Αποσυνδεδεμένος από την εφαρμογή"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Πάρα πολλές συνδέσεις"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Ο έλεγχος ταυτότητας ακυρώθηκε από το χρήστη"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Δεν υπάρχουν πλέον διαθέσιμες μέθοδοι ελέγχου ταυτότητας"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Μη έγκυρο όνομα χρήστη"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Μη βασισμένο σε ερωτήματα"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Πρότυπα γραφήματος"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Ερωτήματα δεδομένων"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
