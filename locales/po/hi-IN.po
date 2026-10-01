@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:13-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "सफलता"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "सिंटेक्स या उपयोग त्रुटि"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "प्रोटोकॉल असंगति"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "इनपुट / आउटपुट फ़ाइलों का चयन करने वाली त्रुटियां, dirs"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "अनुरोधित कार्रवाई समर्थित नहीं है: एक मंच पर 64-बिट फ़ाइलों को हेरफेर करने का प्रयास किया गया था जो उनका समर्थन नहीं कर सकता; या एक विकल्प निर्दिष्ट किया गया था जो क्लाइंट द्वारा समर्थित है और सर्वर द्वारा नहीं।"
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "क्लाइंट-सर्वर प्रोटोकॉल शुरू करने में त्रुटि"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "डेमन लॉग-फाइल करने के लिए अपील करने में असमर्थ"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "सॉकेट I / O में त्रुटि"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "फ़ाइल I / O में त्रुटि"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Rsync प्रोटोकॉल डेटा स्ट्रीम में त्रुटि"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "कार्यक्रम निदान के साथ त्रुटियां"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "IPC कोड में त्रुटि"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "SIGUSR1 या SIGINT प्राप्त किया"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "कुछ त्रुटि वेटपिड द्वारा लौटाई गई ()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "कोर मेमोरी बफ़र्स आवंटित करने में त्रुटि"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "त्रुटि के कारण आंशिक स्थानांतरण"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "गायब स्रोत फ़ाइलों के कारण आंशिक स्थानांतरण"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "--मैक्स-डिलीट लिमिट ने डिलीट को रोक दिया"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "डेटा भेजने / प्राप्त करने में समय समाप्त"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "डेमॉन कनेक्शन की प्रतीक्षा में टाइमआउट"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "अज्ञात त्रुटि"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "ऑपरेशन सफल रहा"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "फाइल कॉपी में सामान्य त्रुटि"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "गंतव्य निर्देशिका नहीं है, लेकिन यह होना चाहिए"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "अधिकतम सिमलिंक स्तर पार हो गया"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "होस्ट से कनेक्ट करना विफल रहा।"
-
-#: functions.php
-msgid "Connection broken"
-msgstr "कनेक्शन टूट गया"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "दस्तावेज मौजूद नहीं है"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "फ़ाइल तक पहुँचने की अनुमति नहीं।"
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Sftp प्रोटोकॉल में सामान्य त्रुटि"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "फ़ाइल स्थानांतरण प्रोटोकॉल बेमेल"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "कोई फ़ाइल किसी दिए गए मापदंड से मेल नहीं खाती है"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "होस्ट को कनेक्ट करने की अनुमति नहीं है"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Ssh प्रोटोकॉल में सामान्य त्रुटि"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "कुंजी विनिमय विफल रहा"
-
-#: functions.php
-msgid "Reserved"
-msgstr "आरक्षत"
-
-#: functions.php
-msgid "MAC error"
-msgstr "मैक त्रुटि"
-
-#: functions.php
-msgid "Compression error"
-msgstr "संपीड़न त्रुटि"
-
-#: functions.php
-msgid "Service not available"
-msgstr "सेवा उपलब्ध नहीं है"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "प्रोटोकॉल संस्करण समर्थित नहीं है"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "होस्ट कुंजी सत्यापन योग्य नहीं है"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "कनेक्शन असफल"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "आवेदन द्वारा अस्वीकृत"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "बहुत सारे कनेक्शन"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "उपयोगकर्ता द्वारा प्रमाणीकरण रद्द किया गया"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "और अधिक प्रमाणीकरण विधियाँ उपलब्ध नहीं हैं"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "अमान्य उपयोगकर्ता नाम"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "गैर क्वेरी आधारित"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "ग्राफ टेम्पलेट"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "डेटा क्वेरी"
 
 #: gexport.php
 msgid "Delete"
@@ -539,6 +339,206 @@ msgstr "सेकंड"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "कोई ग्राफ़ निर्यात परिभाषाएँ नहीं"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "सफलता"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "सिंटेक्स या उपयोग त्रुटि"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "प्रोटोकॉल असंगति"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "इनपुट / आउटपुट फ़ाइलों का चयन करने वाली त्रुटियां, dirs"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "अनुरोधित कार्रवाई समर्थित नहीं है: एक मंच पर 64-बिट फ़ाइलों को हेरफेर करने का प्रयास किया गया था जो उनका समर्थन नहीं कर सकता; या एक विकल्प निर्दिष्ट किया गया था जो क्लाइंट द्वारा समर्थित है और सर्वर द्वारा नहीं।"
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "क्लाइंट-सर्वर प्रोटोकॉल शुरू करने में त्रुटि"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "डेमन लॉग-फाइल करने के लिए अपील करने में असमर्थ"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "सॉकेट I / O में त्रुटि"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "फ़ाइल I / O में त्रुटि"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Rsync प्रोटोकॉल डेटा स्ट्रीम में त्रुटि"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "कार्यक्रम निदान के साथ त्रुटियां"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "IPC कोड में त्रुटि"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "SIGUSR1 या SIGINT प्राप्त किया"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "कुछ त्रुटि वेटपिड द्वारा लौटाई गई ()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "कोर मेमोरी बफ़र्स आवंटित करने में त्रुटि"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "त्रुटि के कारण आंशिक स्थानांतरण"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "गायब स्रोत फ़ाइलों के कारण आंशिक स्थानांतरण"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "--मैक्स-डिलीट लिमिट ने डिलीट को रोक दिया"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "डेटा भेजने / प्राप्त करने में समय समाप्त"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "डेमॉन कनेक्शन की प्रतीक्षा में टाइमआउट"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "अज्ञात त्रुटि"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "ऑपरेशन सफल रहा"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "फाइल कॉपी में सामान्य त्रुटि"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "गंतव्य निर्देशिका नहीं है, लेकिन यह होना चाहिए"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "अधिकतम सिमलिंक स्तर पार हो गया"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "होस्ट से कनेक्ट करना विफल रहा।"
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "कनेक्शन टूट गया"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "दस्तावेज मौजूद नहीं है"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "फ़ाइल तक पहुँचने की अनुमति नहीं।"
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Sftp प्रोटोकॉल में सामान्य त्रुटि"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "फ़ाइल स्थानांतरण प्रोटोकॉल बेमेल"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "कोई फ़ाइल किसी दिए गए मापदंड से मेल नहीं खाती है"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "होस्ट को कनेक्ट करने की अनुमति नहीं है"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Ssh प्रोटोकॉल में सामान्य त्रुटि"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "कुंजी विनिमय विफल रहा"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "आरक्षत"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "मैक त्रुटि"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "संपीड़न त्रुटि"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "सेवा उपलब्ध नहीं है"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "प्रोटोकॉल संस्करण समर्थित नहीं है"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "होस्ट कुंजी सत्यापन योग्य नहीं है"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "कनेक्शन असफल"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "आवेदन द्वारा अस्वीकृत"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "बहुत सारे कनेक्शन"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "उपयोगकर्ता द्वारा प्रमाणीकरण रद्द किया गया"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "और अधिक प्रमाणीकरण विधियाँ उपलब्ध नहीं हैं"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "अमान्य उपयोगकर्ता नाम"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "गैर क्वेरी आधारित"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "ग्राफ टेम्पलेट"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "डेटा क्वेरी"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
