@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-06-07 23:14-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#: functions.php
-msgid "Success"
-msgstr "성공"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "구문 또는 사용 오류"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "프로토콜 비 호환성"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "입 / 출력 파일, 디렉토리 선택 오류"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "요청 된 동작이 지원되지 않음 : 64 비트 파일을 지원할 수없는 플랫폼에서 64 비트 파일을 조작하려는 시도가있었습니다. 또는 서버가 아닌 클라이언트가 지원하는 옵션이 지정되었습니다."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "클라이언트 - 서버 프로토콜 시작 오류"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "데몬이 로그 파일에 추가 할 수 없음"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "소켓 I / O 오류"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "파일 I / O 오류"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "rsync 프로토콜 데이터 스트림의 오류"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "프로그램 진단을 통한 오류"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "IPC 코드 오류"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "받은 SIGUSR1 또는 SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "waitpid ()에 의해 반환 된 일부 오류"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "코어 메모리 버퍼 할당 오류"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "오류로 인해 부분 전송"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "사라진 소스 파일로 인한 부분 전송"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "--max-delete 제한으로 삭제가 중지되었습니다."
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "데이터 송수신시 제한 시간"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "데몬 연결을 기다리는 시간 초과"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "알수없는 오류"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "작업이 성공적으로 완료되었습니다."
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "파일 사본의 일반 오류"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "대상은 디렉토리가 아니지만 있어야합니다."
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "최대 심볼릭 링크 레벨 초과"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "호스트에 연결하지 못했습니다."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "연결이 끊어짐"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "파일이 없습니다"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "파일에 액세스 할 수있는 권한이 없습니다."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "SFTP 프로토콜의 일반 오류"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "파일 전송 프로토콜 불일치"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "지정된 기준과 일치하는 파일이 없습니다."
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "호스트 연결이 허용되지 않음"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "ssh 프로토콜의 일반 오류"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "키 교환 실패"
-
-#: functions.php
-msgid "Reserved"
-msgstr "예약됨"
-
-#: functions.php
-msgid "MAC error"
-msgstr "MAC 오류"
-
-#: functions.php
-msgid "Compression error"
-msgstr "압축 오류"
-
-#: functions.php
-msgid "Service not available"
-msgstr "서비스를 사용할 수 없음"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "지원되지 않는 프로토콜 버전"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "호스트 키를 확인할 수 없음"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "연결에 실패"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "애플리케이션에 의해 연결 해제 됨"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "너무 많은 연결"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "사용자가 인증을 취소했습니다."
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "더 이상 사용할 수있는 인증 방법이 없습니다."
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "잘못된 사용자 이름"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "비 쿼리 기반"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "그래프 템플릿"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "데이터 쿼리"
 
 #: gexport.php
 msgid "Delete"
@@ -535,6 +335,206 @@ msgstr "초"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "그래프 내보내기 정의 없음"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "성공"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "구문 또는 사용 오류"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "프로토콜 비 호환성"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "입 / 출력 파일, 디렉토리 선택 오류"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "요청 된 동작이 지원되지 않음 : 64 비트 파일을 지원할 수없는 플랫폼에서 64 비트 파일을 조작하려는 시도가있었습니다. 또는 서버가 아닌 클라이언트가 지원하는 옵션이 지정되었습니다."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "클라이언트 - 서버 프로토콜 시작 오류"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "데몬이 로그 파일에 추가 할 수 없음"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "소켓 I / O 오류"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "파일 I / O 오류"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "rsync 프로토콜 데이터 스트림의 오류"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "프로그램 진단을 통한 오류"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "IPC 코드 오류"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "받은 SIGUSR1 또는 SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "waitpid ()에 의해 반환 된 일부 오류"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "코어 메모리 버퍼 할당 오류"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "오류로 인해 부분 전송"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "사라진 소스 파일로 인한 부분 전송"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "--max-delete 제한으로 삭제가 중지되었습니다."
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "데이터 송수신시 제한 시간"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "데몬 연결을 기다리는 시간 초과"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "알수없는 오류"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "작업이 성공적으로 완료되었습니다."
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "파일 사본의 일반 오류"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "대상은 디렉토리가 아니지만 있어야합니다."
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "최대 심볼릭 링크 레벨 초과"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "호스트에 연결하지 못했습니다."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "연결이 끊어짐"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "파일이 없습니다"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "파일에 액세스 할 수있는 권한이 없습니다."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "SFTP 프로토콜의 일반 오류"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "파일 전송 프로토콜 불일치"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "지정된 기준과 일치하는 파일이 없습니다."
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "호스트 연결이 허용되지 않음"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "ssh 프로토콜의 일반 오류"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "키 교환 실패"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "예약됨"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "MAC 오류"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "압축 오류"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "서비스를 사용할 수 없음"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "지원되지 않는 프로토콜 버전"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "호스트 키를 확인할 수 없음"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "연결에 실패"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "애플리케이션에 의해 연결 해제 됨"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "너무 많은 연결"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "사용자가 인증을 취소했습니다."
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "더 이상 사용할 수있는 인증 방법이 없습니다."
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "잘못된 사용자 이름"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "비 쿼리 기반"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "그래프 템플릿"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "데이터 쿼리"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
