@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2019-07-21 21:16-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,252 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.3\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Sucesso"
-
-#: functions.php
-#, fuzzy
-msgid "Syntax or usage error"
-msgstr "Sintaxe ou erro de utilização"
-
-#: functions.php
-#, fuzzy
-msgid "Protocol incompatibility"
-msgstr "Incompatibilidade de protocolos"
-
-#: functions.php
-#, fuzzy
-msgid "Errors selecting input/output files, dirs"
-msgstr "Erros selecionando arquivos de entrada/saída, diretório"
-
-#: functions.php
-#, fuzzy
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Ação solicitada não suportada: foi feita uma tentativa de manipular arquivos de 64 bits em uma plataforma que não pode suportá-los; ou foi especificada uma opção que é suportada pelo cliente e não pelo servidor."
-
-#: functions.php
-#, fuzzy
-msgid "Error starting client-server protocol"
-msgstr "Erro ao iniciar o protocolo cliente-servidor"
-
-#: functions.php
-#, fuzzy
-msgid "Daemon unable to append to log-file"
-msgstr "Daemon não consegue anexar ao arquivo de log"
-
-#: functions.php
-#, fuzzy
-msgid "Error in socket I/O"
-msgstr "Erro no socket I/O"
-
-#: functions.php
-#, fuzzy
-msgid "Error in file I/O"
-msgstr "Erro em I/O de arquivo"
-
-#: functions.php
-#, fuzzy
-msgid "Error in rsync protocol data stream"
-msgstr "Erro no fluxo de dados do protocolo rsync"
-
-#: functions.php
-#, fuzzy
-msgid "Errors with program diagnostics"
-msgstr "Erros com diagnóstico de programa"
-
-#: functions.php
-#, fuzzy
-msgid "Error in IPC code"
-msgstr "Erro no código IPC"
-
-#: functions.php
-#, fuzzy
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Recebido SIGUSR1 ou SIGINT"
-
-#: functions.php
-#, fuzzy
-msgid "Some error returned by waitpid()"
-msgstr "Algum erro retornado por waitpid()"
-
-#: functions.php
-#, fuzzy
-msgid "Error allocating core memory buffers"
-msgstr "Erro ao alocar buffers de memória do núcleo"
-
-#: functions.php
-#, fuzzy
-msgid "Partial transfer due to error"
-msgstr "Transferência parcial devido a erro"
-
-#: functions.php
-#, fuzzy
-msgid "Partial transfer due to vanished source files"
-msgstr "Transferência parcial devido a ficheiros-fonte desaparecidos"
-
-#: functions.php
-#, fuzzy
-msgid "The --max-delete limit stopped deletions"
-msgstr "O limite --max-delete parou as deleções"
-
-#: functions.php
-#, fuzzy
-msgid "Timeout in data send/receive"
-msgstr "Timeout no envio/recepção de dados"
-
-#: functions.php
-#, fuzzy
-msgid "Timeout waiting for daemon connection"
-msgstr "Tempo limite de espera para a conexão do daemon"
-
-#: functions.php
-#, fuzzy
-msgid "Unknown error "
-msgstr "Erro desconhecido"
-
-#: functions.php
-#, fuzzy
-msgid "Operation was successful"
-msgstr "A operação foi bem sucedida"
-
-#: functions.php
-#, fuzzy
-msgid "General error in file copy"
-msgstr "Erro geral na cópia do ficheiro"
-
-#: functions.php
-#, fuzzy
-msgid "Destination is not directory, but it should be"
-msgstr "Destino não é diretório, mas deve ser"
-
-#: functions.php
-#, fuzzy
-msgid "Maximum symlink level exceeded"
-msgstr "Nível máximo de ligação simbólica excedido"
-
-#: functions.php
-#, fuzzy
-msgid "Connecting to host failed."
-msgstr "Falha na conexão com o host."
-
-#: functions.php
-#, fuzzy
-msgid "Connection broken"
-msgstr "Conexão interrompida"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "O ficheiro de anexo não existe em %path%."
-
-#: functions.php
-#, fuzzy
-msgid "No permission to access file."
-msgstr "Sem permissão para aceder ao ficheiro."
-
-#: functions.php
-#, fuzzy
-msgid "General error in sftp protocol"
-msgstr "Erro geral no protocolo sftp"
-
-#: functions.php
-#, fuzzy
-msgid "File transfer protocol mismatch"
-msgstr "Desencontro de protocolo de transferência de arquivos"
-
-#: functions.php
-#, fuzzy
-msgid "No file matches a given criteria"
-msgstr "Nenhum arquivo corresponde a um determinado critério"
-
-#: functions.php
-#, fuzzy
-msgid "Host not allowed to connect"
-msgstr "Anfitrião não autorizado a conectar-se"
-
-#: functions.php
-#, fuzzy
-msgid "General error in ssh protocol"
-msgstr "Erro geral no protocolo ssh"
-
-#: functions.php
-#, fuzzy
-msgid "Key exchange failed"
-msgstr "Troca de chaves falhou"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Reservado"
-
-#: functions.php
-#, fuzzy
-msgid "MAC error"
-msgstr "Erro MAC"
-
-#: functions.php
-#, fuzzy
-msgid "Compression error"
-msgstr "Erro de compressão"
-
-#: functions.php
-#, fuzzy
-msgid "Service not available"
-msgstr "Serviço não disponível"
-
-#: functions.php
-#, fuzzy
-msgid "Protocol version not supported"
-msgstr "Versão de protocolo não suportada"
-
-#: functions.php
-#, fuzzy
-msgid "Host key not verifiable"
-msgstr "Chave de host não verificável"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Falha de ligação"
-
-#: functions.php
-#, fuzzy
-msgid "Disconnected by application"
-msgstr "Desconectado por aplicação"
-
-#: functions.php
-#, fuzzy
-msgid "Too many connections"
-msgstr "Demasiadas ligações"
-
-#: functions.php
-#, fuzzy
-msgid "Authentication cancelled by user"
-msgstr "Autenticação cancelada pelo usuário"
-
-#: functions.php
-#, fuzzy
-msgid "No more authentication methods available"
-msgstr "Não há mais métodos de autenticação disponíveis"
-
-#: functions.php
-#, fuzzy
-msgid "Invalid user name"
-msgstr "Nome de usuário inválido"
-
-#: functions.php
-#, fuzzy
-msgid "Non Query Based"
-msgstr "Não baseado em consultas"
-
-#: functions.php
-#, fuzzy
-msgid "Graph Templates"
-msgstr "Modelos de gráficos"
-
-#: functions.php
-#, fuzzy
-msgid "Data Queries"
-msgstr "Consultas de dados"
 
 #: gexport.php
 msgid "Delete"
@@ -626,6 +380,252 @@ msgstr "Seg"
 #, fuzzy
 msgid "No Graph Export Definitions"
 msgstr "Sem definições de exportação de gráficos"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Sucesso"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Syntax or usage error"
+msgstr "Sintaxe ou erro de utilização"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Protocol incompatibility"
+msgstr "Incompatibilidade de protocolos"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Errors selecting input/output files, dirs"
+msgstr "Erros selecionando arquivos de entrada/saída, diretório"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Ação solicitada não suportada: foi feita uma tentativa de manipular arquivos de 64 bits em uma plataforma que não pode suportá-los; ou foi especificada uma opção que é suportada pelo cliente e não pelo servidor."
+
+#: includes/functions.php
+#, fuzzy
+msgid "Error starting client-server protocol"
+msgstr "Erro ao iniciar o protocolo cliente-servidor"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon não consegue anexar ao arquivo de log"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Error in socket I/O"
+msgstr "Erro no socket I/O"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Error in file I/O"
+msgstr "Erro em I/O de arquivo"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Error in rsync protocol data stream"
+msgstr "Erro no fluxo de dados do protocolo rsync"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Errors with program diagnostics"
+msgstr "Erros com diagnóstico de programa"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Error in IPC code"
+msgstr "Erro no código IPC"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Recebido SIGUSR1 ou SIGINT"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Some error returned by waitpid()"
+msgstr "Algum erro retornado por waitpid()"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Error allocating core memory buffers"
+msgstr "Erro ao alocar buffers de memória do núcleo"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Partial transfer due to error"
+msgstr "Transferência parcial devido a erro"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Partial transfer due to vanished source files"
+msgstr "Transferência parcial devido a ficheiros-fonte desaparecidos"
+
+#: includes/functions.php
+#, fuzzy
+msgid "The --max-delete limit stopped deletions"
+msgstr "O limite --max-delete parou as deleções"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Timeout in data send/receive"
+msgstr "Timeout no envio/recepção de dados"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Timeout waiting for daemon connection"
+msgstr "Tempo limite de espera para a conexão do daemon"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Unknown error "
+msgstr "Erro desconhecido"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Operation was successful"
+msgstr "A operação foi bem sucedida"
+
+#: includes/functions.php
+#, fuzzy
+msgid "General error in file copy"
+msgstr "Erro geral na cópia do ficheiro"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Destination is not directory, but it should be"
+msgstr "Destino não é diretório, mas deve ser"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Maximum symlink level exceeded"
+msgstr "Nível máximo de ligação simbólica excedido"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Connecting to host failed."
+msgstr "Falha na conexão com o host."
+
+#: includes/functions.php
+#, fuzzy
+msgid "Connection broken"
+msgstr "Conexão interrompida"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "O ficheiro de anexo não existe em %path%."
+
+#: includes/functions.php
+#, fuzzy
+msgid "No permission to access file."
+msgstr "Sem permissão para aceder ao ficheiro."
+
+#: includes/functions.php
+#, fuzzy
+msgid "General error in sftp protocol"
+msgstr "Erro geral no protocolo sftp"
+
+#: includes/functions.php
+#, fuzzy
+msgid "File transfer protocol mismatch"
+msgstr "Desencontro de protocolo de transferência de arquivos"
+
+#: includes/functions.php
+#, fuzzy
+msgid "No file matches a given criteria"
+msgstr "Nenhum arquivo corresponde a um determinado critério"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Host not allowed to connect"
+msgstr "Anfitrião não autorizado a conectar-se"
+
+#: includes/functions.php
+#, fuzzy
+msgid "General error in ssh protocol"
+msgstr "Erro geral no protocolo ssh"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Key exchange failed"
+msgstr "Troca de chaves falhou"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Reservado"
+
+#: includes/functions.php
+#, fuzzy
+msgid "MAC error"
+msgstr "Erro MAC"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Compression error"
+msgstr "Erro de compressão"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Service not available"
+msgstr "Serviço não disponível"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Protocol version not supported"
+msgstr "Versão de protocolo não suportada"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Host key not verifiable"
+msgstr "Chave de host não verificável"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Falha de ligação"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Disconnected by application"
+msgstr "Desconectado por aplicação"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Too many connections"
+msgstr "Demasiadas ligações"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Authentication cancelled by user"
+msgstr "Autenticação cancelada pelo usuário"
+
+#: includes/functions.php
+#, fuzzy
+msgid "No more authentication methods available"
+msgstr "Não há mais métodos de autenticação disponíveis"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Invalid user name"
+msgstr "Nome de usuário inválido"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Non Query Based"
+msgstr "Não baseado em consultas"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Graph Templates"
+msgstr "Modelos de gráficos"
+
+#: includes/functions.php
+#, fuzzy
+msgid "Data Queries"
+msgstr "Consultas de dados"
 
 #: setup.php
 #, fuzzy
