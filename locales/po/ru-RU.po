@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 21:21-0400\n"
 "PO-Revision-Date: 2024-12-06 19:24+0000\n"
 "Last-Translator: Anton Zhuravlev <baka109g@gmail.com>\n"
 "Language-Team: Russian <http://translate.cacti.net/projects/cacti/gexport/ru/>\n"
@@ -17,206 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.8.1\n"
-
-#: functions.php
-msgid "Success"
-msgstr "Готово"
-
-#: functions.php
-msgid "Syntax or usage error"
-msgstr "Ошибка синтаксиса или использования"
-
-#: functions.php
-msgid "Protocol incompatibility"
-msgstr "Несовместимость протоколов"
-
-#: functions.php
-msgid "Errors selecting input/output files, dirs"
-msgstr "Ошибки выбора входных/выходных файлов, каталогов"
-
-#: functions.php
-msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Запрошенное действие не поддерживается: была предпринята попытка манипулировать 64-битными файлами на платформе, которая их не поддерживает; или указана опция, поддерживаемая клиентом, а не сервером."
-
-#: functions.php
-msgid "Error starting client-server protocol"
-msgstr "Ошибка при запуске клиент-серверного протокола"
-
-#: functions.php
-msgid "Daemon unable to append to log-file"
-msgstr "Демон не может добавить в файл журнала"
-
-#: functions.php
-msgid "Error in socket I/O"
-msgstr "Ошибка I/O сокета"
-
-#: functions.php
-msgid "Error in file I/O"
-msgstr "Ошибка файла I/O"
-
-#: functions.php
-msgid "Error in rsync protocol data stream"
-msgstr "Ошибка в потоке данных протокола rsync"
-
-#: functions.php
-msgid "Errors with program diagnostics"
-msgstr "Ошибки при диагностике программы"
-
-#: functions.php
-msgid "Error in IPC code"
-msgstr "Ошибка в коде IPC"
-
-#: functions.php
-msgid "Received SIGUSR1 or SIGINT"
-msgstr "Получен SIGUSR1 или SIGINT"
-
-#: functions.php
-msgid "Some error returned by waitpid()"
-msgstr "Некоторая ошибка, возвращенная функцией waitpid()"
-
-#: functions.php
-msgid "Error allocating core memory buffers"
-msgstr "Ошибка при выделении буферов основной памяти"
-
-#: functions.php
-msgid "Partial transfer due to error"
-msgstr "Частичный перенос из-за ошибки"
-
-#: functions.php
-msgid "Partial transfer due to vanished source files"
-msgstr "Частичный перенос из-за исчезновения исходных файлов"
-
-#: functions.php
-msgid "The --max-delete limit stopped deletions"
-msgstr "Ограничение --max-delete останавило удаление"
-
-#: functions.php
-msgid "Timeout in data send/receive"
-msgstr "Тайм-аут при отправке/приеме данных"
-
-#: functions.php
-msgid "Timeout waiting for daemon connection"
-msgstr "Таймаут ожидания соединения с демоном"
-
-#: functions.php
-msgid "Unknown error "
-msgstr "Неизвестная ошибка"
-
-#: functions.php
-msgid "Operation was successful"
-msgstr "Операция прошла успешно"
-
-#: functions.php
-msgid "General error in file copy"
-msgstr "Общая ошибка при копировании файлов"
-
-#: functions.php
-msgid "Destination is not directory, but it should be"
-msgstr "Место назначения - не каталог, но это должен быть каталог"
-
-#: functions.php
-msgid "Maximum symlink level exceeded"
-msgstr "Превышен максимальный уровень симлинковки"
-
-#: functions.php
-msgid "Connecting to host failed."
-msgstr "Подключение к хосту не удалось."
-
-#: functions.php
-msgid "Connection broken"
-msgstr "Соединение прервано"
-
-#: functions.php
-msgid "File does not exist"
-msgstr "Файл не существует"
-
-#: functions.php
-msgid "No permission to access file."
-msgstr "Нет разрешения на доступ к файлу."
-
-#: functions.php
-msgid "General error in sftp protocol"
-msgstr "Общая ошибка в протоколе sftp"
-
-#: functions.php
-msgid "File transfer protocol mismatch"
-msgstr "Несоответствие протокола передачи файлов"
-
-#: functions.php
-msgid "No file matches a given criteria"
-msgstr "Ни один файл не соответствует заданным критериям"
-
-#: functions.php
-msgid "Host not allowed to connect"
-msgstr "Хост не имеет права подключаться"
-
-#: functions.php
-msgid "General error in ssh protocol"
-msgstr "Общая ошибка в протоколе ssh"
-
-#: functions.php
-msgid "Key exchange failed"
-msgstr "Обмен ключами не состоялся"
-
-#: functions.php
-msgid "Reserved"
-msgstr "Зарезервировано"
-
-#: functions.php
-msgid "MAC error"
-msgstr "ошибка MAC-адреса"
-
-#: functions.php
-msgid "Compression error"
-msgstr "Ошибка сжатия"
-
-#: functions.php
-msgid "Service not available"
-msgstr "Услуга недоступна"
-
-#: functions.php
-msgid "Protocol version not supported"
-msgstr "Версия протокола не поддерживается"
-
-#: functions.php
-msgid "Host key not verifiable"
-msgstr "Ключ хоста не поддается проверке"
-
-#: functions.php
-msgid "Connection failed"
-msgstr "Ошибка подключения"
-
-#: functions.php
-msgid "Disconnected by application"
-msgstr "Отсоединен по приложению"
-
-#: functions.php
-msgid "Too many connections"
-msgstr "Слишком много связей"
-
-#: functions.php
-msgid "Authentication cancelled by user"
-msgstr "Аутентификация отменена пользователем"
-
-#: functions.php
-msgid "No more authentication methods available"
-msgstr "Больше нет доступных методов аутентификации"
-
-#: functions.php
-msgid "Invalid user name"
-msgstr "Не верный логин или пароль, попробуйте ещё раз"
-
-#: functions.php
-msgid "Non Query Based"
-msgstr "Не основанный на запросах"
-
-#: functions.php
-msgid "Graph Templates"
-msgstr "Шаблоны Графиков"
-
-#: functions.php
-msgid "Data Queries"
-msgstr "Запросы данных"
 
 #: gexport.php
 msgid "Delete"
@@ -543,6 +343,206 @@ msgstr "Сек"
 #: gexport.php
 msgid "No Graph Export Definitions"
 msgstr "Отсутствие определений экспорта графиков"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Готово"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Ошибка синтаксиса или использования"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Несовместимость протоколов"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Ошибки выбора входных/выходных файлов, каталогов"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Запрошенное действие не поддерживается: была предпринята попытка манипулировать 64-битными файлами на платформе, которая их не поддерживает; или указана опция, поддерживаемая клиентом, а не сервером."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Ошибка при запуске клиент-серверного протокола"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Демон не может добавить в файл журнала"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Ошибка I/O сокета"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Ошибка файла I/O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Ошибка в потоке данных протокола rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Ошибки при диагностике программы"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Ошибка в коде IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Получен SIGUSR1 или SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Некоторая ошибка, возвращенная функцией waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Ошибка при выделении буферов основной памяти"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Частичный перенос из-за ошибки"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Частичный перенос из-за исчезновения исходных файлов"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Ограничение --max-delete останавило удаление"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Тайм-аут при отправке/приеме данных"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Таймаут ожидания соединения с демоном"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Неизвестная ошибка"
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Операция прошла успешно"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Общая ошибка при копировании файлов"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Место назначения - не каталог, но это должен быть каталог"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Превышен максимальный уровень симлинковки"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Подключение к хосту не удалось."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Соединение прервано"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Файл не существует"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Нет разрешения на доступ к файлу."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Общая ошибка в протоколе sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Несоответствие протокола передачи файлов"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Ни один файл не соответствует заданным критериям"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Хост не имеет права подключаться"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Общая ошибка в протоколе ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Обмен ключами не состоялся"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Зарезервировано"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "ошибка MAC-адреса"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Ошибка сжатия"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Услуга недоступна"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Версия протокола не поддерживается"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ключ хоста не поддается проверке"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Ошибка подключения"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Отсоединен по приложению"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Слишком много связей"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Аутентификация отменена пользователем"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Больше нет доступных методов аутентификации"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Не верный логин или пароль, попробуйте ещё раз"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Не основанный на запросах"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Шаблоны Графиков"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Запросы данных"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
