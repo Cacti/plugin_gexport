@@ -26,6 +26,20 @@ Exports can be performed each impersonating a different users permissions. Graph
 Export contents can be transferred to remote sites using FTP, SFTP, RSYNC, and
 SCP.
 
+## Cacti compatibility
+
+If you are running a version of Cacti below 1.2.31, please add the function
+below to the `applySkin()` function in `include/layout.js` to enable the Cancel
+buttons on forms to work:
+
+```js
+$(document).off('click.cactiReturnTo', '.cactiReturnTo')
+    .on('click.cactiReturnTo', '.cactiReturnTo', function(event) {
+        event.preventDefault();
+        cactiReturnTo($(this).attr('data-url'));
+    });
+```
+
 ## Installation
 
 Install just like any other plugin, just copy it to the plugins directory,
