@@ -312,7 +312,7 @@ function export_form_actions() {
 					</td>
 				</tr>";
 
-			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget cactiReturnTo'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Delete Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} elseif ($bulk_action === '2') { // disable
 			print "	<tr>
@@ -322,7 +322,7 @@ function export_form_actions() {
 					</td>
 				</tr>";
 
-			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget cactiReturnTo'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Disable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} elseif ($bulk_action === '3') { // enable
 			print "	<tr>
@@ -332,7 +332,7 @@ function export_form_actions() {
 					</td>
 				</tr>";
 
-			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget cactiReturnTo'>" . __esc('Cancel', 'gexport') . "</button>
 				<input type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Enable Graph Export Definition(s)', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} elseif ($bulk_action === '4') { // export now
 			print "<tr>
@@ -342,15 +342,15 @@ function export_form_actions() {
 				</td>
 			</tr>";
 
-			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Cancel', 'gexport') . "</button>
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget cactiReturnTo'>" . __esc('Cancel', 'gexport') . "</button>
 				<button type='submit' class='ui-button ui-corner-all ui-widget ui-state-active' title='" . __esc('Run Graph Export Definition(s) Now', 'gexport') . "'>" . __esc('Continue', 'gexport') . '</button>';
 		} else {
 			print "<tr><td class='odd'><span class='textError'>" . __('You must select a valid action.', 'gexport') . '</span></td></tr>';
-			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Return', 'gexport') . '</button>';
+			$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget cactiReturnTo'>" . __esc('Return', 'gexport') . '</button>';
 		}
 	} else {
 		print "<tr><td class='odd'><span class='textError'>" . __('You must select at least one Graph Export Definition.', 'gexport') . '</span></td></tr>';
-		$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget' onClick='cactiReturnTo()'>" . __esc('Return', 'gexport') . '</button>';
+		$save_html = "<button type='button' class='ui-button ui-corner-all ui-widget cactiReturnTo'>" . __esc('Return', 'gexport') . '</button>';
 	}
 
 	print "<tr>
@@ -697,7 +697,7 @@ function export_filter() {
 						<?php print __('Exports', 'gexport'); ?>
 					</td>
 					<td>
-						<select id='rows' onChange='applyFilter()'>
+						<select id='rows'>
 							<option value='-1'<?php print (get_request_var('rows') == '-1' ? ' selected>' : '>') . __('Default', 'gexport'); ?></option>
 							<?php
 							if (sizeof($item_rows)) {
@@ -716,7 +716,7 @@ function export_filter() {
 						<?php print __('Refresh', 'gexport'); ?>
 					</td>
 					<td>
-						<select id='refresh' onChange='applyFilter()'>
+						<select id='refresh'>
 							<?php
 	$frequency = [
 		99999999 => __('Never', 'gexport'),
@@ -759,7 +759,7 @@ function export_filter() {
 			}
 
 			$(function() {
-				$('#refresh').click(function() {
+				$('#rows, #refresh').change(function() {
 					applyFilter();
 				});
 
