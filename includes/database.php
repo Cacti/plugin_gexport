@@ -111,6 +111,26 @@ function gexport_graph_exports_tasks_table_data(): array {
 }
 
 /**
+ * Returns a copy of a table definition with an array-valued 'primary'
+ * flattened to the backtick-joined scalar form api_plugin_db_table_create()
+ * expects. Down to this plugin's Cacti 1.2.29 compat floor that API
+ * interpolates $data['primary'] straight into PRIMARY KEY (`...`), so an
+ * array would render as PRIMARY KEY (`Array`) and fail the create. The array
+ * form is kept in the *_table_data() definitions for db_update_table().
+ *
+ * @param array<string, mixed> $data The table definition (array primary).
+ *
+ * @return array<string, mixed> The definition with a scalar primary key.
+ */
+function gexport_create_definition(array $data): array {
+	if (isset($data['primary']) && is_array($data['primary'])) {
+		$data['primary'] = implode('`,`', $data['primary']);
+	}
+
+	return $data;
+}
+
+/**
  * Creates every table this plugin owns via the tracked plugin table API
  * (idempotent, so it is safe to call on both install and upgrade). Called
  * from plugin_gexport_install() during installation.
@@ -141,7 +161,7 @@ function gexport_setup_table() {
  * @return bool Always returns true.
  */
 function gexport_create_table() {
-	api_plugin_db_table_create('gexport', 'graph_exports', gexport_graph_exports_table_data());
+	api_plugin_db_table_create('gexport', 'graph_exports', gexport_create_definition(gexport_graph_exports_table_data()));
 
 	return true;
 }
@@ -154,7 +174,7 @@ function gexport_create_table() {
  * @return bool Always returns true.
  */
 function gexport_create_table_tasks() {
-	api_plugin_db_table_create('gexport', 'graph_exports_tasks', gexport_graph_exports_tasks_table_data());
+	api_plugin_db_table_create('gexport', 'graph_exports_tasks', gexport_create_definition(gexport_graph_exports_tasks_table_data()));
 
 	return true;
 }
@@ -197,7 +217,7 @@ function gexport_upgrade_tables() {
 		if (db_table_exists($table)) {
 			db_update_table($table, $data);
 		} else {
-			api_plugin_db_table_create('gexport', $table, $data);
+			api_plugin_db_table_create('gexport', $table, gexport_create_definition($data));
 		}
 	}
 }
