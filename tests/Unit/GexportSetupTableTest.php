@@ -80,3 +80,24 @@ it('renames the legacy key-path column and refreshes existing tables on upgrade'
 	expect($refreshed)->toContain('graph_exports')
 		->and($refreshed)->toContain('graph_exports_tasks');
 });
+
+it('hands api_plugin_db_table_create a scalar primary key while keeping the array form for db_update_table', function () {
+	// api_plugin_db_table_create() interpolates data['primary'] straight into
+	// PRIMARY KEY (`...`) down to the 1.2.29 compat floor, so an array would
+	// render as PRIMARY KEY (`Array`) and fail the create on a fresh install.
+	// db_update_table() needs the array form, so the canonical definitions keep it.
+	gexport_setup_table();
+
+	$creates = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'api_plugin_db_table_create';
+	});
+
+	expect($creates)->not->toBeEmpty();
+
+	foreach ($creates as $call) {
+		expect($call['data']['primary'])->toBeString();
+	}
+
+	expect(gexport_graph_exports_table_data()['primary'])->toBeArray()
+		->and(gexport_graph_exports_tasks_table_data()['primary'])->toBeArray();
+});
