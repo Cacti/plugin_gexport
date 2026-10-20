@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-20 08:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-20 14:28+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -342,7 +342,7 @@ msgstr "Fel som väljer inmatnings- / utdatafiler, dirs"
 
 #: includes/functions.php
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr "Den begärda åtgärden stöds inte. Ett försök gjordes för att manipulera 64-bitars filer på en plattform som inte kan stödja dem. eller ett alternativ anges som stöds av klienten och inte av servern."
+msgstr "Den begärda åtgärden stöds inte: ett försök gjordes att hantera 64-bitarsfiler på en plattform som inte stöder dem, eller så angavs ett alternativ som stöds av klienten men inte av servern."
 
 #: includes/functions.php
 msgid "Error starting client-server protocol"
@@ -582,7 +582,7 @@ msgstr "RSYNC"
 
 #: setup.php
 msgid "Export Command Arguments"
-msgstr "Exportkommandots argument"
+msgstr "Argument för exportkommando"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
@@ -775,7 +775,7 @@ msgstr "Det här är katalogen, antingen på det lokala systemet eller på fjär
 
 #: setup.php
 msgid "Local Scratch Directory"
-msgstr "Lokal temporärkatalog"
+msgstr "Lokal arbetskatalog"
 
 #: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
