@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-20 14:28+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-26 07:13+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -38,7 +38,7 @@ msgstr "Varje timme"
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Klicka på \"Fortsätt\" för att radera följande grafexportdefinition."
-msgstr[1] "Klicka på \"Fortsätt\" för att radera följande Graph Export Definitions."
+msgstr[1] "Klicka på \"Fortsätt\" för att radera följande grafexportdefinitioner."
 
 #: gexport.php
 msgid "Cancel"
@@ -56,11 +56,11 @@ msgstr "Ta bort grafexportdefinition(er)"
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Klicka på \"Fortsätt\" för att inaktivera följande grafexportdefinition."
-msgstr[1] "Klicka på \"Fortsätt\" för att inaktivera följande Graph Export Definitions."
+msgstr[1] "Klicka på \"Fortsätt\" för att inaktivera följande grafexportdefinitioner."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Graf Export Definitioner"
+msgstr "Inaktivera grafexportdefinitioner"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -70,17 +70,17 @@ msgstr[1] "Klicka på \"Fortsätt\" för att aktivera följande grafexportdefini
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
-msgstr "Graf Export Definitioner"
+msgstr "Aktivera grafexportdefinitioner"
 
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Klicka på \"Fortsätt\" för att köra följande grafexportdefinition nu."
-msgstr[1] "Klicka på \"Fortsätt\" för att köra följande Graph Export Definitions nu."
+msgstr[1] "Klicka på \"Fortsätt\" för att köra följande grafexportdefinitioner nu."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr "Graf Export Definitioner"
+msgstr "Kör grafexportdefinitioner nu"
 
 #: gexport.php
 msgid "You must select a valid action."
@@ -101,19 +101,19 @@ msgstr "Grafexportdefinition [ny]"
 #: gexport.php
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr "Graph Export Definition [redigera: %s]"
+msgstr "Grafexportdefinition [redigera: %s]"
 
 #: gexport.php
 msgid "Select Tree(s)"
-msgstr "Välj träd (er)"
+msgstr "Välj träd"
 
 #: gexport.php
 msgid "Trees Selected"
-msgstr "Trees vald"
+msgstr "Valda träd"
 
 #: gexport.php
 msgid "All Trees Selected"
-msgstr "Alla träd väljs"
+msgstr "Alla träd valda"
 
 #: gexport.php
 msgid "All"
@@ -129,19 +129,19 @@ msgstr "Sök"
 
 #: gexport.php
 msgid "Select Site(s)"
-msgstr "Välj plats(er)"
+msgstr "Välj platser"
 
 #: gexport.php
 msgid "Sites Selected"
-msgstr "Utvalda webbplatser"
+msgstr "Valda platser"
 
 #: gexport.php
 msgid "All Sites Selected"
-msgstr "Alla webbplatser valda"
+msgstr "Alla platser valda"
 
 #: gexport.php
 msgid "Graph Export Definitions"
-msgstr "Graf Export Definitioner"
+msgstr "Definitioner för grafexport"
 
 #: gexport.php
 msgid "Exports"
@@ -186,7 +186,7 @@ msgstr "Rensa"
 
 #: gexport.php setup.php
 msgid "Export Name"
-msgstr "Exportera namn"
+msgstr "Exportnamn"
 
 #: gexport.php setup.php
 msgid "The name of this Graph Export Definition."
@@ -198,7 +198,7 @@ msgstr "ID"
 
 #: gexport.php
 msgid "The internal ID of the Graph Export Definition."
-msgstr "Det interna ID-kortet för grafexportdefinitionen."
+msgstr "Grafexportdefinitionens interna id."
 
 #: gexport.php
 msgid "Schedule"
@@ -206,11 +206,11 @@ msgstr "Schema"
 
 #: gexport.php
 msgid "The frequency that Graphs will be exported."
-msgstr "Den frekvens som Grafer exporteras."
+msgstr "Hur ofta graferna exporteras."
 
 #: gexport.php
 msgid "Next Start"
-msgstr "Nästa Start"
+msgstr "Nästa start"
 
 #: gexport.php
 msgid "The next time the Graph Export should run."
@@ -222,7 +222,7 @@ msgstr "Aktiverad"
 
 #: gexport.php
 msgid "If enabled, this Graph Export definition will run as required."
-msgstr "Om den är aktiverad kommer denna Graph Export-definition att köras efter behov."
+msgstr "Om grafexportdefinitionen är aktiverad körs den vid behov."
 
 #: gexport.php
 msgid "Status"
@@ -234,11 +234,11 @@ msgstr "Den nuvarande grafexportstatusen."
 
 #: gexport.php
 msgid "Exporting (Sites/Trees)"
-msgstr "Exportera (Platser / Träd)"
+msgstr "Exporterar (platser/träd)"
 
 #: gexport.php
 msgid "What is being Exported."
-msgstr "Vad exporteras."
+msgstr "Vad som exporteras."
 
 #: gexport.php setup.php
 msgid "Effective User"
@@ -246,7 +246,7 @@ msgstr "Effektiv användare"
 
 #: gexport.php
 msgid "The user that this export will impersonate."
-msgstr "Användaren att denna export kommer att efterlikna."
+msgstr "Användaren vars behörighet används för exporten."
 
 #: gexport.php
 msgid "Last Runtime"
@@ -254,7 +254,7 @@ msgstr "Senaste körtid"
 
 #: gexport.php
 msgid "The last runtime for the Graph Export."
-msgstr "Den sista körtiden för Graph Export."
+msgstr "Grafexportens senaste körtid."
 
 #: gexport.php
 msgid "Graphs"
@@ -262,7 +262,7 @@ msgstr "Grafer"
 
 #: gexport.php
 msgid "The number of Graphs Exported on the last run."
-msgstr "Antalet Grafer som exporteras på den sista körningen."
+msgstr "Antalet grafer som exporterades vid den senaste körningen."
 
 #: gexport.php
 msgid "Last Started"
@@ -270,15 +270,15 @@ msgstr "Senast startad"
 
 #: gexport.php
 msgid "The last time that this Graph Export was started."
-msgstr "Den sista gången att denna Graph Export startades."
+msgstr "Senaste gången grafexporten startades."
 
 #: gexport.php
 msgid "Last Errored"
-msgstr "Senast fel"
+msgstr "Senaste fel"
 
 #: gexport.php
 msgid "The last time that this Graph Export experienced an error."
-msgstr "Den sista gången att denna Graph Export upplevde ett fel."
+msgstr "Senaste gången ett fel uppstod vid grafexporten."
 
 #: gexport.php
 msgid "Export Definitions"
@@ -298,11 +298,11 @@ msgstr "Ja"
 
 #: gexport.php
 msgid "Idle"
-msgstr "Sysslolös"
+msgstr "Vilande"
 
 #: gexport.php
 msgid "Running"
-msgstr "Kör"
+msgstr "Pågår"
 
 #: gexport.php
 msgid "Error"
@@ -322,7 +322,7 @@ msgstr "Sek"
 
 #: gexport.php
 msgid "No Graph Export Definitions"
-msgstr "Inga Graph Export Definitioner"
+msgstr "Inga grafexportdefinitioner"
 
 #: includes/functions.php
 msgid "Success"
@@ -330,15 +330,15 @@ msgstr "Lyckades"
 
 #: includes/functions.php
 msgid "Syntax or usage error"
-msgstr "Syntax eller användningsfel"
+msgstr "Syntaxfel eller användningsfel"
 
 #: includes/functions.php
 msgid "Protocol incompatibility"
-msgstr "Protokoll oförenlighet"
+msgstr "Inkompatibla protokoll"
 
 #: includes/functions.php
 msgid "Errors selecting input/output files, dirs"
-msgstr "Fel som väljer inmatnings- / utdatafiler, dirs"
+msgstr "Fel vid val av in- eller utdatafiler eller kataloger"
 
 #: includes/functions.php
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
@@ -346,19 +346,19 @@ msgstr "Den begärda åtgärden stöds inte: ett försök gjordes att hantera 64
 
 #: includes/functions.php
 msgid "Error starting client-server protocol"
-msgstr "Fel kunde starta klient-server protokoll"
+msgstr "Fel vid start av klient-server-protokollet"
 
 #: includes/functions.php
 msgid "Daemon unable to append to log-file"
-msgstr "Daemon kan inte lägga till loggfilen"
+msgstr "Demonen kan inte lägga till data i loggfilen"
 
 #: includes/functions.php
 msgid "Error in socket I/O"
-msgstr "Fel i uttaget I / O"
+msgstr "Fel vid in- eller utmatning via socket"
 
 #: includes/functions.php
 msgid "Error in file I/O"
-msgstr "Fel i fil I / O"
+msgstr "Fel vid läsning eller skrivning av fil"
 
 #: includes/functions.php
 msgid "Error in rsync protocol data stream"
@@ -374,15 +374,15 @@ msgstr "Fel i IPC-kod"
 
 #: includes/functions.php
 msgid "Received SIGUSR1 or SIGINT"
-msgstr "Mottagde SIGUSR1 eller SIGINT"
+msgstr "Tog emot SIGUSR1 eller SIGINT"
 
 #: includes/functions.php
 msgid "Some error returned by waitpid()"
-msgstr "Något fel returnerat av waitpid ()"
+msgstr "Ett fel returnerades av waitpid()"
 
 #: includes/functions.php
 msgid "Error allocating core memory buffers"
-msgstr "Fel vid tilldelning av kärnminnebuffertar"
+msgstr "Fel vid tilldelning av minnesbuffertar"
 
 #: includes/functions.php
 msgid "Partial transfer due to error"
@@ -394,15 +394,15 @@ msgstr "Delvis överföring på grund av försvunna källfiler"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "Gränsen --max-delete raderade borttagningar"
+msgstr "Gränsen --max-delete stoppade borttagningarna"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
-msgstr "Timeout i data som skickas / mottas"
+msgstr "Tidsgränsen överskreds vid sändning eller mottagning av data"
 
 #: includes/functions.php
 msgid "Timeout waiting for daemon connection"
-msgstr "Timeout väntar på daemon-anslutning"
+msgstr "Tidsgränsen överskreds i väntan på anslutning till demonen"
 
 #: includes/functions.php
 msgid "Unknown error "
@@ -410,19 +410,19 @@ msgstr "Okänt fel "
 
 #: includes/functions.php
 msgid "Operation was successful"
-msgstr "Operation var framgångsrik"
+msgstr "Åtgärden lyckades"
 
 #: includes/functions.php
 msgid "General error in file copy"
-msgstr "Allmänt fel i filkopia"
+msgstr "Allmänt fel vid filkopiering"
 
 #: includes/functions.php
 msgid "Destination is not directory, but it should be"
-msgstr "Destination är inte katalog, men det borde vara"
+msgstr "Målet är inte en katalog, men måste vara det"
 
 #: includes/functions.php
 msgid "Maximum symlink level exceeded"
-msgstr "Maximal symlinknivå överskridits"
+msgstr "Maximalt antal nivåer av symboliska länkar överskreds"
 
 #: includes/functions.php
 msgid "Connecting to host failed."
@@ -442,15 +442,15 @@ msgstr "Ingen behörighet att komma åt filen."
 
 #: includes/functions.php
 msgid "General error in sftp protocol"
-msgstr "Allmänt fel i sftp protokoll"
+msgstr "Allmänt fel i SFTP-protokollet"
 
 #: includes/functions.php
 msgid "File transfer protocol mismatch"
-msgstr "Överföringsprotokollmatchning"
+msgstr "Filöverföringsprotokollen stämmer inte överens"
 
 #: includes/functions.php
 msgid "No file matches a given criteria"
-msgstr "Ingen fil matchar ett givet kriterier"
+msgstr "Ingen fil matchar det angivna kriteriet"
 
 #: includes/functions.php
 msgid "Host not allowed to connect"
@@ -458,11 +458,11 @@ msgstr "Värd får inte ansluta"
 
 #: includes/functions.php
 msgid "General error in ssh protocol"
-msgstr "Allmänt fel i ssh protokoll"
+msgstr "Allmänt fel i SSH-protokollet"
 
 #: includes/functions.php
 msgid "Key exchange failed"
-msgstr "Viktigt utbyte misslyckades"
+msgstr "Nyckelutbytet misslyckades"
 
 #: includes/functions.php
 msgid "Reserved"
@@ -470,7 +470,7 @@ msgstr "Reserverad"
 
 #: includes/functions.php
 msgid "MAC error"
-msgstr "MAC fel"
+msgstr "MAC-fel"
 
 #: includes/functions.php
 msgid "Compression error"
@@ -494,7 +494,7 @@ msgstr "Anslutningen misslyckades"
 
 #: includes/functions.php
 msgid "Disconnected by application"
-msgstr "Avkopplad genom ansökan"
+msgstr "Anslutningen stängdes av programmet"
 
 #: includes/functions.php
 msgid "Too many connections"
@@ -514,7 +514,7 @@ msgstr "Ogiltigt användarnamn"
 
 #: includes/functions.php
 msgid "Non Query Based"
-msgstr "Icke-frågan baserad"
+msgstr "Inte frågebaserad"
 
 #: includes/functions.php
 msgid "Graph Templates"
@@ -526,11 +526,11 @@ msgstr "Dataförfrågningar"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Exportera kaktifigurer"
+msgstr "Inställningar för export av Cacti-grafer"
 
 #: setup.php
 msgid "Graph Exports"
-msgstr "Graf Export"
+msgstr "Grafexporter"
 
 #: setup.php
 msgid "Utilities"
@@ -594,7 +594,7 @@ msgstr "Tema"
 
 #: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
-msgstr "Var god välj ett av de tillgängliga teman för att skära ut dina kaktifigurer med."
+msgstr "Välj ett av de tillgängliga temana för dina exporterade Cacti-grafer."
 
 #: setup.php
 msgid "Presentation Method"
@@ -602,7 +602,7 @@ msgstr "Presentationsmetod"
 
 #: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
-msgstr "Välj vilken presentation du vill ha för de html-genererade sidorna. Om du väljer klassisk presentation Graferna kommer att finnas på en enda-en-html-sida. Om du väljer trädpresentation, sparas grafträdarkitekturen på de statiska HTML-sidorna"
+msgstr "Välj hur de genererade HTML-sidorna ska presenteras. Med klassisk presentation visas graferna på en enda HTML-sida. Med trädpresentation bevaras grafträdets struktur i de statiska HTML-sidorna"
 
 #: setup.php
 msgid "Site"
@@ -622,7 +622,7 @@ msgstr "Schemaläggningsmetod"
 
 #: setup.php
 msgid "Choose when to Export Graphs."
-msgstr "Välj när du ska exportera grafer."
+msgstr "Välj när graferna ska exporteras."
 
 #: setup.php
 msgid "Periodic Export Cycle"
@@ -630,16 +630,16 @@ msgstr "Periodisk exportcykel"
 
 #: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
-msgstr "Hur ofta önskar du kaktus att exportera grafer. Det här är enheten för pollningscykler som du vill exportera Grafer."
+msgstr "Ange hur ofta Cacti ska exportera grafer, uttryckt i antal pollningscykler."
 
 #: setup.php
 msgid "Every Polling Cycle"
-msgstr "Varje omröstningscykel"
+msgstr "Varje pollningscykel"
 
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "Varje %d pollningscykler"
+msgstr "Var %d:e pollningscykel"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -647,7 +647,7 @@ msgstr "Varje timme vid angivna minuter"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
-msgstr "Om du vill att kaktuserna ska exportera statiska bilder på en timme, sätt minuter i timmen när du ska göra det. Cacti förutsätter att du kör datainsamlingsskriptet var 5: e minut, så det kommer att runda ditt värde till det närmaste runtime. Till exempel skulle 43 motsvara 40 minuter förbi timmen."
+msgstr "Om Cacti ska exportera statiska bilder varje timme anger du vid vilken minut i timmen det ska ske. Cacti utgår från att datainsamlingsskriptet körs var femte minut och avrundar därför värdet till närmaste körtid. Till exempel avrundas 43 till 40 minuter över hel timme."
 
 #: setup.php
 msgid "Daily at specified time"
@@ -655,15 +655,15 @@ msgstr "Dagligen vid angiven tidpunkt"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr "Om du vill att kaktuserna ska exportera statiska bilder dagligen, sätt här när du ska göra det. Cacti förutsätter att du kör datainsamlingsskriptet var 5: e minut, så det kommer att runda ditt värde till det närmaste runtime. Till exempel skulle 21:23 vara lika med 20 minuter efter 21:00."
+msgstr "Om Cacti ska exportera statiska bilder varje dag anger du tiden här. Cacti utgår från att datainsamlingsskriptet körs var femte minut och avrundar därför värdet till närmaste körtid. Till exempel avrundas 21:23 till 21:20."
 
 #: setup.php
 msgid "Use x Threads"
-msgstr "Använd x Trådar"
+msgstr "Använd x trådar"
 
 #: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr "Hur många bakgrundstrådar önskar du att kaktus ska användas när du exporterar grafer. Standard är 0 för att köra all export i pollergänga, 1 eller mer för att kasta separata bakgrundstrådar"
+msgstr "Ange hur många bakgrundstrådar Cacti ska använda vid export av grafer. Standardvärdet 0 kör all export i pollningstråden. Välj 1 eller fler för att skapa separata bakgrundstrådar"
 
 #: setup.php
 msgid "Graph Selection & Settings"
@@ -671,19 +671,19 @@ msgstr "Grafval och inställningar"
 
 #: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
-msgstr "Användarnamnet att använda för att skapa behörigheter för kaktigrafer. Detta användarnamn kommer att användas för att bestämma vilka Grafer / Träd kan exporteras. N / A betyder inte att någon säkerhet är på plats."
+msgstr "Användarnamnet som används för att fastställa behörigheter till Cacti-grafer. Det avgör vilka grafer och träd som kan exporteras. N/A innebär att inga behörighetskontroller antas finnas."
 
 #: setup.php
 msgid "The Tree(s) to export."
-msgstr "Träet (arna) att exportera."
+msgstr "Träden som ska exporteras."
 
 #: setup.php
 msgid "Expand Devices/Sites"
-msgstr "Expand Devices / Sites"
+msgstr "Fäll ut enheter/platser"
 
 #: setup.php
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
-msgstr "Den här inställningen avgör om trädenheter och sidmallar och enheter kommer att utvidgas eller inte. Om den är expanderad, kommer varje värd att ha en undermapp som innehåller antingen grafmallar eller dataquery-objekt."
+msgstr "Inställningen avgör om trädets enheter samt platsens mallar och enheter ska fällas ut. När de fälls ut får varje värd en undermapp med antingen grafmallar eller datafrågeobjekt."
 
 #: setup.php
 msgid "Off"
@@ -695,39 +695,39 @@ msgstr "På"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "Platsen för cacti-grafer ska exporteras från."
+msgstr "Platsen som Cacti-graferna ska exporteras från."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
-msgstr "Diagramminne bredd"
+msgstr "Bredd på grafminiatyrer"
 
 #: setup.php
 msgid "The default width of Thumbnail Graphs in pixels."
-msgstr "Standardbredden för miniatyrdiagrammen i pixlar."
+msgstr "Grafminiatyrernas standardbredd i bildpunkter."
 
 #: setup.php
 msgid "Graph Thumbnail Height"
-msgstr "Diagramminnehöjd"
+msgstr "Höjd på grafminiatyrer"
 
 #: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr "Höjden av miniatyrbilderna i pixlar."
+msgstr "Grafminiatyrernas höjd i bildpunkter."
 
 #: setup.php
 msgid "Default View Thumbnails"
-msgstr "Standard Visa miniatyrbilder"
+msgstr "Visa miniatyrer som standard"
 
 #: setup.php
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
-msgstr "Markera det här om du vill att standard grafvy ska vara i miniatyrläge."
+msgstr "Markera detta om grafvyn ska visa miniatyrer som standard."
 
 #: setup.php
 msgid "Default Graph Columns"
-msgstr "Standard grafkolumner"
+msgstr "Antal grafkolumner som standard"
 
 #: setup.php
 msgid "The number of columns to use by default when displaying Graphs."
-msgstr "Antalet kolumner som ska användas som standard när du visar Grafer."
+msgstr "Antalet kolumner som används som standard när grafer visas."
 
 #: setup.php
 msgid "Graphs Per Page"
@@ -735,39 +735,39 @@ msgstr "Grafer per sida"
 
 #: setup.php
 msgid "Choose the number of Graphs Per Page to display."
-msgstr "Välj antal Grafer per sida som ska visas."
+msgstr "Välj hur många grafer som ska visas per sida."
 
 #: setup.php
 msgid "Maximum Graphs to Export"
-msgstr "Maximala grafer för export"
+msgstr "Maximalt antal grafer att exportera"
 
 #: setup.php
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
-msgstr "När detta nummer har uppnåtts kommer ett fel att genereras, men exporten fortsätter. Ställ in till 0 för ingen gräns."
+msgstr "När detta antal har uppnåtts genereras ett fel, men exporten fortsätter. Ange 0 för ingen gräns."
 
 #: setup.php
 msgid "Export Location Information"
-msgstr "Exportera platsinformation"
+msgstr "Information om exportplats"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Export Timing"
+msgstr "Exportera miniatyrer"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Markera det här om du vill att standard grafvy ska vara i miniatyrläge."
+msgstr "Markera detta om du vill exportera miniatyrer."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Export Directory"
+msgstr "Rensa katalogen"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Markera den här kryssrutan om du vill att den här grafexportdefinitionen ska vara aktiverad."
+msgstr "Markera kryssrutan om grafexporten ska rensa målkatalogen innan den fylls med data."
 
 #: setup.php
 msgid "Export Directory"
-msgstr "Export Directory"
+msgstr "Exportkatalog"
 
 #: setup.php
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
@@ -779,7 +779,7 @@ msgstr "Lokal arbetskatalog"
 
 #: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
-msgstr "Det här är katalogen som Cacti tillfälligt kommer att lagra produktionen innan de skickas till fjärrsidan via överföringsmetoden. Innehållet i den här katalogen kommer att raderas efter att data har överförts."
+msgstr "Katalogen där Cacti tillfälligt lagrar data innan de skickas till fjärrsystemet med den valda överföringsmetoden. Innehållet i katalogen tas bort efter överföringen."
 
 #: setup.php
 msgid "Remote Options"
@@ -787,19 +787,19 @@ msgstr "Fjärralternativ"
 
 #: setup.php
 msgid "Sanitize remote directory"
-msgstr "Sanitize fjärrkatalog"
+msgstr "Rensa fjärrkatalogen"
 
 #: setup.php
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
-msgstr "Markera det här om du vill radera befintliga filer i FTP-fjärrkatalogen. Det här alternativet används endast när du använder PHP-inbyggda ftp-funktionerna."
+msgstr "Markera detta om du vill ta bort befintliga filer i FTP-fjärrkatalogen. Alternativet används endast med PHP:s inbyggda FTP-funktioner."
 
 #: setup.php
 msgid "Remote Host"
-msgstr "Fjärrvärddatorns namn"
+msgstr "Fjärrvärd"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."
-msgstr "Anger värd att skicka exporterade grafer till."
+msgstr "Anger värden som de exporterade graferna ska skickas till."
 
 #: setup.php
 msgid "Remote Port"
@@ -807,7 +807,7 @@ msgstr "Fjärrport"
 
 #: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
-msgstr "Kommunikationsport som ska användas för exportmetoden om den inte är standard (lämnas tom för standard)."
+msgstr "Ange kommunikationsport om exportmetoden ska använda en annan port än standardporten. Lämna fältet tomt för att använda standardporten."
 
 #: setup.php
 msgid "Use passive mode"
@@ -823,7 +823,7 @@ msgstr "Användare"
 
 #: setup.php
 msgid "Account to logon on the remote server (leave empty for defaults)."
-msgstr "Konto till inloggning på fjärrservern (lämna tomt för standardinställningar)."
+msgstr "Konto för inloggning på fjärrservern (lämna tomt för standardinställningen)."
 
 #: setup.php
 msgid "Password"
@@ -831,19 +831,19 @@ msgstr "Lösenord"
 
 #: setup.php
 msgid "Password for the remote ftp account (leave empty for blank)."
-msgstr "Lösenord för fjärrfTP-kontot (lämna tomt för tomt)."
+msgstr "Lösenord för FTP-kontot på fjärrservern (lämna tomt för ett tomt lösenord)."
 
 #: setup.php
 msgid "Private Key Path"
-msgstr "Privat nyckelväg"
+msgstr "Sökväg till privat nyckel"
 
 #: setup.php
 msgid "For SCP and RSYNC, enter the Private Key path if required."
-msgstr "För SCP och RSYNC, skriv in den privata nyckelvägen om det behövs."
+msgstr "Ange sökvägen till den privata nyckeln för SCP och rsync om det behövs."
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Exporterade kaktiska diagramsidor"
+msgstr "Exporterade sidor med Cacti-grafer"
 
 #: setup.php
 msgid "(Edit)"
