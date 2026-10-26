@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-26 10:50+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-26 12:22+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -630,16 +630,16 @@ msgstr "Periodisk exportcykel"
 
 #: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
-msgstr "Ange hur ofta Cacti ska exportera grafer, uttryckt i antal pollningscykler."
+msgstr "Ange hur ofta Cacti ska exportera grafer, uttryckt i antal insamlingscykler."
 
 #: setup.php
 msgid "Every Polling Cycle"
-msgstr "Varje pollningscykel"
+msgstr "Varje insamlingscykel"
 
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "Var %d:e pollningscykel"
+msgstr "Var %d:e insamlingscykel"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -663,7 +663,7 @@ msgstr "Använd x trådar"
 
 #: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr "Ange hur många bakgrundstrådar Cacti ska använda vid export av grafer. Standardvärdet 0 kör all export i pollningstråden. Välj 1 eller fler för att skapa separata bakgrundstrådar"
+msgstr "Ange hur många bakgrundstrådar Cacti ska använda vid export av grafer. Standardvärdet 0 kör all export i insamlingsprocessens tråd. Välj 1 eller fler för att skapa separata bakgrundstrådar"
 
 #: setup.php
 msgid "Graph Selection & Settings"
