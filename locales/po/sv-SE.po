@@ -4,11 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-26 07:13+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-26 10:50+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
-msgstr "Radera"
+msgstr "Ta bort"
 
 #: gexport.php
 msgid "Enable"
@@ -242,7 +242,7 @@ msgstr "Vad som exporteras."
 
 #: gexport.php setup.php
 msgid "Effective User"
-msgstr "Effektiv användare"
+msgstr "Gällande användare"
 
 #: gexport.php
 msgid "The user that this export will impersonate."
@@ -310,7 +310,7 @@ msgstr "Fel"
 
 #: gexport.php
 msgid "All Sites"
-msgstr "Alla webbplatser"
+msgstr "Alla platser"
 
 #: gexport.php
 msgid "All Trees"
@@ -522,7 +522,7 @@ msgstr "Grafmallar"
 
 #: includes/functions.php
 msgid "Data Queries"
-msgstr "Dataförfrågningar"
+msgstr "Datafrågor"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
@@ -534,7 +534,7 @@ msgstr "Grafexporter"
 
 #: setup.php
 msgid "Utilities"
-msgstr "Tillbehör"
+msgstr "Verktyg"
 
 #: setup.php
 msgid "General Administration"
@@ -542,7 +542,7 @@ msgstr "Allmän administration"
 
 #: setup.php
 msgid "General"
-msgstr "Allmän"
+msgstr "Allmänt"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
@@ -606,7 +606,7 @@ msgstr "Välj hur de genererade HTML-sidorna ska presenteras. Med klassisk prese
 
 #: setup.php
 msgid "Site"
-msgstr "Webbplats"
+msgstr "Plats"
 
 #: setup.php
 msgid "Tree"
