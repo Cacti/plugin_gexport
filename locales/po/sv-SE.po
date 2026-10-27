@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-26 12:22+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-10-27 13:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/gexport/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -37,8 +37,8 @@ msgstr "Varje timme"
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "Klicka på \"Fortsätt\" för att radera följande grafexportdefinition."
-msgstr[1] "Klicka på \"Fortsätt\" för att radera följande grafexportdefinitioner."
+msgstr[0] "Klicka på ”Fortsätt” för att ta bort följande grafexportdefinition."
+msgstr[1] "Klicka på ”Fortsätt” för att ta bort följande grafexportdefinitioner."
 
 #: gexport.php
 msgid "Cancel"
@@ -50,7 +50,7 @@ msgstr "Fortsätt"
 
 #: gexport.php
 msgid "Delete Graph Export Definition(s)"
-msgstr "Ta bort grafexportdefinition(er)"
+msgstr "Ta bort grafexportdefinitioner"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -366,7 +366,7 @@ msgstr "Fel i rsync-protokolldataströmmen"
 
 #: includes/functions.php
 msgid "Errors with program diagnostics"
-msgstr "Fel med programdiagnostik"
+msgstr "Fel i programmets diagnostik"
 
 #: includes/functions.php
 msgid "Error in IPC code"
@@ -486,7 +486,7 @@ msgstr "Protokollversionen stöds inte"
 
 #: includes/functions.php
 msgid "Host key not verifiable"
-msgstr "Värdnyckel ej verifierbar"
+msgstr "Värdnyckeln kan inte verifieras"
 
 #: includes/functions.php
 msgid "Connection failed"
