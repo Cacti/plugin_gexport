@@ -896,6 +896,22 @@ function check_system_paths(&$export, $export_path) {
 }
 
 /**
+ * Gets the host ids associated with the selected trees.
+ *
+ * @param array $tree_ids The selected graph_tree_items.graph_tree_id values.
+ *
+ * @return string|false The matching host ids, or false when none exist.
+ */
+function gexport_get_tree_hosts($tree_ids) {
+	$placeholders = implode(', ', array_fill(0, cacti_sizeof($tree_ids), '?'));
+
+	return db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
+		FROM graph_tree_items
+		WHERE graph_tree_id IN(' . $placeholders . ')',
+		array_values($tree_ids));
+}
+
+/**
  * This function exports all the graphs and some html for mgtg view data.
  * These are all the graphs that are in scope for the export be it a tree
  * export, or a site export. Validates/prepares the local export
@@ -1027,10 +1043,7 @@ function export_graphs(&$export, $export_path) {
 
 			export_debug('There are ' . cacti_sizeof($graphs) . ' graphs not in hosts to export for all trees');
 
-			$hosts = db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
-				FROM graph_tree_items
-				WHERE graph_tree_id IN(?)',
-				[implode(', ', $ntree)]);
+			$hosts = gexport_get_tree_hosts($ntree);
 
 			export_debug('There are ' . cacti_sizeof(explode(',',$hosts)) . ' hosts to export for all trees');
 

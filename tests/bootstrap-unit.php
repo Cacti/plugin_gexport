@@ -81,6 +81,9 @@ $GLOBALS['config'] = array(
 
 $GLOBALS['__test_db_calls'] = array();
 $GLOBALS['__test_db_fixtures'] = array();
+$GLOBALS['__test_allowed_trees'] = [];
+$GLOBALS['__test_allowed_graphs'] = [];
+$GLOBALS['__test_allowed_graph_calls'] = [];
 
 if (!function_exists('gexport_test_mock_db')) {
 	function gexport_test_mock_db($fn, $match, $result) {
@@ -328,6 +331,37 @@ if (!function_exists('cacti_log')) {
 	}
 }
 
+if (!function_exists('get_allowed_trees')) {
+	function get_allowed_trees($edit = false, $return_sql = false, $sql_where = '', $sql_order = 'name', $sql_limit = '', &$total_rows = 0, $user_id = 0) {
+		return $GLOBALS['__test_allowed_trees'];
+	}
+}
+
+if (!function_exists('get_allowed_graphs')) {
+	function get_allowed_graphs($sql_where = '', $sql_order = 'gtg.title_cache', $sql_limit = '', &$total_rows = 0, $user_id = 0, $graph_id = 0) {
+		$GLOBALS['__test_allowed_graph_calls'][] = [
+			'sql_where' => $sql_where,
+			'user_id'   => $user_id,
+		];
+
+		return $GLOBALS['__test_allowed_graphs'];
+	}
+}
+
+if (!function_exists('array_rekey')) {
+	function array_rekey($rows, $key, $value) {
+		$rekeyed = [];
+
+		if (is_array($rows)) {
+			foreach ($rows as $row) {
+				$rekeyed[$row[$key]] = $row[$value];
+			}
+		}
+
+		return $rekeyed;
+	}
+}
+
 if (!function_exists('cacti_sizeof')) {
 	function cacti_sizeof($array) {
 		return is_array($array) ? count($array) : 0;
@@ -387,6 +421,10 @@ if (!defined('CACTI_PATH_BASE')) {
 
 if (!defined('POLLER_VERBOSITY_LOW')) {
 	define('POLLER_VERBOSITY_LOW', 2);
+}
+
+if (!defined('POLLER_VERBOSITY_HIGH')) {
+	define('POLLER_VERBOSITY_HIGH', 4);
 }
 
 if (!defined('POLLER_VERBOSITY_MEDIUM')) {
