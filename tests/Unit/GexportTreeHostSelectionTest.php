@@ -22,18 +22,18 @@ it('binds every selected tree id when looking up their hosts', function () {
 	$query  = null;
 	$params = null;
 
-	gexport_test_mock_db('db_fetch_cell_prepared', function ($sql, $bound) use (&$query, &$params) {
+	gexport_test_mock_db('db_fetch_assoc_prepared', function ($sql, $bound) use (&$query, &$params) {
 		$query  = $sql;
 		$params = $bound;
 
-		return '10,20';
-	}, '10,20');
+		return true;
+	}, [['host_id' => '10'], ['host_id' => '20']]);
 
 	expect(gexport_get_tree_hosts([3, 8]))->toBe('10,20')
 		->and(preg_replace('/\s+/', ' ', trim($query)))
 		->toBe(
-			'SELECT GROUP_CONCAT(DISTINCT host_id) ' .
-			'FROM graph_tree_items WHERE graph_tree_id IN(?, ?)'
+			'SELECT DISTINCT host_id ' .
+			'FROM graph_tree_items WHERE graph_tree_id IN(?, ?) AND host_id > 0'
 		)
 		->and($params)->toBe([3, 8]);
 });
@@ -42,20 +42,42 @@ it('binds one tree id with a single placeholder', function () {
 	$query  = null;
 	$params = null;
 
-	gexport_test_mock_db('db_fetch_cell_prepared', function ($sql, $bound) use (&$query, &$params) {
+	gexport_test_mock_db('db_fetch_assoc_prepared', function ($sql, $bound) use (&$query, &$params) {
 		$query  = $sql;
 		$params = $bound;
 
-		return '10';
-	}, '10');
+		return true;
+	}, [['host_id' => '10']]);
 
 	expect(gexport_get_tree_hosts([3]))->toBe('10')
 		->and(preg_replace('/\s+/', ' ', trim($query)))
 		->toBe(
-			'SELECT GROUP_CONCAT(DISTINCT host_id) ' .
-			'FROM graph_tree_items WHERE graph_tree_id IN(?)'
+			'SELECT DISTINCT host_id ' .
+			'FROM graph_tree_items WHERE graph_tree_id IN(?) AND host_id > 0'
 		)
 		->and($params)->toBe([3]);
+});
+
+it('returns an empty host list when the selected trees hold no devices', function () {
+	gexport_test_mock_db('db_fetch_assoc_prepared', 'FROM graph_tree_items', []);
+
+	expect(gexport_get_tree_hosts([3]))->toBe('');
+});
+
+it('keeps every host id intact when the list is long', function () {
+	// GROUP_CONCAT() stops at group_concat_max_len (1024 bytes by default).
+	$rows = [];
+
+	for ($id = 100000; $id < 100400; $id++) {
+		$rows[] = ['host_id' => (string) $id];
+	}
+
+	gexport_test_mock_db('db_fetch_assoc_prepared', 'FROM graph_tree_items', $rows);
+
+	$hosts = explode(',', gexport_get_tree_hosts([3]));
+
+	expect($hosts)->toHaveCount(400)
+		->and(end($hosts))->toBe('100399');
 });
 
 it('uses hosts from all selected trees when finding exportable graphs', function () {
@@ -64,9 +86,9 @@ it('uses hosts from all selected trees when finding exportable graphs', function
 		['id' => 8, 'name' => 'Tree 8'],
 	];
 
-	gexport_test_mock_db('db_fetch_cell_prepared', function ($sql, $bound) {
-		return count($bound) === 2 && $bound === [3, 8] ? '10,20' : false;
-	}, '10,20');
+	gexport_test_mock_db('db_fetch_assoc_prepared', function ($sql, $bound) {
+		return strpos($sql, 'FROM graph_tree_items') !== false && $bound === [3, 8];
+	}, [['host_id' => '10'], ['host_id' => '20']]);
 
 	$export = [
 		'export_clear'          => 'off',

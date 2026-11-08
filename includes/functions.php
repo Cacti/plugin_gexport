@@ -898,17 +898,30 @@ function check_system_paths(&$export, $export_path) {
 /**
  * Gets the host ids associated with the selected trees.
  *
+ * Graph and header tree items carry host_id 0, which would pull every
+ * non-device graph into the export, so only device items are used. The ids
+ * are fetched as rows rather than with GROUP_CONCAT(), which truncates at
+ * group_concat_max_len and can leave a partial id at the end of the list.
+ *
  * @param array $tree_ids The selected graph_tree_items.graph_tree_id values.
  *
- * @return string|false The matching host ids, or false when none exist.
+ * @return string The matching host ids as a comma-separated list, or ''
+ *                when none exist.
  */
 function gexport_get_tree_hosts($tree_ids) {
 	$placeholders = implode(', ', array_fill(0, cacti_sizeof($tree_ids), '?'));
 
-	return db_fetch_cell_prepared('SELECT GROUP_CONCAT(DISTINCT host_id)
+	$rows = db_fetch_assoc_prepared('SELECT DISTINCT host_id
 		FROM graph_tree_items
-		WHERE graph_tree_id IN(' . $placeholders . ')',
+		WHERE graph_tree_id IN(' . $placeholders . ')
+		AND host_id > 0',
 		array_values($tree_ids));
+
+	if (!cacti_sizeof($rows)) {
+		return '';
+	}
+
+	return implode(',', array_map('intval', array_column($rows, 'host_id')));
 }
 
 /**
