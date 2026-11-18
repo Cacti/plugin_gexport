@@ -37,8 +37,19 @@ functionality that was removed from the Core of Cacti.
 
 Allows you to Export Cacti Graphs, Graph Tree's and Sites.  Multiple Graph
 Exports can be performed each impersonating a different users permissions. Graph
-Export contents can be transferred to remote sites using FTP, SFTP, RSYNC, and
-SCP.
+Export contents can be transferred to remote sites using the Export Method
+choices Local, FTP, FTP NC, SFTP, RSYNC, and SCP.
+
+## Requirements
+
+Requirements depend on the Export Method chosen:
+
+* FTP and SFTP use PHP's built-in FTP functions, so the PHP `ftp` extension is
+  required.  SFTP additionally needs `ftp_ssl_connect()`, which requires PHP
+  built with OpenSSL support
+* FTP NC runs `ncftpput` and is not available on Windows
+* RSYNC and SCP run the `rsync` and `scp` binaries, which must be installed
+  and in the poller's path
 
 ## Cacti compatibility
 
@@ -62,6 +73,28 @@ from the Plugin Management Interface.
 
 Once this is done, you can configure what Graph Trees or Sites to be exported
 and using which user.
+
+## Usage
+
+Exports are managed under **Utilities -> Graph Exports**.  Access requires the
+**Export Cacti Graphs Settings** realm, which is also granted to the General
+Administration role.
+
+Scheduled exports run from the poller's `poller_bottom` hook at the end of each
+polling cycle.  To run them by hand, use `poller_export.php`:
+
+```
+php plugins/gexport/poller_export.php [--id=N] [--force] [--debug]
+```
+
+| Option | Effect |
+| --- | --- |
+| `--id=N` | Export only the Graph Export with this ID |
+| `--force` | Run the export now, regardless of its schedule |
+| `-d`, `--debug` | Display verbose output during execution |
+
+The `--thread` option is used internally when the poller starts an export in
+the background and is not intended to be passed by hand.
 
 ## Possible Bugs
 
