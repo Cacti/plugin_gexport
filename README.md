@@ -6,13 +6,27 @@ functionality.  However, this new version not only exports the Graph and Tree's,
 it allows dynamic resizing of graphs to fit your display, and allows users to
 switch dynamically between full view and preview modes.
 
-Due to it's new design, it is also much faster and more reliable than previous
-versions.  You can still have the Graph Exports content impersonate any login
-user, but you can now define as many exports as you wish, each with their own
-export schedule and destination.  In addition to the Traditional Tree View
-export, there is now a Site View export mode that exports all devices inside of
-a site that the impersonated user has access to.  This makes setting up Graph
-Exports more convenient.
+Each export has a schedule, destination and Cacti user whose permissions
+determine the exported content. Tree and Site views let operators publish a
+chosen set of graphs to a separate destination.
+
+## Versions and compatibility
+
+This README describes the `develop` source branch.
+
+| Code | Plugin version | Minimum Cacti declared in `INFO` |
+| --- | --- | --- |
+| [Source branch](INFO) | 2.1 | 1.2.29 |
+| [Published v2.1](https://github.com/Cacti/plugin_gexport/releases/tag/v2.1) | 2.1 | 1.2.15 |
+
+Use the published release’s assets and tagged documentation when installing that
+package. Branch code can include later changes, even when its version number
+matches the release. Cacti’s own PHP and database requirements also apply.
+
+Install this plugin in **`<cacti-root>/plugins/gexport`**, using the directory
+name `gexport` rather than `plugin_gexport`.
+
+See [CHANGELOG.md](CHANGELOG.md) for the version history.
 
 ## Purpose
 
