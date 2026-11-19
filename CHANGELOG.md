@@ -1,5 +1,8 @@
 ## Changelog
 
+Documentation update (unreleased): Refresh README release/source compatibility,
+installation guidance and source-checked behavior.
+
 --- develop ---
 
 - dev: Run the CI poller with the shared runner group so RRD files and structured directories pass permission verification
