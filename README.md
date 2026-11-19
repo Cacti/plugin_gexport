@@ -16,7 +16,7 @@ This README describes the `develop` source branch.
 
 | Code | Plugin version | Minimum Cacti declared in `INFO` |
 | --- | --- | --- |
-| [Source branch](INFO) | 2.1 | 1.2.29 |
+| [Source branch](https://github.com/Cacti/plugin_gexport/blob/develop/INFO) | 2.1 | 1.2.29 |
 | [Published v2.1](https://github.com/Cacti/plugin_gexport/releases/tag/v2.1) | 2.1 | 1.2.15 |
 
 Use the published release’s assets and tagged documentation when installing that
@@ -26,7 +26,7 @@ matches the release. Cacti’s own PHP and database requirements also apply.
 Install this plugin in **`<cacti-root>/plugins/gexport`**, using the directory
 name `gexport` rather than `plugin_gexport`.
 
-See [CHANGELOG.md](CHANGELOG.md) for the version history.
+See [CHANGELOG.md](https://github.com/Cacti/plugin_gexport/blob/develop/CHANGELOG.md) for the version history.
 
 ## Purpose
 
