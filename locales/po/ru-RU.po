@@ -49,9 +49,9 @@ msgstr "Каждый час"
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы удалить следующее определение экспорта графика."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Нажмите «Продолжить», чтобы удалить следующее определение экспорта графиков."
+msgstr[1] "Нажмите «Продолжить», чтобы удалить следующие определения экспорта графиков."
+msgstr[2] "Нажмите «Продолжить», чтобы удалить следующие определения экспорта графиков."
 
 #: gexport.php
 msgid "Cancel"
@@ -62,17 +62,16 @@ msgid "Continue"
 msgstr "Продолжить"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "График Экспорт Определения Определения"
+msgstr "Удалить определение(я) экспорта графиков"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы отключить следующее определение экспорта графиков."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Нажмите «Продолжить», чтобы отключить следующее определение экспорта графиков."
+msgstr[1] "Нажмите «Продолжить», чтобы отключить следующие определения экспорта графиков."
+msgstr[2] "Нажмите «Продолжить», чтобы отключить следующие определения экспорта графиков."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
@@ -81,9 +80,9 @@ msgstr "График Экспорт Определения Определени�
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы включить следующее определение экспорта графиков."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Нажмите «Продолжить», чтобы включить следующее определение экспорта графиков."
+msgstr[1] "Нажмите «Продолжить», чтобы включить следующие определения экспорта графиков."
+msgstr[2] "Нажмите «Продолжить», чтобы включить следующие определения экспорта графиков."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -92,19 +91,18 @@ msgstr "График Экспорт Определения Определени�
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы запустить следующее определение экспорта графиков сейчас."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Нажмите «Продолжить», чтобы запустить следующее определение экспорта графиков сейчас."
+msgstr[1] "Нажмите «Продолжить», чтобы запустить следующие определения экспорта графиков сейчас."
+msgstr[2] "Нажмите «Продолжить», чтобы запустить следующие определения экспорта графиков сейчас."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr "График Экспорт Определения Определения"
+msgstr "Запустить определение(я) экспорта графиков сейчас"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Вы должны выбрать хотя бы одно определение экспорта графиков."
+msgstr "Вы должны выбрать допустимое действие."
 
 #: gexport.php
 msgid "Return"
@@ -165,7 +163,7 @@ msgstr "График Экспорт Определения Определени�
 
 #: gexport.php
 msgid "Exports"
-msgstr "Експорт"
+msgstr "Экспорт"
 
 #: gexport.php
 msgid "Default"
@@ -546,7 +544,7 @@ msgstr "Запросы данных"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Настройки экспорта графиков кактусов"
+msgstr "Настройки экспорта графиков Cacti"
 
 #: setup.php
 msgid "Graph Exports"
@@ -667,7 +665,7 @@ msgstr "Часовой в указанные минуты"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
-msgstr "Если вы хотите, чтобы Cacti экспортировала статичные изображения на почасовой основе, укажите минуты часа, когда это нужно сделать. Кактусы предполагают, что вы запускаете скрипт сбора данных каждые 5 минут, поэтому они округляют ваше значение до ближайшего к их исполнению. Например, 43 было бы равно 40 минутам после часа."
+msgstr "Если вы хотите, чтобы Cacti ежечасно экспортировал статические изображения, укажите минуты часа для выполнения. Cacti предполагает, что скрипт сбора данных запускается каждые 5 минут, поэтому указанное значение будет округлено до ближайшего времени запуска. Например, 43 будет соответствовать 40 минутам каждого часа."
 
 #: setup.php
 msgid "Daily at specified time"
@@ -675,7 +673,7 @@ msgstr "Ежедневно в указанное время"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr "Если вы хотите, чтобы Cacti экспортировал статические изображения на ежедневной основе, укажите здесь время, когда это делать. Кактусы предполагают, что вы запускаете скрипт сбора данных каждые 5 минут, поэтому они округляют ваше значение до ближайшего к их исполнению. Например, 21:23 будет равно 20 минутам после 21:23."
+msgstr "Если вы хотите, чтобы Cacti ежедневно экспортировал статические изображения, укажите здесь время выполнения. Cacti предполагает, что скрипт сбора данных запускается каждые 5 минут, поэтому указанное значение будет округлено до ближайшего времени запуска. Например, 21:23 будет соответствовать 21:20."
 
 #: setup.php
 msgid "Use x Threads"
@@ -715,7 +713,7 @@ msgstr "Вкл"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "Сайт для экспортируемых графиков кактусов."
+msgstr "Площадка, с которой экспортируются графики Cacti."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -775,15 +773,15 @@ msgstr "Сроки экспорта"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Установите этот флажок, если вы хотите, чтобы графический вид по умолчанию был в режиме миниатюр."
+msgstr "Установите этот флажок, если требуется режим экспорта миниатюр."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Каталог экспорта"
+msgstr "Очистить каталог"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Установите этот флажок, если вы хотите, чтобы это определение экспорта графиков было включено."
+msgstr "Установите этот флажок, если вы хотите, чтобы этот экспорт графиков очищал конечный каталог перед заполнением."
 
 #: setup.php
 msgid "Export Directory"
@@ -815,7 +813,7 @@ msgstr "Установите этот флажок, если вы хотите �
 
 #: setup.php
 msgid "Remote Host"
-msgstr "Удалить Host"
+msgstr "Удаленный хост"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."
@@ -823,7 +821,7 @@ msgstr "Обозначает хост, на который необходимо 
 
 #: setup.php
 msgid "Remote Port"
-msgstr "Удалить Port"
+msgstr "Удаленный порт"
 
 #: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
@@ -863,7 +861,7 @@ msgstr "Для SCP и RSYNC введите путь закрытого ключ�
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Экспортированные графические страницы кактусов"
+msgstr "Экспортированные страницы графиков Cacti"
 
 #: setup.php
 msgid "(Edit)"

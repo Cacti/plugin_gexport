@@ -61,10 +61,9 @@ msgid "Continue"
 msgstr "जारी रखें"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "ग्राफ़ निर्यात परिभाषाएँ"
+msgstr "ग्राफ़ निर्यात परिभाषा(एँ) हटाएं"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -89,18 +88,17 @@ msgstr "ग्राफ़ निर्यात परिभाषाएँ"
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "निम्न ग्राफ़ निर्यात परिभाषा को चलाने के लिए 'जारी रखें' पर क्लिक करें।"
-msgstr[1] "ग्राफ़ निर्यात परिभाषाओं का पालन करने के लिए 'जारी रखें' पर क्लिक करें"
+msgstr[0] "निम्नलिखित ग्राफ़ निर्यात परिभाषा को अभी चलाने के लिए 'जारी रखें' पर क्लिक करें।"
+msgstr[1] "निम्नलिखित ग्राफ़ निर्यात परिभाषाओं को अभी चलाने के लिए 'जारी रखें' पर क्लिक करें।"
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "ग्राफ़ निर्यात परिभाषाएँ"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "आपको कम से कम एक ग्राफ़ निर्यात परिभाषा का चयन करना चाहिए।"
+msgstr "आपको एक मान्य क्रिया चुननी होगी।"
 
 #: gexport.php
 msgid "Return"
@@ -133,7 +131,7 @@ msgstr "सभी पेड़ चुने गए"
 
 #: gexport.php
 msgid "All"
-msgstr "所有"
+msgstr "सभी"
 
 #: gexport.php
 msgid "None"
@@ -198,7 +196,7 @@ msgstr "जाएं"
 #: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr "明确"
+msgstr "साफ़ करें"
 
 #: gexport.php setup.php
 msgid "Export Name"
@@ -242,7 +240,7 @@ msgstr "यदि सक्षम है, तो यह ग्राफ़ न�
 
 #: gexport.php
 msgid "Status"
-msgstr "ऑर्डर स्थिति"
+msgstr "स्थिति"
 
 #: gexport.php
 msgid "The current Graph Export Status."
@@ -410,7 +408,7 @@ msgstr "गायब स्रोत फ़ाइलों के कारण �
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "--मैक्स-डिलीट लिमिट ने डिलीट को रोक दिया"
+msgstr "--max-delete सीमा ने विलोपन रोक दिया"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -586,7 +584,7 @@ msgstr "SFTP"
 
 #: setup.php
 msgid "FTP NC"
-msgstr "एफ़टीपी नेकां"
+msgstr "FTP NC"
 
 #: setup.php
 msgid "SCP"
@@ -626,7 +624,7 @@ msgstr "साइट"
 
 #: setup.php
 msgid "Tree"
-msgstr "वृक्षugiou"
+msgstr "ट्री"
 
 #: setup.php
 msgid "Export Timing"
@@ -655,11 +653,11 @@ msgstr "हर मतदान चक्र"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "हर% d पोलिंग साइकिल"
+msgstr "प्रत्येक %d पोलिंग चक्र"
 
 #: setup.php
 msgid "Hourly at specified minutes"
-msgstr "प्रति मिनट निर्दिष्ट मिनट पर"
+msgstr "निर्दिष्ट मिनटों पर प्रति घंटा"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
@@ -767,19 +765,19 @@ msgstr "स्थान जानकारी निर्यात करें
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "निर्यात समय"
+msgstr "थंबनेल निर्यात करें"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें"
+msgstr "यदि आप निर्यात थंबनेल मोड चाहते हैं, तो इसे चिह्नित करें।"
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "निर्यात निर्देशिका"
+msgstr "निर्देशिका साफ़ करें"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "यदि आप इस ग्राफ़ निर्यात परिभाषा को सक्षम करना चाहते हैं तो इस चेकबॉक्स की जाँच करें।"
+msgstr "यदि आप चाहते हैं कि यह ग्राफ़ निर्यात भरने से पहले अंतिम निर्देशिका को साफ़ कर दे, तो इस चेकबॉक्स को चिह्नित करें।"
 
 #: setup.php
 msgid "Export Directory"
@@ -815,7 +813,7 @@ msgstr "रिमोट होस्ट"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."
-msgstr "निर्यात किए गए रेखांकन भेजने के लिए होस्ट को अस्वीकार करता है।"
+msgstr "उस होस्ट को दर्शाता है जिस पर निर्यात किए गए ग्राफ़ भेजे जाने हैं।"
 
 #: setup.php
 msgid "Remote Port"

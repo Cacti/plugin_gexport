@@ -61,10 +61,9 @@ msgid "Continue"
 msgstr "Volgende"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Grafiek exporteren Definities"
+msgstr "Grafiekexportdefinitie(s) verwijderen"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -97,10 +96,9 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Grafiek exporteren Definities"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "U moet ten minste één definitie van grafiekuitvoer selecteren."
+msgstr "U moet een geldige actie selecteren."
 
 #: gexport.php
 msgid "Return"
@@ -198,7 +196,7 @@ msgstr "Ga"
 #: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr "Herstel"
+msgstr "Wissen"
 
 #: gexport.php setup.php
 msgid "Export Name"
@@ -410,7 +408,7 @@ msgstr "Gedeeltelijke overdracht als gevolg van verdwenen bronbestanden"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "De --max-verwijderingslimiet is gestopt met het verwijderen van verwijderingen"
+msgstr "De limiet --max-delete heeft het verwijderen gestopt"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -542,7 +540,7 @@ msgstr "Data queries"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Cactusgrafieken exporteren Instellingen"
+msgstr "Instellingen voor exporteren van Cacti-grafieken"
 
 #: setup.php
 msgid "Graph Exports"
@@ -646,7 +644,7 @@ msgstr "Periodieke exportcyclus"
 
 #: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
-msgstr "Hoe vaak wilt u Cactussen exporteren naar grafieken.  Dit is de eenheid van Polling-cycli die u wilt exporteren."
+msgstr "Hoe vaak wilt u dat Cacti grafieken exporteert.  Dit is de eenheid van polling-cycli waarmee u grafieken wilt exporteren."
 
 #: setup.php
 msgid "Every Polling Cycle"
@@ -679,7 +677,7 @@ msgstr "Gebruik x Draden x Draden"
 
 #: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr "Hoeveel achtergronddraden wilt u dat Cactussen gebruiken bij het exporteren van grafieken.  De standaardinstelling is 0 om alle export in pollerdraad uit te voeren, 1 of meer om afzonderlijke achtergronddraden te maken"
+msgstr "Hoeveel achtergrond-threads wilt u dat Cacti gebruikt bij het exporteren van grafieken.  Standaard is 0 om alle export in de poller-thread uit te voeren, 1 of meer om afzonderlijke achtergrond-threads te starten"
 
 #: setup.php
 msgid "Graph Selection & Settings"
@@ -687,7 +685,7 @@ msgstr "Grafiekselectie & instellingen"
 
 #: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
-msgstr "De te gebruiken gebruikersnaam voor het instellen van rechten voor Cacti Graphs.  Deze gebruikersnaam wordt gebruikt om te bepalen welke grafieken/bomen geëxporteerd kunnen worden.  N.v.t. betekent niet veronderstellen dat er geen beveiliging aanwezig is."
+msgstr "De gebruikersnaam die moet worden gebruikt voor het vaststellen van rechten voor Cacti-grafieken.  Deze gebruikersnaam wordt gebruikt om te bepalen welke grafieken/structuren kunnen worden geëxporteerd.  N.v.t. betekent dat er niet wordt aangenomen dat er enige beveiliging actief is."
 
 #: setup.php
 msgid "The Tree(s) to export."
@@ -767,19 +765,19 @@ msgstr "Locatie-informatie exporteren"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Timing exporteren"
+msgstr "Miniaturen exporteren"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Vink dit aan als u wilt dat de standaard grafische weergave in de modus Thumbnail staat."
+msgstr "Schakel dit in als u de exportmodus voor miniaturen wilt gebruiken."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Exportgids"
+msgstr "Map leegmaken"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Vink dit selectievakje aan als u wilt dat deze definitie van grafiekuitvoer wordt ingeschakeld."
+msgstr "Schakel dit selectievakje in als u wilt dat deze grafiekexport de doelmap leegmaakt voordat deze wordt gevuld."
 
 #: setup.php
 msgid "Export Directory"
@@ -791,7 +789,7 @@ msgstr "Dit is de directory, hetzij op het lokale systeem, hetzij op het externe
 
 #: setup.php
 msgid "Local Scratch Directory"
-msgstr "Lokale kraslijst"
+msgstr "Lokale scratch-map"
 
 #: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
@@ -859,7 +857,7 @@ msgstr "Voor SCP en RSYNC voert u, indien nodig, het pad van de privésleutel in
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Uitgevoerde cactusgrafiekpagina's"
+msgstr "Geëxporteerde Cacti-grafiekpagina's"
 
 #: setup.php
 msgid "(Edit)"

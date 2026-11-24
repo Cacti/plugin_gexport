@@ -61,10 +61,9 @@ msgid "Continue"
 msgstr "Συνέχεια"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Ορισμοί εξαγωγής γραφημάτων"
+msgstr "Διαγραφή ορισμού(-ών) εξαγωγής γραφημάτων"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -74,7 +73,7 @@ msgstr[1] "Κάντε κλικ στο κουμπί \"Συνέχεια\" για �
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Ορισμοί εξαγωγής γραφημάτων"
+msgstr "Απενεργοποίηση ορισμού(-ών) εξαγωγής γραφημάτων"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -97,10 +96,9 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Ορισμοί εξαγωγής γραφημάτων"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Πρέπει να επιλέξετε τουλάχιστον έναν ορισμό εξαγωγής γραφήματος."
+msgstr "Πρέπει να επιλέξετε μια έγκυρη ενέργεια."
 
 #: gexport.php
 msgid "Return"
@@ -314,7 +312,7 @@ msgstr "Ναι"
 
 #: gexport.php
 msgid "Idle"
-msgstr "Στροφές βραδυπορίας"
+msgstr "Σε αδράνεια"
 
 #: gexport.php
 msgid "Running"
@@ -410,7 +408,7 @@ msgstr "Μερική μεταφορά λόγω εξαφανισμένων αρχ
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "Το όριο -max-delete διακόπηκε"
+msgstr "Το όριο --max-delete σταμάτησε τις διαγραφές"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -655,7 +653,7 @@ msgstr "Κάθε κύκλος τηλεπαραλαβής"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "Κάθε% d κύκλους τηλεπαραλαβής"
+msgstr "Κάθε %d κύκλους Poller"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -771,15 +769,15 @@ msgstr "Εξαγωγή χρονισμού"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Ελέγξτε αν θέλετε η προεπιλεγμένη προβολή γραφήματος να είναι σε λειτουργία μικρογραφίας."
+msgstr "Επιλέξτε αυτό εάν θέλετε τη λειτουργία μικρογραφιών εξαγωγής."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Κατάλογος εξαγωγής"
+msgstr "Εκκαθάριση καταλόγου"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Ελέγξτε αυτό το πλαίσιο ελέγχου εάν θέλετε να ενεργοποιηθεί αυτός ο ορισμός εξαγωγής γραφημάτων."
+msgstr "Επιλέξτε αυτό το πλαίσιο ελέγχου εάν θέλετε αυτή η εξαγωγή γραφημάτων να εκκαθαρίζει τον τελικό κατάλογο πριν από τη συμπλήρωση."
 
 #: setup.php
 msgid "Export Directory"

@@ -61,10 +61,9 @@ msgid "Continue"
 msgstr "Continua"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Grafico delle definizioni di esportazione"
+msgstr "Elimina definizione/i di esportazione grafici"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -74,7 +73,7 @@ msgstr[1] "Fare clic su 'Continua' per disattivare le seguenti definizioni di es
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Grafico delle definizioni di esportazione"
+msgstr "Disabilita definizione/i di esportazione grafico"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -94,13 +93,12 @@ msgstr[1] "Fare clic su 'Continua' per eseguire ora le seguenti definizioni di e
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr "Grafico delle definizioni di esportazione"
+msgstr "Esegui ora la/le definizione/i di esportazione grafici"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "È necessario selezionare almeno una definizione di esportazione del grafico."
+msgstr "Devi selezionare un'azione valida."
 
 #: gexport.php
 msgid "Return"
@@ -410,7 +408,7 @@ msgstr "Trasferimento parziale a causa di file di origine scomparsi"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "Il limite --max-cancellare le cancellazioni interrotte"
+msgstr "Il limite --max-delete ha interrotto le eliminazioni"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -542,7 +540,7 @@ msgstr "Richieste di dati"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Impostazioni dei grafici Cactus per l'esportazione"
+msgstr "Impostazioni esportazione grafici Cacti"
 
 #: setup.php
 msgid "Graph Exports"
@@ -767,19 +765,19 @@ msgstr "Informazioni sulla posizione di esportazione"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Tempi di esportazione"
+msgstr "Esporta miniature"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Selezionare questa opzione se si desidera che la Vista Grafico predefinita sia in modalità Miniature."
+msgstr "Selezionare questa opzione se si desidera la modalità miniature per l'esportazione."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Elenco delle esportazioni"
+msgstr "Svuota directory"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Selezionare questa casella di controllo se si desidera che la definizione di esportazione del grafico sia abilitata."
+msgstr "Selezionare questa casella se si desidera che questa esportazione del grafico svuoti la directory finale prima di popolarla."
 
 #: setup.php
 msgid "Export Directory"
@@ -791,7 +789,7 @@ msgstr "Questa è la directory, sia sul sistema locale o sul sistema remoto, che
 
 #: setup.php
 msgid "Local Scratch Directory"
-msgstr "Elenco locale dei gratta e vinci"
+msgstr "Directory temporanea locale"
 
 #: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
@@ -859,7 +857,7 @@ msgstr "Per SCP e RSYNC, immettere, se necessario, il percorso della chiave priv
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Pagine del grafico Cactus esportate"
+msgstr "Pagine dei grafici Cacti esportate"
 
 #: setup.php
 msgid "(Edit)"

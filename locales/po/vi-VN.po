@@ -60,10 +60,9 @@ msgid "Continue"
 msgstr "Tiếp tục"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Định nghĩa xuất đồ thị"
+msgstr "Xóa (các) định nghĩa xuất đồ thị"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -72,7 +71,7 @@ msgstr[0] "Nhấp vào 'Tiếp tục' để tắt Định nghĩa xuất đồ th
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Định nghĩa xuất đồ thị"
+msgstr "Vô hiệu hóa (các) định nghĩa xuất biểu đồ"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -93,10 +92,9 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Định nghĩa xuất đồ thị"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Bạn phải chọn ít nhất một Định nghĩa Xuất đồ thị."
+msgstr "Bạn phải chọn một hành động hợp lệ."
 
 #: gexport.php
 msgid "Return"
@@ -286,7 +284,7 @@ msgstr "Lần cuối cùng mà Biểu đồ xuất khẩu này được bắt đ
 
 #: gexport.php
 msgid "Last Errored"
-msgstr "Lần xóa cuối cùng"
+msgstr "Lần lỗi gần nhất"
 
 #: gexport.php
 msgid "The last time that this Graph Export experienced an error."
@@ -406,7 +404,7 @@ msgstr "Chuyển một phần do tập tin nguồn biến mất"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "Giới hạn --max-xóa đã dừng xóa"
+msgstr "Giới hạn --max-delete đã dừng việc xóa"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -651,7 +649,7 @@ msgstr "Mỗi chu kỳ bỏ phiếu"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "Mỗi% d Chu kỳ bỏ phiếu"
+msgstr "Mỗi %d chu kỳ thăm dò"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -763,7 +761,7 @@ msgstr "Xuất thông tin vị trí"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Thời gian xuất"
+msgstr "Xuất hình thu nhỏ"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
@@ -771,11 +769,11 @@ msgstr "Kiểm tra điều này nếu bạn muốn Chế độ xem biểu đồ 
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Xuất thư mục"
+msgstr "Xóa thư mục"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Kiểm tra Hộp kiểm này nếu bạn muốn Định nghĩa xuất biểu đồ này được bật."
+msgstr "Chọn hộp kiểm này nếu bạn muốn Xuất biểu đồ này xóa sạch thư mục cuối cùng trước khi điền dữ liệu."
 
 #: setup.php
 msgid "Export Directory"

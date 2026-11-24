@@ -61,10 +61,9 @@ msgid "Continue"
 msgstr "Continuer"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Définitions d'exportation de graphiques"
+msgstr "Supprimer la/les définition(s) d'exportation de graphiques"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -74,7 +73,7 @@ msgstr[1] "Cliquez sur'Continuer' pour désactiver l'exportation des définition
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Définitions d'exportation de graphiques"
+msgstr "Désactiver la ou les définitions d'exportation de graphiques"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -94,13 +93,12 @@ msgstr[1] "Cliquez sur'Continuer' pour lancer l'Exportation des Définitions de 
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr "Définitions d'exportation de graphiques"
+msgstr "Exécuter la ou les définitions d'exportation de graphiques maintenant"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Vous devez sélectionner au moins une définition d'exportation graphique."
+msgstr "Vous devez sélectionner une action valide."
 
 #: gexport.php
 msgid "Return"
@@ -410,7 +408,7 @@ msgstr "Transfert partiel dû à la disparition de fichiers sources"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "La limite --max-suppression a stoppé les suppressions"
+msgstr "La limite --max-delete a arrêté les suppressions"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -767,19 +765,19 @@ msgstr "Informations sur le lieu d'exportation"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Calendrier d'exportation"
+msgstr "Exporter les vignettes"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Cochez cette case si vous voulez que la vue graphique par défaut soit en mode Miniature."
+msgstr "Cochez cette case si vous souhaitez utiliser le mode vignettes pour l'exportation."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Répertoire d'exportation"
+msgstr "Vider le répertoire"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Cochez cette case si vous souhaitez que cette définition d'exportation graphique soit activée."
+msgstr "Cochez cette case si vous souhaitez que cette exportation de graphiques vide le répertoire final avant de le remplir."
 
 #: setup.php
 msgid "Export Directory"

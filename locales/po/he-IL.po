@@ -50,9 +50,9 @@ msgstr "שעתי"
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "לחץ על 'המשך' כדי למחוק את הגדרת ייצוא התרשים הבאה."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "לחץ על 'המשך' כדי למחוק את הגדרות ייצוא התרשים הבאות."
+msgstr[2] "לחץ על 'המשך' כדי למחוק את הגדרות ייצוא התרשים הבאות."
+msgstr[3] "לחץ על 'המשך' כדי למחוק את הגדרות ייצוא התרשים הבאות."
 
 #: gexport.php
 msgid "Cancel"
@@ -63,30 +63,29 @@ msgid "Continue"
 msgstr "המשך"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "הגדרות ייצוא גרף"
+msgstr "מחק הגדרות ייצוא גרף"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "לחץ על 'המשך' כדי להשבית את הגדרת ייצוא התרשים הבאה."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "לחץ על 'המשך' כדי להשבית את הגדרות ייצוא התרשים הבאות."
+msgstr[2] "לחץ על 'המשך' כדי להשבית את הגדרות ייצוא התרשים הבאות."
+msgstr[3] "לחץ על 'המשך' כדי להשבית את הגדרות ייצוא התרשים הבאות."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "הגדרות ייצוא גרף"
+msgstr "השבת הגדרת (הגדרות) ייצוא גרפים"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "לחץ על 'המשך' כדי להפעיל את הגדרת ייצוא התרשים הבאה."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "לחץ על 'המשך' כדי להפעיל את הגדרות ייצוא התרשים הבאות."
+msgstr[2] "לחץ על 'המשך' כדי להפעיל את הגדרות ייצוא התרשים הבאות."
+msgstr[3] "לחץ על 'המשך' כדי להפעיל את הגדרות ייצוא התרשים הבאות."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -95,20 +94,19 @@ msgstr "הגדרות ייצוא גרף"
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "לחץ על 'המשך' כדי להפעיל את הגדרת ייצוא התרשים הבאה כעת."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "לחץ על 'המשך' כדי להריץ את הגדרת ייצוא התרשים הבאה כעת."
+msgstr[1] "לחץ על 'המשך' כדי להריץ את הגדרות ייצוא התרשים הבאות כעת."
+msgstr[2] "לחץ על 'המשך' כדי להריץ את הגדרות ייצוא התרשים הבאות כעת."
+msgstr[3] "לחץ על 'המשך' כדי להריץ את הגדרות ייצוא התרשים הבאות כעת."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "הגדרות ייצוא גרף"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "עליך לבחור בהגדרת ייצוא גרף אחת לפחות."
+msgstr "עליך לבחור פעולה תקינה."
 
 #: gexport.php
 msgid "Return"
@@ -234,7 +232,7 @@ msgstr "תדירות הוצאת הגרפים."
 
 #: gexport.php
 msgid "Next Start"
-msgstr "לחץ על התחל"
+msgstr "התחלה הבאה"
 
 #: gexport.php
 msgid "The next time the Graph Export should run."
@@ -538,7 +536,7 @@ msgstr "שם משתמש לא חוקי"
 
 #: includes/functions.php
 msgid "Non Query Based"
-msgstr "מבוסס על שאילתה"
+msgstr "לא מבוסס שאילתה"
 
 #: includes/functions.php
 msgid "Graph Templates"
@@ -558,7 +556,7 @@ msgstr "יצוא גרפים"
 
 #: setup.php
 msgid "Utilities"
-msgstr "Comment"
+msgstr "כלי עזר"
 
 #: setup.php
 msgid "General Administration"
@@ -663,7 +661,7 @@ msgstr "כל מחזור סינון"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "כל% d מחזורים של סקרים"
+msgstr "כל %d מחזורי דגימה"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -719,7 +717,7 @@ msgstr "ב"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "האתר עבור קקטוסים גרפיים להיות מיוצא."
+msgstr "האתר שממנו ייוצאו גרפים של Cacti."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -775,19 +773,19 @@ msgstr "ייצוא מידע מיקום"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "ייצוא תזמון"
+msgstr "ייצוא תמונות ממוזערות"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "סמן את האפשרות אם ברצונך להציג את תצוגת הגרף המוגדרת כברירת מחדל במצב 'תמונה ממוזערת'."
+msgstr "סמן אפשרות זו אם ברצונך במצב ייצוא תמונות ממוזערות."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "ייצוא מדריך"
+msgstr "נקה תיקייה"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "סמן תיבה זו אם ברצונך ש'הגדרות ייצוא גרפים 'יופעלו."
+msgstr "סמן תיבה זו אם ברצונך שייצוא גרפים זה ינקה את תיקיית היעד לפני האכלוס."
 
 #: setup.php
 msgid "Export Directory"
@@ -867,7 +865,7 @@ msgstr "עבור SCP ו- RSYNC, הזן את נתיב המפתח הפרטי אם 
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "ייצוא קקטוסים גרף דפים"
+msgstr "דפי גרף מיוצאים של Cacti"
 
 #: setup.php
 msgid "(Edit)"

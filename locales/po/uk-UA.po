@@ -1,0 +1,870 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 23:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Ukrainian\n"
+"Language: uk-UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Видалити"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Увімкнути"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Вимкнути"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Експортувати зараз"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Періодично"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Щодня"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Щогодини"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Натисніть 'Продовжити', щоб видалити наступне визначення експорту графіків."
+msgstr[1] "Натисніть 'Продовжити', щоб видалити наступні визначення експорту графіків."
+msgstr[2] "Натисніть 'Продовжити', щоб видалити наступні визначення експорту графіків."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Продовжити"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Видалити визначення експорту графіків"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Натисніть 'Продовжити', щоб вимкнути наступне визначення експорту графіків."
+msgstr[1] "Натисніть 'Продовжити', щоб вимкнути наступні визначення експорту графіків."
+msgstr[2] "Натисніть 'Продовжити', щоб вимкнути наступні визначення експорту графіків."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Вимкнути визначення експорту графіків"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Натисніть 'Продовжити', щоб увімкнути наступне визначення експорту графіків."
+msgstr[1] "Натисніть 'Продовжити', щоб увімкнути наступні визначення експорту графіків."
+msgstr[2] "Натисніть 'Продовжити', щоб увімкнути наступні визначення експорту графіків."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Увімкнути визначення експорту графіків"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Натисніть 'Продовжити', щоб запустити зараз наступне визначення експорту графіків."
+msgstr[1] "Натисніть 'Продовжити', щоб запустити зараз наступні визначення експорту графіків."
+msgstr[2] "Натисніть 'Продовжити', щоб запустити зараз наступні визначення експорту графіків."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Запустити визначення експорту графіків зараз"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Необхідно вибрати дійсну дію."
+
+#: gexport.php
+msgid "Return"
+msgstr "Повернутися"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Необхідно вибрати принаймні одне визначення експорту графіків."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Визначення експорту графіків [нове]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Визначення експорту графіків [редагування: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Виберіть дерево (дерева)"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Вибрано дерев"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Вибрано всі дерева"
+
+#: gexport.php
+msgid "All"
+msgstr "Всі"
+
+#: gexport.php
+msgid "None"
+msgstr "Немає"
+
+#: gexport.php
+msgid "Search"
+msgstr "Пошук"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Виберіть майданчик(и)"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Вибрані майданчики"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Вибрано всі майданчики"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Визначення експорту графіків"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Експорти"
+
+#: gexport.php
+msgid "Default"
+msgstr "За замовчуванням"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Оновити"
+
+#: gexport.php
+msgid "Never"
+msgstr "Ніколи"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "%d секунд"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "%d Хвилина"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "%d хвилин"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Перейти"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Очистити"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Назва експорту"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Назва цього визначення експорту графіків."
+
+#: gexport.php
+msgid "ID"
+msgstr "ID"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Внутрішній ідентифікатор визначення експорту графіків."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Графік"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Періодичність експорту графіків."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Наступний старт"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Наступний запланований час запуску експорту графіків."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Увімкнено"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Якщо ввімкнено, це визначення експорту графіків виконуватиметься за розкладом."
+
+#: gexport.php
+msgid "Status"
+msgstr "Статус"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Поточний стан експорту графіків."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Експорт (майданчики/дерева)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Що експортується."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Ефективний користувач"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Користувач, від імені якого виконуватиметься цей експорт."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Останнє виконання"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Час останнього виконання експорту графіків."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Графіки"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Кількість графіків, експортованих під час останнього запуску."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Останній запущений"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Час останнього запуску цього експорту графіків."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Остання помилка"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Час останньої помилки цього експорту графіків."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Визначення експорту"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "(відсутній)"
+
+#: gexport.php
+msgid "No"
+msgstr "Ні"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Так"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Простій"
+
+#: gexport.php
+msgid "Running"
+msgstr "Працює"
+
+#: gexport.php
+msgid "Error"
+msgstr "Помилка"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Усі майданчики"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Усі дерева"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Сек"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Немає визначень експорту графіків"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Успіх"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Помилка синтаксису або використання"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Несумісність протоколу"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Помилки вибору вхідних/вихідних файлів, каталогів"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Запитана дія не підтримується: здійснено спробу роботи з 64-розрядними файлами на платформі, яка їх не підтримує, або вказано параметр, що підтримується клієнтом, але не сервером."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Помилка запуску протоколу клієнт-сервер"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Демон не може дописати до файлу журналу"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Помилка сокетного вводу/виводу"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Помилка файлового вводу/виводу"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Помилка в потоці даних протоколу rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Помилки діагностики програми"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Помилка в коді IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Отримано сигнал SIGUSR1 або SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Функція waitpid() повернула помилку"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Помилка виділення основних буферів пам'яті"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Часткове передавання через помилку"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Часткове передавання через зникнення вихідних файлів"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Обмеження --max-delete зупинило видалення"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Час очікування під час надсилання/отримання даних вичерпано"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Вичерпано час очікування підключення до демона"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Невідома помилка "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Операцію успішно виконано"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Загальна помилка копіювання файлу"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Призначення не є каталогом, хоча має ним бути"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Перевищено максимальний рівень символічних посилань"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Не вдалося підключитися до вузла."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "З'єднання розірвано"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Файл не існує"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Немає дозволу на доступ до файлу."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Загальна помилка протоколу SFTP"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Невідповідність протоколу передачі файлів"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Жоден файл не відповідає заданим критеріям"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Хосту не дозволено підключатися"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Загальна помилка протоколу SSH"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Помилка обміну ключами"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Зарезервовано"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Помилка MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Помилка стиснення"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Сервіс недоступний"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Версія протоколу не підтримується"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ключ хоста не вдається перевірити"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Помилка підключення"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Від'єднано застосунком"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Забагато з'єднань"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Автентифікацію скасовано користувачем"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Більше немає доступних методів автентифікації"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Неприпустиме ім'я користувача"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Не на основі запитів"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Шаблони графіків"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Запити даних"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Налаштування експорту графіків Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Експорт графіків"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Комунальні послуги"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Загальне управління"
+
+#: setup.php
+msgid "General"
+msgstr "Загальні"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Позначте цей прапорець, щоб увімкнути це визначення експорту графіків."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Метод експорту"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Виберіть, який метод експорту використовувати."
+
+#: setup.php
+msgid "Local"
+msgstr "Локальний"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Аргументи команди експорту"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Аргументи для нелокальних методів експорту. rsync має використовувати "
+
+#: setup.php
+msgid "Theme"
+msgstr "Тема"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Будь ласка, виберіть одну з доступних тем для оформлення експортованих графіків Cacti."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Спосіб представлення"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Виберіть спосіб представлення згенерованих HTML-сторінок. Якщо вибрати класичне представлення, усі графіки буде розміщено на одній HTML-сторінці. Якщо вибрати деревоподібне представлення, у статичних HTML-сторінках буде збережено структуру дерева графіків."
+
+#: setup.php
+msgid "Site"
+msgstr "Вузол"
+
+#: setup.php
+msgid "Tree"
+msgstr "Дерево"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Періодичність експорту"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Спосіб задання часу"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Виберіть, коли виконувати експорт графіків."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Цикл періодичного експорту"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Як часто Cacti має експортувати графіки. Це інтервал у циклах опитування (Polling Cycles), через який потрібно експортувати графіки."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Кожен цикл опитування"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Кожні %d циклів опитування"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Щогодини у вказані хвилини"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Якщо ви хочете, щоб Cacti щогодини експортував статичні зображення, вкажіть тут хвилини години для виконання. Cacti передбачає, що скрипт збору даних запускається кожні 5 хвилин, тому значення буде округлено до найближчого часу запуску. Наприклад, 43 відповідатиме 40 хвилинам кожної години."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Щодня у вказаний час"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Якщо ви хочете, щоб Cacti щодня експортував статичні зображення, вкажіть тут час виконання. Cacti передбачає, що скрипт збору даних запускається кожні 5 хвилин, тому значення буде округлено до найближчого часу запуску. Наприклад, 21:23 відповідатиме 21:20."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Використовувати x потоків"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Скільки фонових потоків ви хочете, щоб Cacti використовував під час експорту графіків. Типово 0, щоб виконувати весь експорт у потоці опитувача, 1 або більше — для запуску окремих фонових потоків"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Вибір та налаштування графіків"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Ім'я користувача для визначення прав доступу до графіків Cacti. Це ім'я використовується для визначення того, які графіки/дерева можна експортувати. N/A означає відсутність перевірки прав безпеки."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Дерева для експорту."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Розгорнути пристрої/майданчики"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Цей параметр визначає, чи будуть розгорнуті дерева пристроїв, а також шаблони вузлів і пристрої. Якщо ввімкнено розгортання, кожен вузол матиме підкаталог, що містить шаблони графіків або елементи запитів даних."
+
+#: setup.php
+msgid "Off"
+msgstr "Вимк."
+
+#: setup.php
+msgid "On"
+msgstr "Увімк."
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Майданчик (Site), з якого експортуватимуться графіки Cacti."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Ширина мініатюри графіка"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Ширина мініатюр графіків за замовчуванням у пікселях."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Висота мініатюри графіка"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Висота мініатюр графіків у пікселях."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Типові мініатюри перегляду"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Позначте цей прапорець, щоб типовий перегляд графіків відкривався у режимі мініатюр."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Типова кількість стовпців графіків"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Кількість стовпців за замовчуванням для відображення графіків."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Графіки на сторінку"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Виберіть кількість графіків для відображення на одній сторінці."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Максимум графіків для експорту"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Після досягнення цього числа буде згенеровано помилку, але експортування продовжиться. Встановіть 0, щоб зняти обмеження."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Інформація про розташування експорту"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Експортувати мініатюри"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Позначте цей прапорець, щоб увімкнути режим експорту мініатюр."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Очистити каталог"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Позначте цей прапорець, щоб експорт графіків очищував кінцевий каталог перед заповненням."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Каталог експорту"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Це каталог на локальній або віддаленій системі, який міститиме експортовані дані."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Локальний тимчасовий каталог"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Це каталог, у якому Cacti тимчасово зберігатиме вихідні дані перед надсиланням на віддалений вузол обраним методом передавання. Вміст цього каталогу буде видалено після передавання даних."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Віддалені параметри"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Санітизувати віддалений каталог"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Позначте цей прапорець, щоб видаляти всі наявні файли у віддаленому каталозі FTP. Цей параметр використовується лише під час роботи із вбудованими функціями PHP для FTP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Віддалений хост"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Визначає вузол, на який надсилаються експортовані графіки."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Віддалений порт"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Комунікаційний порт для методу експорту, якщо він нестандартний (залиште порожнім для значення за замовчуванням)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Використовувати пасивний режим"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Позначте цей прапорець, щоб підключатися до FTP-сервера в пасивному режимі."
+
+#: setup.php
+msgid "User"
+msgstr "Користувач"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Обліковий запис для входу на віддалений сервер (залиште порожнім для значень за замовчуванням)."
+
+#: setup.php
+msgid "Password"
+msgstr "Пароль"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Пароль для віддаленого облікового запису FTP (залиште порожнім, якщо пароль не потрібен)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Шлях до приватного ключа"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Для SCP та RSYNC вкажіть шлях до закритого ключа, якщо потрібно."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Експортовані сторінки графіків Cacti"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Редагувати)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Дії"
+

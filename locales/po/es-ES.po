@@ -61,10 +61,9 @@ msgid "Continue"
 msgstr "Continuar"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Definiciones de exportación de gráficos"
+msgstr "Eliminar definición(es) de exportación de gráficos"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -74,7 +73,7 @@ msgstr[1] "Haga clic en'Continuar' para desactivar las siguientes Definiciones d
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Definiciones de exportación de gráficos"
+msgstr "Deshabilitar definición(es) de exportación de gráficos"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -97,10 +96,9 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Definiciones de exportación de gráficos"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Debe seleccionar por lo menos una definición de exportación de gráficos."
+msgstr "Debe seleccionar una acción válida."
 
 #: gexport.php
 msgid "Return"
@@ -590,7 +588,7 @@ msgstr "FTP NC"
 
 #: setup.php
 msgid "SCP"
-msgstr "PCE"
+msgstr "SCP"
 
 #: setup.php
 msgid "RSYNC"
@@ -711,7 +709,7 @@ msgstr "Encendido"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "El Sitio para Gráficos de Cactus para ser Exportados desde."
+msgstr "El sitio desde el que se exportarán los gráficos de Cacti."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -767,7 +765,7 @@ msgstr "Información sobre la ubicación de la exportación"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Tiempo de exportación"
+msgstr "Exportar miniaturas"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
@@ -775,11 +773,11 @@ msgstr "Marque esta opción si desea que la Vista de gráficos predeterminada es
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Directorio de exportación"
+msgstr "Limpiar directorio"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Marque esta casilla de verificación si desea que se habilite esta definición de exportación de gráficos."
+msgstr "Marque esta casilla si desea que esta exportación de gráficos limpie el directorio final antes de rellenarlo."
 
 #: setup.php
 msgid "Export Directory"
@@ -859,7 +857,7 @@ msgstr "Para SCP y RSYNC, introduzca la ruta de clave privada si es necesario."
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Páginas de gráficos de cactus exportados"
+msgstr "Páginas de gráficos de Cacti exportadas"
 
 #: setup.php
 msgid "(Edit)"

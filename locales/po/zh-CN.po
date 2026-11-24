@@ -60,10 +60,9 @@ msgid "Continue"
 msgstr "继续"
 
 #: gexport.php
-#, fuzzy
 #| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "图表导出定义"
+msgstr "删除图形导出定义"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -72,7 +71,7 @@ msgstr[0] "点击“继续”以停用以下图形导出定义。"
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "图表导出定义"
+msgstr "禁用图形导出定义"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -93,10 +92,9 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "图表导出定义"
 
 #: gexport.php
-#, fuzzy
 #| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "您必须至少选择一个图形导出定义。"
+msgstr "您必须选择一个有效的操作。"
 
 #: gexport.php
 msgid "Return"
@@ -582,7 +580,7 @@ msgstr "SFTP"
 
 #: setup.php
 msgid "FTP NC"
-msgstr "SFTP"
+msgstr "FTP NC"
 
 #: setup.php
 msgid "SCP"
@@ -590,7 +588,7 @@ msgstr "SCP"
 
 #: setup.php
 msgid "RSYNC"
-msgstr "SCP"
+msgstr "RSYNC"
 
 #: setup.php
 msgid "Export Command Arguments"
@@ -763,19 +761,19 @@ msgstr "导出位置信息"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "导出时间"
+msgstr "导出缩略图"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "如果您希望默认图形视图处于缩略图模式，请选中此项。"
+msgstr "如果您需要导出缩略图模式，请选中此项。"
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "导出目录"
+msgstr "清空目录"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "如果希望启用此图形导出定义，请选中此复选框。"
+msgstr "如果您希望此图形导出在填充之前清空最终目录，请选中此复选框。"
 
 #: setup.php
 msgid "Export Directory"
