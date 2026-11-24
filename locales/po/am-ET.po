@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Amharic\n"
+"Language: am-ET\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#: gexport.php
+msgid "Enable"
+msgstr "አንቃ"
+
+#: gexport.php
+msgid "Disable"
+msgstr "አሰናክል"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "አሁን ላክ"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "በየጊዜው የሚከናወን"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "ዕለታዊ"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "በየሰዓቱ"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "የሚከተለውን የግራፍ ወደ ውጭ መላኪያ ፍቺ ለመሰረዝ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን የግራፍ ወደ ውጭ መላኪያ ፍቺዎች ለመሰረዝ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: gexport.php
+msgid "Cancel"
+msgstr "ይቅር"
+
+#: gexport.php
+msgid "Continue"
+msgstr "ቀጥል"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "የግራፍ መላኪያ ትርጓሜ(ዎችን) ሰርዝ"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "የሚከተለውን የግራፍ ወደ ውጭ መላኪያ ፍቺ ለማሰናከል 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን የግራፍ ወደ ውጭ መላኪያ ፍቺዎች ለማሰናከል 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "የግራፍ ወደ ውጭ መላኪያ ፍቺ(ዎች)ን አሰናክል"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "የሚከተለውን የግራፍ ወደ ውጭ መላኪያ ፍቺ ለማንቃት 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን የግራፍ ወደ ውጭ መላኪያ ፍቺዎች ለማንቃት 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "የግራፍ መላኪያ ፍቺ(ዎች)ን አንቃ"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "የሚከተለውን የግራፍ ወደ ውጭ መላኪያ ፍቺ አሁን ለማስኬድ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን የግራፍ ወደ ውጭ መላኪያ ፍቺዎች አሁን ለማስኬድ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "የግራፍ መላኪያ ፍቺ(ዎች)ን አሁን አሂድ"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "ትክክለኛ እርምጃ መምረጥ አለብዎት።"
+
+#: gexport.php
+msgid "Return"
+msgstr "ተመለስ"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "ቢያንስ አንድ የግራፍ ወደ ውጪ መላኪያ ፍቺ መምረጥ አለብዎት።"
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "የግራፍ ወደ ውጭ መላኪያ ፍቺ [አዲስ]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "የግራፍ ወደ ውጭ መላኪያ ፍቺ [አርትዕ: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "ዛፍ(ፎች) ምረጥ"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "የተመረጡ ዛፎች"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "ሁሉም ዛፎች ተመርጠዋል"
+
+#: gexport.php
+msgid "All"
+msgstr "ሁሉም"
+
+#: gexport.php
+msgid "None"
+msgstr "ምንም"
+
+#: gexport.php
+msgid "Search"
+msgstr "ፈልግ"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "ጣቢያ(ዎች) ምረጥ"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "የተመረጡ ጣቢያዎች"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "ሁሉም ጣቢያዎች ተመርጠዋል"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "የግራፍ መላኪያ ትርጓሜዎች"
+
+#: gexport.php
+msgid "Exports"
+msgstr "ወደ ውጭ የተላኩ"
+
+#: gexport.php
+msgid "Default"
+msgstr "ነባሪ"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "አድስ"
+
+#: gexport.php
+msgid "Never"
+msgstr "ፈጽሞ"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "%d ሰከንዶች"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "%d ደቂቃ"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "%d ደቂቃዎች"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "ሂድ"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "አጽዳ"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "የመላኪያ ስም"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "የዚህ የግራፍ ወደ ውጭ መላኪያ ፍቺ ስም።"
+
+#: gexport.php
+msgid "ID"
+msgstr "መለያ"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "የግራፍ ወደ ውጭ መላኪያ ፍቺ ውስጣዊ መለያ።"
+
+#: gexport.php
+msgid "Schedule"
+msgstr "መርሐ ግብር"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "ግራፎች ወደ ውጭ የሚላኩበት ድግግሞሽ።"
+
+#: gexport.php
+msgid "Next Start"
+msgstr "ቀጣይ መጀመሪያ"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "የግራፍ ወደ ውጭ መላኪያው በቀጣይ የሚካሄድበት ጊዜ።"
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "ነቅቷል"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "ከነቃ፣ ይህ የግራፍ ወደ ውጭ መላኪያ ፍቺ እንደ አስፈላጊነቱ ይሰራል።"
+
+#: gexport.php
+msgid "Status"
+msgstr "ሁኔታ"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "የአሁኑ የግራፍ መላክ ሁኔታ።"
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "ወደ ውጭ በመላክ ላይ (ጣቢያዎች/ዛፎች)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "ምን እየተላከ እንደሆነ።"
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "ተግባራዊ ተጠቃሚ"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "ይህ ወደ ውጭ መላኪያ የሚመስለው ተጠቃሚ።"
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "የመጨረሻ የሩጫ ጊዜ"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "የግራፍ ወደ ውጭ መላኪያው የመጨረሻ የሩጫ ጊዜ።"
+
+#: gexport.php
+msgid "Graphs"
+msgstr "ግራፎች"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "ባለፈው ሩጫ ወደ ውጭ የተላኩ ግራፎች ብዛት።"
+
+#: gexport.php
+msgid "Last Started"
+msgstr "ለመጨረሻ ጊዜ የተጀመረበት"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "ይህ የግራፍ ወደ ውጭ መላኪያ የተጀመረበት የመጨረሻ ጊዜ።"
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "መጨረሻ ስህተት ያጋጠመው"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "ይህ የግራፍ ወደ ውጭ መላኪያ ስህተት ያጋጠመው የመጨረሻ ጊዜ።"
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "ፍቺዎችን ላክ"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "አይመለከትም"
+
+#: gexport.php
+msgid "No"
+msgstr "አይ"
+
+#: gexport.php
+msgid "Yes"
+msgstr "አዎ"
+
+#: gexport.php
+msgid "Idle"
+msgstr "ስራ ፈት"
+
+#: gexport.php
+msgid "Running"
+msgstr "በመካሄድ ላይ"
+
+#: gexport.php
+msgid "Error"
+msgstr "ስህተት"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "ሁሉም ጣቢያዎች"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "ሁሉም ዛፎች"
+
+#: gexport.php
+msgid "Sec"
+msgstr "ሰከንድ"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "ምንም የግራፍ ወደ ውጭ መላኪያ ፍቺዎች የሉም"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "ተሳክቷል"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "የአገባብ ወይም የአጠቃቀም ስህተት"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "የፕሮቶኮል አለመጣጣም"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "የግብዓት/ውጤት ፋይሎችን እና ማውጫዎችን በመምረጥ ላይ ስህተቶች"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "የተጠየቀው እርምጃ አይደገፍም፦ 64-ቢት ፋይሎችን በማይደግፍ መድረክ ላይ ለመጠቀም ሙከራ ተደርጓል፤ ወይም በደንበኛው የሚደገፍ ነገር ግን በአገልጋዩ የማይደገፍ አማራጭ ተገልጿል።"
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "የደንበኛ-አገልጋይ ፕሮቶኮልን በማስጀመር ላይ ስህተት ተከስቷል"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "ዴመን ወደ መዝገብ ፋይል ማከል አልቻለም"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "በሶኬት I/O ውስጥ ስህተት"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "በፋይል I/O ውስጥ ስህተት"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "በrsync ፕሮቶኮል የውሂብ ዥረት ውስጥ ስህተት"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "ከፕሮግራም ምርመራዎች ጋር የተያያዙ ስህተቶች"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "በIPC ኮድ ውስጥ ስህተት"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "SIGUSR1 ወይም SIGINT ደርሷል"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "በwaitpid() አንዳንድ ስህተት ተመልሷል"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "ዋና የማህደረ ትውስታ ቋቶችን በመመደብ ላይ ስህተት"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "በስህተት ምክንያት ከፊል ማስተላለፍ"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "የምንጭ ፋይሎች በመጥፋታቸው ምክንያት ከፊል ማስተላለፍ"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "የ --max-delete ገደብ ስረዛዎችን አቁሟል"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "ውሂብ በመላክ/በመቀበል ላይ የጊዜ ገደብ አልፏል"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "የዴሞን ግንኙነትን በመጠበቅ ላይ የጊዜ ገደብ አልፏል"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "ያልታወቀ ስህተት "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "ተግባሩ በተሳካ ሁኔታ ተጠናቋል"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "በፋይል ቅጂ ውስጥ አጠቃላይ ስህተት"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "መድረሻው ማውጫ አይደለም፣ ነገር ግን መሆን አለበት"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "ከፍተኛው የsymlink ደረጃ አልፏል"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "ከአስተናጋጅ ጋር መገናኘት አልተሳካም።"
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "ግንኙነቱ ተቋርጧል"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "ፋይሉ የለም"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "ፋይሉን ለመድረስ ፈቃድ የለም።"
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "በSFTP ፕሮቶኮል ውስጥ አጠቃላይ ስህተት"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "የፋይል ማስተላለፊያ ፕሮቶኮል አለመመጣጠን"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "ከተሰጠው መስፈርት ጋር የሚዛመድ ፋይል የለም"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "አስተናጋጁ እንዲገናኝ አልተፈቀደለትም"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "በSSH ፕሮቶኮል ውስጥ አጠቃላይ ስህተት"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "የቁልፍ ልውውጥ አልተሳካም"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "የተያዘ"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "የMAC ስህተት"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "የመጭመቅ ስህተት"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "አገልግሎቱ አይገኝም"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "የፕሮቶኮል ስሪት አይደገፍም"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "የአስተናጋጅ ቁልፍ ሊረጋገጥ አልቻለም"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "ግንኙነት አልተሳካም"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "በመተግበሪያ ተቋርጧል"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "በጣም ብዙ ግንኙነቶች"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "ማረጋገጫ በተጠቃሚው ተሰርዟል"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "ተጨማሪ የማረጋገጫ ዘዴዎች የሉም"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "ልክ ያልሆነ የተጠቃሚ ስም"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "በመጠይቅ ላይ ያልተመሰረተ"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "የግራፍ አብነቶች"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "የውሂብ መጠይቆች"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "የCacti ግራፎች ቅንብሮችን ላክ"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "የግራፍ መላኪያዎች"
+
+#: setup.php
+msgid "Utilities"
+msgstr "መገልገያዎች"
+
+#: setup.php
+msgid "General Administration"
+msgstr "አጠቃላይ አስተዳደር"
+
+#: setup.php
+msgid "General"
+msgstr "አጠቃላይ"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "ይህ የግራፍ ወደ ውጭ መላኪያ ፍቺ እንዲነቃ ከፈለጉ ይህን አመልካች ሳጥን ይምረጡ።"
+
+#: setup.php
+msgid "Export Method"
+msgstr "የመላኪያ ዘዴ"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "የትኛውን የውጭ መላኪያ ዘዴ መጠቀም እንዳለበት ይምረጡ።"
+
+#: setup.php
+msgid "Local"
+msgstr "አካባቢያዊ"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "የመላኪያ ትዕዛዝ ነጋሪ እሴቶች"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "ከአካባቢያዊ ካልሆኑ የመላኪያ ዘዴዎች ጋር ጥቅም ላይ የሚውሉ ነጋሪ እሴቶች። rsync መጠቀም ያለበት "
+
+#: setup.php
+msgid "Theme"
+msgstr "ገጽታ"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "እባክዎ የCacti ግራፍ ወደ ውጭ መላኪያዎችዎን ገጽታ ለመቀየር ካሉት ገጽታዎች አንዱን ይምረጡ።"
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "የአቀራረብ ዘዴ"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "ለተፈጠሩት html ገጾች የትኛውን አቀራረብ እንደሚፈልጉ ይምረጡ። ክላሲካል አቀራረብን ከመረጡ፤ ግራፎቹ በአንድ የ-html ገጽ ውስጥ ብቻ ይሆናሉ። የዛፍ አቀራረብን ከመረጡ፣ የግራፍ ዛፍ መዋቅር በቋሚ html ገጾች ውስጥ ይጠበቃል"
+
+#: setup.php
+msgid "Site"
+msgstr "ጣቢያ"
+
+#: setup.php
+msgid "Tree"
+msgstr "ዛፍ"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "የመላኪያ ጊዜ"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "የጊዜ አቆጣጠር ዘዴ"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "ግራፎችን መቼ ወደ ውጭ መላክ እንዳለበት ይምረጡ።"
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "በየጊዜው የመላኪያ ዑደት"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Cacti ግራፎችን ምን ያህል ጊዜ እንዲልክ ይፈልጋሉ። ይህ ግራፎችን ለመላክ የሚፈልጉት የፖሊንግ ዑደቶች መለኪያ ነው።"
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "በእያንዳንዱ የፖሊንግ ዑደት"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "በየ %d የፖሊንግ ዑደቶች"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "በየሰዓቱ በተወሰኑ ደቂቃዎች"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Cacti የማይንቀሳቀሱ ምስሎችን በየሰዓቱ ወደ ውጭ እንዲልክ ከፈለጉ፣ ይህን የሚያደርግበትን የሰዓቱን ደቂቃዎች እዚህ ያስገቡ። Cacti የውሂብ መሰብሰቢያ ስክሪፕቱን በየ5 ደቂቃው እንደሚያሄዱ ያስባል፣ ስለዚህ እሴትዎን ከስራ ጊዜው ጋር በጣም ወደሚቀርበው ያጠጋጋዋል። ለምሳሌ፣ 43 ከሰዓቱ 40 ደቂቃ ጋር እኩል ይሆናል።"
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "በየቀኑ በተወሰነ ሰዓት"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Cacti የማይንቀሳቀሱ ምስሎችን በየቀኑ ወደ ውጭ እንዲልክ ከፈለጉ፣ ይህን የሚያደርግበትን ሰዓት እዚህ ያስገቡ። Cacti የውሂብ መሰብሰቢያ ስክሪፕቱን በየ5 ደቂቃው እንደሚያሄዱ ያስባል፣ ስለዚህ እሴትዎን ከስራ ጊዜው ጋር በጣም ወደሚቀርበው ያጠጋጋዋል። ለምሳሌ፣ 21:23 ከ9 PM በኋላ ከ20 ደቂቃ ጋር እኩል ይሆናል።"
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "x ክሮችን (Threads) ይጠቀሙ"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "ግራፎችን ወደ ውጭ ሲልክ Cacti ስንት የጀርባ ክሮች እንዲጠቀም ይፈልጋሉ። ነባሪው ሁሉንም ወደ ውጭ መላክ በፖለር ክር ውስጥ ለማስኬድ 0 ነው፤ የተለዩ የጀርባ ክሮችን ለመፍጠር 1 ወይም ከዚያ በላይ ነው"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "የግራፍ ምርጫ እና ቅንብሮች"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "የCacti ግራፎችን ፈቃዶች ለመመስረት የሚያገለግል የተጠቃሚ ስም። ይህ የተጠቃሚ ስም የትኞቹ ግራፎች/ዛፎች ወደ ውጭ መላክ እንደሚችሉ ለመወሰን ይጠቅማል። N/A ማለት ምንም ዓይነት ደህንነት እንደሌለ አይቁጠሩ ማለት ነው።"
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "የሚላከው/የሚላኩት ዛፍ(ፎች)።"
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "መሳሪያዎችን/ጣቢያዎችን ዘርጋ"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "ይህ ቅንብር የዛፍ መሳሪያዎች እና የጣቢያ አብነቶች እና መሳሪያዎች ይዘረጉ ወይም አይዘረጉ እንደሆነ ይወስናል። እንዲዘረጋ ከተቀናበረ እያንዳንዱ አስተናጋጅ የግራፍ አብነቶችን ወይም የውሂብ መጠይቅ ንጥሎችን የያዘ ንዑስ አቃፊ ይኖረዋል።"
+
+#: setup.php
+msgid "Off"
+msgstr "ጠፍቷል"
+
+#: setup.php
+msgid "On"
+msgstr "በርቷል"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "የCacti ግራፎች የሚላኩበት ጣቢያ።"
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "የግራፍ ንዑስ ምስል ስፋት"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "የጥፍር አክል (Thumbnail) ግራፎች ነባሪ ስፋት በፒክሰል።"
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "የግራፍ ንዑስ ምስል ቁመት"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "የጥቃቅን ግራፎች ቁመት በፒክሰል።"
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "ነባሪ የእይታ ድንክዬዎች"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "ነባሪው የግራፍ እይታ በጥፍር አክል (Thumbnail) ሁነታ እንዲሆን ከፈለጉ ይህን ይምረጡ።"
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "ነባሪ የግራፍ አምዶች"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "ግራፎችን ሲያሳዩ በነባሪነት ጥቅም ላይ የሚውሉ የአምዶች ብዛት።"
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "ግራፎች በገጽ"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "በገጽ የሚታዩ የግራፎች ብዛት ይምረጡ።"
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "ወደ ውጭ የሚላኩ ከፍተኛ ግራፎች"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "ይህ ቁጥር ከተደረሰ በኋላ ስህተት ይፈጠራል፣ ነገር ግን ወደ ውጭ መላኩ ይቀጥላል። ገደብ እንዳይኖር ወደ 0 ያቀናብሩ።"
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "የአካባቢ መረጃን ላክ"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "ጥፍር አከል ምስሎችን ወደ ውጭ ላክ"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "የጥፍር አክሎች (thumbnails) ወደ ውጭ መላኪያ ሁነታን ከፈለጉ ይህን ይምረጡ።"
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "ማውጫውን አጽዳ"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "ይህ የግራፍ ወደ ውጭ መላኪያ ከመሙላቱ በፊት የመጨረሻውን ማውጫ እንዲያጸዳ ከፈለጉ ይህን አመልካች ሳጥን ይምረጡ።"
+
+#: setup.php
+msgid "Export Directory"
+msgstr "የመላኪያ ማውጫ"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "ይህ ወደ ውጭ የተላከውን ውሂብ የሚይዘው በአካባቢያዊው ስርዓት ወይም በርቀት ስርዓት ላይ ያለው ማውጫ ነው።"
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "አካባቢያዊ ጊዜያዊ ማውጫ"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "ይህ Cacti ውሂቡን በማስተላለፊያ ዘዴው ወደ ርቀት ጣቢያ ከመላኩ በፊት ውጤቱን ለጊዜው የሚያከማችበት ማውጫ ነው። ውሂቡ ከተላለፈ በኋላ የዚህ ማውጫ ይዘቶች ይሰረዛሉ።"
+
+#: setup.php
+msgid "Remote Options"
+msgstr "የርቀት አማራጮች"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "የርቀት ማውጫን አጽዳ"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "በFTP የርቀት ማውጫ ውስጥ ያሉትን ማንኛውንም ነባር ፋይሎች ለመሰረዝ ከፈለጉ ይህን ይምረጡ። ይህ አማራጭ ጥቅም ላይ የሚውለው የPHP አብሮገነብ የftp ተግባራትን ሲጠቀሙ ብቻ ነው።"
+
+#: setup.php
+msgid "Remote Host"
+msgstr "የርቀት አስተናጋጅ"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "ወደ ውጭ የተላኩ ግራፎች የሚላኩበትን አስተናጋጅ ያመለክታል።"
+
+#: setup.php
+msgid "Remote Port"
+msgstr "የርቀት ወደብ"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "መደበኛ ያልሆነ ከሆነ ለውጭ መላኪያ ዘዴ የሚያገለግል የግንኙነት ወደብ (ለነባሪዎች ባዶ ይተዉት)።"
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "ተገብሮ (passive) ሁነታ ይጠቀሙ"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "ወደ FTP አገልጋይ በፓሲቭ ሁነታ ለመገናኘት ከፈለጉ ይህን ይምረጡ።"
+
+#: setup.php
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "በርቀት አገልጋይ ላይ ለመግባት የሚያገለግል መለያ (ለነባሪዎች ባዶ ይተዉት)።"
+
+#: setup.php
+msgid "Password"
+msgstr "የይለፍ ቃል"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "ለርቀት ftp መለያ የይለፍ ቃል (ባዶ ለመተው ባዶ ይተዉት)።"
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "የግል ቁልፍ መንገድ"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "ለSCP እና RSYNC፣ አስፈላጊ ከሆነ የግል ቁልፍ መንገድን ያስገቡ።"
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "ወደ ውጭ የተላኩ የCacti ግራፍ ገጾች"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(አርትዕ)"
+
+#: setup.php
+msgid "Actions"
+msgstr "ድርጊቶች"
+

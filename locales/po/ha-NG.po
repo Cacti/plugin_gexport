@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Hausa\n"
+"Language: ha-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Share"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Kunna"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Kashe"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Fitar Yanzu"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Lokaci-lokaci"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Kullum"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Kowace Sa'a"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Danna 'Ci gaba' don share Tsarin Fitar da Jadawali mai zuwa."
+msgstr[1] "Danna 'Ci gaba' don share Tsare-tsaren Fitar da Jadawali masu zuwa."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Soke"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Ci gaba"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Share Ma'anar Fitar da Jadawali"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Danna 'Ci gaba' don kashe Tsarin Fitar da Jadawali mai zuwa."
+msgstr[1] "Danna 'Ci gaba' don kashe Tsare-tsaren Fitar da Jadawali masu zuwa."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Kashe Ma'anar Fitar da Jadawali/Jadawalai"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Danna 'Ci gaba' don kunna Tsarin Fitar da Jadawali mai zuwa."
+msgstr[1] "Danna 'Ci gaba' don kunna Tsare-tsaren Fitar da Jadawali masu zuwa."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Kunna Bayanin/Bayanan Fitar da Jadawali"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Danna 'Ci gaba' don gudanar da Tsarin Fitar da Jadawali mai zuwa yanzu."
+msgstr[1] "Danna 'Ci gaba' don gudanar da Tsare-tsaren Fitar da Jadawali masu zuwa yanzu."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Gudanar da Ma'anar Fitar da Jadawali Yanzu"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Dole ne ka zaɓi aiki mai inganci."
+
+#: gexport.php
+msgid "Return"
+msgstr "Koma"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Dole ne ka zaɓi aƙalla Ma'anar Fitar da Jadawali guda ɗaya."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Ma'anar Fitar da Jadawali [sabo]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Ma'anar Fitar da Jadawali [gyara: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Zaɓi Bishiya/Bishiyoyi"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Bishiyoyin da Aka Zaɓa"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "An Zaɓi Duk Bishiyoyi"
+
+#: gexport.php
+msgid "All"
+msgstr "Duka"
+
+#: gexport.php
+msgid "None"
+msgstr "Babu"
+
+#: gexport.php
+msgid "Search"
+msgstr "Bincika"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Zaɓi Wuri/Wurare"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Wuraren da Aka Zaɓa"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "An Zaɓi Duk Wurare"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Ma'anonin Fitar da Jadawali"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Fitarwa"
+
+#: gexport.php
+msgid "Default"
+msgstr "Na Asali"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Sabunta"
+
+#: gexport.php
+msgid "Never"
+msgstr "Ba a Taɓa Ba"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "Daƙiƙa %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "Minti %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "Mintuna %d"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Je"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Share"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Sunan Fitarwa"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Sunan wannan Ma'anar Fitar da Jadawali."
+
+#: gexport.php
+msgid "ID"
+msgstr "Lambar ID"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Lambar ID ta cikin gida ta Ma'anar Fitar da Jadawali."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Jadawali"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Yawan lokutan da za a fitar da Jadawalai."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Farawa na Gaba"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Lokaci na gaba da ya kamata Fitar da Jadawali ya gudu."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "An kunna"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Idan an kunna, wannan ma'anar Fitar da Jadawali za ta yi aiki kamar yadda ake buƙata."
+
+#: gexport.php
+msgid "Status"
+msgstr "Matsayi"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Matsayin Fitar da Jadawali na yanzu."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Ana fitarwa (Wurare/Bishiyoyi)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Abin da ake Fitarwa."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Mai Amfani Mai Tasiri"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Mai amfani da wannan fitarwa za ta kwaikwayi shi."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Lokacin Aiki na Ƙarshe"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Lokacin gudanarwa na ƙarshe don Fitar da Jadawali."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Jadawalai"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Adadin Jadawalai da Aka Fitar a gudanarwar ƙarshe."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Fara na Ƙarshe"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Lokacin ƙarshe da aka fara wannan Fitar da Jadawali."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Lokacin Kuskure Na Ƙarshe"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Lokacin ƙarshe da wannan Fitar da Jadawali ta fuskanci kuskure."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Fitar da Ma'anoni"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Babu"
+
+#: gexport.php
+msgid "No"
+msgstr "A'a"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Eh"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Ba ya Aiki"
+
+#: gexport.php
+msgid "Running"
+msgstr "Ana Gudanarwa"
+
+#: gexport.php
+msgid "Error"
+msgstr "Kuskure"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Dukkan Wurare"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Duk Bishiyoyi"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Daƙ."
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Babu Ma'anonin Fitar da Jadawali"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Nasara"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Kuskuren tsari ko amfani"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Rashin jituwar ka'ida"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Kurakurai wajen zaɓar fayilolin shigarwa/fitarwa da kundayen adireshi"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Ba a tallafawa aikin da aka buƙata: an yi ƙoƙarin sarrafa fayilolin 64-bit a kan dandamalin da ba zai iya ɗaukar su ba; ko an ayyana zaɓin da abokin ciniki ke tallafawa amma uwar garke ba ta tallafawa."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Kuskure wajen fara ƙa'idar client-server"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon ya kasa ƙarawa a fayil ɗin rajista"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Kuskure a shiga/fita (I/O) na socket"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Kuskure a shiga/fita (I/O) na fayil"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Kuskure a kwararar bayanai na ƙa'idar rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Kurakurai a binciken matsalar shirin"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Kuskure a lambar IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "An karɓi SIGUSR1 ko SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "waitpid() ya dawo da wani kuskure"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Kuskure wajen keɓe ma'ajiyar ƙwaƙwalwar ajiya ta tsakiya"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "An tura sashe saboda kuskure"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "An tura sashe saboda fayilolin tushe sun ɓace"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Iyakar --max-delete ta dakatar da share-share"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Ƙarewar lokaci wajen aikawa/karɓar bayanai"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Ƙarewar lokaci yayin jiran haɗin daemon"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Kuskuren da ba a sani ba "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Aikin ya yi nasara"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Kuskure na gabaɗaya wajen kwafin fayil"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Makoma ba babban fayil ba ce, amma ya kamata ta kasance haka"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "An wuce mafi girman matakin symlink"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Haɗawa zuwa mai masauki ya gaza."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Haɗi ya katse"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Fayil ɗin ba ya wanzu"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Babu izinin samun damar fayil."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Kuskure na gabaɗaya a ƙa'idar sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Rashin daidaituwa na ƙa'idar tura fayil"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Babu fayil ɗin da ya dace da ƙa'idojin da aka bayar"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Ba a ba Mai Masauki izinin haɗawa ba"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Kuskure na gabaɗaya a ƙa'idar ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Musayar maɓalli ta gaza"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "An keɓe"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Kuskuren MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Kuskuren matsawa"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Sabis ba ya samuwa"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Ba a tallafawa sigar ka'ida ba"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ba a iya tabbatar da maɓallin Mai Masauki ba"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Haɗi ya gaza"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Manhaja ta yanke haɗi"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Haɗe-haɗe sun yi yawa"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Mai amfani ya soke tabbatar da shaida"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Babu sauran hanyoyin tantancewa da ke samuwa"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Sunan mai amfani ba daidai ba ne"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Ba Bisa Tambaya Ba"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Samfuran Zane-zane"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Tambayoyin Bayanai"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Fitar da Saitunan Jadawalan Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Fitar da Jadawalai"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Kayan Aiki"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Gudanarwa ta Gabaɗaya"
+
+#: setup.php
+msgid "General"
+msgstr "Gabaɗaya"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Yi alama a wannan akwatin zaɓin idan kana son a kunna wannan Ma'anar Fitar da Jadawali."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Hanyar Fitarwa"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Zaɓi hanyar fitarwa da za a yi amfani da ita."
+
+#: setup.php
+msgid "Local"
+msgstr "Na Gida"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Fitar da Hujjojin Umarni"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Sigogin da za a yi amfani da su tare da hanyoyin fitarwa na nesa. Ya kamata rsync ya yi amfani da "
+
+#: setup.php
+msgid "Theme"
+msgstr "Jigo"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Da fatan za a zaɓi ɗaya daga cikin Jigogin da ke akwai don ƙawata Fitar da Jadawalan Cacti naku."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Hanyar Gabatarwa"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Zaɓi irin tsarin gabatarwar da kake so don shafukan HTML da aka samar. Idan ka zaɓi tsarin gargajiya; Jadawalai za su kasance a cikin shafin HTML guda ɗaya kawai. Idan ka zaɓi tsarin bishiya, za a riƙe tsarin Bishiyar Jadawali a cikin tsayayyun shafukan HTML"
+
+#: setup.php
+msgid "Site"
+msgstr "Wuri"
+
+#: setup.php
+msgid "Tree"
+msgstr "Bishiya"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Lokacin Fitarwa"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Hanyar Auna Lokaci"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Zaɓi lokacin da za a Fitar da Jadawalai."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Zagayen Fitarwa na Lokaci-lokaci"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Sau nawa kuke son Cacti ta Fitar da Jadawalai.  Wannan shi ne adadin Zagayen Tattara Bayanai da kuke son fitar da Jadawalai."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Kowane Zagayen Tattara Bayanai"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Kowane Zagayen Tattara Bayanai %d"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Kowace sa'a a mintunan da aka ƙayyade"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Idan kana son Cacti ya fitar da hotuna tsayayyu a kowace awa, sanya mintunan awar da za a yi hakan. Cacti yana ɗauka cewa kana gudanar da rubutun tattara bayanai a kowane mintuna 5, don haka zai zagaye ƙimarka zuwa mafi kusa da lokacin gudunsa. Misali, 43 zai yi daidai da mintuna 40 bayan awa."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Kullum a ƙayyadadden lokaci"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Idan kana son Cacti ya fitar da hotuna tsayayyu a kowace rana, sanya lokacin da za a yi hakan a nan. Cacti yana ɗauka cewa kana gudanar da rubutun tattara bayanai a kowane mintuna 5, don haka zai zagaye ƙimarka zuwa mafi kusa da lokacin gudunsa. Misali, 21:23 zai yi daidai da mintuna 20 bayan ƙarfe 9 na dare."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Yi amfani da Threads x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Zaren aiki na baya nawa kake son Cacti ya yi amfani da su yayin fitar da jadawalai.  Na asali shi ne 0 don gudanar da dukkan fitarwa a cikin zaren mai tattara bayanai, 1 ko fiye don ƙirƙirar zaren aiki na baya daban-daban"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Zaɓin Jadawali da Saituna"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Sunan mai amfani da za a yi amfani da shi wajen kafa izini zuwa Jadawalai na Cacti. Za a yi amfani da wannan sunan mai amfani don tantance waɗanne Jadawalai/Bishiyoyi za a iya fitarwa. N/A na nufin kada a ɗauka akwai wani tsaro."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Bishiya(oyi) da za a fitar."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Faɗaɗa Na'urori/Wurare"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Wannan saitin yana ƙayyade ko za a faɗaɗa Na'urorin Bishiya da Samfuran Wuri da Na'urori ko a'a. Idan an saita zuwa faɗaɗaɗɗe, kowane mai masauki zai sami ƙaramin babban fayil da ke ƙunshe da ko dai Samfuran Jadawali ko abubuwan Tambayar Bayanai."
+
+#: setup.php
+msgid "Off"
+msgstr "A kashe"
+
+#: setup.php
+msgid "On"
+msgstr "A kunne"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Wurin da za a Fitar da Jadawalai na Cacti daga ciki."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Faɗin Ƙaramin Hoton Jadawali"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Tsohon faɗin Ƙananan Jadawalai a cikin pixels."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Tsayin Ƙaramin Hoton Jadawali"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Tsayin Ƙananan Jadawalai a cikin pixels."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Ƙananan Hotunan Duba na Asali"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Yi alama a nan idan kana son tsohon Yanayin Kallon Jadawali ya kasance a yanayin Ƙaramin Hoto."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Ginshiƙan Jadawali na Asali"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Adadin ginshiƙai da za a yi amfani da su ta tsohuwa yayin nuna Jadawalai."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Zane-zane a Kowane Shafi"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Zaɓi adadin Jadawalai a Kowane Shafi da za a nuna."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Mafi Yawan Jadawalai da Za a Fitar"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Bayan an kai wannan adadin, za a ƙirƙiri kuskure, amma fitar da bayanai zai ci gaba.  Saita zuwa 0 don rashin iyaka."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Fitar da Bayanan Wuri"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Fitar da Ƙananan Hotuna"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Yi alama a nan idan kana son yanayin fitar da ƙananan hotuna."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Share Jaka"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Yi alama a wannan akwatin zaɓin idan kana son wannan Fitar da Jadawali ya share kundin ƙarshe kafin ya cika shi."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Kundin Adireshin Fitarwa"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Wannan shine kundin adireshi, ko dai akan tsarin gida ko akan tsarin nesa, wanda zai ƙunshi bayanan da aka fitar."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Foldar Wucin Gadi ta Gida"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Wannan shine kundin adireshi inda Cacti zai adana sakamako na ɗan lokaci kafin ya aika zuwa wuri mai nisa ta hanyar aikawa. Za a share abubuwan da ke cikin wannan kundin bayan an tura bayanan."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Zaɓuɓɓukan Nesa"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Tsaftace kundin fayiloli na nesa"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Yi alama a nan idan kana son share duk wasu fayiloli da ke cikin kundin FTP mai nisa. Ana amfani da wannan zaɓin ne kawai lokacin da ake amfani da ayyukan ftp na PHP na asali."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Mai Masauki na Nesa"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Yana nuna Mai Masauki da za a aika Jadawalai da aka Fitar zuwa gare shi."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Tashar Nesa"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Tashar sadarwa da za a yi amfani da ita don hanyar fitarwa idan ba ta daidai ba ce (bar shi fanko don tsoho)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Yi amfani da yanayin passive"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Yi alama a nan idan kana son haɗawa da sabar FTP a yanayin jiran saƙo (passive mode)."
+
+#: setup.php
+msgid "User"
+msgstr "Mai Amfani"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Asusun shiga uwar garken nesa (bar shi fanko don tsoffin saituna)."
+
+#: setup.php
+msgid "Password"
+msgstr "Kalmar sirri"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Kalmar sirri don asusun ftp na nesa (bar shi fanko idan babu)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Hanyar Maɓallin Sirri"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Don SCP da RSYNC, shigar da hanyar Maɓallin Sirri idan ana buƙata."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Shafukan Jadawali na Cacti da aka Fitar"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Gyara)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Ayyuka"
+

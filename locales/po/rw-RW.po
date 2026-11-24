@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Kinyarwanda\n"
+"Language: rw-RW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Siba"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Koresha"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Hagarika"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Kohereza hanze ubu"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Buri gihe runaka"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Buri munsi"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Buri saha"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Kanda 'Komeza' kugira ngo usibe Igisobanuro cyo gusohora igishushanyo gikurikira."
+msgstr[1] "Kanda 'Komeza' kugira ngo usibe Ibisobanuro byo gusohora igishushanyo bikurikira."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Hagarika"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Komeza"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Siba Ibisobanuro byo kohereza Igishushanyo"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Kanda 'Komeza' kugira ngo uhagarike Igisobanuro cyo gusohora igishushanyo gikurikira."
+msgstr[1] "Kanda 'Komeza' kugira ngo uhagarike Ibisobanuro byo gusohora igishushanyo bikurikira."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Hagarika Ibisobanuro byo Kohereza Igishushanyo"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Kanda 'Komeza' kugira ngo ufungure Igisobanuro cyo gusohora igishushanyo gikurikira."
+msgstr[1] "Kanda 'Komeza' kugira ngo ufungure Ibisobanuro byo gusohora igishushanyo bikurikira."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Fungura Insobanuro zo Kohereza Igishushanyo"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Kanda 'Komeza' kugira ngo ukoreshe Igisobanuro cyo gusohora igishushanyo gikurikira ubu."
+msgstr[1] "Kanda 'Komeza' kugira ngo ukoreshe Ibisobanuro byo gusohora igishushanyo bikurikira ubu."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Koresha ubu ibisobanuro byo kohereza Igishushanyo"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Ugomba guhitamo igikorwa cyemewe."
+
+#: gexport.php
+msgid "Return"
+msgstr "Subira inyuma"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Ugomba guhitamo nibura Igenamiterere ryo Kohereza Igishushanyo rimwe."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Ibisobanuro byo kohereza Igishushanyo [gishya]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Ibisobanuro byo kohereza Igishushanyo [hindura: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Hitamo Igiti (Ibiti)"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Ibiti Byatoranyijwe"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Ibiti byose byatoranyijwe"
+
+#: gexport.php
+msgid "All"
+msgstr "Byose"
+
+#: gexport.php
+msgid "None"
+msgstr "Nta na kimwe"
+
+#: gexport.php
+msgid "Search"
+msgstr "Shakisha"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Hitamo Ahantu"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Ahantu Hatoranyijwe"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Ahantu hose hatoranyijwe"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Ibisobanuro byo kohereza igishushanyo"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Ibyoherezwa"
+
+#: gexport.php
+msgid "Default"
+msgstr "Mburabuzi"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Vugurura"
+
+#: gexport.php
+msgid "Never"
+msgstr "Nta na rimwe"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "Amasegonda %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "Umunota %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "Iminota %d"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Koresha"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Hanagura"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Izina ryo kohereza hanze"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Izina ry'iri Genamigambi ry'Iyohereza ry'Ibishushanyo."
+
+#: gexport.php
+msgid "ID"
+msgstr "ID"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Indangamubare y'imbere y'Igenamigambi ry'Iyohereza ry'Ibishushanyo."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Gahunda"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Inshuro Ibishushanyo bizajya byoherezwa hanze."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Itangira rikurikira"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Igihe gikurikira Iyohereza ry'Ibishushanyo rigomba gukoreraho."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Byafunguwe"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Niba byafunguwe, iri genamiterere ryo kohereza Igishushanyo hanze rizakora uko bikenewe."
+
+#: gexport.php
+msgid "Status"
+msgstr "Imiterere"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Imiterere y'Iyoherezwa ry'Igishushanyo iriho ubu."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Kohereza (Ahantu/Ibiti)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Ibyoherezwa hanze."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Umukoresha nyirizina"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Ukoresha iki gikorwa cyo kohereza hanze kizigira."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Igihe byamaze bikora ubushize"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Igihe cya nyuma Iyohereza ry'Ibishushanyo ryakoreye."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Ibishushanyo"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Umubare w'Ibishushanyo Byoherejwe hanze ku ikora rya nyuma."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Igihe byatangiriye ubushize"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Igihe cya nyuma iri Yohereza ry'Ibishushanyo ryatangijwe."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Igihe cya nyuma byagize ikosa"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Igihe cya nyuma iri Yohereza ry'Ibishushanyo ryahuriye n'ikosa."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Kohereza hanze ibisobanuro fatizo"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Ntibihari"
+
+#: gexport.php
+msgid "No"
+msgstr "Oya"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Yego"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Ntibiri gukora"
+
+#: gexport.php
+msgid "Running"
+msgstr "Biri gukora"
+
+#: gexport.php
+msgid "Error"
+msgstr "Ikosa"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Ahantu Hose"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Ibiti byose"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Seg"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Nta bisobanuro byo kohereza hanze ibishushanyo"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Byagenze neza"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Ikosa ry'imyandikire cyangwa imikoreshereze"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Kutajyana kwa porotokole"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Amakosa mu guhitamo amadosiye yo kwinjiza/gusohora, n'ububiko"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Igikorwa cyasabwe nticyemewe: habayeho kugerageza gukoresha dosiye za 64-bit ku rubuga rutazishyigikira; cyangwa hashyizweho ihitamo rishyigikiwe n'umukiriya ariko ritari kuri seriveri."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Ikosa mu gutangiza porotokole y'umukiriya na seriveri"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon ntiyashoboye kongera kuri dosiye y'amateka"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Ikosa mu gusoma no kwandika bya socket (I/O)"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Ikosa mu gusoma no kwandika dosiye (I/O)"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Ikosa mu murongo w'amakuru wa porotokole ya rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Amakosa mu isuzuma rya porogaramu"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Ikosa muri kode ya IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Yakiriye SIGUSR1 cyangwa SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Hari ikosa ryasubijwe na waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Ikosa mu gutanga umwanya w'ububiko bw'ibanze"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Iyohereza rituzuye kubera ikosa"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Iyohereza rituzuye kubera amadosiye y'inkomoko yazimiye"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Urwego ntarengwa rwa --max-delete rwahagaritse isibwa"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Igihe cyarenze mu kohereza/kwakira amakuru"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Igihe cyarenze hategerejwe ukwihuza na daemon"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Ikosa ritazwi "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Igikorwa cyagenze neza"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Ikosa rusange mu gukoporora dosiye"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Icyerekezo si ububiko bw'amadosiye, kandi ari ko byagombye kuba"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Urwego ntarengwa rwa symlink rwarenzwe"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Guhuza na mwakirizi byanze."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Ihuza ryacitse"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Dosiye ntibaho"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Nta burenganzira bwo kugera kuri dosiye."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Ikosa rusange muri porotokole ya sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Iporotokole yo kohereza amadosiye ntihura"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Nta dosiye ihuye n'ibisabwa byatanzwe"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Mwakirizi ntiyemerewe kwihuza"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Ikosa rusange muri porotokole ya ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Guhana urufunguzo byananiranye"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Byabikiwe"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Ikosa rya MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Ikosa ry'iyegeranya"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Serivisi ntiboneka"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Verisiyo ya porotokole ntishyigikiwe"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Urufunguzo rwa Mwakirizi ntirushobora kugenzurwa"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Guhuza byanze"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Byahagaritswe na porogaramu"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Ukwihuza kwinshi cyane"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Kwemeza umwirondoro byahagaritswe n'ukoresha"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Nta bundi buryo bwo kwemeza umwirondoro buhari"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Izina ry'ukoresha ritari ryo"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Bitashingiye ku Isabamakuru"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Ibyitegererezo by'ibishushanyo"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Amashakisha y'Amakuru"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Kohereza hanze Amagenamiterere y'Ibishushanyo bya Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Iyohereza ry'ibishushanyo"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Ibikoresho by'ubufasha"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Ubuyobozi Rusange"
+
+#: setup.php
+msgid "General"
+msgstr "Rusange"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Hitamo aka gasanduku niba wifuza ko iri sobanuro ryo kohereza Igishushanyo hanze rifungurwa."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Uburyo bwo kohereza hanze"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Hitamo uburyo bwo kohereza hanze bukoreshwa."
+
+#: setup.php
+msgid "Local"
+msgstr "Imbere muri sisitemu"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Ibipimo by'itegeko ryo kohereza hanze"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Ibipimo bikoreshwa n'uburyo bwo kohereza hanze butari ubwa hafi. rsync igomba gukoresha "
+
+#: setup.php
+msgid "Theme"
+msgstr "Insanganyamatsiko"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Nyamuneka hitamo imwe mu nsanganyamatsiko ziboneka yo gushyira ku byoherejwe by'Ibishushanyo bya Cacti byawe."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Uburyo bwo kumurika"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Hitamo uburyo bw'imigaragarire wifuza ku mapaji ya HTML yakozwe. Nuhitamo imigaragarire ya gakondo; Ibishushanyo bizaba mu ipaji imwe gusa ya HTML. Nuhitamo imigaragarire y'igiti, imiterere y'Igiti cy'Ibishushanyo izagumishwa mu mapaji ya HTML adahinduka"
+
+#: setup.php
+msgid "Site"
+msgstr "Ahantu"
+
+#: setup.php
+msgid "Tree"
+msgstr "Igiti"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Igihe cyo kohereza"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Uburyo bwo Kubara Igihe"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Hitamo igihe cyo kohereza hanze Ibishushanyo."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Igikurikirane cy'iyohereza rya buri gihe"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Ni kangahe wifuza ko Cacti yohereza hanze Ibishushanyo.  Iki ni igipimo cy'inshuro z'Ikusanyamakuru wifuza kohereza hanze Ibishushanyo."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Buri nshuro y'ikusanyamakuru"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Buri nshuro %d z'ikusanyamakuru"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Buri saha ku minota yagenwe"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Niba ushaka ko Cacti yohereza amashusho adahinduka buri saha, shyira iminota y'isaha yo kubikora. Cacti ikeka ko ukoresha script yo gukusanya amakuru buri minota 5, bityo izabaza agaciro kawe ku gihe cyegereye igihe cyayo cyo gukora. Urugero, 43 bingana n'iminota 40 nyuma y'isaha."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Buri munsi ku isaha yagenwe"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Niba ushaka ko Cacti yohereza amashusho adahinduka buri munsi, shyira hano igihe cyo kubikora. Cacti ikeka ko ukoresha script yo gukusanya amakuru buri minota 5, bityo izabaza agaciro kawe ku gihe cyegereye igihe cyayo cyo gukora. Urugero, 21:23 bingana n'iminota 20 nyuma ya saa tatu z'ijoro."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Koresha Threads x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Ni imirongo y'ibikorwa by'inyuma ingahe wifuza ko Cacti ikoresha mu gihe yohereza ibishushanyo hanze.  Igipimo fatizo ni 0 kugira ngo iyohereza ryose rikorere mu murongo w'ikusanyamakuru, 1 cyangwa irenga kugira ngo havuke imirongo y'inyuma itandukanye"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Guhitamo igishushanyo n'amagenamiterere"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Izina ry'ukoresha ryo kwifashisha mu kugena uburenganzira ku Bishushanyo bya Cacti. Iri zina ry'ukoresha rizakoreshwa mu kumenya Ibishushanyo/Ibiti bishobora koherezwa hanze. N/A bisobanura ko hatagomba gutekerezwa ko hari umutekano uriho."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Igiti (Ibiti) cyo (byo) kohereza hanze."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Kwagura Ibikoresho/Ahantu"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Iri genamiterere rigena niba Ibikoresho by'Igiti n'Inyandikorugero z'Ahantu n'Ibikoresho bizagurwa cyangwa bitazagurwa.  Niba bishyizwe ku kugura, buri mwakirizi azagira ububiko bwungirije burimo Inyandikorugero z'Ibishushanyo cyangwa ibigize Ibibazo by'Amakuru."
+
+#: setup.php
+msgid "Off"
+msgstr "Ntibiriho"
+
+#: setup.php
+msgid "On"
+msgstr "Biriho"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Ahantu Ibishushanyo bya Cacti bizavanwamo byoherezwa hanze."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Ubugari bw'igishushanyo gito"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Ubugari busanzwe bw'Ibishushanyo bito mu ma-pixel."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Ubuhagarike bw'igishushanyo gito"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Ubuhagarike bw'Ibishushanyo Bito mu mapigiseli."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Kugaragaza mburabuzi udushusho duto"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Hitamo ibi niba wifuza ko imbonerahamwe isanzwe y'Igishushanyo iba mu buryo bw'udushushanyo duto."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Inkingi mburabuzi z'ibishushanyo"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Umubare w'inkingi zikoreshwa nk'ibanze igihe herekanwa Ibishushanyo."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Ibishushanyo kuri buri paji"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Hitamo umubare w'Ibishushanyo kuri buri paji bigomba kugaragara."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Ibishushanyo ntarengwa byo kohereza hanze"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Nyuma y'uko uyu mubare ugezweho, hazabaho ikosa, ariko kohereza hanze bizakomeza.  Shyira kuri 0 niba nta mupaka."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Kohereza hanze amakuru y'ahantu"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Kohereza amashusho mato"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Hitamo ibi niba wifuza uburyo bwo kohereza hanze udushushanyo duto."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Hanagura Ububiko"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Hitamo aka gasanduku niba wifuza ko iri wohereza ry'Igishushanyo hanze risiba ububiko bwa nyuma mbere yo kubushyiramo amakuru."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Ububiko bwo koherezamo hanze"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Ubu ni ububiko bwa dosiye, haba kuri sisitemu y'imbere cyangwa kuri sisitemu ya kure, buzabamo amakuru yoherejwe hanze."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Ububiko bw'agateganyo bw'imbere"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Ubu ni ububiko bwa dosiye Cacti izabikamo by'agateganyo ibisohoka mbere yo kubyohereza ahantu ha kure binyuze mu buryo bwo kohereza. Ibirimo muri ubu bubiko bwa dosiye bizasibwa nyuma y'uko amakuru yoherejwe."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Amahitamo yo Kure"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Sukura ububiko buri kure"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Hitamo ibi niba wifuza gusiba dosiye zose zisanzwe mu bubiko bwa kure bwa FTP. Aya mahitamo akoreshwa gusa igihe hakoreshejwe imikorere ya ftp isanzwe muri PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Mwakirizi wo Kure"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Igaragaza Mwakirizi wo kohererezaho Ibishushanyo byoherejwe hanze."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Umuyoboro wo Kure"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Icyambu cy'itumanaho kigomba gukoreshwa ku buryo bwo kohereza hanze niba atari icya rusange (reka harimo ubusa ku byagenwe mbere)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Koresha uburyo bwa passive"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Hitamo ibi niba wifuza guhuza mu buryo bwa passive kuri seriveri ya FTP."
+
+#: setup.php
+msgid "User"
+msgstr "Umukoresha"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Konti yo kwinjiriraho kuri seriveri ya kure (siga harimo ubusa kugira ngo ukoreshe ibisanzwe)."
+
+#: setup.php
+msgid "Password"
+msgstr "Ijambobanga"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Ijambobanga rya konti ya ftp ya kure (hasige ubusa niba nta rihari)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Inzira y'urufunguzo bwite"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Kuri SCP na RSYNC, andika inzira y'Urufunguzo rw'Ibanga niba bikenewe."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Amapaji y'Ibishushanyo bya Cacti yoherejwe"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Hindura)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Ibikorwa"
+

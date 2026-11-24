@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Malagasy\n"
+"Language: mg-MG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Fafao"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Alefa"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Ajanony"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Aondrana izao"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Miverimberina ara-potoana"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Isan'andro"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Isan'ora"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Tsindrio ny 'Tohizo' mba hamafana ity famaritana ny fanondranana Kisary manaraka ity."
+msgstr[1] "Tsindrio ny 'Tohizo' mba hamafana ireto famaritana ny fanondranana Kisary manaraka ireto."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Foano"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Tohizo"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Fafao ny/ireo Famaritana fanondranana Kisary"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Tsindrio ny 'Tohizo' mba hanao ho tsy mavitrika ity famaritana ny fanondranana Kisary manaraka ity."
+msgstr[1] "Tsindrio ny 'Tohizo' mba hanao ho tsy mavitrika ireto famaritana ny fanondranana Kisary manaraka ireto."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Ataovy tsy mavitrika ny famaritana fanondranana Kisary"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Tsindrio ny 'Tohizo' mba hanao ho mavitrika ity famaritana ny fanondranana Kisary manaraka ity."
+msgstr[1] "Tsindrio ny 'Tohizo' mba hanao ho mavitrika ireto famaritana ny fanondranana Kisary manaraka ireto."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Alefaso ny famaritana fanondranana Kisary"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Tsindrio ny 'Tohizo' mba handefasana ity famaritana ny fanondranana Kisary manaraka ity izao."
+msgstr[1] "Tsindrio ny 'Tohizo' mba handefasana ireto famaritana ny fanondranana Kisary manaraka ireto izao."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Alefaso izao ny famaritana fanondranana Kisary"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Tsy maintsy misafidy hetsika manan-kery ianao."
+
+#: gexport.php
+msgid "Return"
+msgstr "Miverina"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Tsy maintsy misafidy Famaritana Fanondranana Kisary iray farafahakeliny ianao."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Famaritana ny fanondranana Kisary [vaovao]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Famaritana ny fanondranana Kisary [ovao: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Safidio ny Hazo"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Hazo voafidy"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Hazo rehetra voafidy"
+
+#: gexport.php
+msgid "All"
+msgstr "Rehetra"
+
+#: gexport.php
+msgid "None"
+msgstr "Tsy misy"
+
+#: gexport.php
+msgid "Search"
+msgstr "Fikarohana"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Safidio ny Toerana"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Toerana voafantina"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Toerana rehetra voafidy"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Famaritana ny fanondranana Kisary"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Fanondranana"
+
+#: gexport.php
+msgid "Default"
+msgstr "Voafaritra mialoha"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Havaozy"
+
+#: gexport.php
+msgid "Never"
+msgstr "Tsy mihitsy"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "%d Segondra"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "%d minitra"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "%d minitra"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Alefaso"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Diovy"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Anaran'ny fanondranana"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Ny anaran'ity Famaritana ny Fanondranana Kisary ity."
+
+#: gexport.php
+msgid "ID"
+msgstr "ID"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Ny ID anatiny ho an'ny Famaritana ny Fanondranana Kisary."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Fandaharam-potoana"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Ny matetika hanondranana ny Kisary."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Fanombohana manaraka"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Ny fotoana manaraka tokony handehanan'ny Fanondranana Kisary."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Mavitrika"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Raha mavitrika, dia handeha araka izay ilaina ity famaritana Fanondranana Kisary ity."
+
+#: gexport.php
+msgid "Status"
+msgstr "Sata"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Ny Sata Fanondranana Kisary ankehitriny."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Fanondranana (Toerana/Hazo)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Ny zavatra aondrana."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Mpampiasa manan-kery"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Ny mpampiasa izay halain'ity fanondranana ity tahaka ny maha-izy azy."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Faharetan'ny fampandehanana farany"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Ny fotoana fampandehanana farany ho an'ny Fanondranana Kisary."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Kisary"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Ny isan'ny Kisary naondrana tamin'ny fandehanana farany."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Nanomboka farany"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Ny fotoana farany nanombohana ity Fanondranana Kisary ity."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Nisy hadisoana farany"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Ny fotoana farany nahitan'ity Fanondranana Kisary ity hadisoana."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Aondrana ny famaritana"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Tsy misy"
+
+#: gexport.php
+msgid "No"
+msgstr "Tsia"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Eny"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Tsy miasa"
+
+#: gexport.php
+msgid "Running"
+msgstr "Mandeha"
+
+#: gexport.php
+msgid "Error"
+msgstr "Hadisoana"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Toerana rehetra"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Hazo rehetra"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Seg"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Tsy misy famaritana fanondranana Kisary"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Nahomby"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Hadisoana ara-tsintaksa na fampiasana"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Tsy fifanarahana amin'ny protokoly"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Hadisoana teo am-pifidianana rakitra sy lahatahiry fidirana/fivoahana"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Tsy tohana ny hetsika nangatahina: nisy fikasana hikarakara rakitra 64-bit amin'ny sehatra tsy mahazaka izany; na nisy safidy voatondro izay tohanan'ny mpanjifa fa tsy tohanan'ny mpizara."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Hadisoana teo am-panombohana ny protokolon'ny mpanjifa-mpizara"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Tsy afaka manampy ao amin'ny rakitra tatitra ny Daemon"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Hadisoana tao amin'ny fidirana/fivoahan'ny socket (I/O)"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Hadisoana tao amin'ny fidirana/fivoahan'ny rakitra (I/O)"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Hadisoana tao amin'ny fikorianan'ny angona amin'ny protocole rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Hadisoana tamin'ny fitiliana ny programa"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Hadisoana tao amin'ny kaody IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Nahazo SIGUSR1 na SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Nisy hadisoana naverin'ny waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Hadisoana teo amin'ny fanomezana toerana ho an'ny tahiry fitadidiana fototra"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Famindrana ampahany noho ny hadisoana"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Famindrana ampahany noho ny rakitra loharano nanjavona"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Najanona ny famafana noho ny fetra --max-delete"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Lany ny fe-potoana nandritra ny fandefasana/fandraisana angona"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Lany ny fe-potoana fiandrasana ny fifandraisana amin'ny daemon"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Hadisoana tsy fantatra "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Nahomby ny asa"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Hadisoana ankapobeny tamin'ny fandikana rakitra"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Tsy lahatahiry ny fiafarana, nefa tokony ho izany"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Mihoatra ny haavon'ny rohy an'ohatra (symlink) farany ambony"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Tsy nahomby ny fifandraisana tamin'ny mpampiantrano."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Tapaka ny fifandraisana"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Tsy misy ny rakitra"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Tsy misy alalana hidirana amin'ny rakitra."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Hadisoana ankapobeny amin'ny protokol sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Tsy fitovian'ny fifanekena famindrana rakitra"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Tsy misy rakitra mifanaraka amin'ny fepetra nomena"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Tsy mahazo mifandray ny Mpampiantrano"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Hadisoana ankapobeny amin'ny protokol ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Tsy nahomby ny fifanakalozana fanalahidy"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Voatokana"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "hadisoana MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Hadisoana tamin'ny fangejana"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Tsy misy ny tolotra"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Tsy tohana ny kinovan'ny protokoly"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Tsy azo hamarinina ny fanalahidin'ny Mpampiantrano"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Tsy nahomby ny fifandraisana"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Notapahan'ny rindranasa ny fifandraisana"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Fifandraisana be loatra"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Nofoanan'ny mpampiasa ny fanamarinana"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Tsy misy fomba fanamarinana maha-izy azy azo ampiasaina intsony"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Anaran'ny mpampiasa tsy manan-kery"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Tsy Mifototra amin'ny Fangatahana"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Lasitra kisary"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Fangatahana angona"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Aondrana ny Fandrindrana ny Kisary Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Fanondranana Kisary"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Fitaovana fanampiny"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Fitantanana ankapobeny"
+
+#: setup.php
+msgid "General"
+msgstr "Ankapobeny"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Mariho ity boaty ity raha tianao ho mavitrika ity famaritana fanondranana Kisary ity."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Fomba fanondranana"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Safidio ny fomba fanondranana hampiasaina."
+
+#: setup.php
+msgid "Local"
+msgstr "Eto an-toerana"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Mpamaritra ny baiko fanondranana"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Parametra ampiasaina amin'ireo fomba fanondranana tsy eo an-toerana. Ny rsync dia tokony hampiasa "
+
+#: setup.php
+msgid "Theme"
+msgstr "Endrika"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Azafady, safidio ny iray amin'ireo Endrika misy handravahana ny fanondranana Kisary Cacti."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Fomba fanolorana"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Safidio izay fampisehoana tianao ho an'ny pejy HTML novokarina. Raha misafidy ny fampisehoana mahazatra ianao dia ho ao amin'ny pejy HTML iray ihany ny Kisary. Raha misafidy ny fampisehoana Hazo ianao dia hotehirizina ao amin'ny pejy HTML tsy miova ny firafitry ny Hazo Kisary"
+
+#: setup.php
+msgid "Site"
+msgstr "Toerana"
+
+#: setup.php
+msgid "Tree"
+msgstr "Hazo"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Fotoana fanondranana"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Fomba fandrefesana fotoana"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Safidio ny fotoana hanondranana ny Kisary."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Tsingerina fanondranana ara-potoana"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Impiry ianao no maniry ny hanondranan'ny Cacti ireo Kisary. Ity no singan'ny tsingerin'ny Poller izay tianao hanondranana ireo Kisary."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Isaky ny tsingerina Polling"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Isaky ny tsingerina Polling %d"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Isan'ora amin'ny minitra voafaritra"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Raha tianao ny Cacti hanondrana sary tsy mihetsika isan'ora, apetraho eto ny minitra ao anatin'ny ora hanaovana izany. Mihevitra ny Cacti fa mandefa ny script fanangonana angona isaky ny 5 minitra ianao, ka haravony amin'ny sanda akaiky indrindra amin'ny fotoana fiasany ny sandanao. Ohatra, ny 43 dia hitovy amin'ny 40 minitra aorian'ny ora."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Isan'andro amin'ny ora voatondro"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Raha tianao ny Cacti hanondrana sary tsy mihetsika isan'andro, apetraho eto ny ora hanaovana izany. Mihevitra ny Cacti fa mandefa ny script fanangonana angona isaky ny 5 minitra ianao, ka haravony amin'ny sanda akaiky indrindra amin'ny fotoana fiasany ny sandanao. Ohatra, ny 21:23 dia hitovy amin'ny 20 minitra aorian'ny 9 ora alina."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Ampiasao ny Threads x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Firy ny background threads tianao hampiasain'ny Cacti rehefa manondrana kisary.  Ny mahazatra dia 0 mba handefasana ny fanondranana rehetra ao amin'ny poller thread, 1 na mihoatra mba hamoronana background threads misaraka"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Safidy sy fandrindrana ny Kisary"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Ny anaran'ny mpampiasa hampiasaina hametrahana ny fahazoan-dalana amin'ny Kisary Cacti. Ity anaran'ny mpampiasa ity no hampiasaina hamaritana izay Kisary/Hazo azo aondrana. Ny N/A dia midika hoe aza mihevitra fa misy fiarovana napetraka."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Ny Hazo haondrana."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Velaro ny Fitaovana/Toerana"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Ity fandrindrana ity no mamaritra raha hivelatra na tsia ny Fitaovana ao amin'ny Hazo sy ny Modely ary Fitaovana ao amin'ny Toerana. Raha apetraka ho mivelatra, ny mpampiantrano tsirairay dia hanana zana-lahatahiry misy na Modely Kisary na singa Data Query."
+
+#: setup.php
+msgid "Off"
+msgstr "Tsy alefa"
+
+#: setup.php
+msgid "On"
+msgstr "Mandeha"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Ny Toerana hakana ny Kisary Cacti haondrana."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Sakan'ny Kisary kely"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Ny sakany voafaritra mialoha ho an'ny Kisary Kely amin'ny piksel."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Haavon'ny Kisary kely"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Ny haavon'ny Kisary Kely (Thumbnail) amin'ny piksel."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Fijerena kisary kely mahazatra"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Mariho ity raha tianao ho amin'ny fomba sary madinika ny fijerena Kisary mahazatra."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Tsanganana Kisary mahazatra"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Ny isan'ny tsanganana hampiasaina ho mahazatra rehefa mampiseho Kisary."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Kisary isaky ny pejy"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Safidio ny isan'ny Kisary isaky ny pejy haseho."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Kisary farany ambony haondrana"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Rehefa tratra io isa io dia hisy fahadisoana havoaka, nefa hitohy ny fanondranana.  Ataovy 0 raha tsy misy Fetra."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Aondrana ny mombamomba ny toerana"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Fanondranana sary kely"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Mariho ity raha tianao ny fomba fanondranana sary madinika."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Diovy ny lahatahiry"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Mariho ity boaty ity raha tianao hanadio ny lahatahiry farany alohan'ny famenoana ity fanondranana Kisary ity."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Lahatahiry fanondranana"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Ity ny lahatahiry, na eo amin'ny rafitra eo an-toerana na eo amin'ny rafitra lavitra, izay hitahiry ny angona naondrana."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Lahatahiry vonjimaika an-toerana"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Ity ny lahatahiry hitahirizan'ny Cacti vonjimaika ny vokatra alohan'ny handefasana azy any amin'ny toerana lavitra amin'ny alalan'ny fomba famindrana. Hofafana ny ao anatin'ity lahatahiry ity rehefa voafindra ny angona."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Safidy lavitra"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Diovy ny lahatahiry lavitra"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Mariho ity raha tianao hamafa izay rakitra efa misy ao amin'ny lahatahiry lavitra FTP. Tsy miasa ity safidy ity raha tsy rehefa mampiasa ireo fiasa ftp anatiny ao amin'ny PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Mpampiantrano lavitra"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Manondro ny mpampiantrano handefasana ny Kisary naondrana."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Seranana lavitra"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Seranana fifandraisana ampiasaina amin'ny fomba fanondranana raha tsy mahazatra (avelao ho banga raha hampiasa ny mahazatra)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Ampiasao ny fomba passive"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Mariho ity raha tianao hifandray amin'ny fomba passive amin'ny lohamilina FTP."
+
+#: setup.php
+msgid "User"
+msgstr "Mpampiasa"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Kaonty hidirana amin'ny lohamilina lavitra (avelao ho banga ho an'ny sanda mahazatra)."
+
+#: setup.php
+msgid "Password"
+msgstr "Tenimiafina"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Tenimiafina ho an'ny kaonty ftp lavitra (avelao ho foana raha tsy misy)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Lalan'ny fanalahidy manokana"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Ho an'ny SCP sy RSYNC, ampidiro ny lalan'ny fanalahidy manokana raha ilaina."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Pejin'ny Kisary Cacti naondrana"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Fanovana)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Hetsika"
+

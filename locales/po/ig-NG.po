@@ -1,0 +1,862 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Igbo\n"
+"Language: ig-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Hichapụ"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Gbanye"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Gbanyụọ"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Bupụ Ugbu a"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Nke Oge Ụfọdụ"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Kwa Ụbọchị"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Kwa Awa"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Pịa 'Gaa n'ihu' iji hichapụ Nkọwa Mbupụ Eserese ndị na-esonụ."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Kagbuo"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Gaa n'ihu"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Hichapụ Nkọwa Mbupụ Eserese (gasị)"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Pịa 'Gaa n'ihu' iji gbanyụọ Nkọwa Mbupụ Eserese ndị na-esonụ."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Gbanyụọ Nkọwa Mbupụ Eserese(gasị)"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Pịa 'Gaa n'ihu' iji gbanye Nkọwa Mbupụ Eserese ndị na-esonụ."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Gbanye Nkọwa Mbupụ Eserese"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Pịa 'Gaa n'ihu' iji gbaa Nkọwa Mbupụ Eserese ndị na-esonụ ugbu a."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Gbaa Nkọwa Mbupụ Eserese Ugbu a"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Ị ga-ahọrọ omume ziri ezi."
+
+#: gexport.php
+msgid "Return"
+msgstr "Laghachi"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Ị ga-ahọrọ opekata mpe otu Nkọwa Mbupụ Eserese."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Nkọwa Mbupụ Eserese [ọhụrụ]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Nkọwa Mbupụ Eserese [dezie: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Họrọ Osisi"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Osisi Ahọpụtara"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Ahọpụtala Osisi Nile"
+
+#: gexport.php
+msgid "All"
+msgstr "Niile"
+
+#: gexport.php
+msgid "None"
+msgstr "Ọ Dịghị Nke Ọ Bụla"
+
+#: gexport.php
+msgid "Search"
+msgstr "Chọọ"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Họrọ Saịtị"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Saịtị A Họpụtara"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Ahọpụtala Saịtị Nile"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Nkọwa Mbupụ Eserese"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Mbupụ Gasị"
+
+#: gexport.php
+msgid "Default"
+msgstr "Nke Ndabere"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Megharịa"
+
+#: gexport.php
+msgid "Never"
+msgstr "Ọ dịtụbeghị"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "Sekọnd %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "Nkeji %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "Nkeji %d"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Gaa"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Hichapụ"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Aha Mbupụ"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Aha Nkọwa Mbupụ Eserese a."
+
+#: gexport.php
+msgid "ID"
+msgstr "Njirimara"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "ID dị n'ime nke Nkọwa Mbupụ Eserese."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Nhazi Oge"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Ugboro ole a ga-ebupụ Eserese Gasị."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Mmalite Na-esote"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Oge ọzọ Mbupụ Eserese kwesịrị ịgba."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Gbanyere"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Ọ bụrụ na agbanyere ya, nkọwa Mbupụ Eserese a ga-agba ọsọ dị ka achọrọ."
+
+#: gexport.php
+msgid "Status"
+msgstr "Ọnọdụ"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Ọnọdụ Mbupụ Eserese dị ugbu a."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Na-ebupụ (Saịtị/Osisi)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Ihe a na-ebupụ."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Onye Ọrụ Dị Irè"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Onye ọrụ nke mbupụ a ga-eṅomi."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Oge Ọrụ Ikpeazụ"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Oge mmebe ikpeazụ maka Mbupụ Eserese."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Eserese Gasị"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Ọnụọgụgụ Eserese Gasị e bupụrụ na mmebe ikpeazụ."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Mmalite Ikpeazụ"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Oge ikpeazụ a malitere Mbupụ Eserese a."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Nwere Njehie Ikpeazụ"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Oge ikpeazụ Mbupụ Eserese a nwere njehie."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Bupụ Nkọwa"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Ọ dịghị"
+
+#: gexport.php
+msgid "No"
+msgstr "Mba"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Ee"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Na-ezu ike"
+
+#: gexport.php
+msgid "Running"
+msgstr "Na-agba"
+
+#: gexport.php
+msgid "Error"
+msgstr "Njehie"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Saịtị Niile"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Osisi Nile"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Sek"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Enweghị Nkọwa Mbupụ Eserese"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Ịga Nke Ọma"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Njehie nhazi ahịrịokwu ma ọ bụ ojiji"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Enweghị nkwekọrịta prọtokọl"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Njehie n'ịhọrọ faịlụ ntinye/mmepụta, ndekọ"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Akwadoghị omume a rịọrọ: e nwara ijikwa faịlụ 64-bit na ikpo okwu na-enweghị ike ịkwado ha; ma ọ bụ akọwapụtara nhọrọ nke onye ahịa kwadoro ma ọ bụghị sava."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Njehie n'ịmalite usoro client-server"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon enweghị ike itinye na faịlụ ndekọ"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Mperi na socket I/O"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Mperi na faịlụ I/O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Mperi na iyi data nke usoro rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Njehie na nchọpụta nsogbu mmemme"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Mperi na koodu IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Natara SIGUSR1 ma ọ bụ SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Mperi ụfọdụ waitpid() weghachitere"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Mperi n'ikenye buffer ebe nchekwa isi"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Nbufe na-ezughị ezu n'ihi njehie"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Nbufe na-ezughị ezu n'ihi faịlụ isi iyi furu efu"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Oke --max-delete kwụsịrị nhichapụ"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Oge agwụla n'izipu/ịnata data"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Oge agwụla na-eche njikọ daemon"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Njehie amaghị "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Ọrụ gara nke ọma"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Njehie izugbe na nṅomi faịlụ"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Ebe njedebe abụghị ndekọ faịlụ, mana o kwesịrị ịbụ"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "A gafere ọkwa symlink kacha elu"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Njikọ na onye nnabata adaghị."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Njikọ gbajiri"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Faịlụ adịghị"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Enweghị ikike ịnweta faịlụ."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Njehie izugbe na usoro sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Usoro mbufe faịlụ adabaghị"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Ọ dịghị faịlụ dabara na njirisi enyere"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Ekwereghị Onye nnabata ka ọ jikọọ"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Njehie izugbe na usoro ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Mgbanwe igodo kụrụ afọ n'ala"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Edebere"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "mmejọ MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Njehie nkpakọ"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Ọrụ adịghị"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "A naghị akwado ụdị prọtokọl a"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Enweghị ike ịchọpụta igodo Onye nnabata"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Njikọ adaghị"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Ngwa kwụsịrị njikọ"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Njikọ karịrị akarị"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Onye ọrụ kagburu nkwenye"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Enweghị ụzọ nyocha njirimara ọzọ dị"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Aha onye ọrụ na-ezighị ezi"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Abụghị nke Dabere na Ajụjụ"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Nlereanya Eserese"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Ajụjụ Data"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Bupụ Ntọala Eserese Gasị nke Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Mbupụ Eserese Gasị"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Ngwa Ọrụ"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Nchịkwa Izugbe"
+
+#: setup.php
+msgid "General"
+msgstr "Izugbe"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Kaa akara n'igbe nlele a ma ọ bụrụ na ịchọrọ ka e gbanye Nkọwa Mbupụ Eserese a."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Ụzọ Mbupụ"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Họrọ usoro mbupụ ị ga-eji."
+
+#: setup.php
+msgid "Local"
+msgstr "Mpaghara"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Bupụ Arụmụka Iwu"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Nrụmụka a ga-eji na ụzọ mbupụ na-abụghị nke mpaghara. rsync kwesịrị iji "
+
+#: setup.php
+msgid "Theme"
+msgstr "Ọdịdị"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Biko họrọ otu n'ime Isiokwu ndị dịnụ iji chọọ Mbupụ Eserese Cacti gị mma."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Ụzọ Ngosi"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Họrọ ngosi ị ga-achọ maka ibe HTML e mepụtara. Ọ bụrụ na ị họrọ ngosi ochie; Eserese Gasị ga-adị naanị n'otu ibe HTML. Ọ bụrụ na ị họrọ ngosi osisi, a ga-edobe nhazi Osisi Eserese na ibe HTML kwụ otu ebe"
+
+#: setup.php
+msgid "Site"
+msgstr "Saịtị"
+
+#: setup.php
+msgid "Tree"
+msgstr "Osisi"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Oge Mbupụ"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Ụzọ Ntụle Oge"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Họrọ mgbe a ga-ebupụ Eserese Gasị."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Okirikiri Mbupụ Oge Ụfọdụ"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Ugboro ole ka ị chọrọ ka Cacti bupụ Eserese Gasị.  Nke a bụ nkeji nke Okirikiri Polling ị chọrọ ibupụ Eserese Gasị."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Okirikiri Nchọpụta Ọ Bụla"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Okirikiri Nchọpụta %d Ọ Bụla"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Kwa awa n'ime nkeji a kapịrị ọnụ"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Ọ bụrụ na ịchọrọ ka Cacti na-ebupụ onyonyo kwụ ọtọ kwa elekere, tinye nkeji nke elekere mgbe a ga-eme nke ahụ. Cacti na-eche na ị na-agba script nchịkọta data kwa nkeji 5, ya mere ọ ga-eme ka uru gị gbaa gburugburu nke kacha nso n'oge ọsọ ya. Dịka ọmụmaatụ, 43 ga-adị ka nkeji 40 gafere elekere ahụ."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Kwa ụbọchị n'oge a kapịrị ọnụ"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Ọ bụrụ na ịchọrọ ka Cacti na-ebupụ onyonyo kwụ ọtọ kwa ụbọchị, tinye ebe a oge a ga-eme nke ahụ. Cacti na-eche na ị na-agba script nchịkọta data kwa nkeji 5, ya mere ọ ga-eme ka uru gị gbaa gburugburu nke kacha nso n'oge ọsọ ya. Dịka ọmụmaatụ, 21:23 ga-adị ka nkeji 20 gafere elekere 9 nke abalị."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Jiri threads x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Ọnụ ọgụgụ eri ndabere ole ka ị chọrọ ka Cacti jiri mgbe ọ na-ebupụ eserese.  Nke ndabere bụ 0 iji mee mbupụ niile n'ime eri poller, 1 ma ọ bụ karịa iji mepụta eri ndabere dị iche iche"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Nhọrọ Eserese na Ntọala"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Aha njirimara a ga-eji guzobe ikike maka Eserese Gasị nke Cacti. A ga-eji aha njirimara a chọpụta Eserese Gasị/Osisi ndị enwere ike ibupụ. N/A pụtara echela na e nwere nchekwa ọ bụla."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Osisi a ga-ebupụta."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Gbasaa Ngwaọrụ/Saịtị"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Ntọala a na-ekpebi ma a ga-agbasa Ngwaọrụ Osisi na Nlereanya Gasị Saịtị na Ngwaọrụ ma ọ bụ na agaghị agbasa. Ọ bụrụ na edobere ya ka agbasaa, onye nnabata ọ bụla ga-enwe nchekwa nta nwere ma Nlereanya Gasị Eserese ma ọ bụ ihe Ajụjụ Data."
+
+#: setup.php
+msgid "Off"
+msgstr "Gbanyụrụ"
+
+#: setup.php
+msgid "On"
+msgstr "Gbanyere"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Saịtị ebe a ga-esi bupụta Eserese Gasị nke Cacti."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Obosara Mpempe Eserese"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Obosara ndabara nke Eserese Gasị Ntakịrị na pixels."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Ogo Mpempe Eserese"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Ogo nke Eserese Gasị Obere foto na pikselụ."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Nlele Obere Foto Nke Ndabara"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Kaa akara a ma ọ bụrụ na ịchọrọ ka Nlele Eserese ndabara dịrị n'ọnọdụ Obere Foto."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Ogidi Eserese Nke Ndabara"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Ọnụọgụgụ kọlụm a ga-eji na ndabere mgbe a na-egosipụta Eserese Gasị."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Eserese Kwa Ihuakwụkwọ"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Họrọ ọnụọgụ Eserese Gasị Kwa Ihu Akwụkwọ iji gosi."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Eserese Gasị Kacha Elu a ga-Ebupụ"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Mgbe erutere ọnụọgụgụ a, a ga-emepụta njehie, mana mbupụ ga-aga n'ihu.  Tọọ ka ọ bụrụ 0 maka enweghị oke."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Bupụ Ozi Ebe"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Bupụ Obere Foto"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Kaa akara a ma ọ bụrụ na ịchọrọ ọnọdụ mbupụ obere foto."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Kpochapụ Ndekọ"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Kaa akara n'igbe nlele a ma ọ bụrụ na ịchọrọ ka Mbupụ Eserese a kpochapụ ndekọ ikpeazụ tupu o tinye ihe."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Ndekọ Mbupụ"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Nke a bụ ndekọ, ma na sistemụ mpaghara ma ọ bụ na sistemụ dị anya, nke ga-enwe data ebupụtara."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Ndekọ Nchekwa Nwa Oge Mpaghara"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Nke a bụ ndekọ ebe Cacti ga-echekwa mmepụta nwa oge tupu ezipu ya na saịtị dị anya site n'ụzọ mbufe. A ga-ehichapụ ihe dị na ndekọ a mgbe ebufechara data ahụ."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Nhọrọ Dị N'ebe Dị Anya"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Mee ka ndekọ dị anya dị ọcha"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Kaa akara a ma ọ bụrụ na ịchọrọ ihichapụ faịlụ ọ bụla dị na ndekọ FTP dịpụrụ adịpụ. Nhọrọ a na-arụ ọrụ naanị mgbe a na-eji ọrụ ftp dị n'ime PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Onye nnabata Dị N'ebe Dị Anya"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Na-egosi onye nnabata a ga-ezigara Eserese Gasị Ebupụrụ."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Pọtụ Dị N'ebe Dị Anya"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Port nkwukọrịta a ga-eji maka ụzọ mbupụ ma ọ bụrụ na ọ bụghị ọkọlọtọ (hapụ oghere maka ndabara)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Jiri ọnọdụ passive"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Kaa akara a ma ọ bụrụ na ịchọrọ ijikọ na sava FTP n'ọnọdụ passive."
+
+#: setup.php
+msgid "User"
+msgstr "Onye ọrụ"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Akaụntụ iji banye na sava dị n'ebe dị anya (hapụ ya ka ọ tọgbọrọ chakoo maka ndabere)."
+
+#: setup.php
+msgid "Password"
+msgstr "Okwuntụghe"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Okwuntụghe maka akaụntụ ftp dị anya (hapụ ya n'efu ma ọ bụrụ na ọ tọgbọ chakoo)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Ụzọ Igodo Nzuzo"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Maka SCP na RSYNC, tinye ụzọ Igodo Nzuzo ma ọ bụrụ na achọrọ ya."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Peeji Eserese Cacti Ebupụrụ"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Dezie)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Omume"
+

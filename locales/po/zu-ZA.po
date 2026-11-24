@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Zulu\n"
+"Language: zu-ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Susa"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Nika amandla"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Khubaza"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Khipha Manje"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Ngezikhathi Ezithile"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Nsuku Zonke"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Njalo ngehora"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze ususe Incazelo Yokuthekelisa Igrafu elandelayo."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze ususe Izincazelo Zokuthekelisa Igrafu ezilandelayo."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Khansela"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Qhubeka"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Susa Incazelo/Izincazelo Zokukhipha Igrafu"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze ukhubaze Incazelo Yokuthekelisa Igrafu elandelayo."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze ukhubaze Izincazelo Zokuthekelisa Igrafu ezilandelayo."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Khubaza Incazelo/Izincazelo Zokuthekelisa Igrafu"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze unike amandla Incazelo Yokuthekelisa Igrafu elandelayo."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze unike amandla Izincazelo Zokuthekelisa Igrafu ezilandelayo."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Nika amandla Incazelo/Izincazelo Zokukhipha Igrafu"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze uqhube Incazelo Yokuthekelisa Igrafu elandelayo manje."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze uqhube Izincazelo Zokuthekelisa Igrafu ezilandelayo manje."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Qalisa Incazelo(izincazelo) Yokukhipha Igrafu Manje"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Kufanele ukhethe isenzo esivumelekile."
+
+#: gexport.php
+msgid "Return"
+msgstr "Buyela"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Kufanele ukhethe okungenani Incazelo Yokukhipha Igrafu eyodwa."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Incazelo Yokuthekelisa Igrafu [entsha]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Incazelo Yokuthekelisa Igrafu [hlela: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Khetha Isihlahla/Izihlahla"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Izihlahla Ezikhethiwe"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Zonke Izihlahla Zikhethiwe"
+
+#: gexport.php
+msgid "All"
+msgstr "Konke"
+
+#: gexport.php
+msgid "None"
+msgstr "Akukho"
+
+#: gexport.php
+msgid "Search"
+msgstr "Sesha"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Khetha Isayithi/Amasayithi"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Amasayithi Akhethiwe"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Onke Amasayithi Akhethiwe"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Izincazelo Zokuthekelisa Igrafu"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Okukhishiwe"
+
+#: gexport.php
+msgid "Default"
+msgstr "Okuzenzakalelayo"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Vuselela"
+
+#: gexport.php
+msgid "Never"
+msgstr "Akukaze"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "Imizuzwana engu-%d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "%d Umzuzu"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "%d Imizuzu"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Hamba"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Sula"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Igama Lokukhipha"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Igama lale Ncazelo Yokukhishwa Kwegrafu."
+
+#: gexport.php
+msgid "ID"
+msgstr "I-ID"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "I-ID yangaphakathi Yencazelo Yokukhishwa Kwegrafu."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Ishejuli"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Imvamisa okuzokhishwa ngayo Amagrafu."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Ukuqala Okulandelayo"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Isikhathi esilandelayo okufanele Ukukhishwa Kwegrafu kusebenze ngaso."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Kunikwe amandla"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Uma kunikwe amandla, le ncazelo Yokukhipha Igrafu izosebenza njengoba kudingeka."
+
+#: gexport.php
+msgid "Status"
+msgstr "Isimo"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Isimo Samanje Sokuthunyelwa Kwegrafu."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Iyakhipha (Amasayithi/Izihlahla)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Okuthunyelwayo."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Umsebenzisi Osebenzayo"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Umsebenzisi lokhu kuthumela ngaphandle okuzolingisa njengaye."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Isikhathi Sokugcina Sokusebenza"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Isikhathi sokugcina sokusebenza Sokukhishwa Kwegrafu."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Amagrafu"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Inani Lamagrafu Akhishiwe ekusebenzeni kokugcina."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Igcine Ukuqala"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Isikhathi sokugcina lapho lokhu Kukhishwa Kwegrafu kwaqalwa ngaso."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Okwenza Iphutha Kokugcina"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Isikhathi sokugcina lapho lokhu Kukhishwa Kwegrafu kuhlangabezane nephutha."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Khipha Izincazelo"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Akutholakali"
+
+#: gexport.php
+msgid "No"
+msgstr "Cha"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Yebo"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Ayisebenzi"
+
+#: gexport.php
+msgid "Running"
+msgstr "Iyasebenza"
+
+#: gexport.php
+msgid "Error"
+msgstr "Iphutha"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Wonke Amasayithi"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Zonke Izihlahla"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Sekh"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Azikho Izincazelo Zokuthekelisa Amagrafu"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Kuphumelele"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Iphutha le-syntax noma lokusetshenziswa"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Ukungahambisani kwephrothokholi"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Amaphutha ekukhetheni amafayela okufaka/okukhipha, izinkomba"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Isenzo esiceliwe asisekelwa: kwenziwe umzamo wokuphatha amafayela angu-64-bit endaweni engawasekeli; noma kucaciswe inketho esekelwa iklayenti kodwa engasekelwa iseva."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Iphutha ekuqaliseni iphrothokholi yekhasimende neseva"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "I-Daemon ayikwazi ukwengeza efayeleni lelogi"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Iphutha ku-I/O ye-socket"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Iphutha ku-I/O yefayela"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Iphutha ekusakazweni kwedatha yephrothokholi ye-rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Amaphutha ekuxilongweni kohlelo"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Iphutha kukhodi ye-IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Kutholwe i-SIGUSR1 noma i-SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Iphutha elithile libuyiswe i-waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Iphutha ekwabeleni ama-buffer ememori eyinhloko"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Ukudluliswa okuyingxenye ngenxa yephutha"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Ukudluliswa okuyingxenye ngenxa yamafayela omthombo anyamalele"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Umkhawulo we- --max-delete umise ukususwa"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Ukuphela kwesikhathi ekuthumeleni/ekutholeni idatha"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Isikhathi sokulinda ukuxhumeka kwe-daemon siphelile"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Iphutha elingaziwa "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Umsebenzi uphumelele"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Iphutha elijwayelekile ekukopisheni ifayela"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Indawo ekuyiwa kuyo akuyona ifolda, kodwa kufanele ibe yiyo"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Izinga eliphezulu le-symlink lidluliwe"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Ukuxhuma kumsingathi kwehlulekile."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Ukuxhumana kunqanyuliwe"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Ifayela alikho"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Ayikho imvume yokufinyelela ifayela."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Iphutha elijwayelekile kuphrothokholi ye-sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Ukungafani kwephrothokholi yokudlulisa amafayela"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Alikho ifayela elihambisana nemibandela enikeziwe"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Umsingathi awuvunyelwe ukuxhuma"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Iphutha elijwayelekile kuphrothokholi ye-ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Ukushintshana ngokhiye kuhlulekile"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Kubekelwe"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Iphutha le-MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Iphutha lokucindezela"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Isevisi ayitholakali"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Inguqulo yephrothokholi ayisekelwe"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ukhiye womsingathi awuqinisekiseki"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Ukuxhumana kwehlulekile"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Kunqanyulwe uhlelo lokusebenza"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Ukuxhumana okuningi kakhulu"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Ukuqinisekisa kukhanselwe ngumsebenzisi"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Azisekho ezinye izindlela zokuqinisekisa ezitholakalayo"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Igama lomsebenzisi elingavumelekile"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Okungasekelwe Kumbuzo"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Amathemplethi Amagrafu"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Imibuzo Yedatha"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Khipha Izilungiselelo Zamagrafu e-Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Ukuthekeliswa Kwamagrafu"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Izinsiza"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Ukuphatha Okujwayelekile"
+
+#: setup.php
+msgid "General"
+msgstr "Okujwayelekile"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Maka leli Bhokisi lokumaka uma ufisa ukuthi le Ncazelo Yokuthumela Igrafu inikwe amandla."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Indlela Yokukhipha"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Khetha ukuthi iyiphi indlela yokuthekelisa okumele uyisebenzise."
+
+#: setup.php
+msgid "Local"
+msgstr "Endaweni"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Khipha Izimpikiswano Zomyalo"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Ama-agumenti okufanele asetshenziswe ngezindlela zokuthekelisa ezingezona ezendawo. I-rsync kufanele isebenzise "
+
+#: setup.php
+msgid "Theme"
+msgstr "Itimu"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Sicela ukhethe enye yezingqikithi ezitholakalayo ukuze uhlobise ngayo Ukuthunyelwa Kwamagrafu e-Cacti akho."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Indlela Yokwethula"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Khetha ukuthi iyiphi indlela yokwethula oyifunayo emakhasini akhiqiziwe e-HTML. Uma ukhetha ukwethulwa kwakudala; Amagrafu azoba ekhasini elilodwa kuphela le-HTML. Uma ukhetha ukwethulwa kwesihlahla, ukwakheka kweSihlahla Segrafu kuzogcinwa emakhasini e-HTML amile"
+
+#: setup.php
+msgid "Site"
+msgstr "Isayithi"
+
+#: setup.php
+msgid "Tree"
+msgstr "Isihlahla"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Isikhathi Sokukhipha"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Indlela Yokulinganisa Isikhathi"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Khetha isikhathi sokuthekelisa Amagrafu."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Umjikelezo Wokuthekelisa Ngezikhathi Ezithile"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Ufuna i-Cacti ikhiphe Amagrafu kangaki. Lena yiyunithi Yemijikelezo Yokuphola (Polling Cycles) ofisa ukukhipha Amagrafu ngayo."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Njalo Ngomjikelezo We-Polling"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Njalo Ngemijikelezo Ye-Polling Engu-%d"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Njalo ngehora ngemizuzu eshiwo"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Uma ufuna ukuthi i-Cacti ikhiphe izithombe ezimile njalo ngehora, faka imizuzu yehora okufanele ikwenze ngayo. I-Cacti icabanga ukuthi usebenzisa isikripthi sokuqoqa idatha njalo ngemizuzu emi-5, ngakho izosondeza inani lakho kulelo eliseduze nesikhathi sayo sokusebenza. Isibonelo, u-43 uzolingana nemizuzu engu-40 ngemva kwehora."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Nsuku zonke ngesikhathi esishiwo"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Uma ufuna ukuthi i-Cacti ikhiphe izithombe ezimile nsuku zonke, faka lapha isikhathi okufanele ikwenze ngaso. I-Cacti icabanga ukuthi usebenzisa isikripthi sokuqoqa idatha njalo ngemizuzu emi-5, ngakho izosondeza inani lakho kulelo eliseduze nesikhathi sayo sokusebenza. Isibonelo, u-21:23 uzolingana nemizuzu engu-20 ngemva kuka-9 PM."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Sebenzisa ama-Thread angu-x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Mingaki imicu yangemuva ofisa ukuthi i-Cacti iyisebenzise lapho ithekelisa amagrafu.  Okuzenzakalelayo ngu-0 ukuze konke ukuthekelisa kusebenze kumucu we-poller, u-1 noma ngaphezulu ukuze kusungulwe imicu yangemuva ehlukene"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Ukukhethwa Kwegrafu Nezilungiselelo"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Igama lomsebenzisi elizosetshenziselwa ukumisa izimvume zokufinyelela Amagrafu e-Cacti. Leli gama lomsebenzisi lizosetshenziselwa ukunquma ukuthi yimaphi Amagrafu/Izihlahla ezingathunyelwa ngaphandle. I-N/A isho ukuthi ungacabangi ukuthi kukhona ukuvikeleka okukhona."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Izihlahla okufanele zithunyelwe."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Nweba Amadivayisi/Amasayithi"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Lesi silungiselelo sinquma ukuthi Amadivayisi Esihlahla Nezifanekiso Zesayithi Namadivayisi kuzokwandiswa noma cha.  Uma kusethelwe kokwandisiwe, umsingathi ngamunye uzoba nefolda engaphansi equkethe Izifanekiso Zegrafu noma izinto Zokubuzwa Kwedatha."
+
+#: setup.php
+msgid "Off"
+msgstr "Valiwe"
+
+#: setup.php
+msgid "On"
+msgstr "Ivuliwe"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Isayithi lapho Amagrafu e-Cacti azothunyelwa khona."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Ububanzi Besithonjana Segrafu"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Ububanzi obuzenzakalelayo Bamagrafu Esithonjana ngama-pixel."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Ubude Besithonjana Segrafu"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Ukuphakama Kwamagrafu Ezithonjana ngamaphikseli."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Izithonjana Zokubuka Ezizenzakalelayo"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Maka lokhu uma ufuna Ukubuka Kwegrafu okuzenzakalelayo kube kumodi Yesithonjana."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Amakholomu Egrafu Azenzakalelayo"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Inani lamakholomu okufanele lisetshenziswe ngokuzenzakalelayo uma kuboniswa Amagrafu."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Amagrafu Ngekhasi"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Khetha inani Lamagrafu Ngekhasi elizoboniswa."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Inani Eliphezulu Lamagrafu Azokhishelwa Ngaphandle"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Ngemva kokuba leli nani selifinyelelwe, kuzokhiqizwa iphutha, kodwa ukuthekelisa kuzoqhubeka.  Setha ku-0 ukuze kungabi namkhawulo."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Khipha Ulwazi Lwendawo"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Khipha Izithonjana"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Maka lokhu uma ufuna imodi yokuthumela izithonjana."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Sula Uhla Lwemibhalo"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Maka leli Bhokisi lokumaka uma ufisa ukuthi lokhu Kuthunyelwa Kwegrafu kusule uhla lwemibhalo lokugcina ngaphambi kokulugcwalisa."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Inkomba Yokukhipha"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Lona umkhombandlela, kungaba ohlelweni lwasendaweni noma ohlelweni olukude, ozoqukatha idatha ethunyelwe ngaphandle."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Uhla Lwemibhalo Lwesikhashana Lwasendaweni"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Lona umkhombandlela lapho i-Cacti izogcina khona okwesikhashana okukhiphayo ngaphambi kokukuthumela kusayithi elikude ngendlela yokudlulisela. Okuqukethwe kwalo mkhombandlela kuzosuswa ngemva kokuba idatha isidlulisiwe."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Izinketho Zokude"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Hlanza ifolda ekude"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Maka lokhu uma ufuna ukususa noma yimaphi amafayela akhona kuhla lwemibhalo olukude lwe-FTP. Le nketho isetshenziswa kuphela uma kusetshenziswa imisebenzi ye-ftp eyakhelwe ngaphakathi ye-PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Umsingathi Okude"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Ikhomba umsingathi okuzothunyelwa kuye Amagrafu Athunyelwe Ngaphandle."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Imbobo Ekude"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Imbobo yokuxhumana ezosetshenziselwa indlela yokukhipha uma ingeyona ejwayelekile (shiya kungenalutho ukuze kusebenze okuzenzakalelayo)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Sebenzisa imodi engenzi lutho"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Maka lokhu uma ufuna ukuxhuma kumodi ye-passive kuseva ye-FTP."
+
+#: setup.php
+msgid "User"
+msgstr "Umsebenzisi"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "I-akhawunti yokungena kuseva ekude (shiya kungenalutho ukuze usebenzise okuzenzakalelayo)."
+
+#: setup.php
+msgid "Password"
+msgstr "Iphasiwedi"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Iphasiwedi ye-akhawunti ye-ftp ekude (shiya kungenalutho ukuze kube yize)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Indlela Yokhiye Oyimfihlo"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Kwe-SCP ne-RSYNC, faka indlela ye-Private Key uma idingeka."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Amakhasi Amagrafu e-Cacti Akhishiwe"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Hlela)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Izenzo"
+
