@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:13-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: hi_IN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Hindi <https://translate.cacti.net/projects/cacti/gexport/hi/>\nLanguage: hi-IN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n==0 || n==1);\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -61,10 +49,8 @@ msgid "Continue"
 msgstr "जारी रखें"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "ग्राफ़ निर्यात परिभाषाएँ"
+msgstr "ग्राफ़ निर्यात परिभाषा(एँ) हटाएं"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -90,17 +76,15 @@ msgstr "ग्राफ़ निर्यात परिभाषाएँ"
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "निम्न ग्राफ़ निर्यात परिभाषा को चलाने के लिए 'जारी रखें' पर क्लिक करें।"
-msgstr[1] "ग्राफ़ निर्यात परिभाषाओं का पालन करने के लिए 'जारी रखें' पर क्लिक करें"
+msgstr[1] "ग्राफ़ निर्यात परिभाषाओं का पालन करने के लिए 'जारी रखें' पर क्लिक करें।"
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "ग्राफ़ निर्यात परिभाषाएँ"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "आपको कम से कम एक ग्राफ़ निर्यात परिभाषा का चयन करना चाहिए।"
+msgstr "आपको एक मान्य क्रिया चुननी होगी।"
 
 #: gexport.php
 msgid "Return"
@@ -133,7 +117,7 @@ msgstr "सभी पेड़ चुने गए"
 
 #: gexport.php
 msgid "All"
-msgstr "所有"
+msgstr "सभी"
 
 #: gexport.php
 msgid "None"
@@ -198,7 +182,7 @@ msgstr "जाएं"
 #: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr "明确"
+msgstr "साफ़ करें"
 
 #: gexport.php setup.php
 msgid "Export Name"
@@ -210,7 +194,7 @@ msgstr "इस ग्राफ निर्यात परिभाषा क�
 
 #: gexport.php
 msgid "ID"
-msgstr "ID"
+msgstr "आईडी"
 
 #: gexport.php
 msgid "The internal ID of the Graph Export Definition."
@@ -242,7 +226,7 @@ msgstr "यदि सक्षम है, तो यह ग्राफ़ न�
 
 #: gexport.php
 msgid "Status"
-msgstr "ऑर्डर स्थिति"
+msgstr "स्थिति"
 
 #: gexport.php
 msgid "The current Graph Export Status."
@@ -410,7 +394,7 @@ msgstr "गायब स्रोत फ़ाइलों के कारण �
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "--मैक्स-डिलीट लिमिट ने डिलीट को रोक दिया"
+msgstr "--max-delete सीमा ने विलोपन रोक दिया"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -422,7 +406,7 @@ msgstr "डेमॉन कनेक्शन की प्रतीक्षा
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "अज्ञात त्रुटि"
+msgstr "अज्ञात त्रुटि "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -586,7 +570,7 @@ msgstr "SFTP"
 
 #: setup.php
 msgid "FTP NC"
-msgstr "एफ़टीपी नेकां"
+msgstr "FTP NC"
 
 #: setup.php
 msgid "SCP"
@@ -602,7 +586,7 @@ msgstr "निर्यात आदेश तर्क"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "गैर-स्थानीय निर्यात विधियों के साथ उपयोग करने के लिए तर्क। rsync का उपयोग करना चाहिए"
+msgstr "गैर-स्थानीय निर्यात विधियों के साथ उपयोग करने के लिए तर्क। rsync का उपयोग करना चाहिए "
 
 #: setup.php
 msgid "Theme"
@@ -626,7 +610,7 @@ msgstr "साइट"
 
 #: setup.php
 msgid "Tree"
-msgstr "वृक्षugiou"
+msgstr "ट्री"
 
 #: setup.php
 msgid "Export Timing"
@@ -655,11 +639,11 @@ msgstr "हर मतदान चक्र"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "हर% d पोलिंग साइकिल"
+msgstr "प्रत्येक %d पोलिंग चक्र"
 
 #: setup.php
 msgid "Hourly at specified minutes"
-msgstr "प्रति मिनट निर्दिष्ट मिनट पर"
+msgstr "निर्दिष्ट मिनटों पर प्रति घंटा"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
@@ -735,7 +719,7 @@ msgstr "डिफ़ॉल्ट दृश्य थंबनेल"
 
 #: setup.php
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
-msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें"
+msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें।"
 
 #: setup.php
 msgid "Default Graph Columns"
@@ -767,19 +751,19 @@ msgstr "स्थान जानकारी निर्यात करें
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "निर्यात समय"
+msgstr "थंबनेल निर्यात करें"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "यदि आप चाहते हैं कि डिफ़ॉल्ट ग्राफ़ दृश्य थंबनेल मोड में हो, तो इसे जांचें"
+msgstr "यदि आप निर्यात थंबनेल मोड चाहते हैं, तो इसे चिह्नित करें।"
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "निर्यात निर्देशिका"
+msgstr "निर्देशिका साफ़ करें"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "यदि आप इस ग्राफ़ निर्यात परिभाषा को सक्षम करना चाहते हैं तो इस चेकबॉक्स की जाँच करें।"
+msgstr "यदि आप चाहते हैं कि यह ग्राफ़ निर्यात भरने से पहले अंतिम निर्देशिका को साफ़ कर दे, तो इस चेकबॉक्स को चिह्नित करें।"
 
 #: setup.php
 msgid "Export Directory"
@@ -815,7 +799,7 @@ msgstr "रिमोट होस्ट"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."
-msgstr "निर्यात किए गए रेखांकन भेजने के लिए होस्ट को अस्वीकार करता है।"
+msgstr "उस होस्ट को दर्शाता है जिस पर निर्यात किए गए ग्राफ़ भेजे जाने हैं।"
 
 #: setup.php
 msgid "Remote Port"
@@ -823,7 +807,7 @@ msgstr "रिमोट पोर्ट"
 
 #: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
-msgstr "यदि गैर-मानक (चूक के लिए खाली छोड़ दें) निर्यात विधि के लिए उपयोग करने के लिए संचार पोर्ट"
+msgstr "यदि गैर-मानक (चूक के लिए खाली छोड़ दें) निर्यात विधि के लिए उपयोग करने के लिए संचार पोर्ट।"
 
 #: setup.php
 msgid "Use passive mode"
@@ -835,7 +819,7 @@ msgstr "यदि आप एफ़टीपी सर्वर को निष�
 
 #: setup.php
 msgid "User"
-msgstr "उपयोगकर्ता "
+msgstr "उपयोगकर्ता"
 
 #: setup.php
 msgid "Account to logon on the remote server (leave empty for defaults)."
