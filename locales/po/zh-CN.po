@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: gexport on cacti 1.1.34\n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-23 04:08+0000\n"
-"Last-Translator: tql <fttx31@126.com>\n"
-"Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\n"
-"Language: zh-CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: gexport on cacti 1.1.34\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Chinese (Simplified Han script) <https://translate.cacti.net/projects/cacti/gexport/zh_Hans/>\nLanguage: zh-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -40,7 +28,7 @@ msgstr "定期"
 
 #: gexport.php setup.php
 msgid "Daily"
-msgstr "每日"
+msgstr "每天"
 
 #: gexport.php setup.php
 msgid "Hourly"
@@ -60,10 +48,8 @@ msgid "Continue"
 msgstr "继续"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "图表导出定义"
+msgstr "删除图形导出定义"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -72,7 +58,7 @@ msgstr[0] "点击“继续”以停用以下图形导出定义。"
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "图表导出定义"
+msgstr "禁用图形导出定义"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -93,10 +79,8 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "图表导出定义"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "您必须至少选择一个图形导出定义。"
+msgstr "您必须选择一个有效的操作。"
 
 #: gexport.php
 msgid "Return"
@@ -133,7 +117,7 @@ msgstr "所有"
 
 #: gexport.php
 msgid "None"
-msgstr "没有"
+msgstr "无"
 
 #: gexport.php
 msgid "Search"
@@ -179,7 +163,7 @@ msgstr "%d秒"
 #: gexport.php
 #, php-format
 msgid "%d Minute"
-msgstr "%d分钟"
+msgstr "%d 分钟"
 
 #: gexport.php
 #, php-format
@@ -314,7 +298,7 @@ msgstr "闲"
 
 #: gexport.php
 msgid "Running"
-msgstr "运行"
+msgstr "运行中"
 
 #: gexport.php
 msgid "Error"
@@ -418,7 +402,7 @@ msgstr "超时等待守护程序连接"
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "未知的RRDtool错误"
+msgstr "未知的RRDtool错误 "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -546,7 +530,7 @@ msgstr "图表导出"
 
 #: setup.php
 msgid "Utilities"
-msgstr "实用程序"
+msgstr "实用工具"
 
 #: setup.php
 msgid "General Administration"
@@ -582,7 +566,7 @@ msgstr "SFTP"
 
 #: setup.php
 msgid "FTP NC"
-msgstr "SFTP"
+msgstr "FTP NC"
 
 #: setup.php
 msgid "SCP"
@@ -590,7 +574,7 @@ msgstr "SCP"
 
 #: setup.php
 msgid "RSYNC"
-msgstr "SCP"
+msgstr "RSYNC"
 
 #: setup.php
 msgid "Export Command Arguments"
@@ -598,7 +582,7 @@ msgstr "导出命令参数"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "与非本地导出方法一起使用的参数。 rsync应该使用"
+msgstr "与非本地导出方法一起使用的参数。 rsync应该使用 "
 
 #: setup.php
 msgid "Theme"
@@ -687,7 +671,7 @@ msgstr "用于为Cacti图形建立权限的用户名。 此用户名将用于确
 
 #: setup.php
 msgid "The Tree(s) to export."
-msgstr "导出的树"
+msgstr "导出的树。"
 
 #: setup.php
 msgid "Expand Devices/Sites"
@@ -763,19 +747,19 @@ msgstr "导出位置信息"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "导出时间"
+msgstr "导出缩略图"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "如果您希望默认图形视图处于缩略图模式，请选中此项。"
+msgstr "如果您需要导出缩略图模式，请选中此项。"
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "导出目录"
+msgstr "清空目录"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "如果希望启用此图形导出定义，请选中此复选框。"
+msgstr "如果您希望此图形导出在填充之前清空最终目录，请选中此复选框。"
 
 #: setup.php
 msgid "Export Directory"
