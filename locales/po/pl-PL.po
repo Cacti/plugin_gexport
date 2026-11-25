@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:15-0400\n"
-"Last-Translator: kaktus <kaktus_j_p@o2.pl>\n"
-"Language-Team: Polish <http://translate.cacti.net/projects/cacti/gexport/pl/>\n"
-"Language: pl_PL\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Polish <https://translate.cacti.net/projects/cacti/gexport/pl/>\nLanguage: pl-PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -50,8 +38,8 @@ msgstr "Co godzinę"
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następującą definicję eksportu wykresu."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następujące definicje eksportu wykresów."
+msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następujące definicje eksportu wykresów."
 
 #: gexport.php
 msgid "Cancel"
@@ -62,28 +50,26 @@ msgid "Continue"
 msgstr "Kontynuuj"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Wykres Definicje eksportu"
+msgstr "Usuń definicję(-e) eksportu wykresów"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następującą definicję eksportu wykresu."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następujące definicje eksportu wykresów."
+msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następujące definicje eksportu wykresów."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Wykres Definicje eksportu"
+msgstr "Wyłącz definicję(-e) eksportu wykresów"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następującą definicję eksportu wykresu."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następujące definicje eksportu wykresów."
+msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następujące definicje eksportu wykresów."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -93,18 +79,16 @@ msgstr "Wykres Definicje eksportu"
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
 msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następującą definicję eksportu wykresu."
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następujące definicje eksportu wykresów."
+msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następujące definicje eksportu wykresów."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr "Wykres Definicje eksportu"
+msgstr "Uruchom teraz definicję(-e) eksportu wykresów"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Należy wybrać co najmniej jedną definicję eksportu wykresu."
+msgstr "Musisz wybrać prawidłową akcję."
 
 #: gexport.php
 msgid "Return"
@@ -342,7 +326,7 @@ msgstr "Sek"
 
 #: gexport.php
 msgid "No Graph Export Definitions"
-msgstr "Nr Wykres Definicje eksportowe"
+msgstr "Brak definicji eksportu wykresów"
 
 #: includes/functions.php
 msgid "Success"
@@ -426,7 +410,7 @@ msgstr "Limit czasu oczekiwania na połączenie demona"
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "Nieznany błąd"
+msgstr "Nieznany błąd "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -510,7 +494,7 @@ msgstr "Klucz gospodarza, którego nie można zweryfikować"
 
 #: includes/functions.php
 msgid "Connection failed"
-msgstr "Połączenie nieudane"
+msgstr "Połączenie nie powiodło się"
 
 #: includes/functions.php
 msgid "Disconnected by application"
@@ -546,7 +530,7 @@ msgstr "Zapytania o dane"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Eksportowanie ustawień wykresów kaktusów"
+msgstr "Ustawienia eksportu wykresów Cacti"
 
 #: setup.php
 msgid "Graph Exports"
@@ -606,7 +590,7 @@ msgstr "Argumenty Dowództwa Eksportu"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Argumenty do wykorzystania przy zastosowaniu metod wywozu innych niż lokalne. rsync powinien wykorzystywać"
+msgstr "Argumenty do wykorzystania przy zastosowaniu metod wywozu innych niż lokalne. rsync powinien wykorzystywać "
 
 #: setup.php
 msgid "Theme"
@@ -634,7 +618,7 @@ msgstr "Drzewo"
 
 #: setup.php
 msgid "Export Timing"
-msgstr "Czas wywozu Czas wywozu"
+msgstr "Czas eksportu"
 
 #: setup.php
 msgid "Timing Method"
@@ -715,7 +699,7 @@ msgstr "Włącz"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "Strona dla wykresów kaktusów, z której będą eksportowane."
+msgstr "Lokalizacja, z której mają zostać wyeksportowane wykresy Cacti."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -771,19 +755,19 @@ msgstr "Informacje o lokalizacji wywozu"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Czas wywozu Czas wywozu"
+msgstr "Eksportuj miniatury"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Zaznacz to pole wyboru, jeśli chcesz, aby domyślny widok wykresu był w trybie miniaturki."
+msgstr "Zaznacz tę opcję, jeśli chcesz włączyć tryb eksportu miniatur."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Katalog eksportowy"
+msgstr "Wyczyść katalog"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Zaznacz to pole wyboru, jeśli chcesz włączyć tę definicję eksportu wykresu."
+msgstr "Zaznacz to pole wyboru, jeśli chcesz, aby ten eksport wykresów wyczyścił katalog docelowy przed zapełnieniem."
 
 #: setup.php
 msgid "Export Directory"
@@ -863,7 +847,7 @@ msgstr "W przypadku SCP i RSYNC, w razie potrzeby wprowadź ścieżkę klucza pr
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Eksportowane strony graficzne kaktusów"
+msgstr "Wyeksportowane strony wykresów Cacti"
 
 #: setup.php
 msgid "(Edit)"
