@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:11-0400\n"
-"Last-Translator: Mark Brugnoli-Vinten <netniv@cacti.net>\n"
-"Language-Team: German <http://translate.cacti.net/projects/cacti/gexport/de-DE/>\n"
-"Language: de_DE\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: German <https://translate.cacti.net/projects/cacti/gexport/de/>\nLanguage: de-DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -61,10 +49,8 @@ msgid "Continue"
 msgstr "Fortsetzen"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Definitionen für den Grafikexport"
+msgstr "Grafikexport-Definition(en) löschen"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -97,10 +83,8 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Definitionen für den Grafikexport"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Sie müssen mindestens eine Grafik-Exportdefinition auswählen."
+msgstr "Sie müssen eine gültige Aktion auswählen."
 
 #: gexport.php
 msgid "Return"
@@ -112,7 +96,7 @@ msgstr "Sie müssen mindestens eine Grafik-Exportdefinition auswählen."
 
 #: gexport.php
 msgid "Graph Export Definition [new]"
-msgstr "Definition des Grafikexports[neu]]."
+msgstr "Definition des Grafikexports[neu]]"
 
 #: gexport.php
 #, php-format
@@ -226,7 +210,7 @@ msgstr "Die Häufigkeit, mit der Grafiken exportiert werden."
 
 #: gexport.php
 msgid "Next Start"
-msgstr "Nächste Startzeit:"
+msgstr "Nächste Startzeit"
 
 #: gexport.php
 msgid "The next time the Graph Export should run."
@@ -410,7 +394,7 @@ msgstr "Partielle Übertragung aufgrund von verschwundenen Quelldateien"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "Das --max-Löschlimit stoppte die Löschvorgänge"
+msgstr "Das Limit --max-delete hat die Löschvorgänge gestoppt"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -422,7 +406,7 @@ msgstr "Timeout wartet auf Daemon-Verbindung"
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "Unbekannter Fehler"
+msgstr "Unbekannter Fehler "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -542,7 +526,7 @@ msgstr "Datenabfragen"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Einstellungen der Kakteengrafiken exportieren"
+msgstr "Einstellungen für Cacti-Diagrammexport"
 
 #: setup.php
 msgid "Graph Exports"
@@ -602,7 +586,7 @@ msgstr "Exportbefehlsargumente"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Argumente für die Verwendung mit nicht-lokalen Exportmethoden. rsync sollte Folgendes verwenden"
+msgstr "Argumente für die Verwendung mit nicht-lokalen Exportmethoden. rsync sollte Folgendes verwenden "
 
 #: setup.php
 msgid "Theme"
@@ -610,7 +594,7 @@ msgstr "Theme"
 
 #: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
-msgstr "Bitte wählen Sie eines der verfügbaren Designs aus, mit dem Sie Ihre Kakteengrafiken exportieren können."
+msgstr "Bitte wählen Sie eines der verfügbaren Themes aus, um Ihre Cacti-Diagrammexporte zu gestalten."
 
 #: setup.php
 msgid "Presentation Method"
@@ -618,7 +602,7 @@ msgstr "Präsentationsmethode"
 
 #: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
-msgstr "Wählen Sie, welche Präsentation Sie für die von HTML generierten Seiten wünschen. Wenn Sie sich für eine klassische Präsentation entscheiden, werden die Grafiken auf einer einzigen html-Seite angezeigt. Wenn Sie die Baumdarstellung wählen, wird die Graph Tree Architektur in den statischen HTML-Seiten beibehalten."
+msgstr "Wählen Sie, welche Präsentation Sie für die von HTML generierten Seiten wünschen. Wenn Sie sich für eine klassische Präsentation entscheiden, werden die Grafiken auf einer einzigen html-Seite angezeigt. Wenn Sie die Baumdarstellung wählen, wird die Graph Tree Architektur in den statischen HTML-Seiten beibehalten"
 
 #: setup.php
 msgid "Site"
@@ -711,7 +695,7 @@ msgstr "An"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "Die Seite für Kakteengrafiken, von der exportiert werden soll."
+msgstr "Der Standort für die zu exportierenden Cacti-Diagramme."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -767,19 +751,19 @@ msgstr "Standortinformationen exportieren"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Export-Timing"
+msgstr "Vorschaubilder exportieren"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Aktivieren Sie dies, wenn Sie möchten, dass sich die Standard-Grafikansicht im Miniaturansichtsmodus befindet."
+msgstr "Aktivieren Sie diese Option, wenn Sie den Export-Miniaturansichtsmodus verwenden möchten."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Exportverzeichnis"
+msgstr "Verzeichnis leeren"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Aktivieren Sie dieses Kontrollkästchen, wenn Sie möchten, dass diese Grafik-Exportdefinition aktiviert wird."
+msgstr "Aktivieren Sie dieses Kontrollkästchen, wenn dieser Grafik-Export das Zielverzeichnis vor dem Befüllen leeren soll."
 
 #: setup.php
 msgid "Export Directory"
@@ -811,7 +795,7 @@ msgstr "Aktivieren Sie dies, wenn Sie vorhandene Dateien im FTP-Remote-Verzeichn
 
 #: setup.php
 msgid "Remote Host"
-msgstr "遠端 Host"
+msgstr "Entfernter Host"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."
@@ -859,7 +843,7 @@ msgstr "Geben Sie bei SCP und RSYNC bei Bedarf den Pfad zum privaten Schlüssel 
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Exportierte Kakteen-Diagrammseiten"
+msgstr "Exportierte Cacti-Diagrammseiten"
 
 #: setup.php
 msgid "(Edit)"
