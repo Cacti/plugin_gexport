@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:10-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: bg_BG\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Bulgarian <https://translate.cacti.net/projects/cacti/gexport/bg/>\nLanguage: bg-BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -61,10 +49,8 @@ msgid "Continue"
 msgstr "Продължи"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Определения за експортиране на графика"
+msgstr "Изтриване на дефиниция(и) за експортиране на графики"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -97,10 +83,8 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Определения за експортиране на графика"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Трябва да изберете поне една дефиниция за експортиране на графика."
+msgstr "Трябва да изберете валидно действие."
 
 #: gexport.php
 msgid "Return"
@@ -318,7 +302,7 @@ msgstr "Празен ход"
 
 #: gexport.php
 msgid "Running"
-msgstr "실행 중"
+msgstr "Изпълнява се"
 
 #: gexport.php
 msgid "Error"
@@ -326,7 +310,7 @@ msgstr "Грешка"
 
 #: gexport.php
 msgid "All Sites"
-msgstr "Всички сайтове"
+msgstr "Всички обекти"
 
 #: gexport.php
 msgid "All Trees"
@@ -334,7 +318,7 @@ msgstr "Всички дървета"
 
 #: gexport.php
 msgid "Sec"
-msgstr "Detik"
+msgstr "Сек"
 
 #: gexport.php
 msgid "No Graph Export Definitions"
@@ -422,7 +406,7 @@ msgstr "Времето за изчакване на връзката с демо
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "Неизвестна грешка"
+msgstr "Неизвестна грешка "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -506,7 +490,7 @@ msgstr "Ключът на хоста не може да бъде провере�
 
 #: includes/functions.php
 msgid "Connection failed"
-msgstr "Свързването е неуспешно."
+msgstr "Свързването е неуспешно"
 
 #: includes/functions.php
 msgid "Disconnected by application"
@@ -530,7 +514,7 @@ msgstr "Невалидно потребителско име"
 
 #: includes/functions.php
 msgid "Non Query Based"
-msgstr "Въз основа на заявките"
+msgstr "Небазиран на заявки"
 
 #: includes/functions.php
 msgid "Graph Templates"
@@ -538,11 +522,11 @@ msgstr "Шаблони за графики"
 
 #: includes/functions.php
 msgid "Data Queries"
-msgstr "Автоматизирани данни"
+msgstr "Заявки за данни"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Експортиране на настройки за графики на кактуси"
+msgstr "Настройки за експортиране на графики в Cacti"
 
 #: setup.php
 msgid "Graph Exports"
@@ -602,15 +586,15 @@ msgstr "Аргументи за експортно командване"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Аргументи за използване с нелокални методи за износ. rsync трябва да използва"
+msgstr "Аргументи за използване с нелокални методи за износ. rsync трябва да използва "
 
 #: setup.php
 msgid "Theme"
-msgstr "Теми:"
+msgstr "Теми"
 
 #: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
-msgstr "Моля, изберете една от наличните палитри, с които да изтриете Cacti Graph Exports с."
+msgstr "Моля, изберете една от наличните теми, с която да оформите вашия експорт на графики в Cacti."
 
 #: setup.php
 msgid "Presentation Method"
@@ -626,7 +610,7 @@ msgstr "Tочка на продажба"
 
 #: setup.php
 msgid "Tree"
-msgstr "‎درخت"
+msgstr "Дърво"
 
 #: setup.php
 msgid "Export Timing"
@@ -655,7 +639,7 @@ msgstr "Всеки избирателен цикъл"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "Всеки% d цикъла на гласуване"
+msgstr "На всеки %d цикъла на запитване"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -767,7 +751,7 @@ msgstr "Експортиране на информация за местопол
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Време за експортиране"
+msgstr "Експортиране на миниатюри"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
@@ -775,11 +759,11 @@ msgstr "Поставете отметка, ако искате графични�
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Експортиране на директория"
+msgstr "Изчистване на директорията"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Поставете отметка в това квадратче за отметка, ако искате тази дефиниция за експортиране на графика да бъде активирана."
+msgstr "Поставете отметка в това поле, ако желаете това експортиране на графики да изчиства крайната директория преди попълването ѝ."
 
 #: setup.php
 msgid "Export Directory"
@@ -859,7 +843,7 @@ msgstr "За SCP и RSYNC въведете пътя на частния ключ
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Експортирани страници с графики за кактуси"
+msgstr "Експортирани страници с графики на Cacti"
 
 #: setup.php
 msgid "(Edit)"
