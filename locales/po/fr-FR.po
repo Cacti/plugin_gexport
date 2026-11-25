@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:12-0400\n"
-"Last-Translator: Olivier VOGEL <olivier.vogel@st.com>\n"
-"Language-Team: French <http://translate.cacti.net/projects/cacti/gexport/fr-FR/>\n"
-"Language: fr_FR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: French <https://translate.cacti.net/projects/cacti/gexport/fr/>\nLanguage: fr-FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -61,10 +49,8 @@ msgid "Continue"
 msgstr "Continuer"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Définitions d'exportation de graphiques"
+msgstr "Supprimer la/les définition(s) d'exportation de graphiques"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -74,7 +60,7 @@ msgstr[1] "Cliquez sur'Continuer' pour désactiver l'exportation des définition
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "Définitions d'exportation de graphiques"
+msgstr "Désactiver la ou les définitions d'exportation de graphiques"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
@@ -94,13 +80,11 @@ msgstr[1] "Cliquez sur'Continuer' pour lancer l'Exportation des Définitions de 
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr "Définitions d'exportation de graphiques"
+msgstr "Exécuter la ou les définitions d'exportation de graphiques maintenant"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "Vous devez sélectionner au moins une définition d'exportation graphique."
+msgstr "Vous devez sélectionner une action valide."
 
 #: gexport.php
 msgid "Return"
@@ -117,7 +101,7 @@ msgstr "Définition de l'exportation de graphique[nouveau]"
 #: gexport.php
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr "Définition de l'exportation du graphique[modifier : %s]."
+msgstr "Définition de l'exportation du graphique[modifier : %s]"
 
 #: gexport.php
 msgid "Select Tree(s)"
@@ -266,7 +250,7 @@ msgstr "L'utilisateur que cette exportation va se faire passer pour un autre."
 
 #: gexport.php
 msgid "Last Runtime"
-msgstr "Dernière exécution"
+msgstr "Durée de cycle"
 
 #: gexport.php
 msgid "The last runtime for the Graph Export."
@@ -330,7 +314,7 @@ msgstr "Tous les sites"
 
 #: gexport.php
 msgid "All Trees"
-msgstr "Tous les arbres"
+msgstr "Toutes les arborescences"
 
 #: gexport.php
 msgid "Sec"
@@ -410,7 +394,7 @@ msgstr "Transfert partiel dû à la disparition de fichiers sources"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "La limite --max-suppression a stoppé les suppressions"
+msgstr "La limite --max-delete a arrêté les suppressions"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -422,7 +406,7 @@ msgstr "Délai d'attente pour la connexion du démon"
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "Erreur inconnue"
+msgstr "Erreur inconnue "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -602,7 +586,7 @@ msgstr "Arguments de la commande d'exportation"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Arguments à utiliser avec des méthodes d'exportation non locales. rsync devrait utiliser"
+msgstr "Arguments à utiliser avec des méthodes d'exportation non locales. rsync devrait utiliser "
 
 #: setup.php
 msgid "Theme"
@@ -618,7 +602,7 @@ msgstr "Méthode de présentation"
 
 #: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
-msgstr "Choisissez la présentation que vous souhaitez pour les pages html générées. Si vous choisissez une présentation classique, les graphiques seront dans une seule page html. Si vous choisissez la présentation en arborescence, l'architecture de l'arborescence graphique sera conservée dans les pages html statiques."
+msgstr "Choisissez la présentation que vous souhaitez pour les pages html générées. Si vous choisissez une présentation classique, les graphiques seront dans une seule page html. Si vous choisissez la présentation en arborescence, l'architecture de l'arborescence graphique sera conservée dans les pages html statiques"
 
 #: setup.php
 msgid "Site"
@@ -767,19 +751,19 @@ msgstr "Informations sur le lieu d'exportation"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Calendrier d'exportation"
+msgstr "Exporter les vignettes"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Cochez cette case si vous voulez que la vue graphique par défaut soit en mode Miniature."
+msgstr "Cochez cette case si vous souhaitez utiliser le mode vignettes pour l'exportation."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Répertoire d'exportation"
+msgstr "Vider le répertoire"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Cochez cette case si vous souhaitez que cette définition d'exportation graphique soit activée."
+msgstr "Cochez cette case si vous souhaitez que cette exportation de graphiques vide le répertoire final avant de le remplir."
 
 #: setup.php
 msgid "Export Directory"
