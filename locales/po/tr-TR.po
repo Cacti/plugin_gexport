@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:17-0400\n"
-"Last-Translator: San IPE <sanipe1949@krunsea.com>\n"
-"Language-Team: Turkish <http://translate.cacti.net/projects/cacti/gexport/tr/>\n"
-"Language: tr_TR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Turkish <https://translate.cacti.net/projects/cacti/gexport/tr/>\nLanguage: tr-TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -61,10 +49,8 @@ msgid "Continue"
 msgstr "Devam et"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "Grafik Verme Tanımları"
+msgstr "Grafik Dışa Aktarma Tanımlarını Sil"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
@@ -97,10 +83,8 @@ msgid "Run Graph Export Definition(s) Now"
 msgstr "Grafik Verme Tanımları"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "En az bir Grafik Verme Tanımı seçmelisiniz."
+msgstr "Geçerli bir eylem seçmelisiniz."
 
 #: gexport.php
 msgid "Return"
@@ -183,7 +167,7 @@ msgstr "%d saniye"
 #: gexport.php
 #, php-format
 msgid "%d Minute"
-msgstr "% d dakika"
+msgstr "%d Dakika"
 
 #: gexport.php
 #, php-format
@@ -410,7 +394,7 @@ msgstr "Kaybolan kaynak dosyaları nedeniyle kısmi transfer"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "--Max-delete limiti silmeleri durdurdu"
+msgstr "--max-delete sınırı silme işlemlerini durdurdu"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -422,7 +406,7 @@ msgstr "Daemon bağlantısı için bekleyen zaman aşımı"
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "Bilinmeyen hata"
+msgstr "Bilinmeyen hata "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -506,7 +490,7 @@ msgstr "Ana bilgisayar anahtarı doğrulanamıyor"
 
 #: includes/functions.php
 msgid "Connection failed"
-msgstr "Bağlantı kurulamadı"
+msgstr "Bağlantı Başarısız Oldu"
 
 #: includes/functions.php
 msgid "Disconnected by application"
@@ -542,7 +526,7 @@ msgstr "Veri Sorguları"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "Kaktüs Grafikleri Ayarlarını Dışa Aktar"
+msgstr "Cacti Grafiklerini Dışa Aktarma Ayarları"
 
 #: setup.php
 msgid "Graph Exports"
@@ -602,7 +586,7 @@ msgstr "Komut Argümanlarını Dışa Aktar"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "Yerel olmayan ihracat yöntemleriyle kullanılacak argümanlar. rsync kullanmalı"
+msgstr "Yerel olmayan ihracat yöntemleriyle kullanılacak argümanlar. rsync kullanmalı "
 
 #: setup.php
 msgid "Theme"
@@ -610,7 +594,7 @@ msgstr "Tema"
 
 #: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
-msgstr "Kaktüs Grafiğinizi dışa aktarmak için mevcut Temalardan birini seçin."
+msgstr "Cacti Grafik Dışa Aktarımlarınızı görselleştirmek için kullanılabilir Temalardan birini seçin."
 
 #: setup.php
 msgid "Presentation Method"
@@ -646,7 +630,7 @@ msgstr "Periyodik İhracat Döngüsü"
 
 #: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
-msgstr "Kaktüslerin Ne Sıklıkta Grafikleri Dışa Aktarmasını İstiyorsunuz? Bu, Grafikleri dışa aktarmak istediğiniz Yoklama Döngüleri birimidir."
+msgstr "Cacti'nin Grafikleri ne sıklıkta dışa aktarmasını istiyorsunuz?  Bu, Grafikleri dışa aktarmak istediğiniz Sorgulama Döngüsü birimidir."
 
 #: setup.php
 msgid "Every Polling Cycle"
@@ -655,7 +639,7 @@ msgstr "Her Oylama Döngüsü"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr "Her% d Polling Döngüsü"
+msgstr "Her %d Sorgulama Döngüsünde"
 
 #: setup.php
 msgid "Hourly at specified minutes"
@@ -711,7 +695,7 @@ msgstr "Açık"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "Alınacak Kaktüs Grafikleri Sitesi."
+msgstr "Cacti Grafiklerinin Dışa Aktarılacağı Site."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -767,19 +751,19 @@ msgstr "Konum Bilgilerini Dışarı Aktar"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "Dışa Aktarma Zamanlaması"
+msgstr "Küçük Resimleri Dışa Aktar"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "Varsayılan Grafik Görünümü'nün Küçük Resim modunda olmasını istiyorsanız bunu kontrol edin."
+msgstr "Dışa aktarma küçük resimler modunu istiyorsanız bunu işaretleyin."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "Dizini Ver"
+msgstr "Dizini Temizle"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "Bu Grafik Verme Tanımının etkinleştirilmesini istiyorsanız, bu Onay Kutusunu işaretleyin."
+msgstr "Bu Grafik Dışa Aktarımının, doldurmadan önce son dizini temizlemesini istiyorsanız bu Onay Kutusunu işaretleyin."
 
 #: setup.php
 msgid "Export Directory"
@@ -859,7 +843,7 @@ msgstr "SCP ve RSYNC için, gerekirse Özel Anahtar yolunu girin."
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "Dışa Aktarılan Kaktüs Grafiği Sayfaları"
+msgstr "Dışa Aktarılan Cacti Grafik Sayfaları"
 
 #: setup.php
 msgid "(Edit)"
