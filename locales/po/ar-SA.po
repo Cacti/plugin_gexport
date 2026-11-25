@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2024-06-07 23:10-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ar_SA\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Arabic (Saudi Arabia) <https://translate.cacti.net/projects/cacti/gexport/ar_SA/>\nLanguage: ar-SA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -44,17 +32,17 @@ msgstr "يومي"
 
 #: gexport.php setup.php
 msgid "Hourly"
-msgstr "باستمرار"
+msgstr "كل ساعة"
 
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "انقر فوق \"متابعة\" لحذف تعريف تصدير الرسم البياني التالي."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[1] "انقر فوق \"متابعة\" لحذف تعريف تصدير الرسم البياني التالي."
+msgstr[2] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[3] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[4] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[5] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
 
 #: gexport.php
 msgid "Cancel"
@@ -65,34 +53,32 @@ msgid "Continue"
 msgstr "إستمرار"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Disable Graph Export Definition(s)"
 msgid "Delete Graph Export Definition(s)"
-msgstr "تعاريف تصدير الرسم البياني"
+msgstr "حذف تعريف (تعريفات) تصدير الرسوم البيانية"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "انقر فوق \"متابعة\" لتعطيل تعريف تصدير الرسم البياني التالي."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[1] "انقر فوق \"متابعة\" لتعطيل تعريف تصدير الرسم البياني التالي."
+msgstr[2] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[3] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[4] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[5] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "تعاريف تصدير الرسم البياني"
+msgstr "تعطيل تعريف (تعريفات) تصدير الرسم البياني"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "انقر فوق \"متابعة\" لتمكين تعريف تصدير الرسم البياني التالي."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[1] "انقر فوق \"متابعة\" لتمكين تعريف تصدير الرسم البياني التالي."
+msgstr[2] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[3] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[4] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[5] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -101,22 +87,20 @@ msgstr "تعاريف تصدير الرسم البياني"
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "انقر فوق \"متابعة\" لتشغيل تعريف تصدير الرسم البياني التالي الآن."
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[1] "انقر فوق \"متابعة\" لتشغيل تعريف تصدير الرسم البياني التالي الآن."
+msgstr[2] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[3] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[4] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[5] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
 msgstr "تعاريف تصدير الرسم البياني"
 
 #: gexport.php
-#, fuzzy
-#| msgid "You must select at least one Graph Export Definition."
 msgid "You must select a valid action."
-msgstr "يجب تحديد تعريف تصدير Graph واحد على الأقل."
+msgstr "يجب عليك تحديد إجراء صالح."
 
 #: gexport.php
 msgid "Return"
@@ -214,7 +198,7 @@ msgstr "أذهب"
 #: gexport.php
 msgctxt "filter: reset"
 msgid "Clear"
-msgstr "واضح"
+msgstr "مسح"
 
 #: gexport.php setup.php
 msgid "Export Name"
@@ -382,7 +366,7 @@ msgstr "خطأ في بدء بروتوكول خادم العميل"
 
 #: includes/functions.php
 msgid "Daemon unable to append to log-file"
-msgstr "شيطان غير قادر على إلحاق ملف السجل"
+msgstr "تعذر على الخدمة الخلفية (Daemon) الإلحاق بملف السجل"
 
 #: includes/functions.php
 msgid "Error in socket I/O"
@@ -426,7 +410,7 @@ msgstr "نقل جزئي بسبب اختفاء الملفات المصدر"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr "توقف الحد الأقصى للحذف - الحذف"
+msgstr "أوقف الحد --max-delete عمليات الحذف"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
@@ -438,7 +422,7 @@ msgstr "مهلة انتظار اتصال الخفي"
 
 #: includes/functions.php
 msgid "Unknown error "
-msgstr "خطأ غير معروف"
+msgstr "خطأ غير معروف "
 
 #: includes/functions.php
 msgid "Operation was successful"
@@ -558,7 +542,7 @@ msgstr "استعلامات البيانات"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr "تصدير إعدادات الصبار الرسوم البيانية"
+msgstr "إعدادات تصدير رسوم Cacti البيانية"
 
 #: setup.php
 msgid "Graph Exports"
@@ -618,7 +602,7 @@ msgstr "وسيطات الأمر تصدير"
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr "وسيطات لاستخدامها مع أساليب التصدير غير المحلية. يجب استخدام رسينك"
+msgstr "وسيطات لاستخدامها مع أساليب التصدير غير المحلية. يجب استخدام رسينك "
 
 #: setup.php
 msgid "Theme"
@@ -719,7 +703,7 @@ msgstr "يحدد هذا الإعداد ما إذا كان سيتم توسيع ش
 
 #: setup.php
 msgid "Off"
-msgstr "إيقاف"
+msgstr "لا يعمل"
 
 #: setup.php
 msgid "On"
@@ -727,7 +711,7 @@ msgstr "تشغيل"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr "موقع لتصدير الرسوم البيانية الصبار من."
+msgstr "الموقع المراد تصدير رسوم Cacti البيانية منه."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -783,19 +767,19 @@ msgstr "تصدير معلومات الموقع"
 
 #: setup.php
 msgid "Export Thumbnails"
-msgstr "توقيت التصدير"
+msgstr "تصدير الصور المصغرة"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr "حدد هذا إذا كنت تريد أن يكون عرض الرسم البياني الافتراضي في وضع المصغرات."
+msgstr "حدد هذا إذا كنت تريد وضع تصدير الصور المصغرة."
 
 #: setup.php
 msgid "Clear Directory"
-msgstr "دليل التصدير"
+msgstr "مسح الدليل"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr "حدد مربع الاختيار هذا إذا كنت ترغب في تمكين تعريف تصدير الرسم البياني هذا."
+msgstr "حدد مربع الاختيار هذا إذا كنت ترغب في أن يقوم تصدير الرسم البياني هذا بمسح الدليل النهائي قبل تعبئته."
 
 #: setup.php
 msgid "Export Directory"
@@ -875,7 +859,7 @@ msgstr "بالنسبة إلى SCP و RSYNC ، أدخل مسار المفتاح �
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr "تصدير صفحات الرسم البياني الصبار"
+msgstr "صفحات رسوم Cacti البيانية المُصدَّرة"
 
 #: setup.php
 msgid "(Edit)"
