@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Korean <https://translate.cacti.net/projects/cacti/gexport/ko/>\nLanguage: ko-KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Korean <https://translate.cacti.net/projects/cacti/gexport/ko/>\nLanguage: ko-KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -32,7 +32,7 @@ msgstr "매일"
 
 #: gexport.php setup.php
 msgid "Hourly"
-msgstr "매시간 마다"
+msgstr "매시간"
 
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
@@ -659,7 +659,7 @@ msgstr "x 스레드 사용"
 
 #: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr "Cacti가 그래프를 내보낼 때 사용할 백그라운드 스레드 수를 지정합니다. 기본값은 0으로 폴러 스레드에서 모든 내보내기를 실행하며, 1 이상이면 별도의 백그라운드 스레드를 생성합니다."
+msgstr "Cacti가 그래프를 내보낼 때 사용할 백그라운드 스레드 수를 지정합니다. 기본값은 0으로 폴러 스레드에서 모든 내보내기를 실행하며, 1 이상이면 별도의 백그라운드 스레드를 생성합니다"
 
 #: setup.php
 msgid "Graph Selection & Settings"
@@ -683,7 +683,7 @@ msgstr "이 설정은 트리 장치와 사이트 서식 파일 및 장치를 확
 
 #: setup.php
 msgid "Off"
-msgstr "끄기"
+msgstr "꺼짐"
 
 #: setup.php
 msgid "On"
