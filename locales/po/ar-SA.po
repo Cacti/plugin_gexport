@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Arabic (Saudi Arabia) <https://translate.cacti.net/projects/cacti/gexport/ar_SA/>\nLanguage: ar-SA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Arabic (Saudi Arabia) <https://translate.cacti.net/projects/cacti/gexport/ar_SA/>\nLanguage: ar-SA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -37,12 +37,12 @@ msgstr "كل ساعة"
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
-msgstr[1] "انقر فوق \"متابعة\" لحذف تعريف تصدير الرسم البياني التالي."
-msgstr[2] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
-msgstr[3] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
-msgstr[4] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
-msgstr[5] "انقر فوق \"متابعة\" لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[0] "انقر فوق 'متابعة' لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[1] "انقر فوق 'متابعة' لحذف تعريف تصدير الرسم البياني التالي."
+msgstr[2] "انقر فوق 'متابعة' لحذف تعريفي تصدير الرسم البياني التاليين."
+msgstr[3] "انقر فوق 'متابعة' لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[4] "انقر فوق 'متابعة' لحذف تعريفات تصدير الرسم البياني التالية."
+msgstr[5] "انقر فوق 'متابعة' لحذف تعريفات تصدير الرسم البياني التالية."
 
 #: gexport.php
 msgid "Cancel"
@@ -59,12 +59,12 @@ msgstr "حذف تعريف (تعريفات) تصدير الرسوم البيان�
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
-msgstr[1] "انقر فوق \"متابعة\" لتعطيل تعريف تصدير الرسم البياني التالي."
-msgstr[2] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
-msgstr[3] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
-msgstr[4] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
-msgstr[5] "انقر فوق \"متابعة\" لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[0] "انقر فوق 'متابعة' لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[1] "انقر فوق 'متابعة' لتعطيل تعريف تصدير الرسم البياني التالي."
+msgstr[2] "انقر فوق 'متابعة' لتعطيل تعريفي تصدير الرسم البياني التاليين."
+msgstr[3] "انقر فوق 'متابعة' لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[4] "انقر فوق 'متابعة' لتعطيل تعريفات تصدير الرسم البياني التالية."
+msgstr[5] "انقر فوق 'متابعة' لتعطيل تعريفات تصدير الرسم البياني التالية."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
@@ -73,12 +73,12 @@ msgstr "تعطيل تعريف (تعريفات) تصدير الرسم البيا�
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
-msgstr[1] "انقر فوق \"متابعة\" لتمكين تعريف تصدير الرسم البياني التالي."
-msgstr[2] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
-msgstr[3] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
-msgstr[4] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
-msgstr[5] "انقر فوق \"متابعة\" لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[0] "انقر فوق 'متابعة' لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[1] "انقر فوق 'متابعة' لتمكين تعريف تصدير الرسم البياني التالي."
+msgstr[2] "انقر فوق 'متابعة' لتمكين تعريفي تصدير الرسم البياني التاليين."
+msgstr[3] "انقر فوق 'متابعة' لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[4] "انقر فوق 'متابعة' لتمكين تعريفات تصدير الرسم البياني التالية."
+msgstr[5] "انقر فوق 'متابعة' لتمكين تعريفات تصدير الرسم البياني التالية."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -87,12 +87,12 @@ msgstr "تعاريف تصدير الرسم البياني"
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
-msgstr[1] "انقر فوق \"متابعة\" لتشغيل تعريف تصدير الرسم البياني التالي الآن."
-msgstr[2] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
-msgstr[3] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
-msgstr[4] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
-msgstr[5] "انقر فوق \"متابعة\" لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[0] "انقر فوق 'متابعة' لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[1] "انقر فوق 'متابعة' لتشغيل تعريف تصدير الرسم البياني التالي الآن."
+msgstr[2] "انقر فوق 'متابعة' لتشغيل تعريفي تصدير الرسم البياني التاليين الآن."
+msgstr[3] "انقر فوق 'متابعة' لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[4] "انقر فوق 'متابعة' لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
+msgstr[5] "انقر فوق 'متابعة' لتشغيل تعريفات تصدير الرسم البياني التالية الآن."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
@@ -169,7 +169,7 @@ msgstr "الافتراضي"
 
 #: gexport.php
 msgid "Refresh"
-msgstr "تحديث"
+msgstr "إنعاش"
 
 #: gexport.php
 msgid "Never"
@@ -183,7 +183,7 @@ msgstr "%d ثواني"
 #: gexport.php
 #, php-format
 msgid "%d Minute"
-msgstr "دقيقة %d"
+msgstr "%d دقيقة"
 
 #: gexport.php
 #, php-format
