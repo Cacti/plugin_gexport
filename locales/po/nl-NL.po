@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Dutch <https://translate.cacti.net/projects/cacti/gexport/nl/>\nLanguage: nl-NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Dutch <https://translate.cacti.net/projects/cacti/gexport/nl/>\nLanguage: nl-NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -32,7 +32,7 @@ msgstr "Dagelijks"
 
 #: gexport.php setup.php
 msgid "Hourly"
-msgstr "Per uur"
+msgstr "Elk uur"
 
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
@@ -46,7 +46,7 @@ msgstr "Annuleer"
 
 #: gexport.php
 msgid "Continue"
-msgstr "Volgende"
+msgstr "Doorgaan"
 
 #: gexport.php
 msgid "Delete Graph Export Definition(s)"
@@ -242,7 +242,7 @@ msgstr "Wat wordt geëxporteerd."
 
 #: gexport.php setup.php
 msgid "Effective User"
-msgstr "Efficiënte gebruiker"
+msgstr "Effectieve gebruiker"
 
 #: gexport.php
 msgid "The user that this export will impersonate."
@@ -302,7 +302,7 @@ msgstr "Inactief"
 
 #: gexport.php
 msgid "Running"
-msgstr "Actief"
+msgstr "Wordt uitgevoerd"
 
 #: gexport.php
 msgid "Error"
