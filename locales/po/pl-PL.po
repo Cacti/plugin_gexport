@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Polish <https://translate.cacti.net/projects/cacti/gexport/pl/>\nLanguage: pl-PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Polish <https://translate.cacti.net/projects/cacti/gexport/pl/>\nLanguage: pl-PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -37,9 +37,9 @@ msgstr "Co godzinę"
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następującą definicję eksportu wykresu."
-msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następujące definicje eksportu wykresów."
-msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby usunąć następujące definicje eksportu wykresów."
+msgstr[0] "Kliknij „Kontynuuj”, aby usunąć następującą definicję eksportu wykresu."
+msgstr[1] "Kliknij „Kontynuuj”, aby usunąć następujące definicje eksportu wykresu."
+msgstr[2] "Kliknij „Kontynuuj”, aby usunąć następujące definicje eksportu wykresu."
 
 #: gexport.php
 msgid "Cancel"
@@ -56,9 +56,9 @@ msgstr "Usuń definicję(-e) eksportu wykresów"
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następującą definicję eksportu wykresu."
-msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następujące definicje eksportu wykresów."
-msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby wyłączyć następujące definicje eksportu wykresów."
+msgstr[0] "Kliknij „Kontynuuj”, aby wyłączyć następującą definicję eksportu wykresu."
+msgstr[1] "Kliknij „Kontynuuj”, aby wyłączyć następujące definicje eksportu wykresu."
+msgstr[2] "Kliknij „Kontynuuj”, aby wyłączyć następujące definicje eksportu wykresu."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
@@ -67,9 +67,9 @@ msgstr "Wyłącz definicję(-e) eksportu wykresów"
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następującą definicję eksportu wykresu."
-msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następujące definicje eksportu wykresów."
-msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby włączyć następujące definicje eksportu wykresów."
+msgstr[0] "Kliknij „Kontynuuj”, aby włączyć następującą definicję eksportu wykresu."
+msgstr[1] "Kliknij „Kontynuuj”, aby włączyć następujące definicje eksportu wykresu."
+msgstr[2] "Kliknij „Kontynuuj”, aby włączyć następujące definicje eksportu wykresu."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -78,9 +78,9 @@ msgstr "Wykres Definicje eksportu"
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następującą definicję eksportu wykresu."
-msgstr[1] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następujące definicje eksportu wykresów."
-msgstr[2] "Kliknij \"Continue\" (Kontynuuj), aby uruchomić teraz następujące definicje eksportu wykresów."
+msgstr[0] "Kliknij „Kontynuuj”, aby uruchomić teraz następującą definicję eksportu wykresu."
+msgstr[1] "Kliknij „Kontynuuj”, aby uruchomić teraz następujące definicje eksportu wykresu."
+msgstr[2] "Kliknij „Kontynuuj”, aby uruchomić teraz następujące definicje eksportu wykresu."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
@@ -166,7 +166,7 @@ msgstr "Nigdy"
 #: gexport.php
 #, php-format
 msgid "%d Seconds"
-msgstr "%d Sekund"
+msgstr "%d sek"
 
 #: gexport.php
 #, php-format
@@ -610,7 +610,7 @@ msgstr "Wybierz, którą prezentację chcesz dla wygenerowanych stron html. Jeś
 
 #: setup.php
 msgid "Site"
-msgstr "Lokalizacja"
+msgstr "Obiekt"
 
 #: setup.php
 msgid "Tree"
@@ -791,7 +791,7 @@ msgstr "Opcje zdalne"
 
 #: setup.php
 msgid "Sanitize remote directory"
-msgstr "Sanitize remote directory"
+msgstr "Oczyść katalog zdalny"
 
 #: setup.php
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
