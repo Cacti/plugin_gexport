@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Somali\n"
+"Language: so-SO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Tirtir"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Hawl-geli"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Hawl-jooji"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Hadda Dhoofi"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Xilliyeed"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Maalinle"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Saacad kasta"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Guji 'Sii wad' si aad u tirtirto Qeexidda Dhoofinta Garaafka ee soo socota."
+msgstr[1] "Guji 'Sii wad' si aad u tirtirto Qeexidyada Dhoofinta Garaafka ee soo socda."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Jooji"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Sii wad"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Tirtir Qeexitaanada Dhoofinta Garaafka"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Guji 'Sii wad' si aad u joojiso Qeexidda Dhoofinta Garaafka ee soo socota."
+msgstr[1] "Guji 'Sii wad' si aad u joojiso Qeexidyada Dhoofinta Garaafka ee soo socda."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Jooji Qeexidda(yada) Dhoofinta Garaafka"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Guji 'Sii wad' si aad u hawlgeliso Qeexidda Dhoofinta Garaafka ee soo socota."
+msgstr[1] "Guji 'Sii wad' si aad u hawlgeliso Qeexidyada Dhoofinta Garaafka ee soo socda."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Hawlgeli Qeexitaanka/Qeexitaannada Dhoofinta Garaafka"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Guji 'Sii wad' si aad hadda u socodsiiso Qeexidda Dhoofinta Garaafka ee soo socota."
+msgstr[1] "Guji 'Sii wad' si aad hadda u socodsiiso Qeexidyada Dhoofinta Garaafka ee soo socda."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Hadda Socodsii Qeexitaanka(yada) Dhoofinta Garaafka"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Waa inaad doorataa fal sax ah."
+
+#: gexport.php
+msgid "Return"
+msgstr "Ku noqo"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Waa inaad doorataa ugu yaraan hal Qeexitaan Dhoofinta Garaafka."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Qeexidda Dhoofinta Garaafka [cusub]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Qeexidda Dhoofinta Garaafka [wax ka beddel: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Dooro Geed(adka)"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Geedaha La Doortay"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Dhammaan Geedaha La Doortay"
+
+#: gexport.php
+msgid "All"
+msgstr "Dhammaan"
+
+#: gexport.php
+msgid "None"
+msgstr "Midna"
+
+#: gexport.php
+msgid "Search"
+msgstr "Raadi"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Dooro Goob(aha)"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Goobaha la Doortay"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Dhammaan Goobaha La Doortay"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Qeexitaannada Dhoofinta Garaafka"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Dhoofinta"
+
+#: gexport.php
+msgid "Default"
+msgstr "Asal ah"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Cusboonaysii"
+
+#: gexport.php
+msgid "Never"
+msgstr "Marna"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "%d Ilbiriqsi"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "%d Daqiiqo"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "%d Daqiiqo"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Soco"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Nadiifi"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Magaca Dhoofinta"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Magaca Qeexitaankan Dhoofinta Garaafka."
+
+#: gexport.php
+msgid "ID"
+msgstr "Aqoonsiga"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Aqoonsiga gudaha ee Qeexitaanka Dhoofinta Garaafka."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Jadwalka"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Inta jeer ee Jaantusyada la dhoofin doono."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Bilowga Xiga"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Wakhtiga xiga ee ay tahay in Dhoofinta Garaafku shaqayso."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "La hawlgeliyay"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Haddii la hawlgeliyo, qeexiddan Dhoofinta Garaafka waxay u shaqayn doontaa sida loo baahdo."
+
+#: gexport.php
+msgid "Status"
+msgstr "Xaaladda"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Xaaladda hadda ee Dhoofinta Garaafka."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Dhoofinta (Goobaha/Geedaha)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Waxa la dhoofinayo."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Isticmaalaha Dhabta ah"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Isticmaalaha uu dhoofintani iska dhigi doonto."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Muddadii Shaqeynta Ugu Dambeysay"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Wakhtigii socodsiinta ee ugu dambeeyay ee Dhoofinta Garaafka."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Jaantusyada"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Tirada Jaantusyada La Dhoofiyay socodsiintii ugu dambaysay."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Bilowgii Ugu Dambeeyay"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Markii ugu dambaysay ee Dhoofinta Garaafkan la bilaabay."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Markii Ugu Dambaysay ee Khalad Dhacay"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Markii ugu dambaysay ee Dhoofinta Garaafkan ay la kulantay qalad."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Dhoofi Qeexitaannada"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Ma khuseyso"
+
+#: gexport.php
+msgid "No"
+msgstr "Maya"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Haa"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Heegan"
+
+#: gexport.php
+msgid "Running"
+msgstr "Socda"
+
+#: gexport.php
+msgid "Error"
+msgstr "Cilad"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Dhammaan Goobaha"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Dhammaan Geedaha"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Ilb"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Ma Jiraan Qeexitaannada Dhoofinta Garaafka"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Guul"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Khalad qaab-dhismeedka qoraalka ama adeegsiga ah"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Is-waafaqla'aanta borotokoolka"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Khaladaad xulashada faylasha iyo galka gelinta/soo-saarista"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Ficilka la codsaday lama taageero: waxaa la isku dayay in wax laga beddelo faylasha 64-bit ee ku jira madal aan taageeri karin; ama waxaa la cayimay ikhtiyaar uu taageero macmiilku balse uusan taageerin adeeguhu."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Khalad baa ka dhacay bilaabista borotokoolka macmiil-adeegaha"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon-ku ma awoodo inuu ku daro faylka diiwaanka"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Khalad ku jira socket I/O"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Khalad ku jira faylka I/O"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Khalad ku jira qulqulka xogta borotokoolka rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Khaladaad ku jira baaritaanka barnaamijka"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Khalad ku jira koodka IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Waxaa la helay SIGUSR1 ama SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Khalad ay soo celisay waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Khalad ku yimid qoondaynta kaydka xusuusta asaasiga ah"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Wareejin qayb ah oo ay sababtay cilad"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Wareejin qayb ah oo ay sababeen faylasha isha oo lumay"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Xadka --max-delete wuxuu joojiyay tirtiridda"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Waqti dhammaadka dirista/helidda xogta"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Waqti dhammaadka sugitaanka isku xirka daemon-ka"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Cilad aan la aqoon "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Hawlgalku wuu guuleystay"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Khalad guud oo ka dhacay nuqul-ka-samaynta faylka"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Ujeeddadu ma aha gal, laakiin waa inay ahaato"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Heerka isku-xirka astaanta (symlink) ee ugu badan waa la dhaafay"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Ku xidhitaanka martigeliyaha wuu fashilmay."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Xidhiidhka wuu go'ay"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Faylku ma jiro"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Ogolaansho looma haysto gelitaanka faylka."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Khalad guud oo ka dhacay borotokoolka sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Isku-habboonaansho la'aanta hab-maamuuska wareejinta faylka"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Ma jiro fayl u dhigma shuruudaha la bixiyay"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Martigeliyaha looma oggola inuu ku xirmo"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Khalad guud oo ka dhacay borotokoolka ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Is-weydaarsiga furaha wuu fashilmay"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "La xajistay"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Khaladka MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Khalad cadaadis"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Adeegga lama heli karo"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Nooca borotokoolka lama taageero"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Furaha martigeliyaha lama xaqiijin karo"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Xidhiidhku wuu fashilmay"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Waxaa jaray barnaamijka"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Isku xirro aad u badan"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Xaqiijinta waxaa joojiyay isticmaalaha"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Ma jiraan habab kale oo xaqiijin ah oo la heli karo"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Magac isticmaale oo aan sax ahayn"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Aan Ku Salaysnayn Weydiin"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Qaababka Garaafka"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Weydiimaha Xogta"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Dhoofi Dejinta Jaantusyada Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Dhoofinnada Garaafka"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Adeegyada"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Maamulka Guud"
+
+#: setup.php
+msgid "General"
+msgstr "Guud"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Calaamadee sanduuqan haddii aad rabto in Qeexiddan Dhoofinta Garaafka la hawlgeliyo."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Habka Dhoofinta"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Dooro habka dhoofinta ee la isticmaalayo."
+
+#: setup.php
+msgid "Local"
+msgstr "Gudaha"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Dhoofi Halbeegyada Amarka"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Doodaha loo adeegsado hababka dhoofinta ee aan maxalliga ahayn. rsync waa inuu adeegsadaa "
+
+#: setup.php
+msgid "Theme"
+msgstr "Muuqaalka (Theme)"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Fadlan dooro mid ka mid ah Naqshadaha diyaarka ah si aad ugu qurxiso Dhoofinta Garaafka ee Cacti."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Habka Soo-bandhigidda"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Dooro qaab-bandhigga aad u rabto boggaga HTML ee la soo saaray. Haddii aad doorato qaab-bandhigga caadiga ah; Jaantusyada waxay ku jiri doonaan hal bog oo HTML ah oo keliya. Haddii aad doorato qaab-bandhigga geedka, qaab-dhismeedka Geedka Garaafka waxaa lagu hayn doonaa boggaga HTML ee taagan"
+
+#: setup.php
+msgid "Site"
+msgstr "Goob"
+
+#: setup.php
+msgid "Tree"
+msgstr "Geed"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Waqtiga Dhoofinta"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Habka Waqti-cabirka"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Dooro goorta la dhoofinayo Jaantusyada."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Wareegga Dhoofinta Xilliyeed"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Intee jeer ayaad rabtaa in Cacti ay Dhoofiso Jaantusyada.  Tani waa halbeegga Wareegyada Xog-ururinta ee aad rabto inaad dhoofiso Jaantusyada."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Wareeg kasta oo Xog-uruurin"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "%d Wareegyo Xog-uruurin kasta"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Saacad kasta daqiiqadaha la cayimay"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Haddii aad rabto in Cacti uu dhoofiyo sawirro taagan saacad kasta, geli daqiiqadaha saacadda marka la samaynayo taas. Cacti wuxuu u qaadanayaa inaad socodsiiso qoraalka (script) ururinta xogta 5-tii daqiiqoba mar, markaa wuxuu u soo dhoweyn doonaa qiimahaaga kan ugu dhow waqtiga uu shaqeeyo. Tusaale ahaan, 43 waxay u dhigmi doontaa 40 daqiiqo saacadda kadib."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Maalin kasta waqtiga la cayimay"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Haddii aad rabto in Cacti uu dhoofiyo sawirro taagan maalin kasta, halkan geli waqtiga la samaynayo taas. Cacti wuxuu u qaadanayaa inaad socodsiiso qoraalka (script) ururinta xogta 5-tii daqiiqoba mar, markaa wuxuu u soo dhoweyn doonaa qiimahaaga kan ugu dhow waqtiga uu shaqeeyo. Tusaale ahaan, 21:23 waxay u dhigmi doontaa 20 daqiiqo kadib 9 PM."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Isticmaal x Threads"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Immisa dun-shaqo oo gadaal ah ayaad rabtaa in Cacti ay isticmaasho marka ay dhoofinayso jaantusyada. Qiimaha caadiga ahi waa 0 si dhammaan dhoofinta loogu socodsiiyo dunta xog-uruuriyaha, 1 ama ka badan si loo abuuro duno-shaqo oo gadaal ah oo gooni ah"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Xulashada Garaafka & Dejinta"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Magaca isticmaalaha loo adeegsanayo dejinta rukhsadaha Jaantusyada Cacti. Magacan isticmaale waxaa loo adeegsan doonaa si loo go'aamiyo Jaantusyada/Geedaha la dhoofin karo. N/A waxay ka dhigan tahay ha u qaadan in wax amni ah jiro."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Geedka/Geedaha la dhoofinayo."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Ballaadhi Aaladaha/Goobaha"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Dejintani waxay go'aamisaa in Aaladaha Geedka iyo Qaab-dhismeedyada Goobta iyo Aaladaha la ballaarin doono iyo in kale. Haddii loo dejiyo la ballaariyay, martigeliye kastaa wuxuu yeelan doonaa gal-hoosaad ka kooban Qaab-dhismeedyada Garaafka ama waxyaabaha Waydiinta Xogta."
+
+#: setup.php
+msgid "Off"
+msgstr "Damsan"
+
+#: setup.php
+msgid "On"
+msgstr "Daaran"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Goobta laga soo dhoofinayo Jaantusyada Cacti."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Ballaca Sawir-yareedka Garaafka"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Ballaca caadiga ah ee Jaantusyada yar-yar (Thumbnail) ee pixels ahaan."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Dhererka Sawir-yareedka Garaafka"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Dhererka Jaantusyada yar-yar (Thumbnail) oo piksel ah."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Muuqaalka Sawir-yaraha ee Caadiga ah"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Calaamadee tan haddii aad rabto in Muuqaalka Garaafka ee caadiga ah uu ahaado habka sawirka yar."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Tiirarka Garaafka ee Caadiga ah"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Tirada tiirarka (columns) ee caadiga ah ee la isticmaalo marka la soo bandhigayo Jaantusyada."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Jaantusyada Boggiiba"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Dooro tirada Jaantusyada Boggiiba ee la muujinayo."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Jaantusyada Ugu Badan ee La Dhoofinayo"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Marka tiradan la gaaro, qalad ayaa la soo saari doonaa, laakiin dhoofintu way sii socon doontaa. U deji 0 si aan xad lahayn."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Dhoofi Macluumaadka Goobta"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Dhoofi Sawirrada Yaryar"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Calaamadee tan haddii aad rabto habka sawirrada yar yar ee dhoofinta."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Nadiifi Galka"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Calaamadee sanduuqan haddii aad rabto in Dhoofinta Garaafka ay nadiifiso galka u dambeeya ka hor inta aan la buuxin."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Galka Dhoofinta"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Kani waa galka, ha ahaado nidaamka maxalliga ah ama nidaamka fog, kaas oo ka koobnaan doona xogta la dhoofiyay."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Galka Ku-meelgaarka ah ee Maxalliga ah"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Kani waa galka ay Cacti si ku meel gaar ah ugu keydin doonto wax-soo-saarka ka hor inta aan loo dirin goobta fog iyadoo loo marayo habka wareejinta. Waxa ku jira galkan waa la tirtiri doonaa ka dib marka xogta la wareejiyo."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Ikhtiyaarrada Fog"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Nadiifi galka fog"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Calaamadee tan haddii aad rabto in aad tirtirto fayl kasta oo jira oo ku yaal galka fog ee FTP. Ikhtiyaarkan waxaa la adeegsadaa oo keliya marka la isticmaalayo hawlaha ftp ee ku dhex dhisan PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Martigeliyaha Fog"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Waxay tilmaamaysaa martigeliyaha loo dirayo Jaantusyada La Dhoofiyay."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Dekedda Fog"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Dekadda isgaarsiinta ee loo isticmaalo habka dhoofinta haddii aysan ahayn mid caadi ah (bannaanka u daa si loo isticmaalo kuwa caadiga ah)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Isticmaal habka dadban (passive)"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Calaamadee tan haddii aad rabto in aad habka dadban (passive mode) ugu xiranto server-ka FTP."
+
+#: setup.php
+msgid "User"
+msgstr "Isticmaale"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Akoonka lagu galayo serferka fog (ka tag isagoo madhan wixii caadi ah)."
+
+#: setup.php
+msgid "Password"
+msgstr "Erayga sirta ah"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Erayga sirta ah ee akoonka ftp ee fog (ka tag meel bannaan haddii aan la rabin)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Jidka Furaha Gaarka ah"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "SCP iyo RSYNC, geli dariiqa Furaha Gaarka ah haddii loo baahdo."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Boggaga Garaafka Cacti ee la Dhoofiyay"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Wax ka beddel)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Ficillada"
+

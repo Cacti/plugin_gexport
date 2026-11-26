@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Swahili\n"
+"Language: sw-KE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Futa"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Wezesha"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Lemaza"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Hamisha Sasa"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Ya mara kwa mara"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Kila Siku"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Kila Saa"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Bofya 'Endelea' ili kufuta Ufafanuzi ufuatao wa Uhamishaji wa Grafu."
+msgstr[1] "Bofya 'Endelea' ili kufuta Fafanuzi zifuatazo za Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Ghairi"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Endelea"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Futa Ufafanuzi wa Uhamishaji wa Grafu"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Bofya 'Endelea' ili kuzima Ufafanuzi ufuatao wa Uhamishaji wa Grafu."
+msgstr[1] "Bofya 'Endelea' ili kuzima Fafanuzi zifuatazo za Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Zima Ufafanuzi/Fafanuzi za Uhamishaji wa Grafu"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Bofya 'Endelea' ili kuwasha Ufafanuzi ufuatao wa Uhamishaji wa Grafu."
+msgstr[1] "Bofya 'Endelea' ili kuwasha Fafanuzi zifuatazo za Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Washa Ufafanuzi wa Uhamishaji wa Grafu"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Bofya 'Endelea' ili kuendesha Ufafanuzi ufuatao wa Uhamishaji wa Grafu sasa."
+msgstr[1] "Bofya 'Endelea' ili kuendesha Fafanuzi zifuatazo za Uhamishaji wa Grafu sasa."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Endesha Fasili ya/za Uhamishaji wa Grafu Sasa"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "Lazima uchague kitendo halali."
+
+#: gexport.php
+msgid "Return"
+msgstr "Rudi"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "Lazima uchague angalau Ufafanuzi mmoja wa Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Ufafanuzi wa Uhamishaji wa Grafu [mpya]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Ufafanuzi wa Uhamishaji wa Grafu [hariri: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Chagua Mti/Miti"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Miti Iliyochaguliwa"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Miti Yote Imechaguliwa"
+
+#: gexport.php
+msgid "All"
+msgstr "Zote"
+
+#: gexport.php
+msgid "None"
+msgstr "Hakuna"
+
+#: gexport.php
+msgid "Search"
+msgstr "Tafuta"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Chagua Eneo/Maeneo"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Maeneo Yaliyochaguliwa"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Maeneo Yote Yamechaguliwa"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Ufafanuzi wa Uhamishaji wa Grafu"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Uhamishaji"
+
+#: gexport.php
+msgid "Default"
+msgstr "Chaguo-msingi"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Onyesha Upya"
+
+#: gexport.php
+msgid "Never"
+msgstr "Kamwe"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "Sekunde %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "Dakika %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "Dakika %d"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Nenda"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Safisha"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Jina la Uhamishaji"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Jina la Ufafanuzi huu wa Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "ID"
+msgstr "Kitambulisho"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "Kitambulisho cha ndani cha Ufafanuzi wa Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Ratiba"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Marudio ambayo Grafu zitahamishwa."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Mwanzo Ujao"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Muda ujao ambao Uhamishaji wa Grafu unapaswa kuendeshwa."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Imewashwa"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Ikiwa imewashwa, ufafanuzi huu wa Uhamishaji wa Grafu utatekelezwa inavyohitajika."
+
+#: gexport.php
+msgid "Status"
+msgstr "Hali"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Hali ya sasa ya Usafirishaji wa Grafu."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Inahamisha (Maeneo/Miti)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Kinachohamishwa."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Mtumiaji Halisi"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Mtumiaji ambaye uhamishaji huu utamwigiza."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Muda wa Mwisho wa Utekelezaji"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Muda wa mwisho wa uendeshaji wa Uhamishaji wa Grafu."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Grafu"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Idadi ya Grafu Zilizohamishwa katika uendeshaji wa mwisho."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Ilianza Mwisho"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Mara ya mwisho Uhamishaji huu wa Grafu ulipoanzishwa."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Ilipata Hitilafu Mara ya Mwisho"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Mara ya mwisho Uhamishaji huu wa Grafu ulipopata hitilafu."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Hamisha Ufafanuzi"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Haipatikani"
+
+#: gexport.php
+msgid "No"
+msgstr "Hapana"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Ndiyo"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Haina Shughuli"
+
+#: gexport.php
+msgid "Running"
+msgstr "Inaendelea"
+
+#: gexport.php
+msgid "Error"
+msgstr "Hitilafu"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Maeneo Yote"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Miti Yote"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Sek"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Hakuna Ufafanuzi wa Uhamishaji wa Grafu"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Imefaulu"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Hitilafu ya sintaksia au matumizi"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Kutopatana kwa itifaki"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Hitilafu katika kuchagua faili au saraka za kuingiza/kutoa"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Kitendo kilichoombwa hakitumiki: jaribio lilifanywa la kushughulikia faili za biti 64 kwenye mfumo usioweza kuzitumia; au chaguo lilibainishwa linalotumika na mteja na si na seva."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Hitilafu katika kuanzisha itifaki ya mteja-seva"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon haiwezi kuongeza kwenye faili ya kumbukumbu"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Hitilafu katika I/O ya soketi"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Hitilafu katika I/O ya faili"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Hitilafu katika mtiririko wa data wa itifaki ya rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Hitilafu katika uchunguzi wa programu"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Hitilafu katika msimbo wa IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "Imepokea SIGUSR1 au SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Hitilafu fulani imerejeshwa na waitpid()"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Hitilafu katika kutenga bafa za kumbukumbu kuu"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Uhamisho wa sehemu pekee kutokana na hitilafu"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Uhamisho wa sehemu pekee kutokana na faili chanzo zilizotoweka"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Kikomo cha --max-delete kimesimamisha ufutaji"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Muda umeisha wakati wa kutuma/kupokea data"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Muda umeisha ukisubiri muunganisho wa daemoni"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Hitilafu isiyojulikana "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Operesheni ilifaulu"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Hitilafu ya jumla katika kunakili faili"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Lengo si saraka, lakini linapaswa kuwa saraka"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Kiwango cha juu cha kiungo-ishara kimepitwa"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Kuunganisha na kipangishi kumeshindikana."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Muunganisho umekatika"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Faili haipo"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Hakuna ruhusa ya kufikia faili."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Hitilafu ya jumla katika itifaki ya sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Kutolingana kwa itifaki ya kuhamisha faili"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Hakuna faili inayolingana na vigezo vilivyotolewa"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "Kipangishi hakiruhusiwi kuunganisha"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Hitilafu ya jumla katika itifaki ya ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Ubadilishanaji wa ufunguo umeshindwa"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Imehifadhiwa"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Hitilafu ya MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Hitilafu ya mfinyazo"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Huduma haipatikani"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Toleo la itifaki halitumiki"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Ufunguo wa kipangishi hauwezi kuthibitishwa"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Muunganisho umeshindikana"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Imekatizwa na programu"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Miunganisho mingi mno"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Uthibitishaji umeghairiwa na mtumiaji"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Hakuna mbinu nyingine za uthibitishaji zinazopatikana"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Jina la mtumiaji batili"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Isiyotegemea Hoja"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Violezo vya Grafu"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Hoja za Data"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Hamisha Mipangilio ya Grafu za Cacti"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Uhamishaji wa Grafu"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Zana"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Usimamizi wa Jumla"
+
+#: setup.php
+msgid "General"
+msgstr "Jumla"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Tiki kisanduku hiki ikiwa ungependa Ufafanuzi huu wa Kuhamisha Grafu uwashwe."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Mbinu ya Kuhamisha"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Chagua mbinu ya uhamishaji ya kutumia."
+
+#: setup.php
+msgid "Local"
+msgstr "Ndani ya Mfumo"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Hamisha Hoja za Amri"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Hoja za kutumia na mbinu za uhamishaji zisizo za ndani. rsync inapaswa kutumia "
+
+#: setup.php
+msgid "Theme"
+msgstr "Mandhari"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Tafadhali chagua mojawapo ya Mandhari zinazopatikana ili kupamba Uhamishaji wako wa Grafu za Cacti."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Mbinu ya Uwasilishaji"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Chagua uwasilishaji unaotaka kwa kurasa za html zilizozalishwa. Ukichagua uwasilishaji wa kawaida; Grafu zitakuwa katika ukurasa mmoja tu wa html. Ukichagua uwasilishaji wa mti, muundo wa Mti wa Grafu utahifadhiwa katika kurasa tuli za html"
+
+#: setup.php
+msgid "Site"
+msgstr "Eneo"
+
+#: setup.php
+msgid "Tree"
+msgstr "Mti"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Muda wa Kuhamisha"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Mbinu ya Kupima Muda"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Chagua wakati wa Kuhamisha Grafu."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Mzunguko wa Uhamishaji wa Mara kwa Mara"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Je, ungependa Cacti ihamishe Grafu mara ngapi.  Hiki ni kipimo cha Mizunguko ya Ukusanyaji unachotaka kuhamisha Grafu."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Kila Mzunguko wa Ukusanyaji"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Kila Mizunguko %d ya Ukusanyaji"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Kila saa katika dakika zilizobainishwa"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Ikiwa unataka Cacti ihamishe picha tuli kila saa, weka dakika za saa za kufanya hivyo. Cacti inadhania kuwa unaendesha hati ya ukusanyaji wa data kila baada ya dakika 5, kwa hivyo itakadiria thamani yako hadi iliyo karibu zaidi na muda wake wa utekelezaji. Kwa mfano, 43 italingana na dakika 40 baada ya saa kamili."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Kila siku kwa wakati uliobainishwa"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Ikiwa unataka Cacti ihamishe picha tuli kila siku, weka hapa muda wa kufanya hivyo. Cacti inadhania kuwa unaendesha hati ya ukusanyaji wa data kila baada ya dakika 5, kwa hivyo itakadiria thamani yako hadi iliyo karibu zaidi na muda wake wa utekelezaji. Kwa mfano, 21:23 italingana na dakika 20 baada ya saa 3 usiku."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Tumia Nyuzi x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Je, ungependa Cacti itumie nyuzi ngapi za chinichini inapohamisha grafu. Chaguo-msingi ni 0 ili kuendesha uhamishaji wote katika uzi wa kikusanyaji, 1 au zaidi ili kuunda nyuzi tofauti za chinichini"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Uteuzi na Mipangilio ya Grafu"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Jina la mtumiaji la kutumia kuweka ruhusa za Grafu za Cacti.  Jina hili la mtumiaji litatumika kubaini ni Grafu/Miti ipi inayoweza kuhamishwa.  N/A inamaanisha usichukulie kuwa kuna usalama wowote uliowekwa."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Mti au Miti ya kusafirisha."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Panua Vifaa/Maeneo"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Mpangilio huu huamua ikiwa Vifaa vya Mti na Violezo vya Eneo na Vifaa vitapanuliwa au la. Ikiwekwa kupanuliwa, kila Kipangishi kitakuwa na folda ndogo iliyo na Violezo vya Grafu au vipengee vya Hoji ya Data."
+
+#: setup.php
+msgid "Off"
+msgstr "Imezimwa"
+
+#: setup.php
+msgid "On"
+msgstr "Imewashwa"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Eneo ambalo Grafu za Cacti zitasafirishwa kutoka kwalo."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Upana wa Kijipicha cha Grafu"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Upana chaguo-msingi wa Grafu Ndogo katika pikseli."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Kimo cha Kijipicha cha Grafu"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Kimo cha Grafu za Kijipicha katika pikseli."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Mwonekano Chaguo-msingi wa Picha Ndogo"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Tiki hii ikiwa unataka Mwonekano chaguomsingi wa Grafu uwe katika hali ya Vijipicha."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Safu Wima Chaguo-msingi za Grafu"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Idadi ya safuwima za kutumia kwa chaguomsingi wakati wa kuonyesha Grafu."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Grafu Kwa Kila Ukurasa"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Chagua idadi ya Grafu Kwa Kila Ukurasa za kuonyesha."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Idadi ya Juu ya Grafu za Kuhamisha"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Baada ya nambari hii kufikiwa, hitilafu itatolewa, lakini uhamishaji utaendelea.  Weka 0 kwa kutokuwa na kikomo."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Hamisha Taarifa za Mahali"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Hamisha Vijipicha"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Tiki hii ikiwa unataka hali ya kuhamisha vijipicha."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Safisha Saraka"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Tiki kisanduku hiki ikiwa ungependa Uhamishaji huu wa Grafu usafishe saraka ya mwisho kabla ya kujaza."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Saraka ya Kuhamisha"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Hii ni saraka, ama kwenye mfumo wa ndani au kwenye mfumo wa mbali, itakayokuwa na data iliyohamishwa."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Saraka ya Muda ya Ndani"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Hii ni saraka ambamo Cacti itahifadhi matokeo kwa muda kabla ya kutuma kwenye Eneo la mbali kupitia mbinu ya uhamisho.  Yaliyomo kwenye saraka hii yatafutwa baada ya data kuhamishwa."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Chaguo za Mbali"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Safisha saraka ya mbali"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Tiki hii ikiwa unataka kufuta faili zozote zilizopo kwenye saraka ya mbali ya FTP. Chaguo hili linatumika tu unapotumia vitendakazi vya ftp vilivyojengwa ndani ya PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Kipangishi cha Mbali"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Inabainisha kipangishi ambako Grafu Zilizohamishwa zitatumwa."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Mlango wa Mbali"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Mlango wa mawasiliano wa kutumia kwa mbinu ya uhamishaji ikiwa si wa kawaida (acha wazi kwa chaguo-msingi)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Tumia hali tulivu"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Tiki hii ikiwa unataka kuunganisha katika hali tulivu kwenye seva ya FTP."
+
+#: setup.php
+msgid "User"
+msgstr "Mtumiaji"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Akaunti ya kuingia kwenye seva ya mbali (acha wazi kwa chaguo-msingi)."
+
+#: setup.php
+msgid "Password"
+msgstr "Nenosiri"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Nenosiri la akaunti ya ftp ya mbali (acha wazi ikiwa ni tupu)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Njia ya Ufunguo wa Faragha"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Kwa SCP na RSYNC, weka njia ya Ufunguo wa Faragha ikiwa inahitajika."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Kurasa za Grafu za Cacti Zilizohamishwa"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Hariri)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Vitendo"
+

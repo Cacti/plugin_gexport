@@ -1,0 +1,862 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-07 16:13-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Yoruba\n"
+"Language: yo-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: gexport.php
+msgid "Delete"
+msgstr "Pa rẹ́"
+
+#: gexport.php
+msgid "Enable"
+msgstr "Mú Ṣiṣẹ́"
+
+#: gexport.php
+msgid "Disable"
+msgstr "Dá Dúró"
+
+#: gexport.php
+msgid "Export Now"
+msgstr "Kó Jáde Báyìí"
+
+#: gexport.php setup.php
+msgid "Periodic"
+msgstr "Lóòrèkóòrè"
+
+#: gexport.php setup.php
+msgid "Daily"
+msgstr "Ojoojúmọ́"
+
+#: gexport.php setup.php
+msgid "Hourly"
+msgstr "Wákàtí Kọ̀ọ̀kan"
+
+#: gexport.php
+msgid "Click 'Continue' to delete the following Graph Export Definition."
+msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti pa àwọn Ìtumọ̀ Ìkójáde Gíráfù wọ̀nyí rẹ́."
+
+#: gexport.php
+msgid "Cancel"
+msgstr "Fagilé"
+
+#: gexport.php
+msgid "Continue"
+msgstr "Tẹ̀síwájú"
+
+#: gexport.php
+msgid "Delete Graph Export Definition(s)"
+msgstr "Pa (Àwọn) Ìtumọ̀ Ìgbéjáde Gíráfù Rẹ́"
+
+#: gexport.php
+msgid "Click 'Continue' to disable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti sọ àwọn Ìtumọ̀ Ìkójáde Gíráfù wọ̀nyí di àìṣiṣẹ́."
+
+#: gexport.php
+msgid "Disable Graph Export Definition(s)"
+msgstr "Ṣe àìṣiṣẹ́ Ìtumọ̀ Ìkójáde Gíráfù"
+
+#: gexport.php
+msgid "Click 'Continue' to enable the following Graph Export Definition."
+msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti mú àwọn Ìtumọ̀ Ìkójáde Gíráfù wọ̀nyí ṣiṣẹ́."
+
+#: gexport.php
+msgid "Enable Graph Export Definition(s)"
+msgstr "Mú Àwọn Ìtumọ̀ Ìkójáde Gíráfù ṣiṣẹ́"
+
+#: gexport.php
+msgid "Click 'Continue' to run the following Graph Export Definition now."
+msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti ṣe àwọn Ìtumọ̀ Ìkójáde Gíráfù wọ̀nyí báyìí."
+
+#: gexport.php
+msgid "Run Graph Export Definition(s) Now"
+msgstr "Mú (Àwọn) Ìtúmọ̀ Ìkójáde Gíráfù Ṣiṣẹ́ Báyìí"
+
+#: gexport.php
+msgid "You must select a valid action."
+msgstr "O gbọ́dọ̀ yan ìṣe tó wúlò kan."
+
+#: gexport.php
+msgid "Return"
+msgstr "Padà"
+
+#: gexport.php
+msgid "You must select at least one Graph Export Definition."
+msgstr "O gbọ́dọ̀ yan ó kéré jù Ìtumọ̀ Ìkójáde Gíráfù kan."
+
+#: gexport.php
+msgid "Graph Export Definition [new]"
+msgstr "Ìtumọ̀ Ìkójáde Gíráfù [tuntun]"
+
+#: gexport.php
+#, php-format
+msgid "Graph Export Definition [edit: %s]"
+msgstr "Ìtumọ̀ Ìkójáde Gíráfù [ṣàtúnṣe: %s]"
+
+#: gexport.php
+msgid "Select Tree(s)"
+msgstr "Yan (Àwọn) Igi"
+
+#: gexport.php
+msgid "Trees Selected"
+msgstr "Àwọn Igi Tí A Yàn"
+
+#: gexport.php
+msgid "All Trees Selected"
+msgstr "Gbogbo Àwọn Igi Ti A Yàn"
+
+#: gexport.php
+msgid "All"
+msgstr "Gbogbo"
+
+#: gexport.php
+msgid "None"
+msgstr "Kò Sí"
+
+#: gexport.php
+msgid "Search"
+msgstr "Ṣàwárí"
+
+#: gexport.php
+msgid "Select Site(s)"
+msgstr "Yan (Àwọn) Ibùdó"
+
+#: gexport.php
+msgid "Sites Selected"
+msgstr "Àwọn Ibùdó Tí A Yàn"
+
+#: gexport.php
+msgid "All Sites Selected"
+msgstr "Gbogbo Àwọn Ibùdó Ti A Yàn"
+
+#: gexport.php
+msgid "Graph Export Definitions"
+msgstr "Àwọn Ìtumọ̀ Ìkójáde Gíráfù"
+
+#: gexport.php
+msgid "Exports"
+msgstr "Àwọn Ìkójáde"
+
+#: gexport.php
+msgid "Default"
+msgstr "Àìyípadà"
+
+#: gexport.php
+msgid "Refresh"
+msgstr "Sọdọ̀tun"
+
+#: gexport.php
+msgid "Never"
+msgstr "Kò ṣẹlẹ̀ rí"
+
+#: gexport.php
+#, php-format
+msgid "%d Seconds"
+msgstr "Ìṣẹ́jú-àáyá %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minute"
+msgstr "Ìṣẹ́jú %d"
+
+#: gexport.php
+#, php-format
+msgid "%d Minutes"
+msgstr "Ìṣẹ́jú %d"
+
+#: gexport.php
+msgctxt "filter: use"
+msgid "Go"
+msgstr "Lọ"
+
+#: gexport.php
+msgctxt "filter: reset"
+msgid "Clear"
+msgstr "Nu kúrò"
+
+#: gexport.php setup.php
+msgid "Export Name"
+msgstr "Orúkọ Ìkójáde"
+
+#: gexport.php setup.php
+msgid "The name of this Graph Export Definition."
+msgstr "Orúkọ Ìtumọ̀ Ìkójáde Gíráfù yìí."
+
+#: gexport.php
+msgid "ID"
+msgstr "ID"
+
+#: gexport.php
+msgid "The internal ID of the Graph Export Definition."
+msgstr "ID inú ilé ti Ìtumọ̀ Ìkójáde Gíráfù."
+
+#: gexport.php
+msgid "Schedule"
+msgstr "Ìṣètò Àkókò"
+
+#: gexport.php
+msgid "The frequency that Graphs will be exported."
+msgstr "Bí Àwọn Gíráàfù yóò ṣe máa kójáde nígbà gbogbo."
+
+#: gexport.php
+msgid "Next Start"
+msgstr "Ìbẹ̀rẹ̀ Tó Kàn"
+
+#: gexport.php
+msgid "The next time the Graph Export should run."
+msgstr "Àkókò tó kàn tí Ìkójáde Gíráfù yẹ kí ó ṣiṣẹ́."
+
+#: gexport.php setup.php
+msgid "Enabled"
+msgstr "Ṣiṣẹ́"
+
+#: gexport.php
+msgid "If enabled, this Graph Export definition will run as required."
+msgstr "Tí ó bá wà ní Ṣiṣẹ́, ìtumọ̀ Ìkójáde Gíráfù yìí yóò ṣiṣẹ́ bí a ṣe béèrè rẹ̀."
+
+#: gexport.php
+msgid "Status"
+msgstr "Ipò"
+
+#: gexport.php
+msgid "The current Graph Export Status."
+msgstr "Ipò Ìgbéjáde Gíráfù lọ́wọ́lọ́wọ́."
+
+#: gexport.php
+msgid "Exporting (Sites/Trees)"
+msgstr "Ń kó jáde (Àwọn Ibùdó/Àwọn Igi)"
+
+#: gexport.php
+msgid "What is being Exported."
+msgstr "Ohun tí a ń Kó Jáde."
+
+#: gexport.php setup.php
+msgid "Effective User"
+msgstr "Olùlò Tó Ń Ṣiṣẹ́"
+
+#: gexport.php
+msgid "The user that this export will impersonate."
+msgstr "Olùlò tí ìkójáde yìí yóò gba ipò rẹ̀."
+
+#: gexport.php
+msgid "Last Runtime"
+msgstr "Àkókò Ìṣiṣẹ́ Tó Kẹ́yìn"
+
+#: gexport.php
+msgid "The last runtime for the Graph Export."
+msgstr "Àkókò ìṣiṣẹ́ tó kẹ́yìn fún Ìkójáde Gíráfù náà."
+
+#: gexport.php
+msgid "Graphs"
+msgstr "Àwọn Gíráàfù"
+
+#: gexport.php
+msgid "The number of Graphs Exported on the last run."
+msgstr "Iye Àwọn Gíráàfù Tí A Kójáde ní ìṣiṣẹ́ tó kẹ́yìn."
+
+#: gexport.php
+msgid "Last Started"
+msgstr "Ìbẹ̀rẹ̀ Tó Kẹ́yìn"
+
+#: gexport.php
+msgid "The last time that this Graph Export was started."
+msgstr "Ìgbà tó kẹ́yìn tí a bẹ̀rẹ̀ Ìkójáde Gíráfù yìí."
+
+#: gexport.php
+msgid "Last Errored"
+msgstr "Àṣìṣe Tó Kẹ́yìn"
+
+#: gexport.php
+msgid "The last time that this Graph Export experienced an error."
+msgstr "Ìgbà tó kẹ́yìn tí Ìkójáde Gíráfù yìí ní àṣìṣe."
+
+#: gexport.php
+msgid "Export Definitions"
+msgstr "Kó Àwọn Ìtumọ̀ Jáde"
+
+#: gexport.php setup.php
+msgid "N/A"
+msgstr "Kò Sí"
+
+#: gexport.php
+msgid "No"
+msgstr "Rárá"
+
+#: gexport.php
+msgid "Yes"
+msgstr "Bẹ́ẹ̀ Ni"
+
+#: gexport.php
+msgid "Idle"
+msgstr "Ní ìsinmi"
+
+#: gexport.php
+msgid "Running"
+msgstr "Ń ṣiṣẹ́"
+
+#: gexport.php
+msgid "Error"
+msgstr "Àṣìṣe"
+
+#: gexport.php
+msgid "All Sites"
+msgstr "Gbogbo Àwọn Ibùdó"
+
+#: gexport.php
+msgid "All Trees"
+msgstr "Gbogbo Àwọn Igi"
+
+#: gexport.php
+msgid "Sec"
+msgstr "Ìṣẹ́jú-àáyá"
+
+#: gexport.php
+msgid "No Graph Export Definitions"
+msgstr "Kò sí Àwọn Ìtumọ̀ Ìkójáde Gíráfù"
+
+#: includes/functions.php
+msgid "Success"
+msgstr "Àṣeyọrí"
+
+#: includes/functions.php
+msgid "Syntax or usage error"
+msgstr "Àṣìṣe ìtò-ọ̀rọ̀ tàbí ìlò"
+
+#: includes/functions.php
+msgid "Protocol incompatibility"
+msgstr "Àìbáramu ìlànà"
+
+#: includes/functions.php
+msgid "Errors selecting input/output files, dirs"
+msgstr "Àwọn àṣìṣe ní yíyan àwọn fáìlì àtẹ̀wọlé/àtẹ̀jáde, àwọn fódà"
+
+#: includes/functions.php
+msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+msgstr "Ìgbésẹ̀ tí a béèrè kò ní àtìlẹ́yìn: ìgbìyànjú wáyé láti ṣiṣẹ́ lórí àwọn fáìlì 64-bit lórí pẹpẹ tí kò lè gbé wọn; tàbí a yan àṣàyàn kan tí olùlò ṣe àtìlẹ́yìn fún ṣùgbọ́n tí olùpèsè kò ṣe àtìlẹ́yìn fún."
+
+#: includes/functions.php
+msgid "Error starting client-server protocol"
+msgstr "Àṣìṣe ní bíbẹ̀rẹ̀ ìlànà oníbàárà-olùpèsè"
+
+#: includes/functions.php
+msgid "Daemon unable to append to log-file"
+msgstr "Daemon kò lè fi kún fáìlì àkọsílẹ̀"
+
+#: includes/functions.php
+msgid "Error in socket I/O"
+msgstr "Àṣìṣe nínú I/O sọ́kẹ́ẹ̀tì"
+
+#: includes/functions.php
+msgid "Error in file I/O"
+msgstr "Àṣìṣe nínú I/O fáìlì"
+
+#: includes/functions.php
+msgid "Error in rsync protocol data stream"
+msgstr "Àṣìṣe nínú ìṣàn dátà ìlànà rsync"
+
+#: includes/functions.php
+msgid "Errors with program diagnostics"
+msgstr "Àwọn àṣìṣe pẹ̀lú àyẹ̀wò ìṣòro ètò"
+
+#: includes/functions.php
+msgid "Error in IPC code"
+msgstr "Àṣìṣe nínú kóòdù IPC"
+
+#: includes/functions.php
+msgid "Received SIGUSR1 or SIGINT"
+msgstr "A gba SIGUSR1 tàbí SIGINT"
+
+#: includes/functions.php
+msgid "Some error returned by waitpid()"
+msgstr "Àṣìṣe kan tí waitpid() dá padà"
+
+#: includes/functions.php
+msgid "Error allocating core memory buffers"
+msgstr "Àṣìṣe nígbà pípín àwọn ibùdó ìrántí kókó"
+
+#: includes/functions.php
+msgid "Partial transfer due to error"
+msgstr "Ìfiránṣẹ́ apá kan nítorí àṣìṣe"
+
+#: includes/functions.php
+msgid "Partial transfer due to vanished source files"
+msgstr "Ìfiránṣẹ́ apá kan nítorí àwọn fáìlì orísun tí ó ti pòórá"
+
+#: includes/functions.php
+msgid "The --max-delete limit stopped deletions"
+msgstr "Òpin --max-delete dá àwọn ìparẹ́ dúró"
+
+#: includes/functions.php
+msgid "Timeout in data send/receive"
+msgstr "Ìparí àkókò nínú fífiránṣẹ́/gbígba dátà"
+
+#: includes/functions.php
+msgid "Timeout waiting for daemon connection"
+msgstr "Ìparí àkókò nígbà tí a ń dúró de ìsopọ̀ daemon"
+
+#: includes/functions.php
+msgid "Unknown error "
+msgstr "Àṣìṣe àìmọ̀ "
+
+#: includes/functions.php
+msgid "Operation was successful"
+msgstr "Iṣẹ́ náà yọrí sí rere"
+
+#: includes/functions.php
+msgid "General error in file copy"
+msgstr "Àṣìṣe gbogbogbòò nínú dídà fáìlì"
+
+#: includes/functions.php
+msgid "Destination is not directory, but it should be"
+msgstr "Àfojúsùn kì í ṣe àpò-ìpamọ́, ṣùgbọ́n ó yẹ kí ó jẹ́ bẹ́ẹ̀"
+
+#: includes/functions.php
+msgid "Maximum symlink level exceeded"
+msgstr "Ìpele ìsopọ̀ àmì (symlink) tó pọ̀ jù lọ ti kọjá"
+
+#: includes/functions.php
+msgid "Connecting to host failed."
+msgstr "Ìsopọ̀ mọ́ olùgbàlejò kùnà."
+
+#: includes/functions.php
+msgid "Connection broken"
+msgstr "Ìsopọ̀ já"
+
+#: includes/functions.php
+msgid "File does not exist"
+msgstr "Fáìlì náà kò sí"
+
+#: includes/functions.php
+msgid "No permission to access file."
+msgstr "Kò sí àṣẹ láti wọ fáìlì."
+
+#: includes/functions.php
+msgid "General error in sftp protocol"
+msgstr "Àṣìṣe gbogbogbòò nínú ìlànà sftp"
+
+#: includes/functions.php
+msgid "File transfer protocol mismatch"
+msgstr "Àìbáramu ìlànà ìfìránṣẹ́ fáìlì"
+
+#: includes/functions.php
+msgid "No file matches a given criteria"
+msgstr "Kò sí fáìlì tí ó bá àwọn ìlànà tí a fúnni mu"
+
+#: includes/functions.php
+msgid "Host not allowed to connect"
+msgstr "A kò gba olùgbàlejò láyè láti sopọ̀"
+
+#: includes/functions.php
+msgid "General error in ssh protocol"
+msgstr "Àṣìṣe gbogbogbòò nínú ìlànà ssh"
+
+#: includes/functions.php
+msgid "Key exchange failed"
+msgstr "Pàṣípààrọ̀ kọ́kọ́rọ́ kùnà"
+
+#: includes/functions.php
+msgid "Reserved"
+msgstr "Tí A Ya Sọ́tọ̀"
+
+#: includes/functions.php
+msgid "MAC error"
+msgstr "Àṣìṣe MAC"
+
+#: includes/functions.php
+msgid "Compression error"
+msgstr "Àṣìṣe ìfúnpọ̀"
+
+#: includes/functions.php
+msgid "Service not available"
+msgstr "Iṣẹ́ kò sí nílẹ̀"
+
+#: includes/functions.php
+msgid "Protocol version not supported"
+msgstr "Ẹ̀yà ìlànà kò ní àtìlẹ́yìn"
+
+#: includes/functions.php
+msgid "Host key not verifiable"
+msgstr "Kò ṣeé rí i dájú pé kọ́kọ́rọ́ olùgbàlejò jẹ́ òótọ́"
+
+#: includes/functions.php
+msgid "Connection failed"
+msgstr "Ìsopọ̀ kùnà"
+
+#: includes/functions.php
+msgid "Disconnected by application"
+msgstr "Ìṣàkóso ohun èlò ti gé ìsopọ̀"
+
+#: includes/functions.php
+msgid "Too many connections"
+msgstr "Àwọn ìsopọ̀ pọ̀ jù"
+
+#: includes/functions.php
+msgid "Authentication cancelled by user"
+msgstr "Olùlò ti fagilé ìdánimọ̀"
+
+#: includes/functions.php
+msgid "No more authentication methods available"
+msgstr "Kò sí àwọn ọ̀nà ìfìdímúlẹ̀ mìíràn tí ó wà mọ́"
+
+#: includes/functions.php
+msgid "Invalid user name"
+msgstr "Orúkọ olùlò tí kò tọ́"
+
+#: includes/functions.php
+msgid "Non Query Based"
+msgstr "Kì Í Ṣe Tí Ó Dá Lórí Ìbéèrè"
+
+#: includes/functions.php
+msgid "Graph Templates"
+msgstr "Àwọn Àdàkọ Gíráfù"
+
+#: includes/functions.php
+msgid "Data Queries"
+msgstr "Àwọn Ìbéèrè Dátà"
+
+#: setup.php
+msgid "Export Cacti Graphs Settings"
+msgstr "Kó Àwọn Ètò Àwọn Gíráàfù Cacti Jáde"
+
+#: setup.php
+msgid "Graph Exports"
+msgstr "Àwọn Ìkójáde Gíráfù"
+
+#: setup.php
+msgid "Utilities"
+msgstr "Àwọn Ohun-èlò"
+
+#: setup.php
+msgid "General Administration"
+msgstr "Ìṣàkóso Gbogbogbòò"
+
+#: setup.php
+msgid "General"
+msgstr "Gbogbogbò"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
+msgstr "Fi àmì sí Àpótí Àyẹ̀wò yìí tí o bá fẹ́ kí Ìtúmọ̀ Ìkójáde Gíráfù yìí wà ní Ṣiṣẹ́."
+
+#: setup.php
+msgid "Export Method"
+msgstr "Ọ̀nà Ìkójáde"
+
+#: setup.php
+msgid "Choose which export method to use."
+msgstr "Yan ọ̀nà ìfijáde tí o fẹ́ lò."
+
+#: setup.php
+msgid "Local"
+msgstr "Abẹ́lé"
+
+#: setup.php
+msgid "FTP"
+msgstr "FTP"
+
+#: setup.php
+msgid "SFTP"
+msgstr "SFTP"
+
+#: setup.php
+msgid "FTP NC"
+msgstr "FTP NC"
+
+#: setup.php
+msgid "SCP"
+msgstr "SCP"
+
+#: setup.php
+msgid "RSYNC"
+msgstr "RSYNC"
+
+#: setup.php
+msgid "Export Command Arguments"
+msgstr "Kó Àwọn Àríyànjiyàn Àṣẹ Jáde"
+
+#: setup.php
+msgid "Arguments to use with non-local export methods. rsync should use "
+msgstr "Àwọn àríyànjiyàn láti lò pẹ̀lú àwọn ọ̀nà ìkójáde tí kì í ṣe ti abẹ́lé. rsync yẹ kí ó lo "
+
+#: setup.php
+msgid "Theme"
+msgstr "Àwòrán Ìrísí"
+
+#: setup.php
+msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
+msgstr "Jọ̀wọ́ yan ọ̀kan lára àwọn Àkòrí tó wà láti fi ṣe àwọ̀ fún Àwọn Ìkójáde Gíráfù Cacti rẹ."
+
+#: setup.php
+msgid "Presentation Method"
+msgstr "Ọ̀nà Ìfihàn"
+
+#: setup.php
+msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
+msgstr "Yan ìfihàn tí o fẹ́ fún àwọn ojú-ìwé html tí a ṣẹ̀dá. Tí o bá yan ìfihàn àtijọ́; Àwọn Gíráàfù yóò wà nínú ojú-ìwé html kan ṣoṣo. Tí o bá yan ìfihàn igi, ìṣètò Igi Gíráfù yóò wà ní ìpamọ́ nínú àwọn ojú-ìwé html aláìyípadà"
+
+#: setup.php
+msgid "Site"
+msgstr "Ibùdó"
+
+#: setup.php
+msgid "Tree"
+msgstr "Igi"
+
+#: setup.php
+msgid "Export Timing"
+msgstr "Àkókò Ìkójáde"
+
+#: setup.php
+msgid "Timing Method"
+msgstr "Ọ̀nà Ìṣirò Àkókò"
+
+#: setup.php
+msgid "Choose when to Export Graphs."
+msgstr "Yan ìgbà tí o fẹ́ fi Àwọn Gíráàfù jáde."
+
+#: setup.php
+msgid "Periodic Export Cycle"
+msgstr "Ìyípo Ìgbéjáde Lóòrèkóòrè"
+
+#: setup.php
+msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
+msgstr "Ìgbà mélòó ni o fẹ́ kí Cacti máa Kó Àwọn Gíráàfù Jáde.  Èyí ni iye Àwọn Yípo Ìṣàyẹ̀wò tí o fẹ́ máa kó Àwọn Gíráàfù jáde."
+
+#: setup.php
+msgid "Every Polling Cycle"
+msgstr "Gbogbo Ìyípo Ìṣàyẹ̀wò"
+
+#: setup.php
+#, php-format
+msgid "Every %d Polling Cycles"
+msgstr "Ní Gbogbo Ìyípo Ìṣàyẹ̀wò %d"
+
+#: setup.php
+msgid "Hourly at specified minutes"
+msgstr "Lóòrèkóòrè ní wákàtí ní ìṣẹ́jú tí a sọ"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
+msgstr "Tí o bá fẹ́ kí Cacti máa kó àwọn àwòrán tí kò yípadà jáde ní wákàtí kọ̀ọ̀kan, fi ìṣẹ́jú wákàtí náà síbí nígbà tí a óò ṣe é. Cacti gbà pé o ń ṣiṣẹ́ àkọsílẹ̀ àṣẹ ìkójọpọ̀ dátà ní ìṣẹ́jú 5 kọ̀ọ̀kan, nítorí náà yóò ṣàtúnṣe iye rẹ sí èyí tí ó súnmọ́ àkókò ìṣiṣẹ́ rẹ̀ jùlọ. Fún àpẹẹrẹ, 43 yóò dọ́gba pẹ̀lú ìṣẹ́jú 40 kọjá wákàtí náà."
+
+#: setup.php
+msgid "Daily at specified time"
+msgstr "Lójoojúmọ́ ní àkókò tí a sọ"
+
+#: setup.php
+msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
+msgstr "Tí o bá fẹ́ kí Cacti máa kó àwọn àwòrán tí kò yípadà jáde lójoojúmọ́, fi àkókò láti ṣe é síbí. Cacti gbà pé o ń ṣiṣẹ́ àkọsílẹ̀ àṣẹ ìkójọpọ̀ dátà ní ìṣẹ́jú 5 kọ̀ọ̀kan, nítorí náà yóò ṣàtúnṣe iye rẹ sí èyí tí ó súnmọ́ àkókò ìṣiṣẹ́ rẹ̀ jùlọ. Fún àpẹẹrẹ, 21:23 yóò dọ́gba pẹ̀lú ìṣẹ́jú 20 lẹ́yìn aago mẹ́sàn-án alẹ́."
+
+#: setup.php
+msgid "Use x Threads"
+msgstr "Lo àwọn òwú ìṣiṣẹ́ x"
+
+#: setup.php
+msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
+msgstr "Àwọn okùn ìṣiṣẹ́ abẹ́lẹ̀ mélòó ni o fẹ́ kí Cacti lò nígbà tí ó bá ń gbé àwọn gíráàfù jáde.  Àìyípadà ni 0 láti ṣe gbogbo ìgbéjáde nínú okùn olùṣàyẹ̀wò, 1 tàbí jù bẹ́ẹ̀ lọ láti ṣẹ̀dá àwọn okùn ìṣiṣẹ́ abẹ́lẹ̀ ọ̀tọ̀ọ̀tọ̀"
+
+#: setup.php
+msgid "Graph Selection & Settings"
+msgstr "Yíyan Gíráfù & Àwọn Ètò"
+
+#: setup.php
+msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
+msgstr "Orúkọ Olùlò láti lò fún ṣíṣètò ìyọ̀ǹda sí Àwọn Gíráàfù Cacti. Orúkọ Olùlò yìí ni a ó lò láti pinnu irú Àwọn Gíráàfù/Igi tí a lè kó jáde. N/A túmọ̀ sí má ṣe rò pé ààbò kankan wà níbẹ̀."
+
+#: setup.php
+msgid "The Tree(s) to export."
+msgstr "Igi (tàbí Àwọn Igi) láti gbé jáde."
+
+#: setup.php
+msgid "Expand Devices/Sites"
+msgstr "Fẹ Àwọn Ẹ̀rọ/Àwọn Ibùdó"
+
+#: setup.php
+msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
+msgstr "Ètò yìí pinnu bóyá Àwọn Ẹ̀rọ Igi àti Àwọn Àdàkọ Ibùdó àti Àwọn Ẹ̀rọ yóò fẹ̀ sí i tàbí bẹ́ẹ̀ kọ́. Tí a bá ṣètò sí fífẹ̀ sí i, olùgbàlejò kọ̀ọ̀kan yóò ní àkójọ-fáìlì abẹ́ kan tí ó ní yálà Àwọn Àdàkọ Gíráfù tàbí àwọn ohun Ìbéèrè Dátà."
+
+#: setup.php
+msgid "Off"
+msgstr "Pa"
+
+#: setup.php
+msgid "On"
+msgstr "Tàn"
+
+#: setup.php
+msgid "The Site for Cacti Graphs to be Exported from."
+msgstr "Ibùdó tí a óò ti gbé Àwọn Gíráàfù Cacti jáde."
+
+#: setup.php
+msgid "Graph Thumbnail Width"
+msgstr "Fífẹ̀ Àwòrán Kékeré Gíráfù"
+
+#: setup.php
+msgid "The default width of Thumbnail Graphs in pixels."
+msgstr "Ìbú àìyípadà ti Àwọn Gíráàfù Àwòrán Kékeré ní pixels."
+
+#: setup.php
+msgid "Graph Thumbnail Height"
+msgstr "Gíga Àwòrán Kékeré Gíráfù"
+
+#: setup.php
+msgid "The height of Thumbnail Graphs in pixels."
+msgstr "Gíga Àwọn Gíráàfù Àwòrán Kékeré ní pixels."
+
+#: setup.php
+msgid "Default View Thumbnails"
+msgstr "Àwọn Àwòrán Kékeré Ìwò Àìyípadà"
+
+#: setup.php
+msgid "Check this if you want the default Graph View to be in Thumbnail mode."
+msgstr "Fi àmì sí èyí tí o bá fẹ́ kí Ìwò Gíráfù àìyípadà wà ní ipò àwòrán kékeré."
+
+#: setup.php
+msgid "Default Graph Columns"
+msgstr "Àwọn Òpó Gíráfù Àìyípadà"
+
+#: setup.php
+msgid "The number of columns to use by default when displaying Graphs."
+msgstr "Iye àwọn ọ̀wọ̀n láti lò ní àìyípadà nígbà tí a bá ń fi Àwọn Gíráàfù hàn."
+
+#: setup.php
+msgid "Graphs Per Page"
+msgstr "Àwọn Gíráàfù Kọ̀ọ̀kan Ojú-ewé"
+
+#: setup.php
+msgid "Choose the number of Graphs Per Page to display."
+msgstr "Yan iye Àwọn Gíráàfù Lórí Ojú-ìwé Kọ̀ọ̀kan láti fi hàn."
+
+#: setup.php
+msgid "Maximum Graphs to Export"
+msgstr "Àwọn Gíráàfù Tó Pọ̀ Jù Lọ Láti Kó Jáde"
+
+#: setup.php
+msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
+msgstr "Lẹ́yìn tí a bá dé iye yìí, àṣìṣe kan yóò ṣẹlẹ̀, ṣùgbọ́n fífi jáde yóò máa tẹ̀síwájú.  Ṣètò sí 0 fún àìsí àlà."
+
+#: setup.php
+msgid "Export Location Information"
+msgstr "Kó Ìwífún Ibùdó Jáde"
+
+#: setup.php
+msgid "Export Thumbnails"
+msgstr "Kó Àwọn Àwòrán Kékeré jáde"
+
+#: setup.php
+msgid "Check this if you want the export thumbnails mode."
+msgstr "Fi àmì sí èyí tí o bá fẹ́ ipò àwòrán kékeré ìkójáde."
+
+#: setup.php
+msgid "Clear Directory"
+msgstr "Nu Àpótí-ìtọ́jú Mọ́"
+
+#: setup.php
+msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
+msgstr "Fi àmì sí Àpótí Àyẹ̀wò yìí tí o bá fẹ́ kí Ìkójáde Gíráfù yìí fọ àpò-ìpamọ́ ìkẹyìn rẹ́ ṣáájú kíkún un."
+
+#: setup.php
+msgid "Export Directory"
+msgstr "Fódà Ìkójáde"
+
+#: setup.php
+msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
+msgstr "Èyí ni fódà, yálà lórí ètò abẹ́lé tàbí lórí ètò jíjìn, tí yóò ní dátà tí a kó jáde nínú."
+
+#: setup.php
+msgid "Local Scratch Directory"
+msgstr "Àpò Ìpamọ́ Ìgbàdíẹ̀ Abẹ́lé"
+
+#: setup.php
+msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
+msgstr "Èyí ni fódà tí Cacti yóò fi àbájáde pamọ́ fún ìgbà díẹ̀ ṣáájú kí ó tó fi ránṣẹ́ sí ibùdó jíjìn nípasẹ̀ ọ̀nà ìgbésẹ̀ ìfìránṣẹ́. A ó pa àwọn ohun inú fódà yìí rẹ́ lẹ́yìn tí a bá ti gbé dátà náà lọ."
+
+#: setup.php
+msgid "Remote Options"
+msgstr "Àwọn Àṣàyàn Òkèèrè"
+
+#: setup.php
+msgid "Sanitize remote directory"
+msgstr "Mú àpò ìpamọ́ òkèèrè mọ́"
+
+#: setup.php
+msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
+msgstr "Fi àmì sí èyí tí o bá fẹ́ pa èyíkéyìí nínú àwọn fáìlì tí ó wà nínú àpò-ìpamọ́ FTP òkèèrè rẹ́. Àṣàyàn yìí ń ṣiṣẹ́ nìkan nígbà tí o bá ń lo àwọn iṣẹ́ ftp tí a kọ́ sínú PHP."
+
+#: setup.php
+msgid "Remote Host"
+msgstr "Olùgbàlejò Òkèèrè"
+
+#: setup.php
+msgid "Denotes the host to send Exported Graphs to."
+msgstr "Ń tọ́ka sí olùgbàlejò tí a ó fi Àwọn Gíráàfù Tí A Kó Jáde ránṣẹ́ sí."
+
+#: setup.php
+msgid "Remote Port"
+msgstr "Ibùdó Àsopọ̀ Òkèèrè"
+
+#: setup.php
+msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
+msgstr "Ibùdó ìbánisọ̀rọ̀ láti lò fún ọ̀nà ìkójáde bí kò bá jẹ́ ti ìlànà gbogbogbòò (fi sílẹ̀ ní òfo fún àwọn àìyípadà)."
+
+#: setup.php
+msgid "Use passive mode"
+msgstr "Lo ipò passive"
+
+#: setup.php
+msgid "Check this if you want to connect in passive mode to the FTP server."
+msgstr "Fi àmì sí èyí tí o bá fẹ́ láti so mọ́ olùpèsè FTP ní ipò passive."
+
+#: setup.php
+msgid "User"
+msgstr "Olùlò"
+
+#: setup.php
+msgid "Account to logon on the remote server (leave empty for defaults)."
+msgstr "Àkọọ́lẹ̀ láti wọlé sí orí ẹ̀rọ olùpèsè òkèèrè (fi sílẹ̀ ní òfo fún àwọn àkọ́kọ́ṣe)."
+
+#: setup.php
+msgid "Password"
+msgstr "Ọ̀rọ̀ Aṣínà"
+
+#: setup.php
+msgid "Password for the remote ftp account (leave empty for blank)."
+msgstr "Ọ̀rọ̀ aṣínà fún àkọọ́lẹ̀ ftp òkèèrè (fi sílẹ̀ ní òfo fún àìsí)."
+
+#: setup.php
+msgid "Private Key Path"
+msgstr "Ọ̀nà Kọ́kọ́rọ́ Àdáni"
+
+#: setup.php
+msgid "For SCP and RSYNC, enter the Private Key path if required."
+msgstr "Fún SCP àti RSYNC, tẹ ipa-ọ̀nà Kọ́kọ́rọ́ Àdáni sí i tí ó bá pọn dandan."
+
+#: setup.php
+msgid "Exported Cacti Graph Pages"
+msgstr "Àwọn Ojú-ewé Gíráfù Cacti Tí a Kó jáde"
+
+#: setup.php
+msgid "(Edit)"
+msgstr "(Ṣàtúnṣe)"
+
+#: setup.php
+msgid "Actions"
+msgstr "Àwọn Ìgbésẹ̀"
+
