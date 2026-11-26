@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: Cacti\n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-07 16:13-0400\n"
-"PO-Revision-Date: 2025-09-23 05:09+0000\n"
-"Last-Translator: Ekaterine papava <papava.e@gtu.ge>\n"
-"Language-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\n"
-"Language: ka-GE\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: Cacti\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Georgian <https://translate.cacti.net/projects/cacti/gexport/ka/>\nLanguage: ka-GE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -49,8 +37,8 @@ msgstr "საათში ერთხელ"
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრების წასაშლელად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრებების წასაშლელად."
 
 #: gexport.php
 msgid "Cancel"
@@ -61,44 +49,42 @@ msgid "Continue"
 msgstr "გაგრძელება"
 
 #: gexport.php
-#, fuzzy
-#| msgid "Graph Export Definitions"
 msgid "Delete Graph Export Definition(s)"
-msgstr "გრაფიკის გატანის აღწერები"
+msgstr "გრაფიკის გატანის აღწერ(ებ)ის წაშლა"
 
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრების გამოსართავად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრებების გამოსართავად."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრებ(ებ)ის გამორთვა"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრების ჩასართავად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრებების ჩასართავად."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრებ(ებ)ის ჩართვა"
 
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრების ახლა გასაშვებად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება'-ზე შემდეგი გრაფიკების ექსპორტის განსაზღვრებების ახლა გასაშვებად."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრებ(ებ)ის ახლა გაშვება"
 
 #: gexport.php
 msgid "You must select a valid action."
-msgstr ""
+msgstr "უნდა აირჩიოთ სწორი მოქმედება."
 
 #: gexport.php
 msgid "Return"
@@ -106,16 +92,16 @@ msgstr "დაბრუნება"
 
 #: gexport.php
 msgid "You must select at least one Graph Export Definition."
-msgstr ""
+msgstr "უნდა აირჩიოთ გრაფიკების ექსპორტის ერთი განსაზღვრება მაინც."
 
 #: gexport.php
 msgid "Graph Export Definition [new]"
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრება [ახალი]"
 
 #: gexport.php
 #, php-format
 msgid "Graph Export Definition [edit: %s]"
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრება [რედაქტირება: %s]"
 
 #: gexport.php
 msgid "Select Tree(s)"
@@ -204,7 +190,7 @@ msgstr "გატანის სახელი"
 
 #: gexport.php setup.php
 msgid "The name of this Graph Export Definition."
-msgstr ""
+msgstr "გრაფიკების ექსპორტის ამ განსაზღვრების სახელი."
 
 #: gexport.php
 msgid "ID"
@@ -212,7 +198,7 @@ msgstr "ID"
 
 #: gexport.php
 msgid "The internal ID of the Graph Export Definition."
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრების შიდა ID."
 
 #: gexport.php
 msgid "Schedule"
@@ -220,7 +206,7 @@ msgstr "გეგმა"
 
 #: gexport.php
 msgid "The frequency that Graphs will be exported."
-msgstr ""
+msgstr "გრაფიკების ექსპორტის სიხშირე."
 
 #: gexport.php
 msgid "Next Start"
@@ -228,7 +214,7 @@ msgstr "შემდეგი დაწყება"
 
 #: gexport.php
 msgid "The next time the Graph Export should run."
-msgstr ""
+msgstr "დრო, როდესაც გრაფიკების ექსპორტი შემდეგ ჯერზე უნდა გაეშვას."
 
 #: gexport.php setup.php
 msgid "Enabled"
@@ -236,7 +222,7 @@ msgstr "ჩართულია"
 
 #: gexport.php
 msgid "If enabled, this Graph Export definition will run as required."
-msgstr ""
+msgstr "თუ ჩართულია, გრაფიკების ექსპორტის ეს განსაზღვრება საჭიროებისამებრ გაეშვება."
 
 #: gexport.php
 msgid "Status"
@@ -244,7 +230,7 @@ msgstr "სტატუსი"
 
 #: gexport.php
 msgid "The current Graph Export Status."
-msgstr ""
+msgstr "გრაფიკების ექსპორტის მიმდინარე სტატუსი."
 
 #: gexport.php
 msgid "Exporting (Sites/Trees)"
@@ -252,7 +238,7 @@ msgstr "გატანა (საიტები/ხეები)"
 
 #: gexport.php
 msgid "What is being Exported."
-msgstr ""
+msgstr "რა ექსპორტირდება."
 
 #: gexport.php setup.php
 msgid "Effective User"
@@ -260,7 +246,7 @@ msgstr "ეფექტური მომხმარებელი"
 
 #: gexport.php
 msgid "The user that this export will impersonate."
-msgstr ""
+msgstr "მომხმარებელი, რომლის სახელითაც შესრულდება ეს ექსპორტი."
 
 #: gexport.php
 msgid "Last Runtime"
@@ -268,7 +254,7 @@ msgstr "ბოლო გაშვების დრო"
 
 #: gexport.php
 msgid "The last runtime for the Graph Export."
-msgstr ""
+msgstr "გრაფიკების ექსპორტის ბოლო შესრულების ხანგრძლივობა."
 
 #: gexport.php
 msgid "Graphs"
@@ -276,7 +262,7 @@ msgstr "გრაფიკები"
 
 #: gexport.php
 msgid "The number of Graphs Exported on the last run."
-msgstr ""
+msgstr "ბოლო გაშვებისას ექსპორტირებული გრაფიკების რაოდენობა."
 
 #: gexport.php
 msgid "Last Started"
@@ -284,7 +270,7 @@ msgstr "ბოლო დაწყება"
 
 #: gexport.php
 msgid "The last time that this Graph Export was started."
-msgstr ""
+msgstr "დრო, როდესაც გრაფიკების ეს ექსპორტი ბოლოს გაეშვა."
 
 #: gexport.php
 msgid "Last Errored"
@@ -292,7 +278,7 @@ msgstr "ბოლო შეცდომა"
 
 #: gexport.php
 msgid "The last time that this Graph Export experienced an error."
-msgstr ""
+msgstr "დრო, როდესაც გრაფიკების ამ ექსპორტში ბოლოს შეცდომა დაფიქსირდა."
 
 #: gexport.php
 msgid "Export Definitions"
@@ -308,7 +294,7 @@ msgstr "არა"
 
 #: gexport.php
 msgid "Yes"
-msgstr "კი"
+msgstr "დიახ"
 
 #: gexport.php
 msgid "Idle"
@@ -336,7 +322,7 @@ msgstr "წმ"
 
 #: gexport.php
 msgid "No Graph Export Definitions"
-msgstr ""
+msgstr "გრაფიკების ექსპორტის განსაზღვრებები არ არის"
 
 #: includes/functions.php
 msgid "Success"
@@ -344,7 +330,7 @@ msgstr "წარმატებულია"
 
 #: includes/functions.php
 msgid "Syntax or usage error"
-msgstr ""
+msgstr "სინტაქსის ან გამოყენების შეცდომა"
 
 #: includes/functions.php
 msgid "Protocol incompatibility"
@@ -352,71 +338,71 @@ msgstr "პროტოკოლის შეუთავსებლობა"
 
 #: includes/functions.php
 msgid "Errors selecting input/output files, dirs"
-msgstr ""
+msgstr "შეცდომები შეყვანის/გამოყვანის ფაილებისა და საქაღალდეების არჩევისას"
 
 #: includes/functions.php
 msgid "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
-msgstr ""
+msgstr "მოთხოვნილი მოქმედება მხარდაჭერილი არ არის: მოხდა 64-ბიტიან ფაილებთან მუშაობის მცდელობა პლატფორმაზე, რომელსაც მათი მხარდაჭერა არ აქვს; ან მითითებულია პარამეტრი, რომელიც მხარდაჭერილია კლიენტის მიერ, მაგრამ არა სერვერის მიერ."
 
 #: includes/functions.php
 msgid "Error starting client-server protocol"
-msgstr ""
+msgstr "კლიენტ-სერვერის პროტოკოლის გაშვების შეცდომა"
 
 #: includes/functions.php
 msgid "Daemon unable to append to log-file"
-msgstr ""
+msgstr "დემონმა ვერ დაამატა ჩანაწერი ჟურნალის ფაილში"
 
 #: includes/functions.php
 msgid "Error in socket I/O"
-msgstr ""
+msgstr "შეცდომა სოკეტის I/O-ში"
 
 #: includes/functions.php
 msgid "Error in file I/O"
-msgstr ""
+msgstr "შეცდომა ფაილის I/O-ში"
 
 #: includes/functions.php
 msgid "Error in rsync protocol data stream"
-msgstr ""
+msgstr "შეცდომა rsync პროტოკოლის მონაცემთა ნაკადში"
 
 #: includes/functions.php
 msgid "Errors with program diagnostics"
-msgstr ""
+msgstr "შეცდომები პროგრამის დიაგნოსტიკაში"
 
 #: includes/functions.php
 msgid "Error in IPC code"
-msgstr ""
+msgstr "შეცდომა IPC კოდში"
 
 #: includes/functions.php
 msgid "Received SIGUSR1 or SIGINT"
-msgstr ""
+msgstr "მიღებულია SIGUSR1 ან SIGINT"
 
 #: includes/functions.php
 msgid "Some error returned by waitpid()"
-msgstr ""
+msgstr "waitpid()-მა დააბრუნა შეცდომა"
 
 #: includes/functions.php
 msgid "Error allocating core memory buffers"
-msgstr ""
+msgstr "შეცდომა ძირითადი მეხსიერების ბუფერების გამოყოფისას"
 
 #: includes/functions.php
 msgid "Partial transfer due to error"
-msgstr ""
+msgstr "ნაწილობრივი გადაცემა შეცდომის გამო"
 
 #: includes/functions.php
 msgid "Partial transfer due to vanished source files"
-msgstr ""
+msgstr "ნაწილობრივი გადაცემა გამქრალი წყაროს ფაილების გამო"
 
 #: includes/functions.php
 msgid "The --max-delete limit stopped deletions"
-msgstr ""
+msgstr "--max-delete ლიმიტმა შეაჩერა წაშლა"
 
 #: includes/functions.php
 msgid "Timeout in data send/receive"
-msgstr ""
+msgstr "მოლოდინის დრო ამოიწურა მონაცემთა გაგზავნა/მიღებისას"
 
 #: includes/functions.php
 msgid "Timeout waiting for daemon connection"
-msgstr ""
+msgstr "დემონთან დაკავშირების მოლოდინის დრო ამოიწურა"
 
 #: includes/functions.php
 msgid "Unknown error "
@@ -424,23 +410,23 @@ msgstr "უცნობი შეცდომა "
 
 #: includes/functions.php
 msgid "Operation was successful"
-msgstr ""
+msgstr "ოპერაცია წარმატებით დასრულდა"
 
 #: includes/functions.php
 msgid "General error in file copy"
-msgstr ""
+msgstr "ზოგადი შეცდომა ფაილის კოპირებისას"
 
 #: includes/functions.php
 msgid "Destination is not directory, but it should be"
-msgstr ""
+msgstr "დანიშნულების ადგილი არ არის დირექტორია, თუმცა უნდა იყოს"
 
 #: includes/functions.php
 msgid "Maximum symlink level exceeded"
-msgstr ""
+msgstr "გადაჭარბებულია სიმბოლური ბმულების მაქსიმალური დონე"
 
 #: includes/functions.php
 msgid "Connecting to host failed."
-msgstr ""
+msgstr "ჰოსტთან დაკავშირება ვერ მოხერხდა."
 
 #: includes/functions.php
 msgid "Connection broken"
@@ -448,31 +434,31 @@ msgstr "კავშირი გაფუჭებულია"
 
 #: includes/functions.php
 msgid "File does not exist"
-msgstr ""
+msgstr "ფაილი არ არსებობს"
 
 #: includes/functions.php
 msgid "No permission to access file."
-msgstr ""
+msgstr "ფაილზე წვდომის უფლება არ გაქვთ."
 
 #: includes/functions.php
 msgid "General error in sftp protocol"
-msgstr ""
+msgstr "ზოგადი შეცდომა sftp პროტოკოლში"
 
 #: includes/functions.php
 msgid "File transfer protocol mismatch"
-msgstr ""
+msgstr "ფაილის გადაცემის პროტოკოლის შეუსაბამობა"
 
 #: includes/functions.php
 msgid "No file matches a given criteria"
-msgstr ""
+msgstr "მოცემულ კრიტერიუმებს არცერთი ფაილი არ შეესაბამება"
 
 #: includes/functions.php
 msgid "Host not allowed to connect"
-msgstr ""
+msgstr "ჰოსტს დაკავშირების უფლება არ აქვს"
 
 #: includes/functions.php
 msgid "General error in ssh protocol"
-msgstr ""
+msgstr "ზოგადი შეცდომა ssh პროტოკოლში"
 
 #: includes/functions.php
 msgid "Key exchange failed"
@@ -496,11 +482,11 @@ msgstr "სერვისი ხელმისაწვდომი არა�
 
 #: includes/functions.php
 msgid "Protocol version not supported"
-msgstr ""
+msgstr "პროტოკოლის ვერსია მხარდაჭერილი არ არის"
 
 #: includes/functions.php
 msgid "Host key not verifiable"
-msgstr ""
+msgstr "ჰოსტის გასაღების გადამოწმება ვერ მოხერხდა"
 
 #: includes/functions.php
 msgid "Connection failed"
@@ -516,15 +502,15 @@ msgstr "მეტისმეტად ბევრი მიერთება"
 
 #: includes/functions.php
 msgid "Authentication cancelled by user"
-msgstr ""
+msgstr "ავთენტიფიკაცია გაუქმდა მომხმარებლის მიერ"
 
 #: includes/functions.php
 msgid "No more authentication methods available"
-msgstr ""
+msgstr "ავთენტიფიკაციის სხვა მეთოდები აღარ არის ხელმისაწვდომი"
 
 #: includes/functions.php
 msgid "Invalid user name"
-msgstr ""
+msgstr "მომხმარებლის სახელი არასწორია"
 
 #: includes/functions.php
 msgid "Non Query Based"
@@ -540,7 +526,7 @@ msgstr "მონაცემთა გამოთხოვები"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
-msgstr ""
+msgstr "Cacti-ს გრაფიკების ექსპორტის პარამეტრები"
 
 #: setup.php
 msgid "Graph Exports"
@@ -560,7 +546,7 @@ msgstr "ზოგადი"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export Definition to be enabled."
-msgstr ""
+msgstr "მონიშნეთ ეს ველი, თუ გსურთ გრაფიკების ექსპორტის ამ განსაზღვრების ჩართვა."
 
 #: setup.php
 msgid "Export Method"
@@ -568,7 +554,7 @@ msgstr "გატანის მეთოდი"
 
 #: setup.php
 msgid "Choose which export method to use."
-msgstr ""
+msgstr "აირჩიეთ გამოსაყენებელი ექსპორტის მეთოდი."
 
 #: setup.php
 msgid "Local"
@@ -600,7 +586,7 @@ msgstr "გატანის ბრძანების არგუმენ�
 
 #: setup.php
 msgid "Arguments to use with non-local export methods. rsync should use "
-msgstr ""
+msgstr "არალოკალური ექსპორტის მეთოდებთან გამოსაყენებელი არგუმენტები. rsync-მა უნდა გამოიყენოს "
 
 #: setup.php
 msgid "Theme"
@@ -608,7 +594,7 @@ msgstr "თემა"
 
 #: setup.php
 msgid "Please select one of the available Themes to skin your Cacti Graph Exports with."
-msgstr ""
+msgstr "გთხოვთ აირჩიოთ ერთ-ერთი ხელმისაწვდომი თემა Cacti-ს გრაფიკების ექსპორტის გასაფორმებლად."
 
 #: setup.php
 msgid "Presentation Method"
@@ -616,7 +602,7 @@ msgstr "წარმოდგენის მეთოდი"
 
 #: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
-msgstr ""
+msgstr "აირჩიეთ, როგორი წარმოდგენა გსურთ გენერირებული html გვერდებისთვის. თუ აირჩევთ კლასიკურ წარმოდგენას, გრაფიკები განთავსდება მხოლოდ ერთ html გვერდზე. თუ აირჩევთ ხისებურ წარმოდგენას, სტატიკურ html გვერდებში შენარჩუნდება გრაფიკების ხის არქიტექტურა"
 
 #: setup.php
 msgid "Site"
@@ -636,7 +622,7 @@ msgstr "დროის ათვლის მეთოდი"
 
 #: setup.php
 msgid "Choose when to Export Graphs."
-msgstr ""
+msgstr "აირჩიეთ, როდის მოხდეს გრაფიკების ექსპორტი."
 
 #: setup.php
 msgid "Periodic Export Cycle"
@@ -644,7 +630,7 @@ msgstr "პერიოდული გატანის ციკლი"
 
 #: setup.php
 msgid "How often do you wish Cacti to Export Graphs.  This is the unit of Polling Cycles you wish to export Graphs."
-msgstr ""
+msgstr "რა სიხშირით გსურთ Cacti-მ გრაფიკების ექსპორტი შეასრულოს. ეს არის გამოკითხვის ციკლების ერთეული გრაფიკების ექსპორტისთვის."
 
 #: setup.php
 msgid "Every Polling Cycle"
@@ -653,23 +639,23 @@ msgstr "გამოთხოვის ყოველი ციკლი"
 #: setup.php
 #, php-format
 msgid "Every %d Polling Cycles"
-msgstr ""
+msgstr "ყოველ %d გამოკითხვის ციკლში"
 
 #: setup.php
 msgid "Hourly at specified minutes"
-msgstr ""
+msgstr "ყოველ საათში მითითებულ წუთებზე"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
-msgstr ""
+msgstr "თუ გსურთ, რომ Cacti-მ სტატიკური სურათები ყოველ საათში ერთხელ დააექსპორტოს, მიუთითეთ საათის წუთები, როდესაც ეს უნდა შესრულდეს. Cacti გულისხმობს, რომ მონაცემთა შეგროვების სკრიპტს ყოველ 5 წუთში ერთხელ უშვებთ, ამიტომ თქვენს მნიშვნელობას მის გაშვების დროსთან უახლოესამდე დაამრგვალებს. მაგალითად, 43 გაუტოლდება საათის 40 წუთს."
 
 #: setup.php
 msgid "Daily at specified time"
-msgstr ""
+msgstr "ყოველდღიურად მითითებულ დროს"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr ""
+msgstr "თუ გსურთ, რომ Cacti-მ სტატიკური სურათები ყოველდღიურად დააექსპორტოს, აქ მიუთითეთ შესრულების დრო. Cacti გულისხმობს, რომ მონაცემთა შეგროვების სკრიპტს ყოველ 5 წუთში ერთხელ უშვებთ, ამიტომ თქვენს მნიშვნელობას მის გაშვების დროსთან უახლოესამდე დაამრგვალებს. მაგალითად, 21:23 გაუტოლდება საღამოს 9 საათისა და 20 წუთს."
 
 #: setup.php
 msgid "Use x Threads"
@@ -677,19 +663,19 @@ msgstr "x ნაკადის გამოყენება"
 
 #: setup.php
 msgid "How many background threads do you wish Cacti to use when exporting graphs.  Default is 0 to run all export in poller thread, 1 or more to spawn separate background threads"
-msgstr ""
+msgstr "რამდენი ფონური ნაკადი გსურთ გამოიყენოს Cacti-მ გრაფიკების ექსპორტისას. ნაგულისხმევია 0 მთელი ექსპორტის პოლერის ნაკადში გასაშვებად, 1 ან მეტი ცალკეული ფონური ნაკადების შესაქმნელად"
 
 #: setup.php
 msgid "Graph Selection & Settings"
-msgstr ""
+msgstr "გრაფიკების შერჩევა და პარამეტრები"
 
 #: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
-msgstr ""
+msgstr "მომხმარებლის სახელი, რომელიც გამოიყენება Cacti-ს გრაფიკებზე უფლებების დასადგენად. ეს მომხმარებლის სახელი განსაზღვრავს, რომელი გრაფიკების/ხეების ექსპორტია შესაძლებელი. N/A ნიშნავს, რომ უსაფრთხოების შეზღუდვა არ იგულისხმება."
 
 #: setup.php
 msgid "The Tree(s) to export."
-msgstr ""
+msgstr "ექსპორტისთვის განკუთვნილი ხე(ები)."
 
 #: setup.php
 msgid "Expand Devices/Sites"
@@ -697,7 +683,7 @@ msgstr "მოწყობილობების/საიტების გ�
 
 #: setup.php
 msgid "This setting determines if Tree Devices and Site Templates and Devices will be expanded or not.  If set to expanded, each host will have a sub-folder containing either Graph Templates or Data Query items."
-msgstr ""
+msgstr "ეს პარამეტრი განსაზღვრავს, გაიშლება თუ არა ხის მოწყობილობები, საიტის შაბლონები და მოწყობილობები. გაშლილზე დაყენების შემთხვევაში, თითოეულ ჰოსტს ექნება ქვესაქაღალდე, რომელიც შეიცავს გრაფიკების შაბლონებს ან მონაცემთა მოთხოვნის ელემენტებს."
 
 #: setup.php
 msgid "Off"
@@ -709,7 +695,7 @@ msgstr "ჩრთ"
 
 #: setup.php
 msgid "The Site for Cacti Graphs to be Exported from."
-msgstr ""
+msgstr "საიტი, საიდანაც Cacti-ს გრაფიკები უნდა დაექსპორტდეს."
 
 #: setup.php
 msgid "Graph Thumbnail Width"
@@ -717,7 +703,7 @@ msgstr "გრაფიკის მინიატურის სიგან�
 
 #: setup.php
 msgid "The default width of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "მინიატურული გრაფიკების ნაგულისხმევი სიგანე პიქსელებში."
 
 #: setup.php
 msgid "Graph Thumbnail Height"
@@ -725,7 +711,7 @@ msgstr "გრაფიკის მინიატურის სიმაღ�
 
 #: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr ""
+msgstr "მინიატურული გრაფიკების სიმაღლე პიქსელებში."
 
 #: setup.php
 msgid "Default View Thumbnails"
@@ -733,7 +719,7 @@ msgstr "ნაგულისხმევი ხედის მინიატ�
 
 #: setup.php
 msgid "Check this if you want the default Graph View to be in Thumbnail mode."
-msgstr ""
+msgstr "მონიშნეთ ეს, თუ გსურთ გრაფიკების ნაგულისხმევი ხედი მინიატურების რეჟიმში იყოს."
 
 #: setup.php
 msgid "Default Graph Columns"
@@ -741,7 +727,7 @@ msgstr "ნაგულისხმევი გრაფიკის სვე�
 
 #: setup.php
 msgid "The number of columns to use by default when displaying Graphs."
-msgstr ""
+msgstr "გრაფიკების ჩვენებისას ნაგულისხმევად გამოსაყენებელი სვეტების რაოდენობა."
 
 #: setup.php
 msgid "Graphs Per Page"
@@ -749,15 +735,15 @@ msgstr "გრაფიკი ერთ გვერდზე"
 
 #: setup.php
 msgid "Choose the number of Graphs Per Page to display."
-msgstr ""
+msgstr "აირჩიეთ ერთ გვერდზე საჩვენებელი გრაფიკების რაოდენობა."
 
 #: setup.php
 msgid "Maximum Graphs to Export"
-msgstr ""
+msgstr "დასაექსპორტებელი გრაფიკების მაქსიმუმი"
 
 #: setup.php
 msgid "After this number is reached, an error will be generated, but exporting will continue.  Set to 0 for no limit."
-msgstr ""
+msgstr "ამ რაოდენობის მიღწევის შემდეგ დაგენერირდება შეცდომა, თუმცა ექსპორტი გაგრძელდება. შეზღუდვის მოსახსნელად მიუთითეთ 0."
 
 #: setup.php
 msgid "Export Location Information"
@@ -769,7 +755,7 @@ msgstr "მინიატურების გატანა"
 
 #: setup.php
 msgid "Check this if you want the export thumbnails mode."
-msgstr ""
+msgstr "მონიშნეთ ეს, თუ გსურთ მინიატურების ექსპორტის რეჟიმი."
 
 #: setup.php
 msgid "Clear Directory"
@@ -777,7 +763,7 @@ msgstr "საქაღალდის გასუფთავება"
 
 #: setup.php
 msgid "Check this Checkbox if you wish this Graph Export to clear the final directory before populating."
-msgstr ""
+msgstr "მონიშნეთ ეს ველი, თუ გსურთ გრაფიკების ამ ექსპორტმა შევსებამდე გაასუფთაოს საბოლოო დირექტორია."
 
 #: setup.php
 msgid "Export Directory"
@@ -785,7 +771,7 @@ msgstr "გატანის საქაღალდე"
 
 #: setup.php
 msgid "This is the directory, either on the local system or on the remote system, that will contain the exported data."
-msgstr ""
+msgstr "ეს არის დირექტორია, ლოკალურ ან დაშორებულ სისტემაზე, რომელიც შეინახავს ექსპორტირებულ მონაცემებს."
 
 #: setup.php
 msgid "Local Scratch Directory"
@@ -793,7 +779,7 @@ msgstr "ნაფხაჭნების ლოკალური საქა�
 
 #: setup.php
 msgid "This is the directory that Cacti will temporarily store output prior to sending to the remote site via the transfer method.  The contents of this directory will be deleted after the data is transferred."
-msgstr ""
+msgstr "ეს არის დირექტორია, სადაც Cacti დროებით შეინახავს შედეგს გადაცემის მეთოდით დაშორებულ საიტზე გაგზავნამდე. ამ დირექტორიის შიგთავსი წაიშლება მონაცემების გადაცემის შემდეგ."
 
 #: setup.php
 msgid "Remote Options"
@@ -801,11 +787,11 @@ msgstr "დაშორებულის პარამეტრები"
 
 #: setup.php
 msgid "Sanitize remote directory"
-msgstr ""
+msgstr "დაშორებული დირექტორიის გასუფთავება"
 
 #: setup.php
 msgid "Check this if you want to delete any existing files in the FTP remote directory. This option is in use only when using the PHP built-in ftp functions."
-msgstr ""
+msgstr "მონიშნეთ ეს, თუ გსურთ FTP-ის დაშორებულ დირექტორიაში არსებული ყველა ფაილის წაშლა. ეს პარამეტრი გამოიყენება მხოლოდ PHP-ის ჩაშენებული ftp ფუნქციების გამოყენებისას."
 
 #: setup.php
 msgid "Remote Host"
@@ -813,7 +799,7 @@ msgstr "დაშორებული ჰოსტი"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."
-msgstr ""
+msgstr "მიუთითებს ჰოსტს, რომელზეც უნდა გაიგზავნოს ექსპორტირებული გრაფიკები."
 
 #: setup.php
 msgid "Remote Port"
@@ -821,7 +807,7 @@ msgstr "დაშორებული პორტი"
 
 #: setup.php
 msgid "Communication port to use for the export method if non-standard (leave empty for defaults)."
-msgstr ""
+msgstr "ექსპორტის მეთოდისთვის გამოსაყენებელი საკომუნიკაციო პორტი, თუ არასტანდარტულია (ნაგულისხმევისთვის დატოვეთ ცარიელი)."
 
 #: setup.php
 msgid "Use passive mode"
@@ -829,7 +815,7 @@ msgstr "პასიური რეჟიმის გამოყენებ�
 
 #: setup.php
 msgid "Check this if you want to connect in passive mode to the FTP server."
-msgstr ""
+msgstr "მონიშნეთ ეს, თუ გსურთ FTP სერვერთან პასიურ რეჟიმში დაკავშირება."
 
 #: setup.php
 msgid "User"
@@ -837,7 +823,7 @@ msgstr "მომხმარებელი"
 
 #: setup.php
 msgid "Account to logon on the remote server (leave empty for defaults)."
-msgstr ""
+msgstr "ანგარიში დაშორებულ სერვერზე შესასვლელად (ნაგულისხმევისთვის დატოვეთ ცარიელი)."
 
 #: setup.php
 msgid "Password"
@@ -845,7 +831,7 @@ msgstr "პაროლი"
 
 #: setup.php
 msgid "Password for the remote ftp account (leave empty for blank)."
-msgstr ""
+msgstr "დაშორებული ftp ანგარიშის პაროლი (დატოვეთ ცარიელი, თუ პაროლი არ არის)."
 
 #: setup.php
 msgid "Private Key Path"
@@ -853,11 +839,11 @@ msgstr "პირადი გასაღების ბილიკი"
 
 #: setup.php
 msgid "For SCP and RSYNC, enter the Private Key path if required."
-msgstr ""
+msgstr "SCP-სა და RSYNC-სთვის შეიყვანეთ პირადი გასაღების ბილიკი, თუ საჭიროა."
 
 #: setup.php
 msgid "Exported Cacti Graph Pages"
-msgstr ""
+msgstr "გატანილი Cacti გრაფიკების გვერდები"
 
 #: setup.php
 msgid "(Edit)"
