@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Portuguese (Portugal) <https://translate.cacti.net/projects/cacti/gexport/pt_PT/>\nLanguage: pt-PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Portuguese (Portugal) <https://translate.cacti.net/projects/cacti/gexport/pt_PT/>\nLanguage: pt-PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -35,11 +35,10 @@ msgid "Hourly"
 msgstr "Por hora"
 
 #: gexport.php
-#, fuzzy
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "Clique em 'Continuar' para excluir a seguinte definição de exportação de gráficos."
-msgstr[1] "Clique em 'Continuar' para eliminar as seguintes definições de exportação de gráficos."
+msgstr[0] "Clique em 'Continuar' para eliminar a seguinte Definição de Exportação de Gráficos."
+msgstr[1] "Clique em 'Continuar' para eliminar as seguintes Definições de Exportação de Gráficos."
 
 #: gexport.php
 msgid "Cancel"
@@ -54,33 +53,30 @@ msgid "Delete Graph Export Definition(s)"
 msgstr "Eliminar definição(ões) de exportação de gráficos"
 
 #: gexport.php
-#, fuzzy
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "Clique em 'Continuar' para desativar a seguinte definição de exportação de gráficos."
-msgstr[1] "Clique em 'Continuar' para desativar as seguintes definições de exportação de gráficos."
+msgstr[0] "Clique em 'Continuar' para desativar a seguinte Definição de Exportação de Gráficos."
+msgstr[1] "Clique em 'Continuar' para desativar as seguintes Definições de Exportação de Gráficos."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
 msgstr "Desativar definição(ões) de exportação de gráficos"
 
 #: gexport.php
-#, fuzzy
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "Clique em 'Continuar' para ativar a seguinte Definição de Exportação de Gráfico."
-msgstr[1] "Clique em 'Continuar' para ativar as seguintes definições de exportação de gráficos."
+msgstr[0] "Clique em 'Continuar' para ativar a seguinte Definição de Exportação de Gráficos."
+msgstr[1] "Clique em 'Continuar' para ativar as seguintes Definições de Exportação de Gráficos."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
 msgstr "Ativar definição(ões) de exportação de gráficos"
 
 #: gexport.php
-#, fuzzy
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "Clique em 'Continuar' para executar a seguinte Definição de Exportação de Gráfico agora."
-msgstr[1] "Clique em 'Continuar' para executar as Definições de Exportação de Gráfico agora."
+msgstr[0] "Clique em 'Continuar' para executar a seguinte Definição de Exportação de Gráficos agora."
+msgstr[1] "Clique em 'Continuar' para executar as seguintes Definições de Exportação de Gráficos agora."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
@@ -246,7 +242,7 @@ msgstr "O que está a ser exportado."
 
 #: gexport.php setup.php
 msgid "Effective User"
-msgstr "Utilizador Efetivo"
+msgstr "Usuário Efetivo"
 
 #: gexport.php
 msgid "The user that this export will impersonate."
@@ -494,7 +490,7 @@ msgstr "Chave do anfitrião não verificável"
 
 #: includes/functions.php
 msgid "Connection failed"
-msgstr "A ligação falhou"
+msgstr "Falha na ligação"
 
 #: includes/functions.php
 msgid "Disconnected by application"
@@ -614,7 +610,7 @@ msgstr "Site"
 
 #: setup.php
 msgid "Tree"
-msgstr "Tree"
+msgstr "Árvore"
 
 #: setup.php
 msgid "Export Timing"
@@ -715,7 +711,7 @@ msgstr "Altura da miniatura do gráfico"
 
 #: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr "A altura dos gráficos em miniatura em píxeis."
+msgstr "A altura dos gráficos de Miniaturas em pixels."
 
 #: setup.php
 msgid "Default View Thumbnails"
