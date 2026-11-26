@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/gexport/zh_Hant/>\nLanguage: zh-TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/gexport/zh_Hant/>\nLanguage: zh-TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -37,7 +37,7 @@ msgstr "每小時"
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "單擊“繼續”以刪除以下圖形導出定義。"
+msgstr[0] "按一下「繼續」以刪除下列圖表匯出定義。"
 
 #: gexport.php
 msgid "Cancel"
@@ -54,7 +54,7 @@ msgstr "刪除圖表匯出定義"
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "單擊“繼續”以禁用以下圖形導出定義。"
+msgstr[0] "按一下「繼續」以停用下列圖表匯出定義。"
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
@@ -63,7 +63,7 @@ msgstr "圖形導出定義"
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "單擊“繼續”以啟用以下圖形導出定義。"
+msgstr[0] "按一下「繼續」以啟用下列圖表匯出定義。"
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
@@ -72,7 +72,7 @@ msgstr "圖形導出定義"
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "單擊“繼續”以立即運行以下圖形導出定義。"
+msgstr[0] "按一下「繼續」以立即執行下列圖表匯出定義。"
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
@@ -206,7 +206,7 @@ msgstr "Graphs將導出的頻率。"
 
 #: gexport.php
 msgid "Next Start"
-msgstr "下次開始"
+msgstr "下一步開始"
 
 #: gexport.php
 msgid "The next time the Graph Export should run."
@@ -214,7 +214,7 @@ msgstr "下次運行Graph Export時。"
 
 #: gexport.php setup.php
 msgid "Enabled"
-msgstr "已啟用"
+msgstr "啟用"
 
 #: gexport.php
 msgid "If enabled, this Graph Export definition will run as required."
@@ -238,7 +238,7 @@ msgstr "正在匯出的內容。"
 
 #: gexport.php setup.php
 msgid "Effective User"
-msgstr "有效使用者"
+msgstr "有效的用戶"
 
 #: gexport.php
 msgid "The user that this export will impersonate."
@@ -246,7 +246,7 @@ msgstr "此導出將模擬的用戶。"
 
 #: gexport.php
 msgid "Last Runtime"
-msgstr "上次執行時間"
+msgstr "最後運行時間"
 
 #: gexport.php
 msgid "The last runtime for the Graph Export."
@@ -262,7 +262,7 @@ msgstr "上次運行時導出的圖形數。"
 
 #: gexport.php
 msgid "Last Started"
-msgstr "上次開始"
+msgstr "最後開始"
 
 #: gexport.php
 msgid "The last time that this Graph Export was started."
@@ -298,7 +298,7 @@ msgstr "閒置"
 
 #: gexport.php
 msgid "Running"
-msgstr "執行中"
+msgstr "運行"
 
 #: gexport.php
 msgid "Error"
@@ -510,15 +510,15 @@ msgstr "無效的用戶名"
 
 #: includes/functions.php
 msgid "Non Query Based"
-msgstr "非查詢式"
+msgstr "非查詢"
 
 #: includes/functions.php
 msgid "Graph Templates"
-msgstr "圖表範本"
+msgstr "圖表模板"
 
 #: includes/functions.php
 msgid "Data Queries"
-msgstr "資料查詢"
+msgstr "數據查詢"
 
 #: setup.php
 msgid "Export Cacti Graphs Settings"
@@ -554,7 +554,7 @@ msgstr "選擇要使用的導出方法。"
 
 #: setup.php
 msgid "Local"
-msgstr "本機"
+msgstr "本地"
 
 #: setup.php
 msgid "FTP"
@@ -602,11 +602,11 @@ msgstr "選擇要為html生成的頁面顯示哪個演示文稿。如果你選�
 
 #: setup.php
 msgid "Site"
-msgstr "站台"
+msgstr "網站"
 
 #: setup.php
 msgid "Tree"
-msgstr "樹狀目錄"
+msgstr "樹"
 
 #: setup.php
 msgid "Export Timing"
@@ -707,7 +707,7 @@ msgstr "圖表縮略圖高度"
 
 #: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr "縮圖的高度（以像素為單位）。"
+msgstr "縮略圖的高度（以像素為單位）。"
 
 #: setup.php
 msgid "Default View Thumbnails"
@@ -727,7 +727,7 @@ msgstr "顯示圖表時預設使用的欄數。"
 
 #: setup.php
 msgid "Graphs Per Page"
-msgstr "每頁圖表數"
+msgstr "每頁圖表"
 
 #: setup.php
 msgid "Choose the number of Graphs Per Page to display."
