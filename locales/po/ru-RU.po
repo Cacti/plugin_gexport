@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Russian <https://translate.cacti.net/projects/cacti/gexport/ru/>\nLanguage: ru-RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Russian <https://translate.cacti.net/projects/cacti/gexport/ru/>\nLanguage: ru-RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -32,14 +32,14 @@ msgstr "Ежедневно"
 
 #: gexport.php setup.php
 msgid "Hourly"
-msgstr "Каждый час"
+msgstr "Ежечасно"
 
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
 msgid_plural "Click 'Continue' to delete following Graph Export Definitions."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы удалить следующее определение экспорта графика."
-msgstr[1] "Нажмите кнопку \"Продолжить\", чтобы удалить следующие определения экспорта графиков."
-msgstr[2] "Нажмите кнопку \"Продолжить\", чтобы удалить следующие определения экспорта графиков."
+msgstr[0] "Нажмите «Продолжить», чтобы удалить следующее определение экспорта графиков."
+msgstr[1] "Нажмите «Продолжить», чтобы удалить следующие определения экспорта графиков."
+msgstr[2] "Нажмите «Продолжить», чтобы удалить следующие определения экспорта графиков."
 
 #: gexport.php
 msgid "Cancel"
@@ -56,31 +56,31 @@ msgstr "Удалить определение(я) экспорта график�
 #: gexport.php
 msgid "Click 'Continue' to disable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to disable following Graph Export Definitions."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы отключить следующее определение экспорта графиков."
-msgstr[1] "Нажмите кнопку \"Продолжить\", чтобы отключить следующие определения экспорта графиков."
-msgstr[2] "Нажмите кнопку \"Продолжить\", чтобы отключить следующие определения экспорта графиков."
+msgstr[0] "Нажмите «Продолжить», чтобы отключить следующее определение экспорта графиков."
+msgstr[1] "Нажмите «Продолжить», чтобы отключить следующие определения экспорта графиков."
+msgstr[2] "Нажмите «Продолжить», чтобы отключить следующие определения экспорта графиков."
 
 #: gexport.php
 msgid "Disable Graph Export Definition(s)"
-msgstr "График Экспорт Определения Определения"
+msgstr "Отключить определение(-я) экспорта графиков"
 
 #: gexport.php
 msgid "Click 'Continue' to enable the following Graph Export Definition."
 msgid_plural "Click 'Continue' to enable following Graph Export Definitions."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы включить следующее определение экспорта графиков."
-msgstr[1] "Нажмите кнопку \"Продолжить\", чтобы включить следующие определения экспорта графиков."
-msgstr[2] "Нажмите кнопку \"Продолжить\", чтобы включить следующие определения экспорта графиков."
+msgstr[0] "Нажмите «Продолжить», чтобы включить следующее определение экспорта графиков."
+msgstr[1] "Нажмите «Продолжить», чтобы включить следующие определения экспорта графиков."
+msgstr[2] "Нажмите «Продолжить», чтобы включить следующие определения экспорта графиков."
 
 #: gexport.php
 msgid "Enable Graph Export Definition(s)"
-msgstr "График Экспорт Определения Определения"
+msgstr "Включить определение(-я) экспорта графиков"
 
 #: gexport.php
 msgid "Click 'Continue' to run the following Graph Export Definition now."
 msgid_plural "Click 'Continue' to run following Graph Export Definitions now."
-msgstr[0] "Нажмите кнопку \"Продолжить\", чтобы запустить следующее определение экспорта графиков сейчас."
-msgstr[1] "Нажмите кнопку \"Продолжить\", чтобы запустить следующие определения экспорта графиков сейчас."
-msgstr[2] "Нажмите кнопку \"Продолжить\", чтобы запустить следующие определения экспорта графиков сейчас."
+msgstr[0] "Нажмите «Продолжить», чтобы запустить следующее определение экспорта графиков сейчас."
+msgstr[1] "Нажмите «Продолжить», чтобы запустить следующие определения экспорта графиков сейчас."
+msgstr[2] "Нажмите «Продолжить», чтобы запустить следующие определения экспорта графиков сейчас."
 
 #: gexport.php
 msgid "Run Graph Export Definition(s) Now"
@@ -145,7 +145,7 @@ msgstr "Все выбранные сайты"
 
 #: gexport.php
 msgid "Graph Export Definitions"
-msgstr "График Экспорт Определения Определения"
+msgstr "Определения экспорта графиков"
 
 #: gexport.php
 msgid "Exports"
@@ -330,7 +330,7 @@ msgstr "Отсутствие определений экспорта графи�
 
 #: includes/functions.php
 msgid "Success"
-msgstr "Готово"
+msgstr "Успешно"
 
 #: includes/functions.php
 msgid "Syntax or usage error"
