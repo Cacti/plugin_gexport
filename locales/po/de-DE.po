@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: German <https://translate.cacti.net/projects/cacti/gexport/de/>\nLanguage: de-DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 10:49+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: German <https://translate.cacti.net/projects/cacti/gexport/de/>\nLanguage: de-DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -647,7 +647,7 @@ msgstr "Stündlich zu bestimmten Minuten"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an hourly basis, put the minutes of the hour when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 43 would equal 40 minutes past the hour."
-msgstr "Wenn Sie möchten, dass Cacti statische Bilder stündlich exportiert, geben Sie die Minuten der Stunde an, wann Sie das tun sollen. Cacti geht davon aus, dass Sie das Skript zur Datenerfassung alle 5 Minuten ausführen, so dass es Ihren Wert auf den Wert rundet, der der Laufzeit am nächsten liegt. Zum Beispiel würde 43 40 Minuten nach der Stunde entsprechen."
+msgstr "Wenn Sie möchten, dass Cacti statische Bilder stündlich exportiert, geben Sie die Minuten der Stunde an, wann dies erfolgen soll. Cacti geht davon aus, dass Sie das Skript zur Datenerfassung alle 5 Minuten ausführen, sodass es Ihren Wert auf den Wert rundet, welcher der Laufzeit am nächsten liegt. Zum Beispiel würde 43 40 Minuten nach der Stunde entsprechen."
 
 #: setup.php
 msgid "Daily at specified time"
@@ -655,7 +655,7 @@ msgstr "Täglich zu einer bestimmten Zeit"
 
 #: setup.php
 msgid "If you want Cacti to export static images on an daily basis, put here the time when to do that. Cacti assumes that you run the data gathering script every 5 minutes, so it will round your value to the one closest to its runtime. For instance, 21:23 would equal 20 minutes after 9 PM."
-msgstr "Wenn Sie möchten, dass Cacti täglich statische Bilder exportiert, geben Sie hier die Zeit an, wann dies zu tun ist. Cacti geht davon aus, dass Sie das Skript zur Datenerfassung alle 5 Minuten ausführen, so dass es Ihren Wert auf den Wert rundet, der der Laufzeit am nächsten liegt. Zum Beispiel würde 21:23 20 Minuten nach 21 Uhr entsprechen."
+msgstr "Wenn Sie möchten, dass Cacti täglich statische Bilder exportiert, geben Sie hier die Zeit an, wann dies zu tun ist. Cacti geht davon aus, dass Sie das Skript zur Datenerfassung alle 5 Minuten ausführen, so dass es Ihren Wert auf den Wert rundet, welcher der Laufzeit am nächsten liegt. Zum Beispiel würde 21:23 20 Minuten nach 21 Uhr entsprechen."
 
 #: setup.php
 msgid "Use x Threads"
