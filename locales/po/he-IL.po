@@ -175,7 +175,7 @@ msgstr "%d שניות"
 #: gexport.php
 #, php-format
 msgid "%d Minute"
-msgstr "‫%d דקה"
+msgstr "%d דקה"
 
 #: gexport.php
 #, php-format
@@ -803,7 +803,7 @@ msgstr "סמן את זה אם ברצונך למחוק קבצים קיימים ב
 
 #: setup.php
 msgid "Remote Host"
-msgstr "‫Remote Host"
+msgstr "Remote Host"
 
 #: setup.php
 msgid "Denotes the host to send Exported Graphs to."

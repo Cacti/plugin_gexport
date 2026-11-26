@@ -337,7 +337,7 @@ function export_form_actions() {
 		} elseif ($bulk_action === '4') { // export now
 			print "<tr>
 				<td class='topBoxAlt'>
-					<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array)) . "</p>
+					<p>" . __n('Click \'Continue\' to run the following Graph Export Definition now.', 'Click \'Continue\' to run following Graph Export Definitions now.', sizeof($export_array), 'gexport') . "</p>
 					<div class='itemlist'><ul>$export_list</ul></div>
 				</td>
 			</tr>";
@@ -488,19 +488,19 @@ function export_edit() {
 
 	$(function() {
 		$('#graph_tree').multiselect({
-			noneSelectedText: '<?php print __('Select Tree(s)', 'gexport'); ?>',
+			noneSelectedText: <?php print json_encode(__('Select Tree(s)', 'gexport')); ?>,
 			selectedText: function(numChecked, numTotal, checkedItems) {
-				myReturn = numChecked + ' <?php print __('Trees Selected', 'gexport'); ?>';
+				myReturn = numChecked + ' ' + <?php print json_encode(__('Trees Selected', 'gexport')); ?>;
 				$.each(checkedItems, function(index, value) {
 					if (value.value == '0') {
-						myReturn='<?php print __('All Trees Selected', 'gexport'); ?>';
+						myReturn=<?php print json_encode(__('All Trees Selected', 'gexport')); ?>;
 						return false;
 					}
 				});
 				return myReturn;
 			},
-			checkAllText: '<?php print __('All', 'gexport'); ?>',
-			uncheckAllText: '<?php print __('None', 'gexport'); ?>',
+			checkAllText: <?php print json_encode(__('All', 'gexport')); ?>,
+			uncheckAllText: <?php print json_encode(__('None', 'gexport')); ?>,
 			uncheckall: function() {
 				$(this).multiselect('widget').find(':checkbox:first').each(function() {
 					$(this).prop('checked', true);
@@ -530,23 +530,23 @@ function export_edit() {
 				}
 			}
 		}).multiselectfilter( {
-			label: '<?php print __('Search', 'gexport'); ?>', width: '150'
+			label: <?php print json_encode(__('Search', 'gexport')); ?>, width: '150'
 		});
 
 		$('#graph_site').multiselect({
-			noneSelectedText: '<?php print __('Select Site(s)', 'gexport'); ?>',
+			noneSelectedText: <?php print json_encode(__('Select Site(s)', 'gexport')); ?>,
 			selectedText: function(numChecked, numTotal, checkedItems) {
-				myReturn = numChecked + ' <?php print __('Sites Selected', 'gexport'); ?>';
+				myReturn = numChecked + ' ' + <?php print json_encode(__('Sites Selected', 'gexport')); ?>;
 				$.each(checkedItems, function(index, value) {
 					if (value.value == '0') {
-						myReturn='<?php print __('All Sites Selected', 'gexport'); ?>';
+						myReturn=<?php print json_encode(__('All Sites Selected', 'gexport')); ?>;
 						return false;
 					}
 				});
 				return myReturn;
 			},
-			checkAllText: '<?php print __('All', 'gexport'); ?>',
-			uncheckAllText: '<?php print __('None', 'gexport'); ?>',
+			checkAllText: <?php print json_encode(__('All', 'gexport')); ?>,
+			uncheckAllText: <?php print json_encode(__('None', 'gexport')); ?>,
 			uncheckall: function() {
 				$(this).multiselect('widget').find(':checkbox:first').each(function() {
 					$(this).prop('checked', true);
@@ -576,7 +576,7 @@ function export_edit() {
 				}
 			}
 		}).multiselectfilter( {
-			label: '<?php print __('Search', 'gexport'); ?>', width: '150'
+			label: <?php print json_encode(__('Search', 'gexport')); ?>, width: '150'
 		});
 
 		setRemoteVisibility();

@@ -663,7 +663,7 @@ msgstr "Có bao nhiêu chủ đề nền mà bạn muốn Cacti sử dụng khi 
 
 #: setup.php
 msgid "Graph Selection & Settings"
-msgstr "Lựa chọn &amp; Cài đặt đồ thị"
+msgstr "Lựa chọn & Cài đặt đồ thị"
 
 #: setup.php
 msgid "The user name to utilize for establishing permissions to Cacti Graphs.  This user name will be used to determine which Graphs/Trees can be exported.  N/A means don't assume any security is in place."
