@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Greek <https://translate.cacti.net/projects/cacti/gexport/el/>\nLanguage: el-GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Greek <https://translate.cacti.net/projects/cacti/gexport/el/>\nLanguage: el-GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -32,7 +32,7 @@ msgstr "Καθημερινά"
 
 #: gexport.php setup.php
 msgid "Hourly"
-msgstr "Aνά ώρα"
+msgstr "Ωριαία"
 
 #: gexport.php
 msgid "Click 'Continue' to delete the following Graph Export Definition."
@@ -210,7 +210,7 @@ msgstr "Η συχνότητα που θα εξάγει τα Γραφήματα."
 
 #: gexport.php
 msgid "Next Start"
-msgstr "Επόμενορξη"
+msgstr "Επόμενη εκκίνηση"
 
 #: gexport.php
 msgid "The next time the Graph Export should run."
@@ -286,7 +286,7 @@ msgstr "Εξαγωγή ορισμών"
 
 #: gexport.php setup.php
 msgid "N/A"
-msgstr "Μη Διαθέσιμο"
+msgstr "Μη Εφαρμόσιμο"
 
 #: gexport.php
 msgid "No"
@@ -298,7 +298,7 @@ msgstr "Ναι"
 
 #: gexport.php
 msgid "Idle"
-msgstr "Σε αδράνεια"
+msgstr "Αδρανής"
 
 #: gexport.php
 msgid "Running"
@@ -602,7 +602,7 @@ msgstr "Μέθοδος παρουσίασης"
 
 #: setup.php
 msgid "Choose which presentation would you want for the html generated pages. If you choose classical presentation; the Graphs will be in a only-one-html page. If you choose tree presentation, the Graph Tree architecture will be kept in the static html pages"
-msgstr "Επιλέξτε ποια παρουσίαση θέλετε για τις σελίδες που δημιουργούνται από html. Αν επιλέξετε κλασική παρουσίαση. τα Γραφήματα θα είναι σε μια μόνο σελίδα-ένα-html. Εάν επιλέξετε εμφάνιση δέντρου, η αρχιτεκτονική Tree Tree θα διατηρηθεί στις στατικές σελίδες html"
+msgstr "Επιλέξτε ποια παρουσίαση θέλετε για τις σελίδες που δημιουργούνται από html. Αν επιλέξετε κλασική παρουσίαση. τα Γραφήματα θα είναι σε μια μόνο σελίδα-ένα-html. Εάν επιλέξετε εμφάνιση δέντρου, η αρχιτεκτονική του δέντρου γραφημάτων θα διατηρηθεί στις στατικές σελίδες html"
 
 #: setup.php
 msgid "Site"
@@ -847,7 +847,7 @@ msgstr "Εξαγόμενες σελίδες γραφικών Cacti"
 
 #: setup.php
 msgid "(Edit)"
-msgstr "(επεξεργασία)"
+msgstr "(Eπεξεργασία)"
 
 #: setup.php
 msgid "Actions"
