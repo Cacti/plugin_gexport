@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Turkish <https://translate.cacti.net/projects/cacti/gexport/tr/>\nLanguage: tr-TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-10-07 16:13-0400\nPO-Revision-Date: 2026-11-26 01:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Turkish <https://translate.cacti.net/projects/cacti/gexport/tr/>\nLanguage: tr-TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: gexport.php
 msgid "Delete"
@@ -238,7 +238,7 @@ msgstr "İhracat (Siteler / Ağaçlar)"
 
 #: gexport.php
 msgid "What is being Exported."
-msgstr "Ne ihraç ediliyor?"
+msgstr "Dışa aktarılacak öğeyi belirler."
 
 #: gexport.php setup.php
 msgid "Effective User"
@@ -286,7 +286,7 @@ msgstr "Tanımları Dışa Aktar"
 
 #: gexport.php setup.php
 msgid "N/A"
-msgstr "Yok"
+msgstr "Geçerli Değil"
 
 #: gexport.php
 msgid "No"
@@ -490,7 +490,7 @@ msgstr "Ana bilgisayar anahtarı doğrulanamıyor"
 
 #: includes/functions.php
 msgid "Connection failed"
-msgstr "Bağlantı Başarısız Oldu"
+msgstr "Bağlantı Başarısız"
 
 #: includes/functions.php
 msgid "Disconnected by application"
@@ -711,7 +711,7 @@ msgstr "Grafik Küçük Resmi Yüksekliği"
 
 #: setup.php
 msgid "The height of Thumbnail Graphs in pixels."
-msgstr "Küçük Resim Grafiklerinin piksel cinsinden yüksekliği."
+msgstr "Küçük Resim grafikleri piksel cinsinden yüksekliği."
 
 #: setup.php
 msgid "Default View Thumbnails"
